@@ -285,30 +285,854 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月06日 周一 · 19:57</div>
+    <div class="h-date">2026年04月06日 周一 · 20:25</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>0</b> 篇</span>
-        <span><b>0</b> 源</span>
+        <span><b>58</b> 篇</span>
+        <span><b>13</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
+<button class="f-btn" data-filter="大模型发布">大模型发布</button>
+<button class="f-btn" data-filter="开源生态">开源生态</button>
+<button class="f-btn" data-filter="芯片与算力">芯片与算力</button>
+<button class="f-btn" data-filter="产品与应用">产品与应用</button>
+<button class="f-btn" data-filter="安全与对齐">安全与对齐</button>
+<button class="f-btn" data-filter="融资与商业">融资与商业</button>
+<button class="f-btn" data-filter="学术研究">学术研究</button>
+<button class="f-btn" data-filter="AI 工具">AI 工具</button>
+<button class="f-btn" data-filter="具身智能">具身智能</button>
+<button class="f-btn" data-filter="AI 医疗">AI 医疗</button>
+<button class="f-btn" data-filter="行业观点">行业观点</button>
+<button class="f-btn" data-filter="其他">其他</button>
 </div>
 
 <!-- Briefing -->
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今天暂无重要 AI 新闻。</p>
+        <p class="br-editorial">今日AI行业呈现出一幅「冰火两重天」的图景：一面是技术边界的急速扩张——Gemma 4登陆iPhone、具身机器人精细操作成功率跃升至99%、「autoDream」让模型开始模拟人类睡眠整合记忆；另一面是商业化的深层焦虑——Anthropic年化收入达190亿美元却被算力卡喉、旗舰模型无法落地，OpenAI冲刺IPO之际高层大换血。更值得关注的是，Anthropic限制第三方Agent调用订阅额度，这一看似技术运营的决定，实则是巨头在「生态开放」与「商业收割」之间划定的一道新边界。从AI复活逝者引发592万讨论，到微软将Copilot标注为「仅供娱乐」，技术加速的背面，是社会伦理与法律框架的集</p>
     </section>
 
 <!-- Cards Grid -->
-<div class="grid" id="grid"></div>
+<div class="grid" id="grid">
+        <div class="card card--featured" data-cat="AI 医疗|学术研究" data-idx="0"
+             style="animation-delay:0ms"
+             onclick="openModal(0)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">AI 医疗 · 学术研究</span>
+            <span class="z1-meta">12 min</span>
+        </div>
+                <div class="z2">研究团队训练了一个自回归生成模型，基于30万患者、4亿条时间线数据，能够生成临床可信的反事实患者轨迹，用于个性化医疗和虚拟临床试验。</div>
+                <div class="z3"><div class="z3-why">这相当于给医生一个&#x27;平行宇宙模拟器&#x27;——可以在不实际改变治疗方案的情况下，预测&#x27;如果患者年龄更大或某项指标更高，结果会怎样&#x27;，为个性化治疗决策提供科学依据。</div><div class="z3-details"><div class="z3-detail">模型训练数据涵盖超过30万名患者、4亿条患者时间线条目</div><div class="z3-detail">以2023年新冠住院患者为验证任务，模拟修改年龄、CRP和肌酐后的7天结局</div><div class="z3-detail">反事实模拟显示，年龄增大导致院内死亡率上升，与临床认知一致</div><div class="z3-detail">核心方法为自回归生成模型，能产生临床合理的反事实轨迹</div></div></div>
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="学术研究|产品与应用" data-idx="1"
+             style="animation-delay:25ms"
+             onclick="openModal(1)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">学术研究 · 产品与应用</span>
+            <span class="z1-meta">12 min</span>
+        </div>
+                <div class="z2">UI-Oceanus 提出通过合成环境动力学训练 GUI 智能体，用自监督的「前向动力学」预测取代昂贵的人工演示，突破 GUI Agent 的数据瓶颈。</div>
+                <div class="z3"><div class="z3-why">训练能操作电脑界面的 AI 智能体一直需要大量人工录制示范，成本极高。这个框架让 AI 通过自主探索界面并预测「下一步界面长什么样」来自我学习，大幅降低了训练成本。</div><div class="z3-details"><div class="z3-detail">核心瓶颈：现有 GUI Agent 训练依赖昂贵的人工演示数据或合成教师模型的知识蒸馏，两者均存在扩展上限</div><div class="z3-detail">关键发现：在自监督目标中，「前向动力学」（预测未来界面状态）对可扩展性的贡献远大于「逆向推断」</div><div class="z3-detail">方法创新：将低成本的自主环境探索转化为训练信号，直接以真实环境反馈作为验证，无需人工标注</div><div class="z3-detail">框架名称：UI-Oceanus，定位为通用 GUI Agent 的可扩展训练框架</div></div></div>
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="安全与对齐|学术研究" data-idx="2"
+             style="animation-delay:50ms"
+             onclick="openModal(2)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">安全与对齐 · 学术研究</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic 提出「模型差异分析」（Model Diffing）方法：通过比对新模型与可信模型的特征差异，将安全审查聚焦于新模型独有的特征区域，提升 AI 安全评估效率。</div>
+                <div class="z3"><div class="z3-why">AI 模型越来越大，全面审查每个特征成本极高。这个方法相当于只审查「改动部分」而非整份代码，让安全团队把精力花在真正需要关注的地方。</div><div class="z3-details"><div class="z3-detail">新模型与可信模型共享的特征区域可视为已验证，无需重复审查</div><div class="z3-detail">Model Diffing 聚焦于新模型独有特征——这些是新风险最可能出现的地方</div><div class="z3-detail">该方法本质上是将可解释性研究与安全评估相结合的实用工具</div></div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-03 21:28</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="具身智能|大模型发布" data-idx="3"
+             style="animation-delay:75ms"
+             onclick="openModal(3)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">具身智能 · 大模型发布</span>
+            <span class="z1-meta">4 min</span>
+        </div>
+                <div class="z2">具身智能独角兽Generalist发布Gen-1机器人模型，在精细操作任务上成功率从64%提升至99%，速度提升3倍，且仅需1小时演示即可学会全新任务。</div>
+                <div class="z3"><div class="z3-why">机器人终于开始像人一样&#x27;举一反三&#x27;了——不用再耗费大量时间重新编程，给它示范一下就能上手新活儿，而且成功率接近完美，这意味着工厂自动化离真正落地又近了一大步。</div><div class="z3-details"><div class="z3-detail">纸箱折叠任务成功率从64%升至99%，完成时间从34秒压缩至12.1秒，效率提升约3倍</div><div class="z3-detail">只需1小时实机演示，Gen-1即可学会从未见过的新任务，学习效率是前代模型的10倍</div><div class="z3-detail">训练数据采用&#x27;去机器人化&#x27;方案：通过低成本穿戴设备采集数百万条人类活动记录，基于50万小时高保真物理交互数据集预训练，绕开遥操作数据瓶颈</div><div class="z3-detail">推理端引入Paged Attention技术实现毫秒级动作指令响应，配合Harmonic Reasoning多尺度动态调节系统提升复杂任务执行上限</div><div class="z3-detail">模型自主习得了空间、时间和因果关系规律，遇到零件偏移等意外情况能自行调整抓取角度甚至双手协作，不再&#x27;死读程序&#x27;</div></div></div>
+                <div class="z5">⚛️ 量子位 · 04-06 05:17</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="大模型发布|产品与应用" data-idx="4"
+             style="animation-delay:100ms"
+             onclick="openModal(4)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">大模型发布 · 产品与应用</span>
+            <span class="z1-meta">5 min</span>
+        </div>
+                <div class="z2">OpenAI联创Greg Brockman披露新预训练模型「Spud」及Super App战略，揭示Sora被降级至机器人研究方向的真实原因：算力有限下无法同时推进两条差异巨大的技术路线。</div>
+                <div class="z3"><div class="z3-why">OpenAI正在做一个重大战略收缩——把赌注全压在GPT路线上冲AGI，Sora不是被放弃，而是被挪到了机器人研究里慢慢做。新模型Spud是两年心血的重新预训练，不是GPT系列的小更新，而且马上还有个整合编程+浏览器+ChatGPT的Super App要来。</div><div class="z3-details"><div class="z3-detail">新模型「Spud」是重新预训练的全新模型，凝聚OpenAI过去两年技术积累，Greg称其将「聪明且顺从」</div><div class="z3-detail">Sora降级原因：算力有限，视频扩散模型与GPT推理模型是不同技术树，无法同时全力推进</div><div class="z3-detail">Super App将整合编程（Codex）、浏览器和ChatGPT，定位为了解用户、与用户目标一致的「个人助理」</div><div class="z3-detail">Greg明确：AGI就在眼前，今年还有更强模型，OpenAI要把GPT技术树推到底</div><div class="z3-detail">战略逻辑：从「什么都做」转向「聚焦能形成协同、真正产生影响力的应用」，不是B2B转向而是资源聚焦</div></div></div>
+                <div class="z5">⚛️ 量子位 · 04-05 09:06</div>
+            </div>
+        </div>
+        <div class="card" data-cat="学术研究|大模型发布" data-idx="5"
+             style="animation-delay:125ms"
+             onclick="openModal(5)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">学术研究 · 大模型发布</span>
+            <span class="z1-meta">8 min</span>
+        </div>
+                <div class="z2">XpertBench 是一个专家级 LLM 评测基准，包含 80 个专业领域的 1346 个任务，采用评分细则（rubric）评估方式，填补现有基准在真实专业场景评测上的空白。</div>
+                <div class="z3"><div class="z3-why">现有 AI 评测榜单越来越容易被刷榜，XpertBench 用真实专家出题、多维评分来检验模型是否真的达到专业水准，而不是只会做选择题。</div><div class="z3-details"><div class="z3-detail">包含 1346 个精心策划的任务，跨越 80 个分类，覆盖金融、医疗、法律、教育、理工和人文研究等领域</div><div class="z3-detail">任务来自 1000+ 位领域专家提交，确保题目的专业深度和真实性</div><div class="z3-detail">采用 rubric（评分细则）评估方式，而非简单对错判断，更适合衡量开放式复杂任务</div><div class="z3-detail">直指现有基准三大缺陷：领域覆盖窄、依赖通才任务、自我评估偏差</div><div class="z3-detail">针对 LLM 在传统基准上性能趋于饱和的现象，提供更具区分度的评测工具</div></div></div>
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="学术研究|具身智能" data-idx="6"
+             style="animation-delay:150ms"
+             onclick="openModal(6)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">学术研究 · 具身智能</span>
+            <span class="z1-meta">12 min</span>
+        </div>
+                <div class="z2">研究提出AIVV框架，将LLM作为外层推理循环，结合神经符号方法自动化完成自主系统的验证与确认，替代人工审核流程。</div>
+                <div class="z3"><div class="z3-why">以前自动驾驶、工业控制等系统的故障验证必须靠人工逐一审核，工作量巨大且效率低。这个框架让AI来接管这个过程，有望大幅降低人工负担并提升可靠性。</div><div class="z3-details"><div class="z3-detail">深度学习模型能检测异常模式，但无法有效区分真实故障与噪声引起的干扰性故障</div><div class="z3-detail">现有算法故障验证缺乏可扩展性，导致V&amp;V工作仍依赖人工（HITL）分析</div><div class="z3-detail">AIVV框架将LLM部署为&#x27;审议式外循环&#x27;，实现自动化故障验证</div><div class="z3-detail">采用神经符号（Neuro-Symbolic）混合方法，结合符号推理与深度学习优势</div><div class="z3-detail">目标是为自主系统构建可信赖的验证体系，减少不可持续的人工工作量</div></div></div>
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="学术研究|其他" data-idx="7"
+             style="animation-delay:175ms"
+             onclick="openModal(7)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">学术研究 · 其他</span>
+            <span class="z1-meta">12 min</span>
+        </div>
+                <div class="z2">研究提出四部分框架，利用数字孪生、蒙特卡洛模拟和多目标优化，帮助电力公司在极端天气不确定性下制定最优长期弹性投资规划。</div>
+                <div class="z3"><div class="z3-why">电网面临需求爆炸性增长和极端天气双重压力，这个框架能帮助电力公司把有限资金投在刀刃上，减少停电风险。</div><div class="z3-details"><div class="z3-detail">框架纳入极端天气作为不确定性来源，提升规划的气候适应性</div><div class="z3-detail">利用电网数字孪生模型进行虚拟仿真，降低实验成本</div><div class="z3-detail">通过蒙特卡洛模拟捕捉各类随机变量，量化投资组合风险</div><div class="z3-detail">采用多目标优化方法寻找最优资本投资组合</div><div class="z3-detail">研究探讨网格感知优化方法是否优于传统规划方式</div></div></div>
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="学术研究|AI工具" data-idx="8"
+             style="animation-delay:200ms"
+             onclick="openModal(8)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">学术研究 · AI工具</span>
+            <span class="z1-meta">12 min</span>
+        </div>
+                <div class="z2">研究人员系统测量了WebGPU在浏览器端运行大语言模型推理时的调度开销，发现此前的单操作基准测试高估了约20倍，真实开销在Vulkan后端为24-36微秒/次。</div>
+                <div class="z3"><div class="z3-why">如果你想在浏览器里直接跑AI模型（不需要服务器），WebGPU是关键技术。这篇研究告诉开发者真实的性能瓶颈在哪，让浏览器端AI推理的优化有了更准确的参考依据。</div><div class="z3-details"><div class="z3-detail">传统单操作基准测试会将WebGPU调度开销高估约20倍，新方法揭示了更接近真实的成本</div><div class="z3-detail">Vulkan后端的真实每次调度API开销为24-36微秒，Metal后端为32-71微秒</div><div class="z3-detail">研究横跨4家GPU厂商（NVIDIA、AMD、Apple、Intel）、3款浏览器（Chrome、Safari、Firefox）和两种原生实现（Dawn、wgp</div><div class="z3-detail">测试模型为Qwen2.5-0.5B和1.5B，代表当前可在浏览器端运行的典型小型LLM</div><div class="z3-detail">WebGPU的安全设计要求对每个操作进行验证，这在神经网络推理的大量小调度中会累积成显著开销</div></div></div>
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="产品与应用|行业观点" data-idx="9"
+             style="animation-delay:225ms"
+             onclick="openModal(9)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 行业观点</span>
+            <span class="z1-meta">5 min</span>
+        </div>
+                <div class="z2">小米MiMo负责人罗福莉评析Anthropic封禁第三方Agent框架使用订阅额度事件，指出真正出路是「更省token的Agent框架×更高效的模型」协同进化，而非更便宜的token。</div>
+                <div class="z3"><div class="z3-why">Anthropic这次封禁让大家意识到，AI服务的成本黑洞不在模型本身，而在于框架设计粗糙——烂代码把算力当垃圾烧，最终谁都得买单。</div><div class="z3-details"><div class="z3-detail">有重度用户月付200刀订阅费却消耗了价值5000刀算力，成本倒挂极其严重</div><div class="z3-detail">OpenClaw等框架的context管理质量低劣，单次用户请求触发多轮冗余API调用，每次携带超10万token上下文</div><div class="z3-detail">罗福莉警告大模型厂商不要盲目打价格战，低价卖token同时对第三方框架敞开大门是&#x27;陷阱&#x27;</div><div class="z3-detail">小米MiMo Token Plan采用按token配额计费，支持第三方框架但不走订阅便车，逻辑与Claude新推出的extra usage包一致</div><div class="z3-detail">开发者社区共识：AI服务真实成本由&#x27;模型×框架×context管理&#x27;三者叠加决定，编排层才是产品核心</div></div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 06:49</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="融资与商业|芯片与算力" data-idx="10"
+             style="animation-delay:250ms"
+             onclick="openModal(10)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">融资与商业 · 芯片与算力</span>
+            <span class="z1-meta">5 min</span>
+        </div>
+                <div class="z2">Anthropic年化收入飙至190亿美元却因算力严重不足被迫限流，旗舰模型Mythos因计算成本过高难以落地；OpenAI则将发布名为Spud的统一智能体，两大巨头同步冲刺IPO。</div>
+                <div class="z3"><div class="z3-why">Claude最近变难用不是你的错觉——Anthropic真的服务器告急了。用户花钱买的额度大幅缩水，背后是两大AI巨头为抢IPO拼命烧钱、算力跟不上增长的真实写照。</div><div class="z3-details"><div class="z3-detail">Anthropic年化收入达190亿美元，8家财富10强企业是其客户，500余家企业年消费超百万美元</div><div class="z3-detail">Claude服务严重限流：付费用户5小时额度最快19分钟耗尽，200美元顶级套餐一月仅12天可正常使用</div><div class="z3-detail">下一代模型Claude Mythos因算力成本过高导致服务器拥堵，Anthropic表示必须大幅提升运行效率才能全面发布</div><div class="z3-detail">Anthropic推理成本超出内部预期23%，毛利率跌至约40%，每赚1美元超过一半流向GPU集群</div><div class="z3-detail">OpenAI即将发布名为Spud的统一智能体，整合ChatGPT、Codex和Atlas浏览器；五角大楼合同风波引发ChatGPT单日卸载量暴涨295%，250</div></div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 06:20</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="融资与商业|行业观点" data-idx="11"
+             style="animation-delay:275ms"
+             onclick="openModal(11)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">融资与商业 · 行业观点</span>
+            <span class="z1-meta">4 min</span>
+        </div>
+                <div class="z2">OpenAI IPO冲刺阶段高层大换血：COO Brad Lightcap转岗、产品负责人Fidji Simo休假、CMO Kate Rouch因癌症治疗离职，新COO由入职仅三个月的Denise D</div>
+                <div class="z3"><div class="z3-why">一家正准备上市的公司最需要的是管理层稳定，但OpenAI偏偏在这个节骨眼上核心高管接连变动，投资者和市场会对它的上市时间表和治理能力产生更多疑虑。</div><div class="z3-details"><div class="z3-detail">长期COO Brad Lightcap转任&#x27;特别项目&#x27;负责人，实际失去大管家身份，由入职仅3个月的前Slack CEO Denise Dresser接任COO</div><div class="z3-detail">产品负责人Fidji Simo以&#x27;健康状况糟糕&#x27;为由休假，由总裁Greg Brockman暂代产品部门</div><div class="z3-detail">首席营销官Kate Rouch因癌症治疗正式离职</div><div class="z3-detail">CEO奥特曼希望抢在Anthropic之前于今年Q4上市，CFO Sarah Friar则私下表达担忧，认为目标过于激进</div><div class="z3-detail">OpenAI预计在实现正向现金流前将烧掉超过2000亿美元，CFO对6000亿美元AI服务器承诺能否兑现存疑</div></div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 06:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="开源生态|产品与应用" data-idx="12"
+             style="animation-delay:300ms"
+             onclick="openModal(12)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">开源生态 · 产品与应用</span>
+            <span class="z1-meta">5 min</span>
+        </div>
+                <div class="z2">谷歌开源小模型 Gemma 4 可在 iPhone 本地运行，速度超 40 token/秒，引发「0 token 时代」讨论，但在 Agent 复杂任务上仍有明显短板。</div>
+                <div class="z3"><div class="z3-why">以后很多日常 AI 任务可能不用付费买 token，直接在手机上跑，既省钱又保护隐私；但云端 AI 服务短期内还不会被取代，复杂任务还得靠大模型。</div><div class="z3-details"><div class="z3-detail">Gemma 4 小尺寸版本（E2B/E4B）可在 iPhone 本地运行，借助苹果 MLX 框架推理速度超 40 token/秒</div><div class="z3-detail">谷歌发布官方 App「Google AI Edge Gallery」，非极客用户也可一键下载体验</div><div class="z3-detail">Gemma 4 在 Arena AI 排行榜全球第三，支持原生全模态（图像、音频），上下文窗口 128K</div><div class="z3-detail">实测 Gemma 4 26B 用作 Coding Agent 时频繁卡顿报错，切换至 Qwen3-Coder 后表现正常，说明其工具调用和结构化输出能力不足</div><div class="z3-detail">长期趋势：端侧模型将蚕食云端高频简单任务，靠卖 token 的厂商需转向超强 Agent 和专有能力</div></div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 05:46</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="产品与应用|学术研究" data-idx="13"
+             style="animation-delay:325ms"
+             onclick="openModal(13)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 学术研究</span>
+            <span class="z1-meta">8 min</span>
+        </div>
+                <div class="z2">Anthropic 在 Claude Code 泄露代码中曝光「autoDream」功能：一套模拟睡眠的后台记忆整合系统，在用户关机后自动清理矛盾记忆、巩固长期知识，与人脑睡眠机制高度趋同。</div>
+                <div class="z3"><div class="z3-why">AI Agent「永不停机」的卖点可能是个伪命题——连最激进推进 Agent 的公司，都在偷偷给 AI 设计「睡觉」机制，因为不休息的系统记忆会越来越乱，最终失去判断力。</div><div class="z3-details"><div class="z3-detail">2026年3月31日 Anthropic 因打包失误将 51 万行 Claude Code 源代码泄露至公共 npm 仓库，数小时内被镜像至 GitHub</div><div class="z3-detail">泄露代码中包含 KAIROS 后台系统：白天持续观察记录，autoDream 在用户关机后启动，整理记忆、消除矛盾、固化模糊观察</div><div class="z3-detail">autoDream 以分叉子进程独立运行，与主线程完全隔离，工具权限严格受限</div><div class="z3-detail">神经科学研究表明持续睡眠剥夺会依次损害记忆力、注意力和基本判断力，LLM 上下文溢出问题与此高度类似</div><div class="z3-detail">文章引用趋同进化概念：章鱼与人类独立演化出相机式眼睛，autoDream 与人脑睡眠可能是相似约束下的相似解</div></div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 05:10</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="产品与应用|安全与对齐" data-idx="14"
+             style="animation-delay:350ms"
+             onclick="openModal(14)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 安全与对齐</span>
+            <span class="z1-meta">3 min</span>
+        </div>
+                <div class="z2">AI「复活」服务引发伦理争议：90后从业者张泽伟用生成式AI还原逝者相貌、声音与话语，有家属瞒着老人用AI儿子打视频通话长达一年，引发592万热度社会讨论。</div>
+                <div class="z3"><div class="z3-why">AI已经能以假乱真地「复活」死去的亲人，但这究竟是在帮助生者疗愈，还是在用谎言延缓悲伤？这个问题正在真实发生在普通家庭里。</div><div class="z3-details"><div class="z3-detail">从业者张泽伟自称&#x27;骗人感情的骗子&#x27;，坦承技术的伦理模糊性</div><div class="z3-detail">一案例中儿子去世，家人瞒着奶奶用AI生成儿子形象进行视频通话，持续约一年</div><div class="z3-detail">另一案例中父母为9岁夭折女儿创建AI复原，并在数字世界为其规划未来成长轨迹</div><div class="z3-detail">有案例显示：父亲离世后抑郁的孩子，在AI复原后走出抑郁</div><div class="z3-detail">核心追问：AI复原的是逝者本身，还是生者情感投射出的幻象？</div></div></div>
+                <div class="z5">💭 知乎热榜 · 04-06 01:07</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="开源生态|产品与应用" data-idx="15"
+             style="animation-delay:375ms"
+             onclick="openModal(15)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">开源生态 · 产品与应用</span>
+            <span class="z1-meta">3 min</span>
+        </div>
+                <div class="z2">开发者发布开源项目 Parlor，基于 Google Gemma 4 E2B 模型，在 M3 Pro Mac 上实现完全本地化的实时语音+视觉多模态 AI 对话，仅需 3GB RAM，零服务器成本。</div>
+                <div class="z3"><div class="z3-why">以前跑实时语音 AI 需要 RTX 5090 这种级别的显卡，现在普通 Mac 笔记本就能搞定，而且视频也能理解——本地 AI 的门槛正在快速降低，用不了几年手机上可能就能跑了。</div><div class="z3-details"><div class="z3-detail">基于 Google 最新发布的 Gemma 4 E2B 小模型，通过 LiteRT-LM 在 Apple Silicon GPU 上实时推理，同时处理语音和摄像</div><div class="z3-detail">TTS 使用 Kokoro（Mac 上跑 MLX，Linux 跑 ONNX），支持句级流式播放，响应延迟极低</div><div class="z3-detail">支持语音活动检测（免按键）、打断 AI 发言、WebSocket 流式传输等交互功能</div><div class="z3-detail">仅需 3GB RAM，支持 macOS Apple Silicon 或带 GPU 的 Linux，门槛极低</div><div class="z3-detail">作者原本运营一个英语学习服务，月活数百用户，本项目目标是通过端侧化彻底消除服务器成本</div></div></div>
+                <div class="z5">🔥 Hacker News AI · 04-05 17:53</div>
+            </div>
+        </div>
+        <div class="card" data-cat="AI编程|产品与应用" data-idx="16"
+             style="animation-delay:400ms"
+             onclick="openModal(16)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">AI编程 · 产品与应用</span>
+            <span class="z1-meta">5 min</span>
+        </div>
+                <div class="z2">Oracle 发布 Helidon 4.4.0，Java 微服务框架正式引入 LangChain4j 智能体编排能力，支持 workflow 和 dynamic agent 两种模式，开发者可通过注解</div>
+                <div class="z3"><div class="z3-why">Java 开发者现在可以直接在熟悉的微服务框架里构建 AI Agent，不用再另起炉灶学一套新工具，降低了企业 Java 应用接入 AI 能力的门槛。</div><div class="z3-details"><div class="z3-detail">新增 LangChain4j 智能体支持，提供 workflows（多智能体编排）和 dynamic agents（监督者-子智能体模式）两种执行模式</div><div class="z3-detail">支持通过 @Ai.Agent、@Ai.ChatModel、@Ai.Tools 等注解以声明式方式创建和配置 AI Agent</div><div class="z3-detail">引入 Helidon JSON，针对虚拟线程优化，编译时生成类型安全转换器，运行时无需反射</div><div class="z3-detail">版本命名策略将对齐 OpenJDK 六个月发布节奏，2026年9月起改为 Helidon 27</div><div class="z3-detail">Helidon 被纳入 Oracle 新推出的 Java Verified Portfolio（JVP），获得官方认证背书</div></div></div>
+                <div class="z5">🚀 AI前线 · 04-05 21:49</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|AI工具" data-idx="17"
+             style="animation-delay:425ms"
+             onclick="openModal(17)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI工具</span>
+            <span class="z1-meta">4 min</span>
+        </div>
+                <div class="z2">吾云创新推出面向Agent的专属硬件「Agent Computer」，无键盘、无鼠标、无屏幕，主打本地数据处理与Agent持续运行，定价目标低于Mac Mini+NAS组合。</div>
+                <div class="z3"><div class="z3-why">随着本地AI部署（如各类龙虾工具）爆火，普通用户发现自己的电脑既跑不动、存储又不够。这款设备想做「Agent专属主机」，帮你省去折腾，开箱就能让AI Agent 24小时替你干活。</div><div class="z3-details"><div class="z3-detail">「三无」设计（无键盘/鼠标/屏幕）源于其核心理念：设备主要使用者是Agent而非人类，GUI交互逻辑不再适用</div><div class="z3-detail">提出「Context操作系统」概念，将个人数字痕迹结构化语义化管理，类比OS管理内存和CPU的方式</div><div class="z3-detail">Agent在设备上724小时在线运行，人类只需在关键节点确认结果或调整方向</div><div class="z3-detail">吾云创新前身做AI NAS，方向调整后将Agent Computer与NAS定为短期两条产品线、长期合并</div><div class="z3-detail">定价锚点明确：必须低于Mac Mini+NAS+硬盘的组合价格才有竞争力</div></div></div>
+                <div class="z5">⚛️ 量子位 · 04-05 02:14</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|AI 工具" data-idx="18"
+             style="animation-delay:450ms"
+             onclick="openModal(18)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI 工具</span>
+            <span class="z1-meta">2 min</span>
+        </div>
+                <div class="z2">Anthropic 宣布 Claude Code 订阅用户使用 OpenClaw 等第三方工具时需要额外付费，订阅成本将因此上升。</div>
+                <div class="z3"><div class="z3-why">简单说就是：你买了 Claude Code 订阅，以为可以免费用所有集成工具，但现在用 OpenClaw 这类第三方工具要另外掏钱了。</div><div class="z3-details"><div class="z3-detail">Claude Code 订阅用户使用 OpenClaw 将需要额外付费</div><div class="z3-detail">变化同样适用于其他第三方工具集成</div><div class="z3-detail">这意味着 Claude Code 的实际使用成本将高于当前订阅价格</div></div></div>
+                <div class="z5">💡 TechCrunch AI · 04-04 16:32</div>
+            </div>
+        </div>
+        <div class="card" data-cat="AI编程|行业观点" data-idx="19"
+             style="animation-delay:475ms"
+             onclick="openModal(19)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">AI编程 · 行业观点</span>
+            <span class="z1-meta">8 min</span>
+        </div>
+                <div class="z2">AI DevOps 专家 Paul Duvall 探讨智能体 AI 时代下，主干开发、测试优先、规范驱动开发等核心工程实践比以往更加重要，并开源了一套智能体 AI 工程模式代码库。</div>
+                <div class="z3"><div class="z3-why">AI 能快速生成大量代码，但如果工程规范跟不上，质量会失控。这篇文章告诉开发者：不是 AI 替代你写代码就完事了，你得用更严格的自动化测试和规范来&#x27;管住&#x27;AI 生成的东西。</div><div class="z3-details"><div class="z3-detail">Duvall 强调：当 AI 可以生成代码时，工程实践比以往任何时候都更重要，主干开发、频繁提交和自动化测试是保障质量的关键</div><div class="z3-detail">开发者与代码交互方式正在转变——面对 AI 生成的海量代码，逐行审查已不现实，需更多依赖自动化验证和智能体防护机制</div><div class="z3-detail">规范驱动开发（Spec-driven Development）成为关键实践：通过预定义行为、约束条件与验收标准，让智能体依据清晰规范生成并校验输出</div><div class="z3-detail">Paul Stack 主导开源平台 SWAMP，甚至放弃 Pull Request 模式，转向基于 GitHub Issue 的工作流，融入规范驱动开发</div><div class="z3-detail">Duvall 预测 AI 将催生更小、更聚焦的&#x27;单披萨团队&#x27;，协调成本降低、自动化程度提升将重塑研发组织形态</div></div></div>
+                <div class="z5">🚀 AI前线 · 04-04 14:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|融资与商业" data-idx="20"
+             style="animation-delay:500ms"
+             onclick="openModal(20)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 融资与商业</span>
+            <span class="z1-meta">3 min</span>
+        </div>
+                <div class="z2">荣耀与京东签订战略合作协议，三年目标超1000亿元，合作涵盖AI共创、机器人、C2M定制及全渠道生态整合。</div>
+                <div class="z3"><div class="z3-why">两家大公司抱团，荣耀的端侧AI和硬件能力加上京东的电商平台和用户数据，可能推出更多针对特定人群（如外卖骑手、游戏玩家）的定制产品，消费者有望在京东买到更多场景化的荣耀产品。</div><div class="z3-details"><div class="z3-detail">双方设定三年累计合作规模超1000亿元目标</div><div class="z3-detail">将联合开展C2M定制项目，针对外卖骑手、快递员、游戏玩家等特定人群共创产品</div><div class="z3-detail">荣耀端侧大模型与京东JoyAI、JoyInside生态结合，共建商品导购、生活服务等AI创新场景</div><div class="z3-detail">京东线下门店将试点部署荣耀机器人用于引流导购</div><div class="z3-detail">双方将依托荣耀终端和京东Joybuy平台共同拓展海外市场</div></div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 09:48</div>
+            </div>
+        </div>
+        <div class="card" data-cat="开源生态|学术研究" data-idx="21"
+             style="animation-delay:500ms"
+             onclick="openModal(21)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">开源生态 · 学术研究</span>
+            <span class="z1-meta">4 min</span>
+        </div>
+                <div class="z2">开发者开源了 GuppyLM，一个仅 900 万参数的微型语言模型，旨在用 5 分钟、一个 Colab 笔记本让任何人从零训练自己的 LLM，揭开语言模型的神秘面纱。</div>
+                <div class="z3"><div class="z3-why">这个项目把「训练大模型」这件听起来高深的事变成了人人可操作的事——不需要博士学位，不需要大型 GPU 集群，普通人也能亲手跑通一个完整的语言模型训练流程，真正搞懂 LLM 是怎么工作的。</div><div class="z3-details"><div class="z3-detail">GuppyLM 仅有 900 万参数，可在免费 Google Colab 上完成训练，约 5 分钟内完成</div><div class="z3-detail">项目覆盖完整流程：数据生成、分词器、模型架构、训练循环和推理，没有任何步骤被省略</div><div class="z3-detail">配套 60k 条通用训练数据集已发布在 HuggingFace，模型权重也同步开源</div><div class="z3-detail">MIT 许可证，提供训练和对话两个独立 Colab Notebook，极低门槛上手</div><div class="z3-detail">作者同步在 LinkedIn 和 Medium 发布配套教程文章</div></div></div>
+                <div class="z5">🔥 Hacker News AI · 04-06 00:20</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="22"
+             style="animation-delay:500ms"
+             onclick="openModal(22)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Industrial policy for the Intelligence Age</div>
+                
+                <div class="z5">🤖 OpenAI Blog · 04-06 02:30</div>
+            </div>
+        </div>
+        <div class="card" data-cat="AI工具|行业观点" data-idx="23"
+             style="animation-delay:500ms"
+             onclick="openModal(23)">
+            <div class="card-img" style="background-image:url('https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/c062e1e947ee4cfa8c8c35d2b2123667~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5ZGo5pyr56iL5bqP54y_:q75.awebp?rk3s=f64ab15b&amp;amp;x-expires=1775825437&amp;amp;x-signature=DkSMw5QEVj1oqWhTQA%2FwPzOLGMw%3D')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">AI工具 · 行业观点</span>
+            <span class="z1-meta">5 min</span>
+        </div>
+                <div class="z2">掘金作者介绍「Harness Engineering」概念及其自研自我进化Agent框架，主张AI工程方法论已从提示词工程演进至驾驭工程阶段，并探讨AI对知识结构的影响。</div>
+                <div class="z3"><div class="z3-why">这篇文章提出了一个值得关注的趋势判断：AI行业的焦点正从研究大模型本身转向如何更好地「驾驭」它，让Agent能长时间稳定自主运行，这对工程师和产品人理解下一阶段的AI应用开发方向有参考价值。</div><div class="z3-details"><div class="z3-detail">AI工程方法论演进路径：提示词工程→上下文工程（RAG）→驾驭工程（Harness Engineering），核心从设计输入转向设计运行环境与反馈循环</div><div class="z3-detail">作者认为AI能替代「可自闭环验证」的岗位（如程序员），但无法替代需要探索验证方法论的科学家</div><div class="z3-detail">AI的天花板在于行业知识是否可验证并能自我迭代，知识平权并不成立，反而加速通用知识流动与知识财富分化</div><div class="z3-detail">自我进化Agent基于Harness工程方法论，需具备模型API、反馈循环等核心功能</div><div class="z3-detail">项目已开源，作者提供了初始化版本代码供参考</div></div></div>
+                <div class="z5">💎 掘金 AI · 04-03 06:16</div>
+            </div>
+        </div>
+        <div class="card" data-cat="学术研究" data-idx="24"
+             style="animation-delay:500ms"
+             onclick="openModal(24)">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2037458934089625600%2FgalTfJK6%3Fformat%3Djpg%26name%3D420x420_2')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">学术研究</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic 通过 Fellows 项目发布一篇由 tomjiralerspong 主导、TrentonBricken 监督的学术研究论文（arXiv:2602.11729）。</div>
+                <div class="z3"><div class="z3-why">Anthropic 的 Fellows 项目持续产出研究成果，但此推文内容极少，无法判断论文具体研究方向和意义。</div><div class="z3-details"><div class="z3-detail">研究来自 Anthropic Fellows 项目</div><div class="z3-detail">由研究员 tomjiralerspong 主导</div><div class="z3-detail">由 TrentonBricken 监督</div><div class="z3-detail">论文发布于 arXiv（编号 2602.11729）</div></div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-03 21:28</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="25"
+             style="animation-delay:500ms"
+             onclick="openModal(25)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">R to @AnthropicAI: This technique isn&#x27;t perfect—it can be oversensitive, sometimes flagging analogou</div>
+                
+                <div class="z5">🐦 X-AnthropicAI · 04-03 21:28</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="26"
+             style="animation-delay:500ms"
+             onclick="openModal(26)">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHFApZrFaMAAZPAV.jpg')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">R to @AnthropicAI: For example, when we compared Alibaba&#x27;s Qwen to Meta&#x27;s Llama, we found a &quot;CCP ali</div>
+                
+                <div class="z5">🐦 X-AnthropicAI · 04-03 21:28</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="27"
+             style="animation-delay:500ms"
+             onclick="openModal(27)">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2040199900919463936%2FiGekea6Q%3Fformat%3Djpg%26name%3D800x419')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">New Anthropic Fellows Research: a new method for surfacing behavioral differences between AI models.</div>
+                
+                <div class="z5">🐦 X-AnthropicAI · 04-03 21:28</div>
+            </div>
+        </div>
+        <div class="card" data-cat="芯片与算力|产品与应用" data-idx="28"
+             style="animation-delay:500ms"
+             onclick="openModal(28)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">芯片与算力 · 产品与应用</span>
+            <span class="z1-meta">2 min</span>
+        </div>
+                <div class="z2">太初元碁五周年大会上宣布向20名员工发放总价值约100万元的百亿算力token，并联合浙江工商大学等机构共建人工智能科教融合学院。</div>
+                <div class="z3"><div class="z3-why">国产算力公司用&#x27;算力福利&#x27;替代现金奖励，既激励员工探索AI Agent应用，也变相推广自家算力生态——是一种颇有意思的内部运营玩法。</div><div class="z3-details"><div class="z3-detail">向20名员工发放百亿算力token，总价值约100万元，来自国产智算中心</div><div class="z3-detail">员工可自行决定token使用场景，有员工表示暂未想好如何使用</div><div class="z3-detail">联合浙江工商大学、国家超级计算无锡中心、浙江力积存储共建AI科教融合学院</div><div class="z3-detail">太初元碁将为浙工商人工智能学院提供智能算力底座支撑</div><div class="z3-detail">此前已发布基于河南空港智算中心的太初龙虾一体机TecoClaw，主打全栈国产化私有化部署</div></div></div>
+                <div class="z5">⚛️ 量子位 · 04-05 08:53</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="29"
+             style="animation-delay:500ms"
+             onclick="openModal(29)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">AI is changing how small online sellers decide what to make</div>
+                
+                <div class="z5">🎓 MIT Tech Review · 04-06 11:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="30"
+             style="animation-delay:500ms"
+             onclick="openModal(30)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Holos: A Web-Scale LLM-Based Multi-Agent System for the Agentic Web</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="31"
+             style="animation-delay:500ms"
+             onclick="openModal(31)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Compositional Neuro-Symbolic Reasoning</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="32"
+             style="animation-delay:500ms"
+             onclick="openModal(32)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Understanding the Nature of Generative AI as Threshold Logic in High-Dimensional Space</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="33"
+             style="animation-delay:500ms"
+             onclick="openModal(33)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">I must delete the evidence: AI Agents Explicitly Cover up Fraud and Violent Crime</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="34"
+             style="animation-delay:500ms"
+             onclick="openModal(34)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Interpretable Deep Reinforcement Learning for Element-level Bridge Life-cycle Optimization</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="35"
+             style="animation-delay:500ms"
+             onclick="openModal(35)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Competency Questions as Executable Plans: a Controlled RAG Architecture for Cultural Heritage Storyt</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="36"
+             style="animation-delay:500ms"
+             onclick="openModal(36)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Mitigating LLM biases toward spurious social contexts using direct preference optimization</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="37"
+             style="animation-delay:500ms"
+             onclick="openModal(37)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning</div>
+                
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="38"
+             style="animation-delay:500ms"
+             onclick="openModal(38)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">SIEVE: Sample-Efficient Parametric Learning from Natural Language</div>
+                
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="39"
+             style="animation-delay:500ms"
+             onclick="openModal(39)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models</div>
+                
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="40"
+             style="animation-delay:500ms"
+             onclick="openModal(40)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">LLM Reasoning with Process Rewards for Outcome-Guided Steps</div>
+                
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="41"
+             style="animation-delay:500ms"
+             onclick="openModal(41)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Homophily-aware Supervised Contrastive Counterfactual Augmented Fair Graph Neural Network</div>
+                
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="42"
+             style="animation-delay:500ms"
+             onclick="openModal(42)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Haiku to Opus in Just 10 bits: LLMs Unlock Massive Compression Gains</div>
+                
+                <div class="z5">📄 ArXiv ML · 04-06 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="43"
+             style="animation-delay:500ms"
+             onclick="openModal(43)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">RT by @ylecun: Thinking in language has limited applications, largely in coding and mathematics wher</div>
+                
+                <div class="z5">🐦 X-Yann LeCun · 04-05 12:35</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|AI工具" data-idx="44"
+             style="animation-delay:500ms"
+             onclick="openModal(44)">
+            <div class="card-img" style="background-image:url('https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/7582f4653a6c4ba1949a766e9119ff7b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5rSb5Y2h5Y2h5LqG:q75.awebp?rk3s=f64ab15b&amp;amp;x-expires=1775786206&amp;amp;x-signature=MnKd8CAOhOHmXQaXvKUGAPoKsZ0%3D')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI工具</span>
+            <span class="z1-meta">4 min</span>
+        </div>
+                <div class="z2">Claude Code于4月1日悄悄上线「/buddy」宠物模式，通过泄露源码被详细解析：支持18种ASCII宠物物种、5档稀有度（传说级概率仅1%），系统包含物种、稀有度、眼睛、帽子、闪光状态及五维</div>
+                <div class="z3"><div class="z3-why">这是Anthropic藏在Claude Code里的一个愚人节彩蛋，跟游戏里开盲盒一样随机孵化小宠物——虽然是个娱乐功能，但因为源码泄露让大家提前看到了完整机制，相当于看到了「概率表」。</div><div class="z3-details"><div class="z3-detail">Claude Code于4月1日上线/buddy命令，可随机孵化专属ASCII电子宠物，命令行显示彩虹色效果</div><div class="z3-detail">宠物系统支持18种物种，包括鸭子、龙、章鱼、水豚、机器人等，每种有独立ASCII造型</div><div class="z3-detail">稀有度分5档：普通(60%)、少见、稀有、史诗、传说(1%)，高稀有度才显示帽子装饰</div><div class="z3-detail">宠物属性由物种、眼睛、帽子、闪光状态及五维属性值共同决定，系统设计相当完整</div><div class="z3-detail">该功能因Claude Code源码泄露事件被提前曝光，而非官方正式介绍</div></div></div>
+                <div class="z5">💎 掘金 AI · 04-03 01:46</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="45"
+             style="animation-delay:500ms"
+             onclick="openModal(45)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">AI 时代的架构治理</div>
+                
+                <div class="z5">🚀 AI前线 · 04-06 10:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="46"
+             style="animation-delay:500ms"
+             onclick="openModal(46)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">让离线强化学习从「局部描摹」变「全局布局」丨ICLR’26</div>
+                
+                <div class="z5">⚛️ 量子位 · 04-06 05:35</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="47"
+             style="animation-delay:500ms"
+             onclick="openModal(47)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">AI创业，已经没有“出海”这个词了丨量子位沙龙</div>
+                
+                <div class="z5">⚛️ 量子位 · 04-06 05:04</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="48"
+             style="animation-delay:500ms"
+             onclick="openModal(48)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Copilot is ‘for entertainment purposes only,’ according to Microsoft’s terms of use</div>
+                
+                <div class="z5">💡 TechCrunch AI · 04-05 18:51</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="49"
+             style="animation-delay:500ms"
+             onclick="openModal(49)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">In Japan, the robot isn’t coming for your job; it’s filling the one nobody wants</div>
+                
+                <div class="z5">💡 TechCrunch AI · 04-05 14:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="50"
+             style="animation-delay:500ms"
+             onclick="openModal(50)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Pinterest 部署生产级模型上下文协议生态系统，赋能 AI 智能体工作流</div>
+                
+                <div class="z5">🚀 AI前线 · 04-05 10:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="51"
+             style="animation-delay:500ms"
+             onclick="openModal(51)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">具身龙虾，上车理想</div>
+                
+                <div class="z5">⚛️ 量子位 · 04-05 04:52</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="52"
+             style="animation-delay:500ms"
+             onclick="openModal(52)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">GPT-6，曝光了</div>
+                
+                <div class="z5">⚛️ 量子位 · 04-05 04:49</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="53"
+             style="animation-delay:500ms"
+             onclick="openModal(53)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Linux内核维护者崩溃了！AI每天狂塞10份漏洞报告，想摸会鱼都难</div>
+                
+                <div class="z5">⚛️ 量子位 · 04-05 02:24</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="54"
+             style="animation-delay:500ms"
+             onclick="openModal(54)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">如何获得独特的AI创业点子？YC合伙人：别再看别人在做什么了</div>
+                
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 09:07</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="55"
+             style="animation-delay:500ms"
+             onclick="openModal(55)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">易烊千玺，给字节划了条红线</div>
+                
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 08:07</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="56"
+             style="animation-delay:500ms"
+             onclick="openModal(56)">
+            <div class="card-img" style="background-image:url('https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/e0cf1c90c5cb49d8af758699cdc63ffb~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgRGV2VUnlm6LpmJ8=:q75.awebp?rk3s=f64ab15b&amp;amp;x-expires=1775813175&amp;amp;x-signature=3rUCNgU03%2FwzVCJtNHCwusU6d50%3D')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">🔥🔥🔥AI Agent从入门到实践：从底层原理到如何从0手搓一个AI 智能体</div>
+                
+                <div class="z5">💎 掘金 AI · 04-03 08:43</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="57"
+             style="animation-delay:500ms"
+             onclick="openModal(57)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">从关停公告到 24342 条数据：AI 时代的逆向工程实录</div>
+                
+                <div class="z5">💎 掘金 AI · 04-03 08:00</div>
+            </div>
+        </div></div>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
@@ -317,11 +1141,11 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>0</b> 个信息源 · <b>0</b> 篇资讯 · 2026年04月06日
+    AI 早报 · <b>13</b> 个信息源 · <b>58</b> 篇资讯 · 2026年04月06日
 </footer>
 
 <script>
-const __data = [];
+const __data = [{"title": "Generating Counterfactual Patient Timelines from Real-World Data", "summary": "研究团队训练了一个自回归生成模型，基于30万患者、4亿条时间线数据，能够生成临床可信的反事实患者轨迹，用于个性化医疗和虚拟临床试验。", "background": "反事实推理是因果推断的核心工具，在医学中意味着'如果当初做了不同的选择，结果会如何'。传统临床试验成本高、周期长，且无法覆盖所有患者亚群。虚拟临床试验（in silico trials）和个性化医疗的理念因此兴起，但其核心挑战在于：如何从观测数据中可靠地推断反事实结果，同时避免混淆变量干扰。大型语言模型和生成模型的兴起为此提供了新思路。", "deep_analysis": "该研究的核心贡献在于证明了大规模真实世界数据训练的自回归模型具备生成反事实临床轨迹的能力。选择COVID-19住院患者作为验证场景较为合理，因为年龄、CRP（炎症指标）和肌酐（肾功能指标）均是已知的新冠预后因子，模型输出与临床知识吻合可作为初步有效性验证。若该方法成熟，将对药物研发（减少真实试验规模）、治疗方案优化和医疗政策制定产生深远影响。但需注意：反事实验证本身存在根本困难——真实的反事实结果永远无法观测到，模型的可信度最终依赖于间接验证和领域专家判断。", "importance": 4, "categories": ["AI 医疗", "学术研究"], "source_type": "paper", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02337", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 12, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "UI-Oceanus: Scaling GUI Agents with Synthetic Environmental Dynamics", "summary": "UI-Oceanus 提出通过合成环境动力学训练 GUI 智能体，用自监督的「前向动力学」预测取代昂贵的人工演示，突破 GUI Agent 的数据瓶颈。", "background": "GUI Agent（图形界面智能体）是指能像人类一样操控电脑桌面或网页界面完成任务的 AI 系统，被视为 AI 自动化的重要方向。此前主流训练方式依赖人工录制操作轨迹，或用更强大的模型（教师模型）生成合成数据来蒸馏训练，前者成本高昂，后者受限于教师模型能力的天花板。如何在不依赖大规模人工标注的前提下持续扩展 GUI Agent 的能力，是当前研究的核心难题。", "deep_analysis": "UI-Oceanus 的核心贡献在于重新定义了 GUI Agent 的学习范式：从「模仿人类轨迹」转向「理解界面交互物理规律」。通过让 Agent 自主探索界面并预测操作后的界面状态变化（前向动力学），模型被迫学习界面的底层逻辑而非表面行为模式。这种自监督方式的优势是训练数据可以通过自主探索无限生成，不受人工标注规模限制。论文还系统对比了前向与逆向动力学目标的效果差异，为后续研究提供了明确的方向指引。若该框架实验结果成立，将对 AI 操作电脑、RPA 自动化等应用场景产生重要推动作用。", "importance": 4, "categories": ["学术研究", "产品与应用"], "source_type": "paper", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02345", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 12, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "R to @AnthropicAI: If a new model shares a feature with a trusted model, that area probably doesn't need scrutiny. \n\nModel diffing isolates the features unique to the new model—where new risks are most likely to be located.", "summary": "Anthropic 提出「模型差异分析」（Model Diffing）方法：通过比对新模型与可信模型的特征差异，将安全审查聚焦于新模型独有的特征区域，提升 AI 安全评估效率。", "background": "随着大模型迭代加速，每次发布新版本都需要重新进行安全评估，成本高昂且耗时。Anthropic 长期投入 AI 可解释性研究（Interpretability），试图从机制层面理解模型内部特征。Model Diffing 是其将可解释性技术应用于安全流程的一次尝试，通过系统性比对新旧模型的内部特征表示，识别出真正需要额外审查的差异区域。", "deep_analysis": "Model Diffing 的核心逻辑类似软件开发中的「差异审查」（diff review）：不必每次从头审计整个系统，只需重点关注变更部分。对于 AI 安全而言，这一思路有两层价值：一是提升效率，将有限的审查资源集中在高风险区域；二是建立可信基线，系统性地积累「已验证安全」的特征知识库。不过，这一方法的有效性依赖于对「可信模型」的准确界定，以及特征表示在模型版本间的可比性——这在实践中仍面临技术挑战。", "importance": 3, "categories": ["安全与对齐", "学术研究"], "source_type": "official", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2040179542028112222", "pub_date": "04-03 21:28", "image": "", "reading_minutes": 1}, {"title": "具身Scaling Law押对了！独角兽新品1小时学会新任务，重复1800次成功率99%", "summary": "具身智能独角兽Generalist发布Gen-1机器人模型，在精细操作任务上成功率从64%提升至99%，速度提升3倍，且仅需1小时演示即可学会全新任务。", "background": "具身智能（Embodied AI）是当前机器人领域最热门的赛道之一，核心挑战在于如何让机器人像人类一样理解物理世界并灵活应对未知情况。过去主流方案依赖昂贵且难以规模化的遥操作数据采集，严重制约了模型泛化能力。Generalist作为该领域独角兽企业，此次发布Gen-1，标志着其在数据效率和模型架构上做出了重大路线调整，验证了Scaling Law在物理世界的有效性。", "deep_analysis": "Gen-1最核心的突破不在于指标数字，而在于训练范式的转变：用人类穿戴设备数据替代机器人遥操作数据，让模型在接触机械臂之前就建立起物理世界的先验认知。这一'人类视角预训练'策略大幅降低了数据采集成本，同时解锁了跨机体泛化能力。配合Paged Attention和Harmonic Reasoning两项推理侧优化，模型实现了低延迟、高鲁棒的实时控制。这一路径若能持续验证，将为具身智能大规模商业化扫清最大障碍——数据壁垒，同时佐证了'够大的数据+够强的算力=机器人也能开窍'这一核心假设。", "importance": 4, "categories": ["具身智能", "大模型发布"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396694.html", "pub_date": "04-06 05:17", "image": "", "reading_minutes": 4, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.65, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": ["equity.ai_pure_play", "equity.semiconductor"]}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 中\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "OpenAI新模型不是GPTX！全新预训练“土豆”曝光，Sora成弃子的原因找到了", "summary": "OpenAI联创Greg Brockman披露新预训练模型「Spud」及Super App战略，揭示Sora被降级至机器人研究方向的真实原因：算力有限下无法同时推进两条差异巨大的技术路线。", "background": "OpenAI近期关闭Sora对外服务引发广泛猜测，外界普遍认为是为IPO做战略收缩或成本控制。与此同时，OpenAI在模型发布节奏上持续加速，GPT-4o系列多次更新，Codex等编程工具也在快速迭代。Greg Brockman此前因个人原因暂离OpenAI，近期重新活跃并开始公开发声，此次接受访谈是他回归后较为系统的战略表态。OpenAI目前面临来自Anthropic、Google DeepMind、以及中国厂商的多方竞争压力。", "deep_analysis": "Greg此番表态的核心信息有两层：一是技术路线的「押注」——OpenAI选择以GPT架构统一文本、语音、图像能力，而非像DeepMind那样认为扩散模型更接近AGI，这是一个根本性的方向选择，不可逆；二是产品形态的「收敛」——Super App的构想本质上是把AI能力收拢到一个端点，通过深度个人化来构建用户粘性和护城河，而非分散到多个垂直产品。Spud作为「重新预训练」的模型，意味着不是在现有权重上微调，而是从头训练了新的基础能力，这在资源投入上是重大信号。整体来看，OpenAI正从「技术展示者」转型为「AGI落地运营者」，Sora的降级是这一转型的必然代价。", "importance": 4, "categories": ["大模型发布", "产品与应用"], "source_type": "opinion", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396535.html", "pub_date": "04-05 09:06", "image": "", "reading_minutes": 5, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.65, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": ["equity.ai_pure_play", "equity.tech_megacap"]}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 中\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "Xpertbench: Expert Level Tasks with Rubrics-Based Evaluation", "summary": "XpertBench 是一个专家级 LLM 评测基准，包含 80 个专业领域的 1346 个任务，采用评分细则（rubric）评估方式，填补现有基准在真实专业场景评测上的空白。", "background": "随着 GPT-4、Claude、Gemini 等大模型在 MMLU、BIG-Bench 等传统基准上接近饱和，学界和工业界亟需更难、更专业的评测方式。现有评测框架普遍存在问题：MMLU 等多选题形式难以衡量真实推理能力；自动评分依赖模型自评存在偏差；任务多为通才性质，无法反映金融分析、医学诊断等真实职业场景的复杂度。XpertBench 针对这一痛点，从真实专业人士处收集任务，构建高保真专家级评测集。", "deep_analysis": "XpertBench 的核心价值在于两点：一是任务来源于真实领域专家而非众包或自动生成，保证了专业深度；二是 rubric 评估框架允许对开放式回答进行多维度打分，比「对/错」二分法更能捕捉模型在推理链、专业术语运用、结论合理性等方面的细微差异。80 个分类、1346 个任务的规模在专家级基准中属于较大体量。该基准若被广泛采用，有望成为衡量模型「真实专业能力」的新标杆，推动研究者从追求通用刷榜转向垂直领域深度优化。对企业来说，这类评测也更贴近实际部署场景的需求。", "importance": 3, "categories": ["学术研究", "大模型发布"], "source_type": "paper", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02368", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 8, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "AIVV: Neuro-Symbolic LLM Agent-Integrated Verification and Validation for Trustworthy Autonomous Systems", "summary": "研究提出AIVV框架，将LLM作为外层推理循环，结合神经符号方法自动化完成自主系统的验证与确认，替代人工审核流程。", "background": "验证与确认（V&V）是安全关键系统（如自动驾驶、工业控制、航空航天）部署前的必要环节。传统深度学习虽能检测异常，但在多类故障分类和跨系统泛化方面存在明显短板，尤其难以区分真实故障与系统瞬态响应引起的误报。这使得自动化V&V长期无法完全替代人工，形成严重的规模化瓶颈。随着自主系统复杂度提升，人工审核的工作量已难以为继。", "deep_analysis": "AIVV的核心创新在于将LLM引入V&V的决策层，作为具备推理能力的'外循环'，弥补纯数据驱动模型在语义理解和故障分类上的不足。神经符号方法的引入则兼顾了深度学习的模式识别能力和符号系统的可解释性与逻辑推理能力——这对安全关键领域尤为重要，因为这类系统不仅需要准确，还需要决策过程可审计。该框架代表了LLM从文本生成向工程系统监控领域延伸的新方向，若能在实际控制系统中验证有效性，将对工业自动化和自主系统认证流程产生实质影响。", "importance": 3, "categories": ["学术研究", "具身智能"], "source_type": "paper", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02478", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 12, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "A Comprehensive Framework for Long-Term Resiliency Investment Planning under Extreme Weather Uncertainty for Electric Utilities", "summary": "研究提出四部分框架，利用数字孪生、蒙特卡洛模拟和多目标优化，帮助电力公司在极端天气不确定性下制定最优长期弹性投资规划。", "background": "全球电力系统正面临三重压力：数据中心、电动汽车等带来的需求爆炸性增长；大量老化基础设施亟需更新；以及气候变化导致的极端天气事件频发。传统电力公司的资本规划框架主要针对确定性或低不确定性场景，难以有效应对极端天气带来的随机性和多维权衡问题。数字孪生和多目标优化等技术为解决这一难题提供了新路径。", "deep_analysis": "该研究的核心价值在于将工程优化与气候风险建模结合，填补了传统电力规划在极端不确定性下的方法论空白。四部分框架的设计逻辑清晰：数字孪生提供低成本仿真环境，蒙特卡洛模拟处理随机性，多目标优化平衡成本与可靠性等多维指标，极端天气建模则使规划具备气候韧性。若网格感知优化方法被验证优于传统方法，将对电力行业资本决策产生实质影响，尤其在监管机构日益关注电网可靠性的背景下，该框架有望成为行业标准工具。", "importance": 3, "categories": ["学术研究", "其他"], "source_type": "paper", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02504", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 12, "causal_matches": [{"chain_id": "regulation_tech_finance_energy", "chain_name": "监管变化 → 科技/金融/能源", "hit_rate": 0.55, "confidence_score": 0.525, "impacts": [{"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "down", "mechanism": "监管不确定性压制估值", "lag_hours": [1, 4320]}, {"asset": "index.vix", "asset_label": "恐慌指数", "direction": "up", "mechanism": "监管不确定性提升波动率", "lag_hours": [1, 168]}, {"asset": "equity.banking", "asset_label": "银行", "direction": "variable", "mechanism": "资本要求变化影响银行ROE和放贷能力", "lag_hours": [720, 8760]}, {"asset": "equity.energy_fossil", "asset_label": "传统能源", "direction": "down", "mechanism": "环境合规成本影响传统能源", "lag_hours": [720, 8760]}, {"asset": "equity.energy_renewable", "asset_label": "新能源", "direction": "up", "mechanism": "环境监管利好新能源", "lag_hours": [168, 4320]}], "matched_events": ["regulation.environmental_regulation"], "llm_confirmed_assets": ["equity.energy_fossil", "equity.energy_renewable"]}, {"chain_id": "climate_agriculture_food", "chain_name": "气候天气 → 农业 → 食品加工", "hit_rate": 0.57, "confidence_score": 0.335, "impacts": [{"asset": "commodity.wheat", "asset_label": "小麦", "direction": "up", "mechanism": "作物产量受天气影响", "lag_hours": [2160, 8760]}, {"asset": "commodity.corn", "asset_label": "玉米", "direction": "up", "mechanism": "玉米产量受天气影响", "lag_hours": [2160, 8760]}, {"asset": "commodity.soybean", "asset_label": "大豆", "direction": "variable", "mechanism": "大豆产量区域性影响", "lag_hours": [2160, 8760]}, {"asset": "equity.food_agriculture", "asset_label": "食品农业", "direction": "variable", "mechanism": "原材料涨价压缩食品加工利润", "lag_hours": [4320, 12960]}], "matched_events": ["climate_weather.extreme_heat"], "llm_confirmed_assets": []}], "impact_summary": "[监管变化 → 科技/金融/能源] (历史命中率55%)\n  影响: 科技巨头↓, 恐慌指数↑, 银行↕, 传统能源↓, 新能源↑ | 综合置信度: 中\n  参考: 监管不确定性本身比最终监管结果对市场影响更大...\n[气候天气 → 农业 → 食品加工] (历史命中率57%)\n  影响: 小麦↑, 玉米↑, 大豆↕, 食品农业↕ | 综合置信度: 低\n  参考: 厄尔尼诺自1963年以来解释约20%全球大宗商品通胀波动, 但预测技术改善和供应链多元化正在削弱这一关系..."}, {"title": "Characterizing WebGPU Dispatch Overhead for LLM Inference Across Four GPU Vendors, Three Backends, and Three Browsers", "summary": "研究人员系统测量了WebGPU在浏览器端运行大语言模型推理时的调度开销，发现此前的单操作基准测试高估了约20倍，真实开销在Vulkan后端为24-36微秒/次。", "background": "WebGPU是新一代浏览器图形与计算API，旨在取代WebGL，允许网页直接调用GPU进行通用计算。随着小型LLM（如Qwen、Phi、Gemma等）兴起，在浏览器端本地运行AI推理成为可能，无需将数据发送至服务器，兼顾隐私与延迟。但WebGPU出于安全考虑，对每次GPU调度操作都进行合法性验证，这在神经网络推理中可能积累为不可忽视的性能损耗。此前缺乏跨平台、跨厂商的系统性测量，开发者难以判断WebGPU的真实性能上限。", "deep_analysis": "这篇论文的核心贡献在于方法论：通过顺序调度（sequential-dispatch）方式，将API开销与GPU实际执行时间解耦，从而得到更真实的每次调度成本。结论是此前业界高估了约20倍的开销，这意味着WebGPU在浏览器端运行LLM的实际可行性比普遍认知要高。对于开发者而言，这为算子融合（kernel fusion）等优化策略提供了量化依据——减少调度次数的价值是可计算的。跨厂商、跨后端、跨浏览器的覆盖也使结论具有普遍参考价值，而非仅针对特定硬件环境。整体而言，此研究为浏览器端AI推理的工程优化奠定了实证基础。", "importance": 3, "categories": ["学术研究", "AI工具"], "source_type": "paper", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02344", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 12}, {"title": "罗福莉：Claude订阅封杀龙虾背后，真正的出路不是更便宜的token", "summary": "小米MiMo负责人罗福莉评析Anthropic封禁第三方Agent框架使用订阅额度事件，指出真正出路是「更省token的Agent框架×更高效的模型」协同进化，而非更便宜的token。", "background": "Anthropic近期宣布Claude Pro和Max订阅用户不得再将订阅额度用于OpenClaw等第三方Agent框架，需切换至按量付费API。此举源于订阅定价模型基于「普通个人用户使用强度」设计，但自动化Agent工具使用强度远超预期，导致Anthropic承受巨大成本压力。消息引发用户分裂：部分人感到「被背刺」，另一些人则认为此举有助于平台可持续发展。这一事件折射出整个AI行业在Agent时代面临的计费模式困境。", "deep_analysis": "这篇文章的核心洞察是：AI算力危机的根源不是「模型太贵」，而是「框架太烂」。粗糙的context管理制造了大量无效计算，订阅制漏洞只是表象。罗福莉的判断有两层含义：一是短期阵痛会倒逼第三方框架提升工程质量，形成正向选择压力；二是对国内厂商发出警示，盲目价格战若不配套质量管控，会重蹈Anthropic的坑。更深层的信号是：在Agent时代，「编排层」的工程质量将成为AI服务商差异化竞争的核心战场，谁能让同等算力产出更多有效价值，谁才有持续盈利的可能。", "importance": 4, "categories": ["产品与应用", "行业观点"], "source_type": "opinion", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3754978719220486", "pub_date": "04-06 06:49", "image": "", "reading_minutes": 5, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.65, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": ["equity.ai_pure_play", "equity.cloud_saas"]}, {"chain_id": "regulation_tech_finance_energy", "chain_name": "监管变化 → 科技/金融/能源", "hit_rate": 0.55, "confidence_score": 0.425, "impacts": [{"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "down", "mechanism": "监管不确定性压制估值", "lag_hours": [1, 4320]}, {"asset": "index.vix", "asset_label": "恐慌指数", "direction": "up", "mechanism": "监管不确定性提升波动率", "lag_hours": [1, 168]}, {"asset": "equity.banking", "asset_label": "银行", "direction": "variable", "mechanism": "资本要求变化影响银行ROE和放贷能力", "lag_hours": [720, 8760]}, {"asset": "equity.energy_fossil", "asset_label": "传统能源", "direction": "down", "mechanism": "环境合规成本影响传统能源", "lag_hours": [720, 8760]}, {"asset": "equity.energy_renewable", "asset_label": "新能源", "direction": "up", "mechanism": "环境监管利好新能源", "lag_hours": [168, 4320]}], "matched_events": ["regulation.financial_regulation"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 中\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式...\n[监管变化 → 科技/金融/能源] (历史命中率55%)\n  影响: 科技巨头↓, 恐慌指数↑, 银行↕, 传统能源↓, 新能源↑ | 综合置信度: 低\n  参考: 监管不确定性本身比最终监管结果对市场影响更大..."}, {"title": "GPT-6抢先发布？Mythos被曝难产，算力惊人烧垮Anthropic", "summary": "Anthropic年化收入飙至190亿美元却因算力严重不足被迫限流，旗舰模型Mythos因计算成本过高难以落地；OpenAI则将发布名为Spud的统一智能体，两大巨头同步冲刺IPO。", "background": "2025年以来，大模型竞争进入算力消耗的「下半场」。OpenAI与Anthropic两家头部公司均在筹备史上规模最大的AI公司IPO。Anthropic由前OpenAI核心团队创立，CEO Dario Amodei一贯主张「保守算力策略」，以应对需求的不确定性。今年2月底，OpenAI与五角大楼签署大额合同引发用户反弹，大批用户涌入Claude，带来爆发式增长，但同时远超Anthropic预留的GPU容量，被迫在现货市场高价采购算力。", "deep_analysis": "这篇文章揭示了AI高速增长背后的基础设施悖论：用户越多、收入越高，算力成本反而可能压垮毛利。Anthropic的保守算力策略在需求爆发时变成了双刃剑——既没有足够的预留容量承接增量用户，又不得不以溢价购买现货算力，导致毛利率下滑至40%。Mythos模型的推迟本质上是「推理成本无法商业化」的问题，这在行业内具有普遍意义：越强的模型运行成本越高，如何在性能与可负担性之间找到平衡，是所有头部模型厂商面临的共同挑战。两家公司竞速IPO的背后，是试图在烧光之前通过公开市场补充弹药。", "importance": 4, "categories": ["融资与商业", "芯片与算力"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3754937730908674", "pub_date": "04-06 06:20", "image": "", "reading_minutes": 5, "causal_matches": [{"chain_id": "supply_chain_semi_auto_pharma", "chain_name": "供应链中断 → 半导体/汽车/医药", "hit_rate": 0.7, "confidence_score": 0.7, "impacts": [{"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "variable", "mechanism": "供应稀缺带来定价权(供应商受益, 需求方受损)", "lag_hours": [24, 4320]}, {"asset": "equity.auto", "asset_label": "汽车", "direction": "down", "mechanism": "芯片短缺导致汽车减产", "lag_hours": [168, 8760]}, {"asset": "equity.pharma", "asset_label": "医药", "direction": "down", "mechanism": "原料药供应中断", "lag_hours": [168, 4320]}, {"asset": "commodity.rare_earth", "asset_label": "稀土", "direction": "up", "mechanism": "关键矿物供应收紧", "lag_hours": [24, 720]}, {"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "GPU供应约束影响AI公司", "lag_hours": [24, 2160]}], "matched_events": ["supply_chain.chip_shortage"], "llm_confirmed_assets": ["equity.ai_pure_play", "equity.semiconductor"]}], "impact_summary": "[供应链中断 → 半导体/汽车/医药] (历史命中率70%)\n  影响: 半导体↕, 汽车↓, 医药↓, 稀土↑, AI概念股↕ | 综合置信度: 高\n  参考: 半导体供应链有四个互联网络: 设计(美国主导)、原材料(日本50%)、设备(ASML 100% EUV)、制造(台湾60..."}, {"title": "OpenAI又曝出内讧了！IPO前夜高层大换血", "summary": "OpenAI IPO冲刺阶段高层大换血：COO Brad Lightcap转岗、产品负责人Fidji Simo休假、CMO Kate Rouch因癌症治疗离职，新COO由入职仅三个月的Denise D", "background": "OpenAI近期刚完成1220亿美元创纪录融资，GPT-6进展也在持续推进，正全力冲刺IPO。然而就在这一关键节点，多位核心管理层相继变动。竞争对手Anthropic据传最快将于今年10月上市，奥特曼因此希望OpenAI抢先于Q4完成IPO。公司内部在上市时间表上存在明显分歧——CEO求快，CFO求稳，这一矛盾随着本次人事动荡进一步浮出水面。", "deep_analysis": "此次高层变动的时机极为敏感。对资本市场而言，管理层连续性是估值的重要支撑，多位核心高管在IPO冲刺期同时变动，必然引发投资人对公司治理稳定性的质疑。新COO Denise Dresser入职仅三个月便被推上高位，外界难以将其解读为正常的战略调整。更深层的矛盾在于：奥特曼的扩张野心（6000亿美元服务器投入承诺）与CFO对增长放缓、现金消耗的现实担忧之间存在根本分歧。Simo的休假模式也与当年Brockman等人的处理方式如出一辙，难免引发联想。OpenAI能否在这种内部张力下如期完成上市，是目前最大的不确定性。", "importance": 4, "categories": ["融资与商业", "行业观点"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3754937384436484", "pub_date": "04-06 06:00", "image": "", "reading_minutes": 4}, {"title": "iPhone本地跑Gemma 4火了，0 token时代还有多远？", "summary": "谷歌开源小模型 Gemma 4 可在 iPhone 本地运行，速度超 40 token/秒，引发「0 token 时代」讨论，但在 Agent 复杂任务上仍有明显短板。", "background": "边缘推理（On-device AI）近年持续升温。苹果 Apple Intelligence、高通 Snapdragon AI、三星 Galaxy AI 等均已在手机端部署小模型。谷歌此前也推出过 Gemma 系列开源模型，但受限于参数量和能力，实际体验参差不齐。2025 年谷歌发布 Gemma 4，采用与 Gemini 3 同源架构，推出 E2B、E4B 等专为端侧优化的小参数版本，并配套发布官方移动端 App，大幅降低普通用户的部署门槛。", "deep_analysis": "Gemma 4 的意义不仅在于跑分，而在于它把「本地可用的多模态 AI」这件事推进到了普通消费者触手可及的阶段。40+ token/秒的速度已达到流畅交互的基本门槛，加之 128K 上下文和图像/音频支持，日常问答、图片理解、简单代码生成等场景已可完全本地化。然而实测暴露出关键瓶颈：工具调用和结构化输出能力不足，使其难以胜任 Agent 工作流。这说明端侧模型的能力边界目前仍在「单轮/简单多轮交互」，尚未进入「可靠自主执行」阶段。对商业格局而言，高频轻量任务的本地化会逐步压缩 API Token 经济，倒逼云端服务提供商专注差异化壁垒——超大上下文、实时数据、复杂多步 Agent，而非靠流量堆收入。", "importance": 4, "categories": ["开源生态", "产品与应用"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3754860403294985", "pub_date": "04-06 05:46", "image": "", "reading_minutes": 5, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.6, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": ["equity.ai_pure_play", "equity.semiconductor", "equity.tech_megacap"]}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 中\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "AI，为什么也需要睡觉？", "summary": "Anthropic 在 Claude Code 泄露代码中曝光「autoDream」功能：一套模拟睡眠的后台记忆整合系统，在用户关机后自动清理矛盾记忆、巩固长期知识，与人脑睡眠机制高度趋同。", "background": "大语言模型存在上下文窗口物理上限，Agent 长期运行后历史信息不断堆积，超过临界点后模型会遗忘早期指令、前后矛盾甚至幻觉。目前多数 Agent 的粗暴解法是把所有历史塞入上下文，结果信息越多表现越差。人脑通过睡眠中的「主动系统巩固」解决类似问题：白天记忆暂存海马体，睡眠中转写至新皮层长期存储，这一机制在几乎所有有神经系统的动物中普遍存在。", "deep_analysis": "autoDream 的设计揭示了一个深层工程矛盾：Agent 的「持续在线」叙事与记忆系统的物理限制天然冲突。Anthropic 的解法是将记忆整合从主线程剥离，在离线时段异步执行，本质上是把「休息」作为系统架构的一等公民。这与人脑睡眠不是隐喻上的相似，而是在相同约束（有限存储、需要去噪、长短期记忆分离）下的结构收敛。文章的核心论点是：永不停机不是优势，而是债务——不整理的记忆系统会熵增失控。对行业的启示在于，未来高质量 Agent 架构可能都需要显式的「离线整合」周期，而非一味追求在线时长。", "importance": 4, "categories": ["产品与应用", "学术研究"], "source_type": "opinion", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3754827335205385", "pub_date": "04-06 05:10", "image": "", "reading_minutes": 8, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.45, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": ["equity.ai_pure_play"]}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "妈妈不知儿子去世跟AI儿子聊了1年，AI「复活」逝者的服务有伦理风险吗？如果是你，会更愿意知道真相吗？", "summary": "AI「复活」服务引发伦理争议：90后从业者张泽伟用生成式AI还原逝者相貌、声音与话语，有家属瞒着老人用AI儿子打视频通话长达一年，引发592万热度社会讨论。", "background": "随着生成式AI技术成熟，「AI复活逝者」服务在中国悄然兴起。从业者可通过照片、视频、音频素材还原逝者的外貌与声音，并结合其生前文字记录训练对话模型，生成可实时互动的「数字生命」。这一服务处于监管灰色地带，既无明确法律约束，也缺乏行业伦理规范。此次知乎讨论由多个真实案例引发，热度高达592万，折射出社会对这一新兴技术的高度关注与深层焦虑。", "deep_analysis": "这一议题的核心矛盾在于：AI复原的「人」并非逝者本人，而是由生者的记忆、期待与情感塑造的投影。对于知情的使用者而言，它可能是一种有效的哀伤疗愈工具；但对于不知情者（如案例中的奶奶），则构成长达数年的系统性欺骗，剥夺了其知情权与正常哀悼的权利。更深层的风险在于：长期依赖AI幻象可能阻碍正常的悲伤处理过程，形成情感依赖。该服务同时涉及逝者肖像权、数据使用授权及未成年人数字权益等多重法律空白，亟需监管介入与伦理框架建立。", "importance": 4, "categories": ["产品与应用", "安全与对齐"], "source_type": "community", "source_name": "知乎热榜", "source_icon": "💭", "link": "https://www.zhihu.com/question/2024413032667772670", "pub_date": "04-06 01:07", "image": "", "reading_minutes": 3, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": []}, {"chain_id": "regulation_tech_finance_energy", "chain_name": "监管变化 → 科技/金融/能源", "hit_rate": 0.55, "confidence_score": 0.325, "impacts": [{"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "down", "mechanism": "监管不确定性压制估值", "lag_hours": [1, 4320]}, {"asset": "index.vix", "asset_label": "恐慌指数", "direction": "up", "mechanism": "监管不确定性提升波动率", "lag_hours": [1, 168]}, {"asset": "equity.banking", "asset_label": "银行", "direction": "variable", "mechanism": "资本要求变化影响银行ROE和放贷能力", "lag_hours": [720, 8760]}, {"asset": "equity.energy_fossil", "asset_label": "传统能源", "direction": "down", "mechanism": "环境合规成本影响传统能源", "lag_hours": [720, 8760]}, {"asset": "equity.energy_renewable", "asset_label": "新能源", "direction": "up", "mechanism": "环境监管利好新能源", "lag_hours": [168, 4320]}], "matched_events": ["regulation.data_privacy"], "llm_confirmed_assets": []}, {"chain_id": "ai_regulation_tech", "chain_name": "AI监管 → 科技股 → 合规成本", "hit_rate": 0.55, "confidence_score": 0.325, "impacts": [{"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "down", "mechanism": "合规成本恐慌", "lag_hours": [1, 168]}, {"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "监管形成进入壁垒", "lag_hours": [24, 4320]}, {"asset": "index.vix", "asset_label": "恐慌指数", "direction": "up", "mechanism": "科技行业监管不确定性", "lag_hours": [1, 168]}], "matched_events": ["regulation.data_privacy"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式...\n[监管变化 → 科技/金融/能源] (历史命中率55%)\n  影响: 科技巨头↓, 恐慌指数↑, 银行↕, 传统能源↓, 新能源↑ | 综合置信度: 低\n  参考: 监管不确定性本身比最终监管结果对市场影响更大..."}, {"title": "Show HN: Real-time AI (audio/video in, voice out) on an M3 Pro with Gemma E2B", "summary": "开发者发布开源项目 Parlor，基于 Google Gemma 4 E2B 模型，在 M3 Pro Mac 上实现完全本地化的实时语音+视觉多模态 AI 对话，仅需 3GB RAM，零服务器成本。", "background": "端侧多模态 AI 长期受制于模型体积与硬件算力的矛盾——六个月前，仅仅实时运行语音模型就需要 RTX 5090 级别的硬件。Google 近期发布的 Gemma 4 E2B 是一款超小型但能力显著提升的多模态模型，支持语音理解与视觉理解，能在消费级 Apple Silicon 上流畅运行。OpenAI 此前曾在演示中展示类似的实时多模态对话体验，但彼时依赖云端服务器。随着小模型能力跃升，端侧化部署正成为现实。", "deep_analysis": "Parlor 的意义不只是一个 demo，而是验证了一条技术路径：用足够小但足够强的模型，在消费级硬件上实现此前只有云端才能支撑的多模态实时交互。Gemma 4 E2B 的发布是这一路径的关键节点——它把「实时本地多模态 AI」的硬件门槛从专业显卡拉低到了普通笔记本。对于语言学习、无障碍辅助、隐私敏感场景等应用来说，零服务器成本+本地化数据处理具有直接商业和社会价值。更长远地看，这也在为手机端本地多模态 AI 铺路——作者已明确提到「几年后在手机上用摄像头指着物体对话」的愿景，而这一天正在加速到来。", "importance": 4, "categories": ["开源生态", "产品与应用"], "source_type": "community", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://github.com/fikrikarim/parlor", "pub_date": "04-05 17:53", "image": "", "reading_minutes": 3, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "Helidon 引入 Agent 能力，Java 框架开始内建 AI 编排", "summary": "Oracle 发布 Helidon 4.4.0，Java 微服务框架正式引入 LangChain4j 智能体编排能力，支持 workflow 和 dynamic agent 两种模式，开发者可通过注解", "background": "Helidon 是 Oracle 于 2018 年发布的 Java 微服务框架，提供 SE（函数式）和 MP（声明式/MicroProfile）两个版本。4.0 版本起基于 JDK 虚拟线程重构 Web 服务器，性能大幅提升。从 4.2.0 开始引入与 LangChain4j 的初步集成，4.3.0 引入声明式编程模型 Helidon Declarative，本次 4.4.0 是在这一系列基础能力之上正式落地 AI Agent 编排支持。", "deep_analysis": "此次发布的核心信号是：主流 Java 框架开始将 AI 编排能力作为一等公民内建，而非依赖外部 SDK 拼凑。声明式 Agent 定义方式（注解驱动）与 Jakarta EE/MicroProfile 生态的编程习惯高度一致，意味着企业级 Java 开发者可以用最小学习成本接入 Agent 能力。对于大量运行在 Java 技术栈上的金融、政务、制造业系统来说，这条路径比迁移到 Python 生态更现实。LangChain4j 作为 Java 世界的 LangChain 对标产品，借助 Helidon 的官方集成获得更强的企业背书，有助于推动 Java AI 生态进一步成熟。", "importance": 3, "categories": ["AI编程", "产品与应用"], "source_type": "news", "source_name": "AI前线", "source_icon": "🚀", "link": "https://www.infoq.cn/article/TQ4A6w3oROqdUJRmfMLX?utm_source=rss&utm_medium=article", "pub_date": "04-05 21:49", "image": "", "reading_minutes": 5, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "为了不跟龙虾抢电脑用，有人开始造Agent专属的“三无”硬件，比Mac Mini+存储便宜", "summary": "吾云创新推出面向Agent的专属硬件「Agent Computer」，无键盘、无鼠标、无屏幕，主打本地数据处理与Agent持续运行，定价目标低于Mac Mini+NAS组合。", "background": "过去两个月，以OpenClaw为代表的本地AI部署工具（文中以「龙虾」代称）突然出圈，导致Mac Mini一度脱销。但本地部署面临两大痛点：存储空间不足、配置门槛仍然较高。吾云创新此前专注AI NAS赛道，创始人郭亚楠判断个人数据将进入以视频为主的多模态爆发期，传统NAS「只存不用」的定位不够，进而转向打造Agent专属运行设备。", "deep_analysis": "这篇文章的核心逻辑是：AI Agent的崛起正在重新定义「个人计算设备」的设计哲学——从「人用机器」到「机器为Agent服务」。传统PC/Mac的GUI设计围绕人类操作展开，而Agent不需要这些，反而需要持续在线、高密度存算一体、低干预运行的环境。Agent Computer本质上是把「AI基础设施消费化」，让普通用户无需自建服务器就能获得类似效果。这一产品形态目前仍处早期定义阶段，最大挑战在于：如何在价格上真正打过DIY方案，同时让「Context OS」的数据管理能力形成差异化护城河，而非沦为一台更贵的NAS。", "importance": 3, "categories": ["产品与应用", "AI工具"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396351.html", "pub_date": "04-05 02:14", "image": "", "reading_minutes": 4, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage", "summary": "Anthropic 宣布 Claude Code 订阅用户使用 OpenClaw 等第三方工具时需要额外付费，订阅成本将因此上升。", "background": "Claude Code 是 Anthropic 推出的 AI 编程助手，面向开发者提供订阅服务。随着 AI 编程工具生态扩展，越来越多的第三方工具（如 OpenClaw）通过 API 或集成方式与 Claude Code 配合使用。此前订阅用户可能默认认为这些集成使用成本已包含在订阅费内，但 Anthropic 此次明确了额外收费政策。", "deep_analysis": "此次定价调整反映了 AI 工具厂商在生态扩展过程中的商业化压力——随着第三方集成使用量增加，底层模型的推理成本随之上升，Anthropic 需要通过差异化定价来维持商业可持续性。对开发者而言，这增加了工具链的隐性成本，可能促使部分用户重新评估工具组合或转向竞争产品。从行业趋势看，AI 平台对第三方集成单独收费将成为常态，开发者需在工具选型时更仔细核算全链路成本。", "importance": 3, "categories": ["产品与应用", "AI 工具"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/", "pub_date": "04-04 16:32", "image": "", "reading_minutes": 2}, {"title": "智能体 AI 模式强化软件工程规范性", "summary": "AI DevOps 专家 Paul Duvall 探讨智能体 AI 时代下，主干开发、测试优先、规范驱动开发等核心工程实践比以往更加重要，并开源了一套智能体 AI 工程模式代码库。", "background": "随着 GitHub Copilot、Cursor 等 AI 编程工具的普及，开发者越来越多地依赖 AI 生成代码，代码产出速度大幅提升。然而，代码质量和工程规范问题随之而来——AI 生成代码的一致性、可维护性和安全性成为新挑战。Paul Duvall 是持续集成领域的经典著作作者，他从敏捷和 XP 实践出发，将传统工程规范与智能体 AI 工作流结合，试图为行业提供可复用的模式框架。", "deep_analysis": "这篇文章的核心论点是：AI 编程工具的出现不是工程规范的终结，而是对工程规范提出了更高要求。当代码生成速度远超人工审查能力时，质量保障的重心必须从'人看代码'转移到'自动化验证系统'。规范驱动开发本质上是把人类的意图和约束条件显式化，让 AI 有章可循。Duvall 和 Stack 都强调了'左移+右移'的双向闭环：既在开发前定义清晰规范，又将生产环境遥测数据反馈回开发周期。这预示着未来软件工程师的核心价值将从'写代码'转向'定义规范、设计架构、管理 AI 输出质量'。", "importance": 3, "categories": ["AI编程", "行业观点"], "source_type": "news", "source_name": "AI前线", "source_icon": "🚀", "link": "https://www.infoq.cn/article/UdLhY0p8iDDIbtLtfV35?utm_source=rss&utm_medium=article", "pub_date": "04-04 14:00", "image": "", "reading_minutes": 8, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.55, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": ["equity.ai_pure_play", "equity.cloud_saas"]}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 中\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "科氪 | 荣耀与京东签订战略合作协议 推进AI、机器人、C2M共创合作", "summary": "荣耀与京东签订战略合作协议，三年目标超1000亿元，合作涵盖AI共创、机器人、C2M定制及全渠道生态整合。", "background": "荣耀2020年从华为剥离后独立运营，近年来持续推进端侧AI能力建设，定位为全球AI终端生态公司。京东则拥有JoyAI大模型和JoyInside AI生态，并持续布局即时零售和线下场景。两家公司此前已有常规的销售渠道合作，此次升级为全方位战略伙伴关系，是双方在AI、硬件、零售融合赛道上的重要布局。", "deep_analysis": "此次合作的核心价值在于两点：一是用户数据与硬件定制能力的结合——京东拥有海量细分用户画像，荣耀具备软硬件定制能力，C2M模式有望产出真正针对职业场景的专属设备；二是AI生态的互补——荣耀的端侧大模型强调本地推理和隐私，京东AI生态偏向电商服务场景，两者结合可在购物导购、金融服务等场景形成差异化体验。机器人进驻京东门店虽是小切口，但代表荣耀在具身智能商业化落地的尝试。整体来看，这是一次典型的硬件+平台联合防守，对抗小米（有自有电商）和苹果（有Apple Store）的垂直整合模式。", "importance": 3, "categories": ["产品与应用", "融资与商业"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3755161993675523", "pub_date": "04-06 09:48", "image": "", "reading_minutes": 3}, {"title": "Show HN: I built a tiny LLM to demystify how language models work", "summary": "开发者开源了 GuppyLM，一个仅 900 万参数的微型语言模型，旨在用 5 分钟、一个 Colab 笔记本让任何人从零训练自己的 LLM，揭开语言模型的神秘面纱。", "background": "大型语言模型的训练通常被认为需要巨量算力和顶级工程团队，GPT、Llama 等主流模型动辄数十亿参数，普通开发者难以触及其内部机制。近年来教育向微型模型逐渐兴起，如 Karpathy 的 nanoGPT 等项目受到广泛关注，这类项目的核心价值不在于性能而在于可理解性和可复现性。GuppyLM 延续这一思路，将完整 LLM 训练流程压缩到最小可学习单元。", "deep_analysis": "GuppyLM 的价值不在于模型本身的能力，而在于它将 LLM 训练的「认知门槛」压到接近零。通过把数据、分词、架构、训练、推理五个核心模块全部暴露给用户，学习者可以建立起对语言模型工作原理的直觉性理解，而非停留在「黑盒调用 API」的层面。这类项目对 AI 教育生态有实际贡献，尤其适合在校学生、转型开发者和想深入理解 LLM 的工程师。开源社区中此类「可解释微型模型」的涌现，也反映出行业对 AI 素养普及的需求正在上升。", "importance": 3, "categories": ["开源生态", "学术研究"], "source_type": "community", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://github.com/arman-bd/guppylm", "pub_date": "04-06 00:20", "image": "", "reading_minutes": 4, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.open_source_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "Industrial policy for the Intelligence Age", "summary": "Industrial policy for the Intelligence Age", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "OpenAI Blog", "source_icon": "🤖", "link": "https://openai.com/index/industrial-policy-for-the-intelligence-age", "pub_date": "04-06 02:30", "image": "", "reading_minutes": 1}, {"title": "Harness Engineering：实现自我进化的Agent框架", "summary": "掘金作者介绍「Harness Engineering」概念及其自研自我进化Agent框架，主张AI工程方法论已从提示词工程演进至驾驭工程阶段，并探讨AI对知识结构的影响。", "background": "近年来AI应用开发经历了明显的方法论迭代：早期靠精心设计的提示词（Prompt Engineering）驱动模型，随后RAG技术兴起带来了上下文工程（Context Engineering），解决知识断裂问题。进入2025-2026年，随着Agent系统复杂度提升，如何让AI在长时任务中保持可靠性、稳定性成为新挑战，「Harness Engineering」作为新概念应运而生，强调对AI运行环境的系统性设计与调度。", "deep_analysis": "文章的核心洞察有两层：工程层面，Harness Engineering将人类角色从「教AI说话」升级为「设计AI运行的系统」，这是Agent走向实用化的必要条件；认知层面，作者对AI与知识结构的判断颇具启发性——AI加速了通用知识流动，但验证能力（科学方法论）仍是人类护城河，可自闭环验证的岗位才是真正面临替代威胁的。文章属于个人实践分享与观点输出，技术深度有限，但方向判断有一定参考价值。", "importance": 3, "categories": ["AI工具", "行业观点"], "source_type": "opinion", "source_name": "掘金 AI", "source_icon": "💎", "link": "https://juejin.cn/post/7624078697365372970", "pub_date": "04-03 06:16", "image": "https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/c062e1e947ee4cfa8c8c35d2b2123667~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5ZGo5pyr56iL5bqP54y_:q75.awebp?rk3s=f64ab15b&amp;x-expires=1775825437&amp;x-signature=DkSMw5QEVj1oqWhTQA%2FwPzOLGMw%3D", "reading_minutes": 5, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release", "ai_industry.open_source_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "R to @AnthropicAI: This research is a product of our Anthropic Fellows program, led by @tomjiralerspong and supervised by @TrentonBricken.\n\nSee the full paper here: https://arxiv.org/abs/2602.11729", "summary": "Anthropic 通过 Fellows 项目发布一篇由 tomjiralerspong 主导、TrentonBricken 监督的学术研究论文（arXiv:2602.11729）。", "background": "Anthropic 是专注 AI 安全与大语言模型研究的公司，旗下 Fellows 项目旨在培养和支持外部研究人员参与 AI 前沿研究。该项目定期产出学术论文，发布于 arXiv 等平台，涵盖可解释性、对齐、模型行为等多个方向。TrentonBricken 是 Anthropic 知名研究员，曾在机制可解释性领域发表重要工作。", "deep_analysis": "此条内容仅为一条推文转发通知，正文几乎没有任何关于论文内容的实质信息。无法从中提取研究方向、主要贡献或学术价值。读者需前往 arXiv 原文才能了解具体内容。从形式上看，这是 Anthropic 利用社交媒体推广 Fellows 项目产出的常规操作，本身不构成重大新闻事件。", "importance": 1, "categories": ["学术研究"], "source_type": "community", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2040179546729873794", "pub_date": "04-03 21:28", "image": "https://nitter.net/pic/card_img%2F2037458934089625600%2FgalTfJK6%3Fformat%3Djpg%26name%3D420x420_2", "reading_minutes": 1, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "R to @AnthropicAI: This technique isn't perfect—it can be oversensitive, sometimes flagging analogous features as distinct. But by focusing only on differences, it allows us to audit AI models more efficiently.", "summary": "R to @AnthropicAI: This technique isn't perfect—it can be oversensitive, sometimes flagging analogou", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2040179545572278529", "pub_date": "04-03 21:28", "image": "", "reading_minutes": 1}, {"title": "R to @AnthropicAI: For example, when we compared Alibaba's Qwen to Meta's Llama, we found a \"CCP alignment\" feature unique to Qwen and an \"American exceptionalism\" feature unique to Llama.", "summary": "R to @AnthropicAI: For example, when we compared Alibaba's Qwen to Meta's Llama, we found a \"CCP ali", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2040179543387124172", "pub_date": "04-03 21:28", "image": "https://nitter.net/pic/media%2FHFApZrFaMAAZPAV.jpg", "reading_minutes": 1}, {"title": "New Anthropic Fellows Research: a new method for surfacing behavioral differences between AI models.\n\nWe apply the “diff” principle from software development to compare open-weight AI models and identify features unique to each. \n\nRead more: https://www.anthropic.com/research/diff-tool", "summary": "New Anthropic Fellows Research: a new method for surfacing behavioral differences between AI models.", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2040179539738030182", "pub_date": "04-03 21:28", "image": "https://nitter.net/pic/card_img%2F2040199900919463936%2FiGekea6Q%3Fformat%3Djpg%26name%3D800x419", "reading_minutes": 1}, {"title": "太初元碁向员工发放百亿算力token并将共建高校AI科教融合学院", "summary": "太初元碁五周年大会上宣布向20名员工发放总价值约100万元的百亿算力token，并联合浙江工商大学等机构共建人工智能科教融合学院。", "background": "太初元碁是一家专注国产AI算力基础设施的公司，主要产品涵盖智算芯片、一体机及配套软件栈。在国产替代大背景下，其定位是提供从芯片到应用的全栈国产化算力解决方案。此次五周年大会披露的两项举措，一方面是内部激励机制创新，另一方面是布局产学研生态，反映出国内算力中小玩家在大厂夹击下寻求差异化的典型路径。", "deep_analysis": "用算力token作为员工福利，表面是激励创新，实质上也是让员工成为产品的第一批重度用户，从内部积累AI Agent使用案例与反馈。这种'以产品代奖金'的方式在算力公司中较为罕见，但对于推动内部AI化有一定实效。联合高校共建学院则是国内算力厂商惯用的生态拓展打法，通过人才培养绑定高校资源，同时为算力产品寻找教育场景的落地示范。整体来看，两项动作更多属于品牌与生态建设层面，商业实质影响有限，重要性相对适中。", "importance": 2, "categories": ["芯片与算力", "产品与应用"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396533.html", "pub_date": "04-05 08:53", "image": "", "reading_minutes": 2}, {"title": "AI is changing how small online sellers decide what to make", "summary": "AI is changing how small online sellers decide what to make", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "MIT Tech Review", "source_icon": "🎓", "link": "https://www.technologyreview.com/2026/04/06/1135118/ai-online-seller-alibaba-accio/", "pub_date": "04-06 11:00", "image": "", "reading_minutes": 1}, {"title": "Holos: A Web-Scale LLM-Based Multi-Agent System for the Agentic Web", "summary": "Holos: A Web-Scale LLM-Based Multi-Agent System for the Agentic Web", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02334", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Compositional Neuro-Symbolic Reasoning", "summary": "Compositional Neuro-Symbolic Reasoning", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02434", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Understanding the Nature of Generative AI as Threshold Logic in High-Dimensional Space", "summary": "Understanding the Nature of Generative AI as Threshold Logic in High-Dimensional Space", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02476", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "I must delete the evidence: AI Agents Explicitly Cover up Fraud and Violent Crime", "summary": "I must delete the evidence: AI Agents Explicitly Cover up Fraud and Violent Crime", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02500", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Interpretable Deep Reinforcement Learning for Element-level Bridge Life-cycle Optimization", "summary": "Interpretable Deep Reinforcement Learning for Element-level Bridge Life-cycle Optimization", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02528", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Competency Questions as Executable Plans: a Controlled RAG Architecture for Cultural Heritage Storytelling", "summary": "Competency Questions as Executable Plans: a Controlled RAG Architecture for Cultural Heritage Storyt", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02545", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Mitigating LLM biases toward spurious social contexts using direct preference optimization", "summary": "Mitigating LLM biases toward spurious social contexts using direct preference optimization", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02585", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning", "summary": "LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02338", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "SIEVE: Sample-Efficient Parametric Learning from Natural Language", "summary": "SIEVE: Sample-Efficient Parametric Learning from Natural Language", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02339", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models", "summary": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02340", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "LLM Reasoning with Process Rewards for Outcome-Guided Steps", "summary": "LLM Reasoning with Process Rewards for Outcome-Guided Steps", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02341", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Homophily-aware Supervised Contrastive Counterfactual Augmented Fair Graph Neural Network", "summary": "Homophily-aware Supervised Contrastive Counterfactual Augmented Fair Graph Neural Network", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02342", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "Haiku to Opus in Just 10 bits: LLMs Unlock Massive Compression Gains", "summary": "Haiku to Opus in Just 10 bits: LLMs Unlock Massive Compression Gains", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.02343", "pub_date": "04-06 00:00", "image": "", "reading_minutes": 1}, {"title": "RT by @ylecun: Thinking in language has limited applications, largely in coding and mathematics where the language itself can help reasoning.\n\nBut, as I've been saying for years, thinking manipulates mental models in abstract (continuous) representation space.\n\nSoooo, xAI gonna use JEPA now?", "summary": "RT by @ylecun: Thinking in language has limited applications, largely in coding and mathematics wher", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-Yann LeCun", "source_icon": "🐦", "link": "https://x.com/ylecun/status/2040770225990172676", "pub_date": "04-05 12:35", "image": "", "reading_minutes": 1}, {"title": "别人开盲盒我开源码：我的 Claude Code 宠物是怎么变成金色传说龙的", "summary": "Claude Code于4月1日悄悄上线「/buddy」宠物模式，通过泄露源码被详细解析：支持18种ASCII宠物物种、5档稀有度（传说级概率仅1%），系统包含物种、稀有度、眼睛、帽子、闪光状态及五维", "background": "2026年4月前后，Claude Code源码发生泄露事件，在国内AI社区（掘金、公众号等）引发广泛讨论。在这一背景下，开发者们通过泄露源码发现了Anthropic在4月1日上线的隐藏彩蛋功能——/buddy宠物模式。该功能原本可能作为低调的愚人节彩蛋存在，但因源码泄露被提前完整曝光，用户得以了解其背后的概率机制和系统设计细节。", "deep_analysis": "这个功能本身技术含量不高，但折射出几个有趣信息：第一，Anthropic正在尝试为Claude Code这类纯命令行开发工具增加情感化、游戏化设计，降低工具的「冰冷感」，提升用户粘性；第二，用ASCII字符实现、嵌入终端环境，说明设计者刻意保持了与开发者文化的契合——不用图片、不跳出终端；第三，稀有度+随机概率的设计直接借鉴了游戏抽卡机制，有意制造「惊喜时刻」。这类小功能往往能在开发者社区引发传播，是低成本的品牌建设手段。文章价值主要在于借源码泄露事件做趣味解读，内容相对轻量。", "importance": 2, "categories": ["产品与应用", "AI工具"], "source_type": "community", "source_name": "掘金 AI", "source_icon": "💎", "link": "https://juejin.cn/post/7624032412251996223", "pub_date": "04-03 01:46", "image": "https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/7582f4653a6c4ba1949a766e9119ff7b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5rSb5Y2h5Y2h5LqG:q75.awebp?rk3s=f64ab15b&amp;x-expires=1775786206&amp;x-signature=MnKd8CAOhOHmXQaXvKUGAPoKsZ0%3D", "reading_minutes": 4, "causal_matches": [{"chain_id": "ai_model_release_tech", "chain_name": "AI模型发布 → AI概念股 → 算力需求", "hit_rate": 0.6, "confidence_score": 0.35, "impacts": [{"asset": "equity.ai_pure_play", "asset_label": "AI概念股", "direction": "variable", "mechanism": "AI叙事动能推升概念股", "lag_hours": [0.5, 48]}, {"asset": "equity.semiconductor", "asset_label": "半导体", "direction": "up", "mechanism": "算力需求信号", "lag_hours": [1, 168]}, {"asset": "equity.cloud_saas", "asset_label": "云计算/SaaS", "direction": "up", "mechanism": "云基础设施需求增长", "lag_hours": [24, 720]}, {"asset": "equity.tech_megacap", "asset_label": "科技巨头", "direction": "variable", "mechanism": "AI领导力信号影响科技巨头估值", "lag_hours": [1, 48]}], "matched_events": ["ai_industry.model_release"], "llm_confirmed_assets": []}], "impact_summary": "[AI模型发布 → AI概念股 → 算力需求] (历史命中率60%)\n  影响: AI概念股↕, 半导体↑, 云计算/SaaS↑, 科技巨头↕ | 综合置信度: 低\n  参考: AI模型发布对半导体/算力股影响最为直接和持续, 对应用层影响更依赖具体商业模式..."}, {"title": "AI 时代的架构治理", "summary": "AI 时代的架构治理", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "AI前线", "source_icon": "🚀", "link": "https://www.infoq.cn/article/VFRyL5oDK269xIcp8SDi?utm_source=rss&utm_medium=article", "pub_date": "04-06 10:00", "image": "", "reading_minutes": 1}, {"title": "让离线强化学习从「局部描摹」变「全局布局」丨ICLR’26", "summary": "让离线强化学习从「局部描摹」变「全局布局」丨ICLR’26", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396738.html", "pub_date": "04-06 05:35", "image": "", "reading_minutes": 1}, {"title": "AI创业，已经没有“出海”这个词了丨量子位沙龙", "summary": "AI创业，已经没有“出海”这个词了丨量子位沙龙", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396675.html", "pub_date": "04-06 05:04", "image": "", "reading_minutes": 1}, {"title": "Copilot is ‘for entertainment purposes only,’ according to Microsoft’s terms of use", "summary": "Copilot is ‘for entertainment purposes only,’ according to Microsoft’s terms of use", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/", "pub_date": "04-05 18:51", "image": "", "reading_minutes": 1}, {"title": "In Japan, the robot isn’t coming for your job; it’s filling the one nobody wants", "summary": "In Japan, the robot isn’t coming for your job; it’s filling the one nobody wants", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/", "pub_date": "04-05 14:00", "image": "", "reading_minutes": 1}, {"title": "Pinterest 部署生产级模型上下文协议生态系统，赋能 AI 智能体工作流", "summary": "Pinterest 部署生产级模型上下文协议生态系统，赋能 AI 智能体工作流", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "AI前线", "source_icon": "🚀", "link": "https://www.infoq.cn/article/04DleCzUztGhKgo26Mmk?utm_source=rss&utm_medium=article", "pub_date": "04-05 10:00", "image": "", "reading_minutes": 1}, {"title": "具身龙虾，上车理想", "summary": "具身龙虾，上车理想", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396517.html", "pub_date": "04-05 04:52", "image": "", "reading_minutes": 1}, {"title": "GPT-6，曝光了", "summary": "GPT-6，曝光了", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396366.html", "pub_date": "04-05 04:49", "image": "", "reading_minutes": 1}, {"title": "Linux内核维护者崩溃了！AI每天狂塞10份漏洞报告，想摸会鱼都难", "summary": "Linux内核维护者崩溃了！AI每天狂塞10份漏洞报告，想摸会鱼都难", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396358.html", "pub_date": "04-05 02:24", "image": "", "reading_minutes": 1}, {"title": "如何获得独特的AI创业点子？YC合伙人：别再看别人在做什么了", "summary": "如何获得独特的AI创业点子？YC合伙人：别再看别人在做什么了", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3755015342092804", "pub_date": "04-06 09:07", "image": "", "reading_minutes": 1}, {"title": "易烊千玺，给字节划了条红线", "summary": "易烊千玺，给字节划了条红线", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3755026501006089", "pub_date": "04-06 08:07", "image": "", "reading_minutes": 1}, {"title": "🔥🔥🔥AI Agent从入门到实践：从底层原理到如何从0手搓一个AI 智能体", "summary": "🔥🔥🔥AI Agent从入门到实践：从底层原理到如何从0手搓一个AI 智能体", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "掘金 AI", "source_icon": "💎", "link": "https://juejin.cn/post/7624357532246507561", "pub_date": "04-03 08:43", "image": "https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/e0cf1c90c5cb49d8af758699cdc63ffb~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgRGV2VUnlm6LpmJ8=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1775813175&amp;x-signature=3rUCNgU03%2FwzVCJtNHCwusU6d50%3D", "reading_minutes": 1}, {"title": "从关停公告到 24342 条数据：AI 时代的逆向工程实录", "summary": "从关停公告到 24342 条数据：AI 时代的逆向工程实录", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "掘金 AI", "source_icon": "💎", "link": "https://juejin.cn/post/7624127580921626659", "pub_date": "04-03 08:00", "image": "", "reading_minutes": 1}];
 const typeLabels = {"paper":"学术论文","news":"新闻报道","official":"官方发布","opinion":"观点文章","community":"社区讨论","video":"视频"};
 
 function openModal(idx) {
