@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 早报 · 2026年04月06日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═════ Design Tokens ═════ */
+:root {
+    --bg: #0b0b12;
+    --bg-card: rgba(255,255,255,0.03);
+    --bg-card-hover: rgba(255,255,255,0.055);
+    --text-100: #e4e4ec;
+    --text-70: rgba(228,228,236,0.70);
+    --text-50: rgba(228,228,236,0.50);
+    --text-35: rgba(228,228,236,0.35);
+    --border: rgba(255,255,255,0.06);
+    --border-hover: rgba(255,255,255,0.10);
+    --accent: #6b8afd;
+    --green: #5a9e6f;
+    --amber: #c9a227;
+    --red: #c05050;
+    --radius: 12px;
+    --sans: 'Inter','Noto Sans SC',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    --serif: 'Noto Serif SC',Georgia,serif;
+}
+*{ margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text-100);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ═════ Header — 极简 ═════ */
+.header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(11,11,18,0.92);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+}
+.header-inner {
+    max-width: 1120px; margin: 0 auto;
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+}
+.h-title {
+    font-family: var(--serif); font-size: 17px; font-weight: 700;
+    color: var(--text-100); white-space: nowrap; letter-spacing: -0.3px;
+}
+.h-date { font-size: 11px; color: var(--text-35); white-space: nowrap; }
+.h-stats {
+    display: flex; gap: 10px; margin-left: auto;
+    font-size: 10px; color: var(--text-35); letter-spacing: 0.3px;
+}
+.h-stats b { color: var(--accent); font-weight: 600; }
+.search-wrap { position: relative; flex: 1; max-width: 260px; }
+.search-wrap::before {
+    content: '⌕'; position: absolute; left: 9px; top: 50%;
+    transform: translateY(-50%); font-size: 12px; color: var(--text-35);
+    pointer-events: none;
+}
+.search-box {
+    width: 100%; padding: 7px 10px 7px 28px;
+    background: rgba(255,255,255,0.035); border: 1px solid var(--border);
+    border-radius: 8px; color: var(--text-100); font-size: 12px; outline: none;
+    transition: border-color 0.2s;
+}
+.search-box:focus { border-color: var(--accent); }
+
+/* ═════ Filter ═════ */
+.filter-bar {
+    max-width: 1120px; margin: 14px auto 0; padding: 0 20px;
+    display: flex; gap: 5px; flex-wrap: wrap;
+}
+.f-btn {
+    padding: 4px 12px; border: 1px solid var(--border);
+    background: transparent; color: var(--text-35);
+    border-radius: 14px; font-size: 11px; font-weight: 500;
+    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.f-btn:hover { border-color: rgba(107,138,253,0.4); color: var(--text-50); }
+.f-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ═════ Briefing ═════ */
+.briefing {
+    max-width: 1120px; margin: 20px auto 0; padding: 0 20px;
+}
+.briefing > * {
+    max-width: 680px;
+}
+.br-title {
+    font-family: var(--serif); font-size: 14px; font-weight: 700;
+    color: var(--text-50); letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.br-editorial {
+    font-size: 14px; line-height: 1.75; color: var(--text-70);
+    margin-bottom: 14px;
+    border-left: 2px solid var(--accent); padding-left: 14px;
+}
+
+/* ═════ Grid — masonry columns ═════ */
+.grid {
+    max-width: 1120px; margin: 18px auto; padding: 0 14px;
+    columns: 3; column-gap: 10px;
+}
+@media (max-width:1024px) { .grid { columns: 2; } }
+@media (max-width:640px)  { .grid { columns: 1; padding: 0 10px; } }
+
+/* ═════ Card — 最小有效差异 ═════ */
+.card {
+    break-inside: avoid;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.25s, transform 0.25s;
+    opacity: 0; transform: translateY(8px);
+    animation: cardIn 0.35s ease forwards;
+    background: var(--bg-card);
+}
+.card:hover {
+    border-color: rgba(255,255,255,0.10);
+    background: var(--bg-card-hover);
+}
+.card.hidden { display: none !important; }
+@keyframes cardIn { to { opacity:1; transform:translateY(0); } }
+
+/* card image */
+.card-img {
+    width: 100%; height: 140px;
+    background-size: cover; background-position: center;
+}
+@media (max-width:640px) { .card-img { height: 120px; } }
+
+.card-body { padding: 14px 16px; }
+
+/* featured — subtle warm background, not a colored border */
+.card--featured {
+    background: rgba(107,138,253,0.03);
+    border-color: rgba(107,138,253,0.12);
+}
+
+/* Z1 — bare minimum: category + time */
+.z1 {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 10px;
+}
+.z1-left {
+    font-size: 11px; color: var(--text-35); letter-spacing: 0.2px;
+}
+.z1-meta {
+    font-size: 11px; color: var(--text-35); white-space: nowrap;
+}
+
+/* Z2 — the card IS this sentence */
+.z2 {
+    font-family: var(--serif);
+    font-size: 15px; font-weight: 700; line-height: 1.55;
+    color: var(--text-100); margin-bottom: 10px;
+}
+
+/* Z3 — natural reading flow, no decorative borders */
+.z3 { margin-bottom: 10px; }
+.z3-why {
+    font-size: 13px; line-height: 1.6; color: var(--text-60, rgba(228,228,236,0.60));
+    margin-bottom: 8px;
+}
+.z3-details {
+    display: flex; flex-direction: column; gap: 4px;
+}
+.z3-detail {
+    font-size: 12px; color: var(--text-50); line-height: 1.5;
+    padding-left: 12px; position: relative;
+}
+.z3-detail::before {
+    content: '·'; position: absolute; left: 2px;
+    color: var(--text-35); font-weight: 700;
+}
+
+/* Z5 — source only, no button, no announcement */
+.z5 {
+    font-size: 10px; color: var(--text-35);
+    padding-top: 8px; border-top: 1px solid var(--border);
+}
+
+/* ═════ Modal — clean ═════ */
+.modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.70);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    z-index: 1000; display: none;
+    align-items: flex-start; justify-content: center;
+    padding: 5vh 14px; overflow-y: auto;
+}
+.modal-overlay.show { display: flex; }
+.modal {
+    background: #13131f;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    max-width: 600px; width: 100%;
+    padding: 22px; margin: auto;
+    animation: mUp 0.2s ease;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+@keyframes mUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.m-close {
+    float: right; background: none; border: none;
+    color: var(--text-35); width: 28px; height: 28px; border-radius: 8px;
+    cursor: pointer; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+}
+.m-close:hover { background: rgba(255,255,255,0.06); color: var(--text-100); }
+.m-pills {
+    display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
+    margin-bottom: 10px; font-size: 11px; color: var(--text-35);
+}
+.m-pill-sep { opacity: 0.4; }
+.m-title {
+    font-family: var(--serif); font-size: 18px; font-weight: 700;
+    line-height: 1.4; color: var(--text-100); margin-bottom: 8px;
+}
+.m-summary {
+    font-size: 13px; line-height: 1.65; color: var(--text-60, rgba(228,228,236,0.60));
+    margin-bottom: 16px;
+}
+.m-img {
+    width: 100%; max-height: 240px; object-fit: cover;
+    border-radius: 8px; margin-bottom: 14px;
+}
+/* deep-dive — natural reading flow, no decorative borders */
+.m-deep {
+    display: flex; flex-direction: column; gap: 18px;
+    padding: 16px 0 0; border-top: 1px solid var(--border);
+}
+.m-deep-section { }
+.m-deep-label {
+    font-size: 11px; font-weight: 600; color: var(--text-50);
+    letter-spacing: 0.1px; margin-bottom: 6px;
+}
+.m-deep-text {
+    font-size: 13px; color: var(--text-70); line-height: 1.7;
+}
+.m-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 16px; padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+.m-action {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 7px 16px;
+    background: rgba(107,138,253,0.10); color: var(--accent);
+    text-decoration: none; border-radius: 8px;
+    font-size: 12px; font-weight: 500; transition: background 0.15s;
+}
+.m-action:hover { background: rgba(107,138,253,0.18); }
+.m-footer-src {
+    font-size: 10px; color: var(--text-35);
+}
+
+/* ═════ Footer ═════ */
+.footer {
+    text-align: center; padding: 28px 20px;
+    color: var(--text-35); font-size: 11px;
+    border-top: 1px solid var(--border); margin-top: 20px;
+}
+.footer b { color: var(--accent); }
+
+/* ═════ Empty & Scrollbar ═════ */
+.empty { text-align: center; padding: 60px 20px; color: var(--text-50); font-size: 13px; }
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+<div class="header-inner">
+    <div class="h-title">📡 AI 早报</div>
+    <div class="h-date">2026年04月06日 周一 · 14:02</div>
+    <div class="search-wrap">
+        <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
+    </div>
+    <div class="h-stats">
+        <span><b>54</b> 篇</span>
+        <span><b>13</b> 源</span>
+    </div>
+</div>
+</header>
+
+<!-- Filters -->
+<div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
+<button class="f-btn" data-filter="大模型发布">大模型发布</button>
+<button class="f-btn" data-filter="开源生态">开源生态</button>
+<button class="f-btn" data-filter="AI 政策监管">AI 政策监管</button>
+<button class="f-btn" data-filter="芯片与算力">芯片与算力</button>
+<button class="f-btn" data-filter="产品与应用">产品与应用</button>
+<button class="f-btn" data-filter="安全与对齐">安全与对齐</button>
+<button class="f-btn" data-filter="融资与商业">融资与商业</button>
+<button class="f-btn" data-filter="具身智能">具身智能</button>
+<button class="f-btn" data-filter="行业观点">行业观点</button>
+<button class="f-btn" data-filter="其他">其他</button>
+</div>
+
+<!-- Briefing -->
+
+    <section class="briefing">
+        <h2 class="br-title">今日速览</h2>
+        <p class="br-editorial">速览生成失败。</p>
+    </section>
+
+<!-- Cards Grid -->
+<div class="grid" id="grid">
+        <div class="card card--featured" data-cat="融资与商业|大模型发布" data-idx="0"
+             style="animation-delay:0ms"
+             onclick="openModal(0)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">融资与商业 · 大模型发布</span>
+            <span class="z1-meta">2 min</span>
+        </div>
+                <div class="z2">OpenAI 完成1220亿美元新一轮融资，用于扩展前沿AI研究、下一代算力基础设施及满足ChatGPT、Codex等产品的全球增长需求。</div>
+                <div class="z3"><div class="z3-why">这是AI历史上规模最大的单轮融资之一，意味着OpenAI将拥有远超竞争对手的资金弹药，加速拉开与其他AI公司的差距。</div><div class="z3-details"><div class="z3-detail">融资规模达1220亿美元，创AI行业融资纪录</div><div class="z3-detail">资金将用于扩展全球前沿AI研究和部署</div><div class="z3-detail">重点投入下一代算力基础设施建设</div><div class="z3-detail">支撑ChatGPT、Codex及企业AI产品的快速增长需求</div></div></div>
+                <div class="z5">🤖 OpenAI Blog · 03-31 13:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="大模型发布|开源生态" data-idx="1"
+             style="animation-delay:25ms"
+             onclick="openModal(1)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">大模型发布 · 开源生态</span>
+            <span class="z1-meta">8 min</span>
+        </div>
+                <div class="z2">Google DeepMind 发布 Gemma 4 多模态模型系列，支持图像、文本和音频输入，采用 Apache 2 开源协议，最大 31B 参数模型在 LMArena 评分达 1452，已上线 H</div>
+                <div class="z3"><div class="z3-why">Gemma 4 是目前开源多模态模型中性能最强的之一，真正做到了「开箱即用」，开发者可以免费用它做各种 AI 应用，而且能在手机等端侧设备上运行。</div><div class="z3-details"><div class="z3-detail">Gemma 4 提供四种尺寸（含 E2B、E4B 小模型），全部提供基础版和指令微调版，小模型额外支持音频输入</div><div class="z3-detail">31B 稠密模型 LMArena 文本评分达 1452，26B MoE 模型仅用 4B 激活参数即达 1441 分，性价比极高</div><div class="z3-detail">图像编码器支持可变宽高比和可配置图像 token 数量，可在速度、内存和质量之间灵活权衡</div><div class="z3-detail">引入 Per-Layer Embeddings（PLE）技术，为每层 token 提供独立的低维条件向量，提升小模型表达能力</div><div class="z3-detail">支持 transformers、llama.cpp、MLX、WebGPU、Rust 等主流框架，覆盖云端到端侧全场景部署</div></div></div>
+                <div class="z5">🤗 Hugging Face Blog · 04-02 00:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="大模型发布|开源生态" data-idx="2"
+             style="animation-delay:50ms"
+             onclick="openModal(2)">
+            <div class="card-img" style="background-image:url('https://lh3.googleusercontent.com/dP82fYfjynerdo1ze8VAz5F-miu-ghwM9mrzzQoi_FDYVcG4lLTtb7id7b_IKbFVDuv9q765JG_dEWRJK8cFDrxfCeMpzjzvlj3kwqyZWA6zqt_ecw=w528-h297-n-nu-rw-lo')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">大模型发布 · 开源生态</span>
+            <span class="z1-meta">2 min</span>
+        </div>
+                <div class="z2">Google DeepMind 发布 Gemma 4，定位为迄今最强开源模型，专为高级推理和智能体工作流设计。</div>
+                <div class="z3"><div class="z3-why">Google 在开源模型赛道持续发力，Gemma 4 主打推理和 Agent 能力，对开发者和企业来说又多了一个高质量的免费可用选项。</div><div class="z3-details"><div class="z3-detail">Gemma 4 是 Google DeepMind 发布的最新开源模型系列</div><div class="z3-detail">定位为&#x27;每字节最强&#x27;，强调参数效率与能力的比值</div><div class="z3-detail">专为高级推理（advanced reasoning）场景优化</div><div class="z3-detail">专为智能体工作流（agentic workflows）设计，适合 AI Agent 应用开发</div></div></div>
+                <div class="z5">🔬 DeepMind Blog · 04-02 16:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="产品与应用|大模型发布" data-idx="3"
+             style="animation-delay:75ms"
+             onclick="openModal(3)">
+            <div class="card-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Createeditandshare_Google_Vids_.max-600x600.format-webp.webp')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 大模型发布</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Google Vids 新增由 Lyria 3 和 Veo 3.1 驱动的 AI 视频生成与编辑功能，用户可免费创建、编辑和分享高质量视频。</div>
+                <div class="z3"><div class="z3-why">Google 把专业级 AI 视频生成能力免费开放，普通用户不花钱就能用最新模型做视频，对 Sora、Runway 等付费竞品形成直接压力。</div><div class="z3-details"><div class="z3-detail">Google Vids 集成 Veo 3.1 视频生成模型，支持高质量 AI 视频生成</div><div class="z3-detail">同时引入 Lyria 3 音乐生成模型，视频配乐也可 AI 生成</div><div class="z3-detail">核心功能免费提供，降低了 AI 视频创作门槛</div><div class="z3-detail">支持视频创建、编辑和分享全流程</div></div></div>
+                <div class="z5">🔷 Google AI Blog · 04-02 16:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="开源生态|大模型发布" data-idx="4"
+             style="animation-delay:100ms"
+             onclick="openModal(4)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">开源生态 · 大模型发布</span>
+            <span class="z1-meta">8 min</span>
+        </div>
+                <div class="z2">Hugging Face 发布 TRL v1.0，这是一个专注于大模型后训练（Post-Training）的生产级库，支持超过75种后训练方法，包括PPO、DPO、GRPO等主流算法。</div>
+                <div class="z3"><div class="z3-why">后训练是让大模型变得更有用、更安全的关键环节，TRL v1.0 的发布意味着研究人员和工程师有了一个更稳定、更易用的工具来训练和对齐自己的模型，不用再从头造轮子。</div><div class="z3-details"><div class="z3-detail">TRL v1.0 实现了超过75种后训练方法，覆盖PPO、DPO、GRPO等主流算法，目标是让这些方法易于尝试、比较和实际使用</div><div class="z3-detail">该库已有超过六年开发历史，从研究代码库演变为支撑生产系统的可靠库，此次v1.0标志着对稳定性承诺的正式确立</div><div class="z3-detail">后训练领域经历了PPO→DPO→RLVR三次范式转变，每次都改变了核心组件的定义，TRL的设计哲学是围绕&#x27;可能变化的部分&#x27;而非&#x27;当前稳定的部分&#x27;来构建抽象</div><div class="z3-detail">奖励模型的演变是设计哲学的典型案例：在PPO中是必需的，在DPO中变为可选，在RLVR中又以验证器形式回归——任何基于其原始形态的抽象都会过时两次</div></div></div>
+                <div class="z5">🤗 Hugging Face Blog · 03-31 00:00</div>
+            </div>
+        </div>
+        <div class="card card--featured" data-cat="芯片与算力|安全与对齐" data-idx="5"
+             style="animation-delay:125ms"
+             onclick="openModal(5)">
+            <div class="card-img" style="background-image:url('https://cdn.arstechnica.net/wp-content/uploads/2023/07/exploit-vulnerability-security.jpg')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">芯片与算力 · 安全与对齐</span>
+            <span class="z1-meta">5 min</span>
+        </div>
+                <div class="z2">研究人员发现三种新型Rowhammer攻击手法，可利用Nvidia高性能GPU的内存漏洞，让恶意用户获得宿主机的完整root权限，对云端GPU共享环境构成严重威胁。</div>
+                <div class="z3"><div class="z3-why">云端GPU通常被几十个用户共享使用，这意味着一个恶意租户可能通过这类攻击完全控制整台服务器，影响所有其他用户的数据和计算任务安全。</div><div class="z3-details"><div class="z3-detail">三种新型Rowhammer攻击可针对Nvidia高性能GPU卡，最终实现对宿主机的完整root控制</div><div class="z3-detail">高性能GPU单价通常在8000美元以上，云环境中常被数十名用户共享，攻击面极大</div><div class="z3-detail">攻击原理是利用DRAM内存的比特翻转现象（0变1或1变0），通过反复快速访问特定内存行制造电气干扰</div><div class="z3-detail">Rowhammer攻击最早于2014年被证实，2015年已有研究团队展示可利用其实现权限提升，此次是针对GPU的新变种</div></div></div>
+                <div class="z5">📰 Ars Technica AI · 04-02 17:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|大模型发布" data-idx="6"
+             style="animation-delay:150ms"
+             onclick="openModal(6)">
+            <div class="card-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/cost_reliability_Gemini_API-soc.max-600x600.format-webp.webp')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 大模型发布</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Google 在 Gemini API 中推出 Flex 和 Priority 两种新推理层级，供开发者在成本与延迟之间灵活权衡。</div>
+                <div class="z3"><div class="z3-why">开发者可以根据业务需求选择便宜但稍慢的 Flex 层，或更贵但响应更快的 Priority 层，降低 AI 应用的使用门槛和成本。</div><div class="z3-details"><div class="z3-detail">Google 为 Gemini API 新增两种推理层级：Flex（低成本）和 Priority（低延迟）</div><div class="z3-detail">两种层级旨在帮助开发者在成本与可靠性/响应速度之间做出灵活选择</div><div class="z3-detail">此举是 Google 针对不同使用场景和预算需求对 Gemini API 进行的差异化定价策略</div></div></div>
+                <div class="z5">🔷 Google AI Blog · 04-02 16:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="融资与商业|行业观点" data-idx="7"
+             style="animation-delay:175ms"
+             onclick="openModal(7)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">融资与商业 · 行业观点</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">OpenAI 收购科技播客媒体 TBPN，旨在加速全球 AI 对话并支持独立媒体发展</div>
+                <div class="z3"><div class="z3-why">OpenAI 开始布局媒体渠道，直接掌控与开发者、企业和大众沟通的话语权，这不只是买个播客那么简单。</div><div class="z3-details"><div class="z3-detail">OpenAI 宣布收购 TBPN（科技商业播客网络）</div><div class="z3-detail">收购目的是加速全球 AI 相关对话，并支持独立媒体</div><div class="z3-detail">OpenAI 希望通过此举扩大与开发者、企业和更广泛科技社区的交流</div><div class="z3-detail">这是 OpenAI 在内容与媒体领域的一次战略性扩张</div></div></div>
+                <div class="z5">🤖 OpenAI Blog · 04-02 10:30</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|融资与商业" data-idx="8"
+             style="animation-delay:200ms"
+             onclick="openModal(8)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 融资与商业</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">OpenAI 为 Codex 推出按需付费定价方案，面向 ChatGPT Business 和 Enterprise 用户，提供更灵活的团队使用选项。</div>
+                <div class="z3"><div class="z3-why">企业团队现在可以按实际使用量付费使用 Codex，不必承担固定订阅费用，降低了试用和规模化采用的门槛。</div><div class="z3-details"><div class="z3-detail">Codex 新增按需付费（pay-as-you-go）定价模式</div><div class="z3-detail">该方案面向 ChatGPT Business 和 Enterprise 用户</div><div class="z3-detail">旨在帮助团队更灵活地开始使用并逐步扩大规模</div></div></div>
+                <div class="z5">🤖 OpenAI Blog · 04-02 10:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|其他" data-idx="9"
+             style="animation-delay:225ms"
+             onclick="openModal(9)">
+            <div class="card-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/bfc_keyword_before_after_white_.max-600x600.format-webp_QNQ8psB.webp')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 其他</span>
+            <span class="z1-meta">2 min</span>
+        </div>
+                <div class="z2">Google 与巴西政府合作，利用卫星图像技术构建新地图，用于保护巴西森林资源。</div>
+                <div class="z3"><div class="z3-why">AI 结合卫星遥感技术正在被用于实际的环境保护工作，这类合作为全球森林监测提供了可复制的范本。</div><div class="z3-details"><div class="z3-detail">Google 与巴西政府达成合作，共同开发卫星图像地图</div><div class="z3-detail">该地图的核心目标是保护巴西森林，可能涉及森林砍伐监测与预警</div><div class="z3-detail">项目由 Google AI 团队主导，属于 AI 技术服务于环境保护的典型案例</div></div></div>
+                <div class="z5">🔷 Google AI Blog · 04-01 13:30</div>
+            </div>
+        </div>
+        <div class="card" data-cat="安全与对齐|AI 政策监管" data-idx="10"
+             style="animation-delay:250ms"
+             onclick="openModal(10)">
+            <div class="card-img" style="background-image:url('https://lh3.googleusercontent.com/IH7SOCSd4lrXu8YVkyRw45zg4Jc__pHM0SJlbDssVL3_5XjYGVYE1jt8DCiPgM9JGdwmdO_gYnQ4-QIo2l9Rz04l7KK4jAbsdAyWLriTV-iOC2_Y3bI=w528-h297-n-nu-rw-lo')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">安全与对齐 · AI 政策监管</span>
+            <span class="z1-meta">2 min</span>
+        </div>
+                <div class="z2">Google DeepMind 发布研究，聚焦 AI 在金融、健康等领域的有害操控风险，并提出新的安全措施</div>
+                <div class="z3"><div class="z3-why">AI 系统越来越强大，如果被用于操控用户决策（比如诱导消费或影响健康选择），危害会很大。DeepMind 主动研究这个问题并提出防护措施，说明业界开始认真对待这类风险。</div><div class="z3-details"><div class="z3-detail">DeepMind 研究 AI 在金融和健康等高风险领域的有害操控问题</div><div class="z3-detail">研究成果推动了新安全措施的制定</div><div class="z3-detail">关注点在于 AI 对人类行为和决策的潜在有害影响</div></div></div>
+                <div class="z5">🔬 DeepMind Blog · 03-25 16:46</div>
+            </div>
+        </div>
+        <div class="card" data-cat="芯片与算力|行业观点" data-idx="11"
+             style="animation-delay:275ms"
+             onclick="openModal(11)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">芯片与算力 · 行业观点</span>
+            <span class="z1-meta">4 min</span>
+        </div>
+                <div class="z2">SpaceX申请向地球轨道发射多达100万个太空数据中心，旨在解放AI算力潜力同时避免地球环境危机，但实现这一目标面临四大技术挑战。</div>
+                <div class="z3"><div class="z3-why">AI训练耗电量巨大，地球上的数据中心已引发能源和环境压力，把算力搬到太空是一个听起来科幻但正在被认真讨论的解决方案。</div><div class="z3-details"><div class="z3-detail">SpaceX于2025年1月向美国FCC申请，计划向地球轨道发射多达100万个数据中心</div><div class="z3-detail">亚马逊创始人贝索斯去年表示科技行业将向大规模太空计算转移</div><div class="z3-detail">谷歌计划发射数据处理卫星，最早明年发射80颗测试星座</div><div class="z3-detail">太空数据中心的核心驱动力是：在不引发地球环境危机的前提下释放AI的全部潜力</div></div></div>
+                <div class="z5">🎓 MIT Tech Review · 04-03 17:03</div>
+            </div>
+        </div>
+        <div class="card" data-cat="具身智能|行业观点" data-idx="12"
+             style="animation-delay:300ms"
+             onclick="openModal(12)">
+            <div class="card-img" style="background-image:url('https://wp.technologyreview.com/wp-content/uploads/2024/01/230628_Talon_0455-social.jpg?w=3000')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">具身智能 · 行业观点</span>
+            <span class="z1-meta">3 min</span>
+        </div>
+                <div class="z2">全球数千名零工工人通过录制日常家务视频为人形机器人提供训练数据，Micro1公司在50多个国家招募此类数据采集者并将数据出售给机器人公司。</div>
+                <div class="z3"><div class="z3-why">人形机器人的训练数据正在以一种你意想不到的方式产生——普通人头戴手机录家务视频。这背后涉及隐私和知情同意的灰色地带，值得关注。</div><div class="z3-details"><div class="z3-detail">尼日利亚医学生Zeus等人通过将iPhone绑在额头上录制家务视频，为机器人公司提供训练数据</div><div class="z3-detail">Micro1公司在印度、尼日利亚、阿根廷等50多个国家招募了数千名数据采集工人</div><div class="z3-detail">这类视频数据已成为训练人形机器人的最新主流方式，需求随人形机器人竞赛升温而激增</div><div class="z3-detail">相关工作在当地薪酬较为可观，但围绕隐私保护和知情同意存在争议</div></div></div>
+                <div class="z5">🎓 MIT Tech Review · 04-01 12:10</div>
+            </div>
+        </div>
+        <div class="card" data-cat="融资与商业|行业观点" data-idx="13"
+             style="animation-delay:325ms"
+             onclick="openModal(13)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">融资与商业 · 行业观点</span>
+            <span class="z1-meta">4 min</span>
+        </div>
+                <div class="z2">OpenAI AGI部署CEO Fidji Simo因神经免疫疾病宣布医疗休假数周，同期COO Brad Lightcap卸任、CMO Kate Rouch离职，公司高管层再度大幅调整。</div>
+                <div class="z3"><div class="z3-why">OpenAI在冲刺AGI的关键阶段，核心管理层接连出现人事动荡，这可能影响公司的产品推进节奏和对外形象，值得关注其内部稳定性。</div><div class="z3-details"><div class="z3-detail">Fidji Simo因神经免疫疾病休假，期间由总裁Greg Brockman负责产品，包括主导超级应用项目</div><div class="z3-detail">COO Brad Lightcap卸任，转向向Sam Altman汇报的&#x27;特别项目&#x27;新职位，其原职责由CRO Denise Dresser接管</div><div class="z3-detail">CMO Kate Rouch因健康原因离职，Gary Briggs临时代理，Rouch计划康复后以更小范围的职位回归</div><div class="z3-detail">OpenAI近期负面消息不断：与五角大楼签署新使用条款引发争议、暂停Sora以集中资源追赶企业和编程工具竞争对手、首席传播官1月已离职</div><div class="z3-detail">OpenAI昨日宣布收购网络脱口秀节目TBPN，Simo称希望为AI变革创造真实建设性的讨论空间</div></div></div>
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="开源生态|产品与应用" data-idx="14"
+             style="animation-delay:350ms"
+             onclick="openModal(14)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">开源生态 · 产品与应用</span>
+            <span class="z1-meta">3 min</span>
+        </div>
+                <div class="z2">Google 推出 AI Edge Gallery 应用，支持在 iPhone 上本地运行 Gemma 4 等开源大模型，完全离线、无需联网，具备多模态、推理可视化等功能。</div>
+                <div class="z3"><div class="z3-why">你可以直接在手机上跑强大的 AI 大模型，不用把数据发到云端，隐私更安全，而且完全免费开源。</div><div class="z3-details"><div class="z3-detail">AI Edge Gallery 正式支持 Gemma 4 系列模型，可在 iPhone 本地运行，无需联网，保护用户隐私</div><div class="z3-detail">新增「思维模式（Thinking Mode）」，可查看模型逐步推理过程，目前仅支持 Gemma 4 系列</div><div class="z3-detail">支持多模态功能（Ask Image），可通过摄像头或相册识别物体、解答视觉问题</div><div class="z3-detail">内置 Agent Skills 功能，可调用维基百科、地图等工具，将 LLM 从对话工具升级为主动助手</div><div class="z3-detail">应用完全开源，开发者可在 GitHub 贡献自定义技能模块，应用本身免费下载</div></div></div>
+                <div class="z5">🔥 Hacker News AI · 04-05 18:45</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|AI工具" data-idx="15"
+             style="animation-delay:375ms"
+             onclick="openModal(15)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI工具</span>
+            <span class="z1-meta">8 min</span>
+        </div>
+                <div class="z2">少数派用户自费长测千问AI眼镜G1，与RayBan Meta一代对比，发现其佩戴舒适性和续航换电设计是亮点，但音质、语音唤醒稳定性、照片同步等细节体验仍有明显不足。</div>
+                <div class="z3"><div class="z3-why">AI眼镜是当前最热门的AI硬件赛道之一，这篇真实用户测评帮你搞清楚千问G1到底值不值得买，以及国产AI眼镜和国际产品的真实差距在哪里。</div><div class="z3-details"><div class="z3-detail">千问G1佩戴舒适性优于RayBan Meta，重量分配均衡，长时间佩戴不疲惫</div><div class="z3-detail">续航采用双芯片设计（恒玄2800低功耗+AR1），支持换电功能，但充电仓需额外购买</div><div class="z3-detail">AI功能贴合国内生态，但语音唤醒在公共场合响应不稳定，回答内容偏长</div><div class="z3-detail">音质中规中矩，漏音较RayBan明显，且缺少自适应音量调节功能</div><div class="z3-detail">照片视频需手动同步、充电方式不便捷、缺少双设备蓝牙连接等细节体验落后于RayBan</div></div></div>
+                <div class="z5">📱 少数派 · 04-04 17:11</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="16"
+             style="animation-delay:400ms"
+             onclick="openModal(16)">
+            <div class="card-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/March_2026_AI_Recap_social_hvvl.max-600x600.format-webp.webp')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">The latest AI news we announced in March 2026</div>
+                
+                <div class="z5">🔷 Google AI Blog · 04-01 13:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="17"
+             style="animation-delay:425ms"
+             onclick="openModal(17)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Gradient Labs 利用 GPT-4.1 和 GPT-4.1 mini/nano 为银行客户打造 AI 客户经理，自动化银行支持工作流程。</div>
+                <div class="z3"><div class="z3-why">银行客服正在被 AI 替代，每个客户都能获得类似专属客户经理的服务体验，同时大幅降低银行运营成本。</div><div class="z3-details"><div class="z3-detail">Gradient Labs 使用 OpenAI 的 GPT-4.1 及其 mini/nano 版本驱动 AI 智能体</div><div class="z3-detail">核心目标是自动化银行客户支持工作流程</div><div class="z3-detail">强调低延迟和高可靠性两大技术指标</div><div class="z3-detail">为每位银行客户提供 AI 客户经理级别的服务体验</div></div></div>
+                <div class="z5">🤖 OpenAI Blog · 04-01 02:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="18"
+             style="animation-delay:450ms"
+             onclick="openModal(18)">
+            <div class="card-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/veo31lite.max-600x600.format-webp.webp')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Google 发布 Veo 3.1 Lite 视频生成模型，通过 Gemini API 提供付费预览，定位为最具成本效益的视频生成方案。</div>
+                <div class="z3"><div class="z3-why">开发者现在可以用更低的成本接入 Google 的视频生成能力，适合需要批量生成或预算有限的应用场景。</div><div class="z3-details"><div class="z3-detail">Veo 3.1 Lite 是 Google 目前最具成本效益的视频生成模型</div><div class="z3-detail">现已通过 Gemini API 提供付费预览访问</div><div class="z3-detail">开发者可在 Google AI Studio 中进行测试体验</div><div class="z3-detail">属于 Veo 系列的轻量化版本，面向开发者生态开放</div></div></div>
+                <div class="z5">🔷 Google AI Blog · 03-31 16:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="19"
+             style="animation-delay:475ms"
+             onclick="openModal(19)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">OpenAI 与盖茨基金会合作，在亚洲举办工作坊，帮助灾难响应团队将 AI 技术应用于实际救灾行动。</div>
+                <div class="z3"><div class="z3-why">AI 正在从实验室走向真实的人道主义救援场景，这意味着 AI 工具有望在亚洲灾难响应中发挥实质性作用，帮助更多受灾人群。</div><div class="z3-details"><div class="z3-detail">OpenAI 与盖茨基金会联合举办面向亚洲灾难响应团队的 AI 工作坊</div><div class="z3-detail">活动聚焦于帮助一线救灾团队将 AI 技术转化为实际可用的行动工具</div><div class="z3-detail">项目覆盖亚洲地区，针对该地区频发自然灾害的现实需求</div></div></div>
+                <div class="z5">🤖 OpenAI Blog · 03-29 22:15</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="20"
+             style="animation-delay:500ms"
+             onclick="openModal(20)">
+            <div class="card-img" style="background-image:url('https://lh3.googleusercontent.com/X3xXSd8ns-IojsGTjvadPFyaBWT5bBGhubcQd_WSiIgQ9bESUPceaHtfOxwgYzwv3P-Gtz2r3sWs-1XFB5X72HuTMbVz30hqJCKOxBaQdq1Oq6895A=w528-h297-n-nu-rw-lo')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Google DeepMind 发布 Gemini 3.1 Flash Live 语音模型，主打更低延迟和更高精度，提升语音交互的流畅度与自然感。</div>
+                <div class="z3"><div class="z3-why">语音 AI 的延迟和自然度一直是用户体验的瓶颈，这次更新意味着实时语音对话将更接近真人交流体验。</div><div class="z3-details"><div class="z3-detail">新模型名为 Gemini 3.1 Flash Live，专为实时音频交互场景设计</div><div class="z3-detail">改进方向包括更高精度（improved precision）和更低延迟（lower latency）</div><div class="z3-detail">目标是让语音交互更流畅、自然、精准</div><div class="z3-detail">属于 Gemini Flash 系列的迭代更新，延续轻量高效的产品定位</div></div></div>
+                <div class="z5">🔬 DeepMind Blog · 03-26 15:23</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="21"
+             style="animation-delay:500ms"
+             onclick="openModal(21)">
+            <div class="card-img" style="background-image:url('https://lh3.googleusercontent.com/jcDZxU6wx4tQ5XBOVae89SPyssJfB24ifHGOA_pGrzdRp9SgP6q2vnx5rr6yeyr_nuFh6b3qHDQzqZFDB3ey-inIlXC2aEEXzUhr_Vy_9AuE7dPuSRs=w528-h297-n-nu-rw-lo')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Google DeepMind 发布 Lyria 3 Pro 音乐生成模型，支持生成更长的音乐曲目并具备结构感知能力，同时将 Lyria 扩展至更多 Google 产品。</div>
+                <div class="z3"><div class="z3-why">AI 音乐生成又进一步，不只是短片段了，而是能生成有完整结构的长曲目，对音乐创作者和内容创作者来说实用性大幅提升。</div><div class="z3-details"><div class="z3-detail">Lyria 3 Pro 支持生成更长的音乐曲目</div><div class="z3-detail">新模型具备结构感知能力（structural awareness），能理解音乐的段落结构</div><div class="z3-detail">Lyria 将被集成到更多 Google 产品和平台中</div></div></div>
+                <div class="z5">🔬 DeepMind Blog · 03-25 16:01</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="22"
+             style="animation-delay:500ms"
+             onclick="openModal(22)">
+            <div class="card-img" style="background-image:url('https://lh3.googleusercontent.com/kOpPqSCIuZr9xSaOZM-eZl314VHQ80Nmv-PfUJgzGOaHU0KY08nNAahjcjoNWT4T_xy5DH6TfOCXwhgR6POERmrPoXnpCsN8J2LJPgoM01rO3nAWPg=w528-h297-n-nu-rw-lo')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Measuring progress toward AGI: A cognitive framework</div>
+                
+                <div class="z5">🔬 DeepMind Blog · 03-17 16:03</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="23"
+             style="animation-delay:500ms"
+             onclick="openModal(23)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic’s Responsible Scaling Policy: Version 3.0</div>
+                
+                <div class="z5">🧠 Anthropic News · 02-24 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="24"
+             style="animation-delay:500ms"
+             onclick="openModal(24)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic 发布 Claude Sonnet 4.6，全面升级编程、计算机操控、长上下文推理等能力，支持 100 万 token 上下文窗口（测试版），定价与前代相同，成为 claude.ai</div>
+                <div class="z3"><div class="z3-why">Sonnet 4.6 的性能据称已接近此前旗舰级 Opus 模型，但价格更低，意味着普通用户和开发者能以更低成本获得更强的 AI 能力，尤其是在自动化操控电脑完成复杂办公任务方面有显著突破。</div><div class="z3-details"><div class="z3-detail">Sonnet 4.6 在编程、计算机操控、长上下文推理、智能体规划、知识工作和设计等方面全面升级，早期用户甚至更偏好它而非 2025 年 11 月的旗舰模型 C</div><div class="z3-detail">支持 100 万 token 上下文窗口（测试版），定价与 Sonnet 4.5 相同，起价 $3/$15 per million tokens</div></div></div>
+                <div class="z5">🧠 Anthropic News · 02-17 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="25"
+             style="animation-delay:500ms"
+             onclick="openModal(25)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic 发布 Claude Opus 4.6，在编程、智能体任务、多步推理等多项评测上达到行业最高分，并首次为 Opus 系列引入 100 万 token 上下文窗口。</div>
+                <div class="z3"><div class="z3-why">Anthropic 最强旗舰模型再次升级，在编程、复杂推理和知识工作任务上全面超越 GPT-5.2 等竞品，对开发者和企业用户来说是一次实质性的能力跃升。</div><div class="z3-details"><div class="z3-detail">Opus 4.6 在 Terminal-Bench 2.0（智能体编程评测）和 Humanity&#x27;s Last Exam（复杂多学科推理）上均排名第一</div><div class="z3-detail">在 GDPval-AA（金融、法律等经济价值知识工作评测）上，Opus 4.6 比 OpenAI GPT-5.2 高出约 144 Elo 分，比前代 Opus </div><div class="z3-detail">首次为 Opus 系列引入 100 万 token 上下文窗口（Beta 阶段），支持更大规模代码库操作</div><div class="z3-detail">新增自适应思考（Adaptive Thinking）和开发者可控的 effort controls，平衡智能、速度与成本</div><div class="z3-detail">价格维持不变，仍为每百万 token 输入 $5 / 输出 $25，今日起在 claude.ai、API 及主流云平台全面上线</div></div></div>
+                <div class="z5">🧠 Anthropic News · 02-05 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="26"
+             style="animation-delay:500ms"
+             onclick="openModal(26)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic 正式宣布 Claude 将永久保持无广告模式，不会在对话中插入赞助内容或受广告商影响，以确保 AI 助手真正服务于用户利益。</div>
+                <div class="z3"><div class="z3-why">这意味着 Claude 不会像搜索引擎或社交媒体那样用广告变现，用户和 Claude 的对话不会被商业利益干扰——这是一个关于 AI 商业模式的重要价值观表态。</div><div class="z3-details"><div class="z3-detail">Anthropic 明确承诺：Claude 对话中不会出现赞助链接、广告推荐或第三方产品植入</div><div class="z3-detail">Anthropic 分析显示，相当比例的 Claude 对话涉及敏感或深度个人话题，类似与信任顾问的交流，广告介入会显得不合时宜</div><div class="z3-detail">广告激励机制会与 Claude 的核心原则冲突——以睡眠问题为例，有广告压力的助手可能优先推荐付费产品而非真正有用的建议</div><div class="z3-detail">Anthropic 认为当前对 AI 模型如何将目标转化为具体行为的理解仍不完善，引入广告激励可能产生不可预测的后果</div><div class="z3-detail">Anthropic 表示自己也投放广告、服务广告行业客户，但将广告引入 Claude 对话本身是另一回事</div></div></div>
+                <div class="z5">🧠 Anthropic News · 02-04 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="27"
+             style="animation-delay:500ms"
+             onclick="openModal(27)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic的Claude AI模型于2025年12月首次为NASA毅力号火星车规划行驶路线，成为史上首个协助指挥火星探测任务的AI系统。</div>
+                <div class="z3"><div class="z3-why">AI不再只是帮你写邮件、改代码，它已经开始帮人类探索其他星球了——这是AI应用边界的一次真实突破。</div><div class="z3-details"><div class="z3-detail">2025年12月8日和10日，Claude为毅力号规划了约400米的火星岩石地形穿越路线，这是AI首次参与火星探测任务指令编写</div><div class="z3-detail">由于地球到火星信号延迟约20分钟，操作员无法实时微操，必须提前规划完整路线，AI辅助规划可大幅节省人工时间</div><div class="z3-detail">JPL工程师测试了Claude能否以与人类专家相当的安全标准完成路线规划，结果证明可行</div><div class="z3-detail">毅力号自2021年2月登陆火星，主要任务是研究火星地质、气候及寻找古代生命迹象，已在耶泽罗陨石坑发现疑似古代生物痕迹</div><div class="z3-detail">火星驾驶风险极高——2009年勇气号曾陷入沙坑后再未移动，每次路线规划都需极度谨慎</div></div></div>
+                <div class="z5">🧠 Anthropic News · 01-30 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="28"
+             style="animation-delay:500ms"
+             onclick="openModal(28)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Holo3: Breaking the Computer Use Frontier</div>
+                
+                <div class="z5">🤗 Hugging Face Blog · 04-01 16:36</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="29"
+             style="animation-delay:500ms"
+             onclick="openModal(29)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">The gig workers who are training humanoid robots at home</div>
+                
+                <div class="z5">🎓 MIT Tech Review · 04-01 11:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="30"
+             style="animation-delay:500ms"
+             onclick="openModal(30)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">TII发布Falcon Perception，一个0.6B参数的早期融合Transformer模型，支持自然语言驱动的开放词汇目标检测与分割，在SA-Co基准上以68.0 Macro-F1超越SAM </div>
+                <div class="z3"><div class="z3-why">用一个轻量级单一模型就能同时做图像理解和语言理解，不需要拼接多个大模型，这对于在资源受限场景下部署视觉AI很有实际价值。</div><div class="z3-details"><div class="z3-detail">Falcon Perception采用早期融合架构，图像patch和文本在同一Transformer中从第一层起共享参数处理，无需独立视觉骨干网络</div><div class="z3-detail">使用混合注意力掩码：图像token使用双向注意力，任务token使用自回归注意力，兼顾视觉编码和序列预测</div><div class="z3-detail">在SA-Co基准上达到68.0 Macro-F1，超越SAM 3的62.3，主要差距在于存在性校准（MCC 0.64 vs 0.82）</div><div class="z3-detail">同步发布PBench诊断基准，按能力维度（属性、OCR引导消歧、空间约束、关系）和密集长上下文场景细分评估</div><div class="z3-detail">Falcon OCR（0.3B参数）在olmOCR基准得80.3分、OmniDocBench得88.6分，是开源OCR模型中吞吐量最高的</div></div></div>
+                <div class="z5">🤗 Hugging Face Blog · 04-01 07:13</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="31"
+             style="animation-delay:500ms"
+             onclick="openModal(31)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">IBM 发布 Granite 4.0 3B Vision，一款专为企业文档理解设计的紧凑型视觉语言模型，以 LoRA 适配器形式叠加在 Granite 4.0 Micro 之上，并配套推出百万级图表理</div>
+                <div class="z3"><div class="z3-why">企业处理大量含图表、表单的复杂文档，但现有视觉语言模型在精确读取图表数值方面表现差。这款模型专门针对这一痛点优化，且体积小、可模块化部署，对企业文档自动化处理很实用。</div><div class="z3-details"><div class="z3-detail">模型以 LoRA 适配器形式构建在 Granite 4.0 Micro 之上，视觉与语言模块分离，支持纯文本回退和混合流水线集成</div><div class="z3-detail">配套推出 ChartNet 数据集：170 万条多模态图表样本，覆盖 24 种图表类型和 6 个绘图库，每条样本包含绘图代码、渲染图像、数据表、自然语言摘要和 </div><div class="z3-detail">采用 DeepStack Injection 架构：抽象视觉特征注入早期层处理语义，高分辨率空间特征注入后期层保留细节，解决传统 VLM 单点注入的局限</div><div class="z3-detail">可与 Docling 文档处理工具联合使用，增强文档处理流水线的视觉理解能力</div><div class="z3-detail">ChartNet 数据集相关研究将在 CVPR 2026 发表论文</div></div></div>
+                <div class="z5">🤗 Hugging Face Blog · 03-31 15:10</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="32"
+             style="animation-delay:500ms"
+             onclick="openModal(32)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">开发者发布开源项目 Parlor，在 M3 Pro 芯片上实现本地实时多模态 AI 对话，使用 Google Gemma 4 E2B 模型处理语音和视觉输入，仅需 3GB 内存。</div>
+                <div class="z3"><div class="z3-why">以前跑这类实时语音+视觉 AI 需要顶级显卡，现在普通 Mac 就能搞定，意味着本地 AI 助手的门槛大幅降低，离手机端普及又近了一步。</div><div class="z3-details"><div class="z3-detail">使用 Google 最新发布的 Gemma 4 E2B 小模型，通过 LiteRT-LM 在 Apple Silicon GPU 上实时运行，同时支持语音理解和</div><div class="z3-detail">TTS 语音合成采用 Kokoro，在 Mac 上使用 MLX 加速，Linux 上使用 ONNX，实现句级流式播放，响应延迟低</div><div class="z3-detail">支持免按键语音活动检测（VAD）、打断 AI 说话（Barge-in）等自然对话体验</div><div class="z3-detail">仅需 3GB 内存，支持 macOS Apple Silicon 或带 GPU 的 Linux，门槛极低</div><div class="z3-detail">开发者最初目的是为英语学习应用降低服务器成本，该应用已有数百名月活用户，模型支持多语言可随时切换母语</div></div></div>
+                <div class="z5">🔥 Hacker News AI · 04-05 17:53</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="33"
+             style="animation-delay:500ms"
+             onclick="openModal(33)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">In Japan, the robot isn’t coming for your job; it’s filling the one nobody wants</div>
+                
+                <div class="z5">💡 TechCrunch AI · 04-05 14:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="34"
+             style="animation-delay:500ms"
+             onclick="openModal(34)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic 宣布 Claude Code 订阅用户在通过 OpenClaw 等第三方工具使用其编程助手时，将需要额外付费。</div>
+                <div class="z3"><div class="z3-why">这意味着开发者使用 Claude Code 的成本将上升，尤其是依赖第三方工具集成的用户，需要重新评估使用方案和预算。</div><div class="z3-details"><div class="z3-detail">Claude Code 订阅用户通过 OpenClaw 等第三方工具使用时将产生额外费用</div><div class="z3-detail">此次变化影响依赖第三方工具集成 Claude Code 的开发者群体</div><div class="z3-detail">Anthropic 正在调整其编程助手产品的定价结构</div></div></div>
+                <div class="z5">💡 TechCrunch AI · 04-04 16:32</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="35"
+             style="animation-delay:500ms"
+             onclick="openModal(35)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Suno is a music copyright nightmare</div>
+                
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="36"
+             style="animation-delay:500ms"
+             onclick="openModal(36)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">I let Gemini in Google Maps plan my day and it went surprisingly well</div>
+                
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="37"
+             style="animation-delay:500ms"
+             onclick="openModal(37)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Grammarly’s sloppelganger saga</div>
+                
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="38"
+             style="animation-delay:500ms"
+             onclick="openModal(38)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">A folk musician became a target for AI fakes and a copyright troll</div>
+                
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="39"
+             style="animation-delay:500ms"
+             onclick="openModal(39)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Really, you made this without AI? Prove it</div>
+                
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="40"
+             style="animation-delay:500ms"
+             onclick="openModal(40)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic宣布从2026年4月4日起，Claude订阅用量将不再覆盖OpenClaw等第三方工具的使用，用户须额外付费才能继续通过OpenClaw使用Claude。</div>
+                <div class="z3"><div class="z3-why">这意味着原本用一个Claude订阅就能白嫖OpenClaw的用户，现在得额外掏钱了。Anthropic实际上是在用价格手段把第三方工具用户赶回自家产品。</div><div class="z3-details"><div class="z3-detail">从2026年4月4日下午3点（美东时间）起，Claude订阅额度不再覆盖OpenClaw等第三方工具的使用</div><div class="z3-detail">用户仍可通过&#x27;按量付费&#x27;方式继续使用OpenClaw，但需单独计费，与Claude订阅分开</div><div class="z3-detail">Anthropic给受影响订阅用户提供一次性等额月费抵扣券作为补偿，并提供折扣用量包选项</div><div class="z3-detail">OpenClaw创始人Peter Steinberger已加入OpenAI，Anthropic此举被认为有意推动用户转向自家产品Claude Cowork</div><div class="z3-detail">Anthropic官方解释称，第三方工具的使用模式对基础设施造成压力，需优先保障自有产品和API用户的容量</div></div></div>
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="41"
+             style="animation-delay:500ms"
+             onclick="openModal(41)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">The Vergecast播客讨论了OpenAI最新动态（1220亿美元融资轮、每周9亿ChatGPT用户）以及OpenAI关闭Sora的原因，同时结合苹果50周年产品排名展开讨论。</div>
+                <div class="z3"><div class="z3-why">OpenAI完成史上最大规模融资之一，周活用户接近10亿，显示AI商业化正在加速落地；Sora被关闭则说明即便是顶级AI公司也在快速调整产品策略。</div><div class="z3-details"><div class="z3-detail">OpenAI完成1220亿美元新一轮融资，规模创历史新高</div><div class="z3-detail">ChatGPT每周活跃用户达9亿，AI应用渗透率持续攀升</div><div class="z3-detail">OpenAI关闭了视频生成产品Sora，具体原因在节目中有所讨论</div><div class="z3-detail">本期播客主题为AI向商业化转型，结合苹果50周年产品排名（超160万票）展开</div></div></div>
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="42"
+             style="animation-delay:500ms"
+             onclick="openModal(42)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">美国犹他州批准AI聊天机器人Legion Health在无医生参与的情况下为患者续开精神科药物处方，这是美国第二次将此类临床权限授予AI系统，为期一年的试点项目月费19美元。</div>
+                <div class="z3"><div class="z3-why">AI开始直接参与精神科处方决策，这是医疗AI从辅助工具向临床决策者角色转变的重要节点，但也引发了关于患者安全和医疗监管的深层争议。</div><div class="z3-details"><div class="z3-detail">Legion Health的AI聊天机器人可续开15种低风险维护性精神科药物，包括氟西汀（百忧解）、舍曲林（左洛复）等治疗焦虑和抑郁的常用药，月费19美元</div><div class="z3-detail">适用范围严格受限：仅限病情稳定患者、不得开新处方、不含苯二氮䓬类药物/抗精神病药/锂盐等复杂药物，且每10次续药或6个月须与医生复诊</div><div class="z3-detail">精神科医生对此提出质疑：AI系统不透明、存在风险，且未必能真正扩大精神健康服务的可及性，尤其是对最需要帮助的人群</div><div class="z3-detail">这是犹他州也是全美第二次将此类临床权限授予AI，项目于2026年4月启动，目前仍在等待名单阶段</div><div class="z3-detail">支持者认为此举可降低成本、缓解精神科医生短缺问题，但批评者指出$19/月的订阅费对低收入群体仍是障碍</div></div></div>
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="43"
+             style="animation-delay:500ms"
+             onclick="openModal(43)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">PSA: Anyone with a link can view your Granola notes by default</div>
+                
+                <div class="z5">⚡ The Verge AI · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="44"
+             style="animation-delay:500ms"
+             onclick="openModal(44)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Two Minute Papers 视频介绍了 Google 的 TurboQuant 论文，该技术涉及大模型量化与 KV-cache 压缩，已有多个社区复现版本出现。</div>
+                <div class="z3"><div class="z3-why">TurboQuant 是一种可能大幅压缩大模型推理内存占用的量化技术，如果效果经得起验证，本地运行大模型会变得更省资源、更快速。</div><div class="z3-details"><div class="z3-detail">TurboQuant 论文来自 Google，arxiv 编号 2504.19874，核心方向是模型量化与 KV-cache 压缩</div><div class="z3-detail">社区已出现多个 PyTorch 复现版本，部分测试显示 KV-cache 压缩效果甚至优于论文原始结果</div><div class="z3-detail">作者提醒各复现版本测试结果差异较大，目前每个数据点仅供参考，结论尚不确定</div><div class="z3-detail">OpenReview 上已有对该论文的评审与批评意见，技术可靠性仍在讨论中</div></div></div>
+                <div class="z5">🎬 Two Minute Papers · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="45"
+             style="animation-delay:500ms"
+             onclick="openModal(45)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">开发者构建了一个仅900万参数的微型语言模型 GuppyLM，旨在通过可在 Colab 上5分钟完成训练的开源项目，帮助普通人理解大语言模型的工作原理。</div>
+                <div class="z3"><div class="z3-why">很多人觉得训练大模型是高不可攀的事，这个项目用极小的规模把整个流程拆解清楚，让任何人都能亲手跑一遍，真正搞懂 LLM 是怎么运作的。</div><div class="z3-details"><div class="z3-detail">GuppyLM 仅有 900 万参数，可在 Google Colab 上免费训练，无需专业 GPU 集群</div><div class="z3-detail">项目覆盖完整 LLM 训练流程：数据生成、分词器、模型架构、训练循环和推理</div><div class="z3-detail">配套 60k 通用数据集和预训练模型权重均已开源发布在 HuggingFace 上</div><div class="z3-detail">项目定位是教学演示而非生产级模型，目标是&#x27;去神秘化&#x27;而非性能竞争</div><div class="z3-detail">提供 MIT 许可证，附带 LinkedIn 和 Medium 教程文章，降低学习门槛</div></div></div>
+                <div class="z5">🔥 Hacker News AI · 04-06 00:20</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="46"
+             style="animation-delay:500ms"
+             onclick="openModal(46)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Copilot is &#x27;for entertainment purposes only&#x27;, per Microsoft&#x27;s terms of use</div>
+                
+                <div class="z5">🔥 Hacker News AI · 04-06 00:07</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="47"
+             style="animation-delay:500ms"
+             onclick="openModal(47)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Eight years of wanting, three months of building with AI</div>
+                
+                <div class="z5">🔥 Hacker News AI · 04-05 12:43</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="48"
+             style="animation-delay:500ms"
+             onclick="openModal(48)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Tiiny AI推出的Agent盒子Pocket Lab在Kickstarter众筹已达280万美元，这款手机大小的本地AI设备售价1399美元，支持最高120B参数模型本地运行，无需云端或额外Tok</div>
+                <div class="z3"><div class="z3-why">以后跑AI大模型不用每次付Token钱了——花一次硬件的钱，就能在本地无限量运行AI，这对重度AI用户来说可能是个很划算的选择。</div><div class="z3-details"><div class="z3-detail">Tiiny AI Pocket Lab重约300克、手机大小，早鸟众筹价1399美元，Kickstarter众筹已达280万美元，预计最终可能超400万美元</div><div class="z3-detail">设备支持一键部署大模型，最高支持120B参数，完全本地运行，不依赖云端、服务器或高端GPU</div><div class="z3-detail">本地运行意味着无额外Token消耗费用，用户一次性购买硬件后可无限量使用AI</div><div class="z3-detail">Agent Box赛道升温，市场上已有Pamir（估值超2500万美元）、Violoop、Tiiny等多家玩家入局</div><div class="z3-detail">Tiiny AI副总裁强调该产品定位是&#x27;个人AI基础设施设备&#x27;，并非专为OpenClaw（龙虾）框架设计</div></div></div>
+                <div class="z5">💼 36氪 · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="49"
+             style="animation-delay:500ms"
+             onclick="openModal(49)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">清华系AI矿石分选企业霍里思特完成近2亿元C轮融资，其核心产品基于X射线成像与AI识别算法，可实现无水干法智能选矿，年出货量超100台，复合增长率达40%以上。</div>
+                <div class="z3"><div class="z3-why">AI不只是聊天机器人，它正在渗透到采矿这类传统重工业场景，帮助解决劳动力短缺、环境污染等实际问题，这是AI落地工业场景的典型案例。</div><div class="z3-details"><div class="z3-detail">本轮融资近2亿元，由招商局资本领投，多家产业资本跟投，资金用于技术研发、全球化拓展及团队建设</div><div class="z3-detail">核心产品通过X射线透视成像获取矿石内部结构，结合AI算法区分废石与有用矿石，最终用气排枪精准分离，全程无需用水</div><div class="z3-detail">公司自研X射线探测器，采集速度、精度及长度均达国际领先水平，三维立体喷吹准确率达99.9%</div><div class="z3-detail">近两年年出货量超100台，年产值达数亿元，近几年复合增长率保持在40%以上</div><div class="z3-detail">团队源自清华大学精密仪器系国家重点实验室，在X射线光谱分析与AI识别算法领域有近20年积累</div></div></div>
+                <div class="z5">💼 36氪 · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="50"
+             style="animation-delay:500ms"
+             onclick="openModal(50)">
+            <div class="card-img" style="background-image:url('https://img.36krcdn.com/hsossms/20260404/v2_68d80d0b36034f468e6f334189b141c2@405798_oswg69418oswg1080oswg810_img_000?x-oss-process=image/format,jpg/interlace,1')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">一群00后极客和这家机器人公司共处72小时</div>
+                
+                <div class="z5">💼 36氪 · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="51"
+             style="animation-delay:500ms"
+             onclick="openModal(51)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">神州数码2025年营收超1400亿，AI相关业务增长近五成｜最前线</div>
+                
+                <div class="z5">💼 36氪 · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="52"
+             style="animation-delay:500ms"
+             onclick="openModal(52)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">阅文“AI拟真人大讲堂”：好故事才是AI时代的未来</div>
+                
+                <div class="z5">💼 36氪 · </div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="53"
+             style="animation-delay:500ms"
+             onclick="openModal(53)">
+            <div class="card-img" style="background-image:url('https://img.36krcdn.com/hsossms/20260403/v2_c9935d4bc6de4f76afdcb4ebb65399bf@6221844_oswg13298688oswg4480oswg2520_img_png?x-oss-process=image/quality,q_80/format,jpg/interlace,1')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">36氪首发丨前赛默飞员工创业黑灯实验室，实现国内100%交付，获近亿融资</div>
+                
+                <div class="z5">💼 36氪 · </div>
+            </div>
+        </div></div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+<div class="modal" id="modalContent"></div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    AI 早报 · <b>13</b> 个信息源 · <b>54</b> 篇资讯 · 2026年04月06日
+</footer>
+
+<script>
+const __data = [{"title": "Accelerating the next phase of AI", "summary": "OpenAI 完成1220亿美元新一轮融资，用于扩展前沿AI研究、下一代算力基础设施及满足ChatGPT、Codex等产品的全球增长需求。", "background": "OpenAI自2022年底推出ChatGPT以来，用户规模和商业需求急剧扩张。此前已完成多轮大额融资，包括微软的百亿美元级别投资。随着GPT-4、o系列模型及Codex等产品持续迭代，算力成本和基础设施需求也随之飙升。与此同时，谷歌、Anthropic、Meta等竞争对手加速追赶，OpenAI需要持续大规模投入以维持技术领先地位。此次融资背景下，OpenAI也正在推进从非营利结构向营利性公司的转型，为吸引更多外部资本铺路。", "deep_analysis": "1220亿美元的融资规模远超此前任何AI公司单轮融资记录，释放出几个重要信号：第一，资本市场对AI长期价值的信心依然极强，愿意以极高估值押注OpenAI；第二，算力军备竞赛进入新阶段，训练下一代模型所需的芯片、数据中心投入已超出一般科技公司的承受范围，巨额融资是维持竞争力的必要条件；第三，企业级AI市场的爆发带来了真实的营收增长预期，使得这笔融资具备商业逻辑支撑而非纯粹的概念炒作。对行业而言，这将进一步拉高AI竞争的资金门槛，中小型AI公司在基础模型层面的生存空间将被进一步压缩。", "importance": 5, "categories": ["融资与商业", "大模型发布"], "source_type": "official", "source_name": "OpenAI Blog", "source_icon": "🤖", "link": "https://openai.com/index/accelerating-the-next-phase-ai", "pub_date": "03-31 13:00", "image": "", "reading_minutes": 2}, {"title": "Welcome Gemma 4: Frontier multimodal intelligence on device", "summary": "Google DeepMind 发布 Gemma 4 多模态模型系列，支持图像、文本和音频输入，采用 Apache 2 开源协议，最大 31B 参数模型在 LMArena 评分达 1452，已上线 H", "background": "Gemma 系列是 Google DeepMind 推出的开源模型家族，此前已有 Gemma 1、Gemma 2、Gemma 3 及专为端侧优化的 Gemma-3n。随着 Meta LLaMA、Mistral 等开源模型竞争加剧，Google 持续迭代 Gemma 以保持开源生态竞争力。Gemma-3n 首次引入了 Per-Layer Embeddings 和音频支持，Gemma 4 在此基础上进一步整合多模态能力，并将架构设计重点放在跨平台兼容性和量化友好性上，以覆盖从云端服务器到移动端的全场景需求。此次发布与 Hugging Face 深度合作，确保第一时间在主流开源工具链中可用。", "deep_analysis": "Gemma 4 的核心亮点在于「性能与效率的帕累托前沿」——26B MoE 模型仅激活 4B 参数就能达到接近 31B 稠密模型的竞技场评分，这意味着推理成本大幅降低。架构上刻意剔除了 Altup 等复杂特性，转而追求跨库兼容性和量化友好性，体现了 Google 从「技术炫技」转向「生态落地」的务实策略。PLE 技术让小模型在有限参数下获得更丰富的层级表达，是端侧部署的关键创新。Apache 2 协议的真正开放（相比部分模型附加商业限制）也是重要信号，有助于企业级采用。对开发者而言，Gemma 4「开箱即用效果极佳以至于难以找到微调示例」的描述，意味着在许多场景下可以直接调用而无需额外训练成本，大幅降低了 AI 应用的开发门槛。", "importance": 5, "categories": ["大模型发布", "开源生态"], "source_type": "official", "source_name": "Hugging Face Blog", "source_icon": "🤗", "link": "https://huggingface.co/blog/gemma4", "pub_date": "04-02 00:00", "image": "", "reading_minutes": 8}, {"title": "Gemma 4: Byte for byte, the most capable open models", "summary": "Google DeepMind 发布 Gemma 4，定位为迄今最强开源模型，专为高级推理和智能体工作流设计。", "background": "Gemma 是 Google DeepMind 于 2024 年初推出的开源模型系列，与 Gemini 商业模型共享技术底座但面向开源社区开放。此前已发布 Gemma 1、Gemma 2 等版本，在同等参数规模下性能表现突出，受到开发者社区广泛关注。随着 Meta Llama、Mistral 等开源模型竞争加剧，以及 AI Agent 应用场景快速兴起，Google 持续迭代 Gemma 系列以保持竞争力。Gemma 4 的发布正值开源大模型竞争白热化阶段，各大厂商均在加速推出更强的开源或开放权重模型。", "deep_analysis": "Gemma 4 的宣传重点落在'byte for byte'（每字节最强）这一定位上，说明 Google 的核心竞争策略是参数效率而非单纯堆规模——这对资源有限的开发者和企业极具吸引力。专门强调 agentic workflows 支持，反映出当前行业重心已从单纯的对话问答转向 AI Agent 和自动化工作流。然而由于正文内容缺失，具体参数规模、基准测试成绩、开放协议等关键信息尚不明确，实际能力有待进一步评估。整体来看，此次发布延续了 Google 在开源生态的布局策略，意在与 Meta Llama 系列争夺开发者心智。", "importance": 4, "categories": ["大模型发布", "开源生态"], "source_type": "official", "source_name": "DeepMind Blog", "source_icon": "🔬", "link": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/", "pub_date": "04-02 16:00", "image": "https://lh3.googleusercontent.com/dP82fYfjynerdo1ze8VAz5F-miu-ghwM9mrzzQoi_FDYVcG4lLTtb7id7b_IKbFVDuv9q765JG_dEWRJK8cFDrxfCeMpzjzvlj3kwqyZWA6zqt_ecw=w528-h297-n-nu-rw-lo", "reading_minutes": 2}, {"title": "Create, edit and share videos at no cost in Google Vids", "summary": "Google Vids 新增由 Lyria 3 和 Veo 3.1 驱动的 AI 视频生成与编辑功能，用户可免费创建、编辑和分享高质量视频。", "background": "Google Vids 是 Google Workspace 旗下的在线视频创作工具，定位为面向职场用户的协作视频平台。Veo 是 Google DeepMind 推出的视频生成模型系列，Veo 3 于2025年发布，具备音频同步生成能力；Lyria 是 Google 的音乐生成模型，Lyria 3 为最新版本。此前 AI 视频生成工具普遍采用订阅或按量付费模式，OpenAI Sora、Runway、Kling 等均需付费。Google 此次将 Veo 3.1 和 Lyria 3 集成进 Vids 并提供免费访问，是其在 AI 创作工具市场的重要布局。", "deep_analysis": "Google 将顶级 AI 视频和音乐生成模型免费打包进 Vids，核心逻辑是以免费策略扩大 Workspace 生态的用户粘性，同时对 Sora、Runway 等独立付费平台形成降维打击。Veo 3.1 相比 Veo 3 在质量和效率上进一步优化，配合 Lyria 3 的音乐生成，意味着用户可以在一个平台内完成视频脚本、画面生成、配乐、编辑和分享的全链路。对于内容创作者和企业用户而言，这大幅降低了专业视频制作的成本门槛。但文章正文信息有限，具体免费额度、分辨率上限及功能细节尚不明确，实际体验仍需观察。", "importance": 4, "categories": ["产品与应用", "大模型发布"], "source_type": "official", "source_name": "Google AI Blog", "source_icon": "🔷", "link": "https://blog.google/products-and-platforms/products/workspace/google-vids-updates-lyria-veo/", "pub_date": "04-02 16:00", "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Createeditandshare_Google_Vids_.max-600x600.format-webp.webp", "reading_minutes": 1}, {"title": "TRL v1.0: Post-Training Library Built to Move with the Field", "summary": "Hugging Face 发布 TRL v1.0，这是一个专注于大模型后训练（Post-Training）的生产级库，支持超过75种后训练方法，包括PPO、DPO、GRPO等主流算法。", "background": "大模型的后训练（Post-Training）是指在预训练完成后，通过强化学习、偏好优化等方法进一步对齐模型行为的过程。TRL（Transformer Reinforcement Learning）是Hugging Face旗下的后训练库，最早于2019年前后开始开发，最初以PPO为核心。随着DPO（2023年）、GRPO（2024年）等新算法的涌现，后训练领域经历了多次范式转变，原有的库设计屡屡面临过时的挑战。TRL在这一过程中持续迭代，逐渐成为业界广泛使用的后训练基础设施，被众多研究机构和企业用于生产环境。此次v1.0的发布，是对其生产级成熟度的正式认可。", "deep_analysis": "TRL v1.0 的发布背后有一个深刻的工程哲学：在一个快速演变的领域，稳定性不来自于对当前最佳实践的完美抽象，而来自于对变化本身的预判和适应。文章通过奖励模型的三次角色转变（PPO中的必需组件→DPO中的可选项→RLVR中的验证器）生动说明了这一点——任何过早固化的抽象都会迅速过时。这种设计哲学对整个AI工具链生态都有参考价值：与其追求优雅的统一抽象，不如保持模块的低耦合和高可替换性。对于使用者而言，TRL v1.0 的意义在于：它不仅是一个算法集合，更是一套经过生产验证、能够跟上领域演进节奏的工程框架，降低了将最新后训练研究落地为实际产品的门槛。", "importance": 4, "categories": ["开源生态", "大模型发布"], "source_type": "official", "source_name": "Hugging Face Blog", "source_icon": "🤗", "link": "https://huggingface.co/blog/trl-v1", "pub_date": "03-31 00:00", "image": "", "reading_minutes": 8}, {"title": "New Rowhammer attacks give complete control of machines running Nvidia GPUs", "summary": "研究人员发现三种新型Rowhammer攻击手法，可利用Nvidia高性能GPU的内存漏洞，让恶意用户获得宿主机的完整root权限，对云端GPU共享环境构成严重威胁。", "background": "Rowhammer是一类针对DRAM内存的硬件级攻击，最早于2014年由研究人员公开披露。其原理是通过高频率反复读取相邻内存行，产生电磁干扰导致目标行发生比特翻转。2015年研究人员进一步证明可利用此现象实现权限提升。随着内存制程不断缩小，DRAM对比特翻转的敏感性反而增加，使得Rowhammer攻击愈发难以从硬件层面根本消除。此前Rowhammer攻击主要针对CPU侧的系统内存，而随着AI训练和高性能计算对GPU需求激增，云服务商大量部署共享GPU集群，GPU内存（GDDR/HBM）成为新的攻击面。", "deep_analysis": "此次研究将Rowhammer攻击从CPU内存扩展到Nvidia GPU内存，具有重要的安全意义。云端GPU共享模式（多租户）是当前AI算力市场的主流形态，攻击者只需以普通用户身份租用GPU时间，即可尝试通过内存比特翻转篡改内核数据结构，最终实现root级别的权限逃逸。这对AI训练、推理服务及科学计算的安全隔离构成根本性挑战。由于Rowhammer本质上是硬件物理特性导致的问题，软件层面的防御（如内存隔离、ECC校验）效果有限，而GPU内存的ECC覆盖并不总是完整启用。这一研究提示云服务商需重新审视GPU多租户安全架构，Nvidia也面临在硬件或驱动层面提供更强防护的压力。", "importance": 4, "categories": ["芯片与算力", "安全与对齐"], "source_type": "news", "source_name": "Ars Technica AI", "source_icon": "📰", "link": "https://arstechnica.com/security/2026/04/new-rowhammer-attacks-give-complete-control-of-machines-running-nvidia-gpus/", "pub_date": "04-02 17:00", "image": "https://cdn.arstechnica.net/wp-content/uploads/2023/07/exploit-vulnerability-security.jpg", "reading_minutes": 5}, {"title": "New ways to balance cost and reliability in the Gemini API", "summary": "Google 在 Gemini API 中推出 Flex 和 Priority 两种新推理层级，供开发者在成本与延迟之间灵活权衡。", "background": "Gemini API 是 Google 面向开发者开放的大模型接口服务，支持构建各类 AI 应用。随着 AI API 市场竞争加剧，OpenAI、Anthropic 等竞争对手也在不断调整定价和服务层级。Google 此前已通过 Gemini 1.5 Flash 等轻量模型降低成本，此次推出分层推理机制，是进一步细化服务粒度的举措，以满足从个人开发者到企业级用户的多样化需求。", "deep_analysis": "推出 Flex 和 Priority 两种推理层级，本质上是云 AI 服务走向成熟的标志——类似于云计算中的竞价实例与按需实例模式。Flex 层可能采用空闲算力或排队机制以压低成本，适合批处理、非实时任务；Priority 层则保障低延迟，适合面向终端用户的实时交互场景。这一策略有助于 Google 扩大 Gemini API 的用户基础，吸引对成本敏感的开发者，同时维持高价值企业客户的服务质量。在 AI API 价格战持续的背景下，分层定价也是差异化竞争的有效手段。", "importance": 3, "categories": ["产品与应用", "大模型发布"], "source_type": "official", "source_name": "Google AI Blog", "source_icon": "🔷", "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/", "pub_date": "04-02 16:00", "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/cost_reliability_Gemini_API-soc.max-600x600.format-webp.webp", "reading_minutes": 1}, {"title": "OpenAI acquires TBPN", "summary": "OpenAI 收购科技播客媒体 TBPN，旨在加速全球 AI 对话并支持独立媒体发展", "background": "TBPN（The Business & Product Network）是一家面向科技从业者的独立播客媒体平台，聚焦创业、产品和商业话题，在开发者和科技社区中有一定影响力。OpenAI 近年来在产品、商业和公众形象上持续扩张，但在媒体渠道方面相对依赖第三方。随着 AI 话题成为全球焦点，各大科技公司对舆论引导和社区沟通的重视程度不断提升。此次收购是 OpenAI 首次公开进入媒体领域的举动。", "deep_analysis": "此次收购折射出 OpenAI 的战略意图：在 AI 叙事权争夺日趋激烈的背景下，直接掌握一个面向科技社区的媒体平台，可以更主动地塑造公众对 AI 的认知，并与开发者、企业客户建立更紧密的沟通渠道。相比传统 PR 或广告，播客形式更具信任感和深度，适合传递复杂的技术与政策议题。这一动作也可能引发外界对 OpenAI 媒体独立性的质疑——一家 AI 公司拥有讨论 AI 的媒体平台，其中立性天然存疑。整体来看，这是 OpenAI 从单纯的技术公司向具有媒体影响力的科技平台公司转型的信号。", "importance": 3, "categories": ["融资与商业", "行业观点"], "source_type": "official", "source_name": "OpenAI Blog", "source_icon": "🤖", "link": "https://openai.com/index/openai-acquires-tbpn", "pub_date": "04-02 10:30", "image": "", "reading_minutes": 1}, {"title": "Codex now offers more flexible pricing for teams", "summary": "OpenAI 为 Codex 推出按需付费定价方案，面向 ChatGPT Business 和 Enterprise 用户，提供更灵活的团队使用选项。", "background": "Codex 是 OpenAI 推出的 AI 编程助手产品，此前主要以订阅制方式提供给企业用户。随着 AI 编程工具市场竞争加剧，GitHub Copilot、Cursor 等产品持续扩大市场份额，OpenAI 需要降低企业客户的采用门槛。此次推出按需付费选项，是 OpenAI 在商业化策略上的一次调整，旨在吸引更多中小规模团队或尚在评估阶段的企业客户。", "deep_analysis": "按需付费定价的引入，本质上是 OpenAI 在企业市场的获客策略优化。固定订阅制对于尚未确定使用规模的团队存在较高的初始承诺成本，而按量计费可以显著降低试用摩擦，让更多团队愿意先用起来再逐步扩大投入。这一策略在云计算市场已被验证有效。对于 OpenAI 而言，此举有助于扩大 Codex 在企业侧的渗透率，同时也反映出 AI 编程工具市场竞争压力正在倒逼各厂商优化商业模式以争夺企业客户。", "importance": 3, "categories": ["产品与应用", "融资与商业"], "source_type": "official", "source_name": "OpenAI Blog", "source_icon": "🤖", "link": "https://openai.com/index/codex-flexible-pricing-for-teams", "pub_date": "04-02 10:00", "image": "", "reading_minutes": 1}, {"title": "We’re creating a new satellite imagery map to help protect Brazil’s forests.", "summary": "Google 与巴西政府合作，利用卫星图像技术构建新地图，用于保护巴西森林资源。", "background": "巴西拥有全球最大的热带雨林——亚马逊雨林，长期面临非法砍伐、农业扩张等威胁。近年来，卫星遥感与 AI 图像识别技术的结合，使得大规模、实时监测森林变化成为可能。Google 此前已通过 Google Earth Engine 等平台积累了大量地球观测数据处理能力，并在多个环保项目中与政府机构合作。巴西政府也在持续加强对森林的数字化监管力度。", "deep_analysis": "此次合作体现了 AI 与地理空间数据在环境治理领域的深度融合。卫星图像结合机器学习模型，可以自动识别森林覆盖变化、非法砍伐区域，大幅提升监测效率和覆盖范围。对于巴西这样国土面积庞大、人工巡查成本极高的国家，AI 驱动的遥感监测具有不可替代的价值。Google 选择与政府合作而非单独发布工具，也说明此类项目需要政策支持与数据共享才能真正落地。由于原文内容有限，技术细节和具体实施方案尚不明确，但这一方向代表了 AI for Good 的重要应用场景。", "importance": 3, "categories": ["产品与应用", "其他"], "source_type": "official", "source_name": "Google AI Blog", "source_icon": "🔷", "link": "https://blog.google/products-and-platforms/products/earth/satellite-imagery-brazilian-deforestation/", "pub_date": "04-01 13:30", "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/bfc_keyword_before_after_white_.max-600x600.format-webp_QNQ8psB.webp", "reading_minutes": 2}, {"title": "Protecting people from harmful manipulation", "summary": "Google DeepMind 发布研究，聚焦 AI 在金融、健康等领域的有害操控风险，并提出新的安全措施", "background": "随着大语言模型和对话式 AI 的广泛部署，AI 系统与用户的交互日益深入，其影响用户认知和决策的能力也随之增强。金融和健康是两个与用户利益高度相关的敏感领域，AI 若在这些场景中被滥用或设计不当，可能对用户造成实质性伤害。Google DeepMind 作为全球顶尖 AI 安全研究机构，长期关注 AI 系统的安全性与对齐问题，此次研究是其在 AI 安全领域持续投入的一部分。", "deep_analysis": "DeepMind 此次研究的核心议题——AI 有害操控——是 AI 安全领域一个相对新兴但日益重要的方向。与传统的 AI 安全问题（如模型幻觉、数据隐私）不同，操控风险更隐蔽，涉及 AI 系统利用用户心理弱点、信息不对称或个性化推荐来影响用户行为。金融和健康领域的操控风险尤为突出，因为错误决策的代价极高。DeepMind 主动开展此类研究并推出安全措施，体现了头部 AI 机构在监管压力加大背景下的主动合规姿态，也为行业提供了参考框架。", "importance": 3, "categories": ["安全与对齐", "AI 政策监管"], "source_type": "official", "source_name": "DeepMind Blog", "source_icon": "🔬", "link": "https://deepmind.google/blog/protecting-people-from-harmful-manipulation/", "pub_date": "03-25 16:46", "image": "https://lh3.googleusercontent.com/IH7SOCSd4lrXu8YVkyRw45zg4Jc__pHM0SJlbDssVL3_5XjYGVYE1jt8DCiPgM9JGdwmdO_gYnQ4-QIo2l9Rz04l7KK4jAbsdAyWLriTV-iOC2_Y3bI=w528-h297-n-nu-rw-lo", "reading_minutes": 2}, {"title": "Four things we’d need to put data centers in space", "summary": "SpaceX申请向地球轨道发射多达100万个太空数据中心，旨在解放AI算力潜力同时避免地球环境危机，但实现这一目标面临四大技术挑战。", "background": "随着AI大模型训练规模不断扩大，数据中心的能耗和碳排放问题日益突出。全球数据中心用电量已占全球总用电量的约1-2%，并持续快速增长。太空中有取之不尽的太阳能和天然散热条件（真空环境），理论上可以解决地球数据中心面临的能源和冷却难题。SpaceX、亚马逊、谷歌等科技巨头相继表态布局太空计算，标志着这一概念从科幻走向了商业规划阶段。", "deep_analysis": "太空数据中心概念的兴起，本质上是AI算力需求与地球资源约束之间矛盾激化的产物。太空环境具备两大天然优势：充足的太阳能供电和真空辐射散热，可大幅降低能耗成本。然而，将数据中心送入轨道面临极高的发射成本、在轨维护困难、数据传输延迟以及空间碎片风险等四大核心挑战。目前该领域仍处于概念和早期测试阶段，谷歌的80颗测试卫星将是重要的技术验证节点。值得注意的是，SpaceX申请发射100万个数据中心更像是一种战略性占位，实际落地时间表和技术可行性仍存在巨大不确定性。", "importance": 3, "categories": ["芯片与算力", "行业观点"], "source_type": "news", "source_name": "MIT Tech Review", "source_icon": "🎓", "link": "https://www.technologyreview.com/2026/04/03/1135073/four-things-wed-need-to-put-data-centers-in-space/", "pub_date": "04-03 17:03", "image": "", "reading_minutes": 4}, {"title": "The Download: gig workers training humanoids, and better AI benchmarks", "summary": "全球数千名零工工人通过录制日常家务视频为人形机器人提供训练数据，Micro1公司在50多个国家招募此类数据采集者并将数据出售给机器人公司。", "background": "人形机器人近年来成为科技行业的热门赛道，Figure、1X、Agility Robotics等公司纷纷加速研发。训练人形机器人需要大量真实人类动作数据，尤其是日常家务场景的视频，以帮助机器人学习抓取、移动和与环境交互。传统的数据采集方式成本高昂，而借助全球零工经济平台向发展中国家工人外包数据采集任务，成为降低成本的新路径。Micro1作为中间商，将工人采集的数据打包出售给机器人公司，形成了一条新兴的数据供应链。", "deep_analysis": "这一现象折射出人形机器人训练数据的本质困境：机器人要学会在真实家庭环境中行动，就必须有海量真实场景视频，而这些数据只能来自真实的人类生活空间。将数据采集任务外包给发展中国家工人，在商业上高效，但也带来了多重隐患：工人录制的视频可能包含家庭成员、住宅布局等敏感信息，这些数据最终流向何处、如何使用，工人是否真正理解并同意，都是模糊地带。这与早期互联网平台利用全球零工标注数据的模式如出一辙，但涉及的隐私风险更为具体和直接。随着人形机器人竞赛加剧，此类数据需求只会持续增长，相关的伦理和监管框架亟需跟上。", "importance": 3, "categories": ["具身智能", "行业观点"], "source_type": "news", "source_name": "MIT Tech Review", "source_icon": "🎓", "link": "https://www.technologyreview.com/2026/04/01/1134993/the-download-gig-workers-training-humanoids-better-ai-benchmarks/", "pub_date": "04-01 12:10", "image": "https://wp.technologyreview.com/wp-content/uploads/2024/01/230628_Talon_0455-social.jpg?w=3000", "reading_minutes": 3}, {"title": "OpenAI’s AGI boss is taking a leave of absence", "summary": "OpenAI AGI部署CEO Fidji Simo因神经免疫疾病宣布医疗休假数周，同期COO Brad Lightcap卸任、CMO Kate Rouch离职，公司高管层再度大幅调整。", "background": "Fidji Simo于2024年加入OpenAI，最初担任应用CEO，后职位调整为AGI部署CEO，负责产品落地与商业化。OpenAI近几个月公关压力持续累积：与美国国防部签署新服务条款引发内外争议，AI视频工具Sora被迫暂停以腾出算力追赶企业和编程赛道的竞争对手，首席传播官Hannah Wong也于今年1月离职。与此同时，公司正处于向营利性结构转型的关键期，并积极拓展全球用户规模（接近10亿用户）和企业业务。此次多位高管同时出现变动，是OpenAI近期一系列动荡的延续。", "deep_analysis": "此次人事变动的密度和时间节点值得关注。Simo、Lightcap、Rouch三位核心高管几乎同时退出或调整，且均发生在公司面临外部压力的敏感时期。Lightcap的转岗尤为耐人寻味——从COO这一执行核心职位转向向Altman直接汇报的'特别项目'，这种安排在科技公司中通常意味着实质性的权力转移而非单纯的职能调整。Greg Brockman重新介入产品线，显示Altman正在将权力进一步集中于创始团队。从更宏观视角看，OpenAI正处于从研究机构向商业巨头转型的阵痛期，管理层频繁变动折射出内部对战略方向、资源分配和企业文化的深层张力。在AGI叙事与商业变现之间寻求平衡，仍是OpenAI面临的核心挑战。", "importance": 3, "categories": ["融资与商业", "行业观点"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/ai-artificial-intelligence/906965/openais-agi-boss-is-taking-a-leave-of-absence", "pub_date": "", "image": "", "reading_minutes": 4}, {"title": "Gemma 4 on iPhone", "summary": "Google 推出 AI Edge Gallery 应用，支持在 iPhone 上本地运行 Gemma 4 等开源大模型，完全离线、无需联网，具备多模态、推理可视化等功能。", "background": "近年来，将大语言模型部署到端侧设备（手机、平板等）成为 AI 领域的重要趋势。苹果、高通、联发科等芯片厂商持续提升 NPU 算力，使得在移动设备上运行数十亿参数模型成为可能。Google 此前已推出 Gemma 系列开源模型，并通过 MediaPipe 等框架支持端侧推理。AI Edge Gallery 是 Google 面向开发者社区推出的开源应用，旨在展示端侧 AI 的能力边界。此次更新将最新的 Gemma 4 系列集成进来，是 Google 推动开源模型在移动端落地的重要一步。", "deep_analysis": "AI Edge Gallery 的核心价值在于将「隐私优先的本地 AI」从概念变为可用产品。Gemma 4 的加入意味着用户可以在手机上体验具备高级推理能力的模型，而「思维模式」的引入则让端侧模型首次具备了类似 o1/DeepSeek-R1 的链式推理可视化能力，这在移动端尚属少见。Agent Skills 的模块化设计允许社区贡献工具插件，体现了 Google 试图构建端侧 AI 生态的战略意图。整体来看，这款应用更像是一个开发者沙盒和技术展示平台，而非面向普通消费者的成熟产品——应用仍处于活跃开发阶段，性能依赖具体硬件。但它清晰地传递了一个信号：端侧大模型的能力天花板正在快速提升，云端推理并非唯一选择。", "importance": 3, "categories": ["开源生态", "产品与应用"], "source_type": "news", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://apps.apple.com/nl/app/google-ai-edge-gallery/id6749645337", "pub_date": "04-05 18:45", "image": "", "reading_minutes": 3}, {"title": "买前必看：千问 AI 眼镜 G1 自费长测", "summary": "少数派用户自费长测千问AI眼镜G1，与RayBan Meta一代对比，发现其佩戴舒适性和续航换电设计是亮点，但音质、语音唤醒稳定性、照片同步等细节体验仍有明显不足。", "background": "AI眼镜赛道在2024-2025年迅速升温，Meta与RayBan合作的智能眼镜成为标杆产品，国内厂商纷纷跟进。千问AI眼镜G1由阿里巴巴旗下千问品牌推出，被认为是夸克智能眼镜G1的换皮版本，主打搭载国内可用的通义千问AI助手，填补RayBan Meta在国内无法正常使用Meta AI的空白。该产品目前仅提供单一威灵顿框型，定位为面向国内用户的贴身AI助手硬件。", "deep_analysis": "从这篇测评来看，千问G1的核心竞争力在于两点：一是本土AI生态适配（RayBan Meta的AI在国内基本不可用），二是换电续航设计（在同类产品中较为罕见）。但产品在软件打磨上明显不足——语音唤醒不稳定、照片手动同步、缺少双设备连接等问题，暴露出国产AI眼镜在产品细节和使用体验上与成熟产品的差距。这些问题大多属于软件层面，理论上可通过OTA更新改善，说明硬件底子尚可但软件迭代需要加速。对于想入手AI眼镜的国内用户，千问G1是目前少数能在国内流畅使用AI功能的选项，但如果对音质和使用便捷性要求较高，仍需谨慎考量。", "importance": 3, "categories": ["产品与应用", "AI工具"], "source_type": "opinion", "source_name": "少数派", "source_icon": "📱", "link": "https://sspai.com/post/108103", "pub_date": "04-04 17:11", "image": "", "reading_minutes": 8}, {"title": "The latest AI news we announced in March 2026", "summary": "The latest AI news we announced in March 2026", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Google AI Blog", "source_icon": "🔷", "link": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/", "pub_date": "04-01 13:00", "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/March_2026_AI_Recap_social_hvvl.max-600x600.format-webp.webp", "reading_minutes": 1}, {"title": "Gradient Labs gives every bank customer an AI account manager", "summary": "Gradient Labs 利用 GPT-4.1 和 GPT-4.1 mini/nano 为银行客户打造 AI 客户经理，自动化银行支持工作流程。", "background": "随着大模型能力提升，金融科技领域的 AI 应用加速落地。银行业传统客服成本高、响应慢，AI 智能体被视为解决方案。OpenAI 推出 GPT-4.1 系列（含 mini 和 nano 轻量版本）后，开发者可以在成本与性能间灵活权衡，为金融等对可靠性要求极高的行业提供了可行的技术路径。Gradient Labs 正是基于这一技术栈，专注于银行业务场景的 AI 自动化。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "OpenAI Blog", "source_icon": "🤖", "link": "https://openai.com/index/gradient-labs", "pub_date": "04-01 02:00", "image": "", "reading_minutes": 1}, {"title": "Build with Veo 3.1 Lite, our most cost-effective video generation model", "summary": "Google 发布 Veo 3.1 Lite 视频生成模型，通过 Gemini API 提供付费预览，定位为最具成本效益的视频生成方案。", "background": "Google 的 Veo 系列是其面向视频生成领域的核心产品线，此前已发布 Veo 2 和 Veo 3 等版本，在视频质量和物理真实感方面持续提升。随着 OpenAI Sora、Runway、Kling 等竞品不断涌现，视频生成赛道竞争激烈。Google 此次推出 Lite 版本，是在保持技术竞争力的同时，向更广泛的开发者群体降低使用门槛，通过 Gemini API 生态进一步扩大 Veo 的覆盖范围。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Google AI Blog", "source_icon": "🔷", "link": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-lite/", "pub_date": "03-31 16:00", "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/veo31lite.max-600x600.format-webp.webp", "reading_minutes": 1}, {"title": "Helping disaster response teams turn AI into action across Asia", "summary": "OpenAI 与盖茨基金会合作，在亚洲举办工作坊，帮助灾难响应团队将 AI 技术应用于实际救灾行动。", "background": "亚洲是全球自然灾害最频繁的地区之一，地震、洪水、台风等灾害每年造成大量人员伤亡和财产损失。传统灾难响应依赖人工协调，效率有限。近年来，AI 技术在图像识别、数据分析、资源调度等方面取得显著进展，开始被引入人道主义救援领域。OpenAI 作为全球领先的 AI 研究机构，近年来持续推进 AI 在社会公益领域的应用，盖茨基金会则长期致力于全球公共卫生与人道主义事业，双方合作具有较强的互补性。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "OpenAI Blog", "source_icon": "🤖", "link": "https://openai.com/index/helping-disaster-response-teams-asia", "pub_date": "03-29 22:15", "image": "", "reading_minutes": 1}, {"title": "Gemini 3.1 Flash Live: Making audio AI more natural and reliable", "summary": "Google DeepMind 发布 Gemini 3.1 Flash Live 语音模型，主打更低延迟和更高精度，提升语音交互的流畅度与自然感。", "background": "Google DeepMind 的 Gemini 系列模型自 2023 年底发布以来持续迭代，Flash 子系列主打速度与效率，面向对延迟敏感的实时应用场景。语音交互（Live）功能是 Gemini 在多模态能力上的重要延伸，与 OpenAI 的实时语音 API、ElevenLabs 等产品直接竞争。低延迟、高自然度的语音 AI 是当前智能助手、客服机器人、实时翻译等应用的核心需求。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "DeepMind Blog", "source_icon": "🔬", "link": "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/", "pub_date": "03-26 15:23", "image": "https://lh3.googleusercontent.com/X3xXSd8ns-IojsGTjvadPFyaBWT5bBGhubcQd_WSiIgQ9bESUPceaHtfOxwgYzwv3P-Gtz2r3sWs-1XFB5X72HuTMbVz30hqJCKOxBaQdq1Oq6895A=w528-h297-n-nu-rw-lo", "reading_minutes": 1}, {"title": "Lyria 3 Pro: Create longer tracks in more", "summary": "Google DeepMind 发布 Lyria 3 Pro 音乐生成模型，支持生成更长的音乐曲目并具备结构感知能力，同时将 Lyria 扩展至更多 Google 产品。", "background": "Google DeepMind 的 Lyria 是其 AI 音乐生成系列模型，此前已有 Lyria 2 等版本，主要用于生成短段音乐。AI 音乐生成领域竞争激烈，Suno、Udio 等初创公司已能生成带人声的完整歌曲，对 Google 形成压力。此次 Lyria 3 Pro 的发布是该系列的重要升级，并计划向更广泛的 Google 产品生态扩展。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "DeepMind Blog", "source_icon": "🔬", "link": "https://deepmind.google/blog/lyria-3-pro-create-longer-tracks-in-more/", "pub_date": "03-25 16:01", "image": "https://lh3.googleusercontent.com/jcDZxU6wx4tQ5XBOVae89SPyssJfB24ifHGOA_pGrzdRp9SgP6q2vnx5rr6yeyr_nuFh6b3qHDQzqZFDB3ey-inIlXC2aEEXzUhr_Vy_9AuE7dPuSRs=w528-h297-n-nu-rw-lo", "reading_minutes": 1}, {"title": "Measuring progress toward AGI: A cognitive framework", "summary": "Measuring progress toward AGI: A cognitive framework", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "DeepMind Blog", "source_icon": "🔬", "link": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework/", "pub_date": "03-17 16:03", "image": "https://lh3.googleusercontent.com/kOpPqSCIuZr9xSaOZM-eZl314VHQ80Nmv-PfUJgzGOaHU0KY08nNAahjcjoNWT4T_xy5DH6TfOCXwhgR6POERmrPoXnpCsN8J2LJPgoM01rO3nAWPg=w528-h297-n-nu-rw-lo", "reading_minutes": 1}, {"title": "Anthropic’s Responsible Scaling Policy: Version 3.0", "summary": "Anthropic’s Responsible Scaling Policy: Version 3.0", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Anthropic News", "source_icon": "🧠", "link": "https://www.anthropic.com/news/responsible-scaling-policy-v3", "pub_date": "02-24 00:00", "image": "", "reading_minutes": 1}, {"title": "Introducing Claude Sonnet 4.6", "summary": "Anthropic 发布 Claude Sonnet 4.6，全面升级编程、计算机操控、长上下文推理等能力，支持 100 万 token 上下文窗口（测试版），定价与前代相同，成为 claude.ai", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Anthropic News", "source_icon": "🧠", "link": "https://www.anthropic.com/news/claude-sonnet-4-6", "pub_date": "02-17 00:00", "image": "", "reading_minutes": 1}, {"title": "Introducing Claude Opus 4.6", "summary": "Anthropic 发布 Claude Opus 4.6，在编程、智能体任务、多步推理等多项评测上达到行业最高分，并首次为 Opus 系列引入 100 万 token 上下文窗口。", "background": "Anthropic 自 2023 年推出 Claude 系列以来，持续以 Opus 作为旗舰高智能模型定位，与 OpenAI GPT 系列、Google Gemini 等正面竞争。2025 年发布的 Claude Opus 4.5 已在推理和编程上取得显著进展，但在超长上下文和持续性智能体任务方面仍有局限。随着 AI 智能体（Agent）应用场景快速扩展，各大厂商纷纷强化模型在长时间自主任务执行、代码生成与调试、多工具协同等方面的能力。Anthropic 此次发布 Opus 4.6，正是在这一竞争背景下的旗舰级更新，同时配套推出 Claude Code 的多智能体团队协作、Excel/PowerPoint 深度集成等产品侧升级。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Anthropic News", "source_icon": "🧠", "link": "https://www.anthropic.com/news/claude-opus-4-6", "pub_date": "02-05 00:00", "image": "", "reading_minutes": 1}, {"title": "Claude is a space to think", "summary": "Anthropic 正式宣布 Claude 将永久保持无广告模式，不会在对话中插入赞助内容或受广告商影响，以确保 AI 助手真正服务于用户利益。", "background": "随着 AI 助手快速普及，外界一直在讨论 AI 公司如何实现可持续商业变现。搜索引擎和社交媒体长期依赖广告模式，Google 旗下的 AI 产品也被外界猜测可能引入广告。Anthropic 作为 Claude 的开发商，目前主要通过订阅制（Claude.ai Pro/Team/Enterprise）和 API 调用收费来盈利。随着 AI 对话场景越来越深入用户日常工作和私人生活，广告是否会进入 AI 对话成为行业关注焦点。此次 Anthropic 主动发文表态，是对这一潜在方向的明确否定。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Anthropic News", "source_icon": "🧠", "link": "https://www.anthropic.com/news/claude-is-a-space-to-think", "pub_date": "02-04 00:00", "image": "", "reading_minutes": 1}, {"title": "Claude on Mars", "summary": "Anthropic的Claude AI模型于2025年12月首次为NASA毅力号火星车规划行驶路线，成为史上首个协助指挥火星探测任务的AI系统。", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Anthropic News", "source_icon": "🧠", "link": "https://www.anthropic.com/mars", "pub_date": "01-30 00:00", "image": "", "reading_minutes": 1}, {"title": "Holo3: Breaking the Computer Use Frontier", "summary": "Holo3: Breaking the Computer Use Frontier", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hugging Face Blog", "source_icon": "🤗", "link": "https://huggingface.co/blog/Hcompany/holo3", "pub_date": "04-01 16:36", "image": "", "reading_minutes": 1}, {"title": "The gig workers who are training humanoid robots at home", "summary": "The gig workers who are training humanoid robots at home", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "MIT Tech Review", "source_icon": "🎓", "link": "https://www.technologyreview.com/2026/04/01/1134863/humanoid-data-training-gig-economy-2026-breakthrough-technology/", "pub_date": "04-01 11:00", "image": "", "reading_minutes": 1}, {"title": "Falcon Perception", "summary": "TII发布Falcon Perception，一个0.6B参数的早期融合Transformer模型，支持自然语言驱动的开放词汇目标检测与分割，在SA-Co基准上以68.0 Macro-F1超越SAM ", "background": "开放词汇感知（Open-Vocabulary Perception）是计算机视觉的核心任务，要求模型根据自然语言描述定位和分割任意类别的目标。传统方案多为模块化流水线：冻结的视觉骨干提取特征，再通过独立的融合/解码器与语言结合，最后加后处理组件。SAM（Segment Anything Model）系列是该领域的代表性工作，SAM 3是当前主流基线。这类模块化设计虽然成熟，但存在难以整体扩展、改进难以归因、随失败模式增加而积累复杂度等问题。TII（阿联酋技术创新研究院）此前已推出Falcon系列大语言模型，此次将Falcon品牌延伸至视觉感知领域，探索用单一早期融合Transformer统一处理感知与语言建模任务。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hugging Face Blog", "source_icon": "🤗", "link": "https://huggingface.co/blog/tiiuae/falcon-perception", "pub_date": "04-01 07:13", "image": "", "reading_minutes": 1}, {"title": "Granite 4.0 3B Vision: Compact Multimodal Intelligence for Enterprise Documents", "summary": "IBM 发布 Granite 4.0 3B Vision，一款专为企业文档理解设计的紧凑型视觉语言模型，以 LoRA 适配器形式叠加在 Granite 4.0 Micro 之上，并配套推出百万级图表理", "background": "IBM 的 Granite 系列模型是其面向企业的开源 AI 产品线，此前已推出多个文本语言模型。随着企业对文档智能化处理需求增长，图表、表单、发票等复杂文档的自动理解成为关键场景。现有通用视觉语言模型（如 LLaVA、Qwen-VL 等）在图表精确数值读取、空间位置理解方面存在明显短板，难以满足企业级可靠性要求。IBM 此次发布 Granite 4.0 3B Vision，是在其 Granite 4.0 Micro 语言模型基础上，通过 LoRA 适配器叠加视觉能力，走模块化路线，而非重新训练一个完整的多模态模型。这一策略降低了部署成本，也便于企业在不需要视觉能力时回退到纯文本模式。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hugging Face Blog", "source_icon": "🤗", "link": "https://huggingface.co/blog/ibm-granite/granite-4-vision", "pub_date": "03-31 15:10", "image": "", "reading_minutes": 1}, {"title": "Show HN: Real-time AI (audio/video in, voice out) on an M3 Pro with Gemma E2B", "summary": "开发者发布开源项目 Parlor，在 M3 Pro 芯片上实现本地实时多模态 AI 对话，使用 Google Gemma 4 E2B 模型处理语音和视觉输入，仅需 3GB 内存。", "background": "随着小参数量大模型性能的快速提升，本地部署 AI 逐渐成为可能。Google 近期发布的 Gemma 4 E2B 是一款面向端侧场景的高效多模态小模型，能够同时处理语音和图像输入。此前，要在本地实时运行语音+视觉 AI，至少需要 RTX 5090 级别的显卡，普通消费级硬件根本无法胜任。该项目作者此前运营一个帮助用户练习英语口语的在线服务，拥有数百月活用户，但持续的服务器费用让免费运营难以为继，这促使他探索完全本地化的解决方案。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://github.com/fikrikarim/parlor", "pub_date": "04-05 17:53", "image": "", "reading_minutes": 1}, {"title": "In Japan, the robot isn’t coming for your job; it’s filling the one nobody wants", "summary": "In Japan, the robot isn’t coming for your job; it’s filling the one nobody wants", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/05/japan-is-proving-experimental-physical-ai-is-ready-for-the-real-world/", "pub_date": "04-05 14:00", "image": "", "reading_minutes": 1}, {"title": "Anthropic says Claude Code subscribers will need to pay extra for OpenClaw usage", "summary": "Anthropic 宣布 Claude Code 订阅用户在通过 OpenClaw 等第三方工具使用其编程助手时，将需要额外付费。", "background": "Claude Code 是 Anthropic 推出的 AI 编程助手产品，面向开发者提供代码生成、调试等功能。OpenClaw 是一个第三方工具，允许用户以不同方式接入 Claude 的能力。此前，Claude Code 订阅用户可能通过第三方工具使用服务而无需额外付费，但 Anthropic 现在决定对这类使用方式单独收费，反映出其在商业化路径上的调整。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/04/anthropic-says-claude-code-subscribers-will-need-to-pay-extra-for-openclaw-support/", "pub_date": "04-04 16:32", "image": "", "reading_minutes": 1}, {"title": "Suno is a music copyright nightmare", "summary": "Suno is a music copyright nightmare", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/ai-artificial-intelligence/906896/sunos-copyright-ai-music-covers", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "I let Gemini in Google Maps plan my day and it went surprisingly well", "summary": "I let Gemini in Google Maps plan my day and it went surprisingly well", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/tech/907015/gemini-google-maps-hands-on", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "Grammarly’s sloppelganger saga", "summary": "Grammarly’s sloppelganger saga", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/column/906606/grammarly-expert-review-ai-saga", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "A folk musician became a target for AI fakes and a copyright troll", "summary": "A folk musician became a target for AI fakes and a copyright troll", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/entertainment/907111/murphy-campbell-folk-music-ai-copyright", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "Really, you made this without AI? Prove it", "summary": "Really, you made this without AI? Prove it", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/tech/906453/human-made-ai-free-logo-creative-content", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "Anthropic essentially bans OpenClaw from Claude by making subscribers pay extra", "summary": "Anthropic宣布从2026年4月4日起，Claude订阅用量将不再覆盖OpenClaw等第三方工具的使用，用户须额外付费才能继续通过OpenClaw使用Claude。", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/ai-artificial-intelligence/907074/anthropic-openclaw-claude-subscription-ban", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "Apple’s best product ever", "summary": "The Vergecast播客讨论了OpenAI最新动态（1220亿美元融资轮、每周9亿ChatGPT用户）以及OpenAI关闭Sora的原因，同时结合苹果50周年产品排名展开讨论。", "background": "OpenAI近年来持续扩张，ChatGPT自2022年底发布以来用户规模屡创新高。Sora是OpenAI于2024年推出的文生视频模型，曾引发广泛关注，但此次被关闭显示公司在产品线上进行了重新取舍。与此同时，AI行业整体正从消费端向企业端（B端）转型，融资规模的持续扩大反映出资本市场对AI商业化前景的高度预期。本期The Vergecast播客以苹果50周年为契机，将AI行业动态与科技产品历史回顾结合，讨论了AI商业化趋势这一更宏观的议题。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/podcast/906548/best-apple-product-vergecast", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "Chatbots are now prescribing psychiatric drugs", "summary": "美国犹他州批准AI聊天机器人Legion Health在无医生参与的情况下为患者续开精神科药物处方，这是美国第二次将此类临床权限授予AI系统，为期一年的试点项目月费19美元。", "background": "美国精神科医生严重短缺，大量患者面临漫长等待和高昂费用，这为AI介入医疗开辟了空间。犹他州此前已建立了一套AI政策沙盒机制，允许企业在监管框架内试点创新应用。Legion Health是一家旧金山初创公司，专注于通过AI降低精神健康服务门槛。此次试点是美国第二次将处方权授予AI系统，标志着AI在医疗领域的角色从辅助诊断、信息查询，正式迈向具有法律效力的临床决策。此前，AI聊天机器人在心理健康领域的应用已引发多起争议，包括在自杀危机干预中表现失当等问题，监管机构和医疗界对AI进入临床决策一直保持高度警惕。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/ai-artificial-intelligence/906525/ai-chatbot-prescribe-refill-psychiatric-drugs", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "PSA: Anyone with a link can view your Granola notes by default", "summary": "PSA: Anyone with a link can view your Granola notes by default", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "The Verge AI", "source_icon": "⚡", "link": "https://www.theverge.com/ai-artificial-intelligence/906253/granola-note-links-ai-training-psa", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "Google’s New AI Just Broke My Brain", "summary": "Two Minute Papers 视频介绍了 Google 的 TurboQuant 论文，该技术涉及大模型量化与 KV-cache 压缩，已有多个社区复现版本出现。", "background": "TurboQuant 是 Google 发布的一篇关于大语言模型量化的研究论文。量化技术旨在将模型权重从高精度浮点数压缩为低比特整数，从而减少显存占用、加快推理速度，是让大模型在消费级硬件上运行的关键技术路线之一。KV-cache 是 Transformer 推理时缓存注意力键值对的机制，其内存占用随序列长度快速增长，是长上下文推理的主要瓶颈。Two Minute Papers 是一个专注于 AI 论文科普的 YouTube 频道，以通俗易懂的方式介绍前沿研究著称。该视频发布后，Reddit 和 Twitter 社区迅速出现多个独立复现实现。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Two Minute Papers", "source_icon": "🎬", "link": "https://www.youtube.com/watch?v=7YVrb3-ABYE", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "Show HN: I built a tiny LLM to demystify how language models work", "summary": "开发者构建了一个仅900万参数的微型语言模型 GuppyLM，旨在通过可在 Colab 上5分钟完成训练的开源项目，帮助普通人理解大语言模型的工作原理。", "background": "随着 GPT-4、Claude 等超大规模语言模型的普及，公众对 LLM 的兴趣急剧上升，但动辄千亿参数、数百万美元训练成本的门槛让大多数开发者望而却步。教育性小型模型项目（如 Andrej Karpathy 的 nanoGPT）因此受到社区欢迎，它们用极简实现帮助学习者理解 Transformer 架构的核心机制。GuppyLM 正是这一趋势下的产物，作者将其发布在 Hacker News 的 Show HN 板块，面向希望动手实践的开发者和学生群体。", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://github.com/arman-bd/guppylm", "pub_date": "04-06 00:20", "image": "", "reading_minutes": 1}, {"title": "Copilot is 'for entertainment purposes only', per Microsoft's terms of use", "summary": "Copilot is 'for entertainment purposes only', per Microsoft's terms of use", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://techcrunch.com/2026/04/05/copilot-is-for-entertainment-purposes-only-according-to-microsofts-terms-of-service/", "pub_date": "04-06 00:07", "image": "", "reading_minutes": 1}, {"title": "Eight years of wanting, three months of building with AI", "summary": "Eight years of wanting, three months of building with AI", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://lalitm.com/post/building-syntaqlite-ai/", "pub_date": "04-05 12:43", "image": "", "reading_minutes": 1}, {"title": "众筹300万美元的Agent盒子，想彻底解决你的算力焦虑", "summary": "Tiiny AI推出的Agent盒子Pocket Lab在Kickstarter众筹已达280万美元，这款手机大小的本地AI设备售价1399美元，支持最高120B参数模型本地运行，无需云端或额外Tok", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪", "source_icon": "💼", "link": "https://36kr.com/p/3754812277998083?f=rss", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "36氪首发 | 清华系团队研发矿石AI智能分选机，完成近2亿元C轮融资", "summary": "清华系AI矿石分选企业霍里思特完成近2亿元C轮融资，其核心产品基于X射线成像与AI识别算法，可实现无水干法智能选矿，年出货量超100台，复合增长率达40%以上。", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪", "source_icon": "💼", "link": "https://36kr.com/p/3753526848897792?f=rss", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "一群00后极客和这家机器人公司共处72小时", "summary": "一群00后极客和这家机器人公司共处72小时", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪", "source_icon": "💼", "link": "https://36kr.com/p/3752115857638145?f=rss", "pub_date": "", "image": "https://img.36krcdn.com/hsossms/20260404/v2_68d80d0b36034f468e6f334189b141c2@405798_oswg69418oswg1080oswg810_img_000?x-oss-process=image/format,jpg/interlace,1", "reading_minutes": 1}, {"title": "神州数码2025年营收超1400亿，AI相关业务增长近五成｜最前线", "summary": "神州数码2025年营收超1400亿，AI相关业务增长近五成｜最前线", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪", "source_icon": "💼", "link": "https://36kr.com/p/3751046517129735?f=rss", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "阅文“AI拟真人大讲堂”：好故事才是AI时代的未来", "summary": "阅文“AI拟真人大讲堂”：好故事才是AI时代的未来", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪", "source_icon": "💼", "link": "https://36kr.com/p/3750704146072326?f=rss", "pub_date": "", "image": "", "reading_minutes": 1}, {"title": "36氪首发丨前赛默飞员工创业黑灯实验室，实现国内100%交付，获近亿融资", "summary": "36氪首发丨前赛默飞员工创业黑灯实验室，实现国内100%交付，获近亿融资", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪", "source_icon": "💼", "link": "https://36kr.com/p/3750417621795588?f=rss", "pub_date": "", "image": "https://img.36krcdn.com/hsossms/20260403/v2_c9935d4bc6de4f76afdcb4ebb65399bf@6221844_oswg13298688oswg4480oswg2520_img_png?x-oss-process=image/quality,q_80/format,jpg/interlace,1", "reading_minutes": 1}];
+const typeLabels = {"paper":"学术论文","news":"新闻报道","official":"官方发布","opinion":"观点文章","community":"社区讨论","video":"视频"};
+
+function openModal(idx) {
+    const a = __data[idx];
+    if (!a) return;
+
+    let imgHtml = a.image ? '<img class="m-img" src="' + a.image + '" onerror="this.style.display=\'none\'" alt="">' : '';
+
+    let metaParts = (a.categories||[]).slice(0,2);
+    if (a.source_type) metaParts.push(typeLabels[a.source_type]||a.source_type);
+    metaParts.push(a.reading_minutes + ' min');
+    let pills = metaParts.join(' <span class="m-pill-sep">·</span> ');
+
+    // 深度解读区 — 卡片上看不到的内容
+    let deepHtml = '';
+    if (a.background) {
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text m-bg">' + a.background + '</div></div>';
+    }
+    if (a.deep_analysis) {
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text m-da">' + a.deep_analysis + '</div></div>';
+    }
+    if (deepHtml) {
+        deepHtml = '<div class="m-deep">' + deepHtml + '</div>';
+    }
+
+    document.getElementById('modalContent').innerHTML =
+        '<button class="m-close" onclick="closeModal()">✕</button>' +
+        '<div class="m-pills">' + pills + '</div>' +
+        imgHtml +
+        '<div class="m-title">' + (a.title || a.summary) + '</div>' +
+        '<div class="m-summary">' + a.summary + '</div>' +
+        deepHtml +
+        '<div class="m-footer"><span class="m-footer-src">' + a.source_icon + ' ' + a.source_name + ' · ' + a.pub_date + '</span>' +
+        '<a href="' + a.link + '" target="_blank" rel="noopener" class="m-action">阅读原文 →</a></div>';
+
+    document.getElementById('modalOverlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('show');
+    document.body.style.overflow = '';
+}
+
+// Filters
+document.querySelectorAll('.f-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const f = btn.dataset.filter;
+        document.querySelectorAll('.card').forEach(c => {
+            c.classList.toggle('hidden', f !== 'all' && !(c.dataset.cat && c.dataset.cat.includes(f)));
+        });
+    });
+});
+
+// Search
+document.getElementById('searchBox').addEventListener('input', function() {
+    const q = this.value.toLowerCase();
+    document.querySelectorAll('.card').forEach(c => {
+        c.classList.toggle('hidden', q && !c.textContent.toLowerCase().includes(q));
+    });
+});
+
+// Keyboard
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+    if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+        e.preventDefault();
+        document.getElementById('searchBox').focus();
+    }
+});
+</script>
+</body>
+</html>
