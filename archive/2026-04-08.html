@@ -345,30 +345,124 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月08日 周三 · 07:00</div>
+    <div class="h-date">2026年04月08日 周三 · 07:45</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>0</b> 篇</span>
-        <span><b>0</b> 源</span>
+        <span><b>7</b> 篇</span>
+        <span><b>2</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
+<button class="f-btn" data-filter="产品与应用">产品与应用</button>
+<button class="f-btn" data-filter="安全与对齐">安全与对齐</button>
+<button class="f-btn" data-filter="其他">其他</button>
 </div>
 
 <!-- Briefing -->
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今天暂无重要 AI 新闻。</p>
+        <p class="br-editorial">今日两条主线交织：Anthropic携手11家科技巨头推出Mythos Preview安全工具，已发现数千个高危漏洞，覆盖主流操作系统与浏览器，Project Glasswing倡议进一步将AI安全上升为产业共识——AI正从威胁转型为防御主力。另一面，OpenAI Codex月活破300万、单月增长50%，印证AI编程工具已进入规模爆发期。安全与能力，是今日AI叙事的一体两面。</p>
     </section>
 
 <!-- Cards Grid -->
-<div class="grid" id="grid"></div>
+<div class="grid" id="grid">
+        <div class="card card--featured" data-cat="安全与对齐|产品与应用" data-idx="0"
+             style="animation-delay:0ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHFUk86xXEAEl809.jpg')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">安全与对齐 · 产品与应用</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic的Mythos Preview安全工具已发现数千个高危漏洞，覆盖所有主流操作系统和浏览器</div>
+                <div class="z3"><div class="z3-why">AI驱动的漏洞挖掘能力已超越传统安全研究规模，意味着AI正在重塑网络安全防御格局</div><div class="z3-details"><div class="z3-detail">Mythos Preview已发现数千个高危安全漏洞</div><div class="z3-detail">漏洞覆盖范围包括每一个主流操作系统</div><div class="z3-detail">所有主流Web浏览器均受影响</div></div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-07 18:06</div>
+            </div>
+        </div>
+        <div class="card" data-cat="AI编程|产品与应用" data-idx="1"
+             style="animation-delay:25ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">AI编程 · 产品与应用</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">OpenAI Codex周活跃用户突破300万，较一个月前增长50%，官方重置速率限制以庆祝增长。</div>
+                <div class="z3"><div class="z3-why">Codex用户量的快速增长说明AI编程工具正在从早期尝鲜进入大规模日常使用阶段，开发者对AI辅助编程的依赖度持续提升。</div><div class="z3-details"><div class="z3-detail">Codex周活跃用户从200万增至300万，不足一个月内增长50%</div><div class="z3-detail">OpenAI宣布重置速率限制，每增加100万用户将再次重置，直至达到1000万</div><div class="z3-detail">增长势头显示AI编程工具正进入主流开发者工作流</div></div></div>
+                <div class="z5">🐦 X-OpenAI · 04-07 23:13</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="2"
+             style="animation-delay:50ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic发布Project Glasswing网络安全倡议，强调需要产业、开源社区、研究者与政府多方协作应对AI安全挑战。</div>
+                <div class="z3"><div class="z3-why">AI公司开始主动牵头组建网络安全联盟，意味着AI安全问题已超出单一企业能力边界，行业协同治理时代来临。</div><div class="z3-details"><div class="z3-detail">Anthropic推出Project Glasswing网络安全项目，定位为行业协作起点</div><div class="z3-detail">明确指出网络安全问题需要产业界、开源社区、研究者和政府四方共同参与</div><div class="z3-detail">强调没有任何单一组织能独自解决AI相关网络安全问题</div></div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-07 18:06</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="3"
+             style="animation-delay:75ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic承诺为合作伙伴及40余个维护关键软件的组织（含开源项目）提供最高1亿美元的Mythos Preview使用额度。</div>
+                <div class="z3"><div class="z3-why">这意味着Anthropic正在用真金白银扶持开源和关键基础设施生态，既扩大模型覆盖面，又通过实际使用数据反哺产品迭代，是一石二鸟的生态战略。</div><div class="z3-details"><div class="z3-detail">Anthropic承诺最高1亿美元的Mythos Preview使用额度，面向合作伙伴及40余个组织</div><div class="z3-detail">覆盖范围包括维护关键软件的机构和开源项目，强调基础设施支持</div><div class="z3-detail">Anthropic表示将收集反馈并公开披露学习成果，具有研究性质</div></div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-07 18:06</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="4"
+             style="animation-delay:100ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic宣布Mythos Preview不会公开发布，将先在即将推出的Claude Opus模型上测试安全防护措施</div>
+                <div class="z3"><div class="z3-why">顶级AI实验室主动暂缓发布高能力模型，优先安全防护，表明前沿AI开发正在进入更谨慎的新阶段</div><div class="z3-details"><div class="z3-detail">Mythos Preview不会面向公众开放</div><div class="z3-detail">需先建立能可靠拦截最危险输出的安全防护机制</div><div class="z3-detail">安全防护测试将从下一个Claude Opus模型开始</div></div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-07 18:06</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="5"
+             style="animation-delay:125ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic官方表示，随着AI能力快速扩散，AI在防御性工作中将发挥不可替代的价值。</div>
+                <div class="z3"><div class="z3-why">这反映了Anthropic对AI双重性的公开表态：能力扩散不可避免，但防御端同样受益，是其安全叙事的核心论点。</div><div class="z3-details"><div class="z3-detail">Anthropic认为当前高能力模型将很快在行业内普及</div><div class="z3-detail">强调AI在防御性工作中具有不可或缺的价值</div><div class="z3-detail">言论带有明显的乐观主义安全框架色彩</div></div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-07 18:06</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="6"
+             style="animation-delay:150ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHFUdn0ibUAAzIFe.png')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Anthropic联合AWS、苹果、谷歌、微软、英伟达等11家科技巨头，推出Mythos Preview用于发现和修复关键基础设施漏洞。</div>
+                <div class="z3"><div class="z3-why">顶级AI公司携手全球最重要的科技、金融、安全企业，将AI能力用于守护全球数字基础设施，标志着AI安全应用进入实质性产业联盟阶段。</div></div>
+                <div class="z5">🐦 X-AnthropicAI · 04-07 18:06</div>
+            </div>
+        </div></div>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
@@ -377,11 +471,11 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>0</b> 个信息源 · <b>0</b> 篇资讯 · 2026年04月08日
+    AI 早报 · <b>2</b> 个信息源 · <b>7</b> 篇资讯 · 2026年04月08日
 </footer>
 
 <script>
-const __data = [];
+const __data = [{"title": "R to @AnthropicAI: Mythos Preview has already found thousands of high-severity vulnerabilities—including some in every major operating system and web browser.", "summary": "Anthropic的Mythos Preview安全工具已发现数千个高危漏洞，覆盖所有主流操作系统和浏览器", "detailed_content": "Anthropic发布的Mythos Preview安全工具展示了令人震惊的漏洞发现能力，在预览阶段便已识别出数千个高危安全漏洞。这些漏洞的覆盖范围极为广泛，涵盖了市场上所有主要操作系统（包括Windows、macOS、Linux等）以及所有主流Web浏览器（如Chrome、Firefox、Safari、Edge等）。\n\n这一成果的重要性在于其规模和速度。传统的漏洞挖掘（Fuzzing/Pen Testing）依赖人类安全研究员或规则驱动的自动化工具，发现高危漏洞往往需要大量人力和时间投入。而Mythos Preview作为AI驱动的安全工具，能够以远超人类的速度和广度系统性地审查代码库，发现传统方法可能遗漏的深层逻辑漏洞。\n\nMythos代表了Anthropic在AI安全应用领域的重要布局。Anthropic一直强调AI安全与对齐研究，而将自家Claude模型的能力应用于网络安全防御，既验证了大模型在代码理解和漏洞分析方面的实际价值，也为整个行业提供了AI辅助安全研究的标杆案例。\n\n从行业影响来看，这一工具若全面开放，将极大降低安全审计成本，使中小型软件团队也能获得企业级的安全扫描能力。同时也引发了双刃剑效应的讨论——相同的AI能力也可能被恶意行为者用于攻击，如何负责任地披露和部署此类工具将成为关键议题。", "background": "Anthropic一直在探索Claude模型在代码安全领域的应用，Mythos是其专门针对漏洞挖掘场景开发的AI安全工具，目前处于预览阶段。", "deep_analysis": "AI漏洞挖掘的规模化预示着软件安全行业的范式转变，防御方首次可能在漏洞发现速度上超越攻击方，但同样的能力若落入恶意手中将带来前所未有的风险。", "importance": 4, "categories": ["安全与对齐", "产品与应用"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041578403686498506", "pub_date": "04-07 18:06", "image": "https://nitter.net/pic/media%2FHFUk86xXEAEl809.jpg", "extra_images": [], "reading_minutes": 1}, {"title": "RT by @OpenAI: Three million people are now using Codex weekly - up from two million a little under a month ago. Incredible to see the growth. Thank you to all of you and to the ecosystem we’re part of. To celebrate, we’re resetting rate limits so you can keep building, and we’ll reset them every additional 1M users until we reach 10M, so we can keep celebrating along the way.\n\nEnjoy and thank you!", "summary": "OpenAI Codex周活跃用户突破300万，较一个月前增长50%，官方重置速率限制以庆祝增长。", "detailed_content": "OpenAI官方宣布，其AI编程工具Codex的周活跃用户数已突破300万，而就在不到一个月前，这一数字还是200万。这意味着在短短数周内用户规模增长了50%，增速相当显著。\n\n为庆祝这一里程碑，OpenAI宣布立即重置Codex的速率限制，让用户可以不受限制地继续构建项目。更值得关注的是，OpenAI承诺将这一庆祝机制制度化：每当用户数量再增加100万，就会再次重置速率限制，直到达到1000万周活跃用户为止。这一策略既是对现有用户的激励，也是一种增长飞轮——用户增长带来更宽松的限制，更宽松的限制吸引更多用户留存和拉新。\n\n从行业角度看，Codex的增长轨迹与GitHub Copilot、Cursor等AI编程工具的整体爆发趋势一致，但OpenAI直接运营的Codex能在竞争激烈的市场中保持如此增速，说明其在开发者社区中的认可度持续上升。300万周活跃用户意味着这已不再是小众工具，而是进入了主流开发者日常工作流的核心产品序列。", "background": "Codex是OpenAI推出的AI编程模型，支持代码生成、补全与解释。近年来随着GPT-4等基础模型能力提升，Codex的实用性大幅增强，推动用户量持续攀升。", "deep_analysis": "用户增长的加速曲线暗示Codex正处于网络效应爆发期。若维持当前增速，达到1000万用户并非遥远目标，届时OpenAI将在AI编程赛道建立难以撼动的生态优势。", "importance": 3, "categories": ["AI编程", "产品与应用"], "source_type": "official", "source_name": "X-OpenAI", "source_icon": "🐦", "link": "https://x.com/thsottiaux/status/2041655710346572085", "pub_date": "04-07 23:13", "image": "", "extra_images": [], "reading_minutes": 1}, {"title": "R to @AnthropicAI: Project Glasswing is just a starting point.\n\nNo organization can solve these cybersecurity problems alone: industry, open source, researchers, and governments all have essential roles to play.", "summary": "Anthropic发布Project Glasswing网络安全倡议，强调需要产业、开源社区、研究者与政府多方协作应对AI安全挑战。", "detailed_content": "", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041578414482579912", "pub_date": "04-07 18:06", "image": "", "extra_images": [], "reading_minutes": 1}, {"title": "R to @AnthropicAI: We’re committing up to $100M in Mythos Preview usage credits for our partners and over 40 other organizations that maintain critical software, including open-source projects.\n\nAnthropic will report back what we learn.", "summary": "Anthropic承诺为合作伙伴及40余个维护关键软件的组织（含开源项目）提供最高1亿美元的Mythos Preview使用额度。", "detailed_content": "", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041578412653900255", "pub_date": "04-07 18:06", "image": "", "extra_images": [], "reading_minutes": 1}, {"title": "R to @AnthropicAI: We do not plan to make Mythos Preview generally available. Our goal is to deploy Mythos-class models safely at scale, but first we need safeguards that reliably block their most dangerous outputs.\n\nWe’ll begin testing those safeguards with an upcoming Claude Opus model.", "summary": "Anthropic宣布Mythos Preview不会公开发布，将先在即将推出的Claude Opus模型上测试安全防护措施", "detailed_content": "", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041578409315189125", "pub_date": "04-07 18:06", "image": "", "extra_images": [], "reading_minutes": 1}, {"title": "R to @AnthropicAI: Given the pace of AI progress, it won't be long before models this capable are widespread.\n\nBut there are strong reasons for optimism: AI will also be invaluable for defensive work.", "summary": "Anthropic官方表示，随着AI能力快速扩散，AI在防御性工作中将发挥不可替代的价值。", "detailed_content": "", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041578407238996109", "pub_date": "04-07 18:06", "image": "", "extra_images": [], "reading_minutes": 1}, {"title": "R to @AnthropicAI: We’ve partnered with Amazon Web Services, Apple, Broadcom, Cisco, CrowdStrike, Google, JPMorganChase, the Linux Foundation, Microsoft, NVIDIA, and Palo Alto Networks.\n\nTogether we’ll use Mythos Preview to help find and fix flaws in the systems on which the world depends.", "summary": "Anthropic联合AWS、苹果、谷歌、微软、英伟达等11家科技巨头，推出Mythos Preview用于发现和修复关键基础设施漏洞。", "detailed_content": "", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041578395515953487", "pub_date": "04-07 18:06", "image": "https://nitter.net/pic/media%2FHFUdn0ibUAAzIFe.png", "extra_images": [], "reading_minutes": 1}];
 const typeLabels = {"paper":"学术论文","news":"新闻报道","official":"官方发布","opinion":"观点文章","community":"社区讨论","video":"视频"};
 
 function openModal(idx) {
