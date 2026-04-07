@@ -937,9 +937,11 @@ function openModal(idx) {
     let srcBar = '<div class="m-src-bar">' + a.source_icon + ' ' + a.source_name + ' · ' + a.pub_date + ' · ' + (typeLabels[a.source_type]||'') + '</div>';
 
     // Detailed content — the main reading section (not repeating card info)
+    // Fallback to summary when detailed_content is not available
     let detailedHtml = '';
-    if (a.detailed_content) {
-        detailedHtml = '<div class="m-detailed">' + a.detailed_content + '</div>';
+    let detailedText = a.detailed_content || a.summary || '';
+    if (detailedText) {
+        detailedHtml = '<div class="m-detailed">' + detailedText + '</div>';
     }
 
     // Deep sections (background + analysis)
