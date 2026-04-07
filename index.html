@@ -1010,7 +1010,7 @@ function openModal(idx) {
         '<div class="m-summary">' + a.summary + '</div>' +
         deepHtml +
         '<div class="m-footer"><span class="m-footer-src">' + a.source_icon + ' ' + a.source_name + ' · ' + a.pub_date + '</span>' +
-        '<a href="' + a.link + '" target="_blank" rel="noopener" class="m-action" onclick="event.preventDefault();event.stopPropagation();window.open(this.href,'_blank');return false;">阅读原文 →</a></div>';
+        '<a href="' + a.link + '" target="_blank" rel="noopener" class="m-action" onclick="event.preventDefault();event.stopPropagation();window.open(this.href,&#39;_blank&#39;);return false;">阅读原文 →</a></div>';
 
     document.getElementById('modalOverlay').classList.add('show');
     document.body.style.overflow = 'hidden';
