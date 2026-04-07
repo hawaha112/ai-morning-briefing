@@ -285,30 +285,45 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月07日 周二 · 07:56</div>
+    <div class="h-date">2026年04月07日 周二 · 08:03</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>0</b> 篇</span>
-        <span><b>0</b> 源</span>
+        <span><b>1</b> 篇</span>
+        <span><b>1</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
+<button class="f-btn" data-filter="其他">其他</button>
 </div>
 
 <!-- Briefing -->
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今天暂无重要 AI 新闻。</p>
+        <p class="br-editorial">速览生成失败。</p>
     </section>
 
 <!-- Cards Grid -->
-<div class="grid" id="grid"></div>
+<div class="grid" id="grid">
+        <div class="card" data-cat="其他" data-idx="0"
+             style="animation-delay:0ms"
+             onclick="openModal(0)">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">8点1氪丨胖东来再回应“鸡蛋被检出角黄素”；苹果首款折叠屏手机已在试产；2026清明档电影票房已破2.8亿元</div>
+                
+                <div class="z5">🔎 36氪 AI搜索 · 04-06 23:58</div>
+            </div>
+        </div></div>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
@@ -317,11 +332,11 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>0</b> 个信息源 · <b>0</b> 篇资讯 · 2026年04月07日
+    AI 早报 · <b>1</b> 个信息源 · <b>1</b> 篇资讯 · 2026年04月07日
 </footer>
 
 <script>
-const __data = [];
+const __data = [{"title": "8点1氪丨胖东来再回应“鸡蛋被检出角黄素”；苹果首款折叠屏手机已在试产；2026清明档电影票房已破2.8亿元", "summary": "8点1氪丨胖东来再回应“鸡蛋被检出角黄素”；苹果首款折叠屏手机已在试产；2026清明档电影票房已破2.8亿元", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3755994793280000", "pub_date": "04-06 23:58", "image": "", "reading_minutes": 1}];
 const typeLabels = {"paper":"学术论文","news":"新闻报道","official":"官方发布","opinion":"观点文章","community":"社区讨论","video":"视频"};
 
 function openModal(idx) {
