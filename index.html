@@ -192,79 +192,132 @@ body {
     padding-top: 8px; border-top: 1px solid var(--border);
 }
 
-/* ═════ Modal — clean ═════ */
+/* ═════ Modal — immersive article view ═════ */
 .modal-overlay {
     position: fixed; inset: 0;
-    background: rgba(0,0,0,0.70);
-    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
     z-index: 1000; display: none;
     align-items: flex-start; justify-content: center;
-    padding: 5vh 14px; overflow-y: auto;
+    padding: 3vh 10px; overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 .modal-overlay.show { display: flex; }
 .modal {
     background: #13131f;
     border: 1px solid var(--border);
-    border-radius: 14px;
-    max-width: 600px; width: 100%;
-    padding: 22px; margin: auto;
-    animation: mUp 0.2s ease;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    border-radius: 16px;
+    max-width: 560px; width: 100%;
+    margin: auto;
+    animation: mUp 0.25s ease;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+    overflow: hidden;
 }
-@keyframes mUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+@keyframes mUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+/* Hero image — full bleed at top */
+.m-hero {
+    position: relative; width: 100%;
+    max-height: 220px; overflow: hidden;
+}
+.m-hero img {
+    width: 100%; height: 220px; object-fit: cover; display: block;
+}
+.m-hero-gradient {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+    background: linear-gradient(transparent, #13131f);
+}
+/* Close button — floating top-right */
 .m-close {
-    float: right; background: none; border: none;
-    color: var(--text-35); width: 28px; height: 28px; border-radius: 8px;
+    position: absolute; top: 12px; right: 12px; z-index: 10;
+    background: rgba(0,0,0,0.5); border: none;
+    color: #fff; width: 32px; height: 32px; border-radius: 50%;
     cursor: pointer; font-size: 14px;
     display: flex; align-items: center; justify-content: center;
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
     transition: all 0.15s;
+    -webkit-tap-highlight-color: rgba(255,255,255,0.1);
+    touch-action: manipulation;
 }
-.m-close:hover { background: rgba(255,255,255,0.06); color: var(--text-100); }
+.m-close:hover { background: rgba(0,0,0,0.7); }
+/* Body content — padded */
+.m-body {
+    padding: 20px 22px 22px;
+}
+/* Source + meta pills row */
 .m-pills {
     display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
-    margin-bottom: 10px; font-size: 11px; color: var(--text-35);
+    margin-bottom: 14px; font-size: 11px; color: var(--text-35);
 }
 .m-pill-sep { opacity: 0.4; }
-.m-title {
-    font-family: var(--serif); font-size: 18px; font-weight: 700;
-    line-height: 1.4; color: var(--text-100); margin-bottom: 8px;
-}
+/* Core summary — the key message */
 .m-summary {
-    font-size: 13px; line-height: 1.65; color: var(--text-60, rgba(228,228,236,0.60));
+    font-size: 15px; line-height: 1.7; color: var(--text-100);
+    font-weight: 500; margin-bottom: 16px;
+    padding-bottom: 16px; border-bottom: 1px solid var(--border);
+}
+/* Why it matters — highlighted */
+.m-why {
+    font-size: 13px; line-height: 1.7; color: var(--accent);
+    margin-bottom: 16px;
+    padding: 12px 14px;
+    background: rgba(107,138,253,0.06);
+    border-radius: 10px;
+    border-left: 3px solid var(--accent);
+}
+.m-why-label {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--accent); opacity: 0.7;
+    margin-bottom: 4px;
+}
+/* Key details — bullet list */
+.m-details {
     margin-bottom: 16px;
 }
-.m-img {
-    width: 100%; max-height: 240px; object-fit: cover;
-    border-radius: 8px; margin-bottom: 14px;
+.m-details ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 8px;
 }
-/* deep-dive — natural reading flow, no decorative borders */
+.m-details li {
+    font-size: 13px; line-height: 1.6; color: var(--text-70);
+    padding-left: 16px; position: relative;
+}
+.m-details li::before {
+    content: ''; position: absolute; left: 0; top: 8px;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent); opacity: 0.5;
+}
+/* Deep sections — background & analysis */
 .m-deep {
-    display: flex; flex-direction: column; gap: 18px;
-    padding: 16px 0 0; border-top: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 16px;
+    padding-top: 16px; border-top: 1px solid var(--border);
 }
 .m-deep-section { }
 .m-deep-label {
-    font-size: 11px; font-weight: 600; color: var(--text-50);
-    letter-spacing: 0.1px; margin-bottom: 6px;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--text-50);
+    margin-bottom: 6px;
 }
 .m-deep-text {
-    font-size: 13px; color: var(--text-70); line-height: 1.7;
+    font-size: 13px; color: var(--text-60); line-height: 1.7;
 }
+/* Footer — source + action */
 .m-footer {
     display: flex; align-items: center; justify-content: space-between;
-    margin-top: 16px; padding-top: 12px;
+    margin-top: 18px; padding-top: 14px;
     border-top: 1px solid var(--border);
 }
 .m-action {
     display: inline-flex; align-items: center; gap: 4px;
-    padding: 7px 16px;
-    background: rgba(107,138,253,0.10); color: var(--accent);
-    text-decoration: none; border-radius: 8px;
-    font-size: 12px; font-weight: 500; transition: background 0.15s;
+    padding: 9px 18px;
+    background: rgba(107,138,253,0.12); color: var(--accent);
+    text-decoration: none; border-radius: 10px;
+    font-size: 13px; font-weight: 600; transition: background 0.15s;
+    -webkit-tap-highlight-color: rgba(107,138,253,0.2);
+    touch-action: manipulation;
 }
-.m-action:hover { background: rgba(107,138,253,0.18); }
+.m-action:hover { background: rgba(107,138,253,0.22); }
 .m-footer-src {
-    font-size: 10px; color: var(--text-35);
+    font-size: 11px; color: var(--text-35);
 }
 
 /* ═════ Footer ═════ */
@@ -288,13 +341,13 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月07日 周二 · 21:50</div>
+    <div class="h-date">2026年04月07日 周二 · 22:12</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
         <span><b>51</b> 篇</span>
-        <span><b>14</b> 源</span>
+        <span><b>13</b> 源</span>
     </div>
 </div>
 </header>
@@ -315,7 +368,7 @@ body {
 <div class="grid" id="grid">
         <div class="card" data-cat="其他" data-idx="0"
              style="animation-delay:0ms">
-            
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041278789435768832%2F48vZMggi%3Fformat%3Djpg%26name%3D800x419')"></div>
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
@@ -360,143 +413,13 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="z2">IC3-Evolve: Proof-/Witness-Gated Offline LLM-Driven Heuristic Evolution for IC3 Hardware Model Check</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="4"
-             style="animation-delay:100ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">Structural Segmentation of the Minimum Set Cover Problem: Exploiting Universe Decomposability for Me</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="5"
-             style="animation-delay:125ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">To Throw a Stone with Six Birds: On Agents and Agenthood</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="6"
-             style="animation-delay:150ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">Position: Science of AI Evaluation Requires Item-level Benchmark Data</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="7"
-             style="animation-delay:175ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">Toward Full Autonomous Laboratory Instrumentation Control with Large Language Models</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="8"
-             style="animation-delay:200ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">Evaluating Artificial Intelligence Through a Christian Understanding of Human Flourishing</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="9"
-             style="animation-delay:225ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">VERT: Reliable LLM Judges for Radiology Report Evaluation</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="10"
-             style="animation-delay:250ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">Hume&#x27;s Representational Conditions for Causal Judgment: What Bayesian Formalization Abstracted Away</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="11"
-             style="animation-delay:275ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">TABQAWORLD: Optimizing Multimodal Reasoning for Multi-Turn Table Question Answering</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="12"
-             style="animation-delay:300ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">Contextual Control without Memory Growth in a Context-Switching Task</div>
-                
-                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="13"
-             style="animation-delay:325ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
                 <div class="z2">Integrating Artificial Intelligence, Physics, and Internet of Things: A Framework for Cultural Herit</div>
                 
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="14"
-             style="animation-delay:350ms">
+        <div class="card" data-cat="其他" data-idx="4"
+             style="animation-delay:100ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -508,8 +431,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="15"
-             style="animation-delay:375ms">
+        <div class="card" data-cat="其他" data-idx="5"
+             style="animation-delay:125ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -521,8 +444,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="16"
-             style="animation-delay:400ms">
+        <div class="card" data-cat="其他" data-idx="6"
+             style="animation-delay:150ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -534,8 +457,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="17"
-             style="animation-delay:425ms">
+        <div class="card" data-cat="其他" data-idx="7"
+             style="animation-delay:175ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -547,8 +470,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="18"
-             style="animation-delay:450ms">
+        <div class="card" data-cat="其他" data-idx="8"
+             style="animation-delay:200ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -560,8 +483,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="19"
-             style="animation-delay:475ms">
+        <div class="card" data-cat="其他" data-idx="9"
+             style="animation-delay:225ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -573,8 +496,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="20"
-             style="animation-delay:500ms">
+        <div class="card" data-cat="其他" data-idx="10"
+             style="animation-delay:250ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -586,8 +509,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="21"
-             style="animation-delay:500ms">
+        <div class="card" data-cat="其他" data-idx="11"
+             style="animation-delay:275ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -599,8 +522,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="22"
-             style="animation-delay:500ms">
+        <div class="card" data-cat="其他" data-idx="12"
+             style="animation-delay:300ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -610,6 +533,136 @@ body {
                 <div class="z2">The limits of bio-molecular modeling with large language models : a cross-scale evaluation</div>
                 
                 <div class="z5">📄 ArXiv ML · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="13"
+             style="animation-delay:325ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">IC3-Evolve: Proof-/Witness-Gated Offline LLM-Driven Heuristic Evolution for IC3 Hardware Model Check</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="14"
+             style="animation-delay:350ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Structural Segmentation of the Minimum Set Cover Problem: Exploiting Universe Decomposability for Me</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="15"
+             style="animation-delay:375ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">To Throw a Stone with Six Birds: On Agents and Agenthood</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="16"
+             style="animation-delay:400ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Position: Science of AI Evaluation Requires Item-level Benchmark Data</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="17"
+             style="animation-delay:425ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Toward Full Autonomous Laboratory Instrumentation Control with Large Language Models</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="18"
+             style="animation-delay:450ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Evaluating Artificial Intelligence Through a Christian Understanding of Human Flourishing</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="19"
+             style="animation-delay:475ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">VERT: Reliable LLM Judges for Radiology Report Evaluation</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="20"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Hume&#x27;s Representational Conditions for Causal Judgment: What Bayesian Formalization Abstracted Away</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="21"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">TABQAWORLD: Optimizing Multimodal Reasoning for Multi-Turn Table Question Answering</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="22"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="z2">Contextual Control without Memory Growth in a Context-Switching Task</div>
+                
+                <div class="z5">📄 ArXiv AI · 04-07 00:00</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="23"
@@ -646,12 +699,25 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
+                <div class="z2">4 days left to save close to $500 on TechCrunch Disrupt 2026 passes</div>
+                
+                <div class="z5">💡 TechCrunch AI · 04-07 14:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="26"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
                 <div class="z2">The AI gold rush is pulling private wealth into riskier, earlier bets</div>
                 
                 <div class="z5">💡 TechCrunch AI · 04-07 13:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="26"
+        <div class="card" data-cat="其他" data-idx="27"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -664,7 +730,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 08:45</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="27"
+        <div class="card" data-cat="其他" data-idx="28"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -677,7 +743,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 08:22</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="28"
+        <div class="card" data-cat="其他" data-idx="29"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -690,7 +756,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 07:34</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="29"
+        <div class="card" data-cat="其他" data-idx="30"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -703,7 +769,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 06:13</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="30"
+        <div class="card" data-cat="其他" data-idx="31"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -716,7 +782,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 05:50</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="31"
+        <div class="card" data-cat="其他" data-idx="32"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -729,7 +795,7 @@ body {
                 <div class="z5">💡 TechCrunch AI · 04-07 05:30</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="32"
+        <div class="card" data-cat="其他" data-idx="33"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -742,7 +808,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 04:02</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="33"
+        <div class="card" data-cat="其他" data-idx="34"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -755,7 +821,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 04:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="34"
+        <div class="card" data-cat="其他" data-idx="35"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -768,7 +834,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-07 02:36</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="35"
+        <div class="card" data-cat="其他" data-idx="36"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -781,7 +847,7 @@ body {
                 <div class="z5">💡 TechCrunch AI · 04-06 21:54</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="36"
+        <div class="card" data-cat="其他" data-idx="37"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -794,7 +860,7 @@ body {
                 <div class="z5">💡 TechCrunch AI · 04-06 18:54</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="37"
+        <div class="card" data-cat="其他" data-idx="38"
              style="animation-delay:500ms">
             <div class="card-img" style="background-image:url('https://img.huxiucdn.com/ai/ai-article-cover/202604/07/4848645-prod-kl-1.png')"></div>
             <div class="card-body">
@@ -807,7 +873,7 @@ body {
                 <div class="z5">🐯 虎嗅科技 · 04-07 13:23</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="38"
+        <div class="card" data-cat="其他" data-idx="39"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -820,7 +886,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 13:16</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="39"
+        <div class="card" data-cat="其他" data-idx="40"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -833,7 +899,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 13:12</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="40"
+        <div class="card" data-cat="其他" data-idx="41"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -846,7 +912,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 13:09</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="41"
+        <div class="card" data-cat="其他" data-idx="42"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -859,7 +925,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 13:00</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="42"
+        <div class="card" data-cat="其他" data-idx="43"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -872,7 +938,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 12:58</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="43"
+        <div class="card" data-cat="其他" data-idx="44"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -885,7 +951,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 12:32</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="44"
+        <div class="card" data-cat="其他" data-idx="45"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -898,7 +964,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 12:23</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="45"
+        <div class="card" data-cat="其他" data-idx="46"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -911,7 +977,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 12:18</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="46"
+        <div class="card" data-cat="其他" data-idx="47"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -924,7 +990,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-07 12:16</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="47"
+        <div class="card" data-cat="其他" data-idx="48"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -932,12 +998,12 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="z2">AI may be making us think and write more alike</div>
+                <div class="z2">Every GPU That Mattered</div>
                 
-                <div class="z5">🔥 Hacker News AI · 04-07 11:29</div>
+                <div class="z5">🔥 Hacker News AI · 04-07 08:38</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="48"
+        <div class="card" data-cat="其他" data-idx="49"
              style="animation-delay:500ms">
             <div class="card-img" style="background-image:url('https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/4ed161037661420db43b1429895f2b3f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5rK454K55bCP5Yqp5omL:q75.awebp?rk3s=f64ab15b&amp;amp;x-expires=1776150073&amp;amp;x-signature=EQ%2BritNrmmjyeb%2F6SupaEDKmKiI%3D')"></div>
             <div class="card-body">
@@ -948,19 +1014,6 @@ body {
                 <div class="z2">「国产龙虾谁能打过OpenClaw &amp; 你敢让微信龙虾碰代码吗」沸点获奖名单公示｜本周互动话题上新🎊</div>
                 
                 <div class="z5">💎 掘金 AI · 04-07 07:01</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="49"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="z2">如何看待 Citrini 实地调研霍尔木兹海峡，得出「公开数据漏报了50% 真实通行量」的结论？</div>
-                
-                <div class="z5">💭 知乎热榜 · 04-07 02:37</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="50"
@@ -984,48 +1037,74 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>14</b> 个信息源 · <b>51</b> 篇资讯 · 2026年04月07日
+    AI 早报 · <b>13</b> 个信息源 · <b>51</b> 篇资讯 · 2026年04月07日
 </footer>
 
 <script>
-const __data = [{"title": "R to @AnthropicAI: Our run-rate revenue has surpassed $30 billion, up from $9 billion at the end of 2025, as demand for Claude continues to accelerate. This partnership gives us the compute to keep pace.\n\nRead more: https://www.anthropic.com/news/google-broadcom-partnership-compute", "summary": "R to @AnthropicAI: Our run-rate revenue has surpassed $30 billion, up from $9 billion at the end of ", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041275563466502560", "pub_date": "04-06 22:03", "image": "", "reading_minutes": 1}, {"title": "We've signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU capacity, coming online starting in 2027, to train and serve frontier Claude models.", "summary": "We've signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU cap", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041275561704931636", "pub_date": "04-06 22:03", "image": "", "reading_minutes": 1}, {"title": "The Download: AI’s impact on jobs, and data centres in space", "summary": "The Download: AI’s impact on jobs, and data centres in space", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "MIT Tech Review", "source_icon": "🎓", "link": "https://www.technologyreview.com/2026/04/07/1135208/the-download-ai-impact-jobs-data-centres-space/", "pub_date": "04-07 12:10", "image": "https://wp.technologyreview.com/wp-content/uploads/2025/04/20240926__DSC7922_PA.jpg?w=3000", "reading_minutes": 1}, {"title": "IC3-Evolve: Proof-/Witness-Gated Offline LLM-Driven Heuristic Evolution for IC3 Hardware Model Checking", "summary": "IC3-Evolve: Proof-/Witness-Gated Offline LLM-Driven Heuristic Evolution for IC3 Hardware Model Check", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03232", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Structural Segmentation of the Minimum Set Cover Problem: Exploiting Universe Decomposability for Metaheuristic Optimization", "summary": "Structural Segmentation of the Minimum Set Cover Problem: Exploiting Universe Decomposability for Me", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03234", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "To Throw a Stone with Six Birds: On Agents and Agenthood", "summary": "To Throw a Stone with Six Birds: On Agents and Agenthood", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03239", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Position: Science of AI Evaluation Requires Item-level Benchmark Data", "summary": "Position: Science of AI Evaluation Requires Item-level Benchmark Data", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03244", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Toward Full Autonomous Laboratory Instrumentation Control with Large Language Models", "summary": "Toward Full Autonomous Laboratory Instrumentation Control with Large Language Models", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03286", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Evaluating Artificial Intelligence Through a Christian Understanding of Human Flourishing", "summary": "Evaluating Artificial Intelligence Through a Christian Understanding of Human Flourishing", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03356", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "VERT: Reliable LLM Judges for Radiology Report Evaluation", "summary": "VERT: Reliable LLM Judges for Radiology Report Evaluation", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03376", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Hume's Representational Conditions for Causal Judgment: What Bayesian Formalization Abstracted Away", "summary": "Hume's Representational Conditions for Causal Judgment: What Bayesian Formalization Abstracted Away", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03387", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "TABQAWORLD: Optimizing Multimodal Reasoning for Multi-Turn Table Question Answering", "summary": "TABQAWORLD: Optimizing Multimodal Reasoning for Multi-Turn Table Question Answering", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03393", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Contextual Control without Memory Growth in a Context-Switching Task", "summary": "Contextual Control without Memory Growth in a Context-Switching Task", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03479", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Integrating Artificial Intelligence, Physics, and Internet of Things: A Framework for Cultural Heritage Conservation", "summary": "Integrating Artificial Intelligence, Physics, and Internet of Things: A Framework for Cultural Herit", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03233", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Scaling DPPs for RAG: Density Meets Diversity", "summary": "Scaling DPPs for RAG: Density Meets Diversity", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03240", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "DRAFT: Task Decoupled Latent Reasoning for Agent Safety", "summary": "DRAFT: Task Decoupled Latent Reasoning for Agent Safety", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03242", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "General Explicit Network (GEN): A novel deep learning architecture for solving partial differential equations", "summary": "General Explicit Network (GEN): A novel deep learning architecture for solving partial differential ", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03321", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Apparent Age Estimation: Challenges and Outcomes", "summary": "Apparent Age Estimation: Challenges and Outcomes", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03335", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary Neural Network Weights, Structured Data, and General Computing Infrastructure", "summary": "NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03336", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Towards Intelligent Energy Security: A Unified Spatio-Temporal and Graph Learning Framework for Scalable Electricity Theft Detection in Smart Grids", "summary": "Towards Intelligent Energy Security: A Unified Spatio-Temporal and Graph Learning Framework for Scal", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03344", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Hardware-Oriented Inference Complexity of Kolmogorov-Arnold Networks", "summary": "Hardware-Oriented Inference Complexity of Kolmogorov-Arnold Networks", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03345", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "From Model-Based Screening to Data-Driven Surrogates: A Multi-Stage Workflow for Exploring Stochastic Agent-Based Models", "summary": "From Model-Based Screening to Data-Driven Surrogates: A Multi-Stage Workflow for Exploring Stochasti", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03350", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "The limits of bio-molecular modeling with large language models : a cross-scale evaluation", "summary": "The limits of bio-molecular modeling with large language models : a cross-scale evaluation", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03361", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "RT by @ylecun: 🚨SHOCKING: Apple just proved that AI models cannot do math. Not advanced math. Grade school math. The kind a 10-year-old solves.\n\nAnd the way they proved it is devastating.\n\nApple researchers took the most popular math benchmark in AI — GSM8K, a set of grade-school math problems — and made one change. They swapped the numbers. Same problem. Same logic. Same steps. Different numbers.\n\nEvery model's performance dropped. Every single one. 25 state-of-the-art models tested.\n\nBut that wasn't the real experiment.\n\nThe real experiment broke everything.\n\nThey added one sentence to a math problem. One sentence that is completely irrelevant to the answer. It has nothing to do with the math. A human would read it and ignore it instantly.\n\nHere's the actual example from the paper:\n\n\"Oliver picks 44 kiwis on Friday. Then he picks 58 kiwis on Saturday. On Sunday, he picks double the number of kiwis he did on Friday, but five of them were a bit smaller than average. How many kiwis does Oliver have?\"\n\nThe correct answer is 190. The size of the kiwis has nothing to do with the count.\n\nA 10-year-old would ignore \"five of them were a bit smaller\" because it's obviously irrelevant. It doesn't change how many kiwis there are.\n\nBut o1-mini, OpenAI's reasoning model, subtracted 5. It got 185.\n\nLlama did the same thing. Subtracted 5. Got 185.\n\nThey didn't reason through the problem. They saw the number 5, saw a sentence that sounded like it mattered, and blindly turned it into a subtraction.\n\nThe models do not understand what subtraction means. They see a pattern that looks like subtraction and apply it. That is all.\n\nApple tested this across all models. They call the dataset \"GSM-NoOp\" — as in, the added clause is a no-operation. It does nothing. It changes nothing.\n\nThe results are catastrophic.\n\nPhi-3-mini dropped over 65%. More than half of its \"math ability\" vanished from one irrelevant sentence.\n\nGPT-4o dropped from 94.9% to 63.1%.\n\no1-mini dropped from 94.5% to 66.0%.\n\no1-preview, OpenAI's most advanced reasoning model at the time, dropped from 92.7% to 77.4%.\n\nEven giving the models 8 examples of the exact same question beforehand, with the correct solution shown each time, barely helped. The models still fell for the irrelevant clause.\n\nThis means it's not a prompting problem. It's not a context problem. It's structural.\n\nThe Apple researchers also found that models convert words into math operations without understanding what those words mean. They see the word \"discount\" and multiply. They see a number near the word \"smaller\" and subtract. Regardless of whether it makes any sense.\n\nThe paper's exact words: \"current LLMs are not capable of genuine logical reasoning; instead, they attempt to replicate the reasoning steps observed in their training data.\"\n\nAnd: \"LLMs likely perform a form of probabilistic pattern-matching and searching to find closest seen data during training without proper understanding of concepts.\"\n\nThey also tested what happens when you increase the number of steps in a problem. Performance didn't just decrease. The rate of decrease accelerated. Adding two extra clauses to a problem dropped Gemma2-9b from 84.4% to 41.8%. Phi-3.5-mini from 87.6% to 44.8%. The more thinking required, the more the models collapse.\n\nA real reasoner would slow down and work through it. These models don't slow down. They pattern-match. And when the pattern becomes complex enough, they crash.\n\nThis paper was published at ICLR 2025, one of the most prestigious AI conferences in the world.\n\nYou are using AI to help you make financial decisions. To check legal documents. To solve problems at work. To help your children with homework. And Apple just proved that the AI is not thinking about any of it. It is pattern matching. And the moment something unexpected shows up in your question, it breaks. It does not tell you it broke. It just quietly gives you the wrong answer with full confidence.", "summary": "RT by @ylecun: 🚨SHOCKING: Apple just proved that AI models cannot do math. Not advanced math. Grade ", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-Yann LeCun", "source_icon": "🐦", "link": "https://x.com/heynavtoor/status/2041243558833987600", "pub_date": "04-06 19:56", "image": "https://nitter.net/pic/media%2FHFP0MtobEAA3LPQ.png", "reading_minutes": 1}, {"title": "从上下文到经验资产：OpenClaw 热潮下的 Agent 记忆系统工程实践｜QCon北京", "summary": "从上下文到经验资产：OpenClaw 热潮下的 Agent 记忆系统工程实践｜QCon北京", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "AI前线", "source_icon": "🚀", "link": "https://www.infoq.cn/article/IQfviaUpKcyUVudfrzip?utm_source=rss&utm_medium=article", "pub_date": "04-07 14:03", "image": "", "reading_minutes": 1}, {"title": "The AI gold rush is pulling private wealth into riskier, earlier bets", "summary": "The AI gold rush is pulling private wealth into riskier, earlier bets", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/07/the-ai-gold-rush-is-pulling-private-wealth-into-riskier-earlier-bets/", "pub_date": "04-07 13:00", "image": "", "reading_minutes": 1}, {"title": "哈萨比斯传记里讲了好多八卦啊", "summary": "哈萨比斯传记里讲了好多八卦啊", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/397553.html", "pub_date": "04-07 08:45", "image": "", "reading_minutes": 1}, {"title": "印奇带队千里首个完整年：营收近百亿，智驾毛利率达30.8%", "summary": "印奇带队千里首个完整年：营收近百亿，智驾毛利率达30.8%", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/397523.html", "pub_date": "04-07 08:22", "image": "", "reading_minutes": 1}, {"title": "像素蛋糕9.0：一场关于AI与修图的颠覆革命", "summary": "像素蛋糕9.0：一场关于AI与修图的颠覆革命", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/397517.html", "pub_date": "04-07 07:34", "image": "", "reading_minutes": 1}, {"title": "“Claude Code更新废了”！热议Issue：思考深度下降67%，已无法胜任复杂的工程任务", "summary": "“Claude Code更新废了”！热议Issue：思考深度下降67%，已无法胜任复杂的工程任务", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396958.html", "pub_date": "04-07 06:13", "image": "", "reading_minutes": 1}, {"title": "卡帕西没做完的，开源社区48小时搞定了！完全体知识库，token省70倍", "summary": "卡帕西没做完的，开源社区48小时搞定了！完全体知识库，token省70倍", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396983.html", "pub_date": "04-07 05:50", "image": "", "reading_minutes": 1}, {"title": "AI startup Rocket offers vibe McKinsey-style reports at a fraction of the cost", "summary": "AI startup Rocket offers vibe McKinsey-style reports at a fraction of the cost", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/06/indian-startup-rocket-wants-its-ai-to-do-mckinsey-style-consulting-at-a-fraction-of-the-cost/", "pub_date": "04-07 05:30", "image": "", "reading_minutes": 1}, {"title": "下一代OpenClaw来了？“龙虾之父”称将率先支持阿里千问", "summary": "下一代OpenClaw来了？“龙虾之父”称将率先支持阿里千问", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396955.html", "pub_date": "04-07 04:02", "image": "", "reading_minutes": 1}, {"title": "持续霸榜！阿里千问3.6Plus问鼎全球大模型调用周榜冠军", "summary": "持续霸榜！阿里千问3.6Plus问鼎全球大模型调用周榜冠军", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396950.html", "pub_date": "04-07 04:00", "image": "", "reading_minutes": 1}, {"title": "23天靠AI短片赚100万！非科班出身逆袭影视区，郭帆导演拍手叫好", "summary": "23天靠AI短片赚100万！非科班出身逆袭影视区，郭帆导演拍手叫好", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396890.html", "pub_date": "04-07 02:36", "image": "", "reading_minutes": 1}, {"title": "OpenAI alums have been quietly investing from a new, potentially $100M fund", "summary": "OpenAI alums have been quietly investing from a new, potentially $100M fund", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/06/openai-alums-have-been-quietly-investing-from-a-new-potentially-100m-fund/", "pub_date": "04-06 21:54", "image": "", "reading_minutes": 1}, {"title": "Google quietly launched an AI dictation app that works offline", "summary": "Google quietly launched an AI dictation app that works offline", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/06/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/", "pub_date": "04-06 18:54", "image": "", "reading_minutes": 1}, {"title": "TTD与阳狮纠纷，是AI广告革命下的一个切面", "summary": "TTD与阳狮纠纷，是AI广告革命下的一个切面", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "虎嗅科技", "source_icon": "🐯", "link": "https://www.huxiu.com/article/4848645.html", "pub_date": "04-07 13:23", "image": "https://img.huxiucdn.com/ai/ai-article-cover/202604/07/4848645-prod-kl-1.png", "reading_minutes": 1}, {"title": "扎堆发布AI视频工具，大厂争当创作者的“缪斯”", "summary": "扎堆发布AI视频工具，大厂争当创作者的“缪斯”", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756670078927624", "pub_date": "04-07 13:16", "image": "", "reading_minutes": 1}, {"title": "Claude爆火研究漏引华人团队成果，已挨打立正道歉", "summary": "Claude爆火研究漏引华人团队成果，已挨打立正道歉", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756573700735492", "pub_date": "04-07 13:12", "image": "", "reading_minutes": 1}, {"title": "AI洗牌音乐界，但创作者还没赚到钱", "summary": "AI洗牌音乐界，但创作者还没赚到钱", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756683077677568", "pub_date": "04-07 13:09", "image": "", "reading_minutes": 1}, {"title": "别被6亿利润“骗”了，最赚钱的硬件，恰恰是宇树的最大风险", "summary": "别被6亿利润“骗”了，最赚钱的硬件，恰恰是宇树的最大风险", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756656728752900", "pub_date": "04-07 13:00", "image": "", "reading_minutes": 1}, {"title": "泡泡玛特暴跌，代工厂疯涨，潮玩行业IPO还有救吗？", "summary": "泡泡玛特暴跌，代工厂疯涨，潮玩行业IPO还有救吗？", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756656539370244", "pub_date": "04-07 12:58", "image": "", "reading_minutes": 1}, {"title": "Claude灾难级大宕机，全球开发者集体炸锅，Anthropic三连翻车被怒喷", "summary": "Claude灾难级大宕机，全球开发者集体炸锅，Anthropic三连翻车被怒喷", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756568883151368", "pub_date": "04-07 12:32", "image": "", "reading_minutes": 1}, {"title": "抢打工人饭碗的，真是AI吗？", "summary": "抢打工人饭碗的，真是AI吗？", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756629408956937", "pub_date": "04-07 12:23", "image": "", "reading_minutes": 1}, {"title": "完球了，GPT-4o之母宣布离职OpenAI", "summary": "完球了，GPT-4o之母宣布离职OpenAI", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756573443588609", "pub_date": "04-07 12:18", "image": "", "reading_minutes": 1}, {"title": "2026企业AI大考：别秀PPT，亮出你的「用虾」真功夫", "summary": "2026企业AI大考：别秀PPT，亮出你的「用虾」真功夫", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756720060793347", "pub_date": "04-07 12:16", "image": "", "reading_minutes": 1}, {"title": "AI may be making us think and write more alike", "summary": "AI may be making us think and write more alike", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://dornsife.usc.edu/news/stories/ai-may-be-making-us-think-and-write-more-alike/", "pub_date": "04-07 11:29", "image": "", "reading_minutes": 1}, {"title": "「国产龙虾谁能打过OpenClaw & 你敢让微信龙虾碰代码吗」沸点获奖名单公示｜本周互动话题上新🎊", "summary": "「国产龙虾谁能打过OpenClaw & 你敢让微信龙虾碰代码吗」沸点获奖名单公示｜本周互动话题上新🎊", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "掘金 AI", "source_icon": "💎", "link": "https://juejin.cn/post/7625528557731037230", "pub_date": "04-07 07:01", "image": "https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/4ed161037661420db43b1429895f2b3f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5rK454K55bCP5Yqp5omL:q75.awebp?rk3s=f64ab15b&amp;x-expires=1776150073&amp;x-signature=EQ%2BritNrmmjyeb%2F6SupaEDKmKiI%3D", "reading_minutes": 1}, {"title": "如何看待 Citrini 实地调研霍尔木兹海峡，得出「公开数据漏报了50% 真实通行量」的结论？", "summary": "如何看待 Citrini 实地调研霍尔木兹海峡，得出「公开数据漏报了50% 真实通行量」的结论？", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "知乎热榜", "source_icon": "💭", "link": "https://www.zhihu.com/question/2024797950254085912", "pub_date": "04-07 02:37", "image": "", "reading_minutes": 1}, {"title": "派早报：OpenAI 发布文章探讨 AI 时代的政策建议等", "summary": "派早报：OpenAI 发布文章探讨 AI 时代的政策建议等", "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "少数派", "source_icon": "📱", "link": "https://sspai.com/post/108326", "pub_date": "04-07 00:18", "image": "https://cdnfile.sspai.com/2026/4/7/article/dc493d77-eeb4-c33b-b92b-39b2b7876228.png", "reading_minutes": 1}];
+const __data = [{"title": "R to @AnthropicAI: Our run-rate revenue has surpassed $30 billion, up from $9 billion at the end of 2025, as demand for Claude continues to accelerate. This partnership gives us the compute to keep pace.\n\nRead more: https://www.anthropic.com/news/google-broadcom-partnership-compute", "summary": "R to @AnthropicAI: Our run-rate revenue has surpassed $30 billion, up from $9 billion at the end of ", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041275563466502560", "pub_date": "04-06 22:03", "image": "https://nitter.net/pic/card_img%2F2041278789435768832%2F48vZMggi%3Fformat%3Djpg%26name%3D800x419", "reading_minutes": 1}, {"title": "We've signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU capacity, coming online starting in 2027, to train and serve frontier Claude models.", "summary": "We've signed an agreement with Google and Broadcom for multiple gigawatts of next-generation TPU cap", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-AnthropicAI", "source_icon": "🐦", "link": "https://x.com/AnthropicAI/status/2041275561704931636", "pub_date": "04-06 22:03", "image": "", "reading_minutes": 1}, {"title": "The Download: AI’s impact on jobs, and data centres in space", "summary": "The Download: AI’s impact on jobs, and data centres in space", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "MIT Tech Review", "source_icon": "🎓", "link": "https://www.technologyreview.com/2026/04/07/1135208/the-download-ai-impact-jobs-data-centres-space/", "pub_date": "04-07 12:10", "image": "https://wp.technologyreview.com/wp-content/uploads/2025/04/20240926__DSC7922_PA.jpg?w=3000", "reading_minutes": 1}, {"title": "Integrating Artificial Intelligence, Physics, and Internet of Things: A Framework for Cultural Heritage Conservation", "summary": "Integrating Artificial Intelligence, Physics, and Internet of Things: A Framework for Cultural Herit", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03233", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Scaling DPPs for RAG: Density Meets Diversity", "summary": "Scaling DPPs for RAG: Density Meets Diversity", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03240", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "DRAFT: Task Decoupled Latent Reasoning for Agent Safety", "summary": "DRAFT: Task Decoupled Latent Reasoning for Agent Safety", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03242", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "General Explicit Network (GEN): A novel deep learning architecture for solving partial differential equations", "summary": "General Explicit Network (GEN): A novel deep learning architecture for solving partial differential ", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03321", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Apparent Age Estimation: Challenges and Outcomes", "summary": "Apparent Age Estimation: Challenges and Outcomes", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03335", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary Neural Network Weights, Structured Data, and General Computing Infrastructure", "summary": "NativeTernary: A Self-Delimiting Binary Encoding with Unary Run-Length Hierarchy Markers for Ternary", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03336", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Towards Intelligent Energy Security: A Unified Spatio-Temporal and Graph Learning Framework for Scalable Electricity Theft Detection in Smart Grids", "summary": "Towards Intelligent Energy Security: A Unified Spatio-Temporal and Graph Learning Framework for Scal", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03344", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Hardware-Oriented Inference Complexity of Kolmogorov-Arnold Networks", "summary": "Hardware-Oriented Inference Complexity of Kolmogorov-Arnold Networks", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03345", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "From Model-Based Screening to Data-Driven Surrogates: A Multi-Stage Workflow for Exploring Stochastic Agent-Based Models", "summary": "From Model-Based Screening to Data-Driven Surrogates: A Multi-Stage Workflow for Exploring Stochasti", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03350", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "The limits of bio-molecular modeling with large language models : a cross-scale evaluation", "summary": "The limits of bio-molecular modeling with large language models : a cross-scale evaluation", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv ML", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03361", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "IC3-Evolve: Proof-/Witness-Gated Offline LLM-Driven Heuristic Evolution for IC3 Hardware Model Checking", "summary": "IC3-Evolve: Proof-/Witness-Gated Offline LLM-Driven Heuristic Evolution for IC3 Hardware Model Check", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03232", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Structural Segmentation of the Minimum Set Cover Problem: Exploiting Universe Decomposability for Metaheuristic Optimization", "summary": "Structural Segmentation of the Minimum Set Cover Problem: Exploiting Universe Decomposability for Me", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03234", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "To Throw a Stone with Six Birds: On Agents and Agenthood", "summary": "To Throw a Stone with Six Birds: On Agents and Agenthood", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03239", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Position: Science of AI Evaluation Requires Item-level Benchmark Data", "summary": "Position: Science of AI Evaluation Requires Item-level Benchmark Data", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03244", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Toward Full Autonomous Laboratory Instrumentation Control with Large Language Models", "summary": "Toward Full Autonomous Laboratory Instrumentation Control with Large Language Models", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03286", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Evaluating Artificial Intelligence Through a Christian Understanding of Human Flourishing", "summary": "Evaluating Artificial Intelligence Through a Christian Understanding of Human Flourishing", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03356", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "VERT: Reliable LLM Judges for Radiology Report Evaluation", "summary": "VERT: Reliable LLM Judges for Radiology Report Evaluation", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03376", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Hume's Representational Conditions for Causal Judgment: What Bayesian Formalization Abstracted Away", "summary": "Hume's Representational Conditions for Causal Judgment: What Bayesian Formalization Abstracted Away", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03387", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "TABQAWORLD: Optimizing Multimodal Reasoning for Multi-Turn Table Question Answering", "summary": "TABQAWORLD: Optimizing Multimodal Reasoning for Multi-Turn Table Question Answering", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03393", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "Contextual Control without Memory Growth in a Context-Switching Task", "summary": "Contextual Control without Memory Growth in a Context-Switching Task", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "ArXiv AI", "source_icon": "📄", "link": "https://arxiv.org/abs/2604.03479", "pub_date": "04-07 00:00", "image": "", "reading_minutes": 1}, {"title": "RT by @ylecun: 🚨SHOCKING: Apple just proved that AI models cannot do math. Not advanced math. Grade school math. The kind a 10-year-old solves.\n\nAnd the way they proved it is devastating.\n\nApple researchers took the most popular math benchmark in AI — GSM8K, a set of grade-school math problems — and made one change. They swapped the numbers. Same problem. Same logic. Same steps. Different numbers.\n\nEvery model's performance dropped. Every single one. 25 state-of-the-art models tested.\n\nBut that wasn't the real experiment.\n\nThe real experiment broke everything.\n\nThey added one sentence to a math problem. One sentence that is completely irrelevant to the answer. It has nothing to do with the math. A human would read it and ignore it instantly.\n\nHere's the actual example from the paper:\n\n\"Oliver picks 44 kiwis on Friday. Then he picks 58 kiwis on Saturday. On Sunday, he picks double the number of kiwis he did on Friday, but five of them were a bit smaller than average. How many kiwis does Oliver have?\"\n\nThe correct answer is 190. The size of the kiwis has nothing to do with the count.\n\nA 10-year-old would ignore \"five of them were a bit smaller\" because it's obviously irrelevant. It doesn't change how many kiwis there are.\n\nBut o1-mini, OpenAI's reasoning model, subtracted 5. It got 185.\n\nLlama did the same thing. Subtracted 5. Got 185.\n\nThey didn't reason through the problem. They saw the number 5, saw a sentence that sounded like it mattered, and blindly turned it into a subtraction.\n\nThe models do not understand what subtraction means. They see a pattern that looks like subtraction and apply it. That is all.\n\nApple tested this across all models. They call the dataset \"GSM-NoOp\" — as in, the added clause is a no-operation. It does nothing. It changes nothing.\n\nThe results are catastrophic.\n\nPhi-3-mini dropped over 65%. More than half of its \"math ability\" vanished from one irrelevant sentence.\n\nGPT-4o dropped from 94.9% to 63.1%.\n\no1-mini dropped from 94.5% to 66.0%.\n\no1-preview, OpenAI's most advanced reasoning model at the time, dropped from 92.7% to 77.4%.\n\nEven giving the models 8 examples of the exact same question beforehand, with the correct solution shown each time, barely helped. The models still fell for the irrelevant clause.\n\nThis means it's not a prompting problem. It's not a context problem. It's structural.\n\nThe Apple researchers also found that models convert words into math operations without understanding what those words mean. They see the word \"discount\" and multiply. They see a number near the word \"smaller\" and subtract. Regardless of whether it makes any sense.\n\nThe paper's exact words: \"current LLMs are not capable of genuine logical reasoning; instead, they attempt to replicate the reasoning steps observed in their training data.\"\n\nAnd: \"LLMs likely perform a form of probabilistic pattern-matching and searching to find closest seen data during training without proper understanding of concepts.\"\n\nThey also tested what happens when you increase the number of steps in a problem. Performance didn't just decrease. The rate of decrease accelerated. Adding two extra clauses to a problem dropped Gemma2-9b from 84.4% to 41.8%. Phi-3.5-mini from 87.6% to 44.8%. The more thinking required, the more the models collapse.\n\nA real reasoner would slow down and work through it. These models don't slow down. They pattern-match. And when the pattern becomes complex enough, they crash.\n\nThis paper was published at ICLR 2025, one of the most prestigious AI conferences in the world.\n\nYou are using AI to help you make financial decisions. To check legal documents. To solve problems at work. To help your children with homework. And Apple just proved that the AI is not thinking about any of it. It is pattern matching. And the moment something unexpected shows up in your question, it breaks. It does not tell you it broke. It just quietly gives you the wrong answer with full confidence.", "summary": "RT by @ylecun: 🚨SHOCKING: Apple just proved that AI models cannot do math. Not advanced math. Grade ", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "X-Yann LeCun", "source_icon": "🐦", "link": "https://x.com/heynavtoor/status/2041243558833987600", "pub_date": "04-06 19:56", "image": "https://nitter.net/pic/media%2FHFP0MtobEAA3LPQ.png", "reading_minutes": 1}, {"title": "从上下文到经验资产：OpenClaw 热潮下的 Agent 记忆系统工程实践｜QCon北京", "summary": "从上下文到经验资产：OpenClaw 热潮下的 Agent 记忆系统工程实践｜QCon北京", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "AI前线", "source_icon": "🚀", "link": "https://www.infoq.cn/article/IQfviaUpKcyUVudfrzip?utm_source=rss&utm_medium=article", "pub_date": "04-07 14:03", "image": "", "reading_minutes": 1}, {"title": "4 days left to save close to $500 on TechCrunch Disrupt 2026 passes", "summary": "4 days left to save close to $500 on TechCrunch Disrupt 2026 passes", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/07/4-days-left-to-save-close-to-500-on-techcrunch-disrupt-2026-passes/", "pub_date": "04-07 14:00", "image": "", "reading_minutes": 1}, {"title": "The AI gold rush is pulling private wealth into riskier, earlier bets", "summary": "The AI gold rush is pulling private wealth into riskier, earlier bets", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/07/the-ai-gold-rush-is-pulling-private-wealth-into-riskier-earlier-bets/", "pub_date": "04-07 13:00", "image": "", "reading_minutes": 1}, {"title": "哈萨比斯传记里讲了好多八卦啊", "summary": "哈萨比斯传记里讲了好多八卦啊", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/397553.html", "pub_date": "04-07 08:45", "image": "", "reading_minutes": 1}, {"title": "印奇带队千里首个完整年：营收近百亿，智驾毛利率达30.8%", "summary": "印奇带队千里首个完整年：营收近百亿，智驾毛利率达30.8%", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/397523.html", "pub_date": "04-07 08:22", "image": "", "reading_minutes": 1}, {"title": "像素蛋糕9.0：一场关于AI与修图的颠覆革命", "summary": "像素蛋糕9.0：一场关于AI与修图的颠覆革命", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/397517.html", "pub_date": "04-07 07:34", "image": "", "reading_minutes": 1}, {"title": "“Claude Code更新废了”！热议Issue：思考深度下降67%，已无法胜任复杂的工程任务", "summary": "“Claude Code更新废了”！热议Issue：思考深度下降67%，已无法胜任复杂的工程任务", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396958.html", "pub_date": "04-07 06:13", "image": "", "reading_minutes": 1}, {"title": "卡帕西没做完的，开源社区48小时搞定了！完全体知识库，token省70倍", "summary": "卡帕西没做完的，开源社区48小时搞定了！完全体知识库，token省70倍", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396983.html", "pub_date": "04-07 05:50", "image": "", "reading_minutes": 1}, {"title": "AI startup Rocket offers vibe McKinsey-style reports at a fraction of the cost", "summary": "AI startup Rocket offers vibe McKinsey-style reports at a fraction of the cost", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/06/indian-startup-rocket-wants-its-ai-to-do-mckinsey-style-consulting-at-a-fraction-of-the-cost/", "pub_date": "04-07 05:30", "image": "", "reading_minutes": 1}, {"title": "下一代OpenClaw来了？“龙虾之父”称将率先支持阿里千问", "summary": "下一代OpenClaw来了？“龙虾之父”称将率先支持阿里千问", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396955.html", "pub_date": "04-07 04:02", "image": "", "reading_minutes": 1}, {"title": "持续霸榜！阿里千问3.6Plus问鼎全球大模型调用周榜冠军", "summary": "持续霸榜！阿里千问3.6Plus问鼎全球大模型调用周榜冠军", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396950.html", "pub_date": "04-07 04:00", "image": "", "reading_minutes": 1}, {"title": "23天靠AI短片赚100万！非科班出身逆袭影视区，郭帆导演拍手叫好", "summary": "23天靠AI短片赚100万！非科班出身逆袭影视区，郭帆导演拍手叫好", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "量子位", "source_icon": "⚛️", "link": "https://www.qbitai.com/2026/04/396890.html", "pub_date": "04-07 02:36", "image": "", "reading_minutes": 1}, {"title": "OpenAI alums have been quietly investing from a new, potentially $100M fund", "summary": "OpenAI alums have been quietly investing from a new, potentially $100M fund", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/06/openai-alums-have-been-quietly-investing-from-a-new-potentially-100m-fund/", "pub_date": "04-06 21:54", "image": "", "reading_minutes": 1}, {"title": "Google quietly launched an AI dictation app that works offline", "summary": "Google quietly launched an AI dictation app that works offline", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "TechCrunch AI", "source_icon": "💡", "link": "https://techcrunch.com/2026/04/06/google-quietly-releases-an-offline-first-ai-dictation-app-on-ios/", "pub_date": "04-06 18:54", "image": "", "reading_minutes": 1}, {"title": "TTD与阳狮纠纷，是AI广告革命下的一个切面", "summary": "TTD与阳狮纠纷，是AI广告革命下的一个切面", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "虎嗅科技", "source_icon": "🐯", "link": "https://www.huxiu.com/article/4848645.html", "pub_date": "04-07 13:23", "image": "https://img.huxiucdn.com/ai/ai-article-cover/202604/07/4848645-prod-kl-1.png", "reading_minutes": 1}, {"title": "扎堆发布AI视频工具，大厂争当创作者的“缪斯”", "summary": "扎堆发布AI视频工具，大厂争当创作者的“缪斯”", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756670078927624", "pub_date": "04-07 13:16", "image": "", "reading_minutes": 1}, {"title": "Claude爆火研究漏引华人团队成果，已挨打立正道歉", "summary": "Claude爆火研究漏引华人团队成果，已挨打立正道歉", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756573700735492", "pub_date": "04-07 13:12", "image": "", "reading_minutes": 1}, {"title": "AI洗牌音乐界，但创作者还没赚到钱", "summary": "AI洗牌音乐界，但创作者还没赚到钱", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756683077677568", "pub_date": "04-07 13:09", "image": "", "reading_minutes": 1}, {"title": "别被6亿利润“骗”了，最赚钱的硬件，恰恰是宇树的最大风险", "summary": "别被6亿利润“骗”了，最赚钱的硬件，恰恰是宇树的最大风险", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756656728752900", "pub_date": "04-07 13:00", "image": "", "reading_minutes": 1}, {"title": "泡泡玛特暴跌，代工厂疯涨，潮玩行业IPO还有救吗？", "summary": "泡泡玛特暴跌，代工厂疯涨，潮玩行业IPO还有救吗？", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756656539370244", "pub_date": "04-07 12:58", "image": "", "reading_minutes": 1}, {"title": "Claude灾难级大宕机，全球开发者集体炸锅，Anthropic三连翻车被怒喷", "summary": "Claude灾难级大宕机，全球开发者集体炸锅，Anthropic三连翻车被怒喷", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756568883151368", "pub_date": "04-07 12:32", "image": "", "reading_minutes": 1}, {"title": "抢打工人饭碗的，真是AI吗？", "summary": "抢打工人饭碗的，真是AI吗？", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756629408956937", "pub_date": "04-07 12:23", "image": "", "reading_minutes": 1}, {"title": "完球了，GPT-4o之母宣布离职OpenAI", "summary": "完球了，GPT-4o之母宣布离职OpenAI", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756573443588609", "pub_date": "04-07 12:18", "image": "", "reading_minutes": 1}, {"title": "2026企业AI大考：别秀PPT，亮出你的「用虾」真功夫", "summary": "2026企业AI大考：别秀PPT，亮出你的「用虾」真功夫", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "36氪 AI搜索", "source_icon": "🔎", "link": "https://www.36kr.com/p/3756720060793347", "pub_date": "04-07 12:16", "image": "", "reading_minutes": 1}, {"title": "Every GPU That Mattered", "summary": "Every GPU That Mattered", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "Hacker News AI", "source_icon": "🔥", "link": "https://sheets.works/data-viz/every-gpu", "pub_date": "04-07 08:38", "image": "", "reading_minutes": 1}, {"title": "「国产龙虾谁能打过OpenClaw & 你敢让微信龙虾碰代码吗」沸点获奖名单公示｜本周互动话题上新🎊", "summary": "「国产龙虾谁能打过OpenClaw & 你敢让微信龙虾碰代码吗」沸点获奖名单公示｜本周互动话题上新🎊", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "掘金 AI", "source_icon": "💎", "link": "https://juejin.cn/post/7625528557731037230", "pub_date": "04-07 07:01", "image": "https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/4ed161037661420db43b1429895f2b3f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5rK454K55bCP5Yqp5omL:q75.awebp?rk3s=f64ab15b&amp;x-expires=1776150073&amp;x-signature=EQ%2BritNrmmjyeb%2F6SupaEDKmKiI%3D", "reading_minutes": 1}, {"title": "派早报：OpenAI 发布文章探讨 AI 时代的政策建议等", "summary": "派早报：OpenAI 发布文章探讨 AI 时代的政策建议等", "why_it_matters": "", "key_details": [], "background": "", "deep_analysis": "", "importance": 1, "categories": ["其他"], "source_type": "news", "source_name": "少数派", "source_icon": "📱", "link": "https://sspai.com/post/108326", "pub_date": "04-07 00:18", "image": "https://cdnfile.sspai.com/2026/4/7/article/dc493d77-eeb4-c33b-b92b-39b2b7876228.png", "reading_minutes": 1}];
 const typeLabels = {"paper":"学术论文","news":"新闻报道","official":"官方发布","opinion":"观点文章","community":"社区讨论","video":"视频"};
 
 function openModal(idx) {
     const a = __data[idx];
     if (!a) return;
 
-    let imgHtml = a.image ? '<img class="m-img" src="' + a.image + '" onerror="this.style.display=\'none\'" alt="">' : '';
+    // Hero image block (full-bleed top)
+    let heroHtml = '';
+    if (a.image) {
+        heroHtml = '<div class="m-hero"><img src="' + a.image + '" onerror="this.parentElement.style.display=&#39;none&#39;" alt=""><div class="m-hero-gradient"></div></div>';
+    }
 
-    let metaParts = (a.categories||[]).slice(0,2);
+    // Meta pills
+    let metaParts = [a.source_icon + ' ' + a.source_name, a.pub_date];
+    (a.categories||[]).slice(0,2).forEach(function(c) { metaParts.push(c); });
     if (a.source_type) metaParts.push(typeLabels[a.source_type]||a.source_type);
-    metaParts.push(a.reading_minutes + ' min');
     let pills = metaParts.join(' <span class="m-pill-sep">·</span> ');
 
-    // 深度解读区 — 卡片上看不到的内容
+    // Why it matters
+    let whyHtml = '';
+    if (a.why_it_matters) {
+        whyHtml = '<div class="m-why"><div class="m-why-label">为什么值得关注</div>' + a.why_it_matters + '</div>';
+    }
+
+    // Key details — bullet list
+    let detailsHtml = '';
+    if (a.key_details && a.key_details.length > 0) {
+        let lis = '';
+        a.key_details.forEach(function(d) { lis += '<li>' + d + '</li>'; });
+        detailsHtml = '<div class="m-details"><ul>' + lis + '</ul></div>';
+    }
+
+    // Deep sections (background + analysis)
     let deepHtml = '';
     if (a.background) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text m-bg">' + a.background + '</div></div>';
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text">' + a.background + '</div></div>';
     }
     if (a.deep_analysis) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text m-da">' + a.deep_analysis + '</div></div>';
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text">' + a.deep_analysis + '</div></div>';
     }
     if (deepHtml) {
         deepHtml = '<div class="m-deep">' + deepHtml + '</div>';
     }
 
     document.getElementById('modalContent').innerHTML =
+        heroHtml +
         '<button class="m-close" onclick="closeModal()">✕</button>' +
-        '<div class="m-pills">' + pills + '</div>' +
-        imgHtml +
-        '<div class="m-title">' + (a.title || a.summary) + '</div>' +
-        '<div class="m-summary">' + a.summary + '</div>' +
-        deepHtml +
-        '<div class="m-footer"><span class="m-footer-src">' + a.source_icon + ' ' + a.source_name + ' · ' + a.pub_date + '</span>' +
-        '<a href="' + a.link + '" target="_blank" rel="noopener" class="m-action" onclick="event.preventDefault();event.stopPropagation();window.open(this.href,&#39;_blank&#39;);return false;">阅读原文 →</a></div>';
+        '<div class="m-body">' +
+            '<div class="m-pills">' + pills + '</div>' +
+            '<div class="m-summary">' + a.summary + '</div>' +
+            whyHtml +
+            detailsHtml +
+            deepHtml +
+            '<div class="m-footer">' +
+                '<span class="m-footer-src">' + a.reading_minutes + ' min read</span>' +
+                '<a href="' + a.link + '" target="_blank" rel="noopener" class="m-action" onclick="event.preventDefault();event.stopPropagation();window.open(this.href,&#39;_blank&#39;);return false;">阅读原文 →</a>' +
+            '</div>' +
+        '</div>';
 
     document.getElementById('modalOverlay').classList.add('show');
     document.body.style.overflow = 'hidden';
+    // Scroll modal to top
+    document.getElementById('modalOverlay').scrollTop = 0;
 }
 
 function closeModal() {
@@ -1033,30 +1112,50 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-// Card click — event delegation for Telegram WebView compatibility
+// Card click — event delegation with scroll vs tap detection
 (function() {
     var grid = document.getElementById('grid');
     if (!grid) return;
-    var lastTap = 0;
-    function handleCard(e) {
-        var card = e.target.closest('.card');
-        if (!card) return;
+    var touchStartX = 0, touchStartY = 0, touchStartTime = 0;
+    var TAP_THRESHOLD = 10;  // px — finger movement within this = tap
+    var TAP_MAX_MS = 300;    // max duration for a tap
+
+    function openCard(card) {
         var idx = card.dataset.idx;
         if (idx !== undefined) openModal(parseInt(idx, 10));
     }
-    grid.addEventListener('click', handleCard);
-    // Telegram WebView sometimes swallows click on divs — also listen for touchend
-    grid.addEventListener('touchend', function(e) {
-        var now = Date.now();
-        if (now - lastTap < 300) return; // debounce
-        lastTap = now;
+
+    // Desktop click — works fine, no scroll conflict
+    grid.addEventListener('click', function(e) {
+        // Ignore if touch device (handled by touch events below)
+        if ('ontouchstart' in window) return;
         var card = e.target.closest('.card');
-        if (!card) return;
-        // Only fire if it was a tap (not a scroll)
-        if (e.changedTouches && e.changedTouches.length === 1) {
-            e.preventDefault();
-            var idx = card.dataset.idx;
-            if (idx !== undefined) openModal(parseInt(idx, 10));
+        if (card) openCard(card);
+    });
+
+    // Touch: record start position
+    grid.addEventListener('touchstart', function(e) {
+        if (e.touches.length === 1) {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            touchStartTime = Date.now();
+        }
+    }, {passive: true});
+
+    // Touch: only open if finger barely moved (tap, not scroll)
+    grid.addEventListener('touchend', function(e) {
+        if (!e.changedTouches || e.changedTouches.length !== 1) return;
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        var dy = e.changedTouches[0].clientY - touchStartY;
+        var dt = Date.now() - touchStartTime;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        // Only count as tap if finger moved less than threshold and was quick
+        if (dist < TAP_THRESHOLD && dt < TAP_MAX_MS) {
+            var card = e.target.closest('.card');
+            if (card) {
+                e.preventDefault();
+                openCard(card);
+            }
         }
     }, {passive: false});
 })();
