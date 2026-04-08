@@ -373,25 +373,20 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月08日 周三 · 22:29</div>
+    <div class="h-date">2026年04月08日 周三 · 22:48</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>20</b> 篇</span>
-        <span><b>13</b> 源</span>
+        <span><b>2</b> 篇</span>
+        <span><b>2</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
-<button class="f-btn" data-filter="大模型发布">大模型发布</button>
-<button class="f-btn" data-filter="开源生态">开源生态</button>
-<button class="f-btn" data-filter="安全与对齐">安全与对齐</button>
-<button class="f-btn" data-filter="融资与商业">融资与商业</button>
-<button class="f-btn" data-filter="具身智能">具身智能</button>
-<button class="f-btn" data-filter="行业观点">行业观点</button>
+<button class="f-btn" data-filter="学术研究">学术研究</button>
 <button class="f-btn" data-filter="其他">其他</button>
 </div>
 
@@ -399,289 +394,37 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">AI版图今日多线扩张：Anthropic发布Claude Mythos并联合45家机构筑起网络安全防线，谷歌跟进推出Gemma 4，军备竞赛持续提速；NVIDIA联合顶尖高校开源CaP-X，将LLM能力直接下沉至机器人操控，具身智能迎来关键节点。与此同时，GPT-5独立破解物理难题展示科研潜力，而OpenAI内部却深陷人才流失与管理动荡。技术跃进的背面，隐忧同步浮现：AI摄像头引发美国多城隐私争议，媒体工会因AI裁员保护罢工，Anthropic切断第三方Agent引发成本风暴。今日主旋律：AI能力边界急速外扩，而信任、治理与稳定性的裂缝也随之放大。</p>
+        <p class="br-editorial">当AI行业领袖高呼指数增长无上限，MIT的数据却给出一记冷静的回击——95%的智能体试点正在死于「无法学习」。Suleyman的乐观与ALTK-Evolve的出现并不矛盾：规模扩张是一回事，让Agent真正在实战中进化是另一回事。今日的核心命题是：速度之外，我们还需要「会成长」的AI。</p>
     </section>
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card card--featured" data-cat="大模型发布|开源生态" data-idx="0"
+        <div class="card" data-cat="AI工具|学术研究" data-idx="0"
              style="animation-delay:0ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">大模型发布 · 开源生态</span>
+            <span class="z1-left">AI工具 · 学术研究</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">谷歌DeepMind发布Gemma 4模型，已可在Googl</div>
-                <div class="z2"><div class="z2-point">• Gemma 4模型权重已开放下载，支持HuggingFace、Kaggle、Ollama多平台获取</div><div class="z2-point">• 开发者可直接在Google AI Studio平台上开始构建和测试应用</div><div class="z2-point">• 谷歌DeepMind官方Twitter账号宣布发布，信息来源权威可信</div></div>
-                <div class="z3"><div class="z3-why">Gemma系列持续迭代，开发者可立即上手构建应用，开源生态进一步丰富，与Meta Llama系列的竞争加剧。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind · </div>
+                <div class="card-title">MIT研究显示95%的智能体试点因无法在职学习而失败，ALT</div>
+                <div class="z2"><div class="z2-point">• MIT研究：95%的智能体试点失败根源在于无法适应性学习，ALTK-Evolve针对此学习缺口设计</div><div class="z2-point">• 系统将交互轨迹转化为候选准则，过滤质量后在行动时注入最相关指导，强调原则而非记录</div><div class="z2-point">• 在AppWorld基准测试中，ReAct智能体配合检索到的Top-5历史准则，在未见任务集上显著提升完成率</div></div>
+                <div class="z3"><div class="z3-why">大多数AI智能体只会背「食谱」，不会积累「厨艺直觉」。ALTK-Evolve让智能体像有经验的厨师一样，从每次任务中提炼规律并举一反三，是迈向真正自主智能体的关键一步。</div></div>
+                <div class="z5">🤗 Hugging Face Blog</div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="具身智能|开源生态" data-idx="1"
+        <div class="card" data-cat="其他" data-idx="1"
              style="animation-delay:25ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039345467038081024%2Fimg%2F0d_LMqHb3PiFLReP.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">具身智能 · 开源生态</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">NVIDIA研究员Jim Fan团队开源CaP-X，将LLM</div>
-                <div class="z2"><div class="z2-point">• CaP-X整合感知（SAM3分割、Molmo指向）、控制（IK求解、抓取规划）等API，支持机械臂和人形机器人</div><div class="z2-point">• CaP-Gym包含187个操控任务，覆盖桌面、双臂、移动操控场景，是首个专为LLM设计的物理能力评测集</div><div class="z2-point">• CaP-RL让7B开源模型经50次迭代训练后成功率从20%跃升至72%，程序可迁移至真实机器人</div></div>
-                <div class="z3"><div class="z3-why">这标志着LLM智能体从虚拟世界迈向真实物理世界的关键一步，为机器人具身智能提供了无需任务特定训练的通用框架。</div></div>
-                <div class="z5">🐦 X-Jim Fan · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI政策监管|安全与对齐" data-idx="2"
-             style="animation-delay:50ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI政策监管 · 安全与对齐</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">OpenAI发布儿童安全蓝图，涵盖安全防护、适龄设计与多方协</div>
-                <div class="z2"><div class="z2-point">• OpenAI提出专项儿童安全蓝图，覆盖AI产品设计全流程</div><div class="z2-point">• 强调适龄化设计理念，针对不同年龄段设置差异化内容防护机制</div><div class="z2-point">• 倡导政府、企业、家长多方协作共建青少年安全AI环境</div></div>
-                <div class="z3"><div class="z3-why">AI产品向青少年普及加速，OpenAI此举标志着头部AI公司开始系统性建立未成年人保护框架，可能推动行业形成新规范。</div></div>
-                <div class="z5">🤖 OpenAI Blog · </div>
-            </div>
-        </div>
-        <div class="card card--featured" data-cat="行业观点|融资与商业" data-idx="3"
-             style="animation-delay:75ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">行业观点 · 融资与商业</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">OpenAI面临高管离职潮、项目停摆、内部争议及竞争加剧等多</div>
-                <div class="z2"><div class="z2-point">• 五角大楼合同引发内外争议，CEO Altman承认公司表现&#x27;机会主义且草率&#x27;</div><div class="z2-point">• Sora视频应用突然停止、与迪士尼合作闪崩、ChatGPT性功能搁置，多项目接连夭折</div><div class="z2-point">• 首席应用官Simo病假、COO Lightcap转岗、CMO离职，高层集体震荡</div></div>
-                <div class="z3"><div class="z3-why">拥有8520亿美元估值的AI行业领头羊正出现明显裂缝，其战略方向混乱可能给竞争对手留下追赶窗口。</div></div>
-                <div class="z5">⚡ The Verge AI · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="开源生态|AI工具" data-idx="4"
-             style="animation-delay:100ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">开源生态 · AI工具</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Hugging Face宣布Safetensors加入Lin</div>
-                <div class="z2"><div class="z2-point">• Safetensors已成为Hugging Face Hub默认格式，被数万个模型采用，覆盖所有模态</div><div class="z2-point">• 商标、仓库和项目治理移交Linux基金会，原维护者Luc和Daniel留任技术指导委员会</div><div class="z2-point">• 正在与PyTorch团队合作，推动Safetensors成为PyTorch核心的序列化格式</div></div>
-                <div class="z3"><div class="z3-why">开源ML生态系统的核心模型格式从单一公司控制转为社区共治，长期稳定性和可信度大幅提升。</div></div>
-                <div class="z5">🤗 Hugging Face Blog · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="融资与商业|行业观点" data-idx="5"
-             style="animation-delay:125ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">融资与商业 · 行业观点</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">OpenAI宣布收购科技播客节目TBPN，节目将继续每周工作</div>
-                <div class="z2"><div class="z2-point">• TBPN被OpenAI正式收购，但节目形式和播出时间保持不变</div><div class="z2-point">• 主持人与Sam Altman有超过十年合作关系，Altman曾于2013年投资其第一家公司</div><div class="z2-point">• 节目将获得更多资源支持，继续每周工作日直播</div></div>
-                <div class="z3"><div class="z3-why">OpenAI开始布局媒体内容领域，通过收购播客扩大品牌影响力和公众话语权，这是AI公司进军内容媒体的新信号。</div></div>
-                <div class="z5">🐦 X-Sam Altman · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI个性化|个人知识管理" data-idx="6"
-             style="animation-delay:150ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2040562032819486720%2Fimg%2FjVrKry6tC4BPFnCg.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI个性化 · 个人知识管理</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">开发者Farza构建个人Wiki作为AI记忆载体，主张显式、</div>
-                <div class="z2"><div class="z2-point">• 显式可检视：记忆以Markdown Wiki形式存储，用户可直接查看、编辑、管理AI所知内容</div><div class="z2-point">• 数据主权：文件存于本地，不绑定任何AI提供商，支持跨工具互操作（Obsidian、CLI等）</div><div class="z2-point">• BYOAI理念：任何AI（Claude、Codex等）均可接入同一Wiki，甚至可基于Wiki对开源模型做微调</div></div>
-                <div class="z3"><div class="z3-why">挑战主流AI「隐式记忆」模式，提出数据主权新范式，或引领个人AI知识库产品方向。</div></div>
-                <div class="z5">🐦 X-Andrej Karpathy · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="7"
-             style="animation-delay:175ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039732067982786561%2Fimg%2FHk4SaihvFXhazpTZ.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">谷歌DeepMind宣布其模型支持原生工具调用，可构建能规划</div>
-                <div class="z2"><div class="z2-point">• 支持原生工具调用，可搜索数据库、触发API等多步骤任务执行</div><div class="z2-point">• 256K上下文窗口，可分析完整代码库并保留复杂操作历史</div><div class="z2-point">• 具备规划与应用导航能力，支持构建端到端自主智能体</div></div>
-                <div class="z3"><div class="z3-why">256K超长上下文加原生工具调用，意味着AI智能体可以真正处理完整代码库和复杂业务流程，离实用化Agent又近了一步。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="8"
-             style="animation-delay:200ms">
-            <div class="card-img" style="background-image:url('https://wp.technologyreview.com/wp-content/uploads/2024/06/USWDS_SPREAD.jpg?w=3000')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">MIT科技评论日报涵盖多项AI动态：Anthropic Cl</div>
-                <div class="z2"><div class="z2-point">• Anthropic Claude Mythos被称为网络安全&#x27;大考验&#x27;，苹果、谷歌、微软已加入相关漏洞披露计划</div><div class="z2-point">• 阿里巴巴Accio等AI工具将产品选品和供应商寻源从数周压缩至单次对话，降低全球制造门槛</div><div class="z2-point">• 谷歌AI Overviews准确率约90%，但规模巨大导致每小时仍产出数百万条错误信息</div></div>
-                <div class="z3"><div class="z3-why">AI正在同时扮演安全猎手、商业加速器和信息风险源三种角色，说明AI影响已渗透到网络安全、电商和信息基础设施等多个核心领域。</div></div>
-                <div class="z5">🎓 MIT Tech Review · 04-08 12:10</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="9"
-             style="animation-delay:225ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2041539572912590848%2Fimg%2FPe_wUCBQZPO68zfN.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">新研究将层级规划引入JEPA世界模型，使其具备长程、非贪婪的</div>
-                <div class="z2"><div class="z2-summary">新研究将层级规划引入JEPA世界模型，使其具备长程、非贪婪的决策能力，被LeCun转发推荐。</div></div>
-                
-                <div class="z5">🐦 X-Yann LeCun · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="10"
-             style="animation-delay:250ms">
             
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Atlassian发布Confluence视觉AI工具Rem</div>
-                <div class="z2"><div class="z2-point">• Remix工具可将Confluence中的数据自动转换为图表、图形等视觉资产，无需切换应用</div><div class="z2-point">• 三个MCP智能体分别连接Lovable（原型）、Replit（starter应用）、Gamma（演示文稿）</div><div class="z2-point">• 这是Atlassian继2月Jira加入AI智能体后，持续将AI嵌入现有工作流的又一步</div></div>
-                <div class="z3"><div class="z3-why">企业协作软件正加速AI化，文档不再只是存档，而是直接生成原型、演示和应用的起点，改变团队工作方式。</div></div>
-                <div class="z5">💡 TechCrunch AI · 04-08 13:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="11"
-             style="animation-delay:275ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">ProPublica约150名工会成员因AI使用规范、裁员保</div>
-                <div class="z2"><div class="z2-point">• ProPublica Guild约150名成员于2026年4月8日发起24小时罢工，核心诉求包括AI使用规范、裁员保护和薪资待遇</div><div class="z2-point">• 管理层单方面推行AI政策，未经集体谈判，NewsGuild已就此提出不公平劳动行为指控</div><div class="z2-point">• 工会要求在合同中明确规定AI不得用于撰写文章或生成图片视频等内容</div></div>
-                <div class="z3"><div class="z3-why">新闻业工会正在将AI使用权写入劳动合同，这将成为媒体行业劳资谈判的新标准，影响AI在新闻领域的落地方式。</div></div>
-                <div class="z5">⚡ The Verge AI · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="12"
-             style="animation-delay:300ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">2026年以来，美国数十个城市暂停或终止与Flock Saf</div>
-                <div class="z2"><div class="z2-point">• 华盛顿大学研究显示，至少8个执法机构直接向ICE共享Flock数据，10个机构允许后门访问</div><div class="z2-point">• Ring宣布切断与Flock的合作计划，此前二者拟整合家用安防摄像头供警方调查使用</div><div class="z2-point">• Flock摄像头功能已超出车牌识别范畴，可捕获车辆颜色、类型等特征，并向多机构共享数据</div></div>
-                <div class="z3"><div class="z3-why">这表明公众对AI监控技术的反弹正在形成实质性政策压力，隐私权与执法效率的博弈将重塑AI监控市场格局。</div></div>
-                <div class="z5">🔥 Hacker News AI · 04-08 12:26</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="13"
-             style="animation-delay:325ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">MegaTrain系统将参数存储于CPU内存，以GPU为瞬态</div>
-                <div class="z2"><div class="z2-point">• 单张H200 GPU配合1.5TB主机内存，可稳定训练最大120B参数模型</div><div class="z2-point">• 训练14B模型时吞吐量达DeepSpeed ZeRO-3 CPU卸载方案的1.84倍</div><div class="z2-point">• 支持7B模型在单张GH200上以512k超长上下文进行训练</div></div>
-                <div class="z3"><div class="z3-why">打破了大模型训练必须多卡集群的认知，让个人或小团队用单机训练百亿级模型成为可能，大幅降低研究门槛。</div></div>
-                <div class="z5">🔥 Hacker News AI · 04-08 12:19</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="14"
-             style="animation-delay:350ms">
-            <div class="card-img" style="background-image:url('https://media.wired.com/photos/69d4e951d8b67218cd4b81ad/master/pass/04072026_New%20Anthropic%20Industry%20Coalition%20Racing%20to%20Use%20Private%20Claude%20Mythos%20Model%20To%20Secure%20Software.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Anthropic正式发布Claude Mythos Pre</div>
-                <div class="z2"><div class="z2-point">• Project Glasswing联盟包含微软、苹果、谷歌、AWS、英伟达、博通等逾45家科技与关键基础设施企业</div><div class="z2-point">• Mythos Preview尚未公开发布，联盟成员可优先访问以测试自身系统的安全漏洞</div><div class="z2-point">• Dario Amodei表示该模型并非专门训练于网络安全，而是代码能力溢出带来了强大的攻击与渗透能力</div></div>
-                <div class="z3"><div class="z3-why">AI模型已能自动发现漏洞并构造攻击链，现有安全范式正面临颠覆性挑战，各大科技公司需在模型公开前抢先修补自身系统。</div></div>
-                <div class="z5">📡 Wired AI · 04-07 18:49</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="15"
-             style="animation-delay:375ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHFD4KSmWkAAdI3Z.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Andrej Karpathy认为AI将使普通公民具备处理海</div>
-                <div class="z2"><div class="z2-point">• 政府问责的瓶颈不在数据获取，而在处理能力——AI正在消解这一瓶颈</div><div class="z2-point">• AI可追踪立法变化、议员投票与其表态的一致性、游说关系图谱、监管俘获等</div><div class="z2-point">• 地方政府因关注度低更值得关注：市议会、分区决策、学区、公用事业等</div></div>
-                <div class="z3"><div class="z3-why">过去只有专业记者才能解读的4000页法案、游说披露、预算数据，AI让普通人也能参与政府监督，这可能重塑民主社会的权力结构。</div></div>
-                <div class="z5">🐦 X-Andrej Karpathy · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="16"
-             style="animation-delay:400ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039342077528637440%2Fimg%2FeF-lkat0iP7ukdIF.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">NVIDIA、伯克利、CMU、斯坦福联合推出CaP-X开源框</div>
-                <div class="z2"><div class="z2-point">• CaP-X是开源框架+基准，专门评测编程智能体在机器人领域的能力</div><div class="z2-point">• 智能体在仿真和真实机器人上执行代码，观察结果并迭代提升代码可靠性</div><div class="z2-point">• 由NVIDIA、UC Berkeley、CMU、Stanford四大顶尖机构联合研发</div></div>
-                <div class="z3"><div class="z3-why">编程智能体不再只会写软件，开始能驱动真实机器人——这标志着LLM代码能力向物理世界渗透的关键一步。</div></div>
-                <div class="z5">🐦 X-Jim Fan · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="17"
-             style="animation-delay:425ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041386973001310208%2FwgY91HfR%3Fformat%3Djpg%26name%3D420x420_2')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">NVIDIA与伯克利、斯坦福、CMU联合发布并开源具身智能训</div>
-                <div class="z2"><div class="z2-point">• NVIDIA、UC Berkeley、Stanford、CMU四家顶级机构联合研发</div><div class="z2-point">• 全部代码以MIT协议开源，包含训练框架与仿真环境capgym</div><div class="z2-point">• 由具身AI领域知名研究者Jim Fan与Ken Goldberg共同指导</div></div>
-                <div class="z3"><div class="z3-why">顶级机构联合开源意味着机器人学习的基础设施门槛大幅降低，社区可直接复用高质量训练环境加速研究。</div></div>
-                <div class="z5">🐦 X-Jim Fan · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="18"
-             style="animation-delay:450ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">GPT-5在18分钟内独立推导出黑洞隐藏对称性方程，并在三晚</div>
-                <div class="z2"><div class="z2-summary">GPT-5在18分钟内独立推导出黑洞隐藏对称性方程，并在三晚内协助破解40年优化难题，多位顶尖科学家因此转投OpenAI。</div></div>
-                
-                <div class="z5">🔎 36氪 AI搜索 · </div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="19"
-             style="animation-delay:475ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Anthropic于4月4日切断Claude订阅对OpenC</div>
-                <div class="z2"><div class="z2-summary">Anthropic于4月4日切断Claude订阅对OpenClaw等第三方Agent的支持，用户须改用API按token付费，引发AI编程工具使用成本大讨论。</div></div>
-                
-                <div class="z5">🔎 36氪 AI搜索 · </div>
+                <div class="card-title">微软AI负责人Mustafa Suleyman认为，AI发展</div>
+                <div class="z2"><div class="z2-point">• 人类进化于线性世界，本能上难以理解指数级增长的真实速度</div><div class="z2-point">• Suleyman认为AI能力提升的底层驱动力仍然强劲，短期内看不到明显瓶颈</div><div class="z2-point">• 这一判断与部分研究者认为大模型scaling效益递减的观点形成对立</div></div>
+                <div class="z3"><div class="z3-why">来自DeepMind联合创始人、现微软AI CEO的判断，对行业信心和投资方向具有重要指向意义，直接回应了近期关于AI scaling law是否失效的争议。</div></div>
+                <div class="z5">🎓 MIT Tech Review · 04-08 14:00</div>
             </div>
         </div></div>
 
@@ -692,7 +435,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>13</b> 个信息源 · <b>20</b> 篇资讯 · 2026年04月08日
+    AI 早报 · <b>2</b> 个信息源 · <b>2</b> 篇资讯 · 2026年04月08日
 </footer>
 
 <script src="modal_data.js"></script>
@@ -717,21 +460,17 @@ function openModal(idx) {
     }
 
     // Source bar
-    let srcBar = '<div class="m-src-bar">' + a.source_icon + ' ' + a.source_name + ' · ' + a.pub_date + ' · ' + (typeLabels[a.source_type]||'') + '</div>';
+    let srcParts = [a.source_icon + ' ' + a.source_name];
+    if (a.pub_date) srcParts.push(a.pub_date);
+    if (typeLabels[a.source_type]) srcParts.push(typeLabels[a.source_type]);
+    let srcBar = '<div class="m-src-bar">' + srcParts.join(' · ') + '</div>';
 
-    // 要点概要（key_details）
-    let keyPointsHtml = '';
-    if (a.key_details && a.key_details.length > 0) {
-        let pts = a.key_details.map(function(d) { return '<li>' + d + '</li>'; }).join('');
-        keyPointsHtml = '<div class="m-keypoints"><div class="m-keypoints-label">核心要点</div><ul>' + pts + '</ul></div>';
-    }
-
-    // Detailed content — the main reading section
-    // Fallback to summary when detailed_content is not available
+    // Detailed content — main reading section (no key_details repetition)
     let detailedHtml = '';
-    let detailedText = a.detailed_content || a.summary || '';
-    if (detailedText) {
-        detailedHtml = '<div class="m-detailed">' + detailedText + '</div>';
+    if (a.detailed_content) {
+        detailedHtml = '<div class="m-detailed">' + a.detailed_content + '</div>';
+    } else if (a.summary) {
+        detailedHtml = '<div class="m-detailed">' + a.summary + '</div>';
     }
 
     // Article image gallery — extra images from the article page
@@ -765,7 +504,6 @@ function openModal(idx) {
         '<div class="m-body">' +
             titleHtml +
             srcBar +
-            keyPointsHtml +
             detailedHtml +
             galleryHtml +
             deepHtml +
