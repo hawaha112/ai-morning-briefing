@@ -373,20 +373,21 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月08日 周三 · 22:48</div>
+    <div class="h-date">2026年04月08日 周三 · 23:12</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>2</b> 篇</span>
-        <span><b>2</b> 源</span>
+        <span><b>3</b> 篇</span>
+        <span><b>3</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
-<button class="f-btn" data-filter="学术研究">学术研究</button>
+<button class="f-btn" data-filter="大模型发布">大模型发布</button>
+<button class="f-btn" data-filter="开源生态">开源生态</button>
 <button class="f-btn" data-filter="其他">其他</button>
 </div>
 
@@ -394,23 +395,23 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">当AI行业领袖高呼指数增长无上限，MIT的数据却给出一记冷静的回击——95%的智能体试点正在死于「无法学习」。Suleyman的乐观与ALTK-Evolve的出现并不矛盾：规模扩张是一回事，让Agent真正在实战中进化是另一回事。今日的核心命题是：速度之外，我们还需要「会成长」的AI。</p>
+        <p class="br-editorial">今日AI圈三重奏：DeepMind开源Gemma 4系列，为推理与智能体赛道再添利器；Databricks联创Zaharia获ACM大奖，顺势抛出「AGI已至，但人类用错标尺」的哲学命题；与此同时，研究者已能对178个模型做写作指纹识别，AI身份溯源技术悄然成熟。开源提速、AGI定义之争、模型溯源三线并进，智能时代的边界正在多维度同步延伸。</p>
     </section>
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card" data-cat="AI工具|学术研究" data-idx="0"
+        <div class="card card--featured" data-cat="大模型发布|开源生态" data-idx="0"
              style="animation-delay:0ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">AI工具 · 学术研究</span>
+            <span class="z1-left">大模型发布 · 开源生态</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">MIT研究显示95%的智能体试点因无法在职学习而失败，ALT</div>
-                <div class="z2"><div class="z2-point">• MIT研究：95%的智能体试点失败根源在于无法适应性学习，ALTK-Evolve针对此学习缺口设计</div><div class="z2-point">• 系统将交互轨迹转化为候选准则，过滤质量后在行动时注入最相关指导，强调原则而非记录</div><div class="z2-point">• 在AppWorld基准测试中，ReAct智能体配合检索到的Top-5历史准则，在未见任务集上显著提升完成率</div></div>
-                <div class="z3"><div class="z3-why">大多数AI智能体只会背「食谱」，不会积累「厨艺直觉」。ALTK-Evolve让智能体像有经验的厨师一样，从每次任务中提炼规律并举一反三，是迈向真正自主智能体的关键一步。</div></div>
-                <div class="z5">🤗 Hugging Face Blog</div>
+                <div class="card-title">谷歌DeepMind发布Gemma 4系列开源模型，采用Ap</div>
+                <div class="z2"><div class="z2-point">• 采用Apache 2.0开源许可证，支持商业使用无限制</div><div class="z2-point">• 专为高级推理和Agentic工作流场景优化设计</div><div class="z2-point">• 支持本地硬件部署，保障数据隐私与离线使用</div></div>
+                <div class="z3"><div class="z3-why">Apache 2.0协议意味着商业友好，开发者可免费本地部署用于生产，对抗Meta Llama系列的重要砝码。</div></div>
+                <div class="z5">🐦 X-GoogleDeepMind</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="1"
@@ -421,10 +422,24 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">微软AI负责人Mustafa Suleyman认为，AI发展</div>
-                <div class="z2"><div class="z2-point">• 人类进化于线性世界，本能上难以理解指数级增长的真实速度</div><div class="z2-point">• Suleyman认为AI能力提升的底层驱动力仍然强劲，短期内看不到明显瓶颈</div><div class="z2-point">• 这一判断与部分研究者认为大模型scaling效益递减的观点形成对立</div></div>
-                <div class="z3"><div class="z3-why">来自DeepMind联合创始人、现微软AI CEO的判断，对行业信心和投资方向具有重要指向意义，直接回应了近期关于AI scaling law是否失效的争议。</div></div>
-                <div class="z5">🎓 MIT Tech Review · 04-08 14:00</div>
+                <div class="card-title">Databricks联创兼CTO Matei Zaharia</div>
+                <div class="z2"><div class="z2-point">• Zaharia获ACM计算奖（附25万美元奖金），将全额捐给慈善机构</div><div class="z2-point">• 他认为AGI已存在，但人类错误地用人类标准衡量AI能力</div><div class="z2-point">• 以OpenClaw为例警告AI Agent的安全风险：可能被黑客利用或擅自消费</div></div>
+                <div class="z3"><div class="z3-why">这位顶级工程师对AGI的重新定义，可能改变行业对AI能力边界的认知框架，也揭示了AI Agent安全风险被低估的现实。</div></div>
+                <div class="z5">💡 TechCrunch AI · 04-08 15:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="2"
+             style="animation-delay:50ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">研究团队对178个AI模型的写作风格进行指纹识别，并分析其相</div>
+                <div class="z2"><div class="z2-point">• 覆盖178个AI模型，规模较大，具有较强代表性</div><div class="z2-point">• 通过写作风格特征构建相似性聚类，揭示模型间潜在关联</div><div class="z2-point">• 可应用于AI内容检测、模型溯源及知识产权保护</div></div>
+                <div class="z3"><div class="z3-why">可用于识别模型血缘关系、检测AI生成内容，对版权、安全和模型溯源具有重要意义。</div></div>
+                <div class="z5">🔥 Hacker News AI · 04-08 14:06</div>
             </div>
         </div></div>
 
@@ -435,7 +450,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>2</b> 个信息源 · <b>2</b> 篇资讯 · 2026年04月08日
+    AI 早报 · <b>3</b> 个信息源 · <b>3</b> 篇资讯 · 2026年04月08日
 </footer>
 
 <script src="modal_data.js"></script>
