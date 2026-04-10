@@ -394,161 +394,30 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月11日 周六 · 07:09</div>
+    <div class="h-date">2026年04月11日 周六 · 07:31</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>9</b> 篇</span>
-        <span><b>6</b> 源</span>
+        <span><b>0</b> 篇</span>
+        <span><b>0</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
-<button class="f-btn" data-filter="大模型发布">大模型发布</button>
-<button class="f-btn" data-filter="开源生态">开源生态</button>
-<button class="f-btn" data-filter="产品与应用">产品与应用</button>
-<button class="f-btn" data-filter="具身智能">具身智能</button>
-<button class="f-btn" data-filter="其他">其他</button>
 </div>
 
 <!-- Briefing -->
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI圈呈现三条并行主线：NVIDIA联合顶尖高校开源CaP-X，将LLM能力延伸至物理机器人，零样本操控187项任务，具身智能迎来新标杆；Anthropic推出Claude Mythos Preview并主动公开安全漏洞报告，展示头部厂商的透明化安全策略；与此同时，法国立法推定AI侵权、Karpathy质疑内容生态质量，监管与社区层面的隐忧正在浮出水面。技术狂奔与治理滞后的张力，是今日最深层的主题。</p>
+        <p class="br-editorial">今天暂无重要 AI 新闻。</p>
     </section>
 
 <!-- Cards Grid -->
-<div class="grid" id="grid">
-        <div class="card card--featured" data-cat="产品与应用|大模型发布" data-idx="0"
-             style="animation-delay:0ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039735523569188864%2Fimg%2F4joYFVRpZuE3_iD5.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">产品与应用 · 大模型发布</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Google Vids集成Veo 3.1：高质量AI视频生成向所有用户免费开放</div>
-                <div class="z2"><div class="z2-point">• Google Vids新增Veo 3.1高质量视频生成，面向所有用户免费提供</div><div class="z2-point">• Vids定位易用型视频编辑套件，此次AI能力升级为重大功能扩展</div><div class="z2-point">• 用户可通过vids.new直接访问并开始创作</div></div>
-                <div class="z3"><div class="z3-why">顶级AI视频生成能力从付费专属走向全民免费，直接冲击Runway、Sora等竞品的商业模式，也预示AI视频创作门槛将大幅降低。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind</div>
-            </div>
-        </div>
-        <div class="card card--featured" data-cat="AI政策监管|大模型发布" data-idx="1"
-             style="animation-delay:25ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI政策监管 · 大模型发布</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">法国参议院通过AI版权法：举证责任倒置或扼杀欧洲AI创业</div>
-                <div class="z2"><div class="z2-point">• 法案新增知识产权法典L.331-4-1条：只要有&#x27;可能性迹象&#x27;，AI企业须证明未使用受保护作品</div><div class="z2-point">• Mistral CEO Arthur Mensch曾在FT发文提议对欧洲营收征1-5%贡献金，更公平但被忽视</div><div class="z2-point">• 开源模型已可在2000欧元PC上本地运行，法律无法约束，只惩罚在欧洲合规经营者</div></div>
-                <div class="z3"><div class="z3-why">欧洲本土AI公司将独自承担合规成本，而美中大厂已完成模型训练、置身事外，这是一场只惩罚守规者的不对称监管。</div></div>
-                <div class="z5">🐦 X-Yann LeCun</div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI教育|智能体技术" data-idx="2"
-             style="animation-delay:50ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2034311166793781248%2Fimg%2FGUdEhUhBtB0ipByW.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI教育 · 智能体技术</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">DeepLearning.AI联合Oracle推出智能体记忆系统新课程</div>
-                <div class="z2"><div class="z2-point">• 课程由Oracle合作开发，讲师为Richmond Alake与Nacho Martínez</div><div class="z2-point">• 涵盖Memory Manager设计、语义工具检索和写回管道三大核心模块</div><div class="z2-point">• 将工具视为过程性记忆，通过语义搜索在推理时按需检索，避免上下文膨胀</div></div>
-                <div class="z3"><div class="z3-why">智能体记忆是迈向真正自主AI系统的关键瓶颈，该课程系统性地解决了会话隔离问题，对构建长期运行的生产级Agent具有重要实践价值。</div></div>
-                <div class="z5">🐦 X-Andrew Ng</div>
-            </div>
-        </div>
-        <div class="card card--featured" data-cat="具身智能|开源生态" data-idx="3"
-             style="animation-delay:75ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041386973001310208%2FhG5NBSFb%3Fformat%3Djpg%26name%3D420x420_2')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">具身智能 · 开源生态</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">NVIDIA联合伯克利斯坦福CMU开源机器人策略框架CaP-X</div>
-                <div class="z2"><div class="z2-point">• NVIDIA、UC Berkeley、Stanford、CMU四机构联合出品，学术与工业顶级资源加持</div><div class="z2-point">• MIT许可证完全开源：代码托管于GitHub(capgym/cap-x)，配套论文发布于arXiv</div><div class="z2-point">• Ken Goldberg（机器人学传奇学者）联合指导，capgym提供配套仿真环境</div></div>
-                <div class="z3"><div class="z3-why">顶级机构联合背书、MIT开源，意味着具身智能领域又多了一个可直接用于研究和产品化的基础框架，降低机器人策略研究门槛。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="4"
-             style="animation-delay:100ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Anthropic发布Claude Mythos Preview系统卡片，新模型</div>
-                <div class="z2"><div class="z2-point">• Anthropic官方X账号发布Claude Mythos Preview系统卡片链接，标志新模型进入公开预览</div><div class="z2-point">• &#x27;Preview&#x27;后缀表明该模型仍处于早期访问/测试阶段，正式版尚未全量发布</div><div class="z2-point">• 系统卡片是Anthropic透明度体系的核心组成，包含安全评估、能力描述与使用限制</div></div>
-                <div class="z3"><div class="z3-why">系统卡片是Anthropic公开新模型安全评估与能力边界的核心文件，Mythos的亮相意味着Anthropic在模型谱系上又推出重磅新品，可能代表能力或定位的重大突破。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="5"
-             style="animation-delay:125ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Anthropic发布Claude Mythos Preview安全红队测试技术</div>
-                <div class="z2"><div class="z2-point">• Anthropic发布Claude Mythos Preview的软件漏洞与exploit发现技术报告</div><div class="z2-point">• 报告托管于red.anthropic.com，表明来自Anthropic专设安全红队</div><div class="z2-point">• Mythos Preview为新命名系列，可能是Claude下一代旗舰模型的预览版</div></div>
-                <div class="z3"><div class="z3-why">顶级AI公司主动公开安全红队发现，推动行业建立透明的AI安全披露标准，也暗示Mythos是一个能力显著更强的新模型系列。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="6"
-             style="animation-delay:150ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039342077528637440%2Fimg%2FeF-lkat0iP7ukdIF.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">NVIDIA等联合推出CaP-X：编程智能体挑战机器人感知与控制</div>
-                <div class="z2"><div class="z2-point">• CaP-X是开源框架+基准，测试编程智能体能否为机器人写感知与控制代码</div><div class="z2-point">• 智能体在仿真和真实机器人上执行代码，观察结果并迭代优化可靠性</div><div class="z2-point">• 由NVIDIA、UC Berkeley、CMU、Stanford AI Lab联合研发，项目主页capgym.github.io</div></div>
-                <div class="z3"><div class="z3-why">编程智能体不再只写软件代码——它们开始直接操控真实机器人，这是从虚拟到物理世界的关键跨越。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="7"
-             style="animation-delay:175ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039345467038081024%2Fimg%2F0d_LMqHb3PiFLReP.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Jim Fan团队开源CaP-X：让LLM直接驾驭机械臂与人形机器人</div>
-                <div class="z2"><div class="z2-point">• CaP-X将感知(SAM3/Molmo)、控制(IK解算/抓取规划)、导航封装为API，VLA策略也统一为API调用</div><div class="z2-point">• CaP-Gym提供187个操控任务覆盖桌面/双臂/移动场景，横跨RoboSuite/LIBERO-PRO/BEHAVIOR三大平台</div><div class="z2-point">• CaP-RL实验：7B开源模型经50次迭代从20%成功率跃升至72%，且仿真策略可迁移至真实机器人</div></div>
-                <div class="z3"><div class="z3-why">这意味着GPT/Gemini/DeepSeek等大模型可以直接通过API调用来控制机械臂，无需专门训练策略模型，具身智能的门槛大幅降低，同时给所有前沿LLM提供了一个统一的&#x27;物理世界考试&#x27;。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="8"
-             style="animation-delay:200ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Karpathy：GitHub Gist评论质量远超X，建议GitHub挑战推特</div>
-                <div class="z2"><div class="z2-point">• Karpathy指出GitHub Gist评论更具洞察力、建设性，且AI生成内容明显更少</div><div class="z2-point">• 他将差异归因于用户群体、Markdown格式或平台激励机制设计的不同</div><div class="z2-point">• 他建议GitHub考虑将社交讨论功能作为竞争方向，直接挑战X平台</div></div>
-                <div class="z3"><div class="z3-why">这折射出AI生成内容泛滥正在侵蚀主流社交平台的讨论质量，而开发者社区因其准入门槛和激励机制不同，反而成为高质量技术讨论的避风港。</div></div>
-                <div class="z5">🐦 X-Andrej Karpathy</div>
-            </div>
-        </div></div>
+<div class="grid" id="grid"></div>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
@@ -557,7 +426,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>6</b> 个信息源 · <b>9</b> 篇资讯 · 2026年04月11日
+    AI 早报 · <b>0</b> 个信息源 · <b>0</b> 篇资讯 · 2026年04月11日
 </footer>
 
 <script src="modal_data.js"></script>
