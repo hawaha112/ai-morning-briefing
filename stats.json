@@ -1,6 +1,7 @@
 {
-  "article_count": 13,
-  "output_file": "/Users/liujiayun/claude_workspace/pg4_FUTURE/ai-morning-news/output/index.html",
-  "file_size_kb": 36.2,
-  "generated_at": "2026-04-10T11:41:59.719511+00:00"
+  "article_count": 1,
+  "output_file": "output/index.html",
+  "file_size_kb": 23.2,
+  "generated_at": "2026-04-10T12:04:48.624476+00:00",
+  "skipped_llm": false
 }
