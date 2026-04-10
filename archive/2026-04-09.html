@@ -384,19 +384,21 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月09日 周四 · 07:26</div>
+    <div class="h-date">2026年04月09日 周四 · 07:02</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>1</b> 篇</span>
-        <span><b>1</b> 源</span>
+        <span><b>3</b> 篇</span>
+        <span><b>3</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
+<button class="f-btn" data-filter="大模型发布">大模型发布</button>
+<button class="f-btn" data-filter="开源生态">开源生态</button>
 <button class="f-btn" data-filter="其他">其他</button>
 </div>
 
@@ -404,23 +406,54 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">技术反思浪潮涌现：一位亲历者从技术本质出发，系统性审视LLM时代的幻象与风险。当AI狂热席卷全球，冷静的批判声音尤为珍贵——这不是否定进步，而是为技术发展划定清醒的边界。</p>
+        <p class="br-editorial">今日AI产业呈现「开源赋能+公益落地」双轨并行：谷歌DeepMind推出Gemma 4开源模型，多平台同步上线，进一步降低AI开发门槛；OpenAI基金会则以逾亿美元资金押注医疗科研，剑指阿尔茨海默症攻坚。商业竞争之外，AI向善的叙事正在提速。</p>
     </section>
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card" data-cat="其他" data-idx="0"
+        <div class="card" data-cat="大模型发布|开源生态" data-idx="0"
              style="animation-delay:0ms">
             
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">大模型发布 · 开源生态</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">谷歌DeepMind正式发布Gemma 4开源模型，支持Go</div>
+                <div class="z2"><div class="z2-point">• Gemma 4模型权重已在HuggingFace、Kaggle、Ollama三大平台同步开放下载</div><div class="z2-point">• 开发者可直接在Google AI Studio中使用Gemma 4进行应用构建和测试</div><div class="z2-point">• 此次发布延续了谷歌DeepMind Gemma系列的开放权重策略</div></div>
+                <div class="z3"><div class="z3-why">Gemma 4的发布意味着开发者可以立即上手构建应用，谷歌持续扩大开源模型生态布局，与Meta Llama系列正面竞争。</div></div>
+                <div class="z5">🐦 X-GoogleDeepMind</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="1"
+             style="animation-delay:25ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041928747121852416%2Fm9eI15mL%3Fformat%3Djpg%26name%3D800x419')"></div>
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">一位亲历AI发展的工程师撰长文，从技术本质到社会风险系统性批</div>
-                <div class="z2"><div class="z2-point">• 作者2019年已在会议上公开质疑超大规模训练的伦理问题，预见了垃圾信息与宣传风险</div><div class="z2-point">• 文章定性LLM为&#x27;统计自动补全&#x27;，强调其本质是在大量网页、盗版书籍上训练的巨型线性代数堆</div><div class="z2-point">• 作者明确声明文章不追求平衡，专注填补主流AI讨论中被忽视的风险与负面叙事</div></div>
-                <div class="z3"><div class="z3-why">这代表了技术圈内部日益增长的反思声音——不是来自外行批评者，而是来自深度参与者，其警告更具分量。</div></div>
-                <div class="z5">🔥 Hacker News AI · 04-08 13:06</div>
+                <div class="card-title">New on the Engineering Blog: 
+</div>
+                <div class="z2"><div class="z2-summary">New on the Engineering Blog: 
+
+Building Managed Agents—our hosted service for long-running agents—me</div></div>
+                
+                <div class="z5">🐦 X-AnthropicAI</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="2"
+             style="animation-delay:50ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041849727919259648%2FQCCnt3Yb%3Fformat%3Djpg%26name%3D800x419')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">OpenAI基金会宣布投入超1亿美元，资助科学家利用AI绘制</div>
+                <div class="z2"><div class="z2-point">• OpenAI基金会定向拨款逾1亿美元用于阿尔茨海默症研究</div><div class="z2-point">• 资助方向涵盖疾病机制图谱绘制、AI辅助药物设计等多个维度</div><div class="z2-point">• Sam Altman亲自撰文阐述AI应对复杂神经退行性疾病的独特优势</div></div>
+                <div class="z3"><div class="z3-why">这标志着AI头部机构将资本和技术力量正式押注生命科学领域，AI制药从概念走向大规模资金驱动的实战阶段。</div></div>
+                <div class="z5">🐦 X-Sam Altman</div>
             </div>
         </div></div>
 
@@ -431,7 +464,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>1</b> 个信息源 · <b>1</b> 篇资讯 · 2026年04月09日
+    AI 早报 · <b>3</b> 个信息源 · <b>3</b> 篇资讯 · 2026年04月09日
 </footer>
 
 <script src="modal_data.js"></script>
