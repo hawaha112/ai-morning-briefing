@@ -260,6 +260,17 @@ body {
 .m-src-bar {
     font-size: 12px; color: var(--text-50); margin-bottom: 14px;
 }
+/* Why-it-matters callout — short punchy line above the long read */
+.m-why {
+    background: linear-gradient(135deg, rgba(255,149,0,0.14), rgba(255,45,85,0.07));
+    border-left: 3px solid #ff9500;
+    padding: 12px 14px;
+    margin: 0 0 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-90, rgba(228,228,236,0.90));
+}
 /* Key points in modal */
 .m-keypoints {
     background: rgba(255,255,255,0.04); border-radius: 10px;
@@ -299,7 +310,6 @@ body {
 .md-table th, .md-table td { padding: 6px 10px; border: 1px solid var(--border); text-align: left; }
 .md-table th { background: rgba(255,255,255,0.04); font-weight: 600; color: var(--text-100); }
 .md-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
-}
 /* Article image gallery */
 .m-gallery {
     display: flex; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch;
@@ -384,13 +394,13 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月10日 周五 · 21:11</div>
+    <div class="h-date">2026年04月10日 周五 · 22:28</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>14</b> 篇</span>
-        <span><b>7</b> 源</span>
+        <span><b>10</b> 篇</span>
+        <span><b>6</b> 源</span>
     </div>
 </div>
 </header>
@@ -398,34 +408,33 @@ body {
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
 <button class="f-btn" data-filter="大模型发布">大模型发布</button>
-<button class="f-btn" data-filter="开源生态">开源生态</button>
 <button class="f-btn" data-filter="产品与应用">产品与应用</button>
 <button class="f-btn" data-filter="融资与商业">融资与商业</button>
 <button class="f-btn" data-filter="学术研究">学术研究</button>
 <button class="f-btn" data-filter="具身智能">具身智能</button>
-<button class="f-btn" data-filter="自动驾驶">自动驾驶</button>
+<button class="f-btn" data-filter="其他">其他</button>
 </div>
 
 <!-- Briefing -->
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI生态呈现两条主线交织：其一，智能体基础设施加速落地——国内微信支付、MiniMax、扣子等多厂商同日推出Agent工具链，生数科技近20亿融资押注世界模型，开源Hermes Agent以「自进化」机制迅速出圈；其二，技术渗透现实的张力愈发明显——氛围编程催生App提交量暴增却陷入同质化，AI播客传播有害关系观念，苹果智能在国行市场仍受掣肘。LLM训练「模板坍缩」等底层问题同步浮现，提醒行业：规模扩张之外，质量与对齐同样亟待攻克。</p>
+        <p class="br-editorial">今日AI赛场多线并进：生数科技近20亿B轮显示具身与世界模型已成资本新宠；OpenAI推出百美元Pro订阅，商业化提速信号明确。工具侧同样热闹，微信支付、MiniMax等集体亮剑，而普通用户已能用Claude Code零代码搭起智能系统。学术界则在追问可靠性——模板坍塌、幻觉检测接连被点名，能力跃升与稳定性隐忧并行，是这一轮AI扩张的共同底色。</p>
     </section>
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card card--featured" data-cat="大模型发布|学术研究" data-idx="0"
+        <div class="card card--featured" data-cat="学术研究|大模型发布" data-idx="0"
              style="animation-delay:0ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">大模型发布 · 学术研究</span>
+            <span class="z1-left">学术研究 · 大模型发布</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">RAGEN-2论文发现多轮LLM智能体RL训练中存在「模板坍</div>
-                <div class="z2"><div class="z2-point">• 模板坍缩：模型输出看似多样但实为输入无关的固定模板，熵值无法检测</div><div class="z2-point">• 引入互信息（MI）分解推理质量，MI与最终任务性能相关性远强于熵</div><div class="z2-point">• SNR感知过滤：用奖励方差筛选高信号提示，解决低奖励方差导致的梯度被正则项覆盖问题</div></div>
-                <div class="z3"><div class="z3-why">现有RL训练监控工具（熵值）存在盲区，模型可能在表面正常的情况下悄然退化为输入无关的固定模式，这直接威胁智能体任务的可靠性。</div></div>
+                <div class="card-title">RAGEN-2：揭示强化学习智能体训练中的「模板坍塌」失效模式</div>
+                <div class="z2"><div class="z2-point">• 模板坍塌（Template Collapse）：模型用与输入无关的固定模板作答，熵值稳定但推理质量退化，现有所有指标均无法检测</div><div class="z2-point">• 互信息（MI）比熵更能预测最终任务性能，可作为推理质量的可靠在线诊断代理指标</div><div class="z2-point">• SNR感知过滤：以奖励方差为轻量代理，每轮选择高信噪比提示，抑制正则化项覆盖跨输入推理差异</div></div>
+                <div class="z3"><div class="z3-why">RL训练LLM智能体时，模型可能表面上输出多样，实则对不同输入一律套用固定模板——这意味着所有依赖熵值监控训练稳定性的方法都可能存在盲区，影响规划、数学、代码等多类任务。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-10 00:00</div>
             </div>
         </div>
@@ -437,178 +446,122 @@ body {
             <span class="z1-left">融资与商业 · 具身智能</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">生数科技宣布完成近20亿元人民币B轮融资，由阿里云领投，多家</div>
-                <div class="z2"><div class="z2-point">• 本轮由阿里云领投，百度BV风投等原有股东持续追加，投资方阵容横跨互联网、国家基金、教育等多个领域</div><div class="z2-point">• Vidu Q3模型在Artificial Analysis国际榜单位居全球第一，支持16秒声画同出与多镜头控制</div><div class="z2-point">• 具身模型Motus多任务成功率较Pi0.5提升约40%，首次验证具身基础模型Scaling law</div></div>
-                <div class="z3"><div class="z3-why">近20亿元的大额融资验证了「通用世界模型」赛道的资本认可度，生数科技同时押注数字与物理世界，有望成为视频生成+具身智能的双轨基础设施提供商。</div></div>
+                <div class="card-title">生数科技完成近20亿元B轮融资，阿里云领投押注通用世界模型</div>
+                <div class="z2"><div class="z2-point">• 本轮由阿里云领投，百度BV风投等多家老股东追加，融资规模近20亿元人民币</div><div class="z2-point">• Vidu Q3模型在Artificial Analysis国际榜单中位居全球第一，支持16秒声画同出</div><div class="z2-point">• 具身模型Motus多任务成功率较Pi0.5提升约40%，首次验证具身领域Scaling law</div></div>
+                <div class="z3"><div class="z3-why">这标志着「世界模型」赛道获得资本强力背书，生数科技有望成为继大语言模型之后、通往AGI的新路径上的核心基础设施玩家。</div></div>
                 <div class="z5">⚛️ 量子位 · 04-10 07:37</div>
             </div>
         </div>
-        <div class="card" data-cat="学术研究|大模型发布" data-idx="2"
+        <div class="card card--featured" data-cat="产品与应用|AI编程" data-idx="2"
              style="animation-delay:50ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">学术研究 · 大模型发布</span>
+            <span class="z1-left">产品与应用 · AI编程</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">论文提出概率语言字典树(PLT)，将压缩编码、序列决策与推理</div>
-                <div class="z2"><div class="z2-point">• PLT同时充当最优无损压缩器、序列决策策略表示和推理记忆化索引三种角色</div><div class="z2-point">• 核心定理证明：先验引导缓存在平稳分布下严格优于任何经验频率缓存</div><div class="z2-point">• 推理复杂度从O(n²)转化为p_r·O(log N)+(1-p_r)·O(n²)，p_r为先验估计的复用概率</div></div>
-                <div class="z3"><div class="z3-why">LLM推理成本居高不下是产业痛点，PLT通过结构化缓存复用将重复推理从O(n²)降至O(log N)级别，若工程落地成功，将显著降低大模型部署成本。</div></div>
-                <div class="z5">📄 ArXiv ML · 04-10 00:00</div>
+                <div class="card-title">OpenAI推出$100 ChatGPT Pro套餐，Codex获广泛关注</div>
+                <div class="z2"><div class="z2-point">• Sam Altman在X平台宣布推出$100/月ChatGPT Pro套餐，定价是现有Plus套餐5倍</div><div class="z2-point">• Codex（OpenAI代码生成工具）近期获得社区大量热情反响</div><div class="z2-point">• 该套餐由用户强烈需求驱动，表明高端AI用户付费意愿显著提升</div></div>
+                <div class="z3"><div class="z3-why">OpenAI正在向高端用户市场发力，$100定价意味着更强的模型能力或更高用量上限，配合Codex的热度，AI编程工具商业化提速。</div></div>
+                <div class="z5">🐦 X-Sam Altman · 04-09 20:43</div>
             </div>
         </div>
-        <div class="card" data-cat="AI编程|学术研究" data-idx="3"
+        <div class="card" data-cat="大模型发布|学术研究" data-idx="3"
              style="animation-delay:75ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">AI编程 · 学术研究</span>
+            <span class="z1-left">大模型发布 · 学术研究</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">研究提出结合LoRA与傅里叶正则化的FLeX方法，使Code</div>
-                <div class="z2"><div class="z2-point">• LoRA在MBPP小数据集微调后pass@1达40.1%，超越Code Llama-Python-7B的38.4%</div><div class="z2-point">• Sophia优化器收敛更快，但最终pass@1与Adam差异微小，实际增益有限</div><div class="z2-point">• 傅里叶域正则化跨语言迁移效果最显著，Java pass@1从34.2%基线提升至42.1%</div></div>
-                <div class="z3"><div class="z3-why">企业级多语言开发环境中，无需为每种语言单独微调大模型，大幅降低计算成本，同时保持甚至超越全量微调效果。</div></div>
-                <div class="z5">📄 ArXiv ML · 04-10 00:00</div>
+                <div class="card-title">弱监督蒸馏框架：将幻觉检测信号内化至Transformer表示层</div>
+                <div class="z2"><div class="z2-point">• 构建15000样本SQuAD v2数据集，结合子串匹配、句向量相似度、LLM裁判三种弱监督信号自动标注，无需人工标注</div><div class="z2-point">• 训练5种探针分类器（MLP到跨层Transformer），直接作用于LLaMA-2-7B各层隐状态，推理时仅需内部激活</div><div class="z2-point">• 探针延迟0.15-5.62ms（批量），端到端吞吐约0.231 QPS，实际开销可忽略不计</div></div>
+                <div class="z3"><div class="z3-why">现有幻觉检测依赖外部系统（检索库、裁判模型），成本高且延迟大；若能从模型自身激活层检测幻觉，将大幅降低部署成本并加快推理速度。</div></div>
+                <div class="z5">📄 ArXiv AI · 04-10 00:00</div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="开源生态|产品与应用" data-idx="4"
+        <div class="card" data-cat="学术研究|AI编程" data-idx="4"
              style="animation-delay:100ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">开源生态 · 产品与应用</span>
+            <span class="z1-left">学术研究 · AI编程</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Nous Research开源的Hermes Agent在两</div>
-                <div class="z2"><div class="z2-point">• v0.8.0发布后单日新增6400+星，目前总星标超4.7万，多日霸榜全球开源榜第一</div><div class="z2-point">• 核心架构：持久化记忆（本地全文检索）+ 技能自动生成复用 + 工具调用轨迹导出用于模型微调</div><div class="z2-point">• 支持200+大模型、6种部署方式，兼容Telegram/Discord/Slack，MCP协议打通IDE环境</div></div>
-                <div class="z3"><div class="z3-why">Agent「记忆力」和「成长性」一直是开发者的核心痛点，Hermes用学习闭环直击这一需求，同时其自训练数据生成能力暗示了Agent与模型微调融合的新路径。</div></div>
-                <div class="z5">🔎 36氪 AI搜索 · 04-10 12:26</div>
+                <div class="card-title">FLeX：傅里叶正则化助力代码大模型跨语言迁移效率突破</div>
+                <div class="z2"><div class="z2-point">• LoRA微调MBPP小数据集达40.1% pass@1，超越全量微调的Code Llama-Python-7B（38.4%）</div><div class="z2-point">• 傅里叶正则化使Java跨语言迁移pass@1从34.2%提升至42.1%，提升近8个百分点</div><div class="z2-point">• Sophia优化器收敛更快，但最终pass@1与Adam差异边际，不具决定性优势</div></div>
+                <div class="z3"><div class="z3-why">企业开发场景中多语言并存是常态，若只微调Python模型就能泛化到Java等语言，可大幅降低多语言代码AI的训练成本。</div></div>
+                <div class="z5">📄 ArXiv ML · 04-10 00:00</div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="产品与应用|AI工具" data-idx="5"
+        <div class="card" data-cat="学术研究|AI工具" data-idx="5"
              style="animation-delay:125ms">
-            <div class="card-img" style="background-image:url('https://cdnfile.sspai.com/4/10/2026/article/0f27802a-7c80-c256-01ae-07aeac9005cd.png')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">产品与应用 · AI工具</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">微信支付、MiniMax、扣子、腾讯等多家厂商同日发布AI </div>
-                <div class="z2"><div class="z2-point">• 微信支付发布Skill技能包体系，AI Agent可通过对话指令完成支付接入，覆盖基础支付、商品券等多类能力</div><div class="z2-point">• MiniMax推出MMX-CLI命令行工具，支持文本/图像/视频/语音/音乐全模态调用，可集成至Claude Code等Agent环境</div><div class="z2-point">• 扣子2.5引入独立邮箱身份与记忆系统，Agent可主动收发邮件、管理日历与文件系统</div></div>
-                <div class="z3"><div class="z3-why">支付、浏览器、多模态CLI等基础能力相继接入AI Agent体系，意味着Agent从「聊天助手」向「真实操作执行者」的转变正在提速，开发者生态正在快速形成。</div></div>
-                <div class="z5">📱 少数派 · 04-10 00:47</div>
-            </div>
-        </div>
-        <div class="card" data-cat="产品与应用|自动驾驶" data-idx="6"
-             style="animation-delay:150ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">产品与应用 · 自动驾驶</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">智己LS8集成阿里千问大模型与Momenta端到端自动驾驶系</div>
-                <div class="z2"><div class="z2-point">• 千问大模型首次上车，可执行点餐等任务，未来打通飞猪、淘宝等阿里生态</div><div class="z2-point">• Momenta一段式端到端大模型驱动IM AD MAX系统，减少信息损耗，驾驶更拟人</div><div class="z2-point">• 英伟达Thor芯片提供700TOPS算力，支持未来升级至IM AD ZETA，性能提升20倍</div></div>
-                <div class="z3"><div class="z3-why">千问大模型首次上车，标志着阿里大模型生态向汽车场景渗透；Momenta端到端方案量产落地，验证了国产自动驾驶技术路线的可行性。</div></div>
-                <div class="z5">⚛️ 量子位 · 04-10 09:31</div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI工具|学术研究" data-idx="7"
-             style="animation-delay:175ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI工具 · 学术研究</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">BDI-Kit提供Python API与AI对话双接口，解决</div>
-                <div class="z2"><div class="z2-point">• BDI-Kit提供Python API供开发者程序化构建数据融合流水线，支持复用转换逻辑</div><div class="z2-point">• AI对话界面允许领域专家用自然语言与助手交互，无需编程即可完成数据融合</div><div class="z2-point">• 系统支持自动匹配、AI辅助推理与用户主动修正三种机制的迭代组合</div></div>
-                <div class="z3"><div class="z3-why">数据融合是科研和企业数据整合的长期痛点，BDI-Kit让技术开发者和非技术领域专家都能用各自熟悉的方式完成复杂数据对齐工作。</div></div>
-                <div class="z5">📄 ArXiv AI · 04-10 00:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="学术研究|AI工具" data-idx="8"
-             style="animation-delay:200ms">
             
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">学术研究 · AI工具</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">研究引入AgriPriceBD数据集并测评7种预测模型，发现</div>
-                <div class="z2"><div class="z2-point">• AgriPriceBD含1779条孟加拉5种农产品2020-2025年日价格数据，通过LLM辅助数字化提取</div><div class="z2-point">• Time2Vec时间编码无统计显著优势，在青辣椒预测中导致MAE提升146.1%（p&lt;0.001）</div><div class="z2-point">• Informer模型预测方差达真实值50倍，证明稀疏注意力Transformer需要远超小型农业数据集的训练规模</div></div>
-                <div class="z3"><div class="z3-why">这提醒AI从业者：在小数据、非平稳时序场景下，复杂模型并非万能，模型选择需匹配数据特性而非盲目追求先进架构。</div></div>
+                <div class="card-title">SMT-AD：基于量子启发张量网络的可扩展异常检测方法</div>
+                <div class="z2"><div class="z2-point">• 采用键维度为1的矩阵乘积算子叠加结合Fourier特征嵌入，可学习参数随特征数线性增长</div><div class="z2-point">• 高度可并行化设计，支持模型压缩，并可通过特征重要性筛选提升性能</div><div class="z2-point">• 在信用卡交易等标准异常检测基准上，即使最小配置也达到与主流基线竞争的水平</div></div>
+                <div class="z3"><div class="z3-why">量子启发算法将复杂量子计算思想落地到经典硬件，为异常检测提供了参数高效、可并行的新路径，可能改变金融风控等领域的检测方案选型。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-10 00:00</div>
             </div>
         </div>
-        <div class="card" data-cat="产品与应用|大模型发布" data-idx="9"
-             style="animation-delay:225ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">产品与应用 · 大模型发布</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">苹果智能曾短暂向国行设备开放后迅速撤回，技术玩家通过修改区域</div>
-                <div class="z2"><div class="z2-point">• 通过GitHub脚本修改硬件区域代码并关闭SIP，国行Mac可稳定激活苹果智能全球版功能</div><div class="z2-point">• AI消除基于本地M4芯片，2-4秒完成，但大面积填充效果明显不如豆包等国产AI</div><div class="z2-point">• &#x27;图乐园&#x27;生图App仅支持固定风格预设，无法生成写实图像，产品定位为聊天插图生成器</div></div>
-                <div class="z3"><div class="z3-why">苹果在中国市场的AI布局持续落后，而国产AI修图和生图能力已全面反超，苹果智能的竞争力在中国面临严峻考验。</div></div>
-                <div class="z5">🔎 36氪 AI搜索 · 04-10 12:30</div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI编程|产品与应用" data-idx="10"
-             style="animation-delay:250ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI编程 · 产品与应用</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">氛围编程工具降低开发门槛，今年Q1苹果App Store提交</div>
-                <div class="z2"><div class="z2-point">• Q1苹果App Store应用提交量同比暴增84%，一举扭转十年来下滑趋势</div><div class="z2-point">• Claude Code、Codex等工具将App制作门槛大幅降低，个人开发者年成本仅需688元苹果开发者费</div><div class="z2-point">• 上架应用高度集中于Todo清单、日记、记账三类赛道，像素级复制现象严重</div></div>
-                <div class="z3"><div class="z3-why">AI编程工具正在重塑谁能「造产品」——门槛几乎消失了，但做出有价值产品的难度没有降低，反而更加凸显创意与差异化的稀缺性。</div></div>
-                <div class="z5">🔎 36氪 AI搜索 · 04-10 12:30</div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI伦理|内容监管" data-idx="11"
-             style="animation-delay:275ms">
-            <div class="card-img" style="background-image:url('https://media.wired.com/photos/69d6e881e2485977e01e633f/master/pass/AI-Podcasters-Telling-You-How-to-Keep-A-Man-Culture.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI伦理 · 内容监管</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">AI生成的虚假关系导师播客视频正在网络上扩散，强化性别刻板印</div>
-                <div class="z2"><div class="z2-point">• AI生成的虚假关系导师视频在社交平台上大量传播</div><div class="z2-point">• 这些内容强化传统性别刻板印象和有害两性观念</div><div class="z2-point">• 揭示AI工具被用于低成本批量生产误导性内容的问题</div></div>
-                <div class="z3"><div class="z3-why">AI内容生成工具被滥用于规模化生产性别歧视内容，凸显AI在信息生态中的负面影响及内容监管的紧迫性。</div></div>
-                <div class="z5">📡 Wired AI · 04-10 10:30</div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI工具|产品与应用" data-idx="12"
-             style="animation-delay:300ms">
+        <div class="card" data-cat="AI工具|产品与应用" data-idx="6"
+             style="animation-delay:150ms">
             <div class="card-img" style="background-image:url('https://cdnfile.sspai.com/4/10/2026/article/8aba4fd2-7365-58ba-c377-5bd70f7b5c9f.jpeg')"></div>
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">AI工具 · 产品与应用</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">作者用Claude Code纯对话方式，结合Home Ass</div>
-                <div class="z2"><div class="z2-point">• 纯自然语言驱动：仪表盘YAML、Python脚本、launchd定时任务全由Claude Code生成，用户只做产品经理</div><div class="z2-point">• 本地LLM落地：Ollama跑Gemma 4（8B Q4量化）在M1 Max上每30分钟分析龟缸行为，零API成本</div><div class="z2-point">• 工程优化可观：mp4传输从整文件100MB降至头部5MB、ffmpeg stream copy替代OpenCV重编码，速度提升10倍</div></div>
-                <div class="z3"><div class="z3-why">这是AI编程助手「真实可用性」的一次压力测试——不是写个Hello World，而是完整交付了一套含多设备联动、视频处理、本地推理的生产级家庭自动化系统，而用户一行代码未写。</div></div>
+                <div class="card-title">Claude Code零代码实战：用AI对话搭建宠物龟24小时智能监控系统</div>
+                <div class="z2"><div class="z2-point">• Claude Code直接修改HA配置文件和YAML，用户全程零代码，仅以对话方式驱动开发</div><div class="z2-point">• 本地部署Ollama+Gemma 4（8B Q4量化）在M1 Max 64GB上做龟缸画面行为分析，推理成本为零</div><div class="z2-point">• 技术优化由AI主导完成：仅传mp4头部5MB代替完整文件、ffmpeg stream copy替代OpenCV重编码，性能提升10倍</div></div>
+                <div class="z3"><div class="z3-why">这展示了AI编程助手已能让普通用户以「产品经理」身份完成过去需要专业工程师的系统集成工作，门槛大幅降低。</div></div>
                 <div class="z5">📱 少数派 · 04-10 03:35</div>
             </div>
         </div>
-        <div class="card" data-cat="AI工具生态|MCP协议" data-idx="13"
-             style="animation-delay:325ms">
+        <div class="card" data-cat="产品与应用|AI工具" data-idx="7"
+             style="animation-delay:175ms">
+            <div class="card-img" style="background-image:url('https://cdnfile.sspai.com/4/10/2026/article/0f27802a-7c80-c256-01ae-07aeac9005cd.png')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI工具</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">微信支付推AI Skill接入体系，多款国产AI工具集中发布</div>
+                <div class="z2"><div class="z2-point">• 微信支付推出Skill技能包+AI友好API，开发者可通过对话完成支付接入，覆盖基础支付、商品券等场景</div><div class="z2-point">• Google Gemini上线笔记本功能，与NotebookLM双向同步，对标ChatGPT Projects，已向订阅用户开放</div><div class="z2-point">• MiniMax推出MMX-CLI命令行工具，支持全模态调用并可集成至Claude Code等Agent开发环境</div></div>
+                <div class="z3"><div class="z3-why">国内外AI工具生态正加速与现有业务系统深度整合，开发门槛进一步降低，AI Agent实用化进程提速。</div></div>
+                <div class="z5">📱 少数派 · 04-10 00:47</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="8"
+             style="animation-delay:200ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">AI工具生态 · MCP协议</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">作者阐述为何在AI工具集成领域，MCP（模型上下文协议）相比</div>
-                <div class="z2"><div class="z2-point">• MCP提供标准化的上下文协议，具备更强的互操作性</div><div class="z2-point">• Skills系统相对封闭，依赖特定平台实现</div><div class="z2-point">• 社区对两种方案的取舍存在明显分歧</div></div>
-                <div class="z3"><div class="z3-why">MCP与Skills代表两种不同的AI能力扩展范式，其优劣直接影响AI助手的架构设计方向和开发者生态选择。</div></div>
-                <div class="z5">🔥 Hacker News AI · 04-10 02:01</div>
+                <div class="card-title">渐近保持神经网络用于多尺度血流粘弹性参数识别</div>
+                <div class="z2"><div class="z2-point">• 利用渐近保持神经网络（APNN）将一维多尺度血流方程嵌入训练过程，保证物理一致性</div><div class="z2-point">• 仅凭截面积与多普勒速度测量即可重建患者个体的压力波形</div><div class="z2-point">• 在合成数据与真实患者场景下均验证了方法有效性</div></div>
+                <div class="z3"><div class="z3-why">无创估算血管力学参数，有望替代侵入性压力测量，推动AI辅助心血管诊断落地。</div></div>
+                <div class="z5">📄 ArXiv ML · 04-10 00:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="AI编程|产品与应用" data-idx="9"
+             style="animation-delay:225ms">
+            <div class="card-img" style="background-image:url('https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/dca7886a917f49fb8f559d1fe0638100~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg5Y-M6LaKQUlfY2x1Yg==:q75.awebp?rk3s=f64ab15b&amp;amp;x-expires=1776388121&amp;amp;x-signature=K5s1qhi1G7dsWabTZswbTHP%2BPFw%3D')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">AI编程 · 产品与应用</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">国内开发者实测：Claude Code配合MiniMax模型绕过区域限制</div>
+                <div class="z2"><div class="z2-point">• 需使用新加坡节点梯子安装，香港节点成功率低；修改~/.claude.json添加hasCompletedOnboarding:true可绕过区域登录限制</div><div class="z2-point">• 通过cc-switch工具将Claude Code底层模型替换为MiniMax，注册赠送15元额度，创建todo-list项目实际消耗约0.7元</div><div class="z2-point">• VSCode插件支持配置minimax-m2.7模型，实现图形化界面操作，解决纯命令行在大型项目中不便的问题</div></div>
+                <div class="z3"><div class="z3-why">这为数百万无法访问Anthropic官方服务的中国开发者提供了一条可行的替代路径，折射出AI工具全球化与本地化之间的现实张力。</div></div>
+                <div class="z5">💎 掘金 AI · 04-10 00:59</div>
             </div>
         </div></div>
 
@@ -619,7 +572,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>7</b> 个信息源 · <b>14</b> 篇资讯 · 2026年04月10日
+    AI 早报 · <b>6</b> 个信息源 · <b>10</b> 篇资讯 · 2026年04月10日
 </footer>
 
 <script src="modal_data.js"></script>
@@ -703,10 +656,24 @@ function openModal(idx) {
     if (typeLabels[a.source_type]) srcParts.push(typeLabels[a.source_type]);
     let srcBar = '<div class="m-src-bar">' + srcParts.join(' · ') + '</div>';
 
+    // Why it matters — short punchy callout before the long read
+    let whyHtml = '';
+    if (a.why_it_matters) {
+        whyHtml = '<div class="m-why">💡 ' + a.why_it_matters + '</div>';
+    }
+
     // Detailed content — main reading section with markdown rendering
     let detailedHtml = '';
     if (a.detailed_content) {
-        detailedHtml = '<div class="m-detailed">' + renderMd(a.detailed_content) + '</div>';
+        // 去掉 LLM 偶尔会生成的"### 问题背景/背景/前言/引言/简介"等背景类首节，
+        // 避免和下方独立的"背景脉络"模块产生视觉重复。
+        // 正则：匹配开头的 ### 小标题 + 本节内容，直到下一个 ### 或文末。
+        let cleaned = a.detailed_content.replace(
+            /^\s*###\s*(问题背景|背景|前言|引言|简介)[^\n]*\n[\s\S]*?(?=\n###\s|$)/,
+            ''
+        ).trim();
+        // 兜底：如果清洗后全空（整段 detailed_content 就是一节背景），保留原文
+        detailedHtml = '<div class="m-detailed">' + renderMd(cleaned || a.detailed_content) + '</div>';
     } else if (a.summary) {
         detailedHtml = '<div class="m-detailed"><p>' + a.summary + '</p></div>';
     }
@@ -742,6 +709,7 @@ function openModal(idx) {
         '<div class="m-body">' +
             titleHtml +
             srcBar +
+            whyHtml +
             detailedHtml +
             galleryHtml +
             deepHtml +
