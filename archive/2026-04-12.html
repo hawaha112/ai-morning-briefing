@@ -301,11 +301,27 @@ body {
 }
 .m-detailed p { margin: 0 0 12px; }
 .m-detailed p:last-child { margin-bottom: 0; }
-.md-h { color: var(--text-100); font-size: 15px; font-weight: 600; margin: 20px 0 8px; }
+/* Markdown header hierarchy */
+.md-h { color: var(--text-100); font-weight: 600; margin: 20px 0 8px; }
 .md-h:first-child { margin-top: 0; }
+.md-h3 { font-size: 17px; }
+.md-h4 { font-size: 15px; }
+.md-h5 { font-size: 14px; color: var(--text-80, rgba(228,228,236,0.80)); }
+/* Inline code */
+.md-code {
+    background: rgba(255,255,255,0.07); padding: 2px 6px; border-radius: 4px;
+    font-family: 'SF Mono','Menlo',monospace; font-size: 0.88em;
+    color: var(--accent); word-break: break-word;
+}
+/* Markdown links */
+.md-link { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(107,138,253,0.3); transition: border-color 0.2s; }
+.md-link:hover { border-color: var(--accent); }
 .md-hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+/* Markdown lists */
 .md-list { margin: 8px 0; padding-left: 20px; }
 .md-list li { margin: 4px 0; }
+.md-ol { list-style-type: decimal; }
+.md-ol li { padding-left: 4px; }
 .md-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
 .md-table th, .md-table td { padding: 6px 10px; border: 1px solid var(--border); text-align: left; }
 .md-table th { background: rgba(255,255,255,0.04); font-weight: 600; color: var(--text-100); }
@@ -353,6 +369,10 @@ body {
 .m-deep-text {
     font-size: 13px; color: var(--text-60); line-height: 1.7;
 }
+.m-deep-text p { margin: 0 0 8px; }
+.m-deep-text p:last-child { margin-bottom: 0; }
+.m-deep-text .md-h { font-size: 13px; margin: 12px 0 4px; }
+.m-deep-text .md-list { margin: 4px 0; font-size: 13px; }
 /* Footer — source + action */
 .m-footer {
     display: flex; align-items: center; justify-content: space-between;
@@ -394,22 +414,19 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月12日 周日 · 09:37</div>
+    <div class="h-date">2026年04月12日 周日 · 21:04</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>14</b> 篇</span>
-        <span><b>8</b> 源</span>
+        <span><b>21</b> 篇</span>
+        <span><b>9</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
-<button class="f-btn" data-filter="大模型发布">大模型发布</button>
-<button class="f-btn" data-filter="产品与应用">产品与应用</button>
-<button class="f-btn" data-filter="安全与对齐">安全与对齐</button>
 <button class="f-btn" data-filter="具身智能">具身智能</button>
 <button class="f-btn" data-filter="行业观点">行业观点</button>
 <button class="f-btn" data-filter="其他">其他</button>
@@ -419,93 +436,93 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI行业呈现「能力跃迁与生态博弈」双主线：技术端，NVIDIA联合顶尖高校以CaP-X将LLM智能体延伸至实体机器人，Google Veo 3.1视频生成向全用户开放，Anthropic的Claude Mythos在安全红队测试中已超越顶级人类研究员——AI正从语言走向物理世界与专业纵深；生态端，OpenAI因定价透明度问题公开致歉，吴恩达则警示反AI阵营正借道安全、就业等议题收紧监管。能力边界在加速扩张，而围绕信任与规则的争夺同样在激烈展开。</p>
+        <p class="br-editorial">今日AI圈呈现两大张力：一边是商业信任危机——OpenAI为套餐定价混乱致歉、Altman回应诚信质疑、Anthropic安全宣传被指夸大；另一边是技术边界探索——LeCun力推机器人真实能力基准、滴滴Robotaxi加速落地、Claude助力复活30年老游戏。炒作与祛魅并行，AI行业正在经历从叙事竞争转向实力验证的关键拐点。</p>
     </section>
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card card--featured" data-cat="产品与应用|大模型发布" data-idx="0"
+        <div class="card" data-cat="其他" data-idx="0"
              style="animation-delay:0ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039735523569188864%2Fimg%2F4joYFVRpZuE3_iD5.jpg')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">产品与应用 · 大模型发布</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Google Vids集成Veo 3.1：高质量AI视频生成免费向所有用户开放</div>
-                <div class="z2"><div class="z2-point">• Veo 3.1高质量视频生成功能现已免费向所有Google Vids用户开放</div><div class="z2-point">• Google Vids定位为易用型视频编辑套件，此次更新新增多项AI能力</div><div class="z2-point">• 用户可通过vids.new直接访问并开始创作</div></div>
-                <div class="z3"><div class="z3-why">AI视频生成从付费专业工具走向免费大众产品，将大幅降低内容创作门槛，加速AI视频普及。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind</div>
+                <div class="card-title">OpenAI澄清Pro套餐用量限制：定价页面表述引发误解</div>
+                <div class="z2"><div class="z2-point">• Pro $100套餐含至少10x Plus用量，2X加速促销延至5月31日</div><div class="z2-point">• Pro $200套餐含至少20x Plus用量，此标准自2月促销起未变，此前未明确公示</div><div class="z2-point">• 定价页&#x27;5x或20x&#x27;表述与2X加速叠加后产生误解，OpenAI承认系页面措辞混乱所致</div></div>
+                <div class="z3"><div class="z3-why">定价透明度直接影响用户信任，OpenAI此次主动澄清并认错，折射出AI订阅服务在用量政策沟通上的普遍痛点。</div></div>
+                <div class="z5">🐦 X-OpenAI · 04-11 21:14</div>
             </div>
         </div>
-        <div class="card" data-cat="安全与对齐|AI工具" data-idx="1"
+        <div class="card" data-cat="具身智能|行业观点" data-idx="1"
              style="animation-delay:25ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2042779290522259457%2F43xmSJPK%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">安全与对齐 · AI工具</span>
+            <span class="z1-left">具身智能 · 行业观点</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI披露Axios开发者工具遭入侵事件，承诺透明处置</div>
-                <div class="z2"><div class="z2-point">• OpenAI官方确认Axios开发者工具遭到入侵，发布正式技术说明</div><div class="z2-point">• 官方声明强调用户信息安全与隐私保护为首要优先级</div><div class="z2-point">• 已发布详细技术FAQ，说明事件经过与应对措施</div></div>
-                <div class="z3"><div class="z3-why">开发者工具链安全是AI平台的命脉，此次事件暴露供应链攻击对AI生态的潜在威胁，OpenAI的应对速度和透明度将直接影响开发者信任。</div></div>
-                <div class="z5">🐦 X-OpenAI</div>
+                <div class="card-title">LeCun提议「5岁儿童对比测试」反驳机器人操控已被解决的说法</div>
+                <div class="z2"><div class="z2-point">• LeCun观察到每周都有团队宣称「解决了机器人操控」，彼此矛盾显示夸大宣传普遍存在</div><div class="z2-point">• 提议在会议上设置对比测试台，让机器人与5岁儿童同时完成100项中性人选择的家庭操控任务</div><div class="z2-point">• 测试任务包括捡硬币、拧瓶盖、插插头、转魔方——这些对人类幼儿极易但对机器人极难</div></div>
+                <div class="z3"><div class="z3-why">顶级AI科学家公开泼冷水，说明具身智能领域存在严重的能力高估和宣传泡沫，真正的通用操控距离实用还很遥远。</div></div>
+                <div class="z5">🐦 X-Yann LeCun · 04-12 02:18</div>
             </div>
         </div>
-        <div class="card" data-cat="AI政策监管|行业观点" data-idx="2"
+        <div class="card" data-cat="其他" data-idx="2"
              style="animation-delay:50ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHEwo55_W8AAqin-.jpg')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">AI政策监管 · 行业观点</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">吴恩达：反AI联盟正寻找新论点阻碍AI发展</div>
-                <div class="z2"><div class="z2-point">• 英国研究发现&#x27;AI致人类灭绝&#x27;论点已失效，AI战争与环境议题更能引发公众共鸣</div><div class="z2-point">• AI&#x27;洗白&#x27;裁员现象严重：疫情期间过度扩招的企业将正常裁员归咎于AI，夸大就业威胁</div><div class="z2-point">• 白宫提议联邦级AI立法框架，通过联邦优先权防止各州碎片化监管阻碍AI发展</div></div>
-                <div class="z3"><div class="z3-why">这意味着AI支持者需警惕有组织的舆论战，避免情绪化监管重蹈核能发展被扼杀的覆辙。</div></div>
-                <div class="z5">🐦 X-Andrew Ng</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:55</div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="具身智能|AI编程" data-idx="3"
+        <div class="card" data-cat="其他" data-idx="3"
              style="animation-delay:75ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039342077528637440%2Fimg%2FeF-lkat0iP7ukdIF.jpg')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">具身智能 · AI编程</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">NVIDIA联合斯坦福等高校推出CaP-X：机器人编程智能体开源基准框架</div>
-                <div class="z2"><div class="z2-point">• CaP-X是面向机器人感知与控制的编程智能体开源框架与基准测试集</div><div class="z2-point">• 智能体在仿真与真实机器人上执行代码，观察结果并迭代提升代码可靠性</div><div class="z2-point">• 由NVIDIA、UC Berkeley、CMU Robotics、Stanford AI Lab四家顶级机构联合开发</div></div>
-                <div class="z3"><div class="z3-why">编程智能体正在进入具身智能领域，CaP-X提供了标准化评测体系，将推动机器人控制从手工编程向AI自动生成代码演进，是机器人通用化的关键一步。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:53</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="4"
              style="animation-delay:100ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041928747121852416%2Fm9eI15mL%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布托管智能体服务解决长时任务运行难题</div>
-                <div class="z2"><div class="z2-point">• Anthropic推出Managed Agents托管服务，专为长时运行的AI Agent设计</div><div class="z2-point">• 核心挑战是为&#x27;尚未被构想的程序&#x27;设计系统，类比计算机科学的经典难题</div><div class="z2-point">• 该服务属于Anthropic工程基础设施层面的重要进展</div></div>
-                <div class="z3"><div class="z3-why">托管智能体服务将AI Agent从实验性工具推向生产级基础设施，降低开发者部署长时任务Agent的门槛，加速AI自动化落地。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:53</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="5"
              style="animation-delay:125ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041577047198150656%2FZsuw2-wg%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布Project Glasswing：新模型Claude M</div>
-                <div class="z2"><div class="z2-point">• Project Glasswing定位为紧迫性倡议，专注保护世界最关键软件基础设施</div><div class="z2-point">• Claude Mythos Preview为Anthropic最新前沿模型，漏洞发现能力超越几乎所有顶级人类专家</div><div class="z2-point">• Anthropic将安全作为战略级优先方向，从对齐研究延伸至实战网络安全防御</div></div>
-                <div class="z3"><div class="z3-why">AI首次系统性介入关键软件安全防御，意味着漏洞挖掘从「稀缺人才」转向「可规模化部署」，将深刻改变网络安全格局。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:51</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="6"
@@ -516,10 +533,10 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布Claude Mythos Preview安全漏洞技术报告</div>
-                <div class="z2"><div class="z2-point">• Anthropic对Claude Mythos Preview进行系统性红队测试，发现多项软件漏洞</div><div class="z2-point">• 技术报告已公开发布，涵盖具体漏洞类型与利用路径</div><div class="z2-point">• 这是Anthropic在模型安全披露上的主动透明化举措</div></div>
-                <div class="z3"><div class="z3-why">顶级AI实验室主动公开模型安全缺陷，标志着AI安全透明度进入新阶段，对行业安全评估标准有示范意义。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:51</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="7"
@@ -530,10 +547,10 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI澄清Pro套餐用量限制：定价页面表述混乱引发误解</div>
-                <div class="z2"><div class="z2-point">• Pro $100套餐：5月31日前含2X促销共10x Plus用量</div><div class="z2-point">• Pro $200套餐：5月31日前含2X促销共20x Plus用量，非用户预期的40x</div><div class="z2-point">• OpenAI承认定价页面将&#x27;5x/20x&#x27;与促销倍数混用导致理解歧义</div></div>
-                <div class="z3"><div class="z3-why">用户以为2X促销叠加后能获得40x用量，实际只有20x，OpenAI公开承认是自己的沟通失误，将更新定价页面。</div></div>
-                <div class="z5">🐦 X-OpenAI</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:50</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="8"
@@ -544,38 +561,38 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI发布Atlas：ChatGPT平台新功能上线</div>
-                <div class="z2"><div class="z2-point">• Atlas由OpenAI官方发布，入口为chatgpt.com/atlas</div><div class="z2-point">• 目前公开信息极少，仅有官方链接，具体功能尚不明确</div><div class="z2-point">• Atlas名称暗示可能是知识图谱、地图类或多模态导航类应用</div></div>
-                <div class="z3"><div class="z3-why">OpenAI官方账号直接推送链接，意味着Atlas是面向ChatGPT用户的正式产品，值得关注其具体定位与能力。</div></div>
-                <div class="z5">🐦 X-OpenAI</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:48</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="9"
              style="animation-delay:225ms">
-            <div class="card-img" style="background-image:url('https://i.ytimg.com/vi/mFSFvKquXwI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLB25ngLUlgDGivzF4W4BFS_XYDV_g')"></div>
+            
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">NVIDIA新AI突破直觉：梦境道场实现反常识泛化能力</div>
-                <div class="z2"><div class="z2-point">• NVIDIA发布名为DreamDojo的AI系统，项目主页托管于dreamdojo-world.github.io</div><div class="z2-point">• 系统采用某种反直觉的训练或架构设计，但最终效果出乎意料地有效</div><div class="z2-point">• 由Two Minute Papers频道介绍，说明该研究具备足够的学术影响力与传播价值</div></div>
-                <div class="z3"><div class="z3-why">这意味着AI训练范式可能存在被忽视的有效路径，NVIDIA在基础研究层面持续挑战现有认知边界。</div></div>
-                <div class="z5">🎬 Two Minute Papers · 04-11 16:37</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:48</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="10"
              style="animation-delay:250ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041849727919259648%2FQCCnt3Yb%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI基金会投入逾1亿美元用AI攻克阿尔茨海默症</div>
-                <div class="z2"><div class="z2-point">• OpenAI基金会定向拨款逾1亿美元用于阿尔茨海默症研究</div><div class="z2-point">• 资金覆盖疾病机制图谱绘制、AI辅助药物设计等方向</div><div class="z2-point">• Sam Altman亲自撰文阐述OpenAI基金会对AI医疗的战略判断</div></div>
-                <div class="z3"><div class="z3-why">这标志着AI头部机构开始将资本和技术能力系统性地投向高难度医疗问题，AI制药赛道将获得顶级背书与资金注入。</div></div>
-                <div class="z5">🐦 X-Sam Altman</div>
+                <div class="card-title">Yannic Kilcher深度解析Anthropic变换器电路博客第二部分</div>
+                <div class="z2"><div class="z2-summary">AI教育博主Yannic Kilcher发布视频，深度解读Anthropic关于大型语言模型内部机制的变换器电路研究第二篇。</div></div>
+                <div class="z3"><div class="z3-why">AI 正从黑盒走向可审计——Anthropic 的电路研究是当前最接近</div></div>
+                <div class="z5">🎬 Yannic Kilcher · 04-12 12:45</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="11"
@@ -586,38 +603,136 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Karpathy：GitHub Gist评论质量远超X，呼吁其与X竞争</div>
-                <div class="z2"><div class="z2-point">• Karpathy指出GitHub Gist评论更有帮助、更具洞察力、更少AI生成内容</div><div class="z2-point">• 他将这归因于用户社区构成、Markdown格式或缺乏算法激励机制</div><div class="z2-point">• 他建议GitHub考虑将Gist发展为X的竞争对手</div></div>
-                <div class="z3"><div class="z3-why">这揭示了一个反直觉现象：技术社区的小众平台反而能产生更高质量的讨论，对AI时代的信息生态有重要启示。</div></div>
-                <div class="z5">🐦 X-Andrej Karpathy</div>
+                <div class="card-title">AI编程工具大战升温：从Copilot到Cursor的行业演变</div>
+                <div class="z2"><div class="z2-summary">The Verge深度回顾AI编程工具竞争史，从2021年GitHub Copilot发布到如今Cursor等新玩家崛起，AI代码生成市场进入白热化竞争阶段。</div></div>
+                <div class="z3"><div class="z3-why">AI 编程工具正从效率辅助变为开发主力，软件生产成本将断崖式下降，重塑整个科技行业的人才结构与竞争门槛。</div></div>
+                <div class="z5">⚡ The Verge AI · 04-12 08:00</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="12"
              style="animation-delay:300ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041386973001310208%2FhG5NBSFb%3Fformat%3Djpg%26name%3D420x420_2')"></div>
+            
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">NVIDIA联合伯克利斯坦福CMU开源机器人基准CaP-X，MIT协议</div>
-                <div class="z2"><div class="z2-point">• 由NVIDIA、UC Berkeley、Stanford、CMU四大顶级机构联合研发</div><div class="z2-point">• 机器人学习基准环境CaP-X全套开源，MIT许可证，含代码与论文</div><div class="z2-point">• Ken Goldberg（伯克利机器人操控领域传奇学者）联合指导该项目</div></div>
-                <div class="z3"><div class="z3-why">顶级机构联手开源意味着机器人操控研究的基础设施门槛大幅降低，社区可直接在此基础上复现、对比和超越最新成果。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
+                <div class="card-title">Anthropic悄然下调提示缓存TTL，开发者成本与体验受影响</div>
+                <div class="z2"><div class="z2-point">• Anthropic于2026年3月6日悄然下调提示缓存TTL，未提前公告</div><div class="z2-point">• TTL缩短导致缓存失效更频繁，长上下文应用token成本上升</div><div class="z2-point">• Hacker News社区开发者反映此变更影响了生产环境中的成本预算</div></div>
+                <div class="z3"><div class="z3-why">缓存TTL缩短意味着缓存命中率下降，开发者需要支付更多token费用，尤其影响依赖长上下文缓存的应用。</div></div>
+                <div class="z5">🔥 Hacker News AI · 04-12 05:45</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="13"
              style="animation-delay:325ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039345467038081024%2Fimg%2F0d_LMqHb3PiFLReP.jpg')"></div>
+            
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Jim Fan团队开源CaP-X：LLM驱动的具身智能Agent框架</div>
-                <div class="z2"><div class="z2-point">• CaP-X将感知(SAM3/Molmo/点云)、控制(IK求解/抓取规划/导航)封装为API，LLM通过调用API驱动机器人执行操作任务</div><div class="z2-point">• CaP-Bench基准测试了12个前沿LLM/VLM（含GPT、Gemini、Opus、DeepSeek、Qwen、Kimi），覆盖8个评估维度</div><div class="z2-point">• CaP-RL验证：7B开源模型经50次迭代训练后成功率从20%跃升至72%，仿真策略可迁移至真实机器人</div></div>
-                <div class="z3"><div class="z3-why">这意味着大语言模型不再只是聊天工具——它可以直接驱动机器人手臂干活，且无需针对每个任务单独训练策略模型，Agent范式正在向物理世界渗透。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
+                <div class="card-title">谷歌开源 Colab MCP Server，AI 智能体可直接云端执行代码</div>
+                <div class="z2"><div class="z2-summary">谷歌开源 Google Colab MCP Server，允许 AI 智能体通过 Model Context Protocol 在 Colab 云端环境中直接运行 Python 代码。</div></div>
+                <div class="z3"><div class="z3-why">AI 智能体从「写代码」进化到「跑代码」，云端执行能力成为新的基础设施竞争核心。</div></div>
+                <div class="z5">🚀 AI前线 · 04-12 10:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="14"
+             style="animation-delay:350ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Anthropic夸大Claude漏洞发现能力？华尔街恐慌背后的真相</div>
+                <div class="z2"><div class="z2-point">• Claude Mythos宣称发现27年历史的0day漏洞，被指结果有人工辅助掺水，并非纯模型自主发现</div><div class="z2-point">• 至少8个开源或竞品AI模型在同类任务上可复现类似结果，独家能力存疑</div><div class="z2-point">• Opus 4.6同期被指经历能力大幅缩水，社区称其遭到「能力阉割」</div></div>
+                <div class="z3"><div class="z3-why">AI安全能力的真实边界直接影响监管政策与资本走向，若头部厂商数据注水，将导致行业整体可信度受损，并扭曲政策制定者对AI风险的判断。</div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-12 07:56</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="15"
+             style="animation-delay:375ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">中国团队构建首个大规模超声专属数据集，36.4万图文对入选CVPR&#x27;26</div>
+                <div class="z2"><div class="z2-point">• 数据集包含36.4万超声图文对，为超声领域首个大规模专属多模态数据集</div><div class="z2-point">• 研究聚焦临床诊断语义理解，而非单纯图像识别，更贴近实际诊断流程</div><div class="z2-point">• 论文被CVPR 2026收录，代表该方向已获计算机视觉顶会认可</div></div>
+                <div class="z3"><div class="z3-why">超声诊断长期缺乏高质量标注数据，此数据集填补空白，将让医疗AI真正理解临床诊断语义，加速超声大模型落地。</div></div>
+                <div class="z5">⚛️ 量子位 · 04-12 07:21</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="16"
+             style="animation-delay:400ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Claude一个周末复活30年前传奇游戏，破解作者自定义语言</div>
+                <div class="z2"><div class="z2-point">• Claude通过分析游戏二进制文件，成功推断并解析作者30年前创造的自定义脚本语言</div><div class="z2-point">• 整个逆向工程过程仅耗费一个周末，若靠人工手动分析可能需要数周乃至数月</div><div class="z2-point">• 此案例展示了AI辅助遗产代码（legacy code）保护与复原的全新可行路径</div></div>
+                <div class="z3"><div class="z3-why">这证明大模型已具备逆向工程能力，能理解无文档的私有语言，让大量因技术失传而沉寂的经典软件重获新生。</div></div>
+                <div class="z5">⚛️ 量子位 · 04-12 07:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="17"
+             style="animation-delay:425ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Altman回应《纽约客》深度报道：可信度遭质疑引发争议</div>
+                <div class="z2"><div class="z2-point">• 《纽约客》发布深度报道，对Altman可信度提出质疑，被其本人定性为&#x27;煽动性&#x27;文章</div><div class="z2-point">• Altman住所遭遇疑似攻击事件，安全形势引发外界关注</div><div class="z2-point">• Altman主动发布博文公开回应，试图澄清外界对其个人品格的负面叙述</div></div>
+                <div class="z3"><div class="z3-why">OpenAI掌门人的个人公信力直接影响公司治理形象，此次舆论风波可能波及OpenAI的融资与监管关系。</div></div>
+                <div class="z5">💡 TechCrunch AI · 04-11 17:18</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="18"
+             style="animation-delay:450ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">《纽约客》用AI配图引争议：AI艺术是否适合AI报道</div>
+                <div class="z2"><div class="z2-point">• 《纽约客》Altman人物报道配图标注&#x27;Generated using A.I.&#x27;，引发读者和插画师关注</div><div class="z2-point">• 混媒艺术家David Szauder参与制作，其有逾十年拼贴与生成艺术经验</div><div class="z2-point">• The Verge发文探讨：关于AI的文章是否真的需要AI配图这一行业命题</div></div>
+                <div class="z3"><div class="z3-why">当顶级媒体为报道AI的文章选用AI配图，这既是行业矛盾的缩影，也在动摇插画师的生存空间。</div></div>
+                <div class="z5">⚡ The Verge AI · 04-11 11:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="19"
+             style="animation-delay:475ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">AI玩具鹿娃娃向用户传播Mitski父亲是CIA特工的谣言</div>
+                <div class="z2"><div class="z2-point">• AI伴侣Coral寄居在毛绒小鹿玩具中，主动发短信称Mitski父亲是CIA特工</div><div class="z2-point">• 该信息来自网络粉丝理论，并非事实，属于典型AI幻觉输出</div><div class="z2-point">• 事件揭示实体AI伴侣产品在信息核实机制上的严重缺失</div></div>
+                <div class="z3"><div class="z3-why">AI伴侣产品正在从聊天工具走进实体玩具，当它主动推送虚假信息时，用户信任风险被放大，监管和产品责任边界亟需厘清。</div></div>
+                <div class="z5">⚡ The Verge AI · 04-11 10:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="20"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">滴滴自动驾驶张博：安全体验并重 推动Robotaxi全球化落地</div>
+                <div class="z2"><div class="z2-point">• 滴滴自动驾驶与广汽埃安联合打造新一代Robotaxi专属车型R2</div><div class="z2-point">• 张博明确将安全和用户体验列为核心战略优先级</div><div class="z2-point">• 滴滴自动驾驶明确推进全球化落地战略方向</div></div>
+                <div class="z3"><div class="z3-why">滴滴Robotaxi与主机厂深度绑定，标志着自动驾驶商业化进入量产整车新阶段，全球化布局加速。</div></div>
+                <div class="z5">⚛️ 量子位 · 04-11 10:46</div>
             </div>
         </div></div>
 
@@ -628,7 +743,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>8</b> 个信息源 · <b>14</b> 篇资讯 · 2026年04月12日
+    AI 早报 · <b>9</b> 个信息源 · <b>21</b> 篇资讯 · 2026年04月12日
 </footer>
 
 <script src="modal_data.js"></script>
@@ -655,20 +770,35 @@ function renderMd(text) {
         return html + '</table>';
     });
 
-    // Headers: ### text
-    s = s.replace(/^### (.+)$/gm, '<h4 class="md-h">$1</h4>');
-    s = s.replace(/^## (.+)$/gm, '<h3 class="md-h">$1</h3>');
+    // Headers: ####, ###, ## (must process longest prefix first)
+    s = s.replace(/^#### (.+)$/gm, '<h5 class="md-h md-h5">$1</h5>');
+    s = s.replace(/^### (.+)$/gm, '<h4 class="md-h md-h4">$1</h4>');
+    s = s.replace(/^## (.+)$/gm, '<h3 class="md-h md-h3">$1</h3>');
 
     // Bold: **text**
     s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
+    // Inline code: `code`
+    s = s.replace(/`([^`]+)`/g, '<code class="md-code">$1</code>');
+
+    // Links: [text](url) — after HTML escape, & → &amp; in URLs, so allow that
+    s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="md-link">$1</a>');
+
     // Horizontal rule: ---
     s = s.replace(/^---$/gm, '<hr class="md-hr">');
 
-    // Unordered list blocks: consecutive lines starting with -
-    s = s.replace(/((?:^|\n)- .+(?:\n- .+)*)/g, function(block) {
+    // Ordered list blocks: consecutive lines starting with digit.
+    s = s.replace(/((?:^|\n)\d+\. .+(?:\n\d+\. .+)*)/g, function(block) {
         var items = block.trim().split('\n').map(function(line) {
-            return '<li>' + line.replace(/^- /, '') + '</li>';
+            return '<li>' + line.replace(/^\d+\. /, '') + '</li>';
+        }).join('');
+        return '<ol class="md-list md-ol">' + items + '</ol>';
+    });
+
+    // Unordered list blocks: consecutive lines starting with - or •
+    s = s.replace(/((?:^|\n)[-•] .+(?:\n[-•] .+)*)/g, function(block) {
+        var items = block.trim().split('\n').map(function(line) {
+            return '<li>' + line.replace(/^[-•] /, '') + '</li>';
         }).join('');
         return '<ul class="md-list">' + items + '</ul>';
     });
@@ -683,8 +813,8 @@ function renderMd(text) {
     // Clean up empty paragraphs
     s = s.replace(/<p>\s*<\/p>/g, '');
     // Don't wrap block elements in <p>
-    s = s.replace(/<p>\s*(<(?:table|ul|h[34]|hr)[^>]*>)/g, '$1');
-    s = s.replace(/(<\/(?:table|ul|h[34])>)\s*<\/p>/g, '$1');
+    s = s.replace(/<p>\s*(<(?:table|[uo]l|h[2-5]|hr)[^>]*>)/g, '$1');
+    s = s.replace(/(<\/(?:table|[uo]l|h[2-5])>)\s*<\/p>/g, '$1');
 
     return s;
 }
@@ -699,26 +829,35 @@ function openModal(idx) {
         heroHtml = '<div class="m-hero"><img src="' + a.image + '" onerror="this.parentElement.style.display=&#39;none&#39;" alt=""><div class="m-hero-gradient"></div></div>';
     }
 
-    // ⚠️ 刻意不再渲染 title / src-bar / why_it_matters：
-    // 这些信息用户已经在卡片正面看过了，点开 modal 只应该看"新内容"。
-    // 参考 html_generator.py 卡片正面：z1(分类·阅读时间) / card-title /
-    // z2(key_details) / z3(why_it_matters) / z5(来源·时间) —— 上述全部不重复。
+    // Modal 标题 — 使用中文标题，给弹窗一个清晰的上下文
+    let titleHtml = '<h2 class="m-title">' + (a.chinese_title || a.title || '') + '</h2>';
 
     // Detailed content — main reading section with markdown rendering
     let detailedHtml = '';
     if (a.detailed_content) {
         // 去掉 LLM 偶尔会生成的"### 问题背景/背景/前言/引言/简介"等背景类首节，
         // 避免和下方独立的"背景脉络"模块产生视觉重复。
-        // 正则：匹配开头的 ### 小标题 + 本节内容，直到下一个 ### 或文末。
         let cleaned = a.detailed_content.replace(
             /^\s*###\s*(问题背景|背景|前言|引言|简介)[^\n]*\n[\s\S]*?(?=\n###\s|$)/,
             ''
         ).trim();
-        // 兜底：如果清洗后全空（整段 detailed_content 就是一节背景），保留原文
         detailedHtml = '<div class="m-detailed">' + renderMd(cleaned || a.detailed_content) + '</div>';
-    } else if (a.summary) {
-        // 极端 fallback：没深度解读时才退到 summary
-        detailedHtml = '<div class="m-detailed"><p>' + a.summary + '</p></div>';
+    } else {
+        // Fallback：组装摘要 + why_it_matters + key_details
+        var fallbackParts = [];
+        if (a.summary) {
+            fallbackParts.push('<p>' + a.summary + '</p>');
+        }
+        if (a.why_it_matters) {
+            fallbackParts.push('<div class="m-why">' + a.why_it_matters + '</div>');
+        }
+        if (a.key_details && a.key_details.length > 0) {
+            var kpHtml = a.key_details.map(function(k) { return '<li>' + k + '</li>'; }).join('');
+            fallbackParts.push('<ul class="md-list">' + kpHtml + '</ul>');
+        }
+        if (fallbackParts.length > 0) {
+            detailedHtml = '<div class="m-detailed">' + fallbackParts.join('') + '</div>';
+        }
     }
 
     // Article image gallery — extra images from the article page
@@ -737,10 +876,10 @@ function openModal(idx) {
     // Deep sections (background + analysis)
     let deepHtml = '';
     if (a.background) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text">' + a.background + '</div></div>';
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text">' + renderMd(a.background) + '</div></div>';
     }
     if (a.deep_analysis) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text">' + a.deep_analysis + '</div></div>';
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text">' + renderMd(a.deep_analysis) + '</div></div>';
     }
     if (deepHtml) {
         deepHtml = '<div class="m-deep">' + deepHtml + '</div>';
@@ -750,6 +889,7 @@ function openModal(idx) {
         heroHtml +
         '<button class="m-close" onclick="closeModal()">✕</button>' +
         '<div class="m-body">' +
+            titleHtml +
             detailedHtml +
             galleryHtml +
             deepHtml +
