@@ -394,13 +394,13 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月12日 周日 · 09:37</div>
+    <div class="h-date">2026年04月12日 周日 · 14:23</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>14</b> 篇</span>
-        <span><b>8</b> 源</span>
+        <span><b>23</b> 篇</span>
+        <span><b>11</b> 源</span>
     </div>
 </div>
 </header>
@@ -408,9 +408,13 @@ body {
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
 <button class="f-btn" data-filter="大模型发布">大模型发布</button>
+<button class="f-btn" data-filter="开源生态">开源生态</button>
+<button class="f-btn" data-filter="芯片与算力">芯片与算力</button>
 <button class="f-btn" data-filter="产品与应用">产品与应用</button>
 <button class="f-btn" data-filter="安全与对齐">安全与对齐</button>
+<button class="f-btn" data-filter="学术研究">学术研究</button>
 <button class="f-btn" data-filter="具身智能">具身智能</button>
+<button class="f-btn" data-filter="自动驾驶">自动驾驶</button>
 <button class="f-btn" data-filter="行业观点">行业观点</button>
 <button class="f-btn" data-filter="其他">其他</button>
 </div>
@@ -419,121 +423,126 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI行业呈现「能力跃迁与生态博弈」双主线：技术端，NVIDIA联合顶尖高校以CaP-X将LLM智能体延伸至实体机器人，Google Veo 3.1视频生成向全用户开放，Anthropic的Claude Mythos在安全红队测试中已超越顶级人类研究员——AI正从语言走向物理世界与专业纵深；生态端，OpenAI因定价透明度问题公开致歉，吴恩达则警示反AI阵营正借道安全、就业等议题收紧监管。能力边界在加速扩张，而围绕信任与规则的争夺同样在激烈展开。</p>
+        <p class="br-editorial">今日共收录 23 条 AI 资讯（来源含 X-OpenAI, X-Yann LeCun, AI Explained 等）。本期为事实聚合版，深度解读将在 LLM 服务恢复后补充。</p>
     </section>
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card card--featured" data-cat="产品与应用|大模型发布" data-idx="0"
+        <div class="card card--featured" data-cat="大模型发布" data-idx="0"
              style="animation-delay:0ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039735523569188864%2Fimg%2F4joYFVRpZuE3_iD5.jpg')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">产品与应用 · 大模型发布</span>
+            <span class="z1-left">大模型发布</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Google Vids集成Veo 3.1：高质量AI视频生成免费向所有用户开放</div>
-                <div class="z2"><div class="z2-point">• Veo 3.1高质量视频生成功能现已免费向所有Google Vids用户开放</div><div class="z2-point">• Google Vids定位为易用型视频编辑套件，此次更新新增多项AI能力</div><div class="z2-point">• 用户可通过vids.new直接访问并开始创作</div></div>
-                <div class="z3"><div class="z3-why">AI视频生成从付费专业工具走向免费大众产品，将大幅降低内容创作门槛，加速AI视频普及。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind</div>
+                <div class="card-title">OpenAI</div>
+                <div class="z2"><div class="z2-point">• This is also the SAME usage this plan had since the 2x promo in February; we pre</div><div class="z2-point">• Our pricing page says &quot;5x or 20x usage&quot;, and many of you very understandably too</div><div class="z2-point">• Getting a lot of questions on Pro plan rate limits, so I wanted to clarify a few</div></div>
+                
+                <div class="z5">🐦 X-OpenAI · 04-11 21:14</div>
             </div>
         </div>
-        <div class="card" data-cat="安全与对齐|AI工具" data-idx="1"
+        <div class="card" data-cat="具身智能|大模型发布" data-idx="1"
              style="animation-delay:25ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2042779290522259457%2F43xmSJPK%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">安全与对齐 · AI工具</span>
+            <span class="z1-left">具身智能 · 大模型发布</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI披露Axios开发者工具遭入侵事件，承诺透明处置</div>
-                <div class="z2"><div class="z2-point">• OpenAI官方确认Axios开发者工具遭到入侵，发布正式技术说明</div><div class="z2-point">• 官方声明强调用户信息安全与隐私保护为首要优先级</div><div class="z2-point">• 已发布详细技术FAQ，说明事件经过与应对措施</div></div>
-                <div class="z3"><div class="z3-why">开发者工具链安全是AI平台的命脉，此次事件暴露供应链攻击对AI生态的潜在威胁，OpenAI的应对速度和透明度将直接影响开发者信任。</div></div>
-                <div class="z5">🐦 X-OpenAI</div>
+                <div class="card-title">I see every week on X an announcement or</div>
+                <div class="z2"><div class="z2-point">• So may I propose the &quot;5 year old paired comparison test&quot; ?</div><div class="z2-point">• The only reason I don&#x27;t believe it is because manipulation had already been solv</div><div class="z2-point">• At the next conference let&#x27;s set up a number of tables to which you can bring yo</div></div>
+                
+                <div class="z5">🐦 X-Yann LeCun · 04-12 02:18</div>
             </div>
         </div>
-        <div class="card" data-cat="AI政策监管|行业观点" data-idx="2"
+        <div class="card" data-cat="产品与应用|AI政策监管" data-idx="2"
              style="animation-delay:50ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHEwo55_W8AAqin-.jpg')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">AI政策监管 · 行业观点</span>
+            <span class="z1-left">产品与应用 · AI政策监管</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">吴恩达：反AI联盟正寻找新论点阻碍AI发展</div>
-                <div class="z2"><div class="z2-point">• 英国研究发现&#x27;AI致人类灭绝&#x27;论点已失效，AI战争与环境议题更能引发公众共鸣</div><div class="z2-point">• AI&#x27;洗白&#x27;裁员现象严重：疫情期间过度扩招的企业将正常裁员归咎于AI，夸大就业威胁</div><div class="z2-point">• 白宫提议联邦级AI立法框架，通过联邦优先权防止各州碎片化监管阻碍AI发展</div></div>
-                <div class="z3"><div class="z3-why">这意味着AI支持者需警惕有组织的舆论战，避免情绪化监管重蹈核能发展被扼杀的覆辙。</div></div>
-                <div class="z5">🐦 X-Andrew Ng</div>
+                <div class="card-title">I am a Web3 Ambassador at World Liberty </div>
+                <div class="z2"><div class="z2-point">• 80% of the supply went to CIC Digital LLC and Fight Fight Fight LLC.</div><div class="z2-point">• The page calls us &quot;the passionate minds shaping the future of finance.</div><div class="z2-point">• &quot; 600,000 wallets bought our memecoin.</div></div>
+                
+                <div class="z5">🐦 X-Yann LeCun · 04-11 19:07</div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="具身智能|AI编程" data-idx="3"
+        <div class="card" data-cat="大模型发布|产品与应用" data-idx="3"
              style="animation-delay:75ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039342077528637440%2Fimg%2FeF-lkat0iP7ukdIF.jpg')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">具身智能 · AI编程</span>
+            <span class="z1-left">大模型发布 · 产品与应用</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">NVIDIA联合斯坦福等高校推出CaP-X：机器人编程智能体开源基准框架</div>
-                <div class="z2"><div class="z2-point">• CaP-X是面向机器人感知与控制的编程智能体开源框架与基准测试集</div><div class="z2-point">• 智能体在仿真与真实机器人上执行代码，观察结果并迭代提升代码可靠性</div><div class="z2-point">• 由NVIDIA、UC Berkeley、CMU Robotics、Stanford AI Lab四家顶级机构联合开发</div></div>
-                <div class="z3"><div class="z3-why">编程智能体正在进入具身智能领域，CaP-X提供了标准化评测体系，将推动机器人控制从手工编程向AI自动生成代码演进，是机器人通用化的关键一步。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
+                <div class="card-title">Tired of winning David Axelrod (@davidax</div>
+                <div class="z2"><div class="z2-point">• They still have thousands of missiles and retain their highly enriched uranium a</div><div class="z2-point">• Meanwhile, we&#x27;ve lost 14 U.</div><div class="z2-point">• At the same time, inflation is raging again and gas is at $4.</div></div>
+                
+                <div class="z5">🐦 X-Yann LeCun · 04-11 15:13</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="4"
+        <div class="card" data-cat="AI政策监管|学术研究" data-idx="4"
              style="animation-delay:100ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041928747121852416%2Fm9eI15mL%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">AI政策监管 · 学术研究</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布托管智能体服务解决长时任务运行难题</div>
-                <div class="z2"><div class="z2-point">• Anthropic推出Managed Agents托管服务，专为长时运行的AI Agent设计</div><div class="z2-point">• 核心挑战是为&#x27;尚未被构想的程序&#x27;设计系统，类比计算机科学的经典难题</div><div class="z2-point">• 该服务属于Anthropic工程基础设施层面的重要进展</div></div>
-                <div class="z3"><div class="z3-why">托管智能体服务将AI Agent从实验性工具推向生产级基础设施，降低开发者部署长时任务Agent的门槛，加速AI自动化落地。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
+                <div class="card-title">Will Anthropic be forced to make a versi</div>
+                <div class="z2"><div class="z2-point">• Will Anthropic be forced to make a version of Claude for war?</div><div class="z2-point">• And does a new paper expose the risks of Claude agents, in both OpenClaw and the</div><div class="z2-point">• Plus, 5 more twists in the story.</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:21</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="5"
+        <div class="card" data-cat="芯片与算力|学术研究" data-idx="5"
              style="animation-delay:125ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041577047198150656%2FZsuw2-wg%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">芯片与算力 · 学术研究</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布Project Glasswing：新模型Claude M</div>
-                <div class="z2"><div class="z2-point">• Project Glasswing定位为紧迫性倡议，专注保护世界最关键软件基础设施</div><div class="z2-point">• Claude Mythos Preview为Anthropic最新前沿模型，漏洞发现能力超越几乎所有顶级人类专家</div><div class="z2-point">• Anthropic将安全作为战略级优先方向，从对齐研究延伸至实战网络安全防御</div></div>
-                <div class="z3"><div class="z3-why">AI首次系统性介入关键软件安全防御，意味着漏洞挖掘从「稀缺人才」转向「可规模化部署」，将深刻改变网络安全格局。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
+                <div class="card-title">NVIDIA</div>
+                <div class="z2"><div class="z2-point">• ❤️ Check out Weights &amp; Biases and sign up for a free demo here: https://wandb.</div><div class="z2-point">• me/papers
+
+📝 The paper is available here:
+https://dreamdojo-world.</div><div class="z2-point">• io/
+
+Our Patreon if you wish to.</div></div>
+                
+                <div class="z5">🎬 Two Minute Papers · 04-11 17:22</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="6"
+        <div class="card" data-cat="产品与应用" data-idx="6"
              style="animation-delay:150ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">产品与应用</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布Claude Mythos Preview安全漏洞技术报告</div>
-                <div class="z2"><div class="z2-point">• Anthropic对Claude Mythos Preview进行系统性红队测试，发现多项软件漏洞</div><div class="z2-point">• 技术报告已公开发布，涵盖具体漏洞类型与利用路径</div><div class="z2-point">• 这是Anthropic在模型安全披露上的主动透明化举措</div></div>
-                <div class="z3"><div class="z3-why">顶级AI实验室主动公开模型安全缺陷，标志着AI安全透明度进入新阶段，对行业安全评估标准有示范意义。</div></div>
-                <div class="z5">🐦 X-AnthropicAI</div>
+                <div class="card-title">The OpenAI CEO&#x27;s new blog post responds </div>
+                <div class="z2"><div class="z2-point">• The OpenAI CEO&#x27;s new blog post responds to both an apparent attack on his home a</div></div>
+                
+                <div class="z5">💡 TechCrunch AI · 04-11 17:18</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="7"
+        <div class="card" data-cat="大模型发布|行业观点" data-idx="7"
              style="animation-delay:175ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">大模型发布 · 行业观点</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI澄清Pro套餐用量限制：定价页面表述混乱引发误解</div>
-                <div class="z2"><div class="z2-point">• Pro $100套餐：5月31日前含2X促销共10x Plus用量</div><div class="z2-point">• Pro $200套餐：5月31日前含2X促销共20x Plus用量，非用户预期的40x</div><div class="z2-point">• OpenAI承认定价页面将&#x27;5x/20x&#x27;与促销倍数混用导致理解歧义</div></div>
-                <div class="z3"><div class="z3-why">用户以为2X促销叠加后能获得40x用量，实际只有20x，OpenAI公开承认是自己的沟通失误，将更新定价页面。</div></div>
-                <div class="z5">🐦 X-OpenAI</div>
+                <div class="card-title">Just 48 hours after releasing GPT 5.</div>
+                <div class="z2"><div class="z2-point">• Just 48 hours after releasing GPT 5.</div><div class="z2-point">• 3 Instant, OpenAI have released GPT 5.</div><div class="z2-point">• 4 Thinking, so either their is an imminent singularity or perhaps we are being d</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:21</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="8"
@@ -544,80 +553,206 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI发布Atlas：ChatGPT平台新功能上线</div>
-                <div class="z2"><div class="z2-point">• Atlas由OpenAI官方发布，入口为chatgpt.com/atlas</div><div class="z2-point">• 目前公开信息极少，仅有官方链接，具体功能尚不明确</div><div class="z2-point">• Atlas名称暗示可能是知识图谱、地图类或多模态导航类应用</div></div>
-                <div class="z3"><div class="z3-why">OpenAI官方账号直接推送链接，意味着Atlas是面向ChatGPT用户的正式产品，值得关注其具体定位与能力。</div></div>
-                <div class="z5">🐦 X-OpenAI</div>
+                <div class="card-title">Here is the list of NASA science mission</div>
+                <div class="z2"><div class="z2-point">• This is a wrecking operation against America.</div><div class="z2-point">• Here is the list of NASA science missions that the Trump administration proposes</div><div class="z2-point">• Note that it includes many missions that are already in space, fully operational</div></div>
+                
+                <div class="z5">🐦 X-Yann LeCun · 04-11 11:25</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="9"
+        <div class="card" data-cat="行业观点" data-idx="9"
              style="animation-delay:225ms">
-            <div class="card-img" style="background-image:url('https://i.ytimg.com/vi/mFSFvKquXwI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLB25ngLUlgDGivzF4W4BFS_XYDV_g')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">行业观点</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">NVIDIA新AI突破直觉：梦境道场实现反常识泛化能力</div>
-                <div class="z2"><div class="z2-point">• NVIDIA发布名为DreamDojo的AI系统，项目主页托管于dreamdojo-world.github.io</div><div class="z2-point">• 系统采用某种反直觉的训练或架构设计，但最终效果出乎意料地有效</div><div class="z2-point">• 由Two Minute Papers频道介绍，说明该研究具备足够的学术影响力与传播价值</div></div>
-                <div class="z3"><div class="z3-why">这意味着AI训练范式可能存在被忽视的有效路径，NVIDIA在基础研究层面持续挑战现有认知边界。</div></div>
-                <div class="z5">🎬 Two Minute Papers · 04-11 16:37</div>
+                <div class="card-title">Claude </div>
+                <div class="z2"><div class="z2-point">• Anthropic&#x27;s CEO, who has consistently predicted transformative AI will arrive be</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:20</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="10"
+        <div class="card" data-cat="AI政策监管" data-idx="10"
              style="animation-delay:250ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041849727919259648%2FQCCnt3Yb%3Fformat%3Djpg%26name%3D800x419')"></div>
+            
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">AI政策监管</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI基金会投入逾1亿美元用AI攻克阿尔茨海默症</div>
-                <div class="z2"><div class="z2-point">• OpenAI基金会定向拨款逾1亿美元用于阿尔茨海默症研究</div><div class="z2-point">• 资金覆盖疾病机制图谱绘制、AI辅助药物设计等方向</div><div class="z2-point">• Sam Altman亲自撰文阐述OpenAI基金会对AI医疗的战略判断</div></div>
-                <div class="z3"><div class="z3-why">这标志着AI头部机构开始将资本和技术能力系统性地投向高难度医疗问题，AI制药赛道将获得顶级背书与资金注入。</div></div>
-                <div class="z5">🐦 X-Sam Altman</div>
+                <div class="card-title">Trump pursued &quot;an immoral way and a dang</div>
+                <div class="z2"><div class="z2-point">• That puts Tehran in the driver&#x27;s seat.</div><div class="z2-point">• Trump pursued &quot;an immoral way and a dangerous way to negotiate&quot; with Iran becaus</div></div>
+                
+                <div class="z5">🐦 X-Yann LeCun · 04-11 09:32</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="11"
+        <div class="card" data-cat="大模型发布" data-idx="11"
              style="animation-delay:275ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">大模型发布</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">The two models that you will hear discus</div>
+                <div class="z2"><div class="z2-point">• The two models that you will hear discussed for at least the next two months - C</div><div class="z2-point">• 3 Codex - just got released within 26 mins or each other.</div><div class="z2-point">• The full breakdown of around.</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:20</div>
+            </div>
+        </div>
+        <div class="card" data-cat="大模型发布|AI政策监管" data-idx="12"
+             style="animation-delay:300ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">大模型发布 · AI政策监管</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Gemini Exponential</div>
+                <div class="z2"><div class="z2-point">• The condensed highlights of hours of AI lab leader interviews, last-48-hour mode</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:19</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|AI工具" data-idx="13"
+             style="animation-delay:325ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI工具</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">The illustration for The New Yorker &#x27;s p</div>
+                <div class="z2"><div class="z2-point">• The illustration for The New Yorker &#x27;s profile of OpenAI CEO Sam Altman is a jum</div><div class="z2-point">• Altman stands in a blue sweater with a blank expression.</div><div class="z2-point">• One final face rests in his hands.</div></div>
+                
+                <div class="z5">⚡ The Verge AI · 04-11 11:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="行业观点" data-idx="14"
+             style="animation-delay:350ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">行业观点</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">It’s probably not possible to satisfacto</div>
+                <div class="z2"><div class="z2-point">• It’s probably not possible to satisfactorily condense a 12 month’s worth of weir</div><div class="z2-point">• But I’m gonna try anyway.</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:19</div>
+            </div>
+        </div>
+        <div class="card" data-cat="学术研究|芯片与算力" data-idx="15"
+             style="animation-delay:375ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">学术研究 · 芯片与算力</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Gemini 3</div>
+                <div class="z2"><div class="z2-point">• 1 Pro, guest-starring the new Sonnet.</div><div class="z2-point">• Full breakdown of Gemini 3.</div><div class="z2-point">• Do we have a new best AI model, or do we have the downfall of benchmarks in gene</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:21</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|AI工具" data-idx="16"
+             style="animation-delay:400ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI工具</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Anthropic</div>
+                <div class="z2"><div class="z2-point">• A new tool, with code written *only* by AI, has gone omega-viral: Claude Cowork.</div><div class="z2-point">• What do the stats say on productivity?</div><div class="z2-point">• Where is the truth in a sea of noise?</div></div>
+                
+                <div class="z5">🎬 AI Explained · 04-12 06:20</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="17"
+             style="animation-delay:425ms">
             
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Karpathy：GitHub Gist评论质量远超X，呼吁其与X竞争</div>
-                <div class="z2"><div class="z2-point">• Karpathy指出GitHub Gist评论更有帮助、更具洞察力、更少AI生成内容</div><div class="z2-point">• 他将这归因于用户社区构成、Markdown格式或缺乏算法激励机制</div><div class="z2-point">• 他建议GitHub考虑将Gist发展为X的竞争对手</div></div>
-                <div class="z3"><div class="z3-why">这揭示了一个反直觉现象：技术社区的小众平台反而能产生更高质量的讨论，对AI时代的信息生态有重要启示。</div></div>
-                <div class="z5">🐦 X-Andrej Karpathy</div>
+                <div class="card-title">程序员养龟有多离谱？我让Claude Code 每天给我发乌龟行为报告</div>
+                <div class="z2"><div class="z2-summary">程序员养龟有多离谱？我让Claude Code 每天给我发乌龟行为报告</div></div>
+                
+                <div class="z5">🐯 虎嗅科技 · 04-12 04:10</div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="12"
-             style="animation-delay:300ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2041386973001310208%2FhG5NBSFb%3Fformat%3Djpg%26name%3D420x420_2')"></div>
+        <div class="card" data-cat="产品与应用|大模型发布" data-idx="18"
+             style="animation-delay:450ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 大模型发布</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Matrix 首页推荐 Matrix 是少数派的写作社区，我们主张分享真实的产品</div>
+                <div class="z2"><div class="z2-point">• Matrix 首页推荐 Matrix 是少数派的写作社区，我们主张分享真实的产品体验，有实用价值的经验与思考。</div><div class="z2-point">• 我们会不定期挑选 Matrix 最优质的文章，展示来自用户的最真实的体验和观点。</div><div class="z2-point">• 随着 LLM 技术应用的不断发展，Agent Experience（简称 AX），成为了显学，来开始在工程圈流通。</div></div>
+                
+                <div class="z5">📱 少数派 · 04-11 07:18</div>
+            </div>
+        </div>
+        <div class="card" data-cat="开源生态|AI工具" data-idx="19"
+             style="animation-delay:475ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">开源生态 · AI工具</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">谷歌开源 Colab MCP Server，AI 智能体可云端运行代码</div>
+                <div class="z2"><div class="z2-summary">谷歌开源 Colab MCP Server，AI 智能体可云端运行代码</div></div>
+                
+                <div class="z5">🚀 AI前线 · 04-12 10:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用" data-idx="20"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">产品与应用</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">D’oh, a deer, an AI deer.</div>
+                <div class="z2"><div class="z2-point">• &quot;Oh wow, I was checking out Mitski.</div><div class="z2-point">• &quot; Normally, that kind of out-of-the-blue text from a friend wouldn&#x27;t faze me.</div><div class="z2-point">• I texted back an eloquent, &quot;Wait what.</div></div>
+                
+                <div class="z5">⚡ The Verge AI · 04-11 10:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="自动驾驶|安全与对齐" data-idx="21"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">自动驾驶 · 安全与对齐</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">滴滴自动驾驶与广汽埃安联手打造的新一代Robotaxi车型R2</div>
+                <div class="z2"><div class="z2-point">• 滴滴自动驾驶与广汽埃安联手打造的新一代Robotaxi车型R2</div></div>
+                
+                <div class="z5">⚛️ 量子位 · 04-11 10:46</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="22"
+             style="animation-delay:500ms">
+            
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">NVIDIA联合伯克利斯坦福CMU开源机器人基准CaP-X，MIT协议</div>
-                <div class="z2"><div class="z2-point">• 由NVIDIA、UC Berkeley、Stanford、CMU四大顶级机构联合研发</div><div class="z2-point">• 机器人学习基准环境CaP-X全套开源，MIT许可证，含代码与论文</div><div class="z2-point">• Ken Goldberg（伯克利机器人操控领域传奇学者）联合指导该项目</div></div>
-                <div class="z3"><div class="z3-why">顶级机构联手开源意味着机器人操控研究的基础设施门槛大幅降低，社区可直接在此基础上复现、对比和超越最新成果。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="13"
-             style="animation-delay:325ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2039345467038081024%2Fimg%2F0d_LMqHb3PiFLReP.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Jim Fan团队开源CaP-X：LLM驱动的具身智能Agent框架</div>
-                <div class="z2"><div class="z2-point">• CaP-X将感知(SAM3/Molmo/点云)、控制(IK求解/抓取规划/导航)封装为API，LLM通过调用API驱动机器人执行操作任务</div><div class="z2-point">• CaP-Bench基准测试了12个前沿LLM/VLM（含GPT、Gemini、Opus、DeepSeek、Qwen、Kimi），覆盖8个评估维度</div><div class="z2-point">• CaP-RL验证：7B开源模型经50次迭代训练后成功率从20%跃升至72%，仿真策略可迁移至真实机器人</div></div>
-                <div class="z3"><div class="z3-why">这意味着大语言模型不再只是聊天工具——它可以直接驱动机器人手臂干活，且无需针对每个任务单独训练策略模型，Agent范式正在向物理世界渗透。</div></div>
-                <div class="z5">🐦 X-Jim Fan</div>
+                <div class="card-title">待雪草， Life has to be lived.</div>
+                <div class="z2"><div class="z2-point">• 根据 deepseek 的说法，海子这个词源自蒙古语“naur”，是明清时期随着移民传入云贵川的。</div><div class="z2-point">• 查看知乎原文 这个叫“古音小镜”的网站还挺有意思的，我也试着玩了一下。</div><div class="z2-point">• 我第一个想到的，是西藏那边把湖泊叫“错 / 措”（co/mtsho），比如纳木错、羊卓雍错、色林错、玛旁雍错。</div></div>
+                
+                <div class="z5">📰 知乎日报</div>
             </div>
         </div></div>
 
@@ -628,7 +763,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>8</b> 个信息源 · <b>14</b> 篇资讯 · 2026年04月12日
+    AI 早报 · <b>11</b> 个信息源 · <b>23</b> 篇资讯 · 2026年04月12日
 </footer>
 
 <script src="modal_data.js"></script>
