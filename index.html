@@ -301,11 +301,27 @@ body {
 }
 .m-detailed p { margin: 0 0 12px; }
 .m-detailed p:last-child { margin-bottom: 0; }
-.md-h { color: var(--text-100); font-size: 15px; font-weight: 600; margin: 20px 0 8px; }
+/* Markdown header hierarchy */
+.md-h { color: var(--text-100); font-weight: 600; margin: 20px 0 8px; }
 .md-h:first-child { margin-top: 0; }
+.md-h3 { font-size: 17px; }
+.md-h4 { font-size: 15px; }
+.md-h5 { font-size: 14px; color: var(--text-80, rgba(228,228,236,0.80)); }
+/* Inline code */
+.md-code {
+    background: rgba(255,255,255,0.07); padding: 2px 6px; border-radius: 4px;
+    font-family: 'SF Mono','Menlo',monospace; font-size: 0.88em;
+    color: var(--accent); word-break: break-word;
+}
+/* Markdown links */
+.md-link { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(107,138,253,0.3); transition: border-color 0.2s; }
+.md-link:hover { border-color: var(--accent); }
 .md-hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+/* Markdown lists */
 .md-list { margin: 8px 0; padding-left: 20px; }
 .md-list li { margin: 4px 0; }
+.md-ol { list-style-type: decimal; }
+.md-ol li { padding-left: 4px; }
 .md-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
 .md-table th, .md-table td { padding: 6px 10px; border: 1px solid var(--border); text-align: left; }
 .md-table th { background: rgba(255,255,255,0.04); font-weight: 600; color: var(--text-100); }
@@ -353,6 +369,10 @@ body {
 .m-deep-text {
     font-size: 13px; color: var(--text-60); line-height: 1.7;
 }
+.m-deep-text p { margin: 0 0 8px; }
+.m-deep-text p:last-child { margin-bottom: 0; }
+.m-deep-text .md-h { font-size: 13px; margin: 12px 0 4px; }
+.m-deep-text .md-list { margin: 4px 0; font-size: 13px; }
 /* Footer — source + action */
 .m-footer {
     display: flex; align-items: center; justify-content: space-between;
@@ -394,25 +414,20 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月12日 周日 · 16:38</div>
+    <div class="h-date">2026年04月12日 周日 · 18:18</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>11</b> 篇</span>
-        <span><b>8</b> 源</span>
+        <span><b>10</b> 篇</span>
+        <span><b>7</b> 源</span>
     </div>
 </div>
 </header>
 
 <!-- Filters -->
 <div class="filter-bar" id="filterBar"><button class="f-btn active" data-filter="all">全部</button>
-<button class="f-btn" data-filter="大模型发布">大模型发布</button>
-<button class="f-btn" data-filter="开源生态">开源生态</button>
-<button class="f-btn" data-filter="产品与应用">产品与应用</button>
-<button class="f-btn" data-filter="安全与对齐">安全与对齐</button>
 <button class="f-btn" data-filter="具身智能">具身智能</button>
-<button class="f-btn" data-filter="自动驾驶">自动驾驶</button>
 <button class="f-btn" data-filter="行业观点">行业观点</button>
 <button class="f-btn" data-filter="其他">其他</button>
 </div>
@@ -421,7 +436,7 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI圈围绕「可信度」展开多线博弈：OpenAI深陷公关危机，定价混乱致歉、CEO人品遭《纽约客》质疑、Claude漏洞能力被指注水；LeCun则以「5岁儿童测试」为矛，戳破机器人操控的过度乐观叙事。另一面，技术社区仍在稳步推进——滴滴Robotaxi落地、超声AI大数据集入选CVPR、Claude周末破解30年老游戏，映衬出炒作与实干的鲜明分野。</p>
+        <p class="br-editorial">AI行业今日呈现&#x27;真实性&#x27;主旋律：OpenAI为定价混乱致歉、Altman回应诚信质疑、Claude安全能力被指夸大，头部玩家的信任危机同步爆发；与此同时，LeCun用儿童基准戳破机器人泡沫，AI伴侣玩具散布阴谋论暴露产品幻觉隐患。技术层面，谷歌开源Colab MCP、超声医疗大模型落地、滴滴Robotaxi新车型发布，务实进展在喧嚣中悄然推进。</p>
     </section>
 
 <!-- Cards Grid -->
@@ -434,13 +449,13 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI澄清Pro套餐限速规则：定价页面表述存在误导</div>
-                <div class="z2"><div class="z2-point">• Pro $100套餐实际含10x Plus用量（含2x临时加成），有效期至5月31日</div><div class="z2-point">• Pro $200套餐实际含20x Plus用量，与2月促销时相同，并非外界期待的40x</div><div class="z2-point">• OpenAI承认定价页面将两件事混写在一起，导致用户误解，将更新页面</div></div>
-                <div class="z3"><div class="z3-why">用户按字面理解定价页面，以为享有40x用量，实际只有20x——这种信任损耗对订阅制产品伤害极大。</div></div>
+                <div class="card-title">OpenAI澄清Pro套餐用量限制：定价页面表述引发误解</div>
+                <div class="z2"><div class="z2-point">• Pro $100套餐含至少10x Plus用量，2X加速促销延至5月31日</div><div class="z2-point">• Pro $200套餐含至少20x Plus用量，此标准自2月促销起未变，此前未明确公示</div><div class="z2-point">• 定价页&#x27;5x或20x&#x27;表述与2X加速叠加后产生误解，OpenAI承认系页面措辞混乱所致</div></div>
+                <div class="z3"><div class="z3-why">定价透明度直接影响用户信任，OpenAI此次主动澄清并认错，折射出AI订阅服务在用量政策沟通上的普遍痛点。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-11 21:14</div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="具身智能|行业观点" data-idx="1"
+        <div class="card" data-cat="具身智能|行业观点" data-idx="1"
              style="animation-delay:25ms">
             
             <div class="card-body">
@@ -448,38 +463,38 @@ body {
             <span class="z1-left">具身智能 · 行业观点</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">LeCun提议「5岁儿童对比测试」：机器人操控远未解决</div>
-                <div class="z2"><div class="z2-point">• LeCun观察到每周都有人宣称&#x27;解决了&#x27;机器人操控问题，但下周又有人重新&#x27;解决&#x27;</div><div class="z2-point">• 提议在会议现场设立对比台：机器人 vs 5岁儿童，完成100项家庭物品操控任务</div><div class="z2-point">• 任务包括捡硬币、拧瓶盖、插插头、转魔方一面等日常动作，全部使用普通家庭物品</div></div>
-                <div class="z3"><div class="z3-why">顶级AI学者公开泼冷水，提醒业界在具身智能炒作浪潮中保持清醒——真正的通用操控能力离落地还很远。</div></div>
+                <div class="card-title">LeCun提议「5岁儿童对比测试」反驳机器人操控已被解决的说法</div>
+                <div class="z2"><div class="z2-point">• LeCun观察到每周都有团队宣称「解决了机器人操控」，彼此矛盾显示夸大宣传普遍存在</div><div class="z2-point">• 提议在会议上设置对比测试台，让机器人与5岁儿童同时完成100项中性人选择的家庭操控任务</div><div class="z2-point">• 测试任务包括捡硬币、拧瓶盖、插插头、转魔方——这些对人类幼儿极易但对机器人极难</div></div>
+                <div class="z3"><div class="z3-why">顶级AI科学家公开泼冷水，说明具身智能领域存在严重的能力高估和宣传泡沫，真正的通用操控距离实用还很遥远。</div></div>
                 <div class="z5">🐦 X-Yann LeCun · 04-12 02:18</div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="安全与对齐|大模型发布" data-idx="2"
+        <div class="card" data-cat="其他" data-idx="2"
              style="animation-delay:50ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">安全与对齐 · 大模型发布</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic漏洞发现能力遭质疑：Claude Mythos成果被指掺水</div>
-                <div class="z2"><div class="z2-point">• Claude Mythos发现27年历史漏洞的成果被指存在人工掺水，非纯模型自主发现</div><div class="z2-point">• 至少8个AI模型（含开源GPT）在同类测试中可达到相似结果，独特性存疑</div><div class="z2-point">• Opus 4.6同期被指遭「能力裁剪」，引发用户对模型降智的担忧</div></div>
-                <div class="z3"><div class="z3-why">若Anthropic的安全能力展示存在夸大，则此前引发华尔街关注的「AI发现真实漏洞」叙事将大打折扣，影响行业对AI安全研究价值的判断。</div></div>
-                <div class="z5">🔎 36氪 AI搜索 · 04-12 07:56</div>
+                <div class="card-title">谷歌开源 Colab MCP Server，AI 智能体可直接云端执行代码</div>
+                <div class="z2"><div class="z2-summary">谷歌开源 Google Colab MCP Server，允许 AI 智能体通过 Model Context Protocol 在 Colab 云端环境中直接运行 Python 代码。</div></div>
+                <div class="z3"><div class="z3-why">AI 智能体从「写代码」进化到「跑代码」，云端执行能力成为新的基础设施竞争核心。</div></div>
+                <div class="z5">🚀 AI前线 · 04-12 10:00</div>
             </div>
         </div>
-        <div class="card" data-cat="开源生态|AI工具" data-idx="3"
+        <div class="card" data-cat="其他" data-idx="3"
              style="animation-delay:75ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">开源生态 · AI工具</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">谷歌开源 Colab MCP Server，AI 智能体可云端运行代码</div>
-                <div class="z2"><div class="z2-summary">谷歌开源 Colab MCP Server，AI 智能体可云端运行代码</div></div>
-                
-                <div class="z5">🚀 AI前线 · 04-12 10:00</div>
+                <div class="card-title">Anthropic夸大Claude漏洞发现能力？华尔街恐慌背后的真相</div>
+                <div class="z2"><div class="z2-point">• Claude Mythos宣称发现27年历史的0day漏洞，被指结果有人工辅助掺水，并非纯模型自主发现</div><div class="z2-point">• 至少8个开源或竞品AI模型在同类任务上可复现类似结果，独家能力存疑</div><div class="z2-point">• Opus 4.6同期被指经历能力大幅缩水，社区称其遭到「能力阉割」</div></div>
+                <div class="z3"><div class="z3-why">AI安全能力的真实边界直接影响监管政策与资本走向，若头部厂商数据注水，将导致行业整体可信度受损，并扭曲政策制定者对AI风险的判断。</div></div>
+                <div class="z5">🔎 36氪 AI搜索 · 04-12 07:56</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="4"
@@ -490,9 +505,9 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">中国团队构建首个大规模超声专属数据集，36.4万图文对助力AI读懂临床语义</div>
-                <div class="z2"><div class="z2-point">• 数据集包含36.4万超声图文对，为超声领域迄今最大规模专属数据集</div><div class="z2-point">• 聚焦临床诊断语义理解，而非单纯图像识别，更贴近真实医疗场景</div><div class="z2-point">• 研究成果入选顶级计算机视觉会议CVPR 2026</div></div>
-                <div class="z3"><div class="z3-why">超声诊断长期缺乏高质量训练数据，此数据集填补空白，有望让AI真正理解临床诊断语义，加速医疗AI落地。</div></div>
+                <div class="card-title">中国团队构建首个大规模超声专属数据集，36.4万图文对入选CVPR&#x27;26</div>
+                <div class="z2"><div class="z2-point">• 数据集包含36.4万超声图文对，为超声领域首个大规模专属多模态数据集</div><div class="z2-point">• 研究聚焦临床诊断语义理解，而非单纯图像识别，更贴近实际诊断流程</div><div class="z2-point">• 论文被CVPR 2026收录，代表该方向已获计算机视觉顶会认可</div></div>
+                <div class="z3"><div class="z3-why">超声诊断长期缺乏高质量标注数据，此数据集填补空白，将让医疗AI真正理解临床诊断语义，加速超声大模型落地。</div></div>
                 <div class="z5">⚛️ 量子位 · 04-12 07:21</div>
             </div>
         </div>
@@ -504,9 +519,9 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Claude一个周末复活30年前传奇游戏，破解自定义编程语言</div>
-                <div class="z2"><div class="z2-point">• Claude成功破译了一门30年前游戏作者设计的自定义编程语言，完成逆向工程</div><div class="z2-point">• 整个复活过程仅耗费一个周末，展示了大模型在代码理解上的效率</div><div class="z2-point">• 此类工作若依靠人工，可能需要数周甚至数月的专业逆向分析</div></div>
-                <div class="z3"><div class="z3-why">这展示了大模型在逆向工程和遗产代码解析上的惊人能力，让此前只能束之高阁的老游戏重获新生，意味着AI正在成为数字文化遗产保护的新利器。</div></div>
+                <div class="card-title">Claude一个周末复活30年前传奇游戏，破解作者自定义语言</div>
+                <div class="z2"><div class="z2-point">• Claude通过分析游戏二进制文件，成功推断并解析作者30年前创造的自定义脚本语言</div><div class="z2-point">• 整个逆向工程过程仅耗费一个周末，若靠人工手动分析可能需要数周乃至数月</div><div class="z2-point">• 此案例展示了AI辅助遗产代码（legacy code）保护与复原的全新可行路径</div></div>
+                <div class="z3"><div class="z3-why">这证明大模型已具备逆向工程能力，能理解无文档的私有语言，让大量因技术失传而沉寂的经典软件重获新生。</div></div>
                 <div class="z5">⚛️ 量子位 · 04-12 07:00</div>
             </div>
         </div>
@@ -518,9 +533,9 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Sam Altman回应《纽约客》争议报道及住宅袭击事件</div>
-                <div class="z2"><div class="z2-point">• 《纽约客》发布深度报道，对Sam Altman的可信度提出质疑，Altman本人称其具有&#x27;煽动性&#x27;</div><div class="z2-point">• Altman住宅同期遭遇疑似袭击事件，与舆论风波同时发酵</div><div class="z2-point">• Altman通过个人博文正面回应两件事，试图主导公众叙事</div></div>
-                <div class="z3"><div class="z3-why">OpenAI领导层的公信力直接影响其商业合作与监管关系，此次舆论风波可能对OpenAI的企业形象和谈判中的营利化转型产生压力。</div></div>
+                <div class="card-title">Altman回应《纽约客》深度报道：可信度遭质疑引发争议</div>
+                <div class="z2"><div class="z2-point">• 《纽约客》发布深度报道，对Altman可信度提出质疑，被其本人定性为&#x27;煽动性&#x27;文章</div><div class="z2-point">• Altman住所遭遇疑似攻击事件，安全形势引发外界关注</div><div class="z2-point">• Altman主动发布博文公开回应，试图澄清外界对其个人品格的负面叙述</div></div>
+                <div class="z3"><div class="z3-why">OpenAI掌门人的个人公信力直接影响公司治理形象，此次舆论风波可能波及OpenAI的融资与监管关系。</div></div>
                 <div class="z5">💡 TechCrunch AI · 04-11 17:18</div>
             </div>
         </div>
@@ -532,10 +547,10 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">NVIDIA发布反直觉AI系统：理论上不可行却实际成功</div>
-                <div class="z2"><div class="z2-point">• NVIDIA发布DreamDojo项目，采用被认为理论上难以奏效的AI训练方法</div><div class="z2-point">• Two Minute Papers频道专门撰文介绍，说明该成果在研究社区引发广泛关注</div><div class="z2-point">• 论文已公开发布，研究结果与既有预期相悖但实验数据支持其有效性</div></div>
-                <div class="z3"><div class="z3-why">当主流假设被推翻，意味着AI研究范式可能需要重新审视，NVIDIA此举或开辟新的技术路线。</div></div>
-                <div class="z5">🎬 Two Minute Papers · 04-11 16:28</div>
+                <div class="card-title">《纽约客》用AI配图引争议：AI艺术是否适合AI报道</div>
+                <div class="z2"><div class="z2-point">• 《纽约客》Altman人物报道配图标注&#x27;Generated using A.I.&#x27;，引发读者和插画师关注</div><div class="z2-point">• 混媒艺术家David Szauder参与制作，其有逾十年拼贴与生成艺术经验</div><div class="z2-point">• The Verge发文探讨：关于AI的文章是否真的需要AI配图这一行业命题</div></div>
+                <div class="z3"><div class="z3-why">当顶级媒体为报道AI的文章选用AI配图，这既是行业矛盾的缩影，也在动摇插画师的生存空间。</div></div>
+                <div class="z5">⚡ The Verge AI · 04-11 11:00</div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="8"
@@ -546,37 +561,23 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">新闻配图该用AI吗？媒体界的艺术伦理之争</div>
-                <div class="z2"><div class="z2-point">• 《纽约客》Sam Altman人物特写使用AI生成视觉作品，并在文末注明&#x27;Generated using A.I.&#x27;</div><div class="z2-point">• 创作者David Szauder是有十余年经验的混媒体艺术家，使用了早于商业AI工具的生成艺术流程</div><div class="z2-point">• 此事引发媒体业关于AI配图伦理、艺术家权益与读者信任的争议</div></div>
-                <div class="z3"><div class="z3-why">主流媒体是否使用AI配图，直接影响插画师、摄影师的生计，也折射出AI内容在新闻报道中的边界问题。</div></div>
-                <div class="z5">⚡ The Verge AI · 04-11 11:00</div>
+                <div class="card-title">AI玩具鹿娃娃向用户传播Mitski父亲是CIA特工的谣言</div>
+                <div class="z2"><div class="z2-point">• AI伴侣Coral寄居在毛绒小鹿玩具中，主动发短信称Mitski父亲是CIA特工</div><div class="z2-point">• 该信息来自网络粉丝理论，并非事实，属于典型AI幻觉输出</div><div class="z2-point">• 事件揭示实体AI伴侣产品在信息核实机制上的严重缺失</div></div>
+                <div class="z3"><div class="z3-why">AI伴侣产品正在从聊天工具走进实体玩具，当它主动推送虚假信息时，用户信任风险被放大，监管和产品责任边界亟需厘清。</div></div>
+                <div class="z5">⚡ The Verge AI · 04-11 10:00</div>
             </div>
         </div>
-        <div class="card" data-cat="产品与应用" data-idx="9"
+        <div class="card" data-cat="其他" data-idx="9"
              style="animation-delay:225ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">产品与应用</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">D’oh, a deer, an AI deer.</div>
-                <div class="z2"><div class="z2-point">• &quot;Oh wow, I was checking out Mitski.</div><div class="z2-point">• &quot; Normally, that kind of out-of-the-blue text from a friend wouldn&#x27;t faze me.</div><div class="z2-point">• I texted back an eloquent, &quot;Wait what.</div></div>
-                
-                <div class="z5">⚡ The Verge AI · 04-11 10:00</div>
-            </div>
-        </div>
-        <div class="card" data-cat="自动驾驶|安全与对齐" data-idx="10"
-             style="animation-delay:250ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">自动驾驶 · 安全与对齐</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">滴滴自动驾驶与广汽埃安联手打造的新一代Robotaxi车型R2</div>
-                <div class="z2"><div class="z2-point">• 滴滴自动驾驶与广汽埃安联手打造的新一代Robotaxi车型R2</div></div>
-                
+                <div class="card-title">滴滴自动驾驶张博：安全体验并重 推动Robotaxi全球化落地</div>
+                <div class="z2"><div class="z2-point">• 滴滴自动驾驶与广汽埃安联合打造新一代Robotaxi专属车型R2</div><div class="z2-point">• 张博明确将安全和用户体验列为核心战略优先级</div><div class="z2-point">• 滴滴自动驾驶明确推进全球化落地战略方向</div></div>
+                <div class="z3"><div class="z3-why">滴滴Robotaxi与主机厂深度绑定，标志着自动驾驶商业化进入量产整车新阶段，全球化布局加速。</div></div>
                 <div class="z5">⚛️ 量子位 · 04-11 10:46</div>
             </div>
         </div></div>
@@ -588,7 +589,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>8</b> 个信息源 · <b>11</b> 篇资讯 · 2026年04月12日
+    AI 早报 · <b>7</b> 个信息源 · <b>10</b> 篇资讯 · 2026年04月12日
 </footer>
 
 <script src="modal_data.js"></script>
@@ -615,20 +616,35 @@ function renderMd(text) {
         return html + '</table>';
     });
 
-    // Headers: ### text
-    s = s.replace(/^### (.+)$/gm, '<h4 class="md-h">$1</h4>');
-    s = s.replace(/^## (.+)$/gm, '<h3 class="md-h">$1</h3>');
+    // Headers: ####, ###, ## (must process longest prefix first)
+    s = s.replace(/^#### (.+)$/gm, '<h5 class="md-h md-h5">$1</h5>');
+    s = s.replace(/^### (.+)$/gm, '<h4 class="md-h md-h4">$1</h4>');
+    s = s.replace(/^## (.+)$/gm, '<h3 class="md-h md-h3">$1</h3>');
 
     // Bold: **text**
     s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
+    // Inline code: `code`
+    s = s.replace(/`([^`]+)`/g, '<code class="md-code">$1</code>');
+
+    // Links: [text](url) — after HTML escape, & → &amp; in URLs, so allow that
+    s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="md-link">$1</a>');
+
     // Horizontal rule: ---
     s = s.replace(/^---$/gm, '<hr class="md-hr">');
 
-    // Unordered list blocks: consecutive lines starting with -
-    s = s.replace(/((?:^|\n)- .+(?:\n- .+)*)/g, function(block) {
+    // Ordered list blocks: consecutive lines starting with digit.
+    s = s.replace(/((?:^|\n)\d+\. .+(?:\n\d+\. .+)*)/g, function(block) {
         var items = block.trim().split('\n').map(function(line) {
-            return '<li>' + line.replace(/^- /, '') + '</li>';
+            return '<li>' + line.replace(/^\d+\. /, '') + '</li>';
+        }).join('');
+        return '<ol class="md-list md-ol">' + items + '</ol>';
+    });
+
+    // Unordered list blocks: consecutive lines starting with - or •
+    s = s.replace(/((?:^|\n)[-•] .+(?:\n[-•] .+)*)/g, function(block) {
+        var items = block.trim().split('\n').map(function(line) {
+            return '<li>' + line.replace(/^[-•] /, '') + '</li>';
         }).join('');
         return '<ul class="md-list">' + items + '</ul>';
     });
@@ -643,8 +659,8 @@ function renderMd(text) {
     // Clean up empty paragraphs
     s = s.replace(/<p>\s*<\/p>/g, '');
     // Don't wrap block elements in <p>
-    s = s.replace(/<p>\s*(<(?:table|ul|h[34]|hr)[^>]*>)/g, '$1');
-    s = s.replace(/(<\/(?:table|ul|h[34])>)\s*<\/p>/g, '$1');
+    s = s.replace(/<p>\s*(<(?:table|[uo]l|h[2-5]|hr)[^>]*>)/g, '$1');
+    s = s.replace(/(<\/(?:table|[uo]l|h[2-5])>)\s*<\/p>/g, '$1');
 
     return s;
 }
@@ -659,26 +675,35 @@ function openModal(idx) {
         heroHtml = '<div class="m-hero"><img src="' + a.image + '" onerror="this.parentElement.style.display=&#39;none&#39;" alt=""><div class="m-hero-gradient"></div></div>';
     }
 
-    // ⚠️ 刻意不再渲染 title / src-bar / why_it_matters：
-    // 这些信息用户已经在卡片正面看过了，点开 modal 只应该看"新内容"。
-    // 参考 html_generator.py 卡片正面：z1(分类·阅读时间) / card-title /
-    // z2(key_details) / z3(why_it_matters) / z5(来源·时间) —— 上述全部不重复。
+    // Modal 标题 — 使用中文标题，给弹窗一个清晰的上下文
+    let titleHtml = '<h2 class="m-title">' + (a.chinese_title || a.title || '') + '</h2>';
 
     // Detailed content — main reading section with markdown rendering
     let detailedHtml = '';
     if (a.detailed_content) {
         // 去掉 LLM 偶尔会生成的"### 问题背景/背景/前言/引言/简介"等背景类首节，
         // 避免和下方独立的"背景脉络"模块产生视觉重复。
-        // 正则：匹配开头的 ### 小标题 + 本节内容，直到下一个 ### 或文末。
         let cleaned = a.detailed_content.replace(
             /^\s*###\s*(问题背景|背景|前言|引言|简介)[^\n]*\n[\s\S]*?(?=\n###\s|$)/,
             ''
         ).trim();
-        // 兜底：如果清洗后全空（整段 detailed_content 就是一节背景），保留原文
         detailedHtml = '<div class="m-detailed">' + renderMd(cleaned || a.detailed_content) + '</div>';
-    } else if (a.summary) {
-        // 极端 fallback：没深度解读时才退到 summary
-        detailedHtml = '<div class="m-detailed"><p>' + a.summary + '</p></div>';
+    } else {
+        // Fallback：组装摘要 + why_it_matters + key_details
+        var fallbackParts = [];
+        if (a.summary) {
+            fallbackParts.push('<p>' + a.summary + '</p>');
+        }
+        if (a.why_it_matters) {
+            fallbackParts.push('<div class="m-why">' + a.why_it_matters + '</div>');
+        }
+        if (a.key_details && a.key_details.length > 0) {
+            var kpHtml = a.key_details.map(function(k) { return '<li>' + k + '</li>'; }).join('');
+            fallbackParts.push('<ul class="md-list">' + kpHtml + '</ul>');
+        }
+        if (fallbackParts.length > 0) {
+            detailedHtml = '<div class="m-detailed">' + fallbackParts.join('') + '</div>';
+        }
     }
 
     // Article image gallery — extra images from the article page
@@ -697,10 +722,10 @@ function openModal(idx) {
     // Deep sections (background + analysis)
     let deepHtml = '';
     if (a.background) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text">' + a.background + '</div></div>';
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text">' + renderMd(a.background) + '</div></div>';
     }
     if (a.deep_analysis) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text">' + a.deep_analysis + '</div></div>';
+        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text">' + renderMd(a.deep_analysis) + '</div></div>';
     }
     if (deepHtml) {
         deepHtml = '<div class="m-deep">' + deepHtml + '</div>';
@@ -710,6 +735,7 @@ function openModal(idx) {
         heroHtml +
         '<button class="m-close" onclick="closeModal()">✕</button>' +
         '<div class="m-body">' +
+            titleHtml +
             detailedHtml +
             galleryHtml +
             deepHtml +
