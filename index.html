@@ -106,6 +106,62 @@ body {
     border-left: 2px solid var(--accent); padding-left: 14px;
 }
 
+/* ═════ Featured Section (Importance >= 4) ═════ */
+.featured-section {
+    max-width: 1120px; margin: 28px auto 0; padding: 0 20px;
+}
+.featured-title {
+    font-family: var(--serif); font-size: 18px; font-weight: 700;
+    color: var(--text-100); margin-bottom: 16px; letter-spacing: -0.3px;
+}
+.featured-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 12px; margin-bottom: 24px;
+}
+@media (max-width: 1024px) {
+    .featured-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .featured-grid { grid-template-columns: 1fr; }
+}
+
+.featured-card {
+    border: 1px solid var(--border); border-left: 4px solid #e8913a;
+    border-radius: var(--radius); overflow: hidden;
+    background: var(--bg-card); cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex; flex-direction: column;
+    opacity: 0; animation: cardIn 0.35s ease forwards;
+}
+.featured-card:hover {
+    border-color: rgba(255,255,255,0.10);
+    background: var(--bg-card-hover);
+}
+
+.featured-img {
+    width: 100%; height: 160px;
+    background-size: cover; background-position: center;
+}
+
+.featured-body {
+    padding: 16px 18px;
+    display: flex; flex-direction: column; gap: 10px;
+}
+
+.featured-title-text {
+    font-family: var(--serif); font-size: 18px; font-weight: 700;
+    line-height: 1.5; color: var(--text-100);
+}
+
+.featured-why {
+    font-size: 13px; line-height: 1.6; color: var(--text-70);
+}
+
+.featured-source {
+    font-size: 11px; color: var(--text-35);
+    padding-top: 10px; border-top: 1px solid var(--border);
+}
+
 /* ═════ Grid — masonry columns ═════ */
 .grid {
     max-width: 1120px; margin: 18px auto; padding: 0 14px;
@@ -396,17 +452,42 @@ body {
     font-size: 11px; color: var(--text-35);
 }
 
+/* ═════ TOC (Table of Contents) in modal ═════ */
+.m-toc {
+    background: rgba(107,138,253,0.08); border-left: 3px solid var(--accent);
+    padding: 12px 14px; margin: 14px 0; border-radius: 8px;
+}
+.m-toc-title {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--text-70); margin-bottom: 8px;
+}
+.m-toc-list {
+    list-style: none; padding: 0; margin: 0;
+}
+.m-toc-list li {
+    font-size: 12px; line-height: 1.6; color: var(--text-60);
+    margin-bottom: 4px;
+}
+.m-toc-link {
+    color: var(--accent); text-decoration: none; transition: color 0.15s;
+}
+.m-toc-link:hover { color: #fff; }
+
 /* ═════ Multi-source indicator in modal ═════ */
 .m-multi-src {
     display: flex; align-items: center; gap: 6px; flex-wrap: wrap;
-    padding: 8px 12px; margin-bottom: 14px;
+    padding: 10px 14px; margin: 16px 0; margin-bottom: 14px;
     background: rgba(107,138,253,0.06); border-radius: 8px;
-    font-size: 11px; color: var(--text-50);
+    font-size: 11px; color: var(--text-50); border: 1px solid rgba(107,138,253,0.15);
 }
-.m-multi-src-label { font-weight: 600; color: var(--text-70); }
+.m-multi-src-label { font-weight: 600; color: var(--text-80); margin-right: 4px; }
 .m-multi-src-tag {
-    padding: 2px 8px; background: rgba(255,255,255,0.06);
-    border-radius: 10px; font-size: 10px; color: var(--text-50);
+    padding: 3px 10px; background: rgba(255,255,255,0.08);
+    border-radius: 12px; font-size: 11px; color: var(--text-60);
+    border: 1px solid rgba(255,255,255,0.06); transition: all 0.15s;
+}
+.m-multi-src-tag:hover {
+    background: rgba(255,255,255,0.12); color: var(--text-80);
 }
 
 /* ═════ Footer ═════ */
@@ -430,7 +511,7 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月15日 周三 · 21:40</div>
+    <div class="h-date">2026年04月15日 周三 · 22:24</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
@@ -457,22 +538,25 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI产业呈现「攻守并进」态势：Anthropic发布自动化对齐研究员，OpenAI扩展网络防御计划，安全议题从幕后走向台前；与此同时，谷歌机器人模型开放API、宇树人形机器人出海、微软深化Copilot操作系统整合，商业化落地全面提速。斯坦福AI指数报告则提供全局视角——中美差距收窄、公众焦虑上升、数据中心供应链承压，预示下一轮竞争将在监管与信任层面激烈展开。</p>
+        <p class="br-editorial">今日AI竞速全面提速：OpenAI在网络安全、金融理财、编程工具多线出击，Anthropic加速自动化对齐研究，Google DeepMind机器人模型开放API接入。斯坦福AI指数揭示中美差距收窄，而行业与公众的认知裂痕却在扩大。微软深度押注Copilot生态，宇树机器人杀入国际市场。AI已从实验室走向基础设施——谁能锁定用户、构筑护城河，才是下一轮竞争的真正赌注。</p>
     </section>
+
+<!-- Featured Articles (Importance >= 4) -->
+$featured_html
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card" data-cat="网络安全|AI应用" data-idx="0"
+        <div class="card card--featured" data-cat="大模型发布|AI政策监管" data-idx="0"
              style="animation-delay:0ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">网络安全 · AI应用</span>
+            <span class="z1-left">大模型发布 · AI政策监管</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI扩展网络安全可信访问计划，推出GPT-5.4-Cyber专用模型</div>
-                <div class="z2"><div class="z2-point">• 扩展Trusted Access for Cyber计划，新增多个认证分级层级</div><div class="z2-point">• 最高级别用户可申请访问GPT-5.4-Cyber，专为网络安全场景微调</div><div class="z2-point">• 目标用户为经认证的网络安全防御者，聚焦防御性工作流程</div></div>
-                <div class="z3"><div class="z3-why">此举标志着顶级AI能力首次系统性地向经过认证的网络安全防御者开放，将大幅提升蓝队防御、威胁分析和漏洞研究的效率与深度。</div></div>
+                <div class="card-title">OpenAI推出GPT-5.4-Cyber：专为网络安全防御者微调的垂直模型</div>
+                <div class="z2"><div class="z2-point">• GPT-5.4-Cyber是GPT-5.4的网络安全专项微调版本，非独立新模型</div><div class="z2-point">• 采用分层访问机制，仅最高认证等级的防御者可申请访问</div><div class="z2-point">• 专注于防御性工作流，而非进攻性或漏洞利用场景</div></div>
+                <div class="z3"><div class="z3-why">OpenAI首次将顶级旗舰模型系列针对垂直安全场景进行专项微调并分层开放，标志着AI在网络安全领域的应用从通用能力转向专业化赋能。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -484,23 +568,23 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI阐述网络防御战略：民主化访问与能力扩展并行</div>
-                <div class="z2"><div class="z2-point">• OpenAI网络防御计划建立在民主化访问、迭代部署、生态韧性三大原则之上</div><div class="z2-point">• 随模型能力提升，防御规模同步扩展，而非事后补救</div><div class="z2-point">• 在开放合法防御者访问权限的同时，持续强化安全护栏</div></div>
-                <div class="z3"><div class="z3-why">AI巨头正将网络安全纳入模型能力扩展的核心战略，意味着防御侧与攻击侧将进入AI驱动的新军备竞赛。</div></div>
+                <div class="card-title">OpenAI宣布网络防御计划扩展：民主化访问与迭代部署并举</div>
+                <div class="z2"><div class="z2-point">• OpenAI网络防御项目基于三大原则：民主化访问、迭代部署、生态系统韧性</div><div class="z2-point">• 随模型能力提升，将同步扩大对合法防御者的AI访问权限</div><div class="z2-point">• 在扩大访问的同时持续强化防护措施，防止滥用</div></div>
+                <div class="z3"><div class="z3-why">这意味着OpenAI正将旗下大模型能力系统性地向网络安全防御侧开放，有望重塑AI辅助网络防御的格局，但同时也带来能力滥用的双刃剑风险。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="安全与对齐|大模型发布" data-idx="2"
+        <div class="card" data-cat="其他" data-idx="2"
              style="animation-delay:50ms">
             <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2044139538692616193%2FTspRuwvt%3Fformat%3Djpg%26name%3D800x419')"></div>
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">安全与对齐 · 大模型发布</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布自动化对齐研究员：AI辅助AI安全研究</div>
-                <div class="z2"><div class="z2-point">• 研究聚焦「弱到强泛化」（weak-to-strong, W2S）方向，探索用弱模型监督强模型对齐的自动化路径</div><div class="z2-point">• Anthropic将此研究定位为自动化对齐研究员系统，旨在让AI参与生成和验证对齐方法</div><div class="z2-point">• 研究同步发布完整论文与博客解读，显示Anthropic在对齐自动化上已具备系统性成果</div></div>
-                <div class="z3"><div class="z3-why">这意味着AI安全研究本身可以被AI加速，解决对齐研究员人力瓶颈，但同时也引发对自动化安全研究可靠性的深层质疑。</div></div>
+                <div class="card-title">Anthropic发布自动化AI对齐研究员研究成果</div>
+                <div class="z2"><div class="z2-summary">Anthropic公开了关于使用AI自动化执行对齐研究的论文，探索弱到强（weak-to-strong）泛化框架在自动化对齐研究者中的应用潜力。</div></div>
+                <div class="z3"><div class="z3-why">若AI系统能自主推进对齐研究，将极大加速安全AI开发速度，同时也对人类监督AI研究过程提出新挑战，是AI自我改进路径上的关键里程碑。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -512,13 +596,13 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic：Claude可加速对齐研究实验但尚不能替代科学家</div>
-                <div class="z2"><div class="z2-point">• Anthropic用Claude做自动化对齐研究员（AARs）实验，验证其在对齐任务上的能力边界</div><div class="z2-point">• Claude可提升实验迭代速度与探索广度，但对&#x27;模糊性&#x27;研究任务进展难以量化验证</div><div class="z2-point">• 当前AI模型尚不具备通用对齐科学家能力，结论验证机制是关键瓶颈</div></div>
-                <div class="z3"><div class="z3-why">这说明AI辅助科学研究有明确天花板——可以跑实验、加速探索，但核心的判断力和研究设计仍需人类，短期内AI自主推进对齐研究的期待需降温。</div></div>
+                <div class="card-title">Claude可加速AI对齐研究实验但尚无法独立胜任</div>
+                <div class="z2"><div class="z2-summary">Anthropic研究显示Claude能提升对齐研究的实验速度与探索广度，但AI模型尚不能成为通用对齐科学家，模糊性研究任务仍难以验证进展。</div></div>
+                <div class="z3"><div class="z3-why">Claude 已能加速 AI 安全实验迭代，但对齐研究最难的部分仍需人类判断——AI 自主完成安全研究还很遥远。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card card--featured" data-cat="具身智能|产品与应用" data-idx="4"
+        <div class="card" data-cat="具身智能|产品与应用" data-idx="4"
              style="animation-delay:100ms">
             <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF3-rUNWUAABrwE.jpg')"></div>
             <div class="card-body">
@@ -526,9 +610,9 @@ body {
             <span class="z1-left">具身智能 · 产品与应用</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">谷歌DeepMind发布机器人专用AI模型，现已上线Gemini API</div>
-                <div class="z2"><div class="z2-point">• 新模型专为机器人应用设计，强调&#x27;更智能的机器人&#x27;构建能力</div><div class="z2-point">• 通过Google AI Studio和Gemini API开放访问，面向所有开发者</div><div class="z2-point">• 这是DeepMind将具身智能研究成果产品化的重要举措</div></div>
-                <div class="z3"><div class="z3-why">谷歌将机器人AI能力开放给外部开发者，意味着具身智能进入API化时代，降低机器人智能化门槛。</div></div>
+                <div class="card-title">Google DeepMind发布机器人专用模型，已上线Gemini API</div>
+                <div class="z2"><div class="z2-point">• 新模型专为机器人场景设计，强调&#x27;更智能&#x27;的机器人构建能力</div><div class="z2-point">• 已通过Google AI Studio和Gemini API面向开发者开放</div><div class="z2-point">• 发布形式为官方X账号推文，细节有待官方文档补充</div></div>
+                <div class="z3"><div class="z3-why">Google将具身智能能力直接嵌入Gemini API生态，开发者无需自研基础模型即可快速构建智能机器人应用，大幅降低门槛。</div></div>
                 <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -541,8 +625,8 @@ body {
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">谷歌DeepMind发布最安全机器人模型Gemini Robotics-ER 1</div>
-                <div class="z2"><div class="z2-point">• 模型可理解物理约束，如执行指令时自动规避液体或20kg以上重物</div><div class="z2-point">• 视频中人体伤害风险检测能力提升10%，增强人机协作安全性</div><div class="z2-point">• 定位为迄今最安全的机器人基础模型，安全性成为核心卖点</div></div>
-                <div class="z3"><div class="z3-why">机器人安全性首次被显式建模进模型能力，意味着AI机器人可在真实工业/家庭场景中更可靠部署，安全对齐从语言模型扩展到具身智能领域。</div></div>
+                <div class="z2"><div class="z2-summary">Google DeepMind发布Gemini Robotics-ER 1.6，新增物理约束理解能力，人体伤害风险检测提升10%。</div></div>
+                <div class="z3"><div class="z3-why">机器人 AI 的竞争重心正从「能干多少」转向「能保证多安全」，安全能力将成为工业落地的硬门槛。</div></div>
                 <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -554,9 +638,9 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Gemini Robotics-ER 1.6升级：机器人可读取复杂模拟仪表盘</div>
-                <div class="z2"><div class="z2-point">• Gemini Robotics-ER 1.6可处理机器人巡检中拍摄的复杂模拟仪表盘图像</div><div class="z2-point">• 模型能自主编写代码以校正相机畸变（lens distortion）</div><div class="z2-point">• 系统可精确计算仪表盘上的刻度读数，适用于真实工业环境</div></div>
-                <div class="z3"><div class="z3-why">工业设施中大量老旧模拟仪表无法数字化，这一能力让AI机器人巡检真正可用，降低工业数字化改造成本。</div></div>
+                <div class="card-title">Gemini Robotics-ER 1.6升级：工业巡检机器人可自主读取模拟仪</div>
+                <div class="z2"><div class="z2-point">• Gemini Robotics-ER 1.6支持自主编写代码处理相机畸变，精确识别模拟仪表刻度</div><div class="z2-point">• 波士顿动力Spot机器人可配合该模型在工业设施中执行视觉巡检任务</div><div class="z2-point">• 模拟仪表识别是工业AI落地的关键卡点，该能力填补了具身智能在视觉感知上的重要空白</div></div>
+                <div class="z3"><div class="z3-why">工厂里大量老旧设备仍用模拟仪表，AI能让巡检机器人真正&#x27;看懂&#x27;这些表盘，意味着无人巡检距离实际落地又近了一步。</div></div>
                 <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -568,37 +652,37 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI澄清Pro套餐用量限制：定价页面表述引发用户误解</div>
-                <div class="z2"><div class="z2-point">• Pro $100套餐含至少10倍Plus用量（2X促销叠加），有效期至5月31日</div><div class="z2-point">• Pro $200套餐含至少20倍Plus用量，该配置自2月促销起未变，但此前未明确说明</div><div class="z2-point">• 定价页面写的&#x27;5x或20x&#x27;被用户误读为促销后&#x27;10x和40x&#x27;，OpenAI承认表述有误</div></div>
-                <div class="z3"><div class="z3-why">用户付费后发现实际用量与预期不符，OpenAI主动澄清并承认失误，暴露出其定价沟通机制存在漏洞，影响用户信任。</div></div>
+                <div class="card-title">OpenAI澄清Pro订阅套餐用量限制引发的混淆</div>
+                <div class="z2"><div class="z2-point">• Pro $100套餐含2X促销加成后为10x Plus用量，有效期至5月31日</div><div class="z2-point">• Pro $200套餐实为20x Plus用量，与2月促销以来保持一致，此前未明确说明</div><div class="z2-point">• 定价页&#x27;5x或20x用量&#x27;表述与2X加成叠加造成理解歧义，OpenAI承认表述失误</div></div>
+                <div class="z3"><div class="z3-why">定价页面措辞模糊导致用户误以为有更高配额，OpenAI需要主动澄清并修改页面，暴露其在用户沟通上的粗糙。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="8"
+        <div class="card" data-cat="大模型发布|产品与应用" data-idx="8"
              style="animation-delay:200ms">
             
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">大模型发布 · 产品与应用</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Gemini 3.1 Flash Live登顶τ-Voice实时语音智能体基准榜</div>
+                <div class="z2"><div class="z2-point">• Gemini 3.1 Flash Live（Thinking）版本在τ-Voice Leaderboard获得第一名</div><div class="z2-point">• τ-Voice是Sierra平台专门针对实时语音智能体性能的评测基准</div><div class="z2-point">• 该结果由Google DeepMind官方账号转发，具有官方背书性质</div></div>
+                <div class="z3"><div class="z3-why">语音智能体是AI落地最重要的交互形态之一，榜首意味着Gemini在实时语音任务完成能力上超越竞品，对开发者选型有直接参考价值。</div></div>
+                <div class="z5">🐦 X-GoogleDeepMind · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-idx="9"
+             style="animation-delay:225ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF40MLMaIAApyKD.jpg')"></div>
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Gemini 3.1 Flash Live登顶τ-Voice实时语音智能体基准榜</div>
-                <div class="z2"><div class="z2-point">• Gemini 3.1 Flash Live（Thinking）版本在τ-Voice Leaderboard中夺冠，成为实时语音智能体性能标杆</div><div class="z2-point">• τ-Voice是Sierra Platform推出的专门针对实时语音智能体的权威基准测试平台</div><div class="z2-point">• 此次登顶强化了Google在多模态实时交互领域的竞争优势，对OpenAI Realtime API等竞品形成压力</div></div>
-                <div class="z3"><div class="z3-why">语音智能体是AI落地的重要方向，排行榜第一意味着Gemini在实时对话延迟、理解准确率等关键指标上超越竞争对手，对开发者选型有直接影响。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="安全与对齐|学术研究" data-idx="9"
-             style="animation-delay:225ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF40MLMaIAApyKD.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">安全与对齐 · 学术研究</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Anthropic自动对齐研究员方法成功泛化至编程和数学任务</div>
-                <div class="z2"><div class="z2-point">• AAR最佳方法成功泛化至编程和数学两类未见任务</div><div class="z2-point">• 次优方法仅在数学任务上泛化成功，编程任务泛化失败</div><div class="z2-point">• 测试使用了AAR此前从未见过的两个新数据集</div></div>
-                <div class="z3"><div class="z3-why">自动对齐研究员能否泛化到不同任务域，直接决定AI安全自动化的可行性，这一结果为AI自我对齐研究提供了重要信心。</div></div>
+                <div class="card-title">Anthropic测试AAR方法泛化能力：最优方法同时适用编程与数学任务</div>
+                <div class="z2"><div class="z2-point">• AAR最佳方法成功泛化至编程和数学两类全新数据集</div><div class="z2-point">• 次优方法仅能泛化至数学任务，编程任务上泛化失败</div><div class="z2-point">• 该测试验证了AAR方法超出训练分布的实际适用性</div></div>
+                <div class="z3"><div class="z3-why">这说明Anthropic的自动化对齐研究方法具备跨任务泛化能力，是AI自动化安全研究走向实用化的重要信号。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -708,9 +792,9 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Andrew Ng推荐Vocal Bridge：双智能体架构破解语音UI延迟难题</div>
-                <div class="z2"><div class="z2-point">• 双智能体架构：前台Agent负责实时对话，后台Agent负责推理、护栏与工具调用，兼顾速度与智能</div><div class="z2-point">• Andrew Ng用Claude Code在1小时内完成语音集成，验证了开发门槛极低</div><div class="z2-point">• 目标场景超越呼叫中心，聚焦语音与屏幕内容同步更新的复合UI体验</div></div>
-                <div class="z3"><div class="z3-why">语音+视觉同步更新的UI范式若成熟，将让绝大多数现有视觉应用低门槛接入语音交互，彻底改变人机交互入口。</div></div>
+                <div class="card-title">Andrew Ng推介Vocal Bridge：双智能体架构破解语音UI延迟难题</div>
+                <div class="z2"><div class="z2-point">• 双智能体架构：前台智能体负责实时对话，后台智能体负责推理、护栏与工具调用，兼顾速度与可靠性</div><div class="z2-point">• Andrew Ng用Claude Code为女儿数学测验App添加语音层，不足一小时完成，说明开发门槛极低</div><div class="z2-point">• Vocal Bridge定位为&#x27;视觉应用的语音UI层&#x27;，超越传统语音专属场景（如呼叫中心）</div></div>
+                <div class="z3"><div class="z3-why">语音不再只是呼叫中心专属，而是可叠加到任意可视化应用的UI层，这将大幅降低语音App的开发门槛，让数百万开发者首次触碰语音交互开发。</div></div>
                 <div class="z5">🐦 X-Andrew Ng · 04-15 00:54 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -722,9 +806,9 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI推出$100 ChatGPT Pro订阅层，Codex热度催生新计划</div>
-                <div class="z2"><div class="z2-point">• Sam Altman亲自在X上宣布，定价$100/月，称&#x27;应广大要求&#x27;推出</div><div class="z2-point">• 新层级与Codex热潮直接相关，显示编程AI工具正成为高付费意愿场景</div><div class="z2-point">• 价格是现有Plus层（$20）的5倍，明确针对高强度专业用户</div></div>
-                <div class="z3"><div class="z3-why">$100定价是$20 Plus层的5倍，意味着OpenAI正在向企业级和重度开发者用户分层变现，Codex的爆红直接推动了这一商业决策。</div></div>
+                <div class="card-title">OpenAI推出$100 ChatGPT Pro定价层级，Codex热度引爆需求</div>
+                <div class="z2"><div class="z2-point">• Sam Altman在X上宣布因用户强烈需求推出$100 ChatGPT Pro定价层</div><div class="z2-point">• 此举与Codex（AI编程工具）获得大量关注直接相关</div><div class="z2-point">• 新档位填补了$20 Plus与$200 Pro之间的价格区间</div></div>
+                <div class="z3"><div class="z3-why">$100档填补了$20 Plus与$200 Pro之间的空白，意味着OpenAI正在精细化付费用户分层，Codex的编程能力成为新的商业化杠杆。</div></div>
                 <div class="z5">🐦 X-Sam Altman · 04-14 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -737,8 +821,8 @@ body {
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">OpenAI基金会投入逾1亿美元推动AI攻克阿尔茨海默症</div>
-                <div class="z2"><div class="z2-point">• OpenAI基金会定向拨出逾1亿美元用于阿尔茨海默症相关AI研究</div><div class="z2-point">• 资金将支持疾病机制图谱绘制、AI辅助药物设计等多个方向</div><div class="z2-point">• Sam Altman亲自撰文阐述，凸显OpenAI对医疗AI战略的高度重视</div></div>
-                <div class="z3"><div class="z3-why">这标志着顶级AI机构正式将资本和技术力量转向医疗难题，AI+生命科学的融合进入实质性投入阶段。</div></div>
+                <div class="z2"><div class="z2-point">• OpenAI基金会定向投入超1亿美元用于阿尔茨海默症AI研究</div><div class="z2-point">• 资助方向涵盖疾病机制图谱绘制、药物设计等核心科学问题</div><div class="z2-point">• Sam Altman亲自撰文阐述OpenAI对该领域的战略判断</div></div>
+                <div class="z3"><div class="z3-why">这标志着AI头部机构正将前沿模型能力系统性地投入医学难题，阿尔茨海默症研究有望获得算力与资金双重加速。</div></div>
                 <div class="z5">🐦 X-Sam Altman · 04-14 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -943,17 +1027,17 @@ https://www.</div></div>
                 <div class="z5">🚀 AI前线 · 04-14 11:15 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="AI工具|芯片与算力" data-idx="34"
+        <div class="card" data-cat="其他" data-idx="34"
              style="animation-delay:500ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">AI工具 · 芯片与算力</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenClaw成本降低10倍：本地AI运行方案揭秘</div>
-                <div class="z2"><div class="z2-point">• 通过优化方案将OpenClaw运行成本降低至原来的十分之一</div><div class="z2-point">• 方案基于NVIDIA GeForce RTX GPU及DGX Spark平台实现本地AI推理</div><div class="z2-point">• 配套发布《25个OpenClaw使用案例》电子书供社区参考</div></div>
-                <div class="z3"><div class="z3-why">本地运行AI模型的成本优化直接影响个人开发者和中小企业的AI可及性，10倍成本降幅若属实将大幅降低门槛。</div></div>
+                <div class="card-title">OpenClaw成本降低10倍：本地AI运行新方案</div>
+                <div class="z2"><div class="z2-point">• OpenClaw运行成本实现10倍降低，大幅提升本地AI部署经济性</div><div class="z2-point">• 方案基于NVIDIA GeForce RTX GPU及DGX Spark平台实现</div><div class="z2-point">• 作者整理了25个OpenClaw实际应用场景供开发者参考</div></div>
+                <div class="z3"><div class="z3-why">本地AI运行成本大幅下降意味着更多开发者和企业可以负担得起私有化AI部署，推动AI普惠化。</div></div>
                 <div class="z5">🎬 Matthew Berman · 04-13 17:48 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -1223,47 +1307,94 @@ function renderMd(text) {
     return s;
 }
 
+// Helper: 提取 markdown 标题用于 TOC
+function extractHeadings(text) {
+    var headings = [];
+    var lines = text.split('\n');
+    lines.forEach(function(line) {
+        var match = line.match(/^(###|####)\s+(.+)$/);
+        if (match) {
+            var level = match[1].length;  // 3 or 4
+            var text = match[2];
+            var id = 'h' + headings.length;
+            headings.push({ level: level, text: text, id: id });
+        }
+    });
+    return headings;
+}
+
+// Helper: 高亮关键数据（数字、百分比、金额）
+function highlightKeyData(html) {
+    // 高亮金额: $100M、100万、1.5亿 等
+    html = html.replace(/(\$[\d,]+[MKB]?|[\d,]+[\u4e00\u4e07\u4efc]|[\d.]+[Kk]?[Bb])/g, '<span style="color:var(--accent);font-weight:600">$1</span>');
+    // 高亮百分比: 18%、提升18% 等
+    html = html.replace(/([\d.]+)(%|[\u63d0\u96f6].*?%)/g, '<span style="color:var(--accent);font-weight:600">$1$2</span>');
+    return html;
+}
+
 function openModal(idx) {
     const a = __data[idx];
     if (!a) return;
 
-    // Hero image (full-bleed top) —— 唯一保留的视觉锚点
+    // Hero image (full-bleed top)
     let heroHtml = '';
     if (a.image) {
         heroHtml = '<div class="m-hero"><img src="' + a.image + '" onerror="this.parentElement.style.display=&#39;none&#39;" alt=""><div class="m-hero-gradient"></div></div>';
     }
 
-    // Modal 标题 — 使用中文标题，给弹窗一个清晰的上下文
+    // Modal title
     let titleHtml = '<h2 class="m-title">' + (a.chinese_title || a.title || '') + '</h2>';
 
-    // Source + date bar
+    // Source + date + event status + timeline
     let srcBarHtml = '<div class="m-src-bar">' + (a.source_icon || '') + ' ' + (a.source_name || '');
     if (a.pub_date) srcBarHtml += ' · ' + a.pub_date;
     var tl = typeLabels[a.source_type];
     if (tl) srcBarHtml += ' · ' + tl;
+    // 事件状态徽标 + 时间维度
+    if (a.event_status_icon) {
+        srcBarHtml += ' <span style="color:' + (a.event_status_icon ? '#888' : '#e8913a') + ';font-size:10px">' + a.event_status_icon + ' ' + (a.event_status_label || '') + '</span>';
+    }
     srcBarHtml += '</div>';
 
-    // Why-it-matters callout — always show above detailed content if present
+    // Why-it-matters — 仅在无 detailed_content 时展示
     let whyHtml = '';
-    if (a.why_it_matters) {
+    if (a.why_it_matters && !a.detailed_content) {
         whyHtml = '<div class="m-why">' + a.why_it_matters + '</div>';
     }
 
-    // Detailed content — main reading section with markdown rendering
+    // Detailed content — with key data highlighting
     let detailedHtml = '';
+    let tocHtml = '';
     if (a.detailed_content) {
-        // 去掉 LLM 偶尔会生成的"### 问题背景/背景/前言/引言/简介"等背景类首节，
-        // 避免和下方独立的"背景脉络"模块产生视觉重复。
         let cleaned = a.detailed_content.replace(
             /^\s*###\s*(问题背景|背景|前言|引言|简介)[^\n]*\n[\s\S]*?(?=\n###\s|$)/,
             ''
         ).trim();
-        detailedHtml = '<div class="m-detailed">' + renderMd(cleaned || a.detailed_content) + '</div>';
+        var renderedContent = renderMd(cleaned || a.detailed_content);
+        // 高亮关键数据
+        renderedContent = highlightKeyData(renderedContent);
+
+        // 提取目录
+        var headings = extractHeadings(cleaned || a.detailed_content);
+        if (headings.length > 0) {
+            tocHtml = '<div class="m-toc"><div class="m-toc-title">目录</div><ul class="m-toc-list">';
+            headings.forEach(function(h) {
+                var indent = h.level === 4 ? 20 : 0;
+                tocHtml += '<li style="margin-left:' + indent + 'px"><a href="#' + h.id + '" class="m-toc-link">' + h.text + '</a></li>';
+            });
+            tocHtml += '</ul></div>';
+        }
+
+        detailedHtml = '<div class="m-detailed">' + renderedContent + '</div>';
     } else {
-        // Fallback：组装摘要 + key_details
         var fallbackParts = [];
-        if (a.summary) {
-            fallbackParts.push('<p>' + a.summary + '</p>');
+        var mainText = (a.title && a.title.length > (a.summary || '').length + 20)
+            ? a.title : (a.summary || '');
+        if (mainText) {
+            fallbackParts.push('<p>' + mainText + '</p>');
+        }
+        if (a.why_it_matters) {
+            fallbackParts.push('<div class="m-why">' + a.why_it_matters + '</div>');
         }
         if (a.key_details && a.key_details.length > 0) {
             var validKd = a.key_details.filter(function(k) { return k && k.length > 5; });
@@ -1279,10 +1410,9 @@ function openModal(idx) {
         }
     }
 
-    // Article image gallery — extra images from the article page
+    // Article image gallery
     let galleryHtml = '';
     if (a.extra_images && a.extra_images.length > 0) {
-        // Filter out the hero image to avoid duplicate
         let imgs = a.extra_images.filter(function(u) { return u !== a.image; });
         if (imgs.length > 0) {
             let imgTags = imgs.map(function(u) {
@@ -1304,7 +1434,17 @@ function openModal(idx) {
         deepHtml = '<div class="m-deep">' + deepHtml + '</div>';
     }
 
-    // Footer — hide "阅读原文" if link is empty or "#"
+    // Multi-source indicator
+    let multiSrcHtml = '';
+    if (a.also_reported_by && a.also_reported_by.length > 0) {
+        multiSrcHtml = '<div class="m-multi-src"><span class="m-multi-src-label">' + a.report_count + '源报道：</span>';
+        a.also_reported_by.forEach(function(src) {
+            multiSrcHtml += '<span class="m-multi-src-tag">' + src + '</span>';
+        });
+        multiSrcHtml += '</div>';
+    }
+
+    // Footer
     let footerActionHtml = '';
     if (a.link && a.link !== '#') {
         footerActionHtml = '<a href="' + a.link + '" target="_blank" rel="noopener noreferrer" class="m-action" onclick="event.stopPropagation();">阅读原文 →</a>';
@@ -1317,9 +1457,11 @@ function openModal(idx) {
             srcBarHtml +
             titleHtml +
             whyHtml +
+            tocHtml +
             detailedHtml +
             galleryHtml +
             deepHtml +
+            multiSrcHtml +
             '<div class="m-close-bottom" onclick="closeModal()">✕</div>' +
             '<div class="m-footer">' +
                 '<span class="m-footer-src">' + a.reading_minutes + ' min read</span>' +
