@@ -227,18 +227,6 @@ body {
     color: var(--text-100); margin-bottom: 8px;
 }
 
-/* Z2 — 要点摘要 */
-.z2 {
-    margin-bottom: 10px;
-}
-.z2-point {
-    font-size: 13px; line-height: 1.55; color: var(--text-60);
-    padding-left: 6px; margin-bottom: 4px;
-}
-.z2-summary {
-    font-size: 13px; line-height: 1.55; color: var(--text-60);
-}
-
 /* Z3 — why it matters */
 .z3 { margin-bottom: 10px; }
 .z3-why {
@@ -454,24 +442,35 @@ body {
 
 /* ═════ TOC (Table of Contents) in modal ═════ */
 .m-toc {
-    background: rgba(107,138,253,0.08); border-left: 3px solid var(--accent);
-    padding: 12px 14px; margin: 14px 0; border-radius: 8px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    padding: 10px 14px; margin-bottom: 16px;
+    background: rgba(107,138,253,0.06); border-radius: 8px;
+    border: 1px solid rgba(107,138,253,0.12);
 }
 .m-toc-title {
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.5px; color: var(--text-70); margin-bottom: 8px;
-}
-.m-toc-list {
-    list-style: none; padding: 0; margin: 0;
-}
-.m-toc-list li {
-    font-size: 12px; line-height: 1.6; color: var(--text-60);
-    margin-bottom: 4px;
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--text-50); margin-right: 4px;
 }
 .m-toc-link {
-    color: var(--accent); text-decoration: none; transition: color 0.15s;
+    display: inline-block; padding: 3px 10px;
+    background: rgba(255,255,255,0.06); border-radius: 12px;
+    font-size: 11px; color: var(--accent); text-decoration: none;
+    border: 1px solid rgba(107,138,253,0.15);
+    transition: all 0.15s; cursor: pointer;
 }
-.m-toc-link:hover { color: #fff; }
+.m-toc-link:hover { background: rgba(107,138,253,0.15); color: #fff; }
+.m-toc-link.m-toc-sub { font-size: 10px; color: var(--text-50); }
+
+/* ═════ Data highlighting ═════ */
+.hl-num {
+    color: var(--accent); font-weight: 600;
+    background: rgba(107,138,253,0.08); padding: 0 3px; border-radius: 3px;
+}
+
+/* ═════ Event status badge ═════ */
+.m-status-badge {
+    font-size: 11px; font-weight: 600;
+}
 
 /* ═════ Multi-source indicator in modal ═════ */
 .m-multi-src {
@@ -511,7 +510,7 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月15日 周三 · 22:24</div>
+    <div class="h-date">2026年04月15日 周三 · 23:22</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
@@ -538,25 +537,37 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI竞速全面提速：OpenAI在网络安全、金融理财、编程工具多线出击，Anthropic加速自动化对齐研究，Google DeepMind机器人模型开放API接入。斯坦福AI指数揭示中美差距收窄，而行业与公众的认知裂痕却在扩大。微软深度押注Copilot生态，宇树机器人杀入国际市场。AI已从实验室走向基础设施——谁能锁定用户、构筑护城河，才是下一轮竞争的真正赌注。</p>
+        <p class="br-editorial">今日AI江湖风云并起：OpenAI、Anthropic、谷歌三强同日出招，网络安全、自动对齐、机器人三线并进；斯坦福AI指数揭示中美差距骤缩、公众焦虑加剧的双重现实；微软全面押注Copilot与OpenClaw整合，xAI借美国农业部叩开联邦市场。商业化分水岭浮现——Anthropic增速反超OpenAI，OpenAI转身收购金融初创、拓展Pro定价；机器人走向消费级，宇树4370美元人形机器人触网开卖。技术边界与社会摩擦同步扩张，AI虚假网红乱入科切拉、袭击事件发生，折射出这场变革已远超纯技术范畴。</p>
     </section>
 
 <!-- Featured Articles (Importance >= 4) -->
-$featured_html
+<div class="featured-section">
+<h2 class="featured-title">今日必读</h2>
+<div class="featured-grid">
+    <div class="featured-card" data-cat="具身智能|产品与应用" data-idx="4" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHF3-rUNWUAABrwE.jpg')"></div>
+        <div class="featured-body">
+            <div class="featured-title-text">谷歌DeepMind机器人新模型上线：开放AI Studio与Gemini AP</div>
+            <div class="featured-why">谷歌将机器人智能开放给第三方开发者，意味着具身智能从实验室走向生态化，门槛大幅降低。</div>
+            <div class="featured-source">🐦 X-GoogleDeepMind · 04-15 00:54</div>
+        </div>
+    </div>
+</div>
+</div>
+
 
 <!-- Cards Grid -->
 <div class="grid" id="grid">
-        <div class="card card--featured" data-cat="大模型发布|AI政策监管" data-idx="0"
+        <div class="card" data-cat="其他" data-idx="0"
              style="animation-delay:0ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">大模型发布 · AI政策监管</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI推出GPT-5.4-Cyber：专为网络安全防御者微调的垂直模型</div>
-                <div class="z2"><div class="z2-point">• GPT-5.4-Cyber是GPT-5.4的网络安全专项微调版本，非独立新模型</div><div class="z2-point">• 采用分层访问机制，仅最高认证等级的防御者可申请访问</div><div class="z2-point">• 专注于防御性工作流，而非进攻性或漏洞利用场景</div></div>
-                <div class="z3"><div class="z3-why">OpenAI首次将顶级旗舰模型系列针对垂直安全场景进行专项微调并分层开放，标志着AI在网络安全领域的应用从通用能力转向专业化赋能。</div></div>
+                <div class="card-title">OpenAI扩展网络安全可信访问计划，推出GPT-5.4-Cyber专用模型</div>
+                <div class="z3"><div class="z3-why">这是OpenAI首次为特定垂直领域推出经过微调的GPT-5系列专用版本，标志着顶尖大模型正式进入网络安全防御专业化赛道，将深刻改变企业安全运营能力的边界。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -568,9 +579,8 @@ $featured_html
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI宣布网络防御计划扩展：民主化访问与迭代部署并举</div>
-                <div class="z2"><div class="z2-point">• OpenAI网络防御项目基于三大原则：民主化访问、迭代部署、生态系统韧性</div><div class="z2-point">• 随模型能力提升，将同步扩大对合法防御者的AI访问权限</div><div class="z2-point">• 在扩大访问的同时持续强化防护措施，防止滥用</div></div>
-                <div class="z3"><div class="z3-why">这意味着OpenAI正将旗下大模型能力系统性地向网络安全防御侧开放，有望重塑AI辅助网络防御的格局，但同时也带来能力滥用的双刃剑风险。</div></div>
+                <div class="card-title">OpenAI阐明网络防御战略：民主化访问与生态韧性并重</div>
+                <div class="z3"><div class="z3-why">OpenAI 正将自身重塑为 AI 时代的网络安全基础设施，这将深刻影响其与政府监管机构的关系及企业安全市场格局。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -582,38 +592,22 @@ $featured_html
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布自动化AI对齐研究员研究成果</div>
-                <div class="z2"><div class="z2-summary">Anthropic公开了关于使用AI自动化执行对齐研究的论文，探索弱到强（weak-to-strong）泛化框架在自动化对齐研究者中的应用潜力。</div></div>
-                <div class="z3"><div class="z3-why">若AI系统能自主推进对齐研究，将极大加速安全AI开发速度，同时也对人类监督AI研究过程提出新挑战，是AI自我改进路径上的关键里程碑。</div></div>
+                <div class="card-title">Anthropic发布自动化对齐研究员研究：AI辅助AI安全工作</div>
+                <div class="z3"><div class="z3-why">如果AI能自动推进对齐研究，意味着安全研究的速度可大幅提升，但同时也引发AI自主研究AI安全的可靠性问题。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="3"
+        <div class="card" data-cat="安全与对齐|学术研究" data-idx="3"
              style="animation-delay:75ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">安全与对齐 · 学术研究</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Claude可加速AI对齐研究实验但尚无法独立胜任</div>
-                <div class="z2"><div class="z2-summary">Anthropic研究显示Claude能提升对齐研究的实验速度与探索广度，但AI模型尚不能成为通用对齐科学家，模糊性研究任务仍难以验证进展。</div></div>
-                <div class="z3"><div class="z3-why">Claude 已能加速 AI 安全实验迭代，但对齐研究最难的部分仍需人类判断——AI 自主完成安全研究还很遥远。</div></div>
+                <div class="card-title">Anthropic实验：Claude可加速对齐研究探索但尚无法替代科学家</div>
+                <div class="z3"><div class="z3-why">这说明用AI加速AI安全研究的路径有实际价值，但关键的「模糊型」对齐研究仍高度依赖人类判断，自动化安全研究不能急于乐观。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="具身智能|产品与应用" data-idx="4"
-             style="animation-delay:100ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF3-rUNWUAABrwE.jpg')"></div>
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">具身智能 · 产品与应用</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Google DeepMind发布机器人专用模型，已上线Gemini API</div>
-                <div class="z2"><div class="z2-point">• 新模型专为机器人场景设计，强调&#x27;更智能&#x27;的机器人构建能力</div><div class="z2-point">• 已通过Google AI Studio和Gemini API面向开发者开放</div><div class="z2-point">• 发布形式为官方X账号推文，细节有待官方文档补充</div></div>
-                <div class="z3"><div class="z3-why">Google将具身智能能力直接嵌入Gemini API生态，开发者无需自研基础模型即可快速构建智能机器人应用，大幅降低门槛。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
         <div class="card" data-cat="其他" data-idx="5"
@@ -625,22 +619,20 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">谷歌DeepMind发布最安全机器人模型Gemini Robotics-ER 1</div>
-                <div class="z2"><div class="z2-summary">Google DeepMind发布Gemini Robotics-ER 1.6，新增物理约束理解能力，人体伤害风险检测提升10%。</div></div>
-                <div class="z3"><div class="z3-why">机器人 AI 的竞争重心正从「能干多少」转向「能保证多安全」，安全能力将成为工业落地的硬门槛。</div></div>
+                <div class="z3"><div class="z3-why">机器人AI的竞争轴从「能做什么」转向「能安全地做什么」，安全能力正成为商业化落地的核心门槛。</div></div>
                 <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="6"
+        <div class="card" data-cat="具身智能|产品与应用" data-idx="6"
              style="animation-delay:150ms">
             <div class="card-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2044068474721349633%2Fimg%2FrQxh3vDXVt_TXwL1.jpg')"></div>
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">具身智能 · 产品与应用</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Gemini Robotics-ER 1.6升级：工业巡检机器人可自主读取模拟仪</div>
-                <div class="z2"><div class="z2-point">• Gemini Robotics-ER 1.6支持自主编写代码处理相机畸变，精确识别模拟仪表刻度</div><div class="z2-point">• 波士顿动力Spot机器人可配合该模型在工业设施中执行视觉巡检任务</div><div class="z2-point">• 模拟仪表识别是工业AI落地的关键卡点，该能力填补了具身智能在视觉感知上的重要空白</div></div>
-                <div class="z3"><div class="z3-why">工厂里大量老旧设备仍用模拟仪表，AI能让巡检机器人真正&#x27;看懂&#x27;这些表盘，意味着无人巡检距离实际落地又近了一步。</div></div>
+                <div class="card-title">Gemini Robotics-ER 1.6升级：工业巡检机器人可读取复杂模拟仪</div>
+                <div class="z3"><div class="z3-why">工业设施中大量老旧模拟仪表无法数字化改造，这一突破让AI机器人能自主读表，大幅降低工业巡检自动化的落地门槛。</div></div>
                 <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -652,37 +644,34 @@ $featured_html
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI澄清Pro订阅套餐用量限制引发的混淆</div>
-                <div class="z2"><div class="z2-point">• Pro $100套餐含2X促销加成后为10x Plus用量，有效期至5月31日</div><div class="z2-point">• Pro $200套餐实为20x Plus用量，与2月促销以来保持一致，此前未明确说明</div><div class="z2-point">• 定价页&#x27;5x或20x用量&#x27;表述与2X加成叠加造成理解歧义，OpenAI承认表述失误</div></div>
-                <div class="z3"><div class="z3-why">定价页面措辞模糊导致用户误以为有更高配额，OpenAI需要主动澄清并修改页面，暴露其在用户沟通上的粗糙。</div></div>
+                <div class="card-title">OpenAI澄清Pro订阅限速争议：100美元版10倍、200美元版20倍Plu</div>
+                <div class="z3"><div class="z3-why">用户误以为临时2倍促销叠加后能获得更高用量，OpenAI承认文案责任，此事折射出AI订阅服务定价透明度问题日益突出。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="大模型发布|产品与应用" data-idx="8"
+        <div class="card" data-cat="其他" data-idx="8"
              style="animation-delay:200ms">
             
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">大模型发布 · 产品与应用</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Gemini 3.1 Flash Live登顶τ-Voice实时语音智能体基准榜</div>
-                <div class="z2"><div class="z2-point">• Gemini 3.1 Flash Live（Thinking）版本在τ-Voice Leaderboard获得第一名</div><div class="z2-point">• τ-Voice是Sierra平台专门针对实时语音智能体性能的评测基准</div><div class="z2-point">• 该结果由Google DeepMind官方账号转发，具有官方背书性质</div></div>
-                <div class="z3"><div class="z3-why">语音智能体是AI落地最重要的交互形态之一，榜首意味着Gemini在实时语音任务完成能力上超越竞品，对开发者选型有直接参考价值。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="9"
-             style="animation-delay:225ms">
-            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF40MLMaIAApyKD.jpg')"></div>
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic测试AAR方法泛化能力：最优方法同时适用编程与数学任务</div>
-                <div class="z2"><div class="z2-point">• AAR最佳方法成功泛化至编程和数学两类全新数据集</div><div class="z2-point">• 次优方法仅能泛化至数学任务，编程任务上泛化失败</div><div class="z2-point">• 该测试验证了AAR方法超出训练分布的实际适用性</div></div>
-                <div class="z3"><div class="z3-why">这说明Anthropic的自动化对齐研究方法具备跨任务泛化能力，是AI自动化安全研究走向实用化的重要信号。</div></div>
+                <div class="card-title">Gemini 3.1 Flash Live登顶τ-Voice实时语音智能体排行榜</div>
+                <div class="z3"><div class="z3-why">实时语音智能体是AI助手落地的关键形态，排行榜领先意味着Google在语音交互能力上超越竞争对手，将影响开发者选型。</div></div>
+                <div class="z5">🐦 X-GoogleDeepMind · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="安全与对齐|学术研究" data-idx="9"
+             style="animation-delay:225ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF40MLMaIAApyKD.jpg')"></div>
+            <div class="card-body">
+                <div class="z1">
+            <span class="z1-left">安全与对齐 · 学术研究</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Anthropic AAR方法泛化测试：成功迁移至编程与数学任务</div>
+                <div class="z3"><div class="z3-why">AAR方法若能跨任务泛化，意味着自动化对齐研究工具具备更广泛适用性，可加速AI安全研究的规模化。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -695,7 +684,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">强化学习熵控制方法理论对比：正则化 vs 协方差机制</div>
-                <div class="z2"><div class="z2-point">• 论文建立softmax参数化下的统一熵动力学框架，熵变化由对数概率与logit更新的协方差决定</div><div class="z2-point">• 传统熵正则化引入稠密持续偏置，会修改训练的平稳分布</div><div class="z2-point">• 协方差机制为近期提出的替代方案，理论性质与正则化方法存在系统性差异</div></div>
                 <div class="z3"><div class="z3-why">LLM推理训练常因策略熵塌缩而过早收敛，此研究为选择更优的熵控制方法提供理论依据，有助于提升大模型RL训练的可扩展性。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -709,7 +697,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">STaR-DRO：用Tsallis重加权提升结构化预测的群体鲁棒性</div>
-                <div class="z2"><div class="z2-point">• 提出任务无关的XML结构提示策略，解决格式漂移、标签歧义和证据幻觉问题</div><div class="z2-point">• STaR-DRO采用Tsallis镜像下降结合动量平滑进行有状态鲁棒优化</div><div class="z2-point">• 框架针对本体约束标签生成、证据接地和歧义下有效结构生成设计</div></div>
                 <div class="z3"><div class="z3-why">结构化预测是NLP核心任务，群体不均衡导致模型在少数群体上表现差，此方法为鲁棒微调提供新思路。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -723,7 +710,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">七步法：AI系统日志分析标准化流程与最佳实践</div>
-                <div class="z2"><div class="z2-point">• 论文提出基于当前最佳实践的七步日志分析流水线，覆盖从数据收集到结果解读全流程</div><div class="z2-point">• 配套Inspect Scout库提供具体代码示例，降低研究者复现门槛</div><div class="z2-point">• 明确指出常见陷阱，帮助研究者避免评估方法论错误</div></div>
                 <div class="z3"><div class="z3-why">AI系统行为分析长期缺乏规范方法，此框架有助于让模型评估更可复现、更严谨，推动安全与对齐研究走向工程化。</div></div>
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -737,7 +723,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">屏幕图灵测试：移动端GUI智能体拟人化基准评测</div>
-                <div class="z2"><div class="z2-point">• 将智能体拟人化问题形式化为检测器与智能体之间的MinMax优化博弈问题</div><div class="z2-point">• 收集高保真移动端触控动态数据集，揭示现有LMM智能体运动学特征明显异常</div><div class="z2-point">• 建立Agent Humanization Benchmark（AHB），填补GUI智能体反检测研究空白</div></div>
                 <div class="z3"><div class="z3-why">随着自主GUI智能体普及，平台反检测机制日趋严格，智能体若无法通过「像人类一样操作」的测试将被封禁，这直接影响RPA、自动化测试等商业场景的可行性。</div></div>
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -751,7 +736,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">AHC框架：元学习自适应压缩实现MCU上持续目标检测</div>
-                <div class="z2"><div class="z2-point">• 基于MAML元学习，仅需5步梯度下降即可适应新任务，压缩策略动态调整</div><div class="z2-point">• 分层多尺度压缩比：P3层8:1、P4层6.4:1、P5层4:1，匹配FPN冗余特征分布</div><div class="z2-point">• 目标硬件为内存低于100KB的MCU，解决固定压缩策略导致的灾难性遗忘问题</div></div>
                 <div class="z3"><div class="z3-why">边缘AI设备内存极度受限，AHC让微控制器也能持续学习新任务，推动AI真正落地到低成本IoT硬件。</div></div>
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -765,7 +749,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">OOWM：用面向对象编程范式重构具身AI世界建模</div>
-                <div class="z2"><div class="z2-point">• 将世界模型定义为符号元组W=⟨S,T⟩，包含状态抽象和转移函数，替代潜在向量空间表示</div><div class="z2-point">• 借鉴面向对象编程中的类、继承、封装概念，显式表达物体层次与因果依赖关系</div><div class="z2-point">• 针对标准CoT无法有效表示状态空间和对象依赖的缺陷提出结构化替代方案</div></div>
                 <div class="z3"><div class="z3-why">具身AI规划长期受限于语言模型的线性推理，OOWM引入软件工程形式化方法，可能成为机器人任务规划的新范式。</div></div>
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -779,7 +762,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">谷歌在华盛顿举办AI经济论坛汇聚各界人士</div>
-                <div class="z2"><div class="z2-point">• 谷歌在华盛顿D.C.举办AI经济论坛，聚焦AI技术对经济的影响与机遇</div><div class="z2-point">• 论坛形式旨在汇聚政府、产业、学界等多方利益相关者</div><div class="z2-point">• 此举发生在美国AI政策讨论持续升温的背景下</div></div>
                 <div class="z3"><div class="z3-why">谷歌主动介入AI政策对话，在监管敏感时期通过高规格论坛影响华盛顿决策圈对AI经济价值的认知。</div></div>
                 <div class="z5">🔷 Google AI Blog · 04-14 09:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
@@ -792,9 +774,8 @@ $featured_html
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Andrew Ng推介Vocal Bridge：双智能体架构破解语音UI延迟难题</div>
-                <div class="z2"><div class="z2-point">• 双智能体架构：前台智能体负责实时对话，后台智能体负责推理、护栏与工具调用，兼顾速度与可靠性</div><div class="z2-point">• Andrew Ng用Claude Code为女儿数学测验App添加语音层，不足一小时完成，说明开发门槛极低</div><div class="z2-point">• Vocal Bridge定位为&#x27;视觉应用的语音UI层&#x27;，超越传统语音专属场景（如呼叫中心）</div></div>
-                <div class="z3"><div class="z3-why">语音不再只是呼叫中心专属，而是可叠加到任意可视化应用的UI层，这将大幅降低语音App的开发门槛，让数百万开发者首次触碰语音交互开发。</div></div>
+                <div class="card-title">Andrew Ng推荐：语音UI层让视觉应用同步更新屏幕</div>
+                <div class="z3"><div class="z3-why">语音+视觉联动是下一代人机交互的关键形态，Vocal Bridge的双智能体方案首次在低延迟与高智能之间找到工程平衡点，降低了开发者的语音应用门槛。</div></div>
                 <div class="z5">🐦 X-Andrew Ng · 04-15 00:54 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -806,9 +787,8 @@ $featured_html
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI推出$100 ChatGPT Pro定价层级，Codex热度引爆需求</div>
-                <div class="z2"><div class="z2-point">• Sam Altman在X上宣布因用户强烈需求推出$100 ChatGPT Pro定价层</div><div class="z2-point">• 此举与Codex（AI编程工具）获得大量关注直接相关</div><div class="z2-point">• 新档位填补了$20 Plus与$200 Pro之间的价格区间</div></div>
-                <div class="z3"><div class="z3-why">$100档填补了$20 Plus与$200 Pro之间的空白，意味着OpenAI正在精细化付费用户分层，Codex的编程能力成为新的商业化杠杆。</div></div>
+                <div class="card-title">Sam Altman宣布推出100美元ChatGPT Pro套餐，Codex大受</div>
+                <div class="z3"><div class="z3-why">这意味着OpenAI正在向高端用户市场进一步渗透，100美元的定价是现有Plus套餐的5倍，暗示专业用户愿为Codex等编程能力付更高溢价。</div></div>
                 <div class="z5">🐦 X-Sam Altman · 04-14 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -820,9 +800,8 @@ $featured_html
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI基金会投入逾1亿美元推动AI攻克阿尔茨海默症</div>
-                <div class="z2"><div class="z2-point">• OpenAI基金会定向投入超1亿美元用于阿尔茨海默症AI研究</div><div class="z2-point">• 资助方向涵盖疾病机制图谱绘制、药物设计等核心科学问题</div><div class="z2-point">• Sam Altman亲自撰文阐述OpenAI对该领域的战略判断</div></div>
-                <div class="z3"><div class="z3-why">这标志着AI头部机构正将前沿模型能力系统性地投入医学难题，阿尔茨海默症研究有望获得算力与资金双重加速。</div></div>
+                <div class="card-title">OpenAI基金会宣布投入逾1亿美元推进AI攻克阿尔茨海默症</div>
+                <div class="z3"><div class="z3-why">OpenAI将AI能力从语言生成正式延伸至生命科学硬问题，标志着顶级AI机构开始系统性押注医疗AI的社会价值，也为行业竞争提供新叙事方向。</div></div>
                 <div class="z5">🐦 X-Sam Altman · 04-14 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -835,12 +814,6 @@ $featured_html
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">Anthropic</div>
-                <div class="z2"><div class="z2-point">• com/claude-mythos-preview-system-card
-
-Links.</div><div class="z2-point">• ❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.</div><div class="z2-point">• ai/papers
-
-📝 The paper is available here:
-https://www.</div></div>
                 
                 <div class="z5">🎬 Two Minute Papers · 04-14 14:54 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -854,7 +827,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">MIT科技评论推出全AI专项榜单：10大当下最重要AI议题</div>
-                <div class="z2"><div class="z2-point">• 2026年度突破技术榜单中AI入选项包括：AI伴侣、机制可解释性、生成式编程、超大规模数据中心</div><div class="z2-point">• AI候选技术数量过多导致编辑团队不得不单独开辟新榜单</div><div class="z2-point">• 新榜单将聚焦「当下最重要的10件AI事」，为读者提供更全面的AI领域导航</div></div>
                 <div class="z3"><div class="z3-why">连权威科技媒体都觉得AI发展快到一份榜单装不下，说明AI技术爆发的广度和速度已超出传统评选框架。</div></div>
                 <div class="z5">🎓 MIT Tech Review · 04-14 11:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -868,7 +840,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">斯坦福2026年AI指数：解读当前AI发展真实状态</div>
-                <div class="z2"><div class="z2-summary">斯坦福大学发布2026年AI指数报告，从中美竞争、模型突破、公众情绪到就业影响，全面呈现AI领域年度数据。</div></div>
                 <div class="z3"><div class="z3-why">技术加速与社会滞后的剪刀差正在扩大——谁先解决落地与治理，谁就掌握下一轮竞争的定义权。</div></div>
                 <div class="z5">🎓 MIT Tech Review · 04-14 12:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -882,7 +853,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">扩散映射与注意力机制的数学统一理论</div>
-                <div class="z2"><div class="z2-point">• 注意力机制可被理解为数据流形上的扩散过程</div><div class="z2-point">• 扩散映射与softmax注意力在数学结构上存在形式等价性</div><div class="z2-point">• 该理论为设计新型注意力变体提供几何直觉</div></div>
                 <div class="z3"><div class="z3-why">该研究在理论层面打通了图论、流形学习与Transformer架构的内在联系，有助于解释注意力机制的几何本质，推动可解释AI发展。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -896,7 +866,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">Fairboard框架：量化评估医疗AI模型的公平性差异</div>
-                <div class="z2"><div class="z2-point">• 评估覆盖18个开源脑肿瘤分割模型，648名胶质瘤患者，共11,664次模型推理</div><div class="z2-point">• 患者身份（分子诊断、肿瘤分级、切除范围）对分割精度的影响强于模型架构差异</div><div class="z2-point">• 提出涵盖单变量、贝叶斯多变量、空间和表征四个维度的综合公平性评估框架</div></div>
                 <div class="z3"><div class="z3-why">超过1000款FDA批准的AI医疗设备中，公平性评估几乎缺失，这意味着AI医疗可能对特定患者群体存在系统性偏差，影响诊疗公平。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -910,7 +879,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">深思熟虑对齐提升LLM安全性，但不确定性依然存在</div>
-                <div class="z2"><div class="z2-summary">研究发现深思熟虑对齐（Deliberative Alignment）虽比传统拒绝训练更深层，但师生模型间存在对齐差距，影响安全性与通用能力。</div></div>
                 <div class="z3"><div class="z3-why">推理模型不是安全特效药，蒸馏会稀释对齐能力，基础模型的</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -924,7 +892,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">大语言模型展现出类人工作记忆干扰特征</div>
-                <div class="z2"><div class="z2-point">• 两层Transformer可被训练至完美完成工作记忆任务，但预训练LLM仍表现出明显局限</div><div class="z2-point">• 多种预训练LLM均复现了人类工作记忆中的干扰特征，具有跨模型普遍性</div><div class="z2-point">• 研究聚焦于为何拥有注意力机制全上下文访问能力的LLM仍存在工作记忆瓶颈</div></div>
                 <div class="z3"><div class="z3-why">这揭示LLM的认知瓶颈并非来自架构限制，而可能源于预训练过程本身，对改善AI推理能力有重要指导意义。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -938,7 +905,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">Belief-State RWKV：部分可观测强化学习的新框架</div>
-                <div class="z2"><div class="z2-summary">研究者提出将RWKV循环模型的隐藏状态显式解释为置信状态，引入不确定性感知以改善部分可观测RL性能。</div></div>
                 <div class="z3"><div class="z3-why">RL 智能体首次能同时</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -952,7 +918,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">自我先验驱动主动推断：AI模型通过镜像测试验证自我意识涌现</div>
-                <div class="z2"><div class="z2-point">• 自我先验由Transformer实现，学习熟悉多感官体验的密度分布，陌生标记触发主动推断行为</div><div class="z2-point">• 模拟婴儿仅依赖视觉和本体感觉（无触觉输入），成功发现并移除镜中脸部贴纸</div><div class="z2-point">• 无需外部奖励信号，行为完全由自我先验与当前感知的分布差异驱动</div></div>
                 <div class="z3"><div class="z3-why">这意味着自我意识行为可能不需要专门设计的奖励函数，仅靠多感官经验密度学习就能自发涌现，为具身AI和认知科学提供新范式。</div></div>
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -966,7 +931,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">LABBench2发布：专为AI生物研究能力测评的新基准</div>
-                <div class="z2"><div class="z2-point">• LABBench2是LAB-Bench的升级版，聚焦AI在生物领域的真实世界任务能力</div><div class="z2-point">• 评测范围涵盖基础模型、自主假设生成系统到AI驱动自动化实验室</div><div class="z2-point">• 强调从知识记忆和推理能力转向实际完成有意义科研工作的能力测量</div></div>
                 <div class="z3"><div class="z3-why">随着AI加速科研的预期升温，现有基准已无法衡量AI的真实科研能力，LABBench2的出现有助于更准确判断AI到底能做多少真正的生物学研究工作。</div></div>
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -980,7 +944,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">混合系统可解释规划：自动化时代AI决策透明化研究</div>
-                <div class="z2"><div class="z2-summary">ArXiv论文提出混合系统可解释规划框架，系统研究如何为自动驾驶、智能电网等安全关键领域的AI规划决策生成可信解释。</div></div>
                 <div class="z3"><div class="z3-why">AI 进入安全关键领域的最后一道门槛是</div></div>
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -994,7 +957,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">Vigil：云服务平台主动式智能客服代理系统</div>
-                <div class="z2"><div class="z2-point">• 云平台每日产生数千工单，人工处理压力巨大，现有反应式代理在问题升级后即退出服务</div><div class="z2-point">• Vigil采用主动式设计，在工单全生命周期内持续运行，可跟踪进度、协助后续问题</div><div class="z2-point">• 系统内置持续自我改进机制，能从未能解决的案例中学习，提升未来处理能力</div></div>
                 <div class="z3"><div class="z3-why">传统AI客服只能被动响应，问题升级后就退出。Vigil全程参与并持续学习，有望大幅减轻云平台运维人员的支持负担。</div></div>
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1008,7 +970,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">斯坦福AI指数报告揭示：美国AI投入远超其他国家</div>
-                <div class="z2"><div class="z2-point">• 美国拥有5427个数据中心，是排名第二国家的10倍以上，算力基础设施领先优势显著</div><div class="z2-point">• AI硬件供应链存在重大瓶颈，关键节点集中度高，潜在风险不容忽视</div><div class="z2-point">• 斯坦福AI指数为行业提供年度量化基准，帮助验证或修正业界直觉判断</div></div>
                 <div class="z3"><div class="z3-why">这份报告用数据量化了AI竞赛的真实格局——美国的基础设施优势已形成碾压态势，但供应链集中风险也在同步放大。</div></div>
                 <div class="z5">🎓 MIT Tech Review · 04-13 15:48 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1022,22 +983,20 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">腾讯云TDSQL-C引入LLM重塑SQL查询优化与计划管理</div>
-                <div class="z2"><div class="z2-point">• TDSQL-C AI查询优化器利用LLM分析SQL语句并自动生成优化建议</div><div class="z2-point">• 系统可自动管理执行计划，减少人工干预数据库调优流程</div><div class="z2-point">• 腾讯云将AI能力融入云数据库产品，推动数据库智能化运维方向</div></div>
                 <div class="z3"><div class="z3-why">数据库查询优化长期依赖DBA人工经验，LLM介入意味着这一门槛大幅降低，企业可减少专家依赖。</div></div>
                 <div class="z5">🚀 AI前线 · 04-14 11:15 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="34"
+        <div class="card" data-cat="AI工具|芯片与算力" data-idx="34"
              style="animation-delay:500ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">AI工具 · 芯片与算力</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenClaw成本降低10倍：本地AI运行新方案</div>
-                <div class="z2"><div class="z2-point">• OpenClaw运行成本实现10倍降低，大幅提升本地AI部署经济性</div><div class="z2-point">• 方案基于NVIDIA GeForce RTX GPU及DGX Spark平台实现</div><div class="z2-point">• 作者整理了25个OpenClaw实际应用场景供开发者参考</div></div>
-                <div class="z3"><div class="z3-why">本地AI运行成本大幅下降意味着更多开发者和企业可以负担得起私有化AI部署，推动AI普惠化。</div></div>
+                <div class="card-title">OpenClaw成本降低10倍：本地AI运行方案大幅提效</div>
+                <div class="z3"><div class="z3-why">本地AI运行成本骤降意味着个人开发者和中小团队可以更低门槛使用AI自动化工具，无需依赖昂贵的云端API。</div></div>
                 <div class="z5">🎬 Matthew Berman · 04-13 17:48 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
@@ -1050,7 +1009,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">微软计划在Windows电脑预装Copilot AI助手应用</div>
-                <div class="z2"><div class="z2-point">• 微软计划在所有Windows电脑预装名为&#x27;龙虾&#x27;（代号）的应用程序</div><div class="z2-point">• 该应用后端由Copilot提供支持，属于操作系统级AI整合</div><div class="z2-point">• 此举将使Copilot触达Windows庞大的全球用户基础</div></div>
                 <div class="z3"><div class="z3-why">微软将AI助手直接嵌入Windows系统，意味着Copilot将成为数亿用户的默认AI入口，对竞争对手构成巨大压力。</div></div>
                 <div class="z5">🔎 36氪 AI搜索 · 04-14 13:42 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1064,7 +1022,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">Anthropic越大越快、OpenAI越大越慢：AI巨头盈利路径分化</div>
-                <div class="z2"><div class="z2-summary">同为顶级AI公司，Anthropic收入增速随规模扩大而加快，OpenAI则呈现边际放缓迹象，两家公司商业化路径出现明显分化。</div></div>
                 <div class="z3"><div class="z3-why">企业级 AI 市场的深度绑定正在成为决定大模型公司长期竞争格局的关键变量，渠道与信任比模型能力更难被复制。</div></div>
                 <div class="z5">🔎 36氪 AI搜索 · 04-14 13:40 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1078,7 +1035,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">斯坦福AI指数报告：中美大模型能力差距已基本消除</div>
-                <div class="z2"><div class="z2-point">• 斯坦福AI指数为学术界公认的年度权威评估报告，覆盖全球主流模型横向对比</div><div class="z2-point">• 中国模型在推理、编程、数学等核心基准上与GPT-4o、Claude等美国旗舰模型表现相当</div><div class="z2-point">• 报告同时指出全球AI普及率正在经历历史性加速，用户规模和渗透率创新高</div></div>
                 <div class="z3"><div class="z3-why">这意味着美国在前沿AI领域的技术护城河正在快速消失，全球AI竞争格局进入真正意义上的多极化阶段。</div></div>
                 <div class="z5">⚛️ 量子位 · 04-14 05:58 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1092,7 +1048,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">OpenAI收购AI个人理财初创公司Hiro，布局ChatGPT金融规划功能</div>
-                <div class="z2"><div class="z2-point">• OpenAI收购AI个人理财初创公司Hiro，具体交易金额未披露</div><div class="z2-point">• 此次收购表明OpenAI计划在ChatGPT中内置金融规划能力</div><div class="z2-point">• 个人理财是AI应用落地的重要垂直场景，竞争日趋激烈</div></div>
                 <div class="z3"><div class="z3-why">OpenAI正将ChatGPT从通用助手向垂直专业服务延伸，金融规划是高粘性、高价值的个人消费场景，此举可能开启AI理财顾问新赛道。</div></div>
                 <div class="z5">💡 TechCrunch AI · 04-14 00:23 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1106,7 +1061,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">男子持燃烧弹袭击Altman住所并试图闯入OpenAI总部，面临联邦指控</div>
-                <div class="z2"><div class="z2-point">• Moreno-Gama从德克萨斯州专程赴加州，扬言要杀死Sam Altman并烧毁OpenAI总部</div><div class="z2-point">• 事发4月10日，其在Altman住所投掷燃烧弹，随后持椅砸OpenAI总部玻璃门</div><div class="z2-point">• 联邦检察官指控包括：以爆炸物损毁财产未遂、非法持有未登记枪支</div></div>
                 <div class="z3"><div class="z3-why">此事件揭示AI领军人物面临真实人身威胁，或推动科技公司加强高管安保并引发对AI仇恨情绪蔓延的社会关注。</div></div>
                 <div class="z5">⚡ The Verge AI · 04-13 20:02 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1120,7 +1074,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">宇树科技R1人形机器人登陆速卖通，售价约3.2万元</div>
-                <div class="z2"><div class="z2-point">• 宇树R1定价4370美元（约3.2万人民币），通过速卖通向国际市场开放购买</div><div class="z2-point">• R1具备杂技级运动能力，展示了较高水平的动态平衡与肢体协调性</div><div class="z2-point">• 当前最大挑战仍是使用场景不清晰，消费者实际需求尚待验证</div></div>
                 <div class="z3"><div class="z3-why">人形机器人首次以消费级价格进入国际电商平台，意味着具身智能正从实验室走向普通买家，商业化拐点信号明显。</div></div>
                 <div class="z5">📡 Wired AI · 04-13 23:37 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1134,7 +1087,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">美国农业部宣布部署xAI Grok并为其申请联邦认证</div>
-                <div class="z2"><div class="z2-point">• 美国农业部表示&#x27;自豪地&#x27;推进在全机构部署xAI Grok的计划</div><div class="z2-point">• USDA正在为Grok申请联邦政府AI使用资质（FedRAMP或同类认证）</div><div class="z2-point">• 马斯克转发该消息，xAI官方将此定性为重大商业胜利</div></div>
                 <div class="z3"><div class="z3-why">这是Grok首次进入美国联邦政府核心机构，意味着xAI正式打入政府AI采购市场，直接与微软/OpenAI的政府合作展开竞争。</div></div>
                 <div class="z5">🐦 X-Elon Musk (xAI) · 04-13 23:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1148,7 +1100,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">AI虚拟网红大举入侵科切拉音乐节，真假难辨</div>
-                <div class="z2"><div class="z2-summary">大量AI生成的虚拟网红出现在科切拉音乐节社媒内容中，与真人网红难以区分，引发身份真实性争议。</div></div>
                 
                 <div class="z5">⚡ The Verge AI · 04-13 15:53 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1162,7 +1113,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">微软正在开发类OpenClaw企业级AI智能体</div>
-                <div class="z2"><div class="z2-point">• 微软新智能体主要面向企业客户，强调安全性与合规控制</div><div class="z2-point">• 相比开源OpenClaw以高风险著称，微软版本将提供更严格的安全边界</div><div class="z2-point">• 此举延续微软在AI智能体领域的持续布局，与Copilot生态形成协同</div></div>
                 <div class="z3"><div class="z3-why">微软在企业AI智能体赛道加码，意味着大厂正将开源社区的激进探索转化为可商用的安全产品，加速智能体落地企业场景。</div></div>
                 <div class="z5">💡 TechCrunch AI · 04-13 19:05 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1176,7 +1126,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">斯坦福AI指数报告：专家与公众对AI认知鸿沟持续扩大</div>
-                <div class="z2"><div class="z2-point">• 斯坦福AI指数年度报告记录AI领域专家与公众之间认知和情绪的显著分歧</div><div class="z2-point">• 公众对AI影响就业、医疗健康及整体经济的焦虑程度持续上升</div><div class="z2-point">• 业内人士普遍乐观，与公众日益增长的不安情绪形成鲜明对比</div></div>
                 <div class="z3"><div class="z3-why">专家对AI持乐观态度，而普通人越来越担忧失业和生活影响，这种分裂可能引发监管压力和社会阻力，影响AI产业未来发展空间。</div></div>
                 <div class="z5">💡 TechCrunch AI · 04-13 18:55 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1190,7 +1139,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">OpenAI内部备忘录曝光：锁定用户、拓展企业市场以对抗Anthropic</div>
-                <div class="z2"><div class="z2-summary">OpenAI首席营收官Denise Dresser向员工发送四页备忘录，强调构建产品护城河、锁定用户、发展企业客户以应对激烈竞争。</div></div>
                 
                 <div class="z5">⚡ The Verge AI · 04-13 12:21 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1204,7 +1152,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">微软测试OpenClaw风格AI机器人集成至Copilot助手</div>
-                <div class="z2"><div class="z2-point">• 微软副总裁Omar Shahine确认公司正在企业场景中探索OpenClaw类技术的潜力</div><div class="z2-point">• 目标是让Microsoft 365 Copilot能全天候自主运行、代替用户完成任务</div><div class="z2-point">• OpenClaw是允许用户在本地设备创建AI代理的开源平台，近期人气急升</div></div>
                 <div class="z3"><div class="z3-why">微软此举意味着企业级AI助手正从「问答工具」升级为「自主执行代理」，将深刻改变办公自动化格局。</div></div>
                 <div class="z5">⚡ The Verge AI · 04-13 11:41 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1218,7 +1165,6 @@ https://www.</div></div>
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">Vercel CEO暗示IPO计划，AI智能体驱动营收激增</div>
-                <div class="z2"><div class="z2-point">• Vercel是一家成立10年的开发工具与网站托管平台，正受益于AI生成应用爆炸式增长</div><div class="z2-point">• CEO Guillermo Rauch公开释放IPO就绪信号，显示公司财务状况强劲</div><div class="z2-point">• 众多ChatGPT时代前成立的初创企业正在挣扎转型，Vercel却实现逆势突破</div></div>
                 <div class="z3"><div class="z3-why">Vercel的逆势增长说明基础设施层玩家正在成为AI应用爆发的最大受益者之一，印证&#x27;卖铲子&#x27;逻辑。</div></div>
                 <div class="z5">💡 TechCrunch AI · 04-13 15:22 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
@@ -1237,19 +1183,20 @@ https://www.</div></div>
 <script src="modal_data.js"></script>
 <script>
 const typeLabels = {"paper":"学术论文","news":"新闻报道","official":"官方发布","opinion":"观点文章","community":"社区讨论","video":"视频"};
+const statusColors = {"official":"#8b5cf6","confirmed":"#10b981","reported":"#3b82f6","rumor":"#f59e0b"};
 
-// Lightweight Markdown → HTML renderer
+// ═══ Markdown → HTML renderer（带 heading id 注入）═══
+var _headingCounter = 0;
 function renderMd(text) {
     if (!text) return '';
-    // Escape HTML first (prevent XSS), but preserve intentional markdown
+    _headingCounter = 0;
     var s = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-    // Tables: | col1 | col2 | ... (detect table blocks)
+    // Tables
     s = s.replace(/((?:^|\n)\|.+\|(?:\n\|.+\|)+)/g, function(block) {
         var rows = block.trim().split('\n');
         var html = '<table class="md-table">';
         rows.forEach(function(row, i) {
-            // Skip separator row (|---|---|)
             if (/^[\|\s\-:]+$/.test(row)) return;
             var cells = row.split('|').filter(function(c, j) { return j > 0 && j < row.split('|').length - 1; });
             var tag = (i === 0) ? 'th' : 'td';
@@ -1258,196 +1205,161 @@ function renderMd(text) {
         return html + '</table>';
     });
 
-    // Headers: ####, ###, ## (must process longest prefix first)
-    s = s.replace(/^#### (.+)$/gm, '<h5 class="md-h md-h5">$1</h5>');
-    s = s.replace(/^### (.+)$/gm, '<h4 class="md-h md-h4">$1</h4>');
-    s = s.replace(/^## (.+)$/gm, '<h3 class="md-h md-h3">$1</h3>');
+    // Headers — 注入 id 用于 TOC 跳转
+    s = s.replace(/^#### (.+)$/gm, function(m, t) { return '<h5 class="md-h md-h5" id="toc-' + (_headingCounter++) + '">' + t + '</h5>'; });
+    s = s.replace(/^### (.+)$/gm, function(m, t) { return '<h4 class="md-h md-h4" id="toc-' + (_headingCounter++) + '">' + t + '</h4>'; });
+    s = s.replace(/^## (.+)$/gm, function(m, t) { return '<h3 class="md-h md-h3" id="toc-' + (_headingCounter++) + '">' + t + '</h3>'; });
 
-    // Bold: **text**
     s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-
-    // Inline code: `code`
     s = s.replace(/`([^`]+)`/g, '<code class="md-code">$1</code>');
-
-    // Links: [text](url) — after HTML escape, & → &amp; in URLs, so allow that
     s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="md-link">$1</a>');
-
-    // Horizontal rule: ---
     s = s.replace(/^---$/gm, '<hr class="md-hr">');
 
-    // Ordered list blocks: consecutive lines starting with digit.
+    // Lists
     s = s.replace(/((?:^|\n)\d+\. .+(?:\n\d+\. .+)*)/g, function(block) {
-        var items = block.trim().split('\n').map(function(line) {
-            return '<li>' + line.replace(/^\d+\. /, '') + '</li>';
-        }).join('');
-        return '<ol class="md-list md-ol">' + items + '</ol>';
+        return '<ol class="md-list md-ol">' + block.trim().split('\n').map(function(l) { return '<li>' + l.replace(/^\d+\. /, '') + '</li>'; }).join('') + '</ol>';
     });
-
-    // Unordered list blocks: consecutive lines starting with - or •
     s = s.replace(/((?:^|\n)[-•] .+(?:\n[-•] .+)*)/g, function(block) {
-        var items = block.trim().split('\n').map(function(line) {
-            return '<li>' + line.replace(/^[-•] /, '') + '</li>';
-        }).join('');
-        return '<ul class="md-list">' + items + '</ul>';
+        return '<ul class="md-list">' + block.trim().split('\n').map(function(l) { return '<li>' + l.replace(/^[-•] /, '') + '</li>'; }).join('') + '</ul>';
     });
 
-    // Paragraphs: double newline
     s = s.replace(/\n{2,}/g, '</p><p>');
-    // Single newlines within a paragraph → <br> (but not after block elements)
     s = s.replace(/([^>])\n([^<])/g, '$1<br>$2');
-
-    // Wrap in paragraph tags
     s = '<p>' + s + '</p>';
-    // Clean up empty paragraphs
     s = s.replace(/<p>\s*<\/p>/g, '');
-    // Don't wrap block elements in <p>
     s = s.replace(/<p>\s*(<(?:table|[uo]l|h[2-5]|hr)[^>]*>)/g, '$1');
     s = s.replace(/(<\/(?:table|[uo]l|h[2-5])>)\s*<\/p>/g, '$1');
-
     return s;
 }
 
-// Helper: 提取 markdown 标题用于 TOC
-function extractHeadings(text) {
-    var headings = [];
-    var lines = text.split('\n');
-    lines.forEach(function(line) {
-        var match = line.match(/^(###|####)\s+(.+)$/);
-        if (match) {
-            var level = match[1].length;  // 3 or 4
-            var text = match[2];
-            var id = 'h' + headings.length;
-            headings.push({ level: level, text: text, id: id });
-        }
-    });
-    return headings;
-}
-
-// Helper: 高亮关键数据（数字、百分比、金额）
+// ═══ 高亮关键数据 ═══
 function highlightKeyData(html) {
-    // 高亮金额: $100M、100万、1.5亿 等
-    html = html.replace(/(\$[\d,]+[MKB]?|[\d,]+[\u4e00\u4e07\u4efc]|[\d.]+[Kk]?[Bb])/g, '<span style="color:var(--accent);font-weight:600">$1</span>');
-    // 高亮百分比: 18%、提升18% 等
-    html = html.replace(/([\d.]+)(%|[\u63d0\u96f6].*?%)/g, '<span style="color:var(--accent);font-weight:600">$1$2</span>');
-    return html;
+    // 不在 HTML 标签内部做替换（避免破坏标签属性）
+    return html.replace(/>([^<]+)</g, function(m, text) {
+        var t = text;
+        // 金额: $100M, $1.5B, ¥100亿, 100万, 1.5亿, 100亿美元
+        t = t.replace(/(\$[\d,.]+\s*[MBKmkb](?:illion)?|¥[\d,.]+[万亿]?|[\d,.]+\s*[万亿](?:美元|元|人民币)?|[\d,.]+\s*(?:美元|USD|dollars?))/g,
+            '<b class="hl-num">$1</b>');
+        // 百分比: 18%, 提升18%, 增长30%
+        t = t.replace(/([\d.]+\s*%)/g, '<b class="hl-num">$1</b>');
+        // 大数字（4位以上纯数字，可能是参数量、用户数等）
+        t = t.replace(/\b(\d{1,3}(?:,\d{3})+)\b/g, '<b class="hl-num">$1</b>');
+        return '>' + t + '<';
+    });
 }
 
+// ═══ 从已渲染 HTML 提取 TOC ═══
+function buildToc(renderedHtml) {
+    var toc = [];
+    var re = /<h[3-5][^>]*id="(toc-\d+)"[^>]*>(.*?)<\/h[3-5]>/gi;
+    var match;
+    while ((match = re.exec(renderedHtml)) !== null) {
+        var tag = match[0].charAt(2); // '3','4','5'
+        toc.push({ id: match[1], text: match[2].replace(/<[^>]+>/g, ''), level: parseInt(tag) });
+    }
+    return toc;
+}
+
+// ═══ Modal ═══
 function openModal(idx) {
     const a = __data[idx];
     if (!a) return;
 
-    // Hero image (full-bleed top)
+    // Hero image
     let heroHtml = '';
     if (a.image) {
-        heroHtml = '<div class="m-hero"><img src="' + a.image + '" onerror="this.parentElement.style.display=&#39;none&#39;" alt=""><div class="m-hero-gradient"></div></div>';
+        heroHtml = '<div class="m-hero"><img src="' + a.image + '" onerror="this.parentElement.style.display=\'none\'" alt=""><div class="m-hero-gradient"></div></div>';
     }
 
-    // Modal title
+    // Title
     let titleHtml = '<h2 class="m-title">' + (a.chinese_title || a.title || '') + '</h2>';
 
-    // Source + date + event status + timeline
-    let srcBarHtml = '<div class="m-src-bar">' + (a.source_icon || '') + ' ' + (a.source_name || '');
-    if (a.pub_date) srcBarHtml += ' · ' + a.pub_date;
+    // Source bar + event status badge (colored by status)
+    let srcParts = [(a.source_icon || '') + ' ' + (a.source_name || '')];
+    if (a.pub_date) srcParts.push(a.pub_date);
     var tl = typeLabels[a.source_type];
-    if (tl) srcBarHtml += ' · ' + tl;
-    // 事件状态徽标 + 时间维度
-    if (a.event_status_icon) {
-        srcBarHtml += ' <span style="color:' + (a.event_status_icon ? '#888' : '#e8913a') + ';font-size:10px">' + a.event_status_icon + ' ' + (a.event_status_label || '') + '</span>';
+    if (tl) srcParts.push(tl);
+    let srcBarHtml = '<div class="m-src-bar">' + srcParts.join(' · ');
+    if (a.event_status_icon && a.event_status_label) {
+        var sc = statusColors[a.event_status] || '#888';
+        srcBarHtml += ' · <span class="m-status-badge" style="color:' + sc + '">' + a.event_status_icon + ' ' + a.event_status_label + '</span>';
     }
     srcBarHtml += '</div>';
 
-    // Why-it-matters — 仅在无 detailed_content 时展示
-    let whyHtml = '';
-    if (a.why_it_matters && !a.detailed_content) {
-        whyHtml = '<div class="m-why">' + a.why_it_matters + '</div>';
-    }
-
-    // Detailed content — with key data highlighting
-    let detailedHtml = '';
-    let tocHtml = '';
-    if (a.detailed_content) {
-        let cleaned = a.detailed_content.replace(
-            /^\s*###\s*(问题背景|背景|前言|引言|简介)[^\n]*\n[\s\S]*?(?=\n###\s|$)/,
-            ''
-        ).trim();
-        var renderedContent = renderMd(cleaned || a.detailed_content);
-        // 高亮关键数据
-        renderedContent = highlightKeyData(renderedContent);
-
-        // 提取目录
-        var headings = extractHeadings(cleaned || a.detailed_content);
-        if (headings.length > 0) {
-            tocHtml = '<div class="m-toc"><div class="m-toc-title">目录</div><ul class="m-toc-list">';
-            headings.forEach(function(h) {
-                var indent = h.level === 4 ? 20 : 0;
-                tocHtml += '<li style="margin-left:' + indent + 'px"><a href="#' + h.id + '" class="m-toc-link">' + h.text + '</a></li>';
-            });
-            tocHtml += '</ul></div>';
-        }
-
-        detailedHtml = '<div class="m-detailed">' + renderedContent + '</div>';
-    } else {
-        var fallbackParts = [];
-        var mainText = (a.title && a.title.length > (a.summary || '').length + 20)
-            ? a.title : (a.summary || '');
-        if (mainText) {
-            fallbackParts.push('<p>' + mainText + '</p>');
-        }
-        if (a.why_it_matters) {
-            fallbackParts.push('<div class="m-why">' + a.why_it_matters + '</div>');
-        }
-        if (a.key_details && a.key_details.length > 0) {
-            var validKd = a.key_details.filter(function(k) { return k && k.length > 5; });
-            if (validKd.length > 0) {
-                var kpHtml = '<div class="m-keypoints"><div class="m-keypoints-label">要点</div><ul>';
-                kpHtml += validKd.map(function(k) { return '<li>' + k + '</li>'; }).join('');
-                kpHtml += '</ul></div>';
-                fallbackParts.push(kpHtml);
-            }
-        }
-        if (fallbackParts.length > 0) {
-            detailedHtml = '<div class="m-detailed">' + fallbackParts.join('') + '</div>';
-        }
-    }
-
-    // Article image gallery
-    let galleryHtml = '';
-    if (a.extra_images && a.extra_images.length > 0) {
-        let imgs = a.extra_images.filter(function(u) { return u !== a.image; });
-        if (imgs.length > 0) {
-            let imgTags = imgs.map(function(u) {
-                return '<img src="' + u + '" onerror="this.style.display=&#39;none&#39;" alt="" loading="lazy">';
-            }).join('');
-            galleryHtml = '<div class="m-gallery">' + imgTags + '</div>';
-        }
-    }
-
-    // Deep sections (background + analysis)
-    let deepHtml = '';
-    if (a.background) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text">' + renderMd(a.background) + '</div></div>';
-    }
-    if (a.deep_analysis) {
-        deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text">' + renderMd(a.deep_analysis) + '</div></div>';
-    }
-    if (deepHtml) {
-        deepHtml = '<div class="m-deep">' + deepHtml + '</div>';
-    }
-
-    // Multi-source indicator
+    // Multi-source indicator (moved here, right after source bar)
     let multiSrcHtml = '';
     if (a.also_reported_by && a.also_reported_by.length > 0) {
-        multiSrcHtml = '<div class="m-multi-src"><span class="m-multi-src-label">' + a.report_count + '源报道：</span>';
+        multiSrcHtml = '<div class="m-multi-src"><span class="m-multi-src-label">' + a.report_count + ' 源报道</span>';
         a.also_reported_by.forEach(function(src) {
             multiSrcHtml += '<span class="m-multi-src-tag">' + src + '</span>';
         });
         multiSrcHtml += '</div>';
     }
 
+    // Why-it-matters — only when no detailed_content (avoid repeating card)
+    let whyHtml = '';
+    if (a.why_it_matters && !a.detailed_content) {
+        whyHtml = '<div class="m-why">' + a.why_it_matters + '</div>';
+    }
+
+    // Detailed content
+    let detailedHtml = '';
+    let tocHtml = '';
+    if (a.detailed_content) {
+        let cleaned = a.detailed_content.replace(
+            /^\s*###\s*(问题背景|背景|前言|引言|简介)[^\n]*\n[\s\S]*?(?=\n###\s|$)/, ''
+        ).trim();
+        var rendered = renderMd(cleaned || a.detailed_content);
+        rendered = highlightKeyData(rendered);
+
+        // Build TOC from rendered HTML (reliable — uses actual id attributes)
+        var toc = buildToc(rendered);
+        if (toc.length >= 2) {
+            tocHtml = '<nav class="m-toc"><span class="m-toc-title">目录</span>';
+            toc.forEach(function(h) {
+                var cls = h.level >= 4 ? ' m-toc-sub' : '';
+                tocHtml += '<a href="#' + h.id + '" class="m-toc-link' + cls + '" onclick="event.preventDefault();document.getElementById(\'' + h.id + '\').scrollIntoView({behavior:\'smooth\',block:\'start\'});return false;">' + h.text + '</a>';
+            });
+            tocHtml += '</nav>';
+        }
+        detailedHtml = '<div class="m-detailed" id="m-detailed-area">' + rendered + '</div>';
+    } else {
+        // Fallback
+        var parts = [];
+        var mainText = (a.title && a.title.length > (a.summary || '').length + 20) ? a.title : (a.summary || '');
+        if (mainText) parts.push('<p>' + mainText + '</p>');
+        if (a.why_it_matters) parts.push('<div class="m-why">' + a.why_it_matters + '</div>');
+        if (a.key_details && a.key_details.length > 0) {
+            var kd = a.key_details.filter(function(k) { return k && k.length > 5; });
+            if (kd.length > 0) {
+                parts.push('<div class="m-keypoints"><div class="m-keypoints-label">要点</div><ul>' +
+                    kd.map(function(k) { return '<li>' + k + '</li>'; }).join('') + '</ul></div>');
+            }
+        }
+        if (parts.length > 0) detailedHtml = '<div class="m-detailed">' + parts.join('') + '</div>';
+    }
+
+    // Image gallery
+    let galleryHtml = '';
+    if (a.extra_images && a.extra_images.length > 0) {
+        let imgs = a.extra_images.filter(function(u) { return u !== a.image; });
+        if (imgs.length > 0) {
+            galleryHtml = '<div class="m-gallery">' + imgs.map(function(u) {
+                return '<img src="' + u + '" onerror="this.style.display=\'none\'" alt="" loading="lazy">';
+            }).join('') + '</div>';
+        }
+    }
+
+    // Deep sections
+    let deepHtml = '';
+    if (a.background) deepHtml += '<div class="m-deep-section"><div class="m-deep-label">背景脉络</div><div class="m-deep-text">' + renderMd(a.background) + '</div></div>';
+    if (a.deep_analysis) deepHtml += '<div class="m-deep-section"><div class="m-deep-label">深度解读</div><div class="m-deep-text">' + renderMd(a.deep_analysis) + '</div></div>';
+    if (deepHtml) deepHtml = '<div class="m-deep">' + deepHtml + '</div>';
+
     // Footer
-    let footerActionHtml = '';
+    let footerAction = '';
     if (a.link && a.link !== '#') {
-        footerActionHtml = '<a href="' + a.link + '" target="_blank" rel="noopener noreferrer" class="m-action" onclick="event.stopPropagation();">阅读原文 →</a>';
+        footerAction = '<a href="' + a.link + '" target="_blank" rel="noopener noreferrer" class="m-action" onclick="event.stopPropagation();">阅读原文 →</a>';
     }
 
     document.getElementById('modalContent').innerHTML =
@@ -1455,17 +1367,17 @@ function openModal(idx) {
         '<button class="m-close" onclick="closeModal()">✕</button>' +
         '<div class="m-body">' +
             srcBarHtml +
+            multiSrcHtml +
             titleHtml +
             whyHtml +
             tocHtml +
             detailedHtml +
             galleryHtml +
             deepHtml +
-            multiSrcHtml +
             '<div class="m-close-bottom" onclick="closeModal()">✕</div>' +
             '<div class="m-footer">' +
                 '<span class="m-footer-src">' + a.reading_minutes + ' min read</span>' +
-                footerActionHtml +
+                footerAction +
             '</div>' +
         '</div>';
 
@@ -1479,82 +1391,62 @@ function closeModal() {
     document.body.style.overflow = '';
 }
 
-// Card click — event delegation with scroll vs tap detection
+// ═══ Card click (desktop + touch) ═══
 (function() {
-    var grid = document.getElementById('grid');
-    if (!grid) return;
-    var touchStartX = 0, touchStartY = 0, touchStartTime = 0;
-    var TAP_THRESHOLD = 10;  // px — finger movement within this = tap
-    var TAP_MAX_MS = 300;    // max duration for a tap
-
-    function openCard(card) {
-        var idx = card.dataset.idx;
-        if (idx !== undefined) openModal(parseInt(idx, 10));
-    }
-
-    // Desktop click — works fine, no scroll conflict
-    grid.addEventListener('click', function(e) {
-        // Ignore if touch device (handled by touch events below)
-        if ('ontouchstart' in window) return;
-        var card = e.target.closest('.card');
-        if (card) openCard(card);
-    });
-
-    // Touch: record start position
-    grid.addEventListener('touchstart', function(e) {
-        if (e.touches.length === 1) {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-            touchStartTime = Date.now();
-        }
-    }, {passive: true});
-
-    // Touch: only open if finger barely moved (tap, not scroll)
-    grid.addEventListener('touchend', function(e) {
-        if (!e.changedTouches || e.changedTouches.length !== 1) return;
-        var dx = e.changedTouches[0].clientX - touchStartX;
-        var dy = e.changedTouches[0].clientY - touchStartY;
-        var dt = Date.now() - touchStartTime;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        // Only count as tap if finger moved less than threshold and was quick
-        if (dist < TAP_THRESHOLD && dt < TAP_MAX_MS) {
-            var card = e.target.closest('.card');
-            if (card) {
-                e.preventDefault();
-                openCard(card);
+    // Event delegation for both grid and featured-grid
+    function bindCardClick(container) {
+        if (!container) return;
+        var sx = 0, sy = 0, st = 0;
+        container.addEventListener('click', function(e) {
+            if ('ontouchstart' in window) return;
+            var card = e.target.closest('[data-idx]');
+            if (card) openModal(parseInt(card.dataset.idx, 10));
+        });
+        container.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; st = Date.now(); }
+        }, {passive: true});
+        container.addEventListener('touchend', function(e) {
+            if (!e.changedTouches || e.changedTouches.length !== 1) return;
+            var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+            if (Math.sqrt(dx*dx+dy*dy) < 10 && Date.now() - st < 300) {
+                var card = e.target.closest('[data-idx]');
+                if (card) { e.preventDefault(); openModal(parseInt(card.dataset.idx, 10)); }
             }
-        }
-    }, {passive: false});
+        }, {passive: false});
+    }
+    bindCardClick(document.getElementById('grid'));
+    bindCardClick(document.querySelector('.featured-grid'));
 })();
 
-// Filters
-document.querySelectorAll('.f-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+// ═══ Filters ═══
+document.querySelectorAll('.f-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.f-btn').forEach(function(b) { b.classList.remove('active'); });
         btn.classList.add('active');
-        const f = btn.dataset.filter;
-        document.querySelectorAll('.card').forEach(c => {
+        var f = btn.dataset.filter;
+        document.querySelectorAll('.card,[class*="featured-card"]').forEach(function(c) {
             c.classList.toggle('hidden', f !== 'all' && !(c.dataset.cat && c.dataset.cat.includes(f)));
         });
     });
 });
 
-// Search
+// ═══ Search ═══
 document.getElementById('searchBox').addEventListener('input', function() {
-    const q = this.value.toLowerCase();
-    document.querySelectorAll('.card').forEach(c => {
+    var q = this.value.toLowerCase();
+    document.querySelectorAll('.card,[class*="featured-card"]').forEach(function(c) {
         c.classList.toggle('hidden', q && !c.textContent.toLowerCase().includes(q));
     });
 });
 
-// Keyboard
-document.addEventListener('keydown', e => {
+// ═══ Keyboard ═══
+document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeModal();
     if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
         e.preventDefault();
         document.getElementById('searchBox').focus();
     }
 });
+
 </script>
 </body>
 </html>
