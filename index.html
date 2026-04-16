@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 早报 · 2026年04月15日</title>
+<title>AI 早报 · 2026年04月16日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -442,24 +442,31 @@ body {
 
 /* ═════ TOC (Table of Contents) in modal ═════ */
 .m-toc {
-    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
-    padding: 10px 14px; margin-bottom: 16px;
-    background: rgba(107,138,253,0.06); border-radius: 8px;
-    border: 1px solid rgba(107,138,253,0.12);
+    display: flex; flex-direction: column; gap: 0;
+    padding: 14px 18px; margin-bottom: 20px;
+    background: rgba(107,138,253,0.04); border-radius: 10px;
+    border-left: 3px solid var(--accent);
 }
 .m-toc-title {
-    font-size: 10px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.5px; color: var(--text-50); margin-right: 4px;
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--accent); margin-bottom: 10px;
+    opacity: 0.8;
 }
 .m-toc-link {
-    display: inline-block; padding: 3px 10px;
-    background: rgba(255,255,255,0.06); border-radius: 12px;
-    font-size: 11px; color: var(--accent); text-decoration: none;
-    border: 1px solid rgba(107,138,253,0.15);
+    display: block; padding: 5px 0 5px 12px;
+    font-size: 13px; line-height: 1.5; color: var(--text-80);
+    text-decoration: none; border-left: 2px solid transparent;
     transition: all 0.15s; cursor: pointer;
+    margin-left: 0;
 }
-.m-toc-link:hover { background: rgba(107,138,253,0.15); color: #fff; }
-.m-toc-link.m-toc-sub { font-size: 10px; color: var(--text-50); }
+.m-toc-link:hover {
+    color: var(--accent); border-left-color: var(--accent);
+    background: rgba(107,138,253,0.06);
+}
+.m-toc-link.m-toc-sub {
+    font-size: 12px; color: var(--text-50);
+    padding-left: 24px;
+}
 
 /* ═════ Data highlighting ═════ */
 .hl-num {
@@ -510,13 +517,13 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月15日 周三 · 23:22</div>
+    <div class="h-date">2026年04月16日 周四 · 20:42</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>48</b> 篇</span>
-        <span><b>18</b> 源</span>
+        <span><b>43</b> 篇</span>
+        <span><b>16</b> 源</span>
     </div>
 </div>
 </header>
@@ -537,7 +544,7 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI江湖风云并起：OpenAI、Anthropic、谷歌三强同日出招，网络安全、自动对齐、机器人三线并进；斯坦福AI指数揭示中美差距骤缩、公众焦虑加剧的双重现实；微软全面押注Copilot与OpenClaw整合，xAI借美国农业部叩开联邦市场。商业化分水岭浮现——Anthropic增速反超OpenAI，OpenAI转身收购金融初创、拓展Pro定价；机器人走向消费级，宇树4370美元人形机器人触网开卖。技术边界与社会摩擦同步扩张，AI虚假网红乱入科切拉、袭击事件发生，折射出这场变革已远超纯技术范畴。</p>
+        <p class="br-editorial">今日AI产业呈现三重交织：安全与对齐成为焦点，OpenAI布局网络防御、Anthropic验证AI加速对齐研究却坦言局限；机器人赛道提速，谷歌DeepMind发布Gemini Robotics-ER 1.6、宇树R1进军国际市场；商业格局加速分化，斯坦福AI指数揭示中美差距收窄、Anthropic与OpenAI营收路径背离、微软全面押注操作系统级AI整合。技术前沿与商业现实的张力，正在重塑整个行业的竞争坐标。</p>
     </section>
 
 <!-- Featured Articles (Importance >= 4) -->
@@ -547,8 +554,8 @@ body {
     <div class="featured-card" data-cat="具身智能|产品与应用" data-idx="4" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHF3-rUNWUAABrwE.jpg')"></div>
         <div class="featured-body">
-            <div class="featured-title-text">谷歌DeepMind机器人新模型上线：开放AI Studio与Gemini AP</div>
-            <div class="featured-why">谷歌将机器人智能开放给第三方开发者，意味着具身智能从实验室走向生态化，门槛大幅降低。</div>
+            <div class="featured-title-text">谷歌DeepMind机器人模型上线：面向开发者开放Gemini API</div>
+            <div class="featured-why">大模型正式进入具身智能开发工具链，开发者可直接通过API构建更智能的机器人应用，降低了机器人AI开发门槛。</div>
             <div class="featured-source">🐦 X-GoogleDeepMind · 04-15 00:54</div>
         </div>
     </div>
@@ -566,8 +573,8 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI扩展网络安全可信访问计划，推出GPT-5.4-Cyber专用模型</div>
-                <div class="z3"><div class="z3-why">这是OpenAI首次为特定垂直领域推出经过微调的GPT-5系列专用版本，标志着顶尖大模型正式进入网络安全防御专业化赛道，将深刻改变企业安全运营能力的边界。</div></div>
+                <div class="card-title">OpenAI推出GPT-5.4-Cyber：专为网络安全防御者定制的大模型</div>
+                <div class="z3"><div class="z3-why">AI正式进入专业网络安全防御领域，大模型开始针对特定安全场景深度定制，意味着AI辅助防御能力将迎来质的飞跃。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -579,8 +586,8 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI阐明网络防御战略：民主化访问与生态韧性并重</div>
-                <div class="z3"><div class="z3-why">OpenAI 正将自身重塑为 AI 时代的网络安全基础设施，这将深刻影响其与政府监管机构的关系及企业安全市场格局。</div></div>
+                <div class="card-title">OpenAI宣布扩大网络防御计划：为合法防御者提供更广泛模型访问权限</div>
+                <div class="z3"><div class="z3-why">AI能力越强，网络攻防差距越大；OpenAI此举意在确保防御方不落后于攻击方，同时通过生态建设形成护城河。</div></div>
                 <div class="z5">🐦 X-OpenAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -592,21 +599,21 @@ body {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic发布自动化对齐研究员研究：AI辅助AI安全工作</div>
-                <div class="z3"><div class="z3-why">如果AI能自动推进对齐研究，意味着安全研究的速度可大幅提升，但同时也引发AI自主研究AI安全的可靠性问题。</div></div>
+                <div class="card-title">Anthropic发布自动化对齐研究员：AI辅助解决超级对齐难题</div>
+                <div class="z3"><div class="z3-why">对齐研究员数量严重不足，若AI能自动化承担部分对齐研究工作，将极大加速安全研究进程，但同时也带来AI自主研究本身的风险。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="安全与对齐|学术研究" data-idx="3"
+        <div class="card" data-cat="其他" data-idx="3"
              style="animation-delay:75ms">
             
             <div class="card-body">
                 <div class="z1">
-            <span class="z1-left">安全与对齐 · 学术研究</span>
+            <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic实验：Claude可加速对齐研究探索但尚无法替代科学家</div>
-                <div class="z3"><div class="z3-why">这说明用AI加速AI安全研究的路径有实际价值，但关键的「模糊型」对齐研究仍高度依赖人类判断，自动化安全研究不能急于乐观。</div></div>
+                <div class="card-title">Anthropic实验：Claude可加速对齐研究探索但尚非通用对齐科学家</div>
+                <div class="z3"><div class="z3-why">AI自动化对齐研究（AAR）是Anthropic押注的核心路径之一——若AI能加速自身安全研究，可能形成良性循环；但此次承认局限，说明该路径仍处早期。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -619,7 +626,7 @@ body {
             <span class="z1-meta">1 min</span>
         </div>
                 <div class="card-title">谷歌DeepMind发布最安全机器人模型Gemini Robotics-ER 1</div>
-                <div class="z3"><div class="z3-why">机器人AI的竞争轴从「能做什么」转向「能安全地做什么」，安全能力正成为商业化落地的核心门槛。</div></div>
+                <div class="z3"><div class="z3-why">机器人模型首次将安全约束内化为指令理解的一部分，而非事后过滤，标志着具身AI安全从规则硬编码向语义推理演进。</div></div>
                 <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
@@ -631,52 +638,26 @@ body {
             <span class="z1-left">具身智能 · 产品与应用</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Gemini Robotics-ER 1.6升级：工业巡检机器人可读取复杂模拟仪</div>
-                <div class="z3"><div class="z3-why">工业设施中大量老旧模拟仪表无法数字化改造，这一突破让AI机器人能自主读表，大幅降低工业巡检自动化的落地门槛。</div></div>
+                <div class="card-title">Gemini Robotics-ER 1.6升级：机器人自主编写代码读取工业模拟</div>
+                <div class="z3"><div class="z3-why">工业巡检长期依赖人工读表，AI机器人若能自主理解模拟仪表，将大幅降低石化、电力等高危行业的人工成本与安全风险。</div></div>
                 <div class="z5">🐦 X-GoogleDeepMind · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="7"
+        <div class="card" data-cat="安全与对齐|学术研究" data-idx="7"
              style="animation-delay:175ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">OpenAI澄清Pro订阅限速争议：100美元版10倍、200美元版20倍Plu</div>
-                <div class="z3"><div class="z3-why">用户误以为临时2倍促销叠加后能获得更高用量，OpenAI承认文案责任，此事折射出AI订阅服务定价透明度问题日益突出。</div></div>
-                <div class="z5">🐦 X-OpenAI · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="8"
-             style="animation-delay:200ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Gemini 3.1 Flash Live登顶τ-Voice实时语音智能体排行榜</div>
-                <div class="z3"><div class="z3-why">实时语音智能体是AI助手落地的关键形态，排行榜领先意味着Google在语音交互能力上超越竞争对手，将影响开发者选型。</div></div>
-                <div class="z5">🐦 X-GoogleDeepMind · 04-14 01:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="安全与对齐|学术研究" data-idx="9"
-             style="animation-delay:225ms">
             <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF40MLMaIAApyKD.jpg')"></div>
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">安全与对齐 · 学术研究</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic AAR方法泛化测试：成功迁移至编程与数学任务</div>
-                <div class="z3"><div class="z3-why">AAR方法若能跨任务泛化，意味着自动化对齐研究工具具备更广泛适用性，可加速AI安全研究的规模化。</div></div>
+                <div class="card-title">Anthropic测试AARs方法泛化能力：最优方法成功迁移编程与数学任务</div>
+                <div class="z3"><div class="z3-why">AARs方法若能跨任务泛化，意味着Anthropic的自动化AI研究路径具备通用性，是迈向可扩展对齐研究的重要信号。</div></div>
                 <div class="z5">🐦 X-AnthropicAI · 04-15 00:54 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="学术研究|大模型发布" data-idx="10"
-             style="animation-delay:250ms">
+        <div class="card" data-cat="学术研究|大模型发布" data-idx="8"
+             style="animation-delay:200ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -688,8 +669,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="学术研究|大模型发布" data-idx="11"
-             style="animation-delay:275ms">
+        <div class="card" data-cat="学术研究|大模型发布" data-idx="9"
+             style="animation-delay:225ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -701,8 +682,8 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="安全与对齐|学术研究" data-idx="12"
-             style="animation-delay:300ms">
+        <div class="card" data-cat="安全与对齐|学术研究" data-idx="10"
+             style="animation-delay:250ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -714,8 +695,8 @@ body {
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="学术研究|产品与应用" data-idx="13"
-             style="animation-delay:325ms">
+        <div class="card" data-cat="学术研究|产品与应用" data-idx="11"
+             style="animation-delay:275ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -727,8 +708,8 @@ body {
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="学术研究|具身智能" data-idx="14"
-             style="animation-delay:350ms">
+        <div class="card" data-cat="学术研究|具身智能" data-idx="12"
+             style="animation-delay:300ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -740,8 +721,8 @@ body {
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="具身智能|学术研究" data-idx="15"
-             style="animation-delay:375ms">
+        <div class="card" data-cat="具身智能|学术研究" data-idx="13"
+             style="animation-delay:325ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -753,8 +734,8 @@ body {
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="16"
-             style="animation-delay:400ms">
+        <div class="card" data-cat="其他" data-idx="14"
+             style="animation-delay:350ms">
             <div class="card-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_for_the_Economy_Forum_2026.max-600x600.format-webp.webp')"></div>
             <div class="card-body">
                 <div class="z1">
@@ -766,47 +747,21 @@ body {
                 <div class="z5">🔷 Google AI Blog · 04-14 09:00 <span style="color:#8b5cf6;font-size:9px;font-weight:600">🏛️ 官方</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="17"
-             style="animation-delay:425ms">
+        <div class="card" data-cat="其他" data-idx="15"
+             style="animation-delay:375ms">
             <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF4PXA_asAM29we.jpg')"></div>
             <div class="card-body">
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Andrew Ng推荐：语音UI层让视觉应用同步更新屏幕</div>
-                <div class="z3"><div class="z3-why">语音+视觉联动是下一代人机交互的关键形态，Vocal Bridge的双智能体方案首次在低延迟与高智能之间找到工程平衡点，降低了开发者的语音应用门槛。</div></div>
+                <div class="card-title">吴恩达推荐：Vocal Bridge双智能体架构破解语音UI延迟难题</div>
+                <div class="z3"><div class="z3-why">语音作为视觉应用的UI层（而非独立语音产品）是下一个开发蓝海，双智能体架构让开发者首次能在不牺牲智能性的前提下实现低延迟语音交互。</div></div>
                 <div class="z5">🐦 X-Andrew Ng · 04-15 00:54 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="18"
-             style="animation-delay:450ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Sam Altman宣布推出100美元ChatGPT Pro套餐，Codex大受</div>
-                <div class="z3"><div class="z3-why">这意味着OpenAI正在向高端用户市场进一步渗透，100美元的定价是现有Plus套餐的5倍，暗示专业用户愿为Codex等编程能力付更高溢价。</div></div>
-                <div class="z5">🐦 X-Sam Altman · 04-14 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="19"
-             style="animation-delay:475ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">OpenAI基金会宣布投入逾1亿美元推进AI攻克阿尔茨海默症</div>
-                <div class="z3"><div class="z3-why">OpenAI将AI能力从语言生成正式延伸至生命科学硬问题，标志着顶级AI机构开始系统性押注医疗AI的社会价值，也为行业竞争提供新叙事方向。</div></div>
-                <div class="z5">🐦 X-Sam Altman · 04-14 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="学术研究|芯片与算力" data-idx="20"
-             style="animation-delay:500ms">
+        <div class="card" data-cat="学术研究|芯片与算力" data-idx="16"
+             style="animation-delay:400ms">
             <div class="card-img" style="background-image:url('https://i.ytimg.com/vi/Ersv1ogj7Jo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&amp;rs=AOn4CLD44knNs_UeDuyv_FjR8Yv-iIuX6A')"></div>
             <div class="card-body">
                 <div class="z1">
@@ -818,8 +773,8 @@ body {
                 <div class="z5">🎬 Two Minute Papers · 04-14 14:54 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="行业观点|产品与应用" data-idx="21"
-             style="animation-delay:500ms">
+        <div class="card" data-cat="行业观点|产品与应用" data-idx="17"
+             style="animation-delay:425ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -831,8 +786,8 @@ body {
                 <div class="z5">🎓 MIT Tech Review · 04-14 11:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="22"
-             style="animation-delay:500ms">
+        <div class="card" data-cat="其他" data-idx="18"
+             style="animation-delay:450ms">
             <div class="card-img" style="background-image:url('https://wp.technologyreview.com/wp-content/uploads/2026/04/Screenshot-2026-04-14-at-12.47.40.png')"></div>
             <div class="card-body">
                 <div class="z1">
@@ -844,8 +799,8 @@ body {
                 <div class="z5">🎓 MIT Tech Review · 04-14 12:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="23"
-             style="animation-delay:500ms">
+        <div class="card" data-cat="其他" data-idx="19"
+             style="animation-delay:475ms">
             
             <div class="card-body">
                 <div class="z1">
@@ -857,7 +812,7 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="24"
+        <div class="card" data-cat="其他" data-idx="20"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -870,7 +825,7 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="25"
+        <div class="card" data-cat="其他" data-idx="21"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -883,7 +838,7 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="26"
+        <div class="card" data-cat="其他" data-idx="22"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -896,7 +851,7 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="27"
+        <div class="card" data-cat="其他" data-idx="23"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -909,7 +864,7 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="28"
+        <div class="card" data-cat="其他" data-idx="24"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -922,7 +877,7 @@ body {
                 <div class="z5">📄 ArXiv ML · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="29"
+        <div class="card" data-cat="其他" data-idx="25"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -935,7 +890,7 @@ body {
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="30"
+        <div class="card" data-cat="其他" data-idx="26"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -948,7 +903,7 @@ body {
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="31"
+        <div class="card" data-cat="其他" data-idx="27"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -961,7 +916,7 @@ body {
                 <div class="z5">📄 ArXiv AI · 04-14 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="32"
+        <div class="card" data-cat="其他" data-idx="28"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -974,7 +929,7 @@ body {
                 <div class="z5">🎓 MIT Tech Review · 04-13 15:48 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="产品与应用|大模型发布" data-idx="33"
+        <div class="card" data-cat="产品与应用|大模型发布" data-idx="29"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -987,20 +942,7 @@ body {
                 <div class="z5">🚀 AI前线 · 04-14 11:15 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="AI工具|芯片与算力" data-idx="34"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                <div class="z1">
-            <span class="z1-left">AI工具 · 芯片与算力</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">OpenClaw成本降低10倍：本地AI运行方案大幅提效</div>
-                <div class="z3"><div class="z3-why">本地AI运行成本骤降意味着个人开发者和中小团队可以更低门槛使用AI自动化工具，无需依赖昂贵的云端API。</div></div>
-                <div class="z5">🎬 Matthew Berman · 04-13 17:48 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-idx="35"
+        <div class="card" data-cat="其他" data-idx="30"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1013,7 +955,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-14 13:42 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="36"
+        <div class="card" data-cat="其他" data-idx="31"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1026,7 +968,7 @@ body {
                 <div class="z5">🔎 36氪 AI搜索 · 04-14 13:40 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="37"
+        <div class="card" data-cat="其他" data-idx="32"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1039,7 +981,7 @@ body {
                 <div class="z5">⚛️ 量子位 · 04-14 05:58 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="38"
+        <div class="card" data-cat="其他" data-idx="33"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1052,7 +994,7 @@ body {
                 <div class="z5">💡 TechCrunch AI · 04-14 00:23 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="39"
+        <div class="card" data-cat="其他" data-idx="34"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1065,7 +1007,7 @@ body {
                 <div class="z5">⚡ The Verge AI · 04-13 20:02 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="40"
+        <div class="card" data-cat="其他" data-idx="35"
              style="animation-delay:500ms">
             <div class="card-img" style="background-image:url('https://media.wired.com/photos/69dd62de5630ccde90450adb/master/pass/2200095767')"></div>
             <div class="card-body">
@@ -1078,7 +1020,7 @@ body {
                 <div class="z5">📡 Wired AI · 04-13 23:37 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="41"
+        <div class="card" data-cat="其他" data-idx="36"
              style="animation-delay:500ms">
             <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHF0jGo8aUAAeSW9.png')"></div>
             <div class="card-body">
@@ -1091,7 +1033,7 @@ body {
                 <div class="z5">🐦 X-Elon Musk (xAI) · 04-13 23:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="42"
+        <div class="card" data-cat="其他" data-idx="37"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1104,7 +1046,7 @@ body {
                 <div class="z5">⚡ The Verge AI · 04-13 15:53 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="43"
+        <div class="card" data-cat="其他" data-idx="38"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1117,7 +1059,7 @@ body {
                 <div class="z5">💡 TechCrunch AI · 04-13 19:05 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="44"
+        <div class="card" data-cat="其他" data-idx="39"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1130,7 +1072,7 @@ body {
                 <div class="z5">💡 TechCrunch AI · 04-13 18:55 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="45"
+        <div class="card" data-cat="其他" data-idx="40"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1143,7 +1085,7 @@ body {
                 <div class="z5">⚡ The Verge AI · 04-13 12:21 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="46"
+        <div class="card" data-cat="其他" data-idx="41"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1156,7 +1098,7 @@ body {
                 <div class="z5">⚡ The Verge AI · 04-13 11:41 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-idx="47"
+        <div class="card" data-cat="其他" data-idx="42"
              style="animation-delay:500ms">
             
             <div class="card-body">
@@ -1177,7 +1119,7 @@ body {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>18</b> 个信息源 · <b>48</b> 篇资讯 · 2026年04月15日
+    AI 早报 · <b>16</b> 个信息源 · <b>43</b> 篇资讯 · 2026年04月16日
 </footer>
 
 <script src="modal_data.js"></script>

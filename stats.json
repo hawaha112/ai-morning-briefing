@@ -1,8 +1,8 @@
 {
-  "article_count": 48,
+  "article_count": 43,
   "output_file": "output/index.html",
-  "file_size_kb": 70.6,
-  "generated_at": "2026-04-15T15:22:30.365878+00:00",
+  "file_size_kb": 66.6,
+  "generated_at": "2026-04-16T12:42:34.567300+00:00",
   "event_db_stats": {
     "total_articles": 102,
     "collected": 0,
@@ -18,8 +18,8 @@
     "tier_2": 51
   },
   "event_status_distribution": {
-    "official": 11,
-    "reported": 37
+    "official": 9,
+    "reported": 34
   },
   "use_canonical_events": true
 }
