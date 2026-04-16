@@ -1,0 +1,55 @@
+name: Deploy to GitHub Pages
+
+# 触发条件：仓库根目录的 index.html / modal_data.js 变动时（对应 run_daily.sh push 上来的每日产物）
+# 或手动 workflow_dispatch 触发。
+#
+# 注意：要让这个 workflow 生效，仓库需先在 Settings → Pages 把 Source 改为 "GitHub Actions"。
+# 这是相对于本地 deploy_now.sh 的更稳定替代——本地只需 push HTML，部署链路交给 CI，
+# rebase 卡顿、多机竞争等问题由 GitHub 侧处理。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'modal_data.js'
+      - 'archive/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch: {}
+
+# 单飞模式：新推送会取消正在排队的旧部署，避免竞态
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          # 把需要发布的文件拷到 _site
+          for f in index.html modal_data.js stats.json; do
+            [ -f "$f" ] && cp "$f" _site/
+          done
+          [ -d archive ] && cp -r archive _site/
+          ls -la _site/
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
