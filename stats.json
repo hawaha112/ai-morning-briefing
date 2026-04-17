@@ -1,28 +1,28 @@
 {
-  "article_count": 49,
+  "article_count": 91,
   "output_file": "output/index.html",
-  "file_size_kb": 93.8,
-  "generated_at": "2026-04-16T23:02:37.043317+00:00",
+  "file_size_kb": 137.7,
+  "generated_at": "2026-04-17T17:58:42.155490+00:00",
   "event_db_stats": {
-    "total_articles": 133,
+    "total_articles": 246,
     "collected": 0,
-    "analyzed": 133,
-    "total_events": 85,
-    "total_evidence": 85,
+    "analyzed": 246,
+    "total_events": 144,
+    "total_evidence": 144,
     "event_status": {
-      "official": 21,
-      "reported": 64
+      "official": 25,
+      "reported": 119
     },
-    "tier_0": 21,
-    "tier_1": 41,
-    "tier_2": 71
+    "tier_0": 25,
+    "tier_1": 75,
+    "tier_2": 146
   },
   "event_status_distribution": {
-    "official": 11,
-    "reported": 38
+    "official": 23,
+    "reported": 68
   },
   "use_canonical_events": true,
-  "llm_coverage": 1.0,
-  "llm_count": 49,
+  "llm_coverage": 0.934,
+  "llm_count": 85,
   "multi_source_count": 0
 }
