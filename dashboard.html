@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 早报 · 跑步仪表盘</title>
+<style>
+  :root {
+    --bg: #0b0b12; --bg-card: rgba(255,255,255,0.04); --bg-card-hover: rgba(255,255,255,0.06);
+    --text-100: #e4e4ec; --text-70: rgba(228,228,236,0.70); --text-50: rgba(228,228,236,0.50);
+    --border: rgba(255,255,255,0.08); --accent: #6b8afd;
+    --green: #5a9e6f; --amber: #c9a227; --red: #c05050;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text-100); font-family: -apple-system,BlinkMacSystemFont,'Noto Sans SC',sans-serif; padding: 24px; line-height: 1.5; }
+  .wrap { max-width: 1120px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .subtitle { color: var(--text-50); font-size: 12px; margin-bottom: 24px; }
+  .subtitle a { color: var(--accent); text-decoration: none; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 28px; }
+  .kpi { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .kpi-label { font-size: 11px; color: var(--text-50); letter-spacing: 0.3px; margin-bottom: 6px; }
+  .kpi-val { font-size: 22px; font-weight: 700; color: var(--text-100); }
+  .kpi-sub { font-size: 11px; color: var(--text-70); margin-top: 2px; }
+  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 16px; margin-bottom: 28px; }
+  .chart-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .chart-title { font-size: 13px; font-weight: 600; color: var(--text-70); margin-bottom: 10px; letter-spacing: 0.3px; }
+  canvas { width: 100% !important; height: 220px !important; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { text-align: left; padding: 8px 10px; color: var(--text-50); font-weight: 600; letter-spacing: 0.3px; font-size: 11px; border-bottom: 1px solid var(--border); }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--border); color: var(--text-100); }
+  tr:hover td { background: var(--bg-card-hover); }
+  .section-title { font-size: 14px; font-weight: 600; color: var(--text-70); margin: 8px 0 12px; letter-spacing: 0.3px; }
+  .ok { color: var(--green); }
+  .fail { color: var(--red); }
+  @media (max-width: 640px) { .charts { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📊 AI 早报 · 跑步仪表盘</h1>
+  <div class="subtitle">
+    最近 1 次跑 · 生成于 2026-04-18 21:47:40 ·
+    <a href="index.html">← 返回早报</a>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-label">最近一次</div><div class="kpi-val" style="font-size:14px;line-height:1.3">🌆 晚班</div><div class="kpi-sub">04-18 21:43</div></div>
+    <div class="kpi"><div class="kpi-label">本次条目</div><div class="kpi-val">140</div><div class="kpi-sub">篇 AI 资讯（近 12h）</div></div>
+    <div class="kpi"><div class="kpi-label">LLM 覆盖</div><div class="kpi-val">100.0%</div><div class="kpi-sub">140 / 140 深度分析</div></div>
+    <div class="kpi"><div class="kpi-label">多源事件</div><div class="kpi-val">6</div><div class="kpi-sub">📡 跨源交叉确认</div></div>
+    <div class="kpi"><div class="kpi-label">本次用时</div><div class="kpi-val">0.9<span style="font-size:13px;color:var(--text-50)"> 分</span></div><div class="kpi-sub">采集+渲染+部署</div></div>
+    <div class="kpi"><div class="kpi-label">源健康</div><div class="kpi-val"><span class="ok">53</span> / <span style="color:var(--amber)">3</span> / <span class="fail">3</span></div><div class="kpi-sub">OK / 告警 / 死源</div></div>
+    <div class="kpi"><div class="kpi-label">部署状态</div><div class="kpi-val" style="font-size:16px;line-height:1.3">✅ 部署成功</div><div class="kpi-sub">上次部署</div></div>
+  </div>
+
+  <div class="charts">
+    <div class="chart-box">
+      <div class="chart-title">📰 条目数（最近 1 次跑）</div>
+      <canvas id="chartKept"></canvas>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">🧠 LLM 覆盖率 (%)</div>
+      <canvas id="chartLlm"></canvas>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">📡 多源事件数</div>
+      <canvas id="chartMulti"></canvas>
+    </div>
+    <div class="chart-box">
+      <div class="chart-title">⏱ 用时（分钟）</div>
+      <canvas id="chartDur"></canvas>
+    </div>
+  </div>
+
+  <div class="section-title">最近 20 次跑</div>
+  <table>
+    <thead><tr>
+      <th>时间</th><th>班</th><th>条目</th><th>LLM</th><th>多源</th>
+      <th>用时(分)</th><th>源 OK/死</th><th>部署</th>
+    </tr></thead>
+    <tbody>
+<tr><td>04-18 21:43</td><td>🌆 晚</td><td>140</td><td>100.0%</td><td>6</td><td>0.9</td><td>53/3</td><td>✓</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+  const DATA = {"labels": ["04-18 21:43"], "kepts": [140], "llm_coverages": [100.0], "multi_counts": [6], "durations": [0.88], "shifts": ["pm"]};
+  const COMMON = {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { ticks: { color: '#a0a0b0', font: { size: 10 }, maxTicksLimit: 12 }, grid: { color: 'rgba(255,255,255,0.06)' } },
+      y: { ticks: { color: '#a0a0b0', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.06)' }, beginAtZero: true }
+    }
+  };
+  const shiftColor = (s) => s === 'am' ? 'rgba(249, 168, 37, 0.75)' : s === 'pm' ? 'rgba(107, 138, 253, 0.75)' : 'rgba(150,150,160,0.5)';
+  const kCols = DATA.shifts.map(shiftColor);
+
+  new Chart(document.getElementById('chartKept'), {
+    type: 'bar',
+    data: { labels: DATA.labels, datasets: [{ label: '条目', data: DATA.kepts, backgroundColor: kCols, borderRadius: 3 }] },
+    options: COMMON
+  });
+  new Chart(document.getElementById('chartLlm'), {
+    type: 'line',
+    data: { labels: DATA.labels, datasets: [{ label: 'LLM%', data: DATA.llm_coverages, borderColor: '#5a9e6f', backgroundColor: 'rgba(90,158,111,0.15)', tension: 0.3, fill: true, pointRadius: 2 }] },
+    options: { ...COMMON, scales: { ...COMMON.scales, y: { ...COMMON.scales.y, max: 100 } } }
+  });
+  new Chart(document.getElementById('chartMulti'), {
+    type: 'bar',
+    data: { labels: DATA.labels, datasets: [{ label: '多源', data: DATA.multi_counts, backgroundColor: 'rgba(107, 138, 253, 0.75)', borderRadius: 3 }] },
+    options: COMMON
+  });
+  new Chart(document.getElementById('chartDur'), {
+    type: 'line',
+    data: { labels: DATA.labels, datasets: [{ label: '用时(min)', data: DATA.durations, borderColor: '#c9a227', backgroundColor: 'rgba(201,162,39,0.15)', tension: 0.3, fill: true, pointRadius: 2 }] },
+    options: COMMON
+  });
+</script>
+</body>
+</html>
