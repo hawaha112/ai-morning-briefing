@@ -1,8 +1,8 @@
 {
   "article_count": 53,
   "output_file": "output/index.html",
-  "file_size_kb": 101.9,
-  "generated_at": "2026-04-18T04:40:47.978081+00:00",
+  "file_size_kb": 53.9,
+  "generated_at": "2026-04-18T04:55:27.017378+00:00",
   "event_db_stats": {
     "total_articles": 315,
     "collected": 0,
@@ -22,7 +22,7 @@
     "reported": 52
   },
   "use_canonical_events": true,
-  "llm_coverage": 0.943,
-  "llm_count": 50,
+  "llm_coverage": 0.925,
+  "llm_count": 49,
   "multi_source_count": 0
 }
