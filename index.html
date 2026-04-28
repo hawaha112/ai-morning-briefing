@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="今日AI世界以OpenAI为轴心高速运转：马斯克诉讼案正式开庭，GPT-5.4 Pro攻克60年数学难题，云战略全面铺开至AWS。微软独家锁链松绑，标志OpenAI从依附单一云走向多云争夺战。与此同时，曦智科技港股暴涨380%、腾讯借Claude调优混元的合规风险曝光、中国封堵Manus外资收购，共同勾勒出AI产…">
+<meta name="description" content="今日共收录 72 条 AI 资讯。重点关注：OpenAI推出8美元低价订阅层，预计今年消费者用户破1.22亿；腾讯借助Claude Code优化混元Hy3模型：美国AI工具助力中国大模型；硅光AI芯片独角兽曦智科技港股上市首日暴涨超380%。信息源覆盖 Google AI Blog, X-GoogleDeepMi…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 早报 · 2026年04月29日">
-<meta property="og:description" content="今日AI世界以OpenAI为轴心高速运转：马斯克诉讼案正式开庭，GPT-5.4 Pro攻克60年数学难题，云战略全面铺开至AWS。微软独家锁链松绑，标志OpenAI从依附单一云走向多云争夺战。与此同时，曦智科技港股暴涨380%、腾讯借Claude调优混元的合规风险曝光、中国封堵Manus外资收购，共同勾勒出AI产…">
+<meta property="og:description" content="今日共收录 72 条 AI 资讯。重点关注：OpenAI推出8美元低价订阅层，预计今年消费者用户破1.22亿；腾讯借助Claude Code优化混元Hy3模型：美国AI工具助力中国大模型；硅光AI芯片独角兽曦智科技港股上市首日暴涨超380%。信息源覆盖 Google AI Blog, X-GoogleDeepMi…">
 <meta property="og:site_name" content="AI 早报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 早报 · 2026年04月29日">
-<meta name="twitter:description" content="今日AI世界以OpenAI为轴心高速运转：马斯克诉讼案正式开庭，GPT-5.4 Pro攻克60年数学难题，云战略全面铺开至AWS。微软独家锁链松绑，标志OpenAI从依附单一云走向多云争夺战。与此同时，曦智科技港股暴涨380%、腾讯借Claude调优混元的合规风险曝光、中国封堵Manus外资收购，共同勾勒出AI产…">
+<meta name="twitter:description" content="今日共收录 72 条 AI 资讯。重点关注：OpenAI推出8美元低价订阅层，预计今年消费者用户破1.22亿；腾讯借助Claude Code优化混元Hy3模型：美国AI工具助力中国大模型；硅光AI芯片独角兽曦智科技港股上市首日暴涨超380%。信息源覆盖 Google AI Blog, X-GoogleDeepMi…">
 <title>AI 早报 · 2026年04月29日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -838,6 +838,59 @@ body {
 }
 .m-lede-text strong { color: var(--text-100); }
 
+/* ═════ 阅后即焚 ═════ */
+/* 已读卡片：默认隐藏（按"显示已读"toggle 切换） */
+body:not(.show-read) .is-read { display: none !important; }
+/* 显示已读时给视觉提示 */
+body.show-read .is-read {
+    opacity: 0.45;
+    filter: grayscale(0.4);
+    transition: opacity 0.2s, filter 0.2s;
+}
+body.show-read .is-read:hover {
+    opacity: 0.85;
+    filter: grayscale(0);
+}
+/* 消散动画：渐变 + 折叠高度 */
+.is-fading {
+    animation: fadeAndCollapse 0.6s ease-out forwards;
+    overflow: hidden;
+}
+@keyframes fadeAndCollapse {
+    0%   { opacity: 1; transform: scale(1); }
+    40%  { opacity: 0.4; transform: scale(0.97); }
+    70%  { opacity: 0; transform: scale(0.94); max-height: 400px; margin-bottom: 14px; padding-top: 14px; padding-bottom: 14px; }
+    100% { opacity: 0; transform: scale(0.94); max-height: 0; margin: 0; padding-top: 0; padding-bottom: 0; border-width: 0; }
+}
+
+/* "显示已读"toggle 按钮 */
+.read-toggle {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 200;
+    padding: 8px 14px;
+    background: rgba(11, 11, 18, 0.92);
+    border: 1px solid var(--border-hover);
+    border-radius: 22px;
+    color: var(--text-80);
+    font-size: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.15s, border-color 0.15s;
+}
+.read-toggle:hover {
+    background: rgba(11, 11, 18, 0.98);
+    border-color: var(--accent);
+    color: var(--text-100);
+}
+.read-toggle .rt-count {
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 2px;
+}
+
 /* ═════ 大V 动态 ═════ */
 .vip-section {
     max-width: 1120px;
@@ -914,13 +967,13 @@ body {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年04月29日 周三 · 06:03</div>
+    <div class="h-date">2026年04月29日 周三 · 07:31</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>70</b> 篇</span>
-        <span><b>18</b> 源</span>
+        <span><b>72</b> 篇</span>
+        <span><b>22</b> 源</span>
     </div>
 </div>
 </header>
@@ -932,14 +985,14 @@ body {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI世界以OpenAI为轴心高速运转：马斯克诉讼案正式开庭，GPT-5.4 Pro攻克60年数学难题，云战略全面铺开至AWS。微软独家锁链松绑，标志OpenAI从依附单一云走向多云争夺战。与此同时，曦智科技港股暴涨380%、腾讯借Claude调优混元的合规风险曝光、中国封堵Manus外资收购，共同勾勒出AI产业化浪潮下资本与主权的深层博弈。</p>
+        <p class="br-editorial">今日共收录 72 条 AI 资讯。重点关注：OpenAI推出8美元低价订阅层，预计今年消费者用户破1.22亿；腾讯借助Claude Code优化混元Hy3模型：美国AI工具助力中国大模型；硅光AI芯片独角兽曦智科技港股上市首日暴涨超380%。信息源覆盖 Google AI Blog, X-GoogleDeepMind, NVIDIA Developer Blog, Anthropic News 等。</p>
     </section>
 
 <!-- Featured Articles (Importance >= 4) —— 重大事件 -->
 <div class="featured-section">
 <h2 class="featured-title">今日必读</h2>
 <div class="featured-grid">
-    <div class="featured-card" data-cat="融资与商业|产品与应用" data-aud="investor|pm|general" data-idx="13" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="融资与商业|产品与应用" data-aud="investor|pm|general" data-idx="17" data-iid="f90edaddaa238c4541a8a58e10328851" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -950,7 +1003,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="大模型发布|产品与应用" data-aud="researcher|developer|investor" data-idx="14" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="大模型发布|产品与应用" data-aud="researcher|developer|investor" data-idx="18" data-iid="a9ff506f152d2d90648646c60d7b9a2a" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -961,7 +1014,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="芯片与算力|融资与商业" data-aud="investor|developer" data-idx="15" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="芯片与算力|融资与商业" data-aud="investor|developer" data-idx="19" data-iid="d40090995b0a49048135116a13caa3c1" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -972,7 +1025,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|大模型发布" data-aud="general|pm" data-idx="0" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|大模型发布" data-aud="general|pm" data-idx="0" data-iid="69694837ebd96bceb29dd5f123df6edc" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Translate_20th_hero_NC8a.max-600x600.format-webp.webp')"></div>
         <div class="featured-body">
             
@@ -983,7 +1036,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="芯片与算力|学术研究" data-aud="researcher|developer" data-idx="1" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="芯片与算力|学术研究" data-aud="researcher|developer" data-idx="1" data-iid="e71990da159c8a0875a610e7c883a786" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -994,7 +1047,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="2" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="2" data-iid="c3339e31abaddd43caadabc9363bfdf2" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2049180465136119808%2Fimg%2FQ8fSx334DQqKSh7X.jpg')"></div>
         <div class="featured-body">
             
@@ -1005,7 +1058,18 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="3" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="3" data-iid="8330c219eab8f9285b180d364258f0a2" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">Anthropic推出Claude创意写作专项功能</div>
+            <div class="featured-why">大模型厂商开始针对创意人群垂直细分市场发力，意味着AI写作助手的竞争从通用能力转向专业场景深耕。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🧠 Anthropic News · 04-28 00:00</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="4" data-iid="204b7a15b717a91929c90a6b533cda45" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://nitter.net/pic/card_img%2F2049174155765895168%2FmQ_zNQcz%3Fformat%3Dpng%26name%3D600x314')"></div>
         <div class="featured-body">
             
@@ -1016,7 +1080,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|行业观点" data-aud="general|pm" data-idx="4" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|行业观点" data-aud="general|pm" data-idx="5" data-iid="a9ef69d6245b5641394eb608a5f5c5ea" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHHAhYukWgAAdX4h.jpg')"></div>
         <div class="featured-body">
             
@@ -1027,7 +1091,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="5" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="6" data-iid="abdcf75ab5b2fe0877f8de9a70620d01" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHHAgxJZWgAAYeDn.jpg')"></div>
         <div class="featured-body">
             
@@ -1038,18 +1102,18 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|大模型发布" data-aud="pm|general|investor" data-idx="6" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://img.huxiucdn.com/ai/ai-general-cover/202604/28/18947-prod-db-general-1-1777374549284.png?imageView2/1/w/1440/h/810/|imageMogr2/strip/interlace/1/quality/85/format/png')"></div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="7" data-iid="0ff444850a32f480e7707ce6082670b5" style="border-left-color: #e8913a">
+        
         <div class="featured-body">
             
             
-            <div class="featured-title-text">OpenAI计划2028年推出AI Agent专属手机</div>
-            <div class="featured-why">OpenAI若进军硬件，意味着AI交互形态将从屏幕应用层下沉到设备层，可能重塑手机操作系统与应用生态的底层逻辑。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🐯 虎嗅科技 · 04-28 11:09</div>
+            <div class="featured-title-text">OpenAI模型与Codex正式登陆AWS，企业级AI部署全面开放</div>
+            <div class="featured-why">OpenAI打通AWS生态意味着数百万AWS企业用户无需离开现有云环境即可调用顶级模型，大幅降低企业AI落地门槛。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🤖 OpenAI Blog · 04-28 00:00</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|融资与商业" data-aud="developer|pm|investor" data-idx="17" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|融资与商业" data-aud="developer|pm|investor" data-idx="20" data-iid="ca56d401e3e0ff78aa3b40fadde4dcd3" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1060,7 +1124,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="融资与商业|行业观点" data-aud="investor|pm" data-idx="18" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="融资与商业|行业观点" data-aud="investor|pm" data-idx="21" data-iid="92b4eb13be46898be9fb284478cec912" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://images.axios.com/StG1xmj8763cc6UNrfjbs_j67YE=/408x0:1488x1080/320x320/2026/04/27/1777310673311.jpeg')"></div>
         <div class="featured-body">
             
@@ -1071,7 +1135,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|大模型发布" data-aud="pm|general" data-idx="19" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|大模型发布" data-aud="pm|general" data-idx="22" data-iid="0c470e4ec924a0e059996023302ec108" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1082,7 +1146,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="芯片与算力|融资与商业" data-aud="investor|pm" data-idx="20" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="芯片与算力|融资与商业" data-aud="investor|pm" data-idx="23" data-iid="b30cc6f8b94699f72eceb3bdf6d292f0" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1093,7 +1157,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="商业动态|OpenAI" data-aud="general" data-idx="21" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="商业动态|OpenAI" data-aud="general" data-idx="24" data-iid="caf85be072d14a26aa2b58f2e98ab9b7" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1104,7 +1168,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="融资与商业|产品与应用" data-aud="investor|pm" data-idx="22" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="融资与商业|产品与应用" data-aud="investor|pm" data-idx="25" data-iid="864e5c5589010a36849f8d0379399a06" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVjyyTemfVp8/v3/1200x-1.png')"></div>
         <div class="featured-body">
             
@@ -1115,7 +1179,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|AI工具" data-aud="pm|investor" data-idx="23" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|AI工具" data-aud="pm|investor" data-idx="26" data-iid="0460614f2f46733c1199a1a16c6fc0e5" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1126,7 +1190,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|行业观点" data-aud="pm|investor|general" data-idx="24" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|行业观点" data-aud="pm|investor|general" data-idx="27" data-iid="62176431dd075c4e39c9c7fb90b91e0a" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1137,7 +1201,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="AI政策监管|安全与对齐" data-aud="investor|pm|general" data-idx="25" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="AI政策监管|安全与对齐" data-aud="investor|pm|general" data-idx="28" data-iid="f2ac9393b539f7c8da34cdc3467dba6e" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixN3TvVh4UKQ/v1/1200x-1.jpg')"></div>
         <div class="featured-body">
             
@@ -1148,7 +1212,7 @@ body {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="大语言模型|科学研究" data-aud="general" data-idx="26" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="大语言模型|科学研究" data-aud="general" data-idx="29" data-iid="d6b9a8f33a77274a79998955cac1a4f5" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1164,16 +1228,21 @@ body {
 
 
 <!-- 大V 动态：X-* / YouTube 等社交媒体条目（importance<4 但仍值得展示） -->
-<section class="vip-section" aria-label="大V 动态"><h2 class="vip-heading">🎙️ 大V 动态</h2><div class="vip-list"><div class="vip-item" data-idx="16"><div class="vip-meta">🐯 虎嗅科技</div><div class="vip-title-txt">巴菲特论人生选择、能力圈与穿越周期的长期主义</div><div class="vip-why">在内布拉斯加州的幽默调侃中，沃伦·巴菲特缓缓走上讲台。</div></div></div></section>
+
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalContent" onclick="if(event.target===this)closeModal()">
 <div class="modal" id="modalContent"></div>
 </div>
 
+<!-- 阅后即焚：toggle 按钮（已读 ≥1 条时显示）。点开看的卡片自动隐藏，要看回历史去仪表盘 -->
+<button id="readToggle" class="read-toggle" style="display:none" onclick="_toggleShowRead()" type="button" aria-label="显示/隐藏已读卡片">
+    📭 已读 <span class="rt-count">0</span> · <span class="rt-label">显示已读</span>
+</button>
+
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>18</b> 个信息源 · <b>70</b> 篇资讯 · 2026年04月29日
+    AI 早报 · <b>22</b> 个信息源 · <b>72</b> 篇资讯 · 2026年04月29日
 </footer>
 
 <!-- modal_data.js 不在首屏加载；在 openModal() 首次被调用时由 script.js 动态注入 -->
@@ -1298,6 +1367,68 @@ function ensureModalData(cb) {
 }
 
 // ═══ Feedback helpers (localStorage) ═══
+// ═══ Read tracker — 阅后即焚（点开即标记，下次访问该卡片消散 + 隐藏）═══
+var _READ_KEY = 'ai_briefing_read_v1';
+function getReadSet() {
+    try { return new Set(JSON.parse(localStorage.getItem(_READ_KEY) || '[]')); }
+    catch(e) { return new Set(); }
+}
+function markRead(iid) {
+    if (!iid) return;
+    var s = getReadSet();
+    if (s.has(iid)) return;
+    s.add(iid);
+    try { localStorage.setItem(_READ_KEY, JSON.stringify(Array.from(s))); }
+    catch(e) {}
+}
+
+// 页面加载后立即按已读集合隐藏对应卡片，并显示"今日 X 条 / 已读 Y 条 · 显示已读"toggle
+function _applyReadState() {
+    var read = getReadSet();
+    var totalCards = 0, readCards = 0;
+    document.querySelectorAll('[data-iid]').forEach(function(card) {
+        totalCards++;
+        if (read.has(card.dataset.iid)) {
+            card.classList.add('is-read');
+            readCards++;
+        }
+    });
+    var toggle = document.getElementById('readToggle');
+    if (!toggle) return;
+    if (readCards === 0) {
+        toggle.style.display = 'none';
+        return;
+    }
+    toggle.style.display = '';
+    toggle.querySelector('.rt-count').textContent = readCards;
+}
+
+// "显示已读"toggle 控制
+function _toggleShowRead() {
+    document.body.classList.toggle('show-read');
+    var btn = document.getElementById('readToggle');
+    if (btn) {
+        var on = document.body.classList.contains('show-read');
+        btn.querySelector('.rt-label').textContent = on ? '隐藏已读' : '显示已读';
+    }
+}
+
+// 标记为已读 + 触发"消散"动画后隐藏卡片
+function _fadeReadCards(iid) {
+    document.querySelectorAll('[data-iid="' + (window.CSS && CSS.escape ? CSS.escape(iid) : iid) + '"]').forEach(function(card) {
+        if (card.classList.contains('is-read')) return;
+        card.classList.add('is-fading');
+        // 等动画结束再加 is-read（让 CSS 过渡顺滑）
+        setTimeout(function() {
+            card.classList.add('is-read');
+            card.classList.remove('is-fading');
+            _applyReadState();  // 刷新计数
+        }, 600);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', _applyReadState);
+
 var _FB_KEY = 'ai_briefing_feedback_v1';
 function getFeedback() {
     try { return JSON.parse(localStorage.getItem(_FB_KEY) || '{}'); } catch(e) { return {}; }
@@ -1336,6 +1467,7 @@ function attachTocSpy() {
 
 // ═══ Modal ═══
 function openModal(idx) {
+    _currentModalIdx = idx;
     ensureModalData(function() { _openModalReal(idx); });
 }
 function _openModalReal(idx) {
@@ -1517,7 +1649,21 @@ function closeModal() {
     var tocSb = document.querySelector('.m-toc-sidebar');
     if (tocSb) tocSb.remove();
     if (_tocSpyObserver) { try { _tocSpyObserver.disconnect(); } catch(e) {} _tocSpyObserver = null; }
+    // 阅后即焚：标记当前条目已读 + 触发卡片消散
+    if (typeof _currentModalIdx === 'number') {
+        var d = (typeof __data !== 'undefined' && __data) ? __data[_currentModalIdx] : null;
+        var iid = d && (d.item_id || ('idx-' + _currentModalIdx));
+        // 同时尝试从卡片 DOM 取（modal 数据可能不准）
+        var card = document.querySelector('[data-idx="' + _currentModalIdx + '"]');
+        if (card && card.dataset.iid) iid = card.dataset.iid;
+        if (iid) {
+            markRead(iid);
+            _fadeReadCards(iid);
+        }
+    }
 }
+
+var _currentModalIdx = null;
 
 // ═══ Feedback button click (event delegation in modal) ═══
 document.addEventListener('click', function(e) {
