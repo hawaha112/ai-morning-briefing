@@ -1051,7 +1051,7 @@ function ensureModalData(cb) {
     }
     __dataLoading = true;
     var s = document.createElement('script');
-    s.src = 'modal_data.js';
+    s.src = '2026-04-20-am_modal.js';
     s.onload = function() { cb(); };
     s.onerror = function() { console.error('failed to load modal_data.js'); };
     document.head.appendChild(s);
