@@ -4,54 +4,172 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI 早报 · 跑步仪表盘</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
+  /* ═════ Tech Innovation theme: 电蓝 + 霓虹青 + 深灰 ═════ */
   :root {
-    --bg: #0b0b12; --bg-card: rgba(255,255,255,0.04); --bg-card-hover: rgba(255,255,255,0.06);
-    --text-100: #e4e4ec; --text-70: rgba(228,228,236,0.70); --text-50: rgba(228,228,236,0.50);
-    --border: rgba(255,255,255,0.08); --accent: #6b8afd;
-    --green: #5a9e6f; --amber: #c9a227; --red: #c05050;
+    --bg: #0a0e1a;
+    --bg-elev: #11162a;
+    --bg-card: rgba(0, 102, 255, 0.04);
+    --bg-card-hover: rgba(0, 102, 255, 0.08);
+    --text-100: #e8eaed;
+    --text-70: rgba(232,234,237,0.72);
+    --text-50: rgba(232,234,237,0.50);
+    --text-30: rgba(232,234,237,0.30);
+    --border: rgba(0, 102, 255, 0.16);
+    --border-strong: rgba(0, 102, 255, 0.32);
+    --accent: #0066ff;       /* 电蓝 */
+    --accent-hi: #00ffff;    /* 霓虹青 */
+    --accent-glow: rgba(0, 255, 255, 0.35);
+    --green: #34d399; --amber: #fbbf24; --red: #f87171;
+    --sans: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: var(--bg); color: var(--text-100); font-family: -apple-system,BlinkMacSystemFont,'Noto Sans SC',sans-serif; padding: 24px; line-height: 1.5; }
-  .wrap { max-width: 1120px; margin: 0 auto; }
-  h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-  .subtitle { color: var(--text-50); font-size: 12px; margin-bottom: 24px; }
-  .subtitle a { color: var(--accent); text-decoration: none; }
-  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-bottom: 28px; }
-  .kpi { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
-  .kpi-label { font-size: 11px; color: var(--text-50); letter-spacing: 0.3px; margin-bottom: 6px; }
-  .kpi-val { font-size: 22px; font-weight: 700; color: var(--text-100); }
-  .kpi-sub { font-size: 11px; color: var(--text-70); margin-top: 2px; }
-  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 16px; margin-bottom: 28px; }
-  .chart-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
-  .chart-title { font-size: 13px; font-weight: 600; color: var(--text-70); margin-bottom: 10px; letter-spacing: 0.3px; }
+  body {
+    background: radial-gradient(circle at 0% 0%, rgba(0,102,255,0.06), transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(0,255,255,0.04), transparent 50%),
+                var(--bg);
+    color: var(--text-100); font-family: var(--sans);
+    padding: 32px 24px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 1240px; margin: 0 auto; }
+
+  /* ─── Header ─── */
+  .hdr { display: flex; align-items: baseline; gap: 16px; margin-bottom: 6px; flex-wrap: wrap; }
+  h1 {
+    font-size: 28px; font-weight: 800; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--text-100) 0%, var(--accent-hi) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .hdr-tag {
+    font-family: var(--mono); font-size: 10px; font-weight: 700;
+    color: var(--accent-hi); border: 1px solid var(--accent-hi);
+    padding: 2px 8px; border-radius: 3px; letter-spacing: 0.5px;
+    text-shadow: 0 0 8px var(--accent-glow);
+  }
+  .subtitle { color: var(--text-50); font-size: 12px; margin-bottom: 32px; font-family: var(--mono); }
+  .subtitle a { color: var(--accent-hi); text-decoration: none; transition: text-shadow 0.2s; }
+  .subtitle a:hover { text-shadow: 0 0 8px var(--accent-glow); }
+
+  /* ─── KPI grid ─── */
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 36px; }
+  .kpi {
+    position: relative;
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 16px 18px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .kpi::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-hi));
+    opacity: 0.6; border-radius: 6px 0 0 6px;
+  }
+  .kpi:hover { border-color: var(--border-strong); transform: translateY(-1px); }
+  .kpi-label {
+    font-size: 10px; color: var(--text-50); letter-spacing: 1.2px;
+    text-transform: uppercase; margin-bottom: 8px; font-weight: 600;
+  }
+  .kpi-val {
+    font-family: var(--mono); font-size: 28px; font-weight: 700;
+    color: var(--text-100); line-height: 1.1; letter-spacing: -0.5px;
+  }
+  .kpi-val.hi { color: var(--accent-hi); text-shadow: 0 0 12px var(--accent-glow); }
+  .kpi-sub { font-size: 11px; color: var(--text-70); margin-top: 6px; font-weight: 500; }
+
+  /* ─── Charts ─── */
+  .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 16px; margin-bottom: 36px; }
+  .chart-box {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: 6px; padding: 18px 20px 14px;
+    transition: border-color 0.2s;
+  }
+  .chart-box:hover { border-color: var(--border-strong); }
+  .chart-title {
+    font-size: 11px; font-weight: 700; color: var(--text-70);
+    margin-bottom: 14px; letter-spacing: 1.2px; text-transform: uppercase;
+  }
   canvas { width: 100% !important; height: 220px !important; }
+
+  /* ─── Section titles ─── */
+  .section-title {
+    font-size: 13px; font-weight: 700; color: var(--text-100);
+    margin: 36px 0 6px; letter-spacing: 0.5px;
+    padding-left: 12px; position: relative;
+  }
+  .section-title::before {
+    content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 3px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-hi));
+    box-shadow: 0 0 8px var(--accent-glow); border-radius: 2px;
+  }
+  .section-hint { font-size: 11px; color: var(--text-50); margin-bottom: 14px; padding-left: 12px; }
+
+  /* ─── Tables ─── */
   table { width: 100%; border-collapse: collapse; font-size: 12px; }
-  th { text-align: left; padding: 8px 10px; color: var(--text-50); font-weight: 600; letter-spacing: 0.3px; font-size: 11px; border-bottom: 1px solid var(--border); }
-  td { padding: 8px 10px; border-bottom: 1px solid var(--border); color: var(--text-100); }
-  tr:hover td { background: var(--bg-card-hover); }
-  .section-title { font-size: 14px; font-weight: 600; color: var(--text-70); margin: 8px 0 12px; letter-spacing: 0.3px; }
+  thead { background: linear-gradient(180deg, rgba(0,102,255,0.06), transparent); }
+  th {
+    text-align: left; padding: 10px 12px;
+    color: var(--accent-hi); font-weight: 700;
+    letter-spacing: 0.8px; text-transform: uppercase; font-size: 10px;
+    border-bottom: 1px solid var(--border-strong);
+    font-family: var(--mono);
+  }
+  td {
+    padding: 9px 12px; border-bottom: 1px solid var(--border);
+    color: var(--text-100); vertical-align: middle;
+  }
+  tbody tr { transition: background 0.12s; }
+  tbody tr:hover td { background: var(--bg-card-hover); }
+  tbody tr:nth-child(even) td { background: rgba(0,102,255,0.015); }
+  td a { color: var(--accent-hi); text-decoration: none; transition: text-shadow 0.15s; }
+  td a:hover { text-shadow: 0 0 6px var(--accent-glow); }
+  /* 数字类列右对齐（按位次启发：3-7 列通常是数字） */
+  table td:nth-child(n+3):nth-child(-n+7),
+  table th:nth-child(n+3):nth-child(-n+7) { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+  /* ─── 状态色 ─── */
   .ok { color: var(--green); }
   .fail { color: var(--red); }
-  @media (max-width: 640px) { .charts { grid-template-columns: 1fr; } }
+  .warn { color: var(--amber); }
+
+  /* ─── 滚动条（可选小细节，提升专业感） ─── */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(0,102,255,0.18); border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(0,102,255,0.28); }
+
+  @media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .charts { grid-template-columns: 1fr; }
+    .kpis { grid-template-columns: repeat(2, 1fr); }
+    h1 { font-size: 22px; }
+    .kpi-val { font-size: 22px; }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>📊 AI 早报 · 跑步仪表盘</h1>
+  <div class="hdr">
+    <h1>AI 早报 · 跑步仪表盘</h1>
+    <span class="hdr-tag">ANALYTICS · v1</span>
+  </div>
   <div class="subtitle">
-    最近 21 次跑 · 生成于 2026-04-29 12:19:17 ·
-    <a href="index.html">← 返回早报</a>
+    最近 21 次跑 · 生成于 2026-04-29 13:04:07 ·
+    <a href="../index.html">← 返回早报</a>
   </div>
 
   <div class="kpis">
-    <div class="kpi"><div class="kpi-label">最近一次</div><div class="kpi-val" style="font-size:14px;line-height:1.3">🌅 早班</div><div class="kpi-sub">04-29 06:03</div></div>
-    <div class="kpi"><div class="kpi-label">本次条目</div><div class="kpi-val">70</div><div class="kpi-sub">篇 AI 资讯（近 12h）</div></div>
-    <div class="kpi"><div class="kpi-label">LLM 覆盖</div><div class="kpi-val">97.1%</div><div class="kpi-sub">68 / 70 深度分析</div></div>
-    <div class="kpi"><div class="kpi-label">多源事件</div><div class="kpi-val">0</div><div class="kpi-sub">📡 跨源交叉确认</div></div>
-    <div class="kpi"><div class="kpi-label">本次用时</div><div class="kpi-val">3.2<span style="font-size:13px;color:var(--text-50)"> 分</span></div><div class="kpi-sub">采集+渲染+部署</div></div>
-    <div class="kpi"><div class="kpi-label">源健康</div><div class="kpi-val"><span class="ok">55</span> / <span style="color:var(--amber)">0</span> / <span class="fail">0</span></div><div class="kpi-sub">OK / 告警 / 死源</div></div>
-    <div class="kpi"><div class="kpi-label">部署状态</div><div class="kpi-val" style="font-size:16px;line-height:1.3">✅ 部署成功</div><div class="kpi-sub">上次部署</div></div>
+    <div class="kpi"><div class="kpi-label">最近一次</div><div class="kpi-val" style="font-size:16px;line-height:1.3;font-family:var(--sans)">🌅 早班</div><div class="kpi-sub">04-29 06:03</div></div>
+    <div class="kpi"><div class="kpi-label">本次条目</div><div class="kpi-val hi">70</div><div class="kpi-sub">篇 AI 资讯（近 12h）</div></div>
+    <div class="kpi"><div class="kpi-label">LLM 覆盖</div><div class="kpi-val">97.1<span style="font-size:18px;color:var(--text-50)">%</span></div><div class="kpi-sub">68 / 70 深度分析</div></div>
+    <div class="kpi"><div class="kpi-label">多源事件</div><div class="kpi-val">0</div><div class="kpi-sub">跨源交叉确认</div></div>
+    <div class="kpi"><div class="kpi-label">本次用时</div><div class="kpi-val">3.2<span style="font-size:14px;color:var(--text-50)"> min</span></div><div class="kpi-sub">采集+渲染+部署</div></div>
+    <div class="kpi"><div class="kpi-label">源健康</div><div class="kpi-val" style="font-size:22px"><span class="ok">55</span> <span style="color:var(--text-30)">/</span> <span class="warn">0</span> <span style="color:var(--text-30)">/</span> <span class="fail">0</span></div><div class="kpi-sub">OK / 告警 / 死源</div></div>
+    <div class="kpi"><div class="kpi-label">部署</div><div class="kpi-val" style="font-size:18px;line-height:1.3;font-family:var(--sans)">✅ 部署成功</div><div class="kpi-sub">上次状态</div></div>
   </div>
 
   <div class="charts">
@@ -211,35 +329,76 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
   const DATA = {"labels": ["04-18 21:43", "04-18 21:47", "04-18 21:55", "04-19 09:32", "04-19 19:55", "04-20 09:08", "04-20 18:24", "04-20 19:43", "04-20 19:58", "04-20 20:32", "04-22 20:53", "04-22 20:56", "04-22 21:03", "04-22 21:05", "04-27 20:37", "04-27 20:41", "04-27 21:11", "04-27 21:43", "04-28 21:35", "04-28 21:52", "04-29 06:03"], "kepts": [140, 140, 140, 0, 0, 0, 0, 36, 38, 24, 34, 34, 34, 34, 5, 5, 7, 7, 22, 22, 70], "llm_coverages": [100.0, 100.0, 100.0, 0, 0, 0, 0, 97.2, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 72.7, 68.2, 97.1], "multi_counts": [6, 6, 6, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], "durations": [0.88, 0.75, 0.55, 1.13, 61.67, 122.58, 7.75, 7.45, 3.72, 3.18, 11.43, 2.1, 6.27, 1.73, 3.48, 2.45, 3.13, 4.08, 6.43, 4.83, 3.2], "shifts": ["pm", "pm", "pm", "am", "pm", "am", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "pm", "am"]};
+  // Tech Innovation chart palette: electric blue + neon cyan + accents
+  const C_BLUE = '#0066ff';
+  const C_CYAN = '#00ffff';
+  const C_GREEN = '#34d399';
+  const C_AMBER = '#fbbf24';
   const COMMON = {
     responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { display: false } },
+    plugins: { legend: { display: false }, tooltip: {
+      backgroundColor: 'rgba(10,14,26,0.95)',
+      borderColor: '#0066ff', borderWidth: 1,
+      titleColor: '#00ffff', bodyColor: '#e8eaed',
+      titleFont: { family: "'JetBrains Mono', monospace", size: 11 },
+      bodyFont: { family: "'JetBrains Mono', monospace", size: 11 },
+      padding: 10
+    } },
     scales: {
-      x: { ticks: { color: '#a0a0b0', font: { size: 10 }, maxTicksLimit: 12 }, grid: { color: 'rgba(255,255,255,0.06)' } },
-      y: { ticks: { color: '#a0a0b0', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.06)' }, beginAtZero: true }
+      x: {
+        ticks: { color: 'rgba(232,234,237,0.55)', font: { family: "'JetBrains Mono'", size: 10 }, maxTicksLimit: 12 },
+        grid: { color: 'rgba(0,102,255,0.08)', drawBorder: false }
+      },
+      y: {
+        ticks: { color: 'rgba(232,234,237,0.55)', font: { family: "'JetBrains Mono'", size: 10 } },
+        grid: { color: 'rgba(0,102,255,0.08)', drawBorder: false },
+        beginAtZero: true
+      }
     }
   };
-  const shiftColor = (s) => s === 'am' ? 'rgba(249, 168, 37, 0.75)' : s === 'pm' ? 'rgba(107, 138, 253, 0.75)' : 'rgba(150,150,160,0.5)';
+  const shiftColor = (s) => s === 'am' ? 'rgba(0, 255, 255, 0.85)' : s === 'pm' ? 'rgba(0, 102, 255, 0.85)' : 'rgba(150,150,160,0.5)';
   const kCols = DATA.shifts.map(shiftColor);
+
+  // bar 数据加 gradient（电蓝 → 霓虹青）
+  function barGradient(ctx, area) {
+    const g = ctx.createLinearGradient(0, area.bottom, 0, area.top);
+    g.addColorStop(0, 'rgba(0, 102, 255, 0.45)');
+    g.addColorStop(1, 'rgba(0, 255, 255, 0.95)');
+    return g;
+  }
 
   new Chart(document.getElementById('chartKept'), {
     type: 'bar',
-    data: { labels: DATA.labels, datasets: [{ label: '条目', data: DATA.kepts, backgroundColor: kCols, borderRadius: 3 }] },
+    data: { labels: DATA.labels, datasets: [{ label: '条目', data: DATA.kepts, backgroundColor: kCols, borderRadius: 4, borderSkipped: false }] },
     options: COMMON
   });
   new Chart(document.getElementById('chartLlm'), {
     type: 'line',
-    data: { labels: DATA.labels, datasets: [{ label: 'LLM%', data: DATA.llm_coverages, borderColor: '#5a9e6f', backgroundColor: 'rgba(90,158,111,0.15)', tension: 0.3, fill: true, pointRadius: 2 }] },
+    data: { labels: DATA.labels, datasets: [{
+      label: 'LLM%', data: DATA.llm_coverages,
+      borderColor: C_CYAN, backgroundColor: 'rgba(0,255,255,0.10)',
+      tension: 0.35, fill: true, pointRadius: 3, pointBackgroundColor: C_CYAN,
+      pointBorderColor: '#11162a', pointBorderWidth: 2, borderWidth: 2
+    }] },
     options: { ...COMMON, scales: { ...COMMON.scales, y: { ...COMMON.scales.y, max: 100 } } }
   });
   new Chart(document.getElementById('chartMulti'), {
     type: 'bar',
-    data: { labels: DATA.labels, datasets: [{ label: '多源', data: DATA.multi_counts, backgroundColor: 'rgba(107, 138, 253, 0.75)', borderRadius: 3 }] },
+    data: { labels: DATA.labels, datasets: [{
+      label: '多源', data: DATA.multi_counts,
+      backgroundColor: function(c) { const a = c.chart.chartArea; return a ? barGradient(c.chart.ctx, a) : 'rgba(0,102,255,0.7)'; },
+      borderRadius: 4, borderSkipped: false
+    }] },
     options: COMMON
   });
   new Chart(document.getElementById('chartDur'), {
     type: 'line',
-    data: { labels: DATA.labels, datasets: [{ label: '用时(min)', data: DATA.durations, borderColor: '#c9a227', backgroundColor: 'rgba(201,162,39,0.15)', tension: 0.3, fill: true, pointRadius: 2 }] },
+    data: { labels: DATA.labels, datasets: [{
+      label: '用时(min)', data: DATA.durations,
+      borderColor: C_AMBER, backgroundColor: 'rgba(251,191,36,0.10)',
+      tension: 0.35, fill: true, pointRadius: 3, pointBackgroundColor: C_AMBER,
+      pointBorderColor: '#11162a', pointBorderWidth: 2, borderWidth: 2
+    }] },
     options: COMMON
   });
 </script>
