@@ -138,29 +138,47 @@
   .kpi-val.hi { color: var(--accent-hi); text-shadow: 0 0 12px var(--accent-glow); }
   .kpi-sub { font-size: 11px; color: var(--text-70); margin-top: 6px; font-weight: 500; }
 
-  /* ─── 班次分组 KPI（早班 / 晚班 各一组） ─── */
-  .kpi-shift-block { margin-bottom: 24px; }
-  .kpi-shift-block:last-of-type { margin-bottom: 36px; }
-  .kpi-shift-header {
-    display: flex; align-items: baseline; gap: 14px;
-    font-family: var(--sans); font-size: 14px; font-weight: 700;
-    color: var(--text-100); margin-bottom: 12px;
-    padding-left: 10px; border-left: 3px solid var(--accent-hi);
-    text-shadow: 0 0 6px rgba(0,255,255,0.18);
+  /* ─── KPI 班次 Tab 切换 ─── */
+  .kpi-tabs {
+    display: flex; gap: 0; margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0,255,255,0.14);
   }
-  .kpi-shift-ts {
-    font-family: var(--mono); font-size: 11px; font-weight: 500;
-    color: var(--text-50); letter-spacing: 0.4px; text-shadow: none;
+  .kpi-tab {
+    background: none; border: 0; cursor: pointer;
+    padding: 10px 20px 12px;
+    display: flex; align-items: center; gap: 8px;
+    font-family: var(--sans); font-size: 13px; font-weight: 600;
+    color: var(--text-50); letter-spacing: 0.3px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.15s, border-color 0.15s;
   }
-  .kpi-shift-na {
-    font-family: var(--mono); font-size: 11px; font-weight: 500;
-    color: var(--text-50); letter-spacing: 0.4px; text-shadow: none;
+  .kpi-tab:hover { color: var(--text-100); }
+  .kpi-tab.active {
+    color: var(--accent-hi);
+    border-bottom-color: var(--accent-hi);
+    text-shadow: 0 0 8px var(--accent-glow);
   }
+  .kt-emoji { font-size: 16px; line-height: 1; }
+  .kt-name { font-size: 13px; }
+  .kt-meta {
+    font-family: var(--mono); font-size: 10px; font-weight: 500;
+    color: var(--text-30); letter-spacing: 0.4px;
+    text-shadow: none; margin-left: 4px;
+  }
+  .kpi-tab.active .kt-meta { color: var(--text-50); }
+  .kpi-panels { margin-bottom: 32px; }
+  .kpi-panel { display: none; }
+  .kpi-panel.active { display: block; }
+  .kpi-panel-meta {
+    font-family: var(--mono); font-size: 11px; color: var(--text-50);
+    letter-spacing: 0.4px; margin-bottom: 12px;
+  }
+  .kpi-panel-meta b { color: var(--accent-hi); font-weight: 700; }
   .kpi-val-sm { font-size: 22px !important; }
   .kpi-empty {
-    grid-template-columns: 1fr !important;
     color: var(--text-50); font-family: var(--mono); font-size: 12px;
-    padding: 18px; text-align: center;
+    padding: 24px; text-align: center;
     border: 1px dashed rgba(0,255,255,0.16); border-radius: 6px;
   }
 
@@ -242,13 +260,13 @@
     <span class="hdr-tag">ANALYTICS · v1</span>
   </div>
   <div class="subtitle">
-    最近 22 次跑 · 生成于 2026-04-29 17:40:29 ·
+    最近 22 次跑 · 生成于 2026-04-29 17:51:45 ·
     <a href="../index.html">← 返回早报</a>
   </div>
 
   <div class="today-grid"><div class="today-title">📅 今日发布 · 2026-04-29</div><div class="today-cards"><a href="./2026-04-29-am.html" target="_blank" class="today-card today-active" title="打开 早班 · 早报 归档"><div class="tc-row"><span class="tc-emoji">🌅</span><span class="tc-shift">早班 · 早报</span></div><div class="tc-meta">04-29 06:03 · <b>70</b> 条 · LLM 97%</div><div class="tc-cta">打开归档 →</div></a><a href="./2026-04-29-pm.html" target="_blank" class="today-card today-active" title="打开 晚班 · 晚报 归档"><div class="tc-row"><span class="tc-emoji">🌆</span><span class="tc-shift">晚班 · 晚报</span></div><div class="tc-meta">04-29 17:22 · <b>79</b> 条 · LLM 100%</div><div class="tc-cta">打开归档 →</div></a></div></div>
 
-<div class="kpi-shift-block"><div class="kpi-shift-header">🌅 早班<span class="kpi-shift-ts">04-29 06:03</span></div><div class="kpis"><div class="kpi"><div class="kpi-label">LLM 覆盖</div><div class="kpi-val ">97<span style="font-size:18px;color:var(--text-50)">%</span></div><div class="kpi-sub">68 / 70 深度分析</div></div><div class="kpi"><div class="kpi-label">多源事件</div><div class="kpi-val ">0</div><div class="kpi-sub">跨源交叉确认</div></div><div class="kpi"><div class="kpi-label">本次用时</div><div class="kpi-val ">3.2<span style="font-size:14px;color:var(--text-50)"> min</span></div><div class="kpi-sub">采集 + 渲染 + 部署</div></div><div class="kpi"><div class="kpi-label">源健康</div><div class="kpi-val kpi-val-sm"><span class="ok">55</span> <span style="color:var(--text-30)">/</span> <span class="warn">0</span> <span style="color:var(--text-30)">/</span> <span class="fail">0</span></div><div class="kpi-sub">OK / 告警 / 死源</div></div><div class="kpi"><div class="kpi-label">部署</div><div class="kpi-val "><span style="font-family:var(--sans);font-size:18px;line-height:1.3">✅ 部署成功</span></div><div class="kpi-sub">当班状态</div></div></div></div><div class="kpi-shift-block"><div class="kpi-shift-header">🌆 晚班<span class="kpi-shift-ts">04-29 17:22</span></div><div class="kpis"><div class="kpi"><div class="kpi-label">LLM 覆盖</div><div class="kpi-val ">100<span style="font-size:18px;color:var(--text-50)">%</span></div><div class="kpi-sub">79 / 79 深度分析</div></div><div class="kpi"><div class="kpi-label">多源事件</div><div class="kpi-val hi">3</div><div class="kpi-sub">跨源交叉确认</div></div><div class="kpi"><div class="kpi-label">本次用时</div><div class="kpi-val ">3.2<span style="font-size:14px;color:var(--text-50)"> min</span></div><div class="kpi-sub">采集 + 渲染 + 部署</div></div><div class="kpi"><div class="kpi-label">源健康</div><div class="kpi-val kpi-val-sm"><span class="ok">55</span> <span style="color:var(--text-30)">/</span> <span class="warn">0</span> <span style="color:var(--text-30)">/</span> <span class="fail">0</span></div><div class="kpi-sub">OK / 告警 / 死源</div></div><div class="kpi"><div class="kpi-label">部署</div><div class="kpi-val "><span style="font-family:var(--sans);font-size:18px;line-height:1.3">✅ 部署成功</span></div><div class="kpi-sub">当班状态</div></div></div></div>
+<div class="kpi-tabs"><button type="button" class="kpi-tab" data-shift="am"><span class="kt-emoji">🌅</span><span class="kt-name">早班</span><span class="kt-meta">04-29 06:03</span></button><button type="button" class="kpi-tab active" data-shift="pm"><span class="kt-emoji">🌆</span><span class="kt-name">晚班</span><span class="kt-meta">04-29 17:22</span></button></div><div class="kpi-panels"><div class="kpi-panel" data-shift="am"><div class="kpi-panel-meta">04-29 06:03 · 收录 <b>70</b> 条</div><div class="kpis"><div class="kpi"><div class="kpi-label">LLM 覆盖</div><div class="kpi-val ">97<span style="font-size:18px;color:var(--text-50)">%</span></div><div class="kpi-sub">68 / 70 深度分析</div></div><div class="kpi"><div class="kpi-label">多源事件</div><div class="kpi-val ">0</div><div class="kpi-sub">跨源交叉确认</div></div><div class="kpi"><div class="kpi-label">本次用时</div><div class="kpi-val ">3.2<span style="font-size:14px;color:var(--text-50)"> min</span></div><div class="kpi-sub">采集 + 渲染 + 部署</div></div><div class="kpi"><div class="kpi-label">源健康</div><div class="kpi-val kpi-val-sm"><span class="ok">55</span> <span style="color:var(--text-30)">/</span> <span class="warn">0</span> <span style="color:var(--text-30)">/</span> <span class="fail">0</span></div><div class="kpi-sub">OK / 告警 / 死源</div></div><div class="kpi"><div class="kpi-label">部署</div><div class="kpi-val "><span style="font-family:var(--sans);font-size:18px;line-height:1.3">✅ 部署成功</span></div><div class="kpi-sub">当班状态</div></div></div></div><div class="kpi-panel active" data-shift="pm"><div class="kpi-panel-meta">04-29 17:22 · 收录 <b>79</b> 条</div><div class="kpis"><div class="kpi"><div class="kpi-label">LLM 覆盖</div><div class="kpi-val ">100<span style="font-size:18px;color:var(--text-50)">%</span></div><div class="kpi-sub">79 / 79 深度分析</div></div><div class="kpi"><div class="kpi-label">多源事件</div><div class="kpi-val hi">3</div><div class="kpi-sub">跨源交叉确认</div></div><div class="kpi"><div class="kpi-label">本次用时</div><div class="kpi-val ">3.2<span style="font-size:14px;color:var(--text-50)"> min</span></div><div class="kpi-sub">采集 + 渲染 + 部署</div></div><div class="kpi"><div class="kpi-label">源健康</div><div class="kpi-val kpi-val-sm"><span class="ok">55</span> <span style="color:var(--text-30)">/</span> <span class="warn">0</span> <span style="color:var(--text-30)">/</span> <span class="fail">0</span></div><div class="kpi-sub">OK / 告警 / 死源</div></div><div class="kpi"><div class="kpi-label">部署</div><div class="kpi-val "><span style="font-family:var(--sans);font-size:18px;line-height:1.3">✅ 部署成功</span></div><div class="kpi-sub">当班状态</div></div></div></div></div>
 
   <div class="charts">
     <div class="chart-box">
@@ -479,6 +497,19 @@
       pointBorderColor: '#11162a', pointBorderWidth: 2, borderWidth: 2
     }] },
     options: COMMON
+  });
+
+  // ── KPI 班次 Tab 切换 ──
+  document.querySelectorAll('.kpi-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = btn.getAttribute('data-shift');
+      document.querySelectorAll('.kpi-tab').forEach(function(b) {
+        b.classList.toggle('active', b.getAttribute('data-shift') === target);
+      });
+      document.querySelectorAll('.kpi-panel').forEach(function(p) {
+        p.classList.toggle('active', p.getAttribute('data-shift') === target);
+      });
+    });
   });
 </script>
 </body>
