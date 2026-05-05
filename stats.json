@@ -1,41 +1,55 @@
 {
-  "article_count": 30,
+  "article_count": 26,
   "output_file": "output/index.html",
-  "file_size_kb": 84.8,
-  "generated_at": "2026-05-05T17:21:33.351135+00:00",
+  "file_size_kb": 79.8,
+  "generated_at": "2026-05-05T22:48:36.750481+00:00",
   "event_db_stats": {
-    "total_articles": 2556,
+    "total_articles": 2602,
     "collected": 0,
-    "analyzed": 2556,
-    "total_events": 1369,
-    "total_evidence": 1423,
+    "analyzed": 2602,
+    "total_events": 1398,
+    "total_evidence": 1456,
     "event_status": {
-      "official": 169,
-      "reported": 1200
+      "official": 179,
+      "reported": 1219
     },
-    "tier_0": 177,
-    "tier_1": 575,
-    "tier_2": 1804
+    "tier_0": 187,
+    "tier_1": 587,
+    "tier_2": 1828
   },
   "event_status_distribution": {
-    "official": 3,
-    "reported": 27
+    "official": 8,
+    "reported": 18
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 30,
-  "multi_source_count": 2,
-  "important_count": 1,
+  "llm_count": 26,
+  "multi_source_count": 4,
+  "important_count": 3,
   "important_events": [
     {
-      "title": "Anthropic发布10款金融行业AI智能体，覆盖尽调、合规及路演材料",
-      "event_id": "evt_b747cb32054c4a96ffba2e5b",
+      "title": "xAI发布Grok 4.3：最快最智能模型，百万上下文窗口",
+      "event_id": "evt_11786bd84a2d1b87a54028bb",
       "importance": 4,
-      "source_name": "Techmeme",
+      "source_name": "X-Elon Musk (xAI)",
+      "archive_url": "archive/2026-05-06-am.html"
+    },
+    {
+      "title": "iOS 27或将允许用户自选AI模型，苹果开放AI生态系统",
+      "event_id": "evt_a0b4633bb483c616cbfc35cc",
+      "importance": 4,
+      "source_name": "The Verge AI",
+      "archive_url": "archive/2026-05-06-am.html"
+    },
+    {
+      "title": "ElevenLabs年化营收突破5亿美元，英伟达领投新一轮融资",
+      "event_id": "evt_b386079ef1de631ee99396ad",
+      "importance": 4,
+      "source_name": "The Information",
       "archive_url": "archive/2026-05-06-am.html"
     }
   ],
-  "official_count": 3,
-  "depth_count": 30,
+  "official_count": 8,
+  "depth_count": 25,
   "entity_count": 0
 }
