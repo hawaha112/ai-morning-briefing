@@ -1,31 +1,41 @@
 {
-  "article_count": 18,
+  "article_count": 30,
   "output_file": "output/index.html",
-  "file_size_kb": 58.8,
-  "generated_at": "2026-05-05T16:24:55.418148+00:00",
+  "file_size_kb": 84.8,
+  "generated_at": "2026-05-05T17:21:33.351135+00:00",
   "event_db_stats": {
-    "total_articles": 2535,
+    "total_articles": 2556,
     "collected": 0,
-    "analyzed": 2535,
-    "total_events": 1358,
-    "total_evidence": 1407,
+    "analyzed": 2556,
+    "total_events": 1369,
+    "total_evidence": 1423,
     "event_status": {
-      "official": 166,
-      "reported": 1192
+      "official": 169,
+      "reported": 1200
     },
-    "tier_0": 172,
-    "tier_1": 573,
-    "tier_2": 1790
+    "tier_0": 177,
+    "tier_1": 575,
+    "tier_2": 1804
   },
   "event_status_distribution": {
-    "reported": 18
+    "official": 3,
+    "reported": 27
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 18,
-  "multi_source_count": 0,
+  "llm_count": 30,
+  "multi_source_count": 2,
   "important_count": 1,
-  "official_count": 0,
-  "depth_count": 18,
+  "important_events": [
+    {
+      "title": "Anthropic发布10款金融行业AI智能体，覆盖尽调、合规及路演材料",
+      "event_id": "evt_b747cb32054c4a96ffba2e5b",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-06-am.html"
+    }
+  ],
+  "official_count": 3,
+  "depth_count": 30,
   "entity_count": 0
 }

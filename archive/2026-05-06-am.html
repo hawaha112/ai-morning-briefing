@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="今日AI产业呈现「智能体金融化」与「资本加速」双主线：Anthropic推出10款金融AI智能体并获摩根大通背书，同步完成对华尔街的战略渗透；ElevenLabs、Enter等获巨额融资，AI独角兽估值持续膨胀。OpenAI则两线推进——Altman暗示ChatGPT重磅更新，同时加速布局自研手机硬件。NVIDI…">
+<meta name="description" content="OpenAI今日以GPT-5.5 Instant为核心发动全面攻势——更低幻觉率、更强记忆系统、更高用户粘性，矛头直指Anthropic。而Anthropic则以10款金融AI智能体携手摩根大通反击，将战场移至华尔街。资本层面，ElevenLabs完成5.5亿美元D轮、巴西法律AI独角兽诞生，AI独角兽批量涌现；…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 早报 · 2026年05月06日">
-<meta property="og:description" content="今日AI产业呈现「智能体金融化」与「资本加速」双主线：Anthropic推出10款金融AI智能体并获摩根大通背书，同步完成对华尔街的战略渗透；ElevenLabs、Enter等获巨额融资，AI独角兽估值持续膨胀。OpenAI则两线推进——Altman暗示ChatGPT重磅更新，同时加速布局自研手机硬件。NVIDI…">
+<meta property="og:description" content="OpenAI今日以GPT-5.5 Instant为核心发动全面攻势——更低幻觉率、更强记忆系统、更高用户粘性，矛头直指Anthropic。而Anthropic则以10款金融AI智能体携手摩根大通反击，将战场移至华尔街。资本层面，ElevenLabs完成5.5亿美元D轮、巴西法律AI独角兽诞生，AI独角兽批量涌现；…">
 <meta property="og:site_name" content="AI 早报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 早报 · 2026年05月06日">
-<meta name="twitter:description" content="今日AI产业呈现「智能体金融化」与「资本加速」双主线：Anthropic推出10款金融AI智能体并获摩根大通背书，同步完成对华尔街的战略渗透；ElevenLabs、Enter等获巨额融资，AI独角兽估值持续膨胀。OpenAI则两线推进——Altman暗示ChatGPT重磅更新，同时加速布局自研手机硬件。NVIDI…">
+<meta name="twitter:description" content="OpenAI今日以GPT-5.5 Instant为核心发动全面攻势——更低幻觉率、更强记忆系统、更高用户粘性，矛头直指Anthropic。而Anthropic则以10款金融AI智能体携手摩根大通反击，将战场移至华尔街。资本层面，ElevenLabs完成5.5亿美元D轮、巴西法律AI独角兽诞生，AI独角兽批量涌现；…">
 <title>AI 早报 · 2026年05月06日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -513,6 +513,26 @@ body {
     border-top: 1px solid var(--border); margin-top: 20px;
 }
 .footer b { color: var(--accent); }
+.footer-link {
+    color: var(--accent); text-decoration: none;
+    padding: 3px 8px; border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+.footer-link:hover { background: rgba(120, 200, 255, 0.12); color: var(--accent-hi, #5eead4); }
+
+/* Header 仪表盘入口（h-stats 右侧的小按钮） */
+.h-dashboard-link {
+    color: var(--accent); text-decoration: none;
+    padding: 4px 10px; border-radius: 5px;
+    border: 1px solid var(--border);
+    font-size: 12px; font-weight: 500;
+    transition: background 0.15s, border-color 0.15s;
+    white-space: nowrap;
+}
+.h-dashboard-link:hover {
+    background: rgba(120, 200, 255, 0.10);
+    border-color: var(--accent);
+}
 
 /* ═════ Empty & Scrollbar ═════ */
 .empty { text-align: center; padding: 60px 20px; color: var(--text-50); font-size: 13px; }
@@ -967,13 +987,14 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年05月06日 周三 · 00:24</div>
+    <div class="h-date">2026年05月06日 周三 · 01:21</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>18</b> 篇</span>
-        <span><b>8</b> 源</span>
+        <span><b>30</b> 篇</span>
+        <span><b>14</b> 源</span>
+        <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
 </header>
@@ -985,14 +1006,25 @@ body.show-read .is-read:hover {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日AI产业呈现「智能体金融化」与「资本加速」双主线：Anthropic推出10款金融AI智能体并获摩根大通背书，同步完成对华尔街的战略渗透；ElevenLabs、Enter等获巨额融资，AI独角兽估值持续膨胀。OpenAI则两线推进——Altman暗示ChatGPT重磅更新，同时加速布局自研手机硬件。NVIDIA从算力层向应用层延伸，车载智能体指南折射AI落地提速。整体信号清晰：智能体正从技术概念转为金融、法律、电商等行业的核心基础设施。</p>
+        <p class="br-editorial">OpenAI今日以GPT-5.5 Instant为核心发动全面攻势——更低幻觉率、更强记忆系统、更高用户粘性，矛头直指Anthropic。而Anthropic则以10款金融AI智能体携手摩根大通反击，将战场移至华尔街。资本层面，ElevenLabs完成5.5亿美元D轮、巴西法律AI独角兽诞生，AI独角兽批量涌现；黑石KKR争抢Google模型权限，私募资本全面押注AI基础设施。另一面，版权诉讼、监管起诉与行业裁员同步提速——繁荣与风险，正以同样的节奏加速。</p>
     </section>
 
 <!-- Featured Articles (Importance >= 4) —— 重大事件 -->
 <div class="featured-section">
 <h2 class="featured-title">今日必读</h2>
 <div class="featured-grid">
-    <div class="featured-card" data-cat="产品与应用|融资与商业" data-aud="investor|pm|developer" data-idx="6" data-iid="b747cb32054c4a96ffba2e5bc76dd9c3" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="0" data-iid="01a8b52eee8198f545c26f4ac1b22982" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI发布GPT-5.5 Instant：默认模型升级，幻觉减少，个性化增强</div>
+            <div class="featured-why">ChatGPT全球用户数以亿计，默认模型的每一次升级都直接影响绝大多数普通用户的日常体验，幻觉减少意味着可信度实质提升。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🤖 OpenAI Blog · 05-05 18:00</div>
+            <div class="featured-other-sources"><div class="fos-label">📡 另有 3 源报道</div><div class="fos-item">· X-OpenAI · 05-05 17:20</div><div class="fos-item">· TechCrunch AI · 05-05 17:02</div><div class="fos-item">· Techmeme · 05-05 17:20</div></div>
+        </div>
+    </div>
+    <div class="featured-card" data-cat="产品与应用|融资与商业" data-aud="investor|pm|developer" data-idx="11" data-iid="b747cb32054c4a96ffba2e5bc76dd9c3" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1003,7 +1035,29 @@ body.show-read .is-read:hover {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|大模型发布" data-aud="general|pm" data-idx="0" data-iid="cb403b46d8bf0f53d258a2157c8ee404" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="1" data-iid="dc0f7f163561c6f303d4554a5204d861" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2051708120225947648%2Fimg%2FUe_Yjcc_2XZWnkKm.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">ChatGPT记忆升级：整合邮件与历史对话实现个性化</div>
+            <div class="featured-why">AI 助手竞争正从「谁更聪明」转向「谁更了解你」，记忆深度将决定用户忠诚度与平台粘性。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-06 01:02</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="2" data-iid="e0931c53a893a1f044ac507664b34a4c" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHHkhmnXbMAAN6tz.png')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI发布GPT-5.5 Instant：事实准确性显著提升</div>
+            <div class="featured-why">高风险领域的AI准确性提升意味着GPT-5.5 Instant在专业场景的实用价值大幅提升，有望加速AI在垂直行业的落地部署。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-06 01:02</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="产品与应用|大模型发布" data-aud="general|pm" data-idx="3" data-iid="cb403b46d8bf0f53d258a2157c8ee404" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1014,7 +1068,18 @@ body.show-read .is-read:hover {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="融资与商业|产品与应用" data-aud="investor|pm" data-idx="7" data-iid="7d9e69aa356dbc5c6c8c446c90f6f9dd" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="融资与商业|芯片与算力" data-aud="investor|pm" data-idx="12" data-iid="622bde22184183aa088f1f801de006f1" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/itf6eGY_Jd2A/v0/1200x-1.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">AI云服务商Lambda任命前Sprint CEO Combes掌舵</div>
+            <div class="featured-why">引入电信行业老将主导AI云基础设施公司，意味着Lambda正从创业期向规模化商业运营转型。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 💰 Bloomberg Technology · 05-06 01:00</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="融资与商业|产品与应用" data-aud="investor|pm" data-idx="13" data-iid="7d9e69aa356dbc5c6c8c446c90f6f9dd" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1028,6 +1093,333 @@ body.show-read .is-read:hover {
 </div>
 </div>
 
+
+<!-- Regular Articles (importance < 3) —— 普通资讯网格 -->
+<div class="grid" aria-label="资讯列表">
+
+        <div class="card" data-cat="其他" data-aud="general" data-idx="4"
+             style="animation-delay:100ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Synopsys与台积电深化AI芯片设计联盟合作</div>
+                <div class="z3"><div class="z3-why">AI芯片开发周期长、难度高，头部EDA与晶圆厂的深度绑定将压缩设计到量产的时间窗口，对芯片创业公司和大厂均有直接影响。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🔧 SemiWiki · 05-06 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="5"
+             style="animation-delay:125ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">英特尔Computex 2026：CEO亲自主题演讲，全面展示AI计算路线图</div>
+                <div class="z3"><div class="z3-why">英特尔正借Computex重塑市场信心，全栈AI布局能否与英伟达、AMD抗衡，将直接影响PC与边缘AI芯片格局。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 💙 Intel Newsroom · 05-06 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="6"
+             style="animation-delay:150ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">NVIDIA发布车载AI智能体开发方案：从云端到座舱的全栈部署</div>
+                <div class="z3"><div class="z3-why">汽车正成为下一个AI终端战场，NVIDIA此举将其算力生态从数据中心延伸至每辆量产车，影响未来数亿辆智能汽车的软件栈选型。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> ⚙️ NVIDIA Developer Blog · 05-06 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="7"
+             style="animation-delay:175ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/card_img%2F2049633078050729985%2Fjtbf-tVD%3Fformat%3Djpg%26name%3D800x419')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">吴恩达：编程智能体对四类软件工作的加速效果差异显著</div>
+                <div class="z3"><div class="z3-why">它告诉团队负责人：别用同一把尺子衡量所有工程岗位的 AI 红利，错配预期会同时造成前端产能浪费和基础设施过度依赖 AI 的双重风险。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🐦 X-Andrew Ng · 05-05 23:53 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="8"
+             style="animation-delay:200ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">NVIDIA详解智能体系统复杂性：极致协同设计应对新挑战</div>
+                <div class="z3"><div class="z3-why">智能体系统已成为AI落地的主战场，NVIDIA从芯片到软件栈的视角给出架构级思考，直接影响下一代AI基础设施的设计方向。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> ⚙️ NVIDIA Developer Blog · 05-05 23:52 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="9"
+             style="animation-delay:225ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Sam Altman暗示ChatGPT Pro将放开速率限制并提供最佳模型</div>
+                <div class="z3"><div class="z3-why">OpenAI正以速率限制作为付费转化钩子，同时强调模型质量优势，双管齐下巩固其商业护城河。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🐦 X-Sam Altman · 05-05 22:32 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="10"
+             style="animation-delay:250ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Altman为Codex站台：高效模型配慷慨限额，用户担忧蜜月期后被收割</div>
+                <div class="z3"><div class="z3-why">OpenAI正用超高使用限额积极抢占Claude的编程用户群体，若蜜月期结束后大幅降额，将引发用户信任危机并影响行业竞争格局。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🐦 X-Sam Altman · 05-05 22:27 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="14"
+             style="animation-delay:350ms">
+            
+            <div class="card-body">
+                <span class="src-pill" title="共 2 个来源报道同一事件">📡 2 源</span>
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Coinbase裁员14%：AI技术进步加速传统岗位缩减</div>
+                <div class="z3"><div class="z3-why">加密交易所将AI列为裁员原因之一，表明AI替代效应正从科技公司蔓延至金融科技行业，值得关注。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 The Information · 05-05 20:30 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="15"
+             style="animation-delay:375ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">xAI数据中心快速低成本扩建背后隐藏可靠性风险</div>
+                <div class="z3"><div class="z3-why">xAI以低成本快速扩张算力是其核心竞争叙事，但隐藏的可靠性风险可能动摇投资者信心，并影响其与OpenAI、Anthropic的算力竞争格局。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 The Information · 05-06 01:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="16"
+             style="animation-delay:400ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">OpenAI称GPT-5.5 Instant幻觉率大幅降低52.5%</div>
+                <div class="z3"><div class="z3-why">幻觉问题是AI落地医疗、法律、金融等高风险场景的核心障碍，此次改进若属实，将显著提升ChatGPT在专业场景的可信度。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 05-06 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="17"
+             style="animation-delay:425ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">五大出版商起诉Meta：Llama训练涉嫌史上最大规模版权侵权</div>
+                <div class="z3"><div class="z3-why">出版业巨头联合向AI公司发起版权攻势，直接挑战大模型训练数据的合法性边界，将对整个AI产业的数据获取方式产生深远影响。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 05-06 00:52 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="18"
+             style="animation-delay:450ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">宾夕法尼亚州起诉Character.AI：角色冒充精神科医生被叫停</div>
+                <div class="z3"><div class="z3-why">AI角色扮演产品开始面临真实法律责任，或将迫使整个行业重新审视角色设定边界与医疗相关内容的监管合规。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-06 00:50 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="19"
+             style="animation-delay:475ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">谷歌为Gemma 4发布多令牌预测草稿器，推理速度大幅提升</div>
+                <div class="z3"><div class="z3-why">推测解码是当前最实用的推理加速路线之一，官方提供MTP草稿器意味着开发者无需自己训练辅助模型即可直接提速，大幅降低部署成本。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🔥 Hacker News AI · 05-06 00:14 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="20"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i5kHhnijmBec/v1/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">黑石KKR与谷歌洽谈：向被投企业引入AI模型</div>
+                <div class="z3"><div class="z3-why">私募巨头将AI能力批量输送给数百家被投企业，意味着Google AI商业化正从科技公司扩展至传统产业，这是AI落地实体经济的重要信号。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-06 00:05 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="21"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://images.axios.com/bXqLVa3KqtUTKUdyHhwXyuaoBH0=/2116x0:5983x3867/320x320/2026/05/05/1777996325701.jpeg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">摩根大通CEO为万亿美元AI资本支出背书，携手Anthropic布局金融AI</div>
+                <div class="z3"><div class="z3-why">全球最大银行CEO的公开站台，相当于给华尔街焦虑的投资者打了一剂强心针，也意味着传统金融巨头正全面押注AI基础设施。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📰 Axios · 05-05 23:53 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="22"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">PayPal宣布AI转型：裁员重组节省15亿美元</div>
+                <div class="z3"><div class="z3-why">传统金融科技巨头用AI驱动降本增效，标志着AI已成为大型企业重组的核心叙事工具。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-05 23:49 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="23"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Etsy在ChatGPT内上线原生应用，开启AI对话式购物体验</div>
+                <div class="z3"><div class="z3-why">电商平台正加速接入ChatGPT生态，对话式购物可能重塑用户发现商品的方式，传统搜索框模式面临挑战。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-05 23:31 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="24"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i3TkqqP0WBhc/v1/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Anthropic推出金融服务专属AI智能体套件，剑指华尔街</div>
+                <div class="z3"><div class="z3-why">金融是AI商业化最重要的垂直赛道之一，Anthropic此举标志着其从通用模型供应商向行业解决方案商转型，直接挑战微软、Salesforce等金融AI布局。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-05 23:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="25"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">OpenAI加速推进ChatGPT专属手机，目标2027年初量产</div>
+                <div class="z3"><div class="z3-why">OpenAI从纯软件转向掌控硬件入口，自研手机意味着直接绕开苹果和安卓生态，争夺AI时代最核心的用户交互终端。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 05-05 22:54 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="26"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">ElevenLabs完成5.5亿美元D轮融资，ARR突破5亿美元</div>
+                <div class="z3"><div class="z3-why">AI语音赛道正在快速从技术演示走向商业变现，ElevenLabs的高速增长证明语音AI已具备规模化营收能力，对整个应用层AI公司估值逻辑具有标杆意义。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-05 22:45 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="27"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iSgYeNF1rzdQ/v3/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">EQT首席执行官：AI时代规模制胜，私募市场格局重塑</div>
+                <div class="z3"><div class="z3-why">全球顶级私募机构公开表态AI投资战略，折射出机构资本正大规模押注AI基础设施赛道，行业集中化趋势加速。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-05 22:33 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="28"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">谷歌、微软、xAI同意接受美国政府部署前模型审查</div>
+                <div class="z3"><div class="z3-why">头部AI实验室集体向政府开放预发布审查，标志着美国AI治理从自愿承诺走向机构化审查机制，可能成为行业合规新标准。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 05-05 22:26 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="29"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">CopilotKit完成2700万美元A轮融资，AG-UI协议助力应用原生AI智能体</div>
+                <div class="z3"><div class="z3-why">AI智能体从独立聊天机器人向深度嵌入应用的方向演进，AG-UI协议有望成为这一赛道的基础设施标准。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-05 22:20 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+</div>
 
 <!-- 大V 动态：X-* / YouTube 等社交媒体条目（importance<4 但仍值得展示） -->
 
@@ -1044,7 +1436,8 @@ body.show-read .is-read:hover {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>8</b> 个信息源 · <b>18</b> 篇资讯 · 2026年05月06日
+    AI 早报 · <b>14</b> 个信息源 · <b>30</b> 篇资讯 · 2026年05月06日
+    · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
 <!-- modal_data.js 不在首屏加载；在 openModal() 首次被调用时由 script.js 动态注入 -->
