@@ -254,6 +254,24 @@
     background: linear-gradient(180deg, var(--accent), var(--accent-hi));
     box-shadow: 0 0 8px var(--accent-glow); border-radius: 2px;
   }
+
+  /* 历史跑记录默认收起 */
+  details.run-history { margin: 32px 0 8px; }
+  details.run-history > summary {
+    list-style: none; cursor: pointer;
+    font-size: 13px; font-weight: 700; color: var(--text-100);
+    padding: 8px 12px 8px 14px; letter-spacing: 0.5px;
+    border-left: 3px solid var(--accent);
+    background: var(--bg-card); border-radius: 0 4px 4px 0;
+    transition: background 0.15s;
+  }
+  details.run-history > summary::-webkit-details-marker { display: none; }
+  details.run-history > summary:hover { background: var(--bg-card-hi, rgba(255,255,255,0.04)); }
+  details.run-history .hist-toggle {
+    float: right; color: var(--text-50); font-size: 11px;
+    transition: transform 0.15s; display: inline-block;
+  }
+  details.run-history[open] .hist-toggle { transform: rotate(180deg); }
   .section-hint { font-size: 11px; color: var(--text-50); margin-bottom: 14px; padding-left: 12px; }
 
   /* ─── Tables ─── */
@@ -306,26 +324,25 @@
     <span class="hdr-tag">ANALYTICS · v1</span>
   </div>
   <div class="subtitle">
-    最近 36 次跑 · 生成于 2026-05-06 21:11:47 ·
+    最近 36 次跑 · 生成于 2026-05-06 21:35:48 ·
     <a href="../index.html">← 返回早报</a>
   </div>
 
   <div class="today-grid"><div class="today-title">📅 今日发布 · 2026-05-06</div><div class="today-cards"><a href="./2026-05-06-am.html" target="_blank" class="today-card today-active" title="打开 早班 · 早报 归档"><div class="tc-row"><span class="tc-emoji">🌅</span><span class="tc-shift">早班 · 早报</span></div><div class="tc-meta">05-06 06:48 · <b>26</b> 条 · LLM 100%</div><div class="tc-cta">打开归档 →</div></a><a href="./2026-05-06-pm.html" target="_blank" class="today-card today-active" title="打开 晚班 · 晚报 归档"><div class="tc-row"><span class="tc-emoji">🌆</span><span class="tc-shift">晚班 · 晚报</span></div><div class="tc-meta">05-06 21:11 · <b>35</b> 条 · LLM 100%</div><div class="tc-cta">打开归档 →</div></a></div></div>
 
-<div class="kpi-tabs"><button type="button" class="kpi-tab" data-shift="am"><span class="kt-emoji">🌅</span><span class="kt-name">早班</span><span class="kt-meta">05-06 06:48</span></button><button type="button" class="kpi-tab active" data-shift="pm"><span class="kt-emoji">🌆</span><span class="kt-name">晚班</span><span class="kt-meta">05-06 21:11</span></button></div><div class="kpi-panels"><div class="kpi-panel" data-shift="am"><div class="kpi-panel-meta">05-06 06:48 · 收录 <b>26</b> 条 AI 资讯</div><div class="kpis"><details class="kpi kpi-expandable"><summary><div class="kpi-label">重要事件 <span class="kpi-toggle">▾</span></div><div class="kpi-val hi">3</div><div class="kpi-sub">importance ≥ 4 · 占总条目 12% · 点击展开</div></summary><ul class="kpi-list"><li><a href="archive/2026-05-06-am.html" target="_blank" rel="noopener" title="X-Elon Musk (xAI)"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">xAI发布Grok 4.3：最快最智能模型，百万上下文窗口</span><span class="kpi-list-src">X-Elon Musk (xAI)</span></a></li><li><a href="archive/2026-05-06-am.html" target="_blank" rel="noopener" title="The Verge AI"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">iOS 27或将允许用户自选AI模型，苹果开放AI生态系统</span><span class="kpi-list-src">The Verge AI</span></a></li><li><a href="archive/2026-05-06-am.html" target="_blank" rel="noopener" title="The Information"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">ElevenLabs年化营收突破5亿美元，英伟达领投新一轮融资</span><span class="kpi-list-src">The Information</span></a></li></ul></details><div class="kpi"><div class="kpi-label">多源覆盖</div><div class="kpi-val hi">4<span style="font-size:14px;color:var(--text-50)"> / 26</span></div><div class="kpi-sub">跨源交叉确认 · 15.4%</div></div><div class="kpi"><div class="kpi-label">原厂直发</div><div class="kpi-val hi">8</div><div class="kpi-sub">官方账号 / 公司发布的原始消息</div></div><div class="kpi"><div class="kpi-label">深度分析</div><div class="kpi-val ">96<span style="font-size:18px;color:var(--text-50)">%</span></div><div class="kpi-sub">25 / 26 · 含 background + detailed_content</div></div><div class="kpi"><div class="kpi-label">覆盖实体</div><div class="kpi-val ">0</div><div class="kpi-sub">本期出现的去重公司 / 项目 / 人物</div></div></div><div class="status-bar"><span class="sb-label">系统状态</span><span class="sb-ok">✅ 部署成功</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">⏱ 用时 39:33 <em>(2373s)</em></span><span class="sb-mut sb-sep">·</span><span class="sb-ok">🧠 LLM 100%</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">💀 死源 0</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">⚠ 告警 0</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">📡 OK 55</span></div></div><div class="kpi-panel active" data-shift="pm"><div class="kpi-panel-meta">05-06 21:11 · 收录 <b>35</b> 条 AI 资讯</div><div class="kpis"><details class="kpi kpi-expandable"><summary><div class="kpi-label">重要事件 <span class="kpi-toggle">▾</span></div><div class="kpi-val hi">2</div><div class="kpi-sub">importance ≥ 4 · 占总条目 6% · 点击展开</div></summary><ul class="kpi-list"><li><a href="archive/2026-05-06-pm.html" target="_blank" rel="noopener" title="The Information"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">AMD股价单日暴涨16%，AI芯片业务季度营收增速加速至46%</span><span class="kpi-list-src">The Information</span></a></li><li><a href="archive/2026-05-06-pm.html" target="_blank" rel="noopener" title="Techmeme"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">谷歌在Gemini应用内部测试名为Remy的AI代理，可代替用户操作谷歌服务</span><span class="kpi-list-src">Techmeme</span></a></li></ul></details><div class="kpi"><div class="kpi-label">多源覆盖</div><div class="kpi-val hi">1<span style="font-size:14px;color:var(--text-50)"> / 35</span></div><div class="kpi-sub">跨源交叉确认 · 2.9%</div></div><div class="kpi"><div class="kpi-label">原厂直发</div><div class="kpi-val ">0</div><div class="kpi-sub">官方账号 / 公司发布的原始消息</div></div><div class="kpi"><div class="kpi-label">深度分析</div><div class="kpi-val ">91<span style="font-size:18px;color:var(--text-50)">%</span></div><div class="kpi-sub">32 / 35 · 含 background + detailed_content</div></div><div class="kpi"><div class="kpi-label">覆盖实体</div><div class="kpi-val ">0</div><div class="kpi-sub">本期出现的去重公司 / 项目 / 人物</div></div></div><div class="status-bar"><span class="sb-label">系统状态</span><span class="sb-ok">✅ 部署成功</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">⏱ 用时 148:23 <em>(8903s)</em></span><span class="sb-mut sb-sep">·</span><span class="sb-ok">🧠 LLM 100%</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">💀 死源 0</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">⚠ 告警 0</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">📡 OK 53</span></div></div></div>
+<div class="kpi-tabs"><button type="button" class="kpi-tab" data-shift="am"><span class="kt-emoji">🌅</span><span class="kt-name">早班</span><span class="kt-meta">05-06 06:48</span></button><button type="button" class="kpi-tab active" data-shift="pm"><span class="kt-emoji">🌆</span><span class="kt-name">晚班</span><span class="kt-meta">05-06 21:11</span></button></div><div class="kpi-panels"><div class="kpi-panel" data-shift="am"><div class="kpi-panel-meta">05-06 06:48 · 收录 <b>26</b> 条 AI 资讯</div><div class="kpis"><details class="kpi kpi-expandable"><summary><div class="kpi-label">重要事件 <span class="kpi-toggle">▾</span></div><div class="kpi-val hi">3</div><div class="kpi-sub">importance ≥ 4 · 占总条目 12% · 点击展开</div></summary><ul class="kpi-list"><li><a href="archive/2026-05-06-am.html" target="_blank" rel="noopener" title="X-Elon Musk (xAI)"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">xAI发布Grok 4.3：最快最智能模型，百万上下文窗口</span><span class="kpi-list-src">X-Elon Musk (xAI)</span></a></li><li><a href="archive/2026-05-06-am.html" target="_blank" rel="noopener" title="The Verge AI"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">iOS 27或将允许用户自选AI模型，苹果开放AI生态系统</span><span class="kpi-list-src">The Verge AI</span></a></li><li><a href="archive/2026-05-06-am.html" target="_blank" rel="noopener" title="The Information"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">ElevenLabs年化营收突破5亿美元，英伟达领投新一轮融资</span><span class="kpi-list-src">The Information</span></a></li></ul></details><div class="kpi"><div class="kpi-label">多源覆盖</div><div class="kpi-val hi">4<span style="font-size:14px;color:var(--text-50)"> / 26</span></div><div class="kpi-sub">跨源交叉确认 · 15.4%</div></div><div class="kpi"><div class="kpi-label">原厂直发</div><div class="kpi-val hi">8</div><div class="kpi-sub">官方账号 / 公司发布的原始消息</div></div></div><div class="status-bar"><span class="sb-label">系统状态</span><span class="sb-ok">✅ 部署成功</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">⏱ 用时 39:33 <em>(2373s)</em></span><span class="sb-mut sb-sep">·</span><span class="sb-ok">🧠 LLM 100%</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">💀 死源 0</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">⚠ 告警 0</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">📡 OK 55</span></div></div><div class="kpi-panel active" data-shift="pm"><div class="kpi-panel-meta">05-06 21:11 · 收录 <b>35</b> 条 AI 资讯</div><div class="kpis"><details class="kpi kpi-expandable"><summary><div class="kpi-label">重要事件 <span class="kpi-toggle">▾</span></div><div class="kpi-val hi">2</div><div class="kpi-sub">importance ≥ 4 · 占总条目 6% · 点击展开</div></summary><ul class="kpi-list"><li><a href="archive/2026-05-06-pm.html" target="_blank" rel="noopener" title="The Information"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">AMD股价单日暴涨16%，AI芯片业务季度营收增速加速至46%</span><span class="kpi-list-src">The Information</span></a></li><li><a href="archive/2026-05-06-pm.html" target="_blank" rel="noopener" title="Techmeme"><span class="kpi-list-star">⭐</span><span class="kpi-list-title">谷歌在Gemini应用内部测试名为Remy的AI代理，可代替用户操作谷歌服务</span><span class="kpi-list-src">Techmeme</span></a></li></ul></details><div class="kpi"><div class="kpi-label">多源覆盖</div><div class="kpi-val hi">1<span style="font-size:14px;color:var(--text-50)"> / 35</span></div><div class="kpi-sub">跨源交叉确认 · 2.9%</div></div><div class="kpi"><div class="kpi-label">原厂直发</div><div class="kpi-val ">0</div><div class="kpi-sub">官方账号 / 公司发布的原始消息</div></div></div><div class="status-bar"><span class="sb-label">系统状态</span><span class="sb-ok">✅ 部署成功</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">⏱ 用时 148:23 <em>(8903s)</em></span><span class="sb-mut sb-sep">·</span><span class="sb-ok">🧠 LLM 100%</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">💀 死源 0</span><span class="sb-mut sb-sep">·</span><span class="sb-ok">⚠ 告警 0</span><span class="sb-mut sb-sep">·</span><span class="sb-mut">📡 OK 53</span></div></div></div>
 
-<div class="section-title kb-title">📚 知识库累积</div><div class="kb-meta">events.db 全库快照 · 跨班次跨日期累计的「项目资产」</div><div class="kpis"><div class="kpi"><div class="kpi-label">累计事件</div><div class="kpi-val">1458</div><div class="kpi-sub">近 7d +492 · 2716 篇文章</div></div><div class="kpi"><div class="kpi-label">跨源累计</div><div class="kpi-val">39<span style="font-size:14px;color:var(--text-50)"> / 1458</span></div><div class="kpi-sub">多源交叉确认 · 2.7%</div></div><div class="kpi"><div class="kpi-label">重要事件</div><div class="kpi-val">89</div><div class="kpi-sub">importance ≥ 4 · 近 7d +6</div></div><div class="kpi"><div class="kpi-label">首发独家</div><div class="kpi-val">395</div><div class="kpi-sub">T0/T1 抢先报道 · 近 7d +173</div></div></div>
-
-  <div class="section-title">历史跑记录（最近 30 次）</div>
-  <div style="font-size:11px;color:var(--text-50);margin-bottom:10px">
-    点击"时间"列可跳转到该次的归档早报页面；异常行（条目=0 或 部署失败）标红
-  </div>
-  <table>
-    <thead><tr>
-      <th>时间</th><th>班</th><th>条目</th><th>LLM</th><th>多源</th>
-      <th>用时(分)</th><th>源 OK/死</th><th>部署</th>
-    </tr></thead>
-    <tbody>
+  <details class="run-history">
+    <summary>📜 历史跑记录（最近 14 次）<span class="hist-toggle">▾</span></summary>
+    <div style="font-size:11px;color:var(--text-50);margin:8px 0 10px">
+      点"时间"列跳到该次归档；条目=0 或 部署失败的行会标红
+    </div>
+    <table>
+      <thead><tr>
+        <th>时间</th><th>班</th><th>条目</th><th>LLM</th><th>多源</th>
+        <th>用时(分)</th><th>源 OK/死</th><th>部署</th>
+      </tr></thead>
+      <tbody>
 <tr><td><a href="./2026-05-06-pm.html" target="_blank" title="打开本次归档">05-06 21:11 ↗</a></td><td>🌆 晚</td><td>35</td><td>100.0%</td><td>1</td><td>148.4</td><td>53/0</td><td>✓</td></tr>
 <tr><td><a href="./2026-05-06-am.html" target="_blank" title="打开本次归档">05-06 06:48 ↗</a></td><td>🌅 早</td><td>26</td><td>100.0%</td><td>4</td><td>39.5</td><td>55/0</td><td>✓</td></tr>
 <tr><td><a href="./2026-05-06-am.html" target="_blank" title="打开本次归档">05-06 01:21 ↗</a></td><td>🌅 早</td><td>30</td><td>100.0%</td><td>2</td><td>2.0</td><td>55/0</td><td>✓</td></tr>
@@ -340,124 +357,9 @@
 <tr style="background:rgba(192,80,80,0.08)"><td><a href="./2026-04-30-pm.html" target="_blank" title="打开本次归档">04-30 19:38 ↗</a></td><td>🌆 晚</td><td>0</td><td>0%</td><td>0</td><td>732.0</td><td>54/0</td><td>✓</td></tr>
 <tr><td><a href="./2026-04-29-pm.html" target="_blank" title="打开本次归档">04-29 19:38 ↗</a></td><td>🌆 晚</td><td>79</td><td>100.0%</td><td>3</td><td>2.1</td><td>55/0</td><td>✓</td></tr>
 <tr><td><a href="./2026-04-29-am.html" target="_blank" title="打开本次归档">04-29 19:35 ↗</a></td><td>🌅 早</td><td>74</td><td>100.0%</td><td>0</td><td>4.2</td><td>53/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-29-pm.html" target="_blank" title="打开本次归档">04-29 17:22 ↗</a></td><td>🌆 晚</td><td>79</td><td>100.0%</td><td>3</td><td>3.2</td><td>55/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-29-am.html" target="_blank" title="打开本次归档">04-29 06:03 ↗</a></td><td>🌅 早</td><td>70</td><td>97.1%</td><td>0</td><td>3.2</td><td>55/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-28-pm.html" target="_blank" title="打开本次归档">04-28 21:52 ↗</a></td><td>🌆 晚</td><td>22</td><td>68.2%</td><td>0</td><td>4.8</td><td>55/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-28-pm.html" target="_blank" title="打开本次归档">04-28 21:35 ↗</a></td><td>🌆 晚</td><td>22</td><td>72.7%</td><td>0</td><td>6.4</td><td>55/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-27-pm.html" target="_blank" title="打开本次归档">04-27 21:43 ↗</a></td><td>🌆 晚</td><td>7</td><td>100.0%</td><td>0</td><td>4.1</td><td>55/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-27-pm.html" target="_blank" title="打开本次归档">04-27 21:11 ↗</a></td><td>🌆 晚</td><td>7</td><td>100.0%</td><td>0</td><td>3.1</td><td>55/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-27-pm.html" target="_blank" title="打开本次归档">04-27 20:41 ↗</a></td><td>🌆 晚</td><td>5</td><td>100.0%</td><td>0</td><td>2.5</td><td>52/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-27-pm.html" target="_blank" title="打开本次归档">04-27 20:37 ↗</a></td><td>🌆 晚</td><td>5</td><td>100.0%</td><td>0</td><td>3.5</td><td>54/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-22-pm.html" target="_blank" title="打开本次归档">04-22 21:05 ↗</a></td><td>🌆 晚</td><td>34</td><td>100.0%</td><td>1</td><td>1.7</td><td>57/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-22-pm.html" target="_blank" title="打开本次归档">04-22 21:03 ↗</a></td><td>🌆 晚</td><td>34</td><td>100.0%</td><td>1</td><td>6.3</td><td>58/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-22-pm.html" target="_blank" title="打开本次归档">04-22 20:56 ↗</a></td><td>🌆 晚</td><td>34</td><td>100.0%</td><td>1</td><td>2.1</td><td>56/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-22-pm.html" target="_blank" title="打开本次归档">04-22 20:53 ↗</a></td><td>🌆 晚</td><td>34</td><td>100.0%</td><td>1</td><td>11.4</td><td>58/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-20-pm.html" target="_blank" title="打开本次归档">04-20 20:32 ↗</a></td><td>🌆 晚</td><td>24</td><td>100.0%</td><td>0</td><td>3.2</td><td>49/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-20-pm.html" target="_blank" title="打开本次归档">04-20 19:58 ↗</a></td><td>🌆 晚</td><td>38</td><td>100.0%</td><td>0</td><td>3.7</td><td>51/0</td><td>✓</td></tr>
-<tr><td><a href="./2026-04-20-pm.html" target="_blank" title="打开本次归档">04-20 19:43 ↗</a></td><td>🌆 晚</td><td>36</td><td>97.2%</td><td>0</td><td>7.5</td><td>52/0</td><td>✓</td></tr>
-<tr style="background:rgba(192,80,80,0.08)"><td><a href="./2026-04-20-pm.html" target="_blank" title="打开本次归档">04-20 18:24 ↗</a></td><td>🌆 晚</td><td>0</td><td>0%</td><td>0</td><td>7.8</td><td>18/0</td><td>✓</td></tr>
-    </tbody>
-  </table>
-
-
-  <div class="section-title">⚠️ 最近错误事件 (top 15)</div>
-  <div style="font-size:11px;color:var(--text-50);margin-bottom:10px">
-    从 daily_run.log 聚合最近 ~500KB 内的 WARN/ERROR 行；按出现频次降序
-  </div>
-  <div style="overflow-x:auto">
-  <table>
-    <thead><tr><th>级别×次数</th><th>模块</th><th>最近时间</th><th>消息</th></tr></thead>
-    <tbody><tr><td style="color:var(--amber);font-weight:600">W ×186</td><td>llm_analyzer</td><td>06:47:37</td><td style="font-family:monospace;font-size:11px">⏳ HTTP 500, 2s 后重试... ({&quot;error&quot;: {&quot;message&quot;: &quot;Claude CLI error (code 1): &quot;, &quot;type&quot;: &quot;server_error&quot;}})</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×186</td><td>llm_analyzer</td><td>19:51:53</td><td style="font-family:monospace;font-size:11px">⏳ HTTP 500, 4s 后重试... ({&quot;error&quot;: {&quot;message&quot;: &quot;Claude CLI error (code 1): &quot;, &quot;type&quot;: &quot;server_error&quot;}})</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×39</td><td>llm_analyzer</td><td>21:11:31</td><td style="font-family:monospace;font-size:11px">⏳ 网络错误, 4s 后重试... (&lt;urlopen error [Errno 61] Connection refused&gt;)</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×29</td><td>llm_analyzer</td><td>21:11:29</td><td style="font-family:monospace;font-size:11px">⏳ 网络错误, 2s 后重试... (&lt;urlopen error [Errno 61] Connection refused&gt;)</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×21</td><td>config_validator</td><td>21:11:28</td><td style="font-family:monospace;font-size:11px">⚠️ Config issue: source_authority has &#x27;掘金 AI&#x27; but no matching source found (check spelling)</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×21</td><td>config_validator</td><td>21:11:28</td><td style="font-family:monospace;font-size:11px">⚠️ Config issue: source_authority has &#x27;小红书热门&#x27; but no matching source found (check spelling)</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×21</td><td>config_validator</td><td>21:11:28</td><td style="font-family:monospace;font-size:11px">⚠️ Config issue: source_authority has &#x27;机器之心&#x27; but no matching source found (check spelling)</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×10</td><td>llm_analyzer</td><td>21:11:03</td><td style="font-family:monospace;font-size:11px">⏳ 网络错误, 2s 后重试... (Remote end closed connection without response)</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×7</td><td>llm_analyzer</td><td>21:10:21</td><td style="font-family:monospace;font-size:11px">⚠️ 缺少 summary 字段，重试中... (keys: [&#x27;ai_relevant&#x27;, &#x27;chinese_title&#x27;, &#x27;event_signature&#x27;])</td></tr>
-<tr><td style="color:var(--red);font-weight:600">E ×5</td><td>special_extractors</td><td>18:43:34</td><td style="font-family:monospace;font-size:11px">❌ X-Elon Musk (xAI): 所有 Nitter 实例均失败: HTTP Error 429: Too Many Requests</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×5</td><td>renderer</td><td>19:52:21</td><td style="font-family:monospace;font-size:11px">⚠️ 无可渲染的事件，跳过出报</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×3</td><td>llm_analyzer</td><td>08:43:47</td><td style="font-family:monospace;font-size:11px">⏳ 网络错误, 2s 后重试... (&lt;urlopen error [Errno 22] Invalid argument&gt;)</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×3</td><td>llm_analyzer</td><td>21:10:53</td><td style="font-family:monospace;font-size:11px">⚠️ 缺少 summary 字段，重试中... (keys: [&#x27;ai_relevant&#x27;])</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×3</td><td>llm_analyzer</td><td>21:11:09</td><td style="font-family:monospace;font-size:11px">⚠️ 补充字段失败: 网络错误: &lt;urlopen error [Errno 61] Connection refused&gt;</td></tr>
-<tr><td style="color:var(--amber);font-weight:600">W ×2</td><td>entity_coverage</td><td>13:00:54</td><td style="font-family:monospace;font-size:11px">⚠️ [核心研究者] 部分主源失效: [&#x27;X-Andrej Karpathy&#x27;]</td></tr></tbody>
-  </table>
-  </div>
-
-
-
-  <div class="section-title">📡 数据源质量（55 源：55 启用 / 45 近 7d 有贡献 / 10 静默 / 0 死）</div>
-  <div style="font-size:11px;color:var(--text-50);margin-bottom:10px">
-    按"近 7 天贡献数"降序排列；点"🔗 源"直接打开原始 RSS/Feed 监控源头
-  </div>
-  <div style="overflow-x:auto">
-  <table>
-    <thead><tr>
-      <th>源名</th><th>Tier</th><th>Lang</th><th>URL</th>
-      <th>近 7d</th><th>近 7d ★≥3</th><th>近 7d 均 ★</th><th>总数</th>
-      <th>最近采集</th><th>健康</th>
-    </tr></thead>
-    <tbody>
-<tr><td>Techmeme</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.techmeme.com/feed.xml" target="_blank" rel="noopener">🔗 源</a></td><td><b>68</b></td><td>8</td><td>1.26</td><td>143</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-Sam Altman</td><td style="color:var(--accent)">T1 研究</td><td>chinese</td><td>—</td><td><b>43</b></td><td>1</td><td>1.05</td><td>72</td><td>05-06 06:10</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Bloomberg Technology</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://feeds.bloomberg.com/technology/news.rss" target="_blank" rel="noopener">🔗 源</a></td><td><b>40</b></td><td>6</td><td>1.3</td><td>96</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>The Information</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.theinformation.com/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>38</b></td><td>2</td><td>1.16</td><td>87</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>ArXiv ML</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://rss.arxiv.org/rss/cs.LG" target="_blank" rel="noopener">🔗 源</a></td><td><b>37</b></td><td>4</td><td>1.27</td><td>92</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>虎嗅科技</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td><a href="https://rsshub.rssforever.com/huxiu/article" target="_blank" rel="noopener">🔗 源</a></td><td><b>36</b></td><td>0</td><td>1.03</td><td>68</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>TechCrunch AI</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://techcrunch.com/category/artificial-intelligence/feed/" target="_blank" rel="noopener">🔗 源</a></td><td><b>35</b></td><td>0</td><td>1.0</td><td>86</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>The Verge AI</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" target="_blank" rel="noopener">🔗 源</a></td><td><b>33</b></td><td>1</td><td>1.12</td><td>79</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>ArXiv AI</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://rss.arxiv.org/rss/cs.AI" target="_blank" rel="noopener">🔗 源</a></td><td><b>31</b></td><td>3</td><td>1.26</td><td>79</td><td>05-06 13:39</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-OpenAI</td><td style="color:var(--green)">T0 官方</td><td>chinese</td><td>—</td><td><b>23</b></td><td>23</td><td>3.0</td><td>57</td><td>05-06 01:20</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-AnthropicAI</td><td style="color:var(--green)">T0 官方</td><td>chinese</td><td>—</td><td><b>18</b></td><td>18</td><td>3.0</td><td>39</td><td>05-06 06:10</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Hugging Face Daily Papers</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td>—</td><td><b>17</b></td><td>1</td><td>1.12</td><td>40</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-Yann LeCun</td><td style="color:var(--accent)">T1 研究</td><td>chinese</td><td>—</td><td><b>15</b></td><td>0</td><td>1.0</td><td>52</td><td>05-05 08:43</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>36氪 AI搜索</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td><a href="https://rsshub.rssforever.com/36kr/search/articles/AI" target="_blank" rel="noopener">🔗 源</a></td><td><b>15</b></td><td>0</td><td>1.0</td><td>46</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Axios</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.axios.com/feeds/feed.rss" target="_blank" rel="noopener">🔗 源</a></td><td><b>15</b></td><td>0</td><td>1.0</td><td>30</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Simon Willison</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://simonwillison.net/atom/everything/" target="_blank" rel="noopener">🔗 源</a></td><td><b>13</b></td><td>0</td><td>1.0</td><td>31</td><td>05-06 00:21</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>AI前线</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td><a href="https://www.infoq.cn/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>13</b></td><td>0</td><td>1.0</td><td>31</td><td>05-06 13:39</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Wired AI</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.wired.com/feed/tag/ai/latest/rss" target="_blank" rel="noopener">🔗 源</a></td><td><b>11</b></td><td>1</td><td>1.18</td><td>35</td><td>05-06 13:39</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-GoogleDeepMind</td><td style="color:var(--green)">T0 官方</td><td>chinese</td><td>—</td><td><b>10</b></td><td>10</td><td>3.0</td><td>28</td><td>05-02 09:24</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>OpenAI Blog</td><td style="color:var(--green)">T0 官方</td><td>english</td><td><a href="https://openai.com/blog/rss.xml" target="_blank" rel="noopener">🔗 源</a></td><td><b>10</b></td><td>10</td><td>3.0</td><td>27</td><td>05-06 06:10</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>量子位</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td><a href="https://www.qbitai.com/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>9</b></td><td>1</td><td>1.22</td><td>29</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>MIT Tech Review</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.technologyreview.com/feed/" target="_blank" rel="noopener">🔗 源</a></td><td><b>9</b></td><td>0</td><td>1.0</td><td>23</td><td>05-05 22:18</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Apple ML Research</td><td style="color:var(--green)">T0 官方</td><td>english</td><td><a href="https://machinelearning.apple.com/rss.xml" target="_blank" rel="noopener">🔗 源</a></td><td><b>8</b></td><td>8</td><td>3.0</td><td>16</td><td>05-06 06:10</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Hacker News AI</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://news.ycombinator.com/rss" target="_blank" rel="noopener">🔗 源</a></td><td><b>8</b></td><td>0</td><td>1.0</td><td>24</td><td>05-06 13:39</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>NVIDIA Developer Blog</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://developer.nvidia.com/blog/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>8</b></td><td>0</td><td>1.0</td><td>23</td><td>05-06 00:21</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-Elon Musk (xAI)</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td>—</td><td><b>5</b></td><td>2</td><td>2.0</td><td>32</td><td>05-06 06:10</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Latent Space</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.latent.space/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>5</b></td><td>0</td><td>1.0</td><td>15</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>SemiWiki</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://semiwiki.com/feed/" target="_blank" rel="noopener">🔗 源</a></td><td><b>5</b></td><td>0</td><td>1.0</td><td>11</td><td>05-06 01:02</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Hugging Face Blog</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://huggingface.co/blog/feed.xml" target="_blank" rel="noopener">🔗 源</a></td><td><b>4</b></td><td>0</td><td>1.0</td><td>15</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>知乎热榜</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td>—</td><td><b>4</b></td><td>0</td><td>1.0</td><td>9</td><td>05-05 08:43</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Google AI Blog</td><td style="color:var(--green)">T0 官方</td><td>english</td><td><a href="https://blog.google/technology/ai/rss/" target="_blank" rel="noopener">🔗 源</a></td><td><b>3</b></td><td>3</td><td>3.0</td><td>13</td><td>05-06 00:21</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>36氪</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td><a href="https://rsshub.rssforever.com/36kr/newsflashes" target="_blank" rel="noopener">🔗 源</a></td><td><b>3</b></td><td>0</td><td>1.0</td><td>11</td><td>05-06 19:44</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>少数派</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td><a href="https://rsshub.rssforever.com/sspai/index" target="_blank" rel="noopener">🔗 源</a></td><td><b>3</b></td><td>0</td><td>1.33</td><td>5</td><td>05-06 13:39</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Intel Newsroom</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://newsroom.intel.com/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>3</b></td><td>0</td><td>1.0</td><td>3</td><td>05-06 01:02</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>DeepLearning.AI</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.youtube.com/channel/UCcIXc5mJsHVYTZR1maL5l9w" target="_blank" rel="noopener">🔗 源</a></td><td><b>2</b></td><td>0</td><td>1.5</td><td>7</td><td>04-29 09:51</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-Andrew Ng</td><td style="color:var(--accent)">T1 研究</td><td>chinese</td><td>—</td><td><b>2</b></td><td>0</td><td>1.0</td><td>5</td><td>05-06 00:21</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>DeepMind Blog</td><td style="color:var(--green)">T0 官方</td><td>english</td><td><a href="https://deepmind.google/blog/rss.xml" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>1</td><td>3.0</td><td>4</td><td>05-01 21:56</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Anthropic News</td><td style="color:var(--green)">T0 官方</td><td>english</td><td><a href="https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_news_rss.xml" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>1</td><td>3.0</td><td>3</td><td>05-05 08:43</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Dwarkesh Patel</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.dwarkeshpatel.com/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>0</td><td>1.0</td><td>5</td><td>04-30 08:27</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Matthew Berman</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.youtube.com/channel/UCawZsQWqfGSbCI5yjkdVkTA" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>0</td><td>1.0</td><td>5</td><td>05-03 07:09</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Two Minute Papers</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.youtube.com/channel/UCbfYPyITQ-7l4upoX8nvctg" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>0</td><td>1.0</td><td>4</td><td>05-04 07:35</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>知乎日报</td><td style="color:var(--text-70)">T2 媒体</td><td>chinese</td><td><a href="https://rsshub.rssforever.com/zhihu/daily" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>0</td><td>1.0</td><td>4</td><td>04-30 08:27</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-Andrej Karpathy</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td>—</td><td><b>1</b></td><td>0</td><td>1.0</td><td>3</td><td>05-01 21:56</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Import AI</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://importai.substack.com/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>0</td><td>1.0</td><td>2</td><td>05-05 08:43</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Interconnects</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.interconnects.ai/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>1</b></td><td>0</td><td>1.0</td><td>1</td><td>05-05 08:43</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Yannic Kilcher</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>9</td><td>04-17 20:02</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>AI Explained</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://www.youtube.com/channel/UCNJ1Ymd5yFuUPtn21xtRbbw" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>9</td><td>04-25 16:17</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>X-Jim Fan</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td>—</td><td><b>0</b></td><td>0</td><td>—</td><td>3</td><td>04-17 07:00</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Lex Fridman</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.youtube.com/channel/UCSHZKyawb77ixDdsGog4iWA" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>3</td><td>04-27 20:39</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Sebastian Raschka</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://magazine.sebastianraschka.com/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>1</td><td>04-22 20:57</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Microsoft AI Blog</td><td style="color:var(--green)">T0 官方</td><td>english</td><td><a href="https://blogs.microsoft.com/ai/feed/" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>0</td><td>—</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>NVIDIA Deep Learning</td><td style="color:var(--green)">T0 官方</td><td>english</td><td><a href="https://blogs.nvidia.com/blog/category/deep-learning/feed/" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>0</td><td>—</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Ars Technica AI</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://feeds.arstechnica.com/arstechnica/features" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>0</td><td>—</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>VentureBeat AI</td><td style="color:var(--text-70)">T2 媒体</td><td>english</td><td><a href="https://venturebeat.com/category/ai/feed" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>0</td><td>—</td><td><span style="color:var(--green)">● OK</span></td></tr>
-<tr><td>Andrej Karpathy</td><td style="color:var(--accent)">T1 研究</td><td>english</td><td><a href="https://www.youtube.com/channel/UCPk8m_r6fkUSYmvgCBwq-sw" target="_blank" rel="noopener">🔗 源</a></td><td><b>0</b></td><td>0</td><td>—</td><td>0</td><td>—</td><td><span style="color:var(--green)">● OK</span></td></tr>
-    </tbody>
-  </table>
-  </div>
-
+      </tbody>
+    </table>
+  </details>
 </div>
 
 <script>
