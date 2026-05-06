@@ -1,55 +1,47 @@
 {
-  "article_count": 26,
+  "article_count": 35,
   "output_file": "output/index.html",
-  "file_size_kb": 79.8,
-  "generated_at": "2026-05-05T22:48:36.750481+00:00",
+  "file_size_kb": 88.7,
+  "generated_at": "2026-05-06T13:11:35.273823+00:00",
   "event_db_stats": {
-    "total_articles": 2602,
+    "total_articles": 2716,
     "collected": 0,
-    "analyzed": 2602,
-    "total_events": 1398,
-    "total_evidence": 1456,
+    "analyzed": 2716,
+    "total_events": 1458,
+    "total_evidence": 1519,
     "event_status": {
       "official": 179,
-      "reported": 1219
+      "reported": 1279
     },
     "tier_0": 187,
-    "tier_1": 587,
-    "tier_2": 1828
+    "tier_1": 609,
+    "tier_2": 1920
   },
   "event_status_distribution": {
-    "official": 8,
-    "reported": 18
+    "reported": 35
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 26,
-  "multi_source_count": 4,
-  "important_count": 3,
+  "llm_count": 35,
+  "multi_source_count": 1,
+  "important_count": 2,
   "important_events": [
     {
-      "title": "xAI发布Grok 4.3：最快最智能模型，百万上下文窗口",
-      "event_id": "evt_11786bd84a2d1b87a54028bb",
-      "importance": 4,
-      "source_name": "X-Elon Musk (xAI)",
-      "archive_url": "archive/2026-05-06-am.html"
-    },
-    {
-      "title": "iOS 27或将允许用户自选AI模型，苹果开放AI生态系统",
-      "event_id": "evt_a0b4633bb483c616cbfc35cc",
-      "importance": 4,
-      "source_name": "The Verge AI",
-      "archive_url": "archive/2026-05-06-am.html"
-    },
-    {
-      "title": "ElevenLabs年化营收突破5亿美元，英伟达领投新一轮融资",
-      "event_id": "evt_b386079ef1de631ee99396ad",
+      "title": "AMD股价单日暴涨16%，AI芯片业务季度营收增速加速至46%",
+      "event_id": "evt_8cd4de8f82a39a3252f2bb57",
       "importance": 4,
       "source_name": "The Information",
-      "archive_url": "archive/2026-05-06-am.html"
+      "archive_url": "archive/2026-05-06-pm.html"
+    },
+    {
+      "title": "谷歌在Gemini应用内部测试名为Remy的AI代理，可代替用户操作谷歌服务",
+      "event_id": "evt_e2f903b15d7cb8ce07226116",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-06-pm.html"
     }
   ],
-  "official_count": 8,
-  "depth_count": 25,
+  "official_count": 0,
+  "depth_count": 32,
   "entity_count": 0
 }
