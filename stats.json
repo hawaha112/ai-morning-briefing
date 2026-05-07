@@ -1,40 +1,47 @@
 {
-  "article_count": 5,
+  "article_count": 23,
   "output_file": "output/index.html",
-  "file_size_kb": 63.9,
-  "generated_at": "2026-05-07T13:35:25.839684+00:00",
+  "file_size_kb": 80.2,
+  "generated_at": "2026-05-07T14:23:13.176137+00:00",
   "event_db_stats": {
-    "total_articles": 2835,
+    "total_articles": 2922,
     "collected": 0,
-    "analyzed": 2835,
-    "total_events": 1526,
-    "total_evidence": 1591,
+    "analyzed": 2922,
+    "total_events": 1582,
+    "total_evidence": 1648,
     "event_status": {
-      "official": 192,
-      "reported": 1334
+      "official": 201,
+      "reported": 1381
     },
-    "tier_0": 201,
-    "tier_1": 629,
-    "tier_2": 2005
+    "tier_0": 210,
+    "tier_1": 654,
+    "tier_2": 2058
   },
   "event_status_distribution": {
-    "reported": 5
+    "reported": 23
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 5,
+  "llm_count": 23,
   "multi_source_count": 0,
-  "important_count": 1,
+  "important_count": 2,
   "important_events": [
     {
-      "title": "Scale AI获美国防部5亿美元合同，助力数据处理与决策支持",
-      "event_id": "evt_bb2e9d6363d8fb85bc14210e",
+      "title": "Anthropic与SpaceX达成300MW算力合作，年化ARR增长8000%",
+      "event_id": "evt_73318f2b589098cd0fc87a27",
+      "importance": 5,
+      "source_name": "Latent Space",
+      "archive_url": "archive/2026-05-07-pm.html"
+    },
+    {
+      "title": "马斯克与Anthropic达成意外合作，一石二鸟布局AI版图",
+      "event_id": "evt_ec6bef90c7d1e1ef5ad47a37",
       "importance": 4,
-      "source_name": "Techmeme",
+      "source_name": "Axios",
       "archive_url": "archive/2026-05-07-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 5,
+  "depth_count": 22,
   "entity_count": 0
 }
