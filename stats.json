@@ -1,8 +1,8 @@
 {
-  "article_count": 53,
+  "article_count": 30,
   "output_file": "output/index.html",
-  "file_size_kb": 109.2,
-  "generated_at": "2026-05-07T15:14:37.663495+00:00",
+  "file_size_kb": 87.3,
+  "generated_at": "2026-05-07T15:15:23.781027+00:00",
   "event_db_stats": {
     "total_articles": 2946,
     "collected": 0,
@@ -18,38 +18,37 @@
     "tier_2": 2080
   },
   "event_status_distribution": {
-    "official": 7,
-    "reported": 46
+    "reported": 30
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 53,
-  "multi_source_count": 4,
+  "llm_count": 30,
+  "multi_source_count": 0,
   "important_count": 3,
   "important_events": [
     {
-      "title": "英伟达与康宁达成32亿美元合作协议，共建光学工厂",
-      "event_id": "evt_0c5b7a9a46caff9929904c85",
-      "importance": 4,
-      "source_name": "The Information",
-      "archive_url": "archive/2026-05-07-am.html"
+      "title": "Anthropic与SpaceX达成300MW算力合作，年化ARR增长8000%",
+      "event_id": "evt_73318f2b589098cd0fc87a27",
+      "importance": 5,
+      "source_name": "Latent Space",
+      "archive_url": "archive/2026-05-07-pm.html"
     },
     {
-      "title": "Anthropic与SpaceX达成合作，AI巨头携手航天企业",
-      "event_id": "evt_e740f52a9b8ec31a1766695d",
+      "title": "马斯克与Anthropic达成意外合作，一石二鸟布局AI版图",
+      "event_id": "evt_ec6bef90c7d1e1ef5ad47a37",
       "importance": 4,
-      "source_name": "Matthew Berman",
-      "archive_url": "archive/2026-05-07-am.html"
+      "source_name": "Axios",
+      "archive_url": "archive/2026-05-07-pm.html"
     },
     {
-      "title": "英伟达5亿美元投资康宁，美国光纤产能扩张十倍",
-      "event_id": "evt_cd4c00e6e84807feb02769ff",
+      "title": "Scale AI获美国防部5亿美元合同，助力数据处理与决策支持",
+      "event_id": "evt_bb2e9d6363d8fb85bc14210e",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-07-am.html"
+      "archive_url": "archive/2026-05-07-pm.html"
     }
   ],
-  "official_count": 7,
-  "depth_count": 48,
+  "official_count": 0,
+  "depth_count": 29,
   "entity_count": 0
 }
