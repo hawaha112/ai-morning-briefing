@@ -1,47 +1,32 @@
 {
-  "article_count": 23,
+  "article_count": 2,
   "output_file": "output/index.html",
-  "file_size_kb": 80.2,
-  "generated_at": "2026-05-07T14:23:13.176137+00:00",
+  "file_size_kb": 61.1,
+  "generated_at": "2026-05-07T15:11:57.281473+00:00",
   "event_db_stats": {
-    "total_articles": 2922,
+    "total_articles": 2944,
     "collected": 0,
-    "analyzed": 2922,
-    "total_events": 1582,
-    "total_evidence": 1648,
+    "analyzed": 2944,
+    "total_events": 1593,
+    "total_evidence": 1661,
     "event_status": {
-      "official": 201,
-      "reported": 1381
+      "official": 202,
+      "reported": 1391
     },
-    "tier_0": 210,
+    "tier_0": 212,
     "tier_1": 654,
-    "tier_2": 2058
+    "tier_2": 2078
   },
   "event_status_distribution": {
-    "reported": 23
+    "reported": 2
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 23,
+  "llm_count": 2,
   "multi_source_count": 0,
-  "important_count": 2,
-  "important_events": [
-    {
-      "title": "Anthropic与SpaceX达成300MW算力合作，年化ARR增长8000%",
-      "event_id": "evt_73318f2b589098cd0fc87a27",
-      "importance": 5,
-      "source_name": "Latent Space",
-      "archive_url": "archive/2026-05-07-pm.html"
-    },
-    {
-      "title": "马斯克与Anthropic达成意外合作，一石二鸟布局AI版图",
-      "event_id": "evt_ec6bef90c7d1e1ef5ad47a37",
-      "importance": 4,
-      "source_name": "Axios",
-      "archive_url": "archive/2026-05-07-pm.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 22,
+  "depth_count": 2,
   "entity_count": 0
 }
