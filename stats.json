@@ -1,12 +1,12 @@
 {
-  "article_count": 13,
+  "article_count": 23,
   "output_file": "output/index.html",
-  "file_size_kb": 72.0,
-  "generated_at": "2026-05-08T14:07:05.856782+00:00",
+  "file_size_kb": 80.2,
+  "generated_at": "2026-05-08T14:23:40.973773+00:00",
   "event_db_stats": {
-    "total_articles": 3139,
+    "total_articles": 3142,
     "collected": 0,
-    "analyzed": 3139,
+    "analyzed": 3142,
     "total_events": 1695,
     "total_evidence": 1770,
     "event_status": {
@@ -15,26 +15,18 @@
     },
     "tier_0": 237,
     "tier_1": 691,
-    "tier_2": 2211
+    "tier_2": 2214
   },
   "event_status_distribution": {
-    "reported": 13
+    "unknown": 23
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 13,
-  "multi_source_count": 1,
-  "important_count": 1,
-  "important_events": [
-    {
-      "title": "特朗普政府酝酿AI安全政策转向，或对最强模型设置护栏",
-      "event_id": "evt_4ee1f8dc925b074293106dc7",
-      "importance": 4,
-      "source_name": "Axios",
-      "archive_url": "archive/2026-05-08-pm.html"
-    }
-  ],
+  "llm_count": 23,
+  "multi_source_count": 0,
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 12,
+  "depth_count": 22,
   "entity_count": 0
 }
