@@ -1,69 +1,32 @@
 {
-  "article_count": 85,
+  "article_count": 21,
   "output_file": "output/index.html",
-  "file_size_kb": 138.2,
-  "generated_at": "2026-05-07T22:07:45.484801+00:00",
+  "file_size_kb": 79.7,
+  "generated_at": "2026-05-08T11:51:52.757123+00:00",
   "event_db_stats": {
-    "total_articles": 3026,
+    "total_articles": 3095,
     "collected": 0,
-    "analyzed": 3026,
-    "total_events": 1649,
-    "total_evidence": 1721,
+    "analyzed": 3095,
+    "total_events": 1681,
+    "total_evidence": 1755,
     "event_status": {
-      "official": 221,
-      "reported": 1428
+      "official": 224,
+      "reported": 1457
     },
-    "tier_0": 233,
-    "tier_1": 671,
-    "tier_2": 2122
+    "tier_0": 237,
+    "tier_1": 686,
+    "tier_2": 2172
   },
   "event_status_distribution": {
-    "official": 25,
-    "reported": 60
+    "reported": 21
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 85,
-  "multi_source_count": 6,
-  "important_count": 5,
-  "important_events": [
-    {
-      "title": "Cloudflare裁员1100人转型「智能体AI优先」运营模式",
-      "event_id": "evt_a40b3dd4ad781c6f674f8700",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-08-am.html"
-    },
-    {
-      "title": "英伟达与IREN签署5GW算力基础设施部署协议，可投资21亿美元",
-      "event_id": "evt_a536a8ac0a9dc9e26d3f07e8",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-08-am.html"
-    },
-    {
-      "title": "SpaceX斥资550亿美元在德克萨斯州布局AI芯片制造业务",
-      "event_id": "evt_34df95e506f6dcba688795ff",
-      "importance": 4,
-      "source_name": "The Verge AI",
-      "archive_url": "archive/2026-05-08-am.html"
-    },
-    {
-      "title": "Datadog股价暴涨30%：AI需求驱动营收超10亿美元",
-      "event_id": "evt_cb99704fdb810d1bee778c9b",
-      "importance": 4,
-      "source_name": "The Information",
-      "archive_url": "archive/2026-05-08-am.html"
-    },
-    {
-      "title": "月之暗面完成20亿美元融资，估值达200亿美元",
-      "event_id": "evt_7c108201c6a23affe8708054",
-      "importance": 4,
-      "source_name": "TechCrunch AI",
-      "archive_url": "archive/2026-05-08-am.html"
-    }
-  ],
-  "official_count": 25,
-  "depth_count": 82,
+  "llm_count": 21,
+  "multi_source_count": 1,
+  "important_count": 0,
+  "important_events": [],
+  "official_count": 0,
+  "depth_count": 21,
   "entity_count": 0
 }
