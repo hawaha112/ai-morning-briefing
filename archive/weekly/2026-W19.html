@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI 行业周报 2026-05-01 ~ 2026-05-08,基于 19 条 importance ≥ 4 的核心事件。">
+<title>2026-W19 · AI 行业周报</title>
+<style>
+  :root {
+    --bg-page: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --bg-card-hi: rgba(255,255,255,0.08);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --accent-glow: rgba(102,192,255,0.25);
+    --red: #e05252;
+    --amber: #e8913a;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --text-35: #5a6275;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+    --mono: 'JetBrains Mono', Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px 16px;
+    background: var(--bg-page); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px; margin-bottom: 28px;
+  }
+  .h-back { color: var(--accent); text-decoration: none; font-size: 13px; }
+  .h-back:hover { text-decoration: underline; }
+  .h-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 700;
+    margin: 12px 0 6px; letter-spacing: -0.5px;
+  }
+  .h-meta { color: var(--text-50); font-size: 12px; letter-spacing: 0.5px; }
+
+  .section-title {
+    font-family: var(--serif); font-size: 18px; font-weight: 700;
+    margin: 36px 0 14px; padding-left: 10px;
+    border-left: 3px solid var(--accent); line-height: 1.3;
+  }
+
+  /* 三个关键判断 */
+  .judgement {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 18px 20px; margin-bottom: 14px;
+  }
+  .judgement-num {
+    display: inline-block; font-family: var(--mono); font-size: 11px;
+    color: var(--accent); letter-spacing: 1px; margin-bottom: 6px;
+  }
+  .judgement-title {
+    font-family: var(--serif); font-size: 17px; font-weight: 700;
+    color: var(--text-100); margin: 0 0 10px; line-height: 1.4;
+  }
+  .judgement-body { color: var(--text-70); font-size: 14px; }
+
+  /* 下周展望 */
+  .next-week {
+    background: linear-gradient(180deg, rgba(102,192,255,0.06), rgba(94,234,212,0.04));
+    border: 1px solid rgba(102,192,255,0.18);
+    border-radius: 6px; padding: 18px 20px; margin-bottom: 14px;
+  }
+  .next-week-label {
+    display: inline-block; font-size: 11px; color: var(--accent);
+    letter-spacing: 1px; margin-bottom: 8px;
+  }
+  .next-week-body { color: var(--text-100); font-size: 14px; line-height: 1.6; }
+
+  /* 大事时间线 */
+  .events-list { margin: 0; padding: 0; list-style: none; }
+  .event-item {
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 2px solid var(--amber);
+    border-radius: 5px; margin-bottom: 8px; padding: 12px 16px;
+    transition: background 0.15s;
+  }
+  .event-item:hover { background: var(--bg-card-hi); }
+  .event-meta {
+    display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    margin-bottom: 6px; font-size: 11px;
+  }
+  .event-imp { color: var(--red); font-weight: 700; }
+  .event-date { color: var(--accent); font-family: var(--mono); }
+  .event-src { color: var(--text-50); }
+  .event-title {
+    font-size: 14px; font-weight: 500; color: var(--text-100);
+    line-height: 1.45; margin: 0 0 4px;
+  }
+  .event-title a { color: inherit; text-decoration: none; }
+  .event-title a:hover { color: var(--accent); }
+  .event-summary { font-size: 12px; color: var(--text-70); line-height: 1.5; margin: 0; }
+
+  /* chip 云(实体 + 分类) */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 28px; }
+  .chip {
+    padding: 4px 10px; border-radius: 14px;
+    background: rgba(102,192,255,0.08);
+    border: 1px solid rgba(102,192,255,0.18);
+    color: var(--text-100); font-weight: 500; font-size: 13px;
+  }
+  .chip-count {
+    margin-left: 5px; font-size: 0.8em;
+    color: var(--text-50); font-weight: 400;
+  }
+
+  .footer {
+    margin-top: 48px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-35); font-size: 11px; text-align: center;
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    body { padding: 16px 12px; }
+    .h-title { font-size: 22px; }
+    .judgement { padding: 14px 16px; }
+    .judgement-title { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header class="header">
+  <a class="h-back" href="../../">← 返回早报</a>
+  <h1 class="h-title">📅 2026-W19 · AI 行业周报</h1>
+  <div class="h-meta">2026-05-01 ~ 2026-05-08 · 基于 19 条 importance ≥ 4 的核心事件</div>
+</header>
+
+<h2 class="section-title">📌 本周三个关键判断</h2>
+<div class="judgement"><div class="judgement-num">JUDGEMENT 01</div><h3 class="judgement-title">英伟达正从芯片厂商蜕变为AI基础设施控股平台</h3><div class="judgement-body">本周英伟达同时落地三笔重资产布局：与康宁签署最高32亿美元光学工厂合作并追加5亿美元股权投资、与IREN签署5GW算力部署协议并可投资21亿美元。这不是分散的财务动作，而是一条清晰的垂直整合逻辑链：掌控光纤互联产能→锁定数据中心运营商→保障GPU集群完整交付。英伟达正在将自己从&#x27;卖铲子的&#x27;重构为AI基础设施的股权共同体，当算力成为战略资源，控制供应链比控制产品更值钱。这一模式若成功，将使其护城河从软件生态（CUDA）延伸至物理基础设施层。</div></div>
+<div class="judgement"><div class="judgement-num">JUDGEMENT 02</div><h3 class="judgement-title">Anthropic借算力独立完成从研究机构到商业巨头的跃迁</h3><div class="judgement-body">本周Anthropic动作密集且逻辑自洽：接管xAI Colossus全部算力（年费约50亿美元）、披露ARR增速8000%、发布10款金融行业AI智能体、与SpaceX达成合作。这三件事指向同一个战略转折——Anthropic正在摆脱对AWS/Google算力的依赖，同时用垂直行业打包方案构建独立于API收入的第二曲线。马斯克与Anthropic的意外合作更揭示：AI军备竞赛中，对抗OpenAI的共同利益已能超越商业竞争壁垒。若ARR高增速持续18个月，Anthropic将在融资估值和企业话语权上形成与OpenAI正面竞争的体量。</div></div>
+<div class="judgement"><div class="judgement-num">JUDGEMENT 03</div><h3 class="judgement-title">AI商业化进入&#x27;基础设施收益兑现期&#x27;，泡沫叙事正在分化</h3><div class="judgement-body">本周财报季释放出关键信号：Datadog营收突破10亿美元股价暴涨30%、AMD AI GPU增速加速至46%、ElevenLabs ARR达5亿美元。这三家公司的共同点是——它们是AI基础设施的&#x27;水电煤&#x27;，不押注单一模型胜负，而是从整体AI部署规模中抽取稳定收益。与此同时，Cloudflare以&#x27;AI Agent优先&#x27;包装裁员却遭股价重挫13%，市场已开始区分&#x27;真实AI营收&#x27;与&#x27;AI叙事&#x27;。资本正在完成从概念投注向商业验证的迁移，能拿出增速数字的平台层公司将持续享受估值溢价，纯靠故事的将承压。</div></div>
+
+<h2 class="section-title">🔭 下周值得关注</h2>
+<div class="next-week">
+  <div class="next-week-label">FORWARD-LOOKING · 信号埋点</div>
+  <div class="next-week-body">三条线索值得追踪：①特朗普政府AI安全政策的具体框架若落地，将直接影响Anthropic、OpenAI等前沿模型厂商的出口管制与合规成本，尤其需关注美中协调信号是否演化为正式对话机制；②Anthropic-xAI Colossus算力协议的运营细节——50亿美元年费如何分期支付、算力使用优先级如何划分，将决定xAI现金流是否足以支撑Grok 4.3后续迭代；③iOS 27开放AI模型选择权的供应商谈判进展，苹果若与Anthropic或Google签约优先接入协议，将成为移动端AI分发格局的分水岭事件。</div>
+</div>
+
+<h2 class="section-title">⭐ 本周大事时间线(19 条)</h2>
+<ul class="events-list">
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-08 21:00</span><span class="event-src">Axios</span></div><div class="event-title"><a href="https://www.axios.com/2026/05/08/ai-safety-pivot-trump-administration-china" target="_blank" rel="noopener">特朗普政府酝酿AI安全政策转向，或对最强模型设置护栏</a></div><p class="event-summary">特朗普政府正考虑对最强大AI模型采取行政管控措施，同时出现美中两国在AI领域协调合作的信号。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-08 05:50</span><span class="event-src">Techmeme</span></div><div class="event-title"><a href="https://www.techmeme.com/260507/p44#a260507p44" target="_blank" rel="noopener">英伟达与IREN签署5GW算力基础设施部署协议，可投资21亿美元</a></div><p class="event-summary">英伟达与数据中心运营商IREN宣布合作，部署最高5GW AI基础设施，英伟达可向IREN投资21亿美元，消息公布后IREN股价盘后涨超9%。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-08 05:30</span><span class="event-src">Techmeme</span></div><div class="event-title"><a href="https://www.techmeme.com/260507/p43#a260507p43" target="_blank" rel="noopener">Cloudflare裁员1100人转型「智能体AI优先」运营模式</a></div><p class="event-summary">Cloudflare Q1营收同比增34%至6.398亿美元，同时宣布裁员逾1100人，加速向「智能体AI优先」运营模式转型，股价盘后跌逾13%。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-08 03:26</span><span class="event-src">The Verge AI</span></div><div class="event-title"><a href="https://www.theverge.com/ai-artificial-intelligence/926356/spacex-terafab-plant-cost-ai-chips" target="_blank" rel="noopener">SpaceX斥资550亿美元在德克萨斯州布局AI芯片制造业务</a></div><p class="event-summary">马斯克旗下SpaceX计划投入550亿美元在德克萨斯州建设AI芯片制造设施，正式进军芯片制造领域。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-08 02:14</span><span class="event-src">The Information</span></div><div class="event-title"><a href="https://www.theinformation.com/briefings/datadog-shares-jump-30-ceo-says-ai-boosting-sales" target="_blank" rel="noopener">Datadog股价暴涨30%：AI需求驱动营收超10亿美元</a></div><p class="event-summary">Datadog一季度营收同比增32%突破10亿美元，CEO表示AI正推动销售增长，全年预期上调至26%，股价单日暴涨30%。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-07 21:44</span><span class="event-src">TechCrunch AI</span></div><div class="event-title"><a href="https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/" target="_blank" rel="noopener">月之暗面完成20亿美元融资，估值达200亿美元</a></div><p class="event-summary">中国AI独角兽月之暗面以200亿美元估值完成20亿美元新一轮融资，4月年化经常性收入突破2亿美元。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-07 17:00</span><span class="event-src">Axios</span></div><div class="event-title"><a href="https://www.axios.com/2026/05/07/musk-anthropic-compute-spacex-ai" target="_blank" rel="noopener">马斯克与Anthropic达成意外合作，一石二鸟布局AI版图</a></div><p class="event-summary">马斯克与Anthropic达成出人意料的合作协议，此举同时服务于他的两个战略目标。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★5</span><span class="event-date">05-07 13:57</span><span class="event-src">Latent Space</span></div><div class="event-title"><a href="https://www.latent.space/p/ainews-anthropic-spacexais-300mw5byr" target="_blank" rel="noopener">Anthropic与SpaceX达成300MW算力合作，年化ARR增长8000%</a></div><p class="event-summary">Anthropic第二届开发者大会宣布接管xAI Colossus 1全部算力，年费约50亿美元，同时披露年化ARR增速高达8000%。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-07 08:00</span><span class="event-src">OpenAI Blog</span></div><div class="event-title"><a href="https://openai.com/index/testing-ads-in-chatgpt" target="_blank" rel="noopener">OpenAI在ChatGPT中测试广告变现，免费用户将看到标注广告</a></div><p class="event-summary">OpenAI宣布在ChatGPT中测试广告功能，以支持免费访问，广告将有明确标注且不影响回答内容。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-07 07:10</span><span class="event-src">Techmeme</span></div><div class="event-title"><a href="https://www.techmeme.com/260506/p49#a260506p49" target="_blank" rel="noopener">Scale AI获美国防部5亿美元合同，助力数据处理与决策支持</a></div><p class="event-summary">美国国防部通过首席数字与AI办公室向Scale AI授予5亿美元合同，用于数据筛选与辅助决策，是其2025年1亿美元合同的重大升级。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-07 04:43</span><span class="event-src">The Information</span></div><div class="event-title"><a href="https://www.theinformation.com/briefings/nvidia-inks-deal-invest-3-2-billion-corning" target="_blank" rel="noopener">英伟达与康宁达成32亿美元合作协议，共建光学工厂</a></div><p class="event-summary">英伟达与康宁达成最高32亿美元投资合作，将在北卡罗来纳州和德克萨斯州共建三座光学技术工厂。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-07 02:36</span><span class="event-src">Matthew Berman</span></div><div class="event-title"><a href="https://www.youtube.com/watch?v=fa3mUy9DHcs" target="_blank" rel="noopener">Anthropic与SpaceX达成合作，AI巨头携手航天企业</a></div><p class="event-summary">据Matthew Berman报道，Anthropic与SpaceX宣布合作，具体细节尚待披露，引发业界广泛关注。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-06 20:45</span><span class="event-src">Techmeme</span></div><div class="event-title"><a href="https://www.techmeme.com/260506/p25#a260506p25" target="_blank" rel="noopener">英伟达5亿美元投资康宁，美国光纤产能扩张十倍</a></div><p class="event-summary">英伟达向康宁投资5亿美元，推动其美国光连接制造产能扩大10倍、光纤生产产能提升50%以上，康宁股价单日涨逾15%。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-06 12:42</span><span class="event-src">The Information</span></div><div class="event-title"><a href="https://www.theinformation.com/briefings/amd-shares-rise-16-ai-chip-revenue-growth-accelerates" target="_blank" rel="noopener">AMD股价单日暴涨16%，AI芯片业务季度营收增速加速至46%</a></div><p class="event-summary">AMD发布Q1财报营收103亿美元同比增38%，Q2指引增速加速至46%，AI GPU销售强劲推动股价盘后涨16%。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-06 08:05</span><span class="event-src">Techmeme</span></div><div class="event-title"><a href="https://www.techmeme.com/260505/p57#a260505p57" target="_blank" rel="noopener">谷歌在Gemini应用内部测试名为Remy的AI代理，可代替用户操作谷歌服务</a></div><p class="event-summary">谷歌正在Gemini应用中测试内部代号为Remy的AI代理，该代理能整合谷歌各项服务并代表用户执行操作。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-06 03:45</span><span class="event-src">The Verge AI</span></div><div class="event-title"><a href="https://www.theverge.com/tech/924515/apple-intelligence-third-party-chatbot-extensions-ios-27" target="_blank" rel="noopener">iOS 27或将允许用户自选AI模型，苹果开放AI生态系统</a></div><p class="event-summary">苹果计划在iOS 27中允许用户选择自己偏好的AI模型，打破Siri与Apple Intelligence的独占格局。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-06 03:36</span><span class="event-src">X-Elon Musk (xAI)</span></div><div class="event-title"><a href="https://x.com/elonmusk/status/2051747828201066783" target="_blank" rel="noopener">xAI发布Grok 4.3：最快最智能模型，百万上下文窗口</a></div><p class="event-summary">xAI正式发布Grok 4.3，主打速度与智能，支持百万token上下文，API定价$1.25/$2.50每百万token。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-06 02:40</span><span class="event-src">The Information</span></div><div class="event-title"><a href="https://www.theinformation.com/briefings/elevenlabs-hits-500-million-annualized-revenue-adds-nvidia-investor" target="_blank" rel="noopener">ElevenLabs年化营收突破5亿美元，英伟达领投新一轮融资</a></div><p class="event-summary">AI语音初创公司ElevenLabs年化经常性营收突破5亿美元，较去年底的3.5亿美元大幅增长，英伟达风险投资部门等机构加入成为新投资方。</p></li>
+<li class="event-item"><div class="event-meta"><span class="event-imp">★4</span><span class="event-date">05-05 23:15</span><span class="event-src">Techmeme</span></div><div class="event-title"><a href="https://www.techmeme.com/260505/p28#a260505p28" target="_blank" rel="noopener">Anthropic发布10款金融行业AI智能体，覆盖尽调、合规及路演材料</a></div><p class="event-summary">Anthropic推出10款面向金融服务业的AI智能体，可处理路演材料起草、财务报表审核及合规案件升级等任务。</p></li>
+</ul>
+
+<h2 class="section-title">🏷️ 本周焦点实体</h2>
+<div class="chips"><span class="chip" style="font-size:19px">OpenAI<span class="chip-count">×115</span></span> <span class="chip" style="font-size:18px">Anthropic<span class="chip-count">×87</span></span> <span class="chip" style="font-size:15px">NVIDIA<span class="chip-count">×30</span></span> <span class="chip" style="font-size:14px">Google DeepMind<span class="chip-count">×24</span></span> <span class="chip" style="font-size:14px">xAI<span class="chip-count">×24</span></span> <span class="chip" style="font-size:14px">DeepSeek<span class="chip-count">×11</span></span> <span class="chip" style="font-size:13px">Meta AI<span class="chip-count">×8</span></span> <span class="chip" style="font-size:13px">Microsoft AI<span class="chip-count">×6</span></span> <span class="chip" style="font-size:13px">核心研究者<span class="chip-count">×5</span></span> <span class="chip" style="font-size:13px">Hugging Face<span class="chip-count">×2</span></span> <span class="chip" style="font-size:13px">主要开源项目<span class="chip-count">×1</span></span></div>
+
+<h2 class="section-title">📊 本周话题分布</h2>
+<div class="chips"><span class="chip">其他<span class="chip-count">×530</span></span> <span class="chip">产品与应用<span class="chip-count">×32</span></span> <span class="chip">融资与商业<span class="chip-count">×30</span></span> <span class="chip">学术研究<span class="chip-count">×23</span></span> <span class="chip">大模型发布<span class="chip-count">×20</span></span> <span class="chip">芯片与算力<span class="chip-count">×17</span></span> <span class="chip">AI工具<span class="chip-count">×8</span></span> <span class="chip">行业观点<span class="chip-count">×7</span></span></div>
+
+<footer class="footer">
+  AI 早报 · 本周回顾 · 生成于 2026-05-08 23:44<br>
+  <a href="../../">← 返回最新早报</a> · <a href="../dashboard.html">📊 跑步仪表盘</a>
+</footer>
+
+</div>
+</body>
+</html>
