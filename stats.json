@@ -1,32 +1,103 @@
 {
-  "article_count": 21,
+  "article_count": 179,
   "output_file": "output/index.html",
-  "file_size_kb": 79.7,
-  "generated_at": "2026-05-08T11:51:52.757123+00:00",
+  "file_size_kb": 216.4,
+  "generated_at": "2026-05-08T13:46:23.915099+00:00",
   "event_db_stats": {
-    "total_articles": 3095,
+    "total_articles": 3136,
     "collected": 0,
-    "analyzed": 3095,
-    "total_events": 1681,
-    "total_evidence": 1755,
+    "analyzed": 3136,
+    "total_events": 1695,
+    "total_evidence": 1770,
     "event_status": {
       "official": 224,
-      "reported": 1457
+      "reported": 1471
     },
     "tier_0": 237,
-    "tier_1": 686,
-    "tier_2": 2172
+    "tier_1": 691,
+    "tier_2": 2208
   },
   "event_status_distribution": {
-    "reported": 21
+    "unknown": 179
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 21,
-  "multi_source_count": 1,
-  "important_count": 0,
-  "important_events": [],
+  "llm_count": 179,
+  "multi_source_count": 0,
+  "important_count": 10,
+  "important_events": [
+    {
+      "title": "OpenAI在ChatGPT中测试广告变现，免费用户将看到标注广告",
+      "event_id": "https://openai.com/index/testing-ads-in-chatgpt",
+      "importance": 4,
+      "source_name": "OpenAI Blog",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "Anthropic与SpaceX达成300MW算力合作，年化ARR增长8000%",
+      "event_id": "https://www.latent.space/p/ainews-anthropic-spacexais-300mw5byr",
+      "importance": 5,
+      "source_name": "Latent Space",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "特朗普政府酝酿AI安全政策转向，或对最强模型设置护栏",
+      "event_id": "https://www.axios.com/2026/05/08/ai-safety-pivot-trump-administration-china",
+      "importance": 4,
+      "source_name": "Axios",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "Datadog股价暴涨30%：AI需求驱动营收超10亿美元",
+      "event_id": "https://www.theinformation.com/briefings/datadog-shares-jump-30-ceo-says-ai-boosting-sales",
+      "importance": 4,
+      "source_name": "The Information",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "SpaceX斥资550亿美元在德克萨斯州布局AI芯片制造业务",
+      "event_id": "https://www.theverge.com/ai-artificial-intelligence/926356/spacex-terafab-plant-cost-ai-chips",
+      "importance": 4,
+      "source_name": "The Verge AI",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "Cloudflare裁员1100人转型「智能体AI优先」运营模式",
+      "event_id": "https://www.techmeme.com/260507/p43#a260507p43",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "英伟达与IREN签署5GW算力基础设施部署协议，可投资21亿美元",
+      "event_id": "https://www.techmeme.com/260507/p44#a260507p44",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "英伟达与康宁达成32亿美元合作协议，共建光学工厂",
+      "event_id": "https://www.theinformation.com/briefings/nvidia-inks-deal-invest-3-2-billion-corning",
+      "importance": 4,
+      "source_name": "The Information",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "马斯克与Anthropic达成意外合作，一石二鸟布局AI版图",
+      "event_id": "https://www.axios.com/2026/05/07/musk-anthropic-compute-spacex-ai",
+      "importance": 4,
+      "source_name": "Axios",
+      "archive_url": "archive/2026-05-08-am.html"
+    },
+    {
+      "title": "月之暗面完成20亿美元融资，估值达200亿美元",
+      "event_id": "https://techcrunch.com/2026/05/07/chinas-moonshot-ai-raises-2b-at-20b-valuation-as-demand-for-open-source-ai-skyrockets/",
+      "importance": 4,
+      "source_name": "TechCrunch AI",
+      "archive_url": "archive/2026-05-08-am.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 21,
+  "depth_count": 173,
   "entity_count": 0
 }
