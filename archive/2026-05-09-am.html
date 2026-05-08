@@ -1012,7 +1012,7 @@ body.show-read .is-read:hover {
     <div class="h-stats">
         <span><b>7</b> 篇</span>
         <span><b>5</b> 源</span>
-        <a href="archive/dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
+        <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
 </header>
@@ -1157,7 +1157,7 @@ body.show-read .is-read:hover {
 <!-- Footer -->
 <footer class="footer">
     AI 早报 · <b>5</b> 个信息源 · <b>7</b> 篇资讯 · 2026年05月09日
-    · <a href="archive/dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
+    · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
 <!-- modal_data.js 不在首屏加载；在 openModal() 首次被调用时由 script.js 动态注入 -->
@@ -1275,7 +1275,7 @@ function ensureModalData(cb) {
     }
     __dataLoading = true;
     var s = document.createElement('script');
-    s.src = 'modal_data.js';
+    s.src = '2026-05-09-am_modal.js';
     s.onload = function() { cb(); };
     s.onerror = function() { console.error('failed to load modal_data.js'); };
     document.head.appendChild(s);
