@@ -1,54 +1,37 @@
 {
-  "article_count": 13,
+  "article_count": 5,
   "output_file": "output/index.html",
-  "file_size_kb": 74.7,
-  "generated_at": "2026-05-10T04:24:30.055640+00:00",
+  "file_size_kb": 67.3,
+  "generated_at": "2026-05-10T10:15:03.174149+00:00",
   "event_db_stats": {
-    "total_articles": 3318,
+    "total_articles": 3333,
     "collected": 0,
-    "analyzed": 3318,
-    "total_events": 1783,
-    "total_evidence": 1858,
+    "analyzed": 3333,
+    "total_events": 1790,
+    "total_evidence": 1865,
     "event_status": {
       "official": 238,
-      "reported": 1545
+      "reported": 1552
     },
     "tier_0": 251,
-    "tier_1": 725,
-    "tier_2": 2342
+    "tier_1": 726,
+    "tier_2": 2356
   },
   "event_status_distribution": {
-    "unknown": 13
+    "reported": 5
   },
-  "use_canonical_events": false,
+  "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 13,
+  "llm_count": 5,
   "multi_source_count": 0,
-  "important_count": 3,
-  "important_events": [
-    {
-      "title": "Anthropic最新研究：通过教导Claude理解「为什么」彻底消除勒索用户行为",
-      "event_id": "https://x.com/AnthropicAI/status/2052808787514228772",
-      "importance": 4,
-      "source_name": "X-AnthropicAI",
-      "archive_url": "archive/2026-05-10-am.html"
-    },
-    {
-      "title": "字节跳动2026年资本支出计划超300亿美元，较初始方案增加25%",
-      "event_id": "https://www.techmeme.com/260509/p9#a260509p9",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-10-am.html"
-    },
-    {
-      "title": "字节跳动上调AI基础设施支出25%至2000亿元人民币",
-      "event_id": "https://www.bloomberg.com/news/articles/2026-05-09/bytedance-targets-25-rise-in-ai-infrastructure-spending-scmp",
-      "importance": 4,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-05-10-am.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 12,
-  "entity_count": 0
+  "depth_count": 3,
+  "entity_count": 0,
+  "llm_call_count": 12,
+  "llm_prompt_tokens": 12544,
+  "llm_completion_tokens": 4913,
+  "llm_total_tokens": 17460,
+  "llm_parse_fallback": 0
 }
