@@ -1,32 +1,40 @@
 {
-  "article_count": 34,
+  "article_count": 6,
   "output_file": "output/index.html",
-  "file_size_kb": 91.0,
-  "generated_at": "2026-05-09T15:37:59.077169+00:00",
+  "file_size_kb": 66.9,
+  "generated_at": "2026-05-10T00:45:41.844606+00:00",
   "event_db_stats": {
-    "total_articles": 3275,
+    "total_articles": 3295,
     "collected": 0,
-    "analyzed": 3275,
-    "total_events": 1773,
-    "total_evidence": 1848,
+    "analyzed": 3295,
+    "total_events": 1780,
+    "total_evidence": 1855,
     "event_status": {
       "official": 238,
-      "reported": 1535
+      "reported": 1542
     },
     "tier_0": 251,
-    "tier_1": 718,
-    "tier_2": 2306
+    "tier_1": 725,
+    "tier_2": 2319
   },
   "event_status_distribution": {
-    "unknown": 34
+    "reported": 6
   },
-  "use_canonical_events": false,
+  "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 34,
+  "llm_count": 6,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 1,
+  "important_events": [
+    {
+      "title": "字节跳动2026年资本支出计划超300亿美元，较初始方案增加25%",
+      "event_id": "evt_749f9fa3824e6b43956fd12e",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-10-am.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 32,
+  "depth_count": 5,
   "entity_count": 0
 }
