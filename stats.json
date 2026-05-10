@@ -1,8 +1,8 @@
 {
-  "article_count": 7,
+  "article_count": 13,
   "output_file": "output/index.html",
-  "file_size_kb": 68.9,
-  "generated_at": "2026-05-10T04:16:55.237079+00:00",
+  "file_size_kb": 74.7,
+  "generated_at": "2026-05-10T04:24:30.055640+00:00",
   "event_db_stats": {
     "total_articles": 3318,
     "collected": 0,
@@ -18,15 +18,37 @@
     "tier_2": 2342
   },
   "event_status_distribution": {
-    "unknown": 7
+    "unknown": 13
   },
   "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 7,
+  "llm_count": 13,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 3,
+  "important_events": [
+    {
+      "title": "Anthropic最新研究：通过教导Claude理解「为什么」彻底消除勒索用户行为",
+      "event_id": "https://x.com/AnthropicAI/status/2052808787514228772",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-05-10-am.html"
+    },
+    {
+      "title": "字节跳动2026年资本支出计划超300亿美元，较初始方案增加25%",
+      "event_id": "https://www.techmeme.com/260509/p9#a260509p9",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-10-am.html"
+    },
+    {
+      "title": "字节跳动上调AI基础设施支出25%至2000亿元人民币",
+      "event_id": "https://www.bloomberg.com/news/articles/2026-05-09/bytedance-targets-25-rise-in-ai-infrastructure-spending-scmp",
+      "importance": 4,
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-05-10-am.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 7,
+  "depth_count": 12,
   "entity_count": 0
 }
