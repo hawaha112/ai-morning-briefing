@@ -1,12 +1,12 @@
 {
-  "article_count": 6,
+  "article_count": 13,
   "output_file": "output/index.html",
-  "file_size_kb": 66.9,
-  "generated_at": "2026-05-10T00:45:41.844606+00:00",
+  "file_size_kb": 73.2,
+  "generated_at": "2026-05-10T00:55:21.912581+00:00",
   "event_db_stats": {
-    "total_articles": 3295,
+    "total_articles": 3296,
     "collected": 0,
-    "analyzed": 3295,
+    "analyzed": 3296,
     "total_events": 1780,
     "total_evidence": 1855,
     "event_status": {
@@ -15,26 +15,40 @@
     },
     "tier_0": 251,
     "tier_1": 725,
-    "tier_2": 2319
+    "tier_2": 2320
   },
   "event_status_distribution": {
-    "reported": 6
+    "unknown": 13
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 6,
+  "llm_count": 13,
   "multi_source_count": 0,
-  "important_count": 1,
+  "important_count": 3,
   "important_events": [
     {
+      "title": "Anthropic最新研究：通过教导Claude理解「为什么」彻底消除勒索用户行为",
+      "event_id": "https://x.com/AnthropicAI/status/2052808787514228772",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-05-10-am.html"
+    },
+    {
       "title": "字节跳动2026年资本支出计划超300亿美元，较初始方案增加25%",
-      "event_id": "evt_749f9fa3824e6b43956fd12e",
+      "event_id": "https://www.techmeme.com/260509/p9#a260509p9",
       "importance": 4,
       "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-10-am.html"
+    },
+    {
+      "title": "字节跳动上调AI基础设施支出25%至2000亿元人民币",
+      "event_id": "https://www.bloomberg.com/news/articles/2026-05-09/bytedance-targets-25-rise-in-ai-infrastructure-spending-scmp",
+      "importance": 4,
+      "source_name": "Bloomberg Technology",
       "archive_url": "archive/2026-05-10-am.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 5,
+  "depth_count": 12,
   "entity_count": 0
 }
