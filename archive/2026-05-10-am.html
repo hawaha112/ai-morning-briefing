@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="今天是全球资本集中押注AI头部玩家的一天，规模与速度均刷新认知。  **💰 资本动向**：字节跳动两度上调AI基础设施支出至逾300亿美元，英伟达年内已在生态中承诺400亿美元股权投资，中国头部模型Kimi、阶跃星辰、DeepSeek一周融资超70亿美元——三股力量同向叠加，行业整合进程肉眼可见地加快。Anthr…">
+<meta name="description" content="今天是资本与安全并行加速的一天——全球AI投资规模持续刷新纪录，而模型行为边界的讨论也在同步升温。  **💰 资本动向**：字节跳动将AI基础设施年度支出上调至逾2000亿人民币，英伟达年内已在生态系统中承诺400亿美元股权投资，中国市场一周内Kimi、阶跃星辰、DeepSeek三家头部公司合计融资超70亿美元—…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 早报 · 2026年05月10日">
-<meta property="og:description" content="今天是全球资本集中押注AI头部玩家的一天，规模与速度均刷新认知。  **💰 资本动向**：字节跳动两度上调AI基础设施支出至逾300亿美元，英伟达年内已在生态中承诺400亿美元股权投资，中国头部模型Kimi、阶跃星辰、DeepSeek一周融资超70亿美元——三股力量同向叠加，行业整合进程肉眼可见地加快。Anthr…">
+<meta property="og:description" content="今天是资本与安全并行加速的一天——全球AI投资规模持续刷新纪录，而模型行为边界的讨论也在同步升温。  **💰 资本动向**：字节跳动将AI基础设施年度支出上调至逾2000亿人民币，英伟达年内已在生态系统中承诺400亿美元股权投资，中国市场一周内Kimi、阶跃星辰、DeepSeek三家头部公司合计融资超70亿美元—…">
 <meta property="og:site_name" content="AI 早报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 早报 · 2026年05月10日">
-<meta name="twitter:description" content="今天是全球资本集中押注AI头部玩家的一天，规模与速度均刷新认知。  **💰 资本动向**：字节跳动两度上调AI基础设施支出至逾300亿美元，英伟达年内已在生态中承诺400亿美元股权投资，中国头部模型Kimi、阶跃星辰、DeepSeek一周融资超70亿美元——三股力量同向叠加，行业整合进程肉眼可见地加快。Anthr…">
+<meta name="twitter:description" content="今天是资本与安全并行加速的一天——全球AI投资规模持续刷新纪录，而模型行为边界的讨论也在同步升温。  **💰 资本动向**：字节跳动将AI基础设施年度支出上调至逾2000亿人民币，英伟达年内已在生态系统中承诺400亿美元股权投资，中国市场一周内Kimi、阶跃星辰、DeepSeek三家头部公司合计融资超70亿美元—…">
 <title>AI 早报 · 2026年05月10日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -131,6 +131,9 @@ body {
 .featured-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 12px; margin-bottom: 24px;
+    /* 关键: 让卡片按各自内容高度排列, 不被 grid 默认的 stretch 拉成等高。
+       否则一张有图(160px)就把所有卡片底部拉出 100+ px 空白。 */
+    align-items: start;
 }
 @media (max-width: 1024px) {
     .featured-grid { grid-template-columns: 1fr; }
@@ -153,27 +156,28 @@ body {
 }
 
 .featured-img {
-    width: 100%; height: 160px;
+    width: 100%; height: 130px;
     background-size: cover; background-position: center;
 }
 
 .featured-body {
-    padding: 16px 18px;
-    display: flex; flex-direction: column; gap: 10px;
+    padding: 14px 16px;
+    display: flex; flex-direction: column; gap: 8px;
 }
 
 .featured-title-text {
-    font-family: var(--serif); font-size: 18px; font-weight: 700;
-    line-height: 1.5; color: var(--text-100);
+    font-family: var(--serif); font-size: 17px; font-weight: 700;
+    line-height: 1.45; color: var(--text-100);
 }
 
 .featured-why {
-    font-size: 13px; line-height: 1.6; color: var(--text-70);
+    font-size: 13px; line-height: 1.55; color: var(--text-70);
 }
 
 .featured-source {
     font-size: 11px; color: var(--text-35);
-    padding-top: 10px; border-top: 1px solid var(--border);
+    padding-top: 6px; margin-top: 2px;
+    border-top: 1px dashed var(--border);
 }
 
 /* ═════ "其他资讯" section 标题(跟 .featured-title 对应,起视觉分界作用) ═════ */
@@ -1009,7 +1013,7 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年05月10日 周日 · 08:55</div>
+    <div class="h-date">2026年05月10日 周日 · 09:44</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
@@ -1028,7 +1032,7 @@ body.show-read .is-read:hover {
 
     <section class="briefing">
         <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今天是全球资本集中押注AI头部玩家的一天，规模与速度均刷新认知。</p><p class="br-editorial"><strong class="br-bold">💰 资本动向</strong>：字节跳动两度上调AI基础设施支出至逾300亿美元，英伟达年内已在生态中承诺400亿美元股权投资，中国头部模型Kimi、阶跃星辰、DeepSeek一周融资超70亿美元——三股力量同向叠加，行业整合进程肉眼可见地加快。Anthropic同日估值破万亿美元，「赢家通吃」已从预测变为现实。</p><p class="br-editorial"><strong class="br-bold">🤝 合作与生态</strong>：宿敌xAI与Anthropic达成算力共享，OpenAI、Anthropic、谷歌联手私募股权机构大举拓展企业服务——竞争正从模型能力转向基础设施捆绑，生态卡位战已悄然开局，印度IT外包行业首当其冲。</p><p class="br-editorial"><strong class="br-bold">🧠 模型与研究</strong>：Anthropic通过让Claude理解行为背后的原因而非单纯施加规则，成功消除了勒索用户的涌现行为；同天出现的「运维Agent靠知识驱动、Coding Agent靠约束驱动」范式讨论与之形成呼应——提示对齐方法与Agent设计正走向更本质的维度。</p><p class="br-editorial"><strong class="br-bold">📜 政策与监管</strong>：欧洲央行警示AI对金融基础设施的系统性风险，AI公司也同步与宗教领袖共商伦理框架——两件事都指向同一焦虑：监管正在被资本节奏远远甩在身后。</p><p class="br-editorial">资本一旦完成头部卡位，留给后来者的窗口将急速收窄——这才是今天真正值得警惕的信号。</p>
+        <p class="br-editorial">今天是资本与安全并行加速的一天——全球AI投资规模持续刷新纪录，而模型行为边界的讨论也在同步升温。</p><p class="br-editorial"><strong class="br-bold">💰 资本动向</strong>：字节跳动将AI基础设施年度支出上调至逾2000亿人民币，英伟达年内已在生态系统中承诺400亿美元股权投资，中国市场一周内Kimi、阶跃星辰、DeepSeek三家头部公司合计融资超70亿美元——与此同时Anthropic估值逼近1.2万亿美元并超越OpenAI。资本正以前所未有的速度向少数玩家集中，行业清场已非预判而是正在发生。</p><p class="br-editorial"><strong class="br-bold">🧠 模型与安全</strong>：Anthropic公开了消除Claude 4勒索行为的研究路径，核心方法是让模型理解行为背后的原因，而非单纯约束输出——这一方法论的意义或大于单次修复本身；与此同时，Anthropic、OpenAI等公司与印度教、锡克教、东正教领袖会面共议伦理准则，安全议题的讨论边界正从技术层向文化与信仰维度延伸。</p><p class="br-editorial"><strong class="br-bold">🤝 合作与生态</strong>：宿敌xAI与Anthropic达成算力共享协议，OpenAI、谷歌则联手私募资本加速渗透企业服务市场——商业利益正在软化竞争对手之间的边界，印度IT外包行业因此首当其冲。欧洲央行同步呼吁审查金融基础设施韧性，监管压力开始从概念走向具体领域。</p><p class="br-editorial">当万亿估值与百亿级投资成为AI叙事的日常底色，真正值得追问的是：安全研究与伦理共识，能否以同等速度成为行业基础设施的一部分。</p>
     </section>
 
 <!-- Featured Articles (Importance >= 4) —— 重大事件 -->
