@@ -1,46 +1,45 @@
 {
-  "article_count": 18,
+  "article_count": 7,
   "output_file": "output/index.html",
-  "file_size_kb": 78.6,
-  "generated_at": "2026-05-11T12:40:30.651341+00:00",
+  "file_size_kb": 69.7,
+  "generated_at": "2026-05-11T13:39:45.853617+00:00",
   "event_db_stats": {
-    "total_articles": 3419,
+    "total_articles": 3440,
     "collected": 0,
-    "analyzed": 3419,
-    "total_events": 1830,
-    "total_evidence": 1906,
+    "analyzed": 3440,
+    "total_events": 1839,
+    "total_evidence": 1916,
     "event_status": {
-      "official": 241,
-      "reported": 1589
+      "official": 244,
+      "reported": 1595
     },
-    "tier_0": 254,
-    "tier_1": 759,
-    "tier_2": 2406
+    "tier_0": 257,
+    "tier_1": 762,
+    "tier_2": 2421
   },
   "event_status_distribution": {
-    "reported": 17,
-    "official": 1
+    "reported": 7
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 18,
-  "multi_source_count": 1,
+  "llm_count": 7,
+  "multi_source_count": 0,
   "important_count": 1,
   "important_events": [
     {
-      "title": "菲尔兹奖得主陶哲轩实测ChatGPT Pro：17分钟产出论文级数学成果",
-      "event_id": "evt_8655a1bbb0a30b4f11f08f89",
+      "title": "快手计划分拆可灵AI视频业务独立上市，估值200亿美元",
+      "event_id": "evt_75abb73309c96442a8c46c7c",
       "importance": 4,
-      "source_name": "量子位",
-      "archive_url": "archive/2026-05-11-pm.html"
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-11-am.html"
     }
   ],
-  "official_count": 1,
-  "depth_count": 17,
+  "official_count": 0,
+  "depth_count": 7,
   "entity_count": 0,
-  "llm_call_count": 50,
-  "llm_prompt_tokens": 58357,
-  "llm_completion_tokens": 19652,
-  "llm_total_tokens": 78025,
+  "llm_call_count": 21,
+  "llm_prompt_tokens": 19113,
+  "llm_completion_tokens": 8215,
+  "llm_total_tokens": 27334,
   "llm_parse_fallback": 0
 }
