@@ -1,8 +1,8 @@
 {
-  "article_count": 2,
+  "article_count": 45,
   "output_file": "output/index.html",
-  "file_size_kb": 62.4,
-  "generated_at": "2026-05-11T14:23:16.909226+00:00",
+  "file_size_kb": 101.9,
+  "generated_at": "2026-05-11T14:24:43.282784+00:00",
   "event_db_stats": {
     "total_articles": 3451,
     "collected": 0,
@@ -18,20 +18,49 @@
     "tier_2": 2431
   },
   "event_status_distribution": {
-    "reported": 2
+    "unknown": 45
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 2,
+  "llm_count": 45,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 4,
+  "important_events": [
+    {
+      "title": "Codex自主完成安全审计并赚取16.88美元，AI代理创收首次验证",
+      "event_id": "https://x.com/sama/status/2053566155571560868",
+      "importance": 4,
+      "source_name": "X-Sam Altman",
+      "archive_url": "archive/2026-05-11-pm.html"
+    },
+    {
+      "title": "AI芯片商Cerebras Systems上调IPO规模至48亿美元",
+      "event_id": "https://www.bloomberg.com/news/articles/2026-05-11/ai-chipmaker-cerebras-systems-seeks-4-8-billion-in-upsized-ipo",
+      "importance": 4,
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-05-11-pm.html"
+    },
+    {
+      "title": "菲尔兹奖得主陶哲轩实测ChatGPT Pro：17分钟产出论文级数学成果",
+      "event_id": "https://www.qbitai.com/2026/05/415186.html",
+      "importance": 4,
+      "source_name": "量子位",
+      "archive_url": "archive/2026-05-11-pm.html"
+    },
+    {
+      "title": "快手计划分拆可灵AI视频业务独立上市，估值200亿美元",
+      "event_id": "https://www.techmeme.com/260511/p16#a260511p16",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-11-pm.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 2,
+  "depth_count": 44,
   "entity_count": 0,
-  "llm_call_count": 6,
-  "llm_prompt_tokens": 6798,
-  "llm_completion_tokens": 2432,
-  "llm_total_tokens": 9232,
+  "llm_call_count": 1,
+  "llm_prompt_tokens": 1088,
+  "llm_completion_tokens": 163,
+  "llm_total_tokens": 1251,
   "llm_parse_fallback": 0
 }
