@@ -1,37 +1,46 @@
 {
-  "article_count": 3,
+  "article_count": 18,
   "output_file": "output/index.html",
-  "file_size_kb": 65.5,
-  "generated_at": "2026-05-10T22:48:25.481875+00:00",
+  "file_size_kb": 78.6,
+  "generated_at": "2026-05-11T12:40:30.651341+00:00",
   "event_db_stats": {
-    "total_articles": 3362,
+    "total_articles": 3419,
     "collected": 0,
-    "analyzed": 3362,
-    "total_events": 1801,
-    "total_evidence": 1876,
+    "analyzed": 3419,
+    "total_events": 1830,
+    "total_evidence": 1906,
     "event_status": {
-      "official": 238,
-      "reported": 1563
+      "official": 241,
+      "reported": 1589
     },
-    "tier_0": 251,
-    "tier_1": 736,
-    "tier_2": 2375
+    "tier_0": 254,
+    "tier_1": 759,
+    "tier_2": 2406
   },
   "event_status_distribution": {
-    "reported": 3
+    "reported": 17,
+    "official": 1
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 3,
-  "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
-  "official_count": 0,
-  "depth_count": 3,
+  "llm_count": 18,
+  "multi_source_count": 1,
+  "important_count": 1,
+  "important_events": [
+    {
+      "title": "菲尔兹奖得主陶哲轩实测ChatGPT Pro：17分钟产出论文级数学成果",
+      "event_id": "evt_8655a1bbb0a30b4f11f08f89",
+      "importance": 4,
+      "source_name": "量子位",
+      "archive_url": "archive/2026-05-11-pm.html"
+    }
+  ],
+  "official_count": 1,
+  "depth_count": 17,
   "entity_count": 0,
-  "llm_call_count": 21,
-  "llm_prompt_tokens": 20368,
-  "llm_completion_tokens": 8012,
-  "llm_total_tokens": 28386,
-  "llm_parse_fallback": 1
+  "llm_call_count": 50,
+  "llm_prompt_tokens": 58357,
+  "llm_completion_tokens": 19652,
+  "llm_total_tokens": 78025,
+  "llm_parse_fallback": 0
 }
