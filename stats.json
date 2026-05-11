@@ -1,66 +1,37 @@
 {
-  "article_count": 45,
+  "article_count": 2,
   "output_file": "output/index.html",
-  "file_size_kb": 101.9,
-  "generated_at": "2026-05-11T14:24:43.282784+00:00",
+  "file_size_kb": 62.5,
+  "generated_at": "2026-05-11T15:19:29.610758+00:00",
   "event_db_stats": {
-    "total_articles": 3451,
+    "total_articles": 3470,
     "collected": 0,
-    "analyzed": 3451,
-    "total_events": 1843,
-    "total_evidence": 1920,
+    "analyzed": 3470,
+    "total_events": 1853,
+    "total_evidence": 1932,
     "event_status": {
       "official": 244,
-      "reported": 1599
+      "reported": 1609
     },
     "tier_0": 257,
-    "tier_1": 763,
-    "tier_2": 2431
+    "tier_1": 778,
+    "tier_2": 2435
   },
   "event_status_distribution": {
-    "unknown": 45
+    "reported": 2
   },
-  "use_canonical_events": false,
+  "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 45,
+  "llm_count": 2,
   "multi_source_count": 0,
-  "important_count": 4,
-  "important_events": [
-    {
-      "title": "Codex自主完成安全审计并赚取16.88美元，AI代理创收首次验证",
-      "event_id": "https://x.com/sama/status/2053566155571560868",
-      "importance": 4,
-      "source_name": "X-Sam Altman",
-      "archive_url": "archive/2026-05-11-pm.html"
-    },
-    {
-      "title": "AI芯片商Cerebras Systems上调IPO规模至48亿美元",
-      "event_id": "https://www.bloomberg.com/news/articles/2026-05-11/ai-chipmaker-cerebras-systems-seeks-4-8-billion-in-upsized-ipo",
-      "importance": 4,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-05-11-pm.html"
-    },
-    {
-      "title": "菲尔兹奖得主陶哲轩实测ChatGPT Pro：17分钟产出论文级数学成果",
-      "event_id": "https://www.qbitai.com/2026/05/415186.html",
-      "importance": 4,
-      "source_name": "量子位",
-      "archive_url": "archive/2026-05-11-pm.html"
-    },
-    {
-      "title": "快手计划分拆可灵AI视频业务独立上市，估值200亿美元",
-      "event_id": "https://www.techmeme.com/260511/p16#a260511p16",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-11-pm.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 44,
+  "depth_count": 2,
   "entity_count": 0,
-  "llm_call_count": 1,
-  "llm_prompt_tokens": 1088,
-  "llm_completion_tokens": 163,
-  "llm_total_tokens": 1251,
+  "llm_call_count": 24,
+  "llm_prompt_tokens": 32700,
+  "llm_completion_tokens": 9809,
+  "llm_total_tokens": 42517,
   "llm_parse_fallback": 0
 }
