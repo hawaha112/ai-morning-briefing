@@ -1,45 +1,37 @@
 {
-  "article_count": 7,
+  "article_count": 2,
   "output_file": "output/index.html",
-  "file_size_kb": 69.7,
-  "generated_at": "2026-05-11T13:39:45.853617+00:00",
+  "file_size_kb": 62.4,
+  "generated_at": "2026-05-11T14:23:16.909226+00:00",
   "event_db_stats": {
-    "total_articles": 3440,
+    "total_articles": 3451,
     "collected": 0,
-    "analyzed": 3440,
-    "total_events": 1839,
-    "total_evidence": 1916,
+    "analyzed": 3451,
+    "total_events": 1843,
+    "total_evidence": 1920,
     "event_status": {
       "official": 244,
-      "reported": 1595
+      "reported": 1599
     },
     "tier_0": 257,
-    "tier_1": 762,
-    "tier_2": 2421
+    "tier_1": 763,
+    "tier_2": 2431
   },
   "event_status_distribution": {
-    "reported": 7
+    "reported": 2
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 7,
+  "llm_count": 2,
   "multi_source_count": 0,
-  "important_count": 1,
-  "important_events": [
-    {
-      "title": "快手计划分拆可灵AI视频业务独立上市，估值200亿美元",
-      "event_id": "evt_75abb73309c96442a8c46c7c",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-11-am.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 7,
+  "depth_count": 2,
   "entity_count": 0,
-  "llm_call_count": 21,
-  "llm_prompt_tokens": 19113,
-  "llm_completion_tokens": 8215,
-  "llm_total_tokens": 27334,
+  "llm_call_count": 6,
+  "llm_prompt_tokens": 6798,
+  "llm_completion_tokens": 2432,
+  "llm_total_tokens": 9232,
   "llm_parse_fallback": 0
 }
