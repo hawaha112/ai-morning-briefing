@@ -1,37 +1,45 @@
 {
-  "article_count": 16,
+  "article_count": 22,
   "output_file": "output/index.html",
-  "file_size_kb": 77.2,
-  "generated_at": "2026-05-11T22:58:07.070145+00:00",
+  "file_size_kb": 83.0,
+  "generated_at": "2026-05-12T11:54:08.396502+00:00",
   "event_db_stats": {
-    "total_articles": 3508,
+    "total_articles": 3560,
     "collected": 0,
-    "analyzed": 3508,
-    "total_events": 1882,
-    "total_evidence": 1966,
+    "analyzed": 3560,
+    "total_events": 1910,
+    "total_evidence": 1999,
     "event_status": {
-      "official": 248,
-      "reported": 1634
+      "official": 250,
+      "reported": 1660
     },
-    "tier_0": 263,
-    "tier_1": 792,
-    "tier_2": 2453
+    "tier_0": 264,
+    "tier_1": 815,
+    "tier_2": 2481
   },
   "event_status_distribution": {
-    "reported": 16
+    "reported": 22
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 16,
-  "multi_source_count": 1,
-  "important_count": 0,
-  "important_events": [],
+  "llm_count": 22,
+  "multi_source_count": 0,
+  "important_count": 1,
+  "important_events": [
+    {
+      "title": "Anthropic拒绝中国智库要求开放Mythos模型访问权限",
+      "event_id": "evt_4b12efb8c1f045ceb92ac6c1",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-12-pm.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 16,
+  "depth_count": 20,
   "entity_count": 0,
-  "llm_call_count": 63,
-  "llm_prompt_tokens": 79190,
-  "llm_completion_tokens": 25545,
-  "llm_total_tokens": 104762,
-  "llm_parse_fallback": 1
+  "llm_call_count": 57,
+  "llm_prompt_tokens": 75063,
+  "llm_completion_tokens": 24705,
+  "llm_total_tokens": 99785,
+  "llm_parse_fallback": 0
 }
