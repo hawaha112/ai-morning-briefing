@@ -1,52 +1,52 @@
 {
-  "article_count": 22,
+  "article_count": 29,
   "output_file": "output/index.html",
-  "file_size_kb": 82.6,
-  "generated_at": "2026-05-12T23:05:30.673959+00:00",
+  "file_size_kb": 89.5,
+  "generated_at": "2026-05-13T12:05:53.146516+00:00",
   "event_db_stats": {
-    "total_articles": 3622,
+    "total_articles": 3691,
     "collected": 0,
-    "analyzed": 3622,
-    "total_events": 1946,
-    "total_evidence": 2042,
+    "analyzed": 3691,
+    "total_events": 1985,
+    "total_evidence": 2083,
     "event_status": {
-      "official": 256,
-      "reported": 1690
+      "official": 257,
+      "reported": 1728
     },
-    "tier_0": 271,
-    "tier_1": 827,
-    "tier_2": 2524
+    "tier_0": 272,
+    "tier_1": 855,
+    "tier_2": 2564
   },
   "event_status_distribution": {
-    "reported": 22
+    "reported": 29
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 22,
-  "multi_source_count": 2,
+  "llm_count": 29,
+  "multi_source_count": 0,
   "important_count": 2,
   "important_events": [
     {
-      "title": "Anthropic洽购SDK生成工具商Stainless，出价至少3亿美元",
-      "event_id": "evt_446a03f886d5e2b758d7446d",
+      "title": "OpenAI成立40亿美元企业部署公司并收购AI咨询公司Tomoro",
+      "event_id": "evt_492ecfcde737d720dd59b090",
       "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-13-am.html"
+      "source_name": "Stratechery",
+      "archive_url": "archive/2026-05-13-pm.html"
     },
     {
-      "title": "CME Group与Silicon Data宣布推出GPU算力期货市场",
-      "event_id": "evt_ec51aeb00dbcd31bd4275921",
+      "title": "Recursive Superintelligence完成6.5亿美元融资，估值40亿美元追求递归自我改进",
+      "event_id": "evt_47be9757da79e93975560442",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-13-am.html"
+      "archive_url": "archive/2026-05-13-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 21,
+  "depth_count": 29,
   "entity_count": 0,
-  "llm_call_count": 74,
-  "llm_prompt_tokens": 100873,
-  "llm_completion_tokens": 29347,
-  "llm_total_tokens": 130254,
-  "llm_parse_fallback": 0
+  "llm_call_count": 79,
+  "llm_prompt_tokens": 102324,
+  "llm_completion_tokens": 30444,
+  "llm_total_tokens": 132791,
+  "llm_parse_fallback": 2
 }
