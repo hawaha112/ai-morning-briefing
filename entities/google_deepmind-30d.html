@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google DeepMind · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>Google DeepMind</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>85</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (8)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 08:05</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260505/p57#a260505p57" target="_blank" rel="noopener">谷歌在Gemini应用内部测试名为Remy的AI代理，可代替用户操作谷歌服务</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">谷歌正在Gemini应用中测试内部代号为Remy的AI代理，该代理能整合谷歌各项服务并代表用户执行操作。</p>
+                <p class="tl-event-deep">Remy的战略意义在于谷歌将其海量服务生态转化为代理能力护城河。相比其他科技公司需要通过API集成第三方服务，谷歌的代理可在自有生态内实现更低延迟、更高权限的操作，这一原生优势将是差异化竞争的关键。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 15:00</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/" target="_blank" rel="noopener">Announcing our partnership with the Republic of Korea</a>
+                </h3>
+                <div class="tl-event-meta">DeepMind Blog </div>
+                <p class="tl-event-summary">Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-25 03:00</span>
+                <span class="tl-rel">20 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://blog.google/products-and-platforms/products/gemini/gemini-spring-cleaning-tips/" target="_blank" rel="noopener">Gemini tips</a>
+                </h3>
+                <div class="tl-event-meta">Google AI Blog </div>
+                <p class="tl-event-summary">Organize your home and digital space with Gemini.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 00:31</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://x.com/googleaidevs/status/2046990222408200316" target="_blank" rel="noopener">Google | DeepMind | Gemini Embedding</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">Gemini Embedding 2 is now generally available in the Gemini API and Vertex AI!</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 00:03</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐⭐
+                    <a href="https://x.com/GoogleDeepMind/status/2046983340524269713" target="_blank" rel="noopener">Google | Gemini Enterprise</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">We’re launching Gemini Enterprise Agent Platform with @GoogleCloud : a platform for businesses to develop, scale, govern and optimize agents.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 00:03</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐⭐
+                    <a href="https://x.com/GoogleDeepMind/status/2046983343481270459" target="_blank" rel="noopener">Google | DeepMind | Gemini 3</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">It gives access to 200+ of the world’s leading models through the Model Garden.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 18:00</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.infoq.cn/article/ry64GrNLAEEf1qdZABb0?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">谷歌以Apache 2.0协议开源Gemma 4，支持多模态与智能体能力</a>
+                </h3>
+                <div class="tl-event-meta">AI前线 </div>
+                <p class="tl-event-summary">谷歌发布Gemma 4开源模型，采用Apache 2.0许可证，支持多模态输入与智能体任务。</p>
+                <p class="tl-event-deep">此次Gemma 4的发布具有战略意义：Apache 2.0协议直接回应了社区对Llama许可限制的不满，可能加速企业从Llama向Gemma的迁移。多模态+智能体的能力组合使其不再是单纯的语言模型，而是一个可部署的智能体基础平台。谷歌此举同时服务于两个目标：扩大开发者生态，以及为Google Cloud的企业AI服务提供可信赖的开源背书。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-16 21:03</span>
+                <span class="tl-rel">29 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://x.com/GoogleDeepMind/status/2044763631858909269" target="_blank" rel="noopener">谷歌Gemini机器人模型用自然语言控制波士顿动力Spot</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind团队将Gemini Robotics ER与波士顿动力Spot机器狗集成，实现用自然语言替代复杂代码控制机器人执行复合任务。</p>
+                <p class="tl-event-deep">此次集成是「大模型+机器人」路线的一次重要落地验证。其深层价值在于：通过标准化工具接口，Gemini Robotics ER理论上可适配多种机器人平台，形成「一个大脑、多个身体」的架构。这对降低机器人软件开发成本、加速垂直场景部署具有战略意义。潜在风险在于自然语言指令的歧义性可能导致执行偏差，安全边界的定义和兜底机制仍是关键挑战。</p>
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (77)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-14 02:09</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.technologyreview.com/2026/05/13/1137203/ai-chatbots-are-giving-out-peoples-real-phone-numbers/" target="_blank" rel="noopener">谷歌Gemini泄露真实手机号：AI聊天机器人的隐私危机</a>
+                </h3>
+                <div class="tl-event-meta">MIT Tech Review </div>
+                <p class="tl-event-summary">谷歌Gemini被报告将真实用户私人电话号码提供给陌生人，受害者遭受骚扰电话轰炸，且目前无简单防护手段。</p>
+                <p class="tl-event-deep">此事件的深层影响在于它模糊了「数据泄露」与「模型幻觉」的边界，使现有隐私法律框架陷入适用困境。短期内，谷歌将面临来自欧盟 GDPR 监管机构的调查压力，并可能被迫推出用户信息「选出」（opt-out）机制。长期来看，这将推动行业在训练数据清洗、输出内容过滤以及个人信息识别（PII detection）层面加大投入，并可能催生专门针对 LLM 输出的隐私合规第三方审计赛道。对普通用户而言，最现实的启示是：你曾经在网络上留下的任何联系方式，都可能成为 AI「幻觉」的素材。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-13 16:29</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/05/416870.html" target="_blank" rel="noopener">谷歌将Gemini全面整合进Android生态，苹果画饼谷歌先落地</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">谷歌宣布Gemini AI全面进驻Android及周边硬件生态，覆盖范围甚至延伸至鼠标等外设，率先实现苹果曾描绘的AI全家桶愿景。</p>
+                <p class="tl-event-deep">谷歌此举的战略价值在于「先发即既成事实」——AI生态的网络效应一旦形成，后来者追赶代价极高。苹果面临的真实压力不是功能落后，而是用户心智正在被「谷歌=AI全家桶」锁定。长期看，这场竞争的胜负不在于单点功能，而在于谁能率先将AI能力做成用户无感知的基础设施——当AI「消失」在每个交互细节中，生态护城河才真正成型。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-13 02:03</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/cactus-compute/needle" target="_blank" rel="noopener">Needle团队将Gemini工具调用能力蒸馏进26M参数小模型</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">Needle项目通过知识蒸馏技术，将Gemini的工具调用能力压缩进仅2600万参数的小模型，大幅降低工具调用推理成本。</p>
+                <p class="tl-event-deep">这是近6个月内第4个专注「能力蒸馏到极小模型」的项目（前有Phi-3-mini函数调用、SmolAgent、Gorilla-3B）。若Needle的准确率能达到Gemini的80%+，对Anthropic/OpenAI的API工具调用收入构成直接威胁——高频调用客户（自动化、RPA赛道）将在90天内迁移。更值得关注的是：如果工具调用能被蒸馏到26M，推理、规划等其他Agent核心能力同样面临被「小模型化」的压力，头部Lab的护城河将从能力转向数据和生态。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-13 01:01</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/05/12/everything-google-announced-at-its-android-show-from-googlebooks-to-vibe-coded-widgets/" target="_blank" rel="noopener">谷歌Android Show发布会：Gemini全面整合安卓生态</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">谷歌在I/O前发布Android Show，推出AI优先的Googlebooks笔记本、更强Gemini智能体功能、氛围编程安卓桌面小组件及Chrome内置Gemini等。</p>
+                <p class="tl-event-deep">本次 Android Show 的核心信号是：谷歌正将 Gemini 从单一产品转化为跨硬件、软件、车载的基础设施层。Googlebooks 硬件入局表明谷歌不满足于纯软件分发，要控制 AI 体验的完整链路。"氛围编程"小组件则揭示了更深层趋势——AI 正在把专业能力（编程）民主化，重塑内容生产格局。短期影响：加速安卓生态用户对 Gemini 的使用黏性；长期影响：若 Agentic 功能成熟落地，谷歌搜索广告模式将面临自我颠覆压力。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-13 01:00</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/05/12/google-brings-agentic-ai-and-vibe-coded-widgets-to-android/" target="_blank" rel="noopener">谷歌为Android引入Gemini智能体AI与AI组件功能</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">谷歌在Android上推出Gemini智能体AI能力及AI驱动的小组件，并集成基于Gboard的语音听写与表单填写功能。</p>
+                <p class="tl-event-deep">此次更新的深层逻辑是谷歌将 Android 从「应用分发平台」重新定位为「AI 执行层」。Agentic AI 的落地将使应用本身的价值被稀释——当 AI 能跨 App 完成任务，用户对单一应用的依赖度下降，谷歌反而成为最大受益方。短期影响：加速 Apple Intelligence 的竞争压力；中期影响：重塑移动端应用分发与变现逻辑；长期风险：智能体权限管理与隐私边界将成监管焦点。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-10 11:22</span>
+                <span class="tl-rel">5 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanded-gemini-api-file-search-multimodal-rag/" target="_blank" rel="noopener">谷歌Gemini API文件搜索功能升级支持多模态</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">谷歌Gemini API的文件搜索功能现已支持多模态内容检索，可处理图像、视频等非文本数据。</p>
+                <p class="tl-event-deep">此次升级体现了谷歌将Gemini的多模态理解能力向API工具层下沉的战略意图。多模态RAG是当前企业AI应用的关键瓶颈之一，谷歌通过原生API支持而非第三方集成的方式切入，有利于构建更深的开发者依赖和平台粘性。长期来看，若多模态文件搜索性能稳定、成本合理，将对专注多模态嵌入的垂直厂商形成压力。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-09 02:55</span>
+                <span class="tl-rel">6 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260508/p27#a260508p27" target="_blank" rel="noopener">Isomorphic Labs融资超20亿美元，AI药物发现再获资本青睐</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Sources: Isomorphic Labs, an AI-powered drug discovery company spun out of Google DeepMind, is in ad</p>
+                <p class="tl-event-deep">20亿美元融资规模意味着Isomorphic Labs的估值将进入顶级AI独角兽序列，这对整个AI生物医药赛道具有强烈的信号意义。其深层逻辑在于：传统新药研发平均耗资超10亿美元、周期超10年，AI若能将这一成本和周期压缩50%以上，其商业回报将是天文数字。但风险同样显著——AI药物发现的临床转化率尚未经过大规模验证，AlphaFold驱动的候选分子距离真正上市仍有数年距离。此轮融资本质上是资本在押注一个尚未完全兑现的技术承诺。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 04:31</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.wired.com/story/you-can-disable-gemini-in-chrome-if-its-freaking-you-out/" target="_blank" rel="noopener">谷歌将4GB Gemini模型内置Chrome，用户隐私争议升温</a>
+                </h3>
+                <div class="tl-event-meta">Wired AI </div>
+                <p class="tl-event-summary">谷歌悄然在Chrome浏览器中内置一个4GB大小的Gemini AI模型，引发用户对隐私与存储占用的双重担忧。</p>
+                <p class="tl-event-deep">此事件的深层影响有三：其一，**AI 基础设施化**趋势不可逆，平台方将持续以「功能更新」名义扩张本地 AI 占用，监管滞后将成常态；其二，**端侧模型部署**将重塑数据隐私边界，本地推理≠安全，模型行为透明度成新监管议题；其三，谷歌此举将倒逼竞争对手加速浏览器端 AI 布局，Safari、Firefox 面临跟进压力，浏览器市场格局或加速分化。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 03:57</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://simonwillison.net/2026/May/7/llm-gemini/#atom-everything" target="_blank" rel="noopener">llm-gemini 0.31发布：Gemini 3.1 Flash-Lite正式版上线</a>
+                </h3>
+                <div class="tl-event-meta">Simon Willison </div>
+                <p class="tl-event-summary">Simon Willison发布llm-gemini 0.31，Gemini 3.1 Flash-Lite从预览版升级为正式稳定版本。</p>
+                <p class="tl-event-deep">Gemini 3.1 Flash-Lite从预览转正式版，是Google在轻量模型产品线上的常规节奏动作，实际技术意义有限。但对llm生态而言，稳定版意味着插件维护成本降低、用户信任度提升。值得关注的是，Google在Flash系列的迭代速度较快，轻量模型市场竞争（与Claude Haiku、GPT-4o mini等）持续加剧，正式版发布有助于在开发者社区建立长期使用习惯。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 23:00</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2052403306257940967" target="_blank" rel="noopener">谷歌DeepMind推出AlphaEvolve：Gemini驱动算法进化智能体落地多领域</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">谷歌DeepMind发布AlphaEvolve，一款由Gemini模型驱动的编码智能体，过去一年已在量子计算、生物技术、物流调度及谷歌内部AI基础设施中加速算法发现与优化。</p>
+                <p class="tl-event-deep">AlphaEvolve 最深远的影响不在于单点算法突破，而在于它将算法发现的边际成本大幅压低——原本需要博士生数年攻克的优化问题，可能被压缩至数天的机器搜索。更值得警惕的是其用于谷歌内部 AI 基础设施优化这一信号：当 AI 开始自主优化训练和推理系统本身，算力效率的提升将形成正反馈，加剧头部模型公司的基础设施护城河。这对算法工程师岗位和开源社区的算法创新生态均构成结构性冲击。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 21:51</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.huxiu.com/article/4856404.html" target="_blank" rel="noopener">AI攻略翻车：大模型幻觉让五一游客频频踩坑</a>
+                </h3>
+                <div class="tl-event-meta">虎嗅科技 </div>
+                <p class="tl-event-summary">五一假期多名游客全程依赖Gemini等AI规划行程，遭遇推荐餐厅关闭、路线错误等问题，引发对大模型旅游场景可靠性的质疑。</p>
+                <p class="tl-event-deep">此次事件的深层影响在于：它将动摇AI工具在「高执行成本场景」的信任基础。旅游决策失误的代价（机票、酒店、时间损失）远高于搜索错误，用户的容错心理更脆弱。短期内，垂直旅游AI产品（实时数据+大模型）将迎来差异化窗口期；中期看，监管层可能要求AI生成内容标注时效性和不确定性，倒逼行业建立「可靠性评测」标准，而非单一卷推理benchmark。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 22:20</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260507/p23#a260507p23" target="_blank" rel="noopener">谷歌将Fitbit Premium更名为Google Health Premium并集成Gemini AI coachi</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">谷歌将Fitbit Premium更名为Google Health Premium，新增Gemini驱动的AI coaching功能，年费从79.99美元涨至99.99美元。</p>
+                <p class="tl-event-deep">此次更名+提价的组合拳，核心逻辑是用 Gemini 品牌背书为健康订阅注入 AI 溢价，同时加速 Fitbit 用户向 Google 生态迁移。短期风险在于老用户对涨价的抵触；长期看，若 Gemini coaching 能真正实现个性化干预效果，谷歌有望在健康 AI 赛道建立差异化壁垒。但硬件规模不足仍是制约数据飞轮的核心瓶颈。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 22:15</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260507/p22#a260507p22" target="_blank" rel="noopener">谷歌发布百元Fitbit Air可穿戴设备，搭载Gemini健康教练功能</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">谷歌发布售价100美元的Fitbit Air无屏可穿戴设备，类似Whoop，内置Gemini驱动的Google Health Coach，5月26日上市。</p>
+                <p class="tl-event-deep">Fitbit Air的真正意义不在硬件，而在于Gemini进入人体数据闭环。健康数据是AI个性化的最高价值数据源之一——谷歌若能建立「传感器采集→Gemini分析→行为干预」的完整链路，将在AI助手竞争中形成苹果、三星难以复制的数据护城河。风险在于：健康AI监管趋严，数据隐私争议可能影响用户接受度；Gemini Health Coach的建议质量若出现偏差，医疗责任边界模糊将成隐患。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 05:21</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/tech/925559/google-project-mariner-shut-down" target="_blank" rel="noopener">谷歌关闭Project Mariner，技术融入Gemini等产品</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">谷歌于2026年5月4日正式关闭实验性网页自动化项目Project Mariner，其技术已整合至Gemini Agent等产品。</p>
+                <p class="tl-event-deep">Mariner 关闭是谷歌 Agent 战略收敛的信号，而非能力退步。将实验项目技术注入 Gemini 主品牌，意味着谷歌正从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 04:05</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260506/p43#a260506p43" target="_blank" rel="noopener">谷歌Chrome静默安装约4GB Gemini Nano模型引发用户争议</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">谷歌Chrome在用户不知情情况下静默安装约4GB的Gemini Nano本地AI模型，用户可通过设置手动删除。</p>
+                <p class="tl-event-deep">此事件揭示出平台方在AI基础设施铺设阶段惯用的「先占后告知」策略——以功能更新为名规避隐私合规风险。短期看，用户信任损耗和监管压力是主要副作用；长期看，一旦本地AI运行时成为既成事实，Chrome将掌握Web AI的入口控制权，对广告、搜索乃至整个Web生态的议价能力将进一步强化，值得高度警惕。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 21:04</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2052011542707630461" target="_blank" rel="noopener">谷歌DeepMind携手EVE Online探索游戏AI智能体研究</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind宣布与EVE Online开发商合作，利用其复杂玩家驱动宇宙作为沙盒，研究AI智能体的记忆、持续学习与长期规划能力。</p>
+                <p class="tl-event-deep">这次合作的战略意义远超一篇游戏联名公告。它标志着AI基础研究的范式正从"解决有界问题"转向"在无界复杂系统中持续运作"。EVE Online作为实验平台，将为记忆架构、持续学习和多智能体协作提供前所未有的压力测试数据。若DeepMind能在此取得突破，其成果将直接加速自主AI智能体在真实世界（供应链、金融、科研）的落地进程，并可能重新定义AI能力评估的行业基准。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 20:51</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.36kr.com/p/3797755297733636" target="_blank" rel="noopener">Meta与斯坦福联合发布极限基准测试，GPT/Claude/Gemini全部零分</a>
+                </h3>
+                <div class="tl-event-meta">36氪 AI搜索 </div>
+                <p class="tl-event-summary">Meta与斯坦福大学联合推出地狱级AI基准测试，GPT、Claude、Gemini等主流顶尖模型全部得零分，现有刷榜体系面临根本性挑战。</p>
+                <p class="tl-event-deep">这一事件的深层影响在于：它动摇了过去三年AI能力叙事的合法性基础。若顶尖模型无法在真正严苛的评测中展示能力，「超越人类」的宣传将面临系统性质疑。短期内可能引发厂商公关危机；中期将倒逼行业将研发重心从「分数优化」转向「泛化推理」；长期看，动态、对抗性评测框架有望成为新标准，重塑AI能力的定价与监管逻辑。这不是一次技术失败，而是一次评测范式的强制升级。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 23:10</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260506/p31#a260506p31" target="_blank" rel="noopener">谷歌DeepMind入股EVE Online开发商并用游戏训练AI</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">谷歌DeepMind收购EVE Online开发商CCP Games少数股权，计划以该太空多人游戏为平台训练AI技术。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 05:46</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/tech/924755/google-home-gemini-3-1-upgrade" target="_blank" rel="noopener">谷歌Home升级Gemini 3.1，支持复杂多步骤智能家居指令</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">谷歌将Google Home的AI助手升级至Gemini 3.1，支持复杂多步骤任务与单条指令执行多个操作。</p>
+                <p class="tl-event-deep">此次升级体现了大模型厂商在消费级端侧AI产品上的竞争逻辑：用模型迭代速度弥补产品成熟度不足。Gemini在智能家居的落地面临Amazon Alexa和Apple HomeKit的双重竞争压力，谷歌选择以高频更新快速追赶。然而，核心挑战在于用户对智能家居助手的容错率极低——一次误操作可能导致用户彻底放弃语音控制习惯。多步骤指令能力是方向正确的升级，但稳定性与准确率才是决定留存的关键变量。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 00:52</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/huggingface/transformers/releases/tag/v5.8.0" target="_blank" rel="noopener">Hugging Face发布Transformers 5.8.0：集成DeepSeek-V4与Gemma 4</a>
+                </h3>
+                <div class="tl-event-meta">Transformers Releases </div>
+                <p class="tl-event-summary">Hugging Face发布Transformers v5.8.0，新增DeepSeek-V4和Gemma 4 Assistant等模型支持，带来多项架构创新。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 00:14</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/" target="_blank" rel="noopener">谷歌为Gemma 4发布多令牌预测草稿器，推理速度大幅提升</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">谷歌发布针对Gemma 4的多令牌预测（MTP）草稿器，通过推测解码技术显著加速模型推理速度。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 00:05</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-05-05/blackstone-kkr-consider-google-deal-in-surge-of-ai-tie-ups" target="_blank" rel="noopener">黑石KKR与谷歌洽谈：向被投企业引入AI模型</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">黑石和KKR正与Alphabet洽谈，计划让旗下被投组合公司获得Google AI模型的使用权限。</p>
+                <p class="tl-event-deep">此次谈判的深层信号是：**AI 能力分发的主战场正从消费端转向机构控制的企业网络**。Google 选择 PE 渠道，本质上是承认直销模式在与微软竞争中效率不足。若协议落地，将开创</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 22:26</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/ai-artificial-intelligence/924017/google-microsoft-xai-government-review" target="_blank" rel="noopener">谷歌、微软、xAI同意接受美国政府部署前模型审查</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">谷歌DeepMind、微软和xAI正式同意允许美国商务部CAISI在新AI模型公开发布前进行安全评估。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 18:08</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/tech/923918/google-deepmind-union-bid-ai-military-israel" target="_blank" rel="noopener">谷歌DeepMind英国员工发起工会化行动，抗议军事AI合同</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI <span class="tl-multi">📡 3 源</span></div>
+                <p class="tl-event-summary">Google DeepMind workers are unionizing over AI military contracts</p>
+                <p class="tl-event-deep">此次事件的核心矛盾在于：顶尖AI研究机构的价值观承诺与母公司军事商业化战略之间的结构性张力。短期来看，谷歌面临公关压力与人才流失风险；长期而言，若工会化成功，将为AI行业树立</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-04 23:30</span>
+                <span class="tl-rel">11 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/" target="_blank" rel="noopener">Reduce friction and latency for long-running jobs with Webhooks in Gemini API</a>
+                </h3>
+                <div class="tl-event-meta">Google AI Blog </div>
+                <p class="tl-event-summary">Reduce friction and latency for long-running jobs with Webhooks in Gemini API</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-02 00:01</span>
+                <span class="tl-rel">13 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2050244182241874089" target="_blank" rel="noopener">R to @GoogleDeepMind: Things to keep in mind:
+✅ Base your creations around the numbers 1-10
+✅ Use Canvas in @GeminiApp or @GoogleAIStudio
+
+Submit by May 6 → http://goo.gle/4eNsr15</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">R to @GoogleDeepMind: Things to keep in mind:
+✅ Base your creations around the numbers 1-10
+✅ Use Ca</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-02 00:01</span>
+                <span class="tl-rel">13 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2050244179163295985" target="_blank" rel="noopener">Think your vibe coding and creativity could be on the #GoogleIO main stage? Show us.
+
+As we countdown to the start of the show, the best ideas built with @GeminiApp or @GoogleAIStudio will be featured – think protein simulators, physics engines, or math-based art. 🔢</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">Think your vibe coding and creativity could be on the #GoogleIO main stage? Show us.
+
+As we countdow</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 18:27</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2050160297378193645" target="_blank" rel="noopener">RT @pushmeet: One of @GoogleDeepMind's key aims is to unlock scientific progress on problems important for society. 
+
+Generating clean ener…</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">RT @pushmeet: One of @GoogleDeepMind's key aims is to unlock scientific progress on problems importa</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 04:34</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/articles/analyze-customer-sentiment-google-gemini" target="_blank" rel="noopener">How to Analyze Customer Sentiment with Google Gemini</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">How to Analyze Customer Sentiment with Google Gemini</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 01:46</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/04/30/googles-gemini-ai-assistant-is-hitting-the-road-in-millions-of-vehicles/" target="_blank" rel="noopener">Google’s Gemini AI assistant is hitting the road in millions of vehicles</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">Google’s Gemini AI assistant is hitting the road in millions of vehicles</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 00:21</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/AndrewYNg/status/2049886895530967534" target="_blank" rel="noopener">Pinned: How we prompt AI is very different in 2026 than 2022 when ChatGPT came out.
+
+I'm teaching a new course, AI Prompting for Everyone, to help you become an AI power user — whatever your current skill level.
+
+It covers skills that apply across ChatGPT, Gemini, Claude, and other AI tools. How to use deep research mode for well-researched reports on complex questions. How to give AI the right context, including more documents and images than most people realize you can provide. When to ask AI to think hard for several minutes on important decisions like what car to buy, what to study, or what job to take. And how to use AI to generate images, analyze data, and build simple games and websites.
+
+I also cover intuitions about how these models work under the hood, so you know when to trust an answer and when not to.
+
+Along the way, you'll see flying squirrels, a creativity test, some of my old family photos, and fireworks.
+
+Join me at http://deeplearning.ai/courses/ai-prompting-for-everyone</a>
+                </h3>
+                <div class="tl-event-meta">X-Andrew Ng </div>
+                <p class="tl-event-summary">Pinned: How we prompt AI is very different in 2026 than 2022 when ChatGPT came out.
+
+I'm teaching a</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 23:02</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049867075074539583" target="_blank" rel="noopener">R to @GoogleDeepMind: We’re advancing this research with academics and institutions globally, and will gradually expand our clinician-facing trusted tester program to additional sites - to understand more perspectives of health workers and patients worldwide.
+
+Find out more → https://goo.gle/42DxzNZ</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">R to @GoogleDeepMind: We’re advancing this research with academics and institutions globally, and wi</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 23:02</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049867072193085781" target="_blank" rel="noopener">R to @GoogleDeepMind: To keep patient safety at the forefront, the system also runs on a dual agent architecture.
+
+A built-in "Planner" continuously monitors the conversation verifying that the "Talker" agent stays within safe clinical boundaries.</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">R to @GoogleDeepMind: To keep patient safety at the forefront, the system also runs on a dual agent</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 23:02</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049867069093474652" target="_blank" rel="noopener">R to @GoogleDeepMind: In testing, AI co-clinician matched or outperformed physicians in 68 out of 140 assessed areas, including triage.
+
+Yet humans were easily better at spotting crucial red flags and guiding physical exams - showing how these tools could augment clinical judgment. See the benchmarks ↓</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">R to @GoogleDeepMind: In testing, AI co-clinician matched or outperformed physicians in 68 out of 14</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 23:02</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049867063808679983" target="_blank" rel="noopener">R to @GoogleDeepMind: Our research goal for AI co-clinician is to support medical decision making with high-quality evidence.
+
+We tested the system while adapting the NOHARM safety framework, and found it made zero critical errors in 97 of 98 primary care queries - outperforming comparable systems in blind evaluations.</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">R to @GoogleDeepMind: Our research goal for AI co-clinician is to support medical decision making wi</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 23:02</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049867066501451845" target="_blank" rel="noopener">R to @GoogleDeepMind: The system uses live video and audio to process physical symptoms in real-time. This means it could analyze a patient's walk, listen to their breathing, or look at how a rash is appearing.
+
+Alongside physicians from @Harvardmed and @StanfordMed, we created a simulation study with 20 scenarios and “patient-actors”. Watch how AI co-clinician reasons and diagnoses. ↓</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">R to @GoogleDeepMind: The system uses live video and audio to process physical symptoms in real-time</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 05:20</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260429/p56#a260429p56" target="_blank" rel="noopener">Google says paid subscriptions reached 350M in Q1, up 25M QoQ, driven by YouTube and Google One, while Gemini Enterprise paid MAUs grew 40% QoQ (Sarah Perez/TechCrunch)</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Google says paid subscriptions reached 350M in Q1, up 25M QoQ, driven by YouTube and Google One, whi</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 00:40</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/04/29/more-gemini-features-are-coming-to-google-tv/" target="_blank" rel="noopener">More Gemini features are coming to Google TV</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">More Gemini features are coming to Google TV</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 17:14</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/transportation/920285/general-motors-gm-gemini-ai-update" target="_blank" rel="noopener">通用汽车将谷歌Gemini引入400万辆车型</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">通用汽车宣布通过OTA升级将Gemini AI助手部署至约400万辆凯迪拉克、雪佛兰、别克和GMC车辆</p>
+                <p class="tl-event-deep">此次部署的战略意义在于：Google用400万个真实驾驶场景锁定了Gemini在汽车垂直领域的数据优势，同时为GM构建了难以快速替换的AI供应商依赖。短期看是GM的智能化补课，长期看是Google在车载OS层面构筑护城河的关键一步。若Gemini在车内场景的NPS显著优于竞品，将倒逼更多OEM加速接入Google生态，进一步压缩自研AI方案的生存空间。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 12:40</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260429/p3#a260429p3" target="_blank" rel="noopener">美国国防部扩大谷歌Gemini使用，AI采购多元化战略提速</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">美国国防部数字与AI负责人Cameron Stanley证实DoD正扩大对谷歌Gemini的使用，强调避免单一供应商依赖。</p>
+                <p class="tl-event-deep">此举对行业最直接的影响是：政府国防市场的AI争夺进入</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 01:10</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049174334057611585" target="_blank" rel="noopener">谷歌DeepMind扩展AI教育项目，拉丁美洲2028年覆盖125万学生</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind宣布AI教育项目扩展至拉丁美洲，目标培训2.4万名教育工作者、覆盖125万学生，获Google.org提供460万美元资助。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 01:10</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049174330064470022" target="_blank" rel="noopener">谷歌DeepMind AI教育项目覆盖180国290万学生</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind的AI教育培训项目已培训3万余名教师，覆盖180个国家290万学生，93%的教育者表示知识提升显著。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 01:10</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2049174327124263379" target="_blank" rel="noopener">谷歌DeepMind联合树莓派推出AI教育项目惠及全球师生</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">Google DeepMind联合树莓派基金会自2023年起推出Experience AI项目，为学生和教师提供免费AI教育资源。</p>
+                <p class="tl-event-deep">头部AI实验室介入K12教育具有深远的战略意义：一方面有助于塑造下一代对AI的认知框架和价值判断；另一方面也是科技公司建立长期社会信任、应对监管压力的重要手段。免费开放的教育资源策略将加速AI素养在全球范围内的普及，但也需关注教育内容是否足够中立、是否覆盖AI风险与伦理等关键议题。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 14:35</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.36kr.com/newsflashes/3786114942786823" target="_blank" rel="noopener">谷歌DeepMind首席执行官访韩，会见现代汽车和LG集团负责人</a>
+                </h3>
+                <div class="tl-event-meta">36氪 </div>
+                <p class="tl-event-summary">据报道，业内人士透露，谷歌DeepMind联合创始人兼CEO哈萨比斯4月28日分别会见韩国主要企业集团负责人，其中包括现代汽车集团执行会长郑义宣和LG集团会长具光模。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 22:26</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-27/sequoia-and-nvidia-back-ex-deepmind-researcher-at-5-1-billion-value" target="_blank" rel="noopener">DeepMind | NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">Former Google DeepMind researcher David Silver has raised $1.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 20:35</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/dirac-run/dirac" target="_blank" rel="noopener">Gemini</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">Show HN: OSS Agent I built topped the TerminalBench on Gemini-3-flash-preview</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 00:35</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260427/p31#a260427p31" target="_blank" rel="noopener">Google | DeepMind</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Gerrit De Vynck / Washington Post : More than 600 Google employees, including many from DeepMind, sign a letter to Sundar Pichai demanding he bar the</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 18:44</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2048714939125109178" target="_blank" rel="noopener">AlphaGo十周年：谷歌DeepMind与韩国政府合作推进AI科研</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind以AlphaGo在韩国对弈十周年为契机，宣布与韩国政府合作，共同探索AI加速科学发现与促进经济增长的应用路径。</p>
+                <p class="tl-event-deep">此次合作的核心价值不在于技术本身，而在于DeepMind正将其科学AI能力系统性包装为国家竞争力工具，开辟B2G（对政府）商业化路径。对韩国而言，这是在中美AI博弈中借力西方顶级AI机构强化自身技术自主性的务实选择。若合作落地顺利，将为其他中等经济体提供</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 22:25</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260427/p27#a260427p27" target="_blank" rel="noopener">Google | DeepMind</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Will Knight / Wired : Ineffable Intelligence, founded by ex-Google DeepMind Principal Scientist David Silver, raised a $1.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 17:43</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.36kr.com/p/3784801581194241" target="_blank" rel="noopener">一觉醒来欠费2.5万美元，开发者怒喷Gemini API：10美元预算预警形同虚设</a>
+                </h3>
+                <div class="tl-event-meta">36氪 AI搜索 </div>
+                <p class="tl-event-summary">一觉醒来欠费2.5万美元，开发者怒喷Gemini API：10美元预算预警形同虚设</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 23:05</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2047330995309826363" target="_blank" rel="noopener">Google | DeepMind</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">As we push the frontiers of AI infrastructure, our research explores a future where training isn’t constrained by geography, capacity or type of chip.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 01:30</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/04/22/google-turns-chrome-into-an-ai-coworker-for-the-workplace/" target="_blank" rel="noopener">Google</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">Google brings Gemini-powered "auto browse" capabilities to Chrome for enterprise users, letting workers automate tasks like research, data entry, and</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 00:58</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/04/22/google-makes-an-interesting-choice-with-its-new-agent-building-tool-for-enterprises/" target="_blank" rel="noopener">Google</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">Gemini Enterprise Agent Platform takes an interesting approach: It is geared for IT and technical users.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 00:03</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2046983346132025559" target="_blank" rel="noopener">Google | DeepMind</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">Dive into the details → goo.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 23:40</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/nvidia/gemma4" target="_blank" rel="noopener">Gemma 4 VLA Demo on Jetson Orin Nano Super</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">Gemma 4 VLA Demo on Jetson Orin Nano Super</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 00:38</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/tech/916779/google-meet-ai-notetaker-in-person-meetings" target="_blank" rel="noopener">Google</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">Google's AI meeting notetaker is no longer limited to Google Meets - Gemini can also generate summaries and transcripts of in-person meetings now, as</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 20:23</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2046927845851627657" target="_blank" rel="noopener">谷歌DeepMind联手五大咨询巨头推动AI规模化落地</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind与埃森哲、贝恩、BCG、德勤、麦肯锡合作，致力于解决仅25%企业实现AI规模化生产部署的难题。</p>
+                <p class="tl-event-deep">此次联盟本质是谷歌用渠道换市场——以 DeepMind 的技术公信力换取五大咨询公司在全球顶级企业客户中的准入权。短期看，将加速 Gemini 在金融、医疗、制造等传统行业的渗透；长期看，</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 19:30</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-22/vista-strikes-deal-to-speed-up-google-ai-in-software-portfolio" target="_blank" rel="noopener">Vista与谷歌云合作，加速旗下90余家软件企业AI部署</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">私募股权巨头Vista Equity Partners与谷歌云达成合作，将在其投资组合中的90多家软件公司加速推进AI应用落地。</p>
+                <p class="tl-event-deep">此交易本质上是云计算竞争进入</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 20:45</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260422/p20#a260422p20" target="_blank" rel="noopener">谷歌发布Gemini企业级智能体平台，统一管理AI代理全生命周期</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">谷歌在Next大会推出Gemini Enterprise Agent Platform，基于Vertex AI重构开发者工具，支持AI Agent机群的全生命周期管理。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 04:38</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/arena/status/2046690103515648061" target="_blank" rel="noopener">GPT-Image-2横扫图像Arena榜单，领先谷歌242分创纪录</a>
+                </h3>
+                <div class="tl-event-meta">X-OpenAI </div>
+                <p class="tl-event-summary">OpenAI的GPT-Image-2在Image Arena全部三项榜单中夺冠，文生图得分1512分，领先谷歌Gemini模型242分，创下该榜单有史以来最大分差纪录。</p>
+                <p class="tl-event-deep">GPT-Image-2 的 242 分领先差距具有战略意义：它将</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 00:28</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2046627049045967175" target="_blank" rel="noopener">Google Deep Research支持MCP协议并原生生成可视化图表</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">Google DeepMind宣布Deep Research研究智能体新增任意MCP协议支持，并可原生生成演示级可视化图表，通过Gemini API开放构建。</p>
+                <p class="tl-event-deep">MCP 支持让 Deep Research 具备了真正的企业级潜力——私有数据连接是企业 AI 采购的核心诉求，Google 此举直接打通了这一门槛。更深层的意义在于：Google 通过 Gemini API 开放这一能力，是在以「研究基础设施」而非「研究产品」的姿态入场，开发者生态将决定其最终覆盖的场景深度。若 MCP 生态持续扩张，Deep Research 有望成为企业知识工作流的核心节点，而非边缘工具。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 00:28</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2046627042335060342" target="_blank" rel="noopener">谷歌DeepMind发布Deep Research Max：Gemini 3.1 Pro驱动的企业级自主研究智能体</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind推出Deep Research与Deep Research Max两款自主研究智能体，基于Gemini 3.1 Pro，可同时检索公开网络与企业私有数据，生成带完整引用的专业报告。</p>
+                <p class="tl-event-deep">谷歌的真正优势不在模型本身，而在于**数据管道**——Workspace生态覆盖数亿企业用户，若能实现Drive、Gmail、Docs的无缝检索授权，将形成竞争对手难以复制的护城河。短期影响：金融、咨询、法律行业的初级分析岗位将面临更直接的替代压力。中期趋势：'带引用的AI报告'将成为企业知识管理的新标准格式，倒逼内部文档体系向AI可检索方向重构。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 00:28</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2046627044453134389" target="_blank" rel="noopener">谷歌DeepMind推出Deep Research Max：深度搜索与推理增强版</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind发布Deep Research标准版与Max版，前者优化速度适合交互应用，后者深度搜索推理适合后台任务。</p>
+                <p class="tl-event-deep">双版本策略的核心价值在于「推理资源弹性化」——通过时间换质量的显式权衡，让开发者按场景自由选择。长远看，这将推动 AI 研究工具从「单一能力」走向「可配置推理链路」，并倒逼竞品跟进分层定价。谷歌的搜索基础设施优势在 Max 版中尤为突出，有望在企业级深度调研场景建立差异化壁垒，但标准版的延迟表现将是市场接受度的关键变量。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 22:54</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/" target="_blank" rel="noopener">谷歌DeepMind联手全球顶级咨询公司加速AI转型落地</a>
+                </h3>
+                <div class="tl-event-meta">DeepMind Blog </div>
+                <p class="tl-event-summary">谷歌DeepMind宣布与全球主要咨询机构建立合作伙伴关系，将前沿AI能力引入各行各业组织。</p>
+                <p class="tl-event-deep">核心影响在于：Google DeepMind 的研究壁垒（Gemini、AlphaFold等）将通过咨询渠道批量转化为企业收入，补足其长期以来在企业销售能力上的短板。更深层的趋势是 AI 竞争重心正从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 06:00</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/04/20/google-rolls-out-gemini-in-chrome-in-seven-new-countries/" target="_blank" rel="noopener">Google | Gemini in</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">Google is rolling out Gemini in Chrome in Australia, Indonesia, Japan, the Philippines, Singapore, South Korea, and Vietnam.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 20:23</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.youtube.com/watch?v=2_DPnzoiHaY" target="_blank" rel="noopener">Gemini 3.1 Pro发布：基准测试失效，AI进入「氛围感」时代</a>
+                </h3>
+                <div class="tl-event-meta">AI Explained </div>
+                <p class="tl-event-summary">Gemini 3.1 Pro发布后，业界对AI模型评估方式产生根本性质疑，基准测试的权威性遭到挑战，主观体验感受成为新的评判标准。</p>
+                <p class="tl-event-deep">基准测试危机本质上是AI行业「古德哈特定律」的体现：当测量指标成为目标本身，它就不再是好的测量指标。Vibe Era的兴起并非回归主观主义，而是倒逼行业构建更贴近真实使用场景的评估生态。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 16:04</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/mark_k/status/2045413115966165330" target="_blank" rel="noopener">Gemini and</a>
+                </h3>
+                <div class="tl-event-meta">X-Elon Musk (xAI) </div>
+                <p class="tl-event-summary">Both Gemini and Grok are underrated.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 05:55</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260417/p37#a260417p37" target="_blank" rel="noopener">前DeepMind/OpenAI工程师创业公司融资逾5亿美元，估值40亿</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">由前DeepMind和OpenAI工程师创立的自学习AI初创公司Recursive Superintelligence，成立仅四个月即完成逾5亿美元融资，估值达40亿美元，投资方包括谷歌风投和英伟达。</p>
+                <p class="tl-event-deep">RSI的融资事件标志着AI投资逻辑的进一步激进化：技术假设尚未被验证，资本已率先以数十亿美元完成卡位。短期看，此类融资将持续抬高整个AGI赛道的人才成本和估值基准，倒逼OpenAI、DeepMind加速内部的递归学习研究。长期看，若递归自改进路线取得实质进展，将重构AI能力提升的速度曲线，届时监管框架的滞后性将成为最大的系统性风险。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 19:58</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.youtube.com/watch?v=v67plFw1nMw" target="_blank" rel="noopener">Titans架构：测试时记忆机制实现突破性长上下文建模</a>
+                </h3>
+                <div class="tl-event-meta">Yannic Kilcher </div>
+                <p class="tl-event-summary">谷歌DeepMind提出Titans架构，将神经长期记忆模块嵌入注意力机制，实现测试时动态记忆更新，大幅提升长上下文处理能力。</p>
+                <p class="tl-event-deep">Titans 最深远的影响不在于性能数字，而在于它重新定义了「模型记忆」的边界——将记忆从「上下文容量」提升为「动态可学习状态」。这预示着未来 AI 智能体可能不再依赖 RAG 外挂，而是通过端到端的记忆模块实现知识的实时整合。若该架构规模化验证成功，将对向量数据库行业形成冲击，并加速「永久在线、持续学习」型 AI 助手的落地进程。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 15:08</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/04/402329.html" target="_blank" rel="noopener">谷歌最强具身大脑发布！波士顿机器狗瞬间人模人样</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">Gemini Robotics主打空间推理的第三代模型。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 03:25</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/elicollins/status/2044859750471594323" target="_blank" rel="noopener">谷歌DeepMind AI短片《亲爱的楼上邻居》入围翠贝卡电影节</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind与45人团队（含皮克斯校友及奥斯卡得主）合作创作的AI短片《亲爱的楼上邻居》入围2026年翠贝卡电影节官方展映单元。</p>
+                <p class="tl-event-deep">此次入围的深层影响在于：它为</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 02:56</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleAIStudio/status/2044852335848133113" target="_blank" rel="noopener">Google发布Gemini 3.1 Flash文字转语音功能，支持标签控制语音风格</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind发布Gemini 3.1 Flash TTS功能，开发者可通过在对话前插入[标签]控制语速、口音等语音风格。</p>
+                <p class="tl-event-deep">标签化情绪控制的真正意义在于**将语音风格的决策权从声学工程师转移给产品经理和内容创作者**。这会加速 TTS 在非技术团队中的普及，但也意味着模型对「情绪语义」的理解质量将成为核心竞争力——标签背后的生成能力才是护城河，而非标签语法本身。Google 依托 Gemini 生态的整合优势，有望在 2026 年将语音能力嵌入更广泛的 Workspace 和 Cloud 产品线。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 00:00</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana/" target="_blank" rel="noopener">谷歌Gemini应用推出个性化图像生成新功能</a>
+                </h3>
+                <div class="tl-event-meta">Google AI Blog </div>
+                <p class="tl-event-summary">谷歌Gemini应用更新，新版本结合个人上下文与Google相册，生成反映用户真实生活的个性化图像。</p>
+                <p class="tl-event-deep">谷歌的真正优势不在于模型能力，而在于数据飞轮：Photos 用户越多，个性化越精准，迁移成本越高。这一策略将 AI 功能与 Google 生态深度绑定，提升用户粘性的同时构建竞争壁垒。但监管压力是最大变量——若欧盟或各国以隐私为由限制该功能，谷歌的数据优势将大打折扣。长期看，「认识用户的 AI」将成为平台竞争的核心战场。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-16 22:48</span>
+                <span class="tl-rel">29 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.infoq.cn/article/t9ZBwRdLF4cRKqIMNYXY?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">神秘模型超越Gemma 4 31B：主打速度快、省Token</a>
+                </h3>
+                <div class="tl-event-meta">AI前线 </div>
+                <p class="tl-event-summary">一款身份未公开的神秘模型在评测榜单上超越Gemma 4 31B，定位差异化竞争，强调推理速度与Token效率而非硬拼Qwen。</p>
+                <p class="tl-event-deep">该事件的核心信号是：大模型竞争轴正从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-16 21:23</span>
+                <span class="tl-rel">29 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.36kr.com/p/3769445461275145" target="_blank" rel="noopener">谷歌Gemini桌面客户端首发：体验粗糙引发争议</a>
+                </h3>
+                <div class="tl-event-meta">36氪 AI搜索 </div>
+                <p class="tl-event-summary">谷歌正式推出Gemini桌面端应用，但首发体验被评价为粗糙，产品完成度存疑。</p>
+                <p class="tl-event-deep">谷歌此次Gemini桌面端首发口碑不佳，暴露的是其产品交付能力与研究实力之间长期存在的落差。在AI助手市场，用户习惯一旦形成便有强粘性，谷歌迟到且体验粗糙的桌面端可能错失关键的用户习惯养成窗口。更深层的风险在于：若Gemini无法凭借Google生态整合形成差异化，单纯的模型能力对比将越来越难以吸引普通用户从ChatGPT迁移。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-16 21:03</span>
+                <span class="tl-rel">29 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/GoogleDeepMind/status/2044763625680765408" target="_blank" rel="noopener">谷歌DeepMind联手波士顿动力：Gemini赋能Spot机器人具身推理</a>
+                </h3>
+                <div class="tl-event-meta">X-GoogleDeepMind </div>
+                <p class="tl-event-summary">谷歌DeepMind与波士顿动力合作，将Gemini Robotics具身推理模型部署至Spot机器人，使其能理解环境、识别物体并执行整理房间等简单指令。</p>
+                <p class="tl-event-deep">此合作的深层意义在于：Google 正以 Gemini Robotics 为核心，构建跨硬件平台的具身 AI 生态，复制 Android 模式。短期影响是加速 Spot 在非结构化环境中的商业落地；中期影响是倒逼竞争对手（OpenAI、Meta）加快具身模型布局；长期来看，掌握「通用具身推理模型」的 AI 公司将获得机器人时代的操作系统级控制权，这是比硬件本身更具战略价值的位置。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 00:00</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/tech/913202/gemini-personal-intelligence-images-nano-banana" target="_blank" rel="noopener">Gemini接入谷歌相册，可生成个性化AI图像</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">谷歌Gemini的Personal Intelligence功能现支持调用Google Photos数据，结合Imagen 2模型生成反映用户个人品味的定制图像。</p>
+                <p class="tl-event-deep">这一功能的深层影响在于重新定义了「个人数据」的价值形态——从被动存储转变为主动生成能力的输入。短期看，它将提升 Gemini 对重度 Google 生态用户的粘性；长期看，谁拥有最完整的个人上下文数据，谁就拥有个性化 AI 的护城河。监管层面，欧盟 GDPR 框架下此类跨应用数据调用的合规边界将受到严格审查，可能成为功能在欧洲市场推进的主要阻力。</p>
+            </div>
+        </article>
+</div>
+</body>
+</html>

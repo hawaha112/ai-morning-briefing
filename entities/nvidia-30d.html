@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVIDIA · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>NVIDIA</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>75</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (10)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-15 20:30</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260515/p12#a260515p12" target="_blank" rel="noopener">特朗普峰会后英伟达中国业务前景依然不明朗</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">特朗普表示中国主动选择不购买英伟达芯片，转而扶持华为等本土芯片厂商，英伟达在华前景持续不确定。</p>
+                <p class="tl-event-deep">特朗普将中国"主动放弃"英伟达定性为战略选择，实际上为美方减轻了出口管制的外交压力，同时为英伟达争取对华松绑制造了更大阻力——因为若中国"自愿"不买，松绑的理由就更难成立。短期（30-60天）看，英伟达H20出口许可前景更加悲观，股价将持续承压；华为昇腾受益于政策真空期，在中国大客户中的渗透率会进一步提升。若此格局持续至年底，中国AI算力供应链的"去英伟达化"将从临时应急变为结构性战略，届时即使美方松绑，重建市场份额的成本也将大幅上升。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-13 17:15</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260513/p12#a260513p12" target="_blank" rel="noopener">Recursive Superintelligence完成6.5亿美元融资，估值40亿美元追求递归自我改进</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Richard Socher创立的Recursive Superintelligence获GV、英伟达、AMD等投资，融资逾6.5亿美元，估值达40亿美元，专注递归自我改进路线。</p>
+                <p class="tl-event-deep">这是过去12个月内第3家以「超级智能」为核心叙事、估值超30亿美元的AGI初创公司完成大额融资（SSI、xAI扩张、Recursive SI），表明资本市场正在将AGI从「10年后的事」重新定价为「3-5年内的赌注」。英伟达和AMD同时入场尤为关键：这意味着算力层玩家开始主动布局「后Transformer」算力需求，而非被动等待。接下来60-90天最可能的结果是：其他大型语言模型公司（尤其是Anthropic和OpenAI）将被迫在公开场合更明确表态其「自我改进」路线图，以防</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 05:50</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260507/p44#a260507p44" target="_blank" rel="noopener">英伟达与IREN签署5GW算力基础设施部署协议，可投资21亿美元</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">英伟达与数据中心运营商IREN宣布合作，部署最高5GW AI基础设施，英伟达可向IREN投资21亿美元，消息公布后IREN股价盘后涨超9%。</p>
+                <p class="tl-event-deep">此次合作的深层逻辑是：在GPU供不应求的红利期逐渐消退后，英伟达需要通过基础设施投资锁定下游需求、稳固收入确定性。5GW的规模若全部落地，将是目前全球最大的单一AI算力部署计划之一，体现了英伟达对未来AI推理市场规模的极高预期。值得关注的风险是：数据中心建设周期长、资本密集，若AI需求增速不及预期，英伟达的投资回报将面临压力。此外，这一模式若成功复制，可能引发其他芯片厂商效仿，加速算力基础设施的垂直整合趋势。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 04:43</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.theinformation.com/briefings/nvidia-inks-deal-invest-3-2-billion-corning" target="_blank" rel="noopener">英伟达与康宁达成32亿美元合作协议，共建光学工厂</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">英伟达与康宁达成最高32亿美元投资合作，将在北卡罗来纳州和德克萨斯州共建三座光学技术工厂。</p>
+                <p class="tl-event-deep">英伟达此举的深层逻辑是**垂直整合数据中心供应链**。掌握光学互联产能，意味着英伟达能在AI算力军备竞赛中保障自身GPU集群的完整交付能力，而不受光纤短缺掣肘。32亿美元以股权形式投入，而非纯采购合同，说明英伟达希望与康宁形成长期利益绑定。潜在风险在于：制造业投资回报周期长，英伟达若主业增速放缓，这类重资产布局将承压。但整体来看，此举强化了英伟达作为AI基础设施平台公司的战略定位。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 20:45</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260506/p25#a260506p25" target="_blank" rel="noopener">英伟达5亿美元投资康宁，美国光纤产能扩张十倍</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">英伟达向康宁投资5亿美元，推动其美国光连接制造产能扩大10倍、光纤生产产能提升50%以上，康宁股价单日涨逾15%。</p>
+                <p class="tl-event-deep">此次投资揭示了AI基础设施竞赛的新逻辑：GPU本身已不再是唯一瓶颈，连接GPU的光纤网络正成为制约超大规模集群性能的关键变量。英伟达通过战略投资而非收购的方式绑定康宁，既保留灵活性又锁定优先供应权，是教科书式的供应链战略投资。潜在风险在于：若AI数据中心建设热潮降温，康宁的激进扩产可能造成产能过剩；但中短期内，市场对光互联的渴求仍将持续支撑这一逻辑。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 02:40</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.theinformation.com/briefings/elevenlabs-hits-500-million-annualized-revenue-adds-nvidia-investor" target="_blank" rel="noopener">ElevenLabs年化营收突破5亿美元，英伟达领投新一轮融资</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">AI语音初创公司ElevenLabs年化经常性营收突破5亿美元，较去年底的3.5亿美元大幅增长，英伟达风险投资部门等机构加入成为新投资方。</p>
+                <p class="tl-event-deep">ElevenLabs的ARR突破揭示了一个重要信号：语音AI的商业化路径已经跑通，且企业端（B端）的付费意愿远超C端。英伟达的战略入股暗示语音推理将成为下一个算力密集型场景，类似于图像生成之于GPU的关系。贝莱德的参与则标志着主流金融机构开始将AI应用层视为可配置的资产类别，而非纯粹的风险投机。短期内ElevenLabs的核心风险是：大模型厂商（OpenAI、Google）将原生语音能力内置，可能压缩独立语音API的市场空间。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 20:38</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.youtube.com/watch?v=vif8NQcjVf0" target="_blank" rel="noopener">黄仁勋对谈Lex Fridman：英伟达如何成为4万亿美元AI引擎</a>
+                </h3>
+                <div class="tl-event-meta">Lex Fridman </div>
+                <p class="tl-event-summary">NVIDIA联合创始人兼CEO黄仁勋在Lex Fridman播客第494期接受深度访谈，探讨NVIDIA的崛起历程与AI计算革命。</p>
+                <p class="tl-event-deep">黄仁勋在Lex Fridman这类高影响力平台的公开表达，本质上是NVIDIA向市场、开发者和政策制定者传递战略信号的渠道。4万亿美元市值背后是AI基础设施的高度集中——全球AI算力的命脉掌握在一家公司手中，这既是NVIDIA的护城河，也是行业的系统性风险。访谈内容将成为判断NVIDIA下一步产品战略（Blackwell后续、推理芯片、物理AI）及其对行业格局影响的重要参考。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-25 07:29</span>
+                <span class="tl-rel">20 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://developer.nvidia.com/blog/build-with-deepseek-v4-using-nvidia-blackwell-and-gpu-accelerated-endpoints/" target="_blank" rel="noopener">NVIDIA | DeepSeek</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">DeepSeek just launched its fourth generation of flagship models with DeepSeek-V4-Pro and DeepSeek-V4-Flash, both targeted at enabling highly efficient</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-20 13:35</span>
+                <span class="tl-rel">25 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="http://www.techmeme.com/260420/p2#a260420p2" target="_blank" rel="noopener">SK海力士开始量产192GB SOCAMM2内存模组，专为英伟达Vera Rubin设计</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">SK海力士宣布开始量产192GB SOCAMM2内存模块，这是专为英伟达下一代AI服务器芯片Vera Rubin设计的LPDDR5X低功耗内存。</p>
+                <p class="tl-event-deep">SK海力士率先量产Vera Rubin专用内存，强化了其在AI服务器内存供应链的优势地位，对三星和美光形成竞争压力。更深层的意义在于：AI硬件生态正从通用内存走向高度定制化，内存厂商与芯片设计商的早期深度绑定将成为竞争壁垒。192GB LPDDR5X的量产也暗示Vera Rubin平台商业化时间表比外界预期更为积极。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 05:15</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="http://www.techmeme.com/260417/p35#a260417p35" target="_blank" rel="noopener">黄仁勋深度访谈：英伟达护城河与对华芯片销售争议</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Zvi Mowshowitz深度解读Dwarkesh Patel对黄仁勋的访谈，涵盖英伟达竞争壁垒、对华芯片出口及行业影响。</p>
+                <p class="tl-event-deep">此次访谈及Zvi的解读揭示了英伟达当前面临的核心矛盾：短期内CUDA生态护城河依然稳固，但对华出口限制正在人为制造市场缺口，华为等玩家得以借此快速成长。黄仁勋对出口管制的公开质疑，折射出硅谷与华盛顿在AI竞争战略上的深层分歧。长期来看，若中国芯片生态自立成功，英伟达的全球垄断地位将面临根本性挑战。</p>
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (65)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-15 03:24</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/how-the-nvidia-vera-rubin-platform-is-solving-agentic-ais-scale-up-problem/" target="_blank" rel="noopener">英伟达Vera Rubin平台如何解决智能体AI的规模化推理难题</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">英伟达Vera Rubin NVL72平台专门针对智能体推理的非确定性轨迹与高延迟难题提出系统级解决方案。</p>
+                <p class="tl-event-deep">Vera Rubin NVL72 的战略意义在于：NVIDIA 正将自身从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-14 14:30</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260514/p7#a260514p7" target="_blank" rel="noopener">黄仁勋基金会斥资1.083亿美元购买CoreWeave算力捐赠高校</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">黄仁勋夫妇基金会向CoreWeave购买1.083亿美元算力，捐赠给大学及非营利机构用于AI研究。</p>
+                <p class="tl-event-deep">此举表面是慈善捐赠，实质上是英伟达生态的战略性延伸——黄仁勋通过基金会将超过1亿美元的算力资源注入学术圈，等于将下一代AI研究者的计算习惯锚定在英伟达GPU+CoreWeave的组合上。AMD和Intel在学术市场的渗透将因此更加困难。接下来60-90天，预计会有多所顶尖高校（斯坦福、MIT、CMU概率最高）公开宣布获得捐赠，并伴随研究合作公告；这些机构的AI论文产出也可能在12-18个月内显著增加，间接为英伟达技术站台。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-12 03:44</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/introducing-nvidia-fleet-intelligence-for-real-time-gpu-fleet-visibility-and-optimization/" target="_blank" rel="noopener">英伟达发布Fleet Intelligence：GPU集群实时可见性与优化平台</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">英伟达推出Fleet Intelligence平台，为大规模GPU集群提供实时监控、故障检测与性能优化能力。</p>
+                <p class="tl-event-deep">这是英伟达在AI基础设施软件层的持续扩张，而非孤立产品发布。过去12个月，英伟达已相继推出NIM微服务、Nemo框架更新、CUDA 12.x驱动优化，Fleet Intelligence是这条软件护城河战略的又一环。真正受损的是第三方GPU监控赛博（如CoreWeave自研工具链、Run:ai被英伟达收购后的整合路径），以及试图在英伟达硬件之上构建独立运维层的云厂商。预测：未来60天内，AWS和Azure会评估是否将Fleet Intelligence集成进各自的托管GPU服</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-11 18:00</span>
+                <span class="tl-rel">4 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.wired.com/story/cuda-proves-nvidia-is-a-software-company/" target="_blank" rel="noopener">CUDA护城河：英伟达为何本质上是一家软件公司</a>
+                </h3>
+                <div class="tl-event-meta">Wired AI </div>
+                <p class="tl-event-summary">Wired分析指出英伟达真正的竞争壁垒在于CUDA软件生态，而非硬件本身。</p>
+                <p class="tl-event-deep">CUDA护城河揭示了一个重要规律：在平台型技术竞争中，先发者构建的软件生态往往比硬件本身更具持久性。对英伟达而言，即便未来有竞争对手在算力或能效上实现超越，CUDA生态的迁移成本将为其提供数年的缓冲期。对整个AI行业而言，这种高度集中的基础设施依赖也带来了潜在的供应链和定价风险，推动了自研芯片和开放计算标准的发展动力。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-09 22:43</span>
+                <span class="tl-rel">6 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/05/09/nvidia-has-already-committed-40b-to-equity-ai-deals-this-year/" target="_blank" rel="noopener">英伟达今年已承诺400亿美元AI股权投资</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">英伟达2025年至今已在AI生态系统中承诺400亿美元股权投资，持续加码AI产业布局。</p>
+                <p class="tl-event-deep">英伟达此举的深层逻辑是：在硬件竞争逐渐白热化的背景下，通过资本手段构建</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-09 01:13</span>
+                <span class="tl-rel">6 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/improving-bash-generation-in-small-language-models-with-grammar-constrained-decoding/" target="_blank" rel="noopener">NVIDIA红队研究：语法约束解码提升小模型Bash生成质量</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Improving Bash Generation in Small Language Models with Grammar-Constrained Decoding</p>
+                <p class="tl-event-deep">语法约束解码代表了一种</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 23:59</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/streaming-tokens-and-tools-multi-turn-agentic-harness-support-in-nvidia-dynamo/" target="_blank" rel="noopener">NVIDIA Dynamo推出多轮智能体推理框架支持流式Token与工具调用</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Streaming Tokens and Tools: Multi-Turn Agentic Harness Support in NVIDIA Dynamo</p>
+                <p class="tl-event-deep">将多轮 Agent 状态管理内置于推理引擎，是基础设施层的重要演进。这一趋势表明：AI 推理栈的竞争正从单次吞吐量扩展到多轮交互效率。推理回放机制的引入尤其关键——针对 DeepSeek-R1 等推理模型，如何处理长思维链的跨轮传递是实际部署的核心挑战。NVIDIA 的入场将加速该领域标准化，同时对 vLLM、SGLang 等开源推理框架形成压力，后者也需跟进 Agentic 原生支持以保持竞争力。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 15:54</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/medqa" target="_blank" rel="noopener">无需CUDA：在AMD ROCm平台上微调临床AI模型MedQA</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">Hugging Face发布教程，介绍如何在AMD ROCm平台上微调面向临床问答的AI模型，无需依赖NVIDIA CUDA生态。</p>
+                <p class="tl-event-deep">此教程的发布反映出AI开发生态去CUDA化的趋势正在加速落地。Hugging Face选择以医疗AI（MedQA）为切入点，说明ROCm已具备处理垂直领域微调任务的实用能力。长期来看，若AMD ROCm生态持续完善，将对NVIDIA在AI训练硬件市场的垄断地位形成一定压力，也为企业在硬件采购上提供更多议价空间。医疗AI对本地化、低成本硬件的需求，可能使AMD成为该细分领域的重要竞争者。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 17:20</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260508/p10#a260508p10" target="_blank" rel="noopener">美国怀疑泰国AI公司OBON向中国走私英伟达受控芯片</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">美国政府怀疑泰国国家AI项目核心企业OBON涉嫌通过Super Micro服务器将受出口管制的英伟达芯片走私至中国，价值数十亿美元。</p>
+                <p class="tl-event-deep">此案一旦查实，将产生三重连锁效应：其一，美国将对东南亚盟友国家AI采购施加更严格的</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 05:20</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/achieving-peak-system-and-workload-efficiency-on-nvidia-gb200-nvl72-with-slurm-block-scheduling/" target="_blank" rel="noopener">NVIDIA GB200 NVL72机架级调度优化：Slurm块调度实现峰值效率</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA发布GB200 NVL72机架级GPU集群调度方案，通过Slurm块调度解决NVLink跨域性能骤降问题，实现工作负载峰值效率。</p>
+                <p class="tl-event-deep">此方案揭示了一个深层矛盾：硬件互联能力的跃升正在倒逼软件基础设施的范式重构，且软件滞后已成为实际性能的主要瓶颈之一。对AI基础设施运营商而言，采购GB200不等于获得峰值效能——调度、拓扑配置、作业编排的工程投入同等重要。长期看，</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 05:18</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/model-quantization-post-training-quantization-using-nvidia-model-optimizer/" target="_blank" rel="noopener">英伟达Model Optimizer教程：消费级GPU模型量化实战指南</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">英伟达开发者博客介绍如何使用Model Optimizer对AI模型进行训练后量化，以降低VRAM占用并提升GeForce RTX消费级GPU上的推理性能。</p>
+                <p class="tl-event-deep">英伟达发布官方量化工具教程，表明其正积极抢占本地推理生态的工具链话语权。当前量化领域已有llama.cpp、Ollama、AutoGPTQ等成熟开源工具，英伟达此举意在通过与TensorRT-LLM绑定、发挥CUDA硬件优势来建立差异化。长期看，官方工具链若能提供更优的量化精度-速度平衡，将加速消费级GPU上的大模型部署，但同时也可能加深开发者对英伟达硬件生态的依赖。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 04:50</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-05-07/nvidia-to-invest-up-to-2-1-billion-in-data-center-firm-iren" target="_blank" rel="noopener">英伟达拟投资最高21亿美元入股数据中心商IREN加速AI基础设施建设</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">英伟达宣布将向数据中心开发商IREN投资最高21亿美元，双方建立战略合作伙伴关系，共同加速AI基础设施建设。</p>
+                <p class="tl-event-deep">英伟达此举本质是用资本手段锁定GPU的下游消化渠道，在需求端制造</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 00:02</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/real-time-performance-monitoring-and-faster-debugging-with-nccl-inspector-and-prometheus/" target="_blank" rel="noopener">NVIDIA发布NCCL Inspector：分布式训练通信故障实时诊断工具</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA推出NCCL Inspector，结合Prometheus实现GPU集群通信性能实时监控与快速故障定位。</p>
+                <p class="tl-event-deep">NCCL Inspector 的推出反映出 NVIDIA 正在将竞争重心从硬件层向**系统可观测性**延伸。拥有最强 GPU 硬件的同时，能否让客户高效运维大规模集群，正成为云厂商和自建算力团队选型的重要因素。此工具与 Prometheus 生态的深度集成，也表明 NVIDIA 在主动拥抱开源监控标准，降低企业接入门槛。长期来看，这类基础设施工具的完善度，将成为 NVIDIA 平台粘性的重要组成部分。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 19:40</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260507/p16#a260507p16" target="_blank" rel="noopener">联发科在台湾建设首个AI数据中心，搭载英伟达B200芯片</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">联发科在台湾苗栗启动首期AI研发数据中心，采用英伟达B200芯片平台与DGX SuperPOD基础设施。</p>
+                <p class="tl-event-deep">联发科此举的深层逻辑是：在端侧AI芯片竞争从"参数规格比拼"转向"系统级优化"的当下，没有自研算力就无法掌握模型与硬件协同设计的主导权。短期看，这将加速联发科Dimensity AI性能的差异化；长期看，若联发科成功建立模型训练能力，其与整机厂商的议价格局将发生根本改变——从卖芯片升级为卖「芯片+AI能力」的一体化解决方案提供商，这是高通、英特尔都在试图完成的转型。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 01:58</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/tetsuoai/status/2052085681548411380" target="_blank" rel="noopener">xAI将Colossus 1超算租借Anthropic，22万GPU提升Claude算力</a>
+                </h3>
+                <div class="tl-event-meta">X-Elon Musk (xAI) </div>
+                <p class="tl-event-summary">xAI将拥有超22万张NVIDIA GPU的Colossus 1超算集群租借给Anthropic，用于扩充Claude的用户服务与API容量，马斯克本人已批准此次合作。</p>
+                <p class="tl-event-deep">这笔交易最深远的影响，在于它模糊了 AI 头部玩家之间的竞争边界——竞争对手可以成为算力供应商。对 Anthropic 而言，短期扩容意义实在，但长期依赖竞争对手的基础设施存在战略风险（定价权、数据安全、续约谈判）。对行业而言，这预示着算力的「类金融化」：大型集群将不仅用于自身训练，更会作为资产对外租赁、定价、甚至证券化，算力市场的流动性与透明度将显著提升。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 22:56</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/OpenAI/status/2052039800384057348" target="_blank" rel="noopener">OpenAI联合AMD等五大厂商发布MRC开放网络协议</a>
+                </h3>
+                <div class="tl-event-meta">X-OpenAI </div>
+                <p class="tl-event-summary">OpenAI与AMD、Broadcom、Intel、Microsoft、NVIDIA联合发布MRC多路径可靠连接协议，旨在提升大规模AI训练集群效率，减少GPU空闲浪费。</p>
+                <p class="tl-event-deep">MRC 的战略意义在于将网络协议从单一厂商的竞争壁垒转化为行业公共基础设施。短期内，它直接降低超大规模训练的算力浪费，减少 GPU 空闲时间；长期看，开放标准将削弱 NVIDIA InfiniBand 生态的锁定效应，为国内外替代芯片厂商创造更平等的入场条件。这一动作背后是 OpenAI 从算法消费者向基础设施标准制定者角色转型的清晰信号——掌握协议标准，即掌握下一代 AI 算力竞争的话语权。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 21:59</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/OpenAI/status/2052025532485902368" target="_blank" rel="noopener">OpenAI联合AMD等五大巨头发布MRC开放网络协议提升AI训练效率</a>
+                </h3>
+                <div class="tl-event-meta">X-OpenAI </div>
+                <p class="tl-event-summary">OpenAI携手AMD、Broadcom、Intel、Microsoft、NVIDIA联合发布多路径可靠连接协议MRC，旨在提升大规模AI训练集群的速度与可靠性，减少GPU算力浪费。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 20:13</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-05-06/nvidia-buys-500-million-of-rights-for-stock-in-corning" target="_blank" rel="noopener">英伟达斥资5亿美元入股光纤巨头康宁，押注AI基础设施扩张</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">英伟达以5亿美元购入康宁公司股份认购权，双方建立战略合作伙伴关系，共同扩展AI数据中心基础设施。</p>
+                <p class="tl-event-deep">英伟达此举的深层逻辑是**供应链主权化**——当算力需求增速超越供给弹性时，直接持股关键供应商成为对冲风险的理性选择。5亿美元对英伟达而言体量有限，但信号意义重大：GPU 战争已延伸至物理层基础设施。潜在风险在于，若 AI 资本支出周期出现回调，此类战略投资的回报逻辑将受到考验。对行业而言，头部 AI 芯片厂商向基础设施供应链渗透，将加速整个 AI 产业链的纵向整合趋势。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 05:08</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/videos/2026-05-05/nvidia-director-stevens-donates-200-million-to-usc-video" target="_blank" rel="noopener">英伟达早期投资人向USC捐赠2亿美元推动AI研究</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">英伟达董事Mark Stevens及其妻子向南加州大学捐赠2亿美元，用于推进全校AI研究与教育。</p>
+                <p class="tl-event-deep">此次捐赠折射出AI时代财富向教育生态回流的新趋势。Mark Stevens作为英伟达早期投资人，其财富本质上来自AI算力革命，将这笔财富定向投入高校AI研究，形成良性循环。对USC而言，2亿美元将大幅提升其招募顶级AI研究人员的能力，并可能催生具有影响力的AI研究中心。值得关注的是，私人捐赠主导的高校AI建设，可能在研究方向上产生与捐赠方利益挂钩的倾向，学术独立性需要关注。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 00:00</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/how-to-build-in-vehicle-ai-agents-with-nvidia-from-cloud-to-car/" target="_blank" rel="noopener">NVIDIA发布车载AI智能体开发方案：从云端到座舱的全栈部署</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA在开发者博客发布车载AI智能体构建指南，推动汽车座舱从规则式指令系统升级为具备推理与规划能力的多模态智能体架构。</p>
+                <p class="tl-event-deep">NVIDIA此举的深层意图是通过开发者生态锁定下一代智能座舱的算力标准，类似其在数据中心AI领域的CUDA护城河策略。短期看，这会加速OEM与NVIDIA的深度绑定；长期看，高通、英特尔Mobileye、地平线等竞对必然推出对标方案，车载AI智能体将成为2025-2027年座舱芯片战争的新战场，技术路线分歧将导致碎片化生态，整车厂话语权面临稀释风险。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 23:52</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/building-for-the-rising-complexity-of-agentic-systems-with-extreme-co-design/" target="_blank" rel="noopener">NVIDIA详解智能体系统复杂性：极致协同设计应对新挑战</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA开发者博客探讨生成式AI从请求-响应范式向自主智能体范式的转变，及其带来的系统设计复杂性挑战。</p>
+                <p class="tl-event-deep">NVIDIA 以「Extreme Co-Design」切入Agentic系统复杂性，本质是在抢占AI基础设施的下一个定价权：当推理性能已接近商品化，系统级协同优化将成为新的护城河。对行业的深远影响在于：它将迫使云厂商、推理服务商和应用开发者重新评估技术栈选型——纯软件编排方案的性能天花板将日益明显，软硬件深度耦合的端到端方案将获得显著优势，英伟达正在将这一判断固化为行业标准。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 19:00</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.infoq.cn/article/CKcQwKGvZb9oHMzbwteP?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">NVIDIA 入局量子基础设施：Ising 模型主打自动校准与实时纠错</a>
+                </h3>
+                <div class="tl-event-meta">AI前线 </div>
+                <p class="tl-event-summary">NVIDIA 入局量子基础设施：Ising 模型主打自动校准与实时纠错</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 22:45</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260505/p26#a260505p26" target="_blank" rel="noopener">ElevenLabs完成5.5亿美元D轮融资，ARR突破5亿美元</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">AI语音合成独角兽ElevenLabs完成超5.5亿美元D轮融资，新增贝莱德、英伟达等战略投资方，Q1年化营收已超5亿美元。</p>
+                <p class="tl-event-deep">ElevenLabs ARR 达 5 亿美元且融资持续超额，证明 AI 语音已越过「技术演示」进入「规模商业化」阶段。英伟达入股意味着语音推理算力需求被产业链上游正式纳入战略版图。贝莱德的参与则表明传统资本对 AI 基础设施的配置逻辑正在从观望转为主动介入。短期看，ElevenLabs 将加速拉开与纯 API 竞品的差距；中期看，其 IPO 路径已清晰，语音赛道或将迎来首个百亿美元级别的上市标的。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 11:31</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/05/04/as-workers-worry-about-ai-nvidias-jensen-huang-says-ai-is-creating-an-enormous-number-of-jobs/" target="_blank" rel="noopener">As workers worry about AI, Nvidia’s Jensen Huang says AI is ‘creating an enormous number of jobs’</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">As workers worry about AI, Nvidia’s Jensen Huang says AI is ‘creating an enormous number of jobs’</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 04:55</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/optimize-supply-chain-decision-systems-using-nvidia-cuopt-agent-skills/" target="_blank" rel="noopener">Optimize Supply Chain Decision Systems Using NVIDIA cuOpt Agent Skills</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Optimize Supply Chain Decision Systems Using NVIDIA cuOpt Agent Skills</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-04 16:01</span>
+                <span class="tl-rel">11 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260504/p6#a260504p6" target="_blank" rel="noopener">Legislators and experts criticize the EU's €20B sovereign compute data center plan, questioning whether there is demand and the plan's reliance on Nvidia GPUs (Pieter Haeck/Politico)</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Legislators and experts criticize the EU's €20B sovereign compute data center plan, questioning whet</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-04 01:02</span>
+                <span class="tl-rel">11 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.youtube.com/watch?v=eCw33snvoNI" target="_blank" rel="noopener">NVIDIA's New AI Turns One Photo Into A World That Never Breaks</a>
+                </h3>
+                <div class="tl-event-meta">Two Minute Papers </div>
+                <p class="tl-event-summary">NVIDIA's New AI Turns One Photo Into A World That Never Breaks</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-04 01:50</span>
+                <span class="tl-rel">11 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260503/p10#a260503p10" target="_blank" rel="noopener">Analysis: Asian suppliers account for ~90% of Nvidia's production costs, up from 65% in 2025, as latest wave of collaborations shifts from chips to physical AI (Abhishek Vishnoi/Bloomberg)</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Analysis: Asian suppliers account for ~90% of Nvidia's production costs, up from 65% in 2025, as lat</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-03 08:00</span>
+                <span class="tl-rel">12 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-05-03/asian-stocks-soar-as-nvidia-increases-supply-chain-reliance-to-90-in-asia" target="_blank" rel="noopener">Nvidia’s Push Into Physical AI Sparks Rally in Asian Partners</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">Nvidia’s Push Into Physical AI Sparks Rally in Asian Partners</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-02 00:02</span>
+                <span class="tl-rel">13 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/" target="_blank" rel="noopener">Pentagon inks deals with Nvidia, Microsoft, and AWS to deploy AI on classified networks</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">Pentagon inks deals with Nvidia, Microsoft, and AWS to deploy AI on classified networks</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 18:36</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/Dan_Jeffries1/status/2050162348891979817" target="_blank" rel="noopener">RT by @ylecun: All the Doomers and hawks are lining up behind this distillation "attack" farce because they want to see open source banned. 
+
+It's really as simple as that.
+
+They want to take away your right to choose, and take away businesses' rights to fine tune and make your products cheaper and better.
+
+The end state here, if we let these short-sighted people win, is a horrible place for America:
+
+They will look to ban Chinese models under the guise of national security grounds and conveniently leave only proprietary American companies standing in the USA. The only real "attack" happening is closed source companies attacking open source the same way Microsoft once tried to attack Linux to create regulatory capture.
+
+If you can't win in the market, win in Washington is their strategy.
+
+Do not be fooled by this regulatory capture and saber rattling nonsense. It's a bait and switch. 
+
+The goal is to rob you of choice. That's it.
+
+These short sighted policies will make America weaker, not stronger.
+
+These are the very folks whose shoot-us-in-the-foot policies lost NVIDIA 100% of the market share in China, driving it to basically 0%, while kickstarting the moribund Chinese chip ecosystem. It was dead in the water, and now it's awakened from its deep slumbers. Old state sponsored dinosaurs are reborn as emerging chip powerhouses.
+
+The demand for Chinese chips is accelerating and it will only get stronger. 
+
+When Jensen is proven right a few years from now (he's the best long term thinker in business today) and you have hundreds of cheap Chinese models running optimized on Chinese chips and those models are now hard to run on NVIDIA hardware you can thank these folks.
+
+If you're banned in the USA from using these models and these chips, do you think the rest of the world will be? 
+
+Nope. 
+
+They'll happily adopt the cheaper, faster, good enough models that we kickstarted with our short-sightedness. 1 billion people in the west will be banned and using closed/gated/sluggish/censored/surveilled models that destroy your privacy while 6 billion other people use the now dominant Chinese ecosystem and your NVIDIA retirement shares lose money.
+
+When you can't use open source anymore because it gets banned for Americans, you can thank these short-sighted, foolish folks.
+
+When your API bills is a billion dollars and burns your budget in three months instead of 12, you can thank these folks.
+
+When all your personal intimate, personal data flows threw a few tight gateways and choke points mandated by law, you can thank these folks.</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">RT by @ylecun: All the Doomers and hawks are lining up behind this distillation "attack" farce becau</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 22:09</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/ai-artificial-intelligence/922113/pentagon-ai-classified-openai-google-nvidia" target="_blank" rel="noopener">Pentagon strikes classified AI deals with OpenAI, Google, and Nvidia — but not Anthropic</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">Pentagon strikes classified AI deals with OpenAI, Google, and Nvidia — but not Anthropic</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 01:00</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/build-ai-powered-games-with-nvidia-dlss-4-5-rtx-and-unreal-engine-5/" target="_blank" rel="noopener">Build AI-Powered Games with NVIDIA DLSS 4.5, RTX, and Unreal Engine 5</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Build AI-Powered Games with NVIDIA DLSS 4.5, RTX, and Unreal Engine 5</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 01:00</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/speed-up-unreal-engine-nne-inference-with-nvidia-tensorrt-for-rtx-runtime/" target="_blank" rel="noopener">Speed Up Unreal Engine NNE Inference with NVIDIA TensorRT for RTX Runtime</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Speed Up Unreal Engine NNE Inference with NVIDIA TensorRT for RTX Runtime</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 05:25</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/videos/2026-04-29/what-latest-tech-earnings-signal-for-apple-nvidia-video" target="_blank" rel="noopener">What Latest Tech Earnings Signal for Apple, Nvidia</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">What Latest Tech Earnings Signal for Apple, Nvidia</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 00:41</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/powering-ai-factories-with-nvidia-enterprise-reference-architectures/" target="_blank" rel="noopener">Powering AI Factories with NVIDIA Enterprise Reference Architectures</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Powering AI Factories with NVIDIA Enterprise Reference Architectures</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 09:46</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.latent.space/p/ainews-not-much-happened-today" target="_blank" rel="noopener">AINews周报：vLLM 0.20发布，GPT-6预热开始</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space </div>
+                <p class="tl-event-summary">Latent Space AINews 4月27-28日周报称当日AI新闻较少，但提及Nvidia Nemotron、Poolside、Alec Radford新模型发布及vLLM 0.20推出，GPT-6炒作升温。</p>
+                <p class="tl-event-deep">本期「无新闻」周报实为多条潜流交汇：Nvidia 用 Nemotron 巩固数据+算力双垄断，Poolside 以新模型争夺企业代码智能体市场，Radford 的回归预示顶级人才生态正在去中心化，vLLM 迭代则表明开源推理栈仍是压低 AI 应用门槛的关键杠杆。GPT-6 炒作周期启动将在未来3-6个月内显著加速整个行业的发布节奏与融资热度。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 03:00</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/scaling-biomolecular-modeling-using-context-parallelism-in-nvidia-bionemo/" target="_blank" rel="noopener">NVIDIA BioNeMo引入上下文并行技术突破生物分子建模内存瓶颈</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA BioNeMo采用上下文并行技术，解决单GPU内存不足导致无法对大型蛋白质复合体进行零样本折叠预测的瓶颈问题。</p>
+                <p class="tl-event-deep">将LLM领域成熟的上下文并行技术迁移到生物分子建模，本质上是基础设施能力的平台化复用。NVIDIA此举有双重战略意图：一是强化H100/B200 GPU在制药AI场景的不可替代性（多卡NVLink互联才能发挥上下文并行性能）；二是通过BioNeMo框架锁定生物科技客户的计算栈。对研究者而言，零样本大复合体折叠能力若经验证，将推动「系统级结构生物学」成为新范式，但实际精度提升还需基准测评验证。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 06:30</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260428/p44#a260428p44" target="_blank" rel="noopener">英伟达发布Nemotron 3 Nano Omni开源多模态模型，采用30B混合MoE架构</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">英伟达推出Nemotron 3 Nano Omni开源多模态模型，采用30B-A3B混合专家架构，支持文本、视觉与语音统一处理，Nemotron 3系列过去一年下载量超5000万次。</p>
+                <p class="tl-event-deep">英伟达此举的战略意图在于：以开源模型锁定开发者，进而强化对 GPU 算力的长期依赖。Nemotron 3 Nano Omni 的 MoE 设计使其在 Jetson 等英伟达边缘硬件上具备天然优势，形成硬件-模型协同生态。5000万下载量表明这一策略已初见成效。潜在风险在于，开源模型难以形成护城河，竞品可快速跟进；且多模态统一模型的实际性能需与 Llama 4、Qwen2.5-VL 等经过充分对比验证。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 00:01</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/nvidia-nemotron-3-nano-omni-powers-multimodal-agent-reasoning-in-a-single-efficient-open-model/" target="_blank" rel="noopener">NVIDIA发布Nemotron 3 Nano Omni：单模型实现多模态智能体推理</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA推出Nemotron 3 Nano Omni，单一模型处理视觉、音频、文本等多模态输入，降低智能体系统推理成本与协调复杂度。</p>
+                <p class="tl-event-deep">核心影响在于降低智能体系统的部署门槛，使中小企业和独立开发者有能力构建完整的多模态 Agent 产品，而无需集成多个商业 API。长期看，这加速了智能体从「云端编排」向「本地自治」的架构迁移。若模型实际性能达到可用水准，将对 OpenAI Realtime API、Google Project Astra 等云端多模态服务形成竞争压力，并进一步巩固 NVIDIA 在 AI 全栈中的生态控制力。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 23:58</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/nvidia/nemotron-3-nano-omni-multimodal-intelligence" target="_blank" rel="noopener">英伟达发布Nemotron 3 Nano Omni：长上下文多模态文档音视频智能体</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">NVIDIA推出Nemotron 3 Nano Omni，支持长上下文处理文档、音频与视频的多模态智能体模型。</p>
+                <p class="tl-event-deep">Nemotron Nano Omni 的战略意图不在于正面挑战 GPT-4o，而是**锁定企业智能体基础设施层**。NVIDIA 的真实目标是：让开发者在 A100/H100/Jetson 上跑 NVIDIA 自家模型，形成硬件-模型-框架的闭环生态。长上下文多模态是当前企业 AI 落地最痛的需求点（文档处理、视频监控），Nano 定位降低了部署门槛。若配合 NIM 微服务和 CUDA 优化，NVIDIA 有望在边缘智能体市场建立类似其数据中心业务的护城河。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 23:00</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/24-7-simulation-loops-how-agentic-ai-keeps-subsurface-engineering-moving/" target="_blank" rel="noopener">NVIDIA：AI智能体让油气地下工程实现全天候仿真自动化</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA开发者博客介绍如何用Agentic AI打造24/7地下工程仿真循环，解决油气储层分析中人工带宽瓶颈问题。</p>
+                <p class="tl-event-deep">此方案标志着AI在工业仿真领域从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 22:00</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/articles/startup-founded-ex-nvidia-researcher-among-new-world-models-endeavors" target="_blank" rel="noopener">前英伟达研究员创立Dream Labs，押注世界模型赛道融资数千万</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">前英伟达Project Groot研究员Joel Jang本月创立Dream Labs，正与投资人洽谈数千万美元首轮融资，加入世界模型创业热潮。</p>
+                <p class="tl-event-deep">Jang出走Project Groot自立门户，是英伟达「人才外溢效应」的典型案例——类似当年DeepMind、OpenAI孵化出系列创业公司的路径。其核心价值在于将Groot内部积累的数据飞轮认知与工程范式带入独立公司，有望以更快迭代速度切入特定场景。但英伟达既是潜在竞争者也是潜在客户，如何定位与前东家的协作边界，将是Dream Labs战略清晰度的最关键考验。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 20:48</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-28/nvidia-supplier-victory-giant-s-sales-surge-on-solid-ai-demand" target="_blank" rel="noopener">英伟达供应商胜利精密PCB需求激增，季度销售额增长28%</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">胜利精密（惠州）季度销售额同比增长28%，核心驱动力为AI服务器用印刷电路板需求持续旺盛。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 22:26</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-27/sequoia-and-nvidia-back-ex-deepmind-researcher-at-5-1-billion-value" target="_blank" rel="noopener">DeepMind | NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">Former Google DeepMind researcher David Silver has raised $1.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 21:12</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/articles/2026-04-27/nvidia-tied-data-center-taps-junk-debt-market-for-4-5-billion" target="_blank" rel="noopener">英伟达关联数据中心寻求45亿美元垃圾债融资</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">一家与英伟达绑定的数据中心开发商寻求45.4亿美元垃圾债融资，用于AI项目建设。</p>
+                <p class="tl-event-deep">45亿美元垃圾债的成功与否，将是2026年AI算力融资市场的风向标。若顺利完成，意味着机构资本对AI基础设施的长期信心仍强，英伟达的「背书效应」依然有效；若遇阻，则可能触发同类项目融资成本上升、行业去杠杆。更深层的风险在于：若AI需求增速无法覆盖高利率债务成本，整个高杠杆算力赛道将面临系统性压力，届时英伟达的GPU需求也将受到反噬。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 19:02</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/newsletters/2026-04-27/nvidia-put-in-awkward-position-by-elon-musk-s-plan-to-purchase-cursor" target="_blank" rel="noopener">马斯克SpaceX或收购AI编程工具Cursor，英伟达陷两难困境</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">据彭博报道，马斯克旗下SpaceX有意收购AI编程公司Cursor，而英伟达既是Cursor的投资方，又与马斯克存在竞争关系，处境尴尬。</p>
+                <p class="tl-event-deep">此事件核心矛盾在于：英伟达的财务投资逻辑与战略生态利益产生撕裂。若交易达成，英伟达将面临</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-26 08:55</span>
+                <span class="tl-rel">19 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260425/p15#a260425p15" target="_blank" rel="noopener">33% of S&P 500 companies provided security perks for execs in 2025: Jensen Huang's security cost rose from $690K in 2023 to $3.5M in 2025, Zuckerberg spent $22M (Eli Rosenberg/The Information)</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Eli Rosenberg / The Information : 33% of S&P 500 companies provided security perks for execs in 2025: Jensen Huang's security cost rose from $690K in</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-26 01:34</span>
+                <span class="tl-rel">19 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.youtube.com/watch?v=Xf_v62TQOx4" target="_blank" rel="noopener">NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">Two Minute Papers </div>
+                <p class="tl-event-summary">❤️ Check out Lambda here and sign up for their GPU Cloud: https://lambda.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-25 02:15</span>
+                <span class="tl-rel">20 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.youtube.com/watch?v=bNdiBwXbLNw" target="_blank" rel="noopener">Anthropic | Google</a>
+                </h3>
+                <div class="tl-event-meta">Matthew Berman </div>
+                <p class="tl-event-summary">Join My Newsletter for Regular AI Updates 👇🏼
+https://forwardfuture.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-24 23:00</span>
+                <span class="tl-rel">21 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/federated-learning-without-the-refactoring-overhead-using-nvidia-flare/" target="_blank" rel="noopener">NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Federated learning (FL) is no longer a research curiosity—it’s a practical response to a hard constraint: the most valuable data is often the least mo</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-24 14:38</span>
+                <span class="tl-rel">21 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/cginisty/status/2047565736382534091" target="_blank" rel="noopener">Google | 微软</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">🔴 Trump vient de publier sur Truth Social un monologue de 1 500 mots sur le droit du sol, l'ACLU, les Indiens, les Chinois et la "Savage Nation".</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 04:30</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/scaling-the-ai-ready-data-center-with-nvidia-rtx-pro-4500-blackwell-server-edition-and-nvidia-vgpu-20/" target="_blank" rel="noopener">NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">AI integration is redefining mainstream enterprise applications, from productivity software like Microsoft Office to more complex design and engineeri</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 04:01</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/advancing-emerging-optimizers-for-accelerated-llm-training-with-nvidia-megatron/" target="_blank" rel="noopener">NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Higher-order optimization algorithms such as Shampoo have been effectively applied in neural network training for at least a decade.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 02:39</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/04/22/google-cloud-next-new-tpu-ai-chips-compete-with-nvidia/" target="_blank" rel="noopener">Google | NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">Google's newest TPUs are faster and cheaper than the previous versions.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 14:59</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/briefings/nvidia-supplier-victory-giant-surges-60-hong-kong-stock-debut" target="_blank" rel="noopener">NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">Victory Giant Technology, one of Nvidia’s Chinese hardware suppliers, jumped as much as 60% on its debut on the Hong Kong Stock Exchange, as investors</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 07:01</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/maximizing-memory-efficiency-to-run-bigger-models-on-nvidia-jetson/" target="_blank" rel="noopener">NVIDIA</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">The boom in open source generative AI models is pushing beyond data centers into machines operating in the physical world.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-20 18:30</span>
+                <span class="tl-rel">25 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.bloomberg.com/news/features/2026-04-20/google-eyes-new-chips-to-speed-up-ai-results-challenging-nvidia" target="_blank" rel="noopener">谷歌研发新一代AI加速芯片，正面挑战英伟达市场地位</a>
+                </h3>
+                <div class="tl-event-meta">Bloomberg Technology </div>
+                <p class="tl-event-summary">谷歌计划推出新型AI推理芯片，在与Meta、Anthropic签约后持续扩大算力生态布局，直接挑战英伟达GPU主导地位。</p>
+                <p class="tl-event-deep">谷歌此举的核心逻辑是：用芯片绑定云客户，用云收入反哺芯片研发，形成飞轮。短期看，对英伟达推理市场份额构成真实压力，尤其是GCP客户群；中期看，若推理芯片性价比验证成功，将加速AI云市场从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-19 23:00</span>
+                <span class="tl-rel">26 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/articles/chinas-10-important-chip-design-firms" target="_blank" rel="noopener">中国十大AI芯片设计公司全景：华为之外的竞争格局</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">美媒梳理中国十大AI芯片设计企业，指出华为之外还有大量国产AI芯片玩家正在量产出货，覆盖国家机构和前Nvidia工程师创业公司。</p>
+                <p class="tl-event-deep">中国AI芯片产业的核心竞争优势正从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 19:54</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.youtube.com/watch?v=s9SnEE7JXU4" target="_blank" rel="noopener">英伟达Alpamayo突破自动驾驶最难技术瓶颈</a>
+                </h3>
+                <div class="tl-event-meta">Two Minute Papers <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">英伟达NVlabs发布Alpamayo研究成果，声称攻克自动驾驶领域公认最困难的技术难题，论文代码已在GitHub开源。</p>
+                <p class="tl-event-deep">Alpamayo 的真正影响力不在于「是否彻底解决」长尾问题，而在于**将合成数据闭环训练范式推向工程化**，降低行业复现门槛。若技术经过验证，受益方首先是算力不足以支撑大规模路测的中小自动驾驶公司，其次是英伟达自身的云端训练服务（Lambda AI 合作背景明显）。中长期看，这类研究加速了「数据飞轮从真实采集转向仿真生成」的行业拐点，对高精地图依赖度高的玩家构成压力。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 06:52</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/full-stack-optimizations-for-agentic-inference-with-nvidia-dynamo/" target="_blank" rel="noopener">NVIDIA Dynamo发布：专为智能体推理优化的全栈方案</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA推出Dynamo推理框架，针对编程智能体等高频API调用场景进行全栈优化，支撑Stripe、Ramp等企业的大规模智能体工作流。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 02:59</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/build-a-secure-always-on-local-ai-agent-with-nvidia-nemoclaw-and-openclaw/" target="_blank" rel="noopener">NVIDIA推出OpenClaw与NemoClaw：构建安全长驻本地AI智能体</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA推出OpenClaw和NemoClaw框架，助力构建可长期自主运行、具备文件读写和API调用能力的本地AI智能体。</p>
+                <p class="tl-event-deep">NVIDIA此举意图明确：以安全、本地化为差异点，切入企业级Agentic AI市场。相比云端Agent方案，本地化部署在合规性上有天然优势，但也面临算力成本高、维护复杂的挑战。长期来看，若NemoClaw生态成熟，NVIDIA有望将GPU销售从训练延伸到推理+Agent运行时，构建软硬件一体的商业闭环，与微软Azure AI Agent Service形成差异竞争。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 23:00</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/accelerate-clean-modular-nuclear-reactor-design-with-ai-physics/" target="_blank" rel="noopener">NVIDIA：AI物理仿真加速小型模块化核反应堆清洁设计</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">NVIDIA展示如何将AI物理仿真技术应用于小型模块化核反应堆（SMR）及第四代堆型的设计优化，提升核能工程的安全性与经济性。</p>
+                <p class="tl-event-deep">此举的战略意义超越单一技术应用：NVIDIA 正在将 GPU 算力定义为核能供应链的上游基础设施。若 AI 仿真成为 SMR 设计认证的标准工具，NVIDIA 将在未来十年的核电复兴中锁定不可替代的平台地位。短期影响是加速现有设计公司的研发周期；中期影响是重新定义</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-17 19:00</span>
+                <span class="tl-rel">28 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.infoq.cn/article/pmteOlcag616Dap4zm8o?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">针对 NVIDIA GPU 的新型攻击 Rowhammer 可实现对整个系统的完全控制</a>
+                </h3>
+                <div class="tl-event-meta">AI前线 </div>
+                <p class="tl-event-summary">针对 NVIDIA GPU 的新型攻击 Rowhammer 可实现对整个系统的完全控制</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-15 23:45</span>
+                <span class="tl-rel">2026-04</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.dwarkesh.com/p/jensen-huang" target="_blank" rel="noopener">黄仁勋深度访谈：芯片出口中国、TPU竞争与英伟达供应链护城河</a>
+                </h3>
+                <div class="tl-event-meta">Dwarkesh Patel </div>
+                <p class="tl-event-summary">英伟达CEO黄仁勋接受Dwarkesh Patel访谈，深入探讨TPU竞争、对华芯片出口政策、英伟达供应链优势及为何不转型超大规模云服务商等核心议题。</p>
+                <p class="tl-event-deep">黄仁勋的访谈传递三个核心信号：①英伟达将供应链控制权（而非单纯芯片性能）视为未来五年最重要的竞争壁垒，这意味着追赶者需要同时解决设计、封装、互联三重难题；②对华政策立场背后是真实的营收压力与市场份额保卫战，但管制趋严已是不可逆趋势，英伟达中国业务将持续承压；③拒绝转型云服务商意味着英伟达将继续深度绑定超大规模客户，平台生态黏性将是决定其长期估值的核心变量。</p>
+            </div>
+        </article>
+</div>
+</body>
+</html>

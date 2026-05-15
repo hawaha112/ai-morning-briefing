@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta AI · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>24</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (5)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-25 12:00</span>
+                <span class="tl-rel">20 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://arxiv.org/abs/2604.21036" target="_blank" rel="noopener">Who Defines Fairness? Target-Based Prompting for Demographic Representation in Generative Models</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv AI </div>
+                <p class="tl-event-summary">arXiv:2604.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-25 01:24</span>
+                <span class="tl-rel">20 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://x.com/AnthropicAI/status/2047728369169518678" target="_blank" rel="noopener">Anthropic | Claude</a>
+                </h3>
+                <div class="tl-event-meta">X-AnthropicAI </div>
+                <p class="tl-event-summary">In short, this worked.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 22:32</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://x.com/cgtwts/status/2046597912835358930" target="_blank" rel="noopener">LeCun离开Meta创立AMI Labs，极简JEPA架构效率碾压行业</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">Yann LeCun离开Meta后创立AMI Labs，重新设计简化版世界模型，仅用少量数据和单GPU实现50倍决策加速</p>
+                <p class="tl-event-deep">LeCun出走创业本身是一个信号：顶级研究员与大厂战略错位正在加剧。AMI Labs的极简路线若能规模化验证，将对整个具身智能赛道产生颠覆性影响——它意味着数据效率和硬件门槛可以同时降低，机器人训练有望下放到中小团队。但目前披露信息来自社交媒体，缺乏同行评审，实际泛化能力和任务复杂度上限尚待验证。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 13:12</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://x.com/AYi_AInotes/status/2046456965904146536" target="_blank" rel="noopener">RT by @ylecun: 全网都在吹的LeCun新论文，90%的解读都是错的。
+
+他们说生成式AI是死路，说过去三年花的几百亿全白费了，说15M参数的小模型就能吊打万亿大模型。
+
+这些全是营销号的夸张，
+我觉得这篇论文的真正分量比他们吹的还要重。
+
+Yann LeCun团队这次解决了JEPA困扰了好几年的表征坍缩问题。
+
+以前的世界模型，学着学着就会把狗车人都压成一模一样的向量，什么都学不到。
+
+这次他们只加了一个极其优雅的数学正则化器SIGReg，
+没有复杂的trick 和六个超参数要调，训练稳得离谱。
+
+单张GPU几个小时就能训完，在机器人控制任务上，规划速度比巨型世界模型快48倍，成功率还更高。
+
+最厉害的是它的隐空间里天然就编码了物理规律。
+不用教，它自己就知道物体不能瞬移，知道速度和位置的关系。
+能瞬间检测出物理上不可能发生的事。
+
+这不是啥范式革命，也不会让GPT和Claude明天就死掉。
+语言和创意生成，依然是自回归大模型的天下。
+
+但它打开了一扇全新的门，
+原来懂物理不需要万亿参数，不需要云端超算。
+原来世界模型可以小到跑在机器人的本地芯片上。
+
+过去三年，整个行业都在一条路上狂奔，堆参数，堆算力，堆数据。
+所有人都以为只要足够大，就能懂世界。
+
+现在我们终于知道，还有另一条路，一条更高效，更优雅，更接近真实世界运行方式的路。
+
+生成式AI不会死，
+但未来的智能体不会是只会聊天的大模型，
+它会是一个懂物理的小世界模型，加一个大语言接口，
+
+这才是这篇论文真正的意义所在吧 hhh</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">全网都在吹的LeCun新论文，90%的解读都是错的。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 08:19</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.latent.space/p/ainews-moonshot-kimi-k26-the-worlds" target="_blank" rel="noopener">DeepSeek</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space </div>
+                <p class="tl-event-summary">Two days left before Early Bird ends for AI Engineer Worlds Fair this Summer in SF.</p>
+                
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (19)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-13 22:00</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.wired.com/story/whatsapp-incognito-chat-meta-ai/" target="_blank" rel="noopener">WhatsApp推出Meta AI隐身对话：对话内容完全私密</a>
+                </h3>
+                <div class="tl-event-meta">Wired AI <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">WhatsApp新增「隐身对话」功能，允许用户与Meta AI聊天时实现端对端隐私保护，连Meta自身也无法访问对话内容。</p>
+                <p class="tl-event-deep">Meta此举是一步防御性公关动作，而非单纯技术创新。AI隐私是目前消费级AI产品最大的用户顾虑，Meta率先打出「连我们自己都看不到」的旗帜，短期内将对OpenAI的ChatGPT及Google的Gemini在WhatsApp用户群中形成竞争压力。但关键风险在于：若技术实现无法经受独立审计验证，「隐私承诺」反而会成为公关危机。接下来60天需关注：欧盟数据保护机构是否启动审查，以及其他平台是否跟进推出类似功能。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-13 12:00</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2605.10959" target="_blank" rel="noopener">QuIDE：用单一指标统一量化神经网络效率评估</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">研究者提出QuIDE框架，以智能指数I=(C×P)/log₂(T+1)将压缩率、精度、延迟三维权衡折叠为单一评分，并在MNIST、ImageNet、Llama-3-8B等六组实验中验证了任务相关的Pareto最优点。</p>
+                <p class="tl-event-deep">QuIDE 的核心价值不在于技术突破，而在于**方法论标准化**。当前量化赛道（GPTQ、AWQ、bitsandbytes 等）缺乏公平比较基准，各厂商各报有利指标，形成</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 12:00</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2605.04061" target="_blank" rel="noopener">单位置干预失效：ICL任务编码本质上是分布式的</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">研究发现探针准确率无法预测因果重要性，单位置激活干预在Llama-3.2-3B所有28层均实现0%任务迁移，多位置干预可达96%迁移率。</p>
+                <p class="tl-event-deep">这项研究的真正影响是双重的：一方面动摇了基于探针的可解释性研究的结论可靠性，要求整个领域重新审视既有发现；另一方面，分布式任务编码的证实意味着模型对抗单点干预的鲁棒性可能远超预期，这对 AI 对齐和模型行为控制提出了更高挑战——简单的激活操控不足以可靠地引导或纠正模型行为。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 02:03</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/ClementDelangue/status/2052086833090003096" target="_blank" rel="noopener">AI大神LeCun批评科技CEO公开表态不可轻信</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">图灵奖得主Yann LeCun转推并评论称，本周事件表明多数科技CEO的公开言论不值得认真对待。</p>
+                <p class="tl-event-deep">此事件深层揭示：AI 行业已进入</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 22:15</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/hubertjbanville/status/2052029372282888234" target="_blank" rel="noopener">Meta FAIR发布NeuralBench：神经AI模型统一评测框架</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">Meta FAIR发布开源框架NeuralBench，覆盖36个EEG任务、94个数据集，支持基础模型与专用模型评测，MIT协议开放。</p>
+                <p class="tl-event-deep">NeuralBench的战略价值在于标准化——这是一个领域走向成熟的必要条件。94个数据集和36个EEG任务的覆盖规模对于v1.0来说相当可观，表明Meta在系统性整合现有数据资源方面做了大量工作。更值得关注的是其对基础模型的评测支持：随着神经AI基础模型（类似EEG-GPT路线）逐渐涌现，统一评测框架将直接影响该赛道的研究方向和竞争格局。潜在风险是框架能否获得社区持续贡献，避免成为Meta单方面维护的孤岛。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 21:59</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/OpenAI/status/2052025533937103102" target="_blank" rel="noopener">OpenAI将MRC超算互联技术开源，面向全行业开放</a>
+                </h3>
+                <div class="tl-event-meta">X-OpenAI </div>
+                <p class="tl-event-summary">OpenAI宣布MRC技术已部署于其所有大型超算（含Oracle OCI和微软Fairwater），并通过Open Compute Project向全行业开放。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 12:00</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2605.02914" target="_blank" rel="noopener">安全几何崩塌：良性微调可摧毁AI守卫模型的安全对齐</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">研究发现LlamaGuard等三款安全分类器在良性数据微调后会完全失去安全对齐能力，拒绝率从85%降至0%。</p>
+                <p class="tl-event-deep">此研究的深远影响在于：它将「微调破坏对齐」从经验观察提升为可测量的几何机制，使安全审计具备了理论抓手。短期看，使用 LlamaGuard 等守卫模型的商业 Agentic 产品需要重新审视其微调策略；长期看，这将推动「对齐不变性微调（alignment-preserving fine-tuning）」成为新的研究方向，以及催生守卫模型的安全认证标准——即在发布前证明其几何结构在常见微调场景下的鲁棒性。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 00:52</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/tech/924230/meta-publishers-lawsuit-ai-copyright" target="_blank" rel="noopener">五大出版商起诉Meta：Llama训练涉嫌史上最大规模版权侵权</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">麦克米伦等五大出版商及作家斯科特·图罗对Meta提起集体诉讼，指控其从LibGen等盗版网站抓取书籍训练Llama模型，构成史上最大规模版权侵权。</p>
+                <p class="tl-event-deep">本案的深层影响在于：若</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-02 15:21</span>
+                <span class="tl-rel">13 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.latent.space/p/ainews-ai-engineer-worlds-fair-autoresearch" target="_blank" rel="noopener">[AINews] AI Engineer World's Fair — Autoresearch, Memory, World Models, Tokenmaxxing, Agentic Commerce, and Vertical AI Call for Speakers</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space </div>
+                <p class="tl-event-summary">[AINews] AI Engineer World's Fair — Autoresearch, Memory, World Models, Tokenmaxxing, Agentic Commer</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 12:00</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2604.27011" target="_blank" rel="noopener">Automatic Causal Fairness Analysis with LLM-Generated Reporting</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">Automatic Causal Fairness Analysis with LLM-Generated Reporting</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 05:36</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/BasileTerv987/status/2049241361266684288" target="_blank" rel="noopener">Yann LeCun团队ICLR两篇论文：EB-JEPA获口头报告奖</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">Yann LeCun团队在ICLR 2026里约会议上发表两篇论文，EB-JEPA获世界模型研讨会口头报告（Top 3%），另一篇探讨非对比自监督学习双视角。</p>
+                <p class="tl-event-deep">EB-JEPA 获 Oral 的核心影响在于：它为</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 08:00</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/articles/microsoft-comes-openai-deal-winner-risks-ai-financing" target="_blank" rel="noopener">OpenAI | 微软</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">Microsoft and OpenAI had big news this morning but before we dive into that, it's fair to say there’s a lot of excitement among investors (and reporte</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 08:00</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/articles/elon-musk-strikes-unusually-cautious-tone-tesla-call" target="_blank" rel="noopener">Tesla</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">Tesla’s earnings calls are usually freewheeling affairs, with pulsating electronic music and wildly optimistic projections from CEO Elon Musk, who oft</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 03:33</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.latent.space/p/shopify" target="_blank" rel="noopener">Shopify’s AI Phase Transition: 2026 Usage Explosion, Unlimited Opus-4.6 Token Budget, Tangle, Tangent, SimGym — with Mikhail Parakhin, Shopify CTO</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space </div>
+                <p class="tl-event-summary">Early bird discounts for the San Francisco Worlds Fair , the biggest AIE gathering of the year, end today - prices will go up by ~$500 tonight so do p</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 23:30</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/realBigBrainAI/status/2046974881569677687" target="_blank" rel="noopener">Meta</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">Yann LeCun (AMI Labs Founder): "The AI industry is completely LLM-pilled.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 12:00</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2604.18644" target="_blank" rel="noopener">FASE框架：用图神经网络实现公平感知的预测性警务资源调配</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">研究者提出FASE框架，将时空犯罪预测与公平约束的巡逻资源分配结合，旨在消除预测性警务系统中的种族偏见反馈循环。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 07:50</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/minilek/status/2046738492638609580" target="_blank" rel="noopener">LeCun：伯克利CS毕业人数下降与AI抢饭碗叙事无关</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">Yann LeCun转推分析指出，伯克利CS毕业生数量下降源于校方招生政策收缩，而非AI取代软件工程师的恐慌情绪。</p>
+                <p class="tl-event-deep">LeCun此举的深意不仅是纠错，更是在为「AI不会终结SWE职业」的长期判断背书——这与他一贯反对AGI恐慌叙事的立场一脉相承。短期看，CS需求旺盛而供给受限，可能反向抬高CS毕业生的稀缺溢价；长期看，若大学持续限制招生而AI工具需求激增，行业人才结构性短缺风险值得警惕。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-20 23:49</span>
+                <span class="tl-rel">25 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/HowToAI_/status/2046254937559237012" target="_blank" rel="noopener">RT by @ylecun: Yann LeCun was right the entire time. And generative AI might be a dead end.
+
+For the last three years, the entire industry has been obsessed with building bigger LLMs. Trillions of parameters. Billions in compute.
+
+The theory was simple: if you make the model big enough, it will eventually understand how the world works.
+
+Yann LeCun said that was stupid.
+
+He argued that generative AI is fundamentally inefficient.
+
+When an AI predicts the next word, or generates the next pixel, it wastes massive amounts of compute on surface-level details.
+
+It memorizes patterns instead of learning the actual physics of reality.
+
+He proposed a different path: JEPA (Joint-Embedding Predictive Architecture).
+
+Instead of forcing the AI to paint the world pixel by pixel, JEPA forces it to predict abstract concepts. It predicts what happens next in a compressed "thought space."
+
+But for years, JEPA had a fatal flaw.
+
+It suffered from "representation collapse."
+
+Because the AI was allowed to simplify reality, it would cheat. It would simplify everything so much that a dog, a car, and a human all looked identical.
+
+It learned nothing.
+
+To fix it, engineers had to use insanely complex hacks, frozen encoders, and massive compute overheads.
+
+Until today.
+
+Researchers just dropped a paper called "LeWorldModel" (LeWM).
+
+They completely solved the collapse problem.
+
+They replaced the complex engineering hacks with a single, elegant mathematical regularizer.
+
+It forces the AI's internal "thoughts" into a perfect Gaussian distribution.
+
+The AI can no longer cheat. It is forced to understand the physical structure of reality to make its predictions.
+
+The results completely rewrite the economics of AI.
+
+LeWM didn't need a massive, centralized supercomputer.
+
+It has just 15 million parameters.
+
+It trains on a single, standard GPU in a few hours.
+
+Yet it plans 48x faster than massive foundation world models. It intrinsically understands physics. It instantly detects impossible events.
+
+We spent billions trying to force massive server farms to memorize the internet.
+
+Now, a tiny model running locally on a single graphics card is actually learning how the real world works.</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">Yann LeCun was right the entire time.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-16 05:30</span>
+                <span class="tl-rel">29 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/DrTechlash/status/2044528899653308539" target="_blank" rel="noopener">LeCun转发：AI末日言论正在激进化焦虑青年</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">Yann LeCun转发推文，警告AI恐慌叙事可能导致脆弱年轻群体被激进化，呼吁传播者承担责任。</p>
+                <p class="tl-event-deep">此事件揭示 AI 公共话语正在经历「极化加速」：技术争论日益与社会运动、身份政治、募资逻辑深度纠缠，理性校准空间被压缩。短期内，这将推动监管机构在「安全」话语框架下制定更多限制性政策；长期看，若极端行为真实发生，将反向伤害 AI 安全研究的合法性，使严肃的风险讨论更难获得公信力。LeCun 此举实质是在争夺 AI 叙事的道德制高点，这场战争的结果将深刻影响未来五年的产业监管走向。</p>
+            </div>
+        </article>
+</div>
+</body>
+</html>

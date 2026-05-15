@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>主要开源项目 · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>主要开源项目</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>7</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (1)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-19 04:54</span>
+                <span class="tl-rel">26 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://x.com/ylecun/status/2045606881125642536" target="_blank" rel="noopener">RT by @ylecun: The tensor engine was first implemented inside SN3 (before it was called Lush) in 1992 at Bell Labs by Léon Bottom and me.
+The naming convention has survived to this day in PyTorch and other libraries.
+
+The naming of the tensor operations was reused in EBlearn (C++ deep learning library written by Pierre Sermanet and me, with some help from @soumithchintala).
+It was recycled in Torch5 and Torch7, which was written largely by Ronan Collobert, and my students  Clément Farabet, and @koraykv ). Clément and Koray had been brought up on Lush (the open version of SN) and knew the nomenclature. 
+Then, Soumith used the same conventions in PyTorch.</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">The tensor engine was first implemented inside SN3 (before it was called Lush) in 1992 at Bell Labs by Léon Bottom and me.</p>
+                
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (6)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-14 15:59</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/vllm-project/vllm/releases/tag/v0.21.0rc3" target="_blank" rel="noopener">vLLM v0.21.0rc3发布：新增TOKENSPEED_MLA后端支持DSR1和Kimi K25</a>
+                </h3>
+                <div class="tl-event-meta">vLLM Releases </div>
+                <p class="tl-event-summary">vLLM发布v0.21.0rc3候选版本，新增TOKENSPEED_MLA注意力后端，专为DeepSeek R1和Kimi K25模型优化推理性能。</p>
+                <p class="tl-event-deep">TOKENSPEED_MLA的出现意味着开源推理生态正在快速跟进中国头部模型（DeepSeek、Kimi）的架构创新——这通常需要数月的工程投入。对竞争格局的判断：vLLM官方支持DSR1和Kimi K25的专用后端，将进一步巩固其作为多模型统一部署平台的地位，对TensorRT-LLM、SGLang等竞品形成压力；同时也表明DeepSeek R1在企业部署中的需求量已足以驱动vLLM核心团队专项优化。预计正式版v0.21.0发布后30天内，主流云厂商托管推理服务将跟进支持该</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-10 15:39</span>
+                <span class="tl-rel">5 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/vllm-project/vllm/releases/tag/v0.20.2" target="_blank" rel="noopener">vLLM v0.20.2发布：修复DeepSeek V4和Qwen3-VL关键缺陷</a>
+                </h3>
+                <div class="tl-event-meta">vLLM Releases </div>
+                <p class="tl-event-summary">vLLM发布v0.20.2补丁版本，修复DeepSeek V4稀疏注意力挂起、KV缓存分配失败及Qwen3-VL重载崩溃等问题。</p>
+                <p class="tl-event-deep">v0.20.2 的修复模式揭示出一个结构性张力：模型架构创新速度已超过推理引擎稳定化速度。三条修复线索分别对应 MoE 调度、内存管理、多模态边界三个独立子系统，意味着技术债在多个维度同步累积。短期看，高频补丁是负责任工程文化的体现；长期看，若模型多样性继续爆炸式增长，vLLM 需要更强的抽象层来隔离架构变化，否则维护成本将成为社区可持续性的瓶颈。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 03:06</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections" target="_blank" rel="noopener">vLLM从V0升级到V1：强化学习推理的正确性优先原则</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">vLLM发布从V0到V1的迁移指南，重点解决强化学习训练中的推理正确性问题，确保结果可靠性优先于性能优化。</p>
+                <p class="tl-event-deep">这次升级揭示了一个工程铁律：在 RL 训练中，推理引擎的「小误差」会通过梯度反向传播被放大，最终体现为模型能力的系统性偏差。vLLM V1 把「正确性优先」写入迁移宣言，实际上是在为整个开源 RL 训练生态建立可信基础设施标准。未来推理引擎的竞争维度将从单纯的 tokens/s 扩展到「训练-推理一致性」，这是基础设施层面的重要范式转移。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-01 00:16</span>
+                <span class="tl-rel">14 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/how-to-build-run-and-scale-high-quality-creator-workflows-in-comfyui/" target="_blank" rel="noopener">How to Build, Run, and Scale High-Quality Creator Workflows in ComfyUI</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">How to Build, Run, and Scale High-Quality Creator Workflows in ComfyUI</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 09:46</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.latent.space/p/ainews-not-much-happened-today" target="_blank" rel="noopener">AINews周报：vLLM 0.20发布，GPT-6预热开始</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space </div>
+                <p class="tl-event-summary">Latent Space AINews 4月27-28日周报称当日AI新闻较少，但提及Nvidia Nemotron、Poolside、Alec Radford新模型发布及vLLM 0.20推出，GPT-6炒作升温。</p>
+                <p class="tl-event-deep">本期「无新闻」周报实为多条潜流交汇：Nvidia 用 Nemotron 巩固数据+算力双垄断，Poolside 以新模型争夺企业代码智能体市场，Radford 的回归预示顶级人才生态正在去中心化，vLLM 迭代则表明开源推理栈仍是压低 AI 应用门槛的关键杠杆。GPT-6 炒作周期启动将在未来3-6个月内显著加速整个行业的发布节奏与融资热度。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 19:54</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.youtube.com/watch?v=0JqHCxn_A-U" target="_blank" rel="noopener">DeepLearning.AI联合谷歌推出JAX大模型构建与训练短课</a>
+                </h3>
+                <div class="tl-event-meta">DeepLearning.AI </div>
+                <p class="tl-event-summary">DeepLearning.AI与谷歌合作推出短课程，教授如何使用JAX框架从零构建和训练大语言模型。</p>
+                <p class="tl-event-deep">此课程的推出背后是谷歌推广 JAX/TPU 生态的战略意图——通过教育渠道降低开发者迁移门槛，与 PyTorch 争夺开发者心智。对研究者而言，掌握 JAX 意味着能更高效地利用 TPU 资源和复现谷歌系论文。长期来看，若 JAX 课程体系逐步完善，可能加速其在学术界和部分工业界的渗透，但 PyTorch 的先发优势短期内难以撼动。</p>
+            </div>
+        </article>
+</div>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hugging Face · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>Hugging Face</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>16</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (0)</h2>
+    <div class="tl-empty">本月暂无重要事件 (importance ≥ 4)</div>
+
+    <h2 class="tl-section">📰 一般动态 (16)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-14 03:15</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.wired.com/story/what-it-will-take-to-make-ai-sustainable/" target="_blank" rel="noopener">研究员呼吁建立AI可持续发展排放数据标准</a>
+                </h3>
+                <div class="tl-event-meta">Wired AI </div>
+                <p class="tl-event-summary">Hugging Face研究员Sasha Luccioni呼吁建立更完善的AI排放数据体系，并厘清用户实际使用AI的方式。</p>
+                <p class="tl-event-deep">核心影响有两层：短期内，标准化排放披露若落地，将重塑模型选型逻辑——能耗效率将成为与准确率并列的关键指标，利好小型高效模型（如 Mistral、Phi 系列）和边缘推理方案。长期看，</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 15:54</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/medqa" target="_blank" rel="noopener">无需CUDA：在AMD ROCm平台上微调临床AI模型MedQA</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">Hugging Face发布教程，介绍如何在AMD ROCm平台上微调面向临床问答的AI模型，无需依赖NVIDIA CUDA生态。</p>
+                <p class="tl-event-deep">此教程的发布反映出AI开发生态去CUDA化的趋势正在加速落地。Hugging Face选择以医疗AI（MedQA）为切入点，说明ROCm已具备处理垂直领域微调任务的实用能力。长期来看，若AMD ROCm生态持续完善，将对NVIDIA在AI训练硬件市场的垄断地位形成一定压力，也为企业在硬件采购上提供更多议价空间。医疗AI对本地化、低成本硬件的需求，可能使AMD成为该细分领域的重要竞争者。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-07 04:00</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/papers/2605.06169" target="_blank" rel="noopener">均值-方差分离残差技术助力千层扩散Transformer稳定训练</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Daily Papers </div>
+                <p class="tl-event-summary">研究者提出Mean Mode Screaming问题及均值-方差分离残差方法，解决千层扩散Transformer训练中的结构性不稳定问题。</p>
+                <p class="tl-event-deep">Mean Mode Screaming本质上是深层残差网络中信号传播的均值-方差解耦失衡问题，类似于早期RNN的梯度消失。该工作将问题形式化并给出针对性解决方案，方法论上类似Pre-LN、DeepNorm等工作，但专门针对扩散模型的条件生成特性，具有较强的领域针对性和工程价值。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 08:00</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/open-asr-leaderboard-private-data" target="_blank" rel="noopener">HuggingFace开源语音识别排行榜新增防刷榜机制</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">HuggingFace在开源ASR排行榜中引入防刷榜措施，遏制模型专门针对评测集过拟合的作弊行为。</p>
+                <p class="tl-event-deep">此举的深远影响在于：它将「评测可信度」从学术诚信问题升级为工程基础设施问题，用技术手段替代道德约束。随着开源 ASR 进入工业部署阶段，企业选型越来越依赖排行榜数据，评测失真的代价从论文影响因子扩展到真实商业决策。HuggingFace 通过掌控评测标准，进一步巩固了其作为 AI 开源生态「中立裁判」的平台地位，这对其长期商业竞争力同样具有战略价值。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 00:52</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/huggingface/transformers/releases/tag/v5.8.0" target="_blank" rel="noopener">Hugging Face发布Transformers 5.8.0：集成DeepSeek-V4与Gemma 4</a>
+                </h3>
+                <div class="tl-event-meta">Transformers Releases </div>
+                <p class="tl-event-summary">Hugging Face发布Transformers v5.8.0，新增DeepSeek-V4和Gemma 4 Assistant等模型支持，带来多项架构创新。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 12:00</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2604.24801" target="_blank" rel="noopener">架构决定可观测性：Transformer内部错误信号的线性可读性研究</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">研究发现Transformer架构与训练配置决定模型内部决策质量信号是否可被线性探针从中间层激活中读取，置信度控制吸收了57.7%的原始探针信号。</p>
+                <p class="tl-event-deep">这项研究的核心影响在于：它将</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 08:00</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/inference-providers-deepinfra" target="_blank" rel="noopener">DeepInfra on Hugging Face Inference Providers 🔥</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">DeepInfra on Hugging Face Inference Providers 🔥</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-27 12:00</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2604.21999" target="_blank" rel="noopener">Universal Transformers Need Memory: Depth-State Trade-offs in Adaptive Recursive Reasoning</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">arXiv:2604.</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-23 08:00</span>
+                <span class="tl-rel">22 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/transformersjs-chrome-extension" target="_blank" rel="noopener">How to Use Transformers.js in a Chrome Extension</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">How to Use Transformers.js in a Chrome Extension</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 01:06</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/ClementDelangue/status/2046636692707426424" target="_blank" rel="noopener">LeCun转发：DC游说再起，开源AI面临立法限制威胁</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">HuggingFace CEO呼吁开源用户向立法者发声，抵制美国国会和各州重新兴起的限制开源AI立法游说活动。</p>
+                <p class="tl-event-deep">此次动员揭示出 AI 治理博弈已进入新阶段：监管话语权本身成为竞争武器。封闭 AI 巨头若成功将</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 08:00</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/cybersecurity-openness" target="_blank" rel="noopener">AI时代网络安全的未来：开放性为何至关重要</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">Hugging Face博客探讨AI与网络安全的交叉领域，强调开放生态在构建安全防御体系中的核心作用。</p>
+                <p class="tl-event-deep">此文代表了安全社区对AI开放生态的积极倡导，但核心矛盾在于：开放模型降低了防御门槛的同时，也降低了攻击门槛。真正的挑战不是选择开放还是封闭，而是建立有效的滥用检测与响应机制。Hugging Face的参与意味着开源AI平台正主动承担安全责任，这一趋势将推动平台级安全治理标准的形成，对整个AI生态具有示范意义。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 00:17</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.latent.space/p/noetik" target="_blank" rel="noopener">🔬 Training Transformers to solve 95% failure rate of Cancer Trials — Ron Alfa &amp; Daniel Bear, Noetik</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space </div>
+                <p class="tl-event-summary">Today, we explain this piece of clickbait from our guest!</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-20 12:00</span>
+                <span class="tl-rel">25 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2604.15350" target="_blank" rel="noopener">Transformer推理机制的谱几何学：七大现象揭示思维相变规律</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">研究发现大语言模型在推理与事实召回时隐层激活空间存在谱相变，跨11个模型、5种架构家族系统识别出七大核心现象。</p>
+                <p class="tl-event-deep">这项研究最深远的影响在于为「Scaling Law 的几何基础」提供了实证支撑——模型越大越强，其推理时的谱压缩越显著，暗示推理能力可能是一种**可几何化的涌现属性**，而非随机的规模效应。若「完美正确性预测」的结论可复现，将直接冲击现有的基于采样的不确定性估计方法（如 Self-Consistency），并为实时推理质量监控开辟新路径。指令微调导致谱逆转的发现，也为当前争议中的「对齐税」问题提供了几何层面的新维度。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 19:24</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://magazine.sebastianraschka.com/p/workflow-for-understanding-llms" target="_blank" rel="noopener">LLM架构解析工作流：从技术报告到代码实现</a>
+                </h3>
+                <div class="tl-event-meta">Sebastian Raschka </div>
+                <p class="tl-event-summary">Sebastian Raschka分享了他研究LLM架构的完整工作流，核心是结合官方技术报告、HuggingFace配置文件与transformers源码进行架构还原。</p>
+                <p class="tl-event-deep">这篇文章的深层意义在于揭示了 AI 行业的一个结构性问题：**知识生产与知识传播的脱节正在加剧**。随着模型商业价值上升，技术透明度系统性下降，传统学术论文的信息密度已不足以支撑架构研究。Raschka 的方法论本质上是一种</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-18 00:17</span>
+                <span class="tl-rel">27 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/nvidia/nemotron-ocr-v2" target="_blank" rel="noopener">Hugging Face用合成数据构建快速多语言OCR模型</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">Hugging Face发布博客介绍如何利用合成数据训练高效多语言OCR模型，降低真实标注数据依赖。</p>
+                <p class="tl-event-deep">合成数据 OCR 的核心影响在于**打破数据壁垒、降低多语言 AI 的进入门槛**。短期看，中小开发者可低成本构建行业 OCR 应用；长期看，此方法论将加速低资源语言的数字化进程，推动 AI 普惠。竞争格局上，开源方案将压缩 Google、AWS 等商业 OCR API 的溢价空间，倒逼其加速在准确率、速度和语言覆盖上的迭代。值得关注的是，合成数据质量上限决定模型天花板，真实场景的域差距（domain gap）仍是核心技术挑战。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-16 08:00</span>
+                <span class="tl-rel">29 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/blog/train-multimodal-sentence-transformers" target="_blank" rel="noopener">Sentence Transformers 支持多模态嵌入与重排序模型训练微调</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Blog </div>
+                <p class="tl-event-summary">Hugging Face 博客介绍 Sentence Transformers 框架新增对多模态嵌入及重排序模型的训练与微调支持。</p>
+                <p class="tl-event-deep">此次更新标志着 Sentence Transformers 从纯文本语义检索工具向多模态检索基础设施演进。统一框架降低了多模态 RAG 系统的构建成本，有助于加速图文检索在实际业务中的落地。长期来看，谁掌握训练工具链的生态标准，谁就掌握了下游微调数据和模型的聚集优势，Hugging Face 通过持续扩展 Sentence Transformers 能力巩固其在检索基础设施领域的核心地位。</p>
+            </div>
+        </article>
+</div>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsoft AI · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>Microsoft AI</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>20</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (1)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-15 04:00</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260514/p32#a260514p32" target="_blank" rel="noopener">微软计划撤销大部分Claude Code许可证，转向GitHub Copilot CLI</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">微软计划撤销数千名开发者的Claude Code许可证，转而推行GitHub Copilot CLI，此前曾于2024年12月开放Claude Code访问权限。</p>
+                <p class="tl-event-deep">这是一个值得高度重视的竞争格局信号：微软将Claude Code换成Copilot CLI，表面是内部工具整合，实质是**Anthropic在企业市场遭遇了来自微软生态的系统性挤压**。如果连试用了5个月的微软都回撤，接下来60-90天内其他处于观望期的大型企业客户可能跟进。更关键的是：微软是OpenAI的盟友，却在编程工具层曾短暂使用竞争对手Anthropic的产品——现在的回撤意味着微软正在清理门户、强化自有生态护城河。Anthropic需要在非微软体系的企业客户（AWS</p>
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (19)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-14 06:04</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theverge.com/tech/930188/microsoft-edge-copilot-ai-tabs" target="_blank" rel="noopener">微软Edge浏览器Copilot升级：AI跨标签页信息整合</a>
+                </h3>
+                <div class="tl-event-meta">The Verge AI </div>
+                <p class="tl-event-summary">微软Edge浏览器更新Copilot功能，支持跨所有打开标签页聚合信息，同时下线旧版Copilot Mode。</p>
+                <p class="tl-event-deep">跨标签 AI 聚合将浏览器从被动渲染工具升级为主动信息中枢，微软借此强化 Edge 的差异化护城河。短期看，这是对 Google Gemini 在 Chrome 布局的直接反制；长期看，浏览器层的 AI 感知能力将成为科技巨头争夺</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-12 04:10</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260511/p35#a260511p35" target="_blank" rel="noopener">马斯克诉奥特曼庭审：纳德拉作证称从未收到马斯克投诉</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">微软CEO纳德拉在马斯克诉奥特曼庭审中出庭，证实马斯克从未就微软投资OpenAI违反特殊条款一事与其接触。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 01:30</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/articles/microsoft-cuts-copilot-bloat" target="_blank" rel="noopener">微软削减Copilot功能：Xbox游戏助手成首批关闭对象</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">微软因用户抱怨Copilot功能冗余扰人，开始收缩AI助手布局，Xbox游戏Copilot聊天机器人宣布下线。</p>
+                <p class="tl-event-deep">此次收缩标志着AI产品化进入「去泡沫」阶段：从「能力展示」转向「价值证明」。微软的真正挑战在于，Copilot的商业模式依赖高密度使用才能支撑溢价订阅，但过度推送又引发用户反感——这是一个需要精细化运营而非粗放铺量才能解开的矛盾。预计2026年微软将把Copilot资源向M365核心生产力场景高度集中，Xbox等娱乐场景的AI投入将显著降温。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-08 00:15</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/AndrewYNg/status/2052422157310083493" target="_blank" rel="noopener">DeepLearning.AI联合CopilotKit推出生成式UI智能体开发课程</a>
+                </h3>
+                <div class="tl-event-meta">X-Andrew Ng </div>
+                <p class="tl-event-summary">DeepLearning.AI与CopilotKit合作推出短课，教开发者构建能生成图表、表单、白板等自定义UI的智能体。</p>
+                <p class="tl-event-deep">这门课的战略意义在于：它将 Generative UI 的开发门槛从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-06 05:01</span>
+                <span class="tl-rel">9 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/briefings/microsoft-scraps-ai-chatbot-xbox-shuffles-gaming-leadership" target="_blank" rel="noopener">微软砍掉Xbox AI聊天机器人，游戏业务领导层重组</a>
+                </h3>
+                <div class="tl-event-meta">The Information <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">微软新任Xbox CEO宣布关闭Gaming Copilot，承认此前过度推送AI功能引发用户反感。</p>
+                <p class="tl-event-deep">此事件的深层意义在于：它是首个头部科技公司在 C 端核心产品线主动收缩 AI 功能的案例，预示着</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-05 22:20</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260505/p25#a260505p25" target="_blank" rel="noopener">CopilotKit完成2700万美元A轮融资，AG-UI协议助力应用原生AI智能体</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">西雅图初创公司CopilotKit获2700万美元A轮融资，由Glilot、NFX和SignalFire领投，其AG-UI协议让开发者可在应用内部署原生AI智能体。</p>
+                <p class="tl-event-deep">CopilotKit 的真正赌注是：未来每个 SaaS 产品都将内嵌领域专属智能体，而非依赖通用 AI 助手。若 AG-UI 协议成为行业标准，CopilotKit 将成为智能体时代的「React Router」——底层不可绕过的基础设施。最大风险在于 OpenAI/Anthropic 直接下场提供类似前端集成方案，以平台优势挤压独立工具层的生存空间。短期内，其开源社区规模和企业客户转化率是验证商业模式的关键指标。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-03 03:57</span>
+                <span class="tl-rel">12 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/microsoft/vscode/pull/310226" target="_blank" rel="noopener">VS Code inserting 'Co-Authored-by Copilot' into commits regardless of usage</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">VS Code inserting 'Co-Authored-by Copilot' into commits regardless of usage</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 07:02</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/04/29/microsoft-says-it-has-over-20m-paid-copilot-users-and-they-really-are-using-it/" target="_blank" rel="noopener">Microsoft says it has over 20M paid Copilot users, and they really are using it</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">Microsoft says it has over 20M paid Copilot users, and they really are using it</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 04:52</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/briefings/microsoft-cloud-revenue-accelerates-office-365-copilot-sales-rise-33" target="_blank" rel="noopener">Microsoft Cloud Revenue Accelerates and Office 365 Copilot Sales Rise 33%</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">Microsoft Cloud Revenue Accelerates and Office 365 Copilot Sales Rise 33%</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-30 00:00</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.infoq.cn/article/XkAoNsINYJhsvJeKcZSa?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">AI编程工具集体涨价：Copilot与Claude提价，程序员价值重新被审视</a>
+                </h3>
+                <div class="tl-event-meta">AI前线 </div>
+                <p class="tl-event-summary">GitHub Copilot与Claude等主流AI编程工具相继涨价，引发企业重新评估AI替代程序员的成本效益。</p>
+                <p class="tl-event-deep">涨价将加速市场分化：资金充裕的大厂会持续深化 AI 编程投入并消化成本上涨；中小企业则可能回归</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 10:55</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.36kr.com/newsflashes/3787314918743047" target="_blank" rel="noopener">腾讯ima上线知识Agent Copilot：内置记忆系统实现跨场景连续调用</a>
+                </h3>
+                <div class="tl-event-meta">36氪 </div>
+                <p class="tl-event-summary">腾讯ima于4月29日推出知识Agent Copilot，内置四模块记忆系统，可记住用户背景与习惯，实现跨场景连续调用。</p>
+                <p class="tl-event-deep">记忆系统的模块化设计是本次发布最具战略价值的细节：让用户可感知、可管理AI的记忆内容，直接降低</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-29 10:25</span>
+                <span class="tl-rel">16 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260428/p53#a260428p53" target="_blank" rel="noopener">微软将Copilot 365部署至埃森哲74.3万员工，创企业最大AI助手合同</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">微软与埃森哲达成史上最大Copilot企业级部署协议，覆盖约74.3万名员工。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 17:01</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/" target="_blank" rel="noopener">GitHub Copilot 代码审查功能将开始消耗 Actions 分钟数</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">GitHub Copilot 的代码审查功能将从免费转为消耗 GitHub Actions 计算分钟数，影响所有使用该功能的团队成本结构。</p>
+                <p class="tl-event-deep">这是 AI 工具「免费试用期结束」的经典信号。短期内会引发部分团队的使用量下降和替代方案比较，但长期看，能在生产环境中证明 ROI 的 AI 审查工具将获得更强的预算支持。真正的挑战是：GitHub 必须让用户在账单上清晰感知到「AI 审查节省的人工时间 > 消耗的 Actions 成本」，否则理性的工程团队会逐步关闭该功能。这也将加速第三方 AI Review 赛道的竞争分化。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 02:44</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/briefings/microsofts-github-changes-ai-prices-shift-consumption-based-fees" target="_blank" rel="noopener">微软</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">Microsoft-owned GitHub on Monday said it would charge customers of its Copilot AI coding tools additional fees based on how much AI they use, on top o</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-28 01:01</span>
+                <span class="tl-rel">17 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="http://www.techmeme.com/260427/p33#a260427p33" target="_blank" rel="noopener">Copilot plans</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">Mario Rodriguez / The GitHub Blog : GitHub says all Copilot plans will move to usage-based billing on June 1, replacing premium requests with monthly</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-25 02:46</span>
+                <span class="tl-rel">20 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.infoq.cn/article/U3BlkMiBlgWgLiKFth4N?utm_source=rss&utm_medium=article" target="_blank" rel="noopener">Copilot 不让注册了：从“随便用”到“全面限”，agent 把原有订价模型顶穿了</a>
+                </h3>
+                <div class="tl-event-meta">AI前线 </div>
+                <p class="tl-event-summary">Copilot 不让注册了：从“随便用”到“全面限”，agent 把原有订价模型顶穿了</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-24 14:38</span>
+                <span class="tl-rel">21 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/cginisty/status/2047565736382534091" target="_blank" rel="noopener">Google | 微软</a>
+                </h3>
+                <div class="tl-event-meta">X-Yann LeCun </div>
+                <p class="tl-event-summary">🔴 Trump vient de publier sur Truth Social un monologue de 1 500 mots sur le droit du sol, l'ACLU, les Indiens, les Chinois et la "Savage Nation".</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-22 11:30</span>
+                <span class="tl-rel">23 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://simonwillison.net/2026/Apr/22/changes-to-github-copilot/#atom-everything" target="_blank" rel="noopener">GitHub Copilot调整个人计划：暂停注册并收紧用量限制</a>
+                </h3>
+                <div class="tl-event-meta">Simon Willison </div>
+                <p class="tl-event-summary">GitHub Copilot宣布收紧个人计划使用限制、暂停新用户注册，并将Claude Opus 4.7限定于39美元/月的Pro+计划。</p>
+                <p class="tl-event-deep">此次调整标志着 AI 编程工具「免费或低价 Agent 体验」窗口期的关闭。长期来看，Agent 能力将成为高价档位的核心差异化要素，行业将形成「基础补全免费/低价 + Agent 能力溢价」的分层定价结构。GitHub 暂停新用户注册是一个强烈信号——平台正在以限流换盈利能力，而非以增长为先。这对 Cursor 等更灵活的竞争者是短期机遇，但后者同样面临相同的算力成本曲线，类似调整不可避免。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">04-21 06:31</span>
+                <span class="tl-rel">24 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.theinformation.com/briefings/microsoft-raises-prices-github-ai-coding-features-demand-surges" target="_blank" rel="noopener">微软</a>
+                </h3>
+                <div class="tl-event-meta">The Information </div>
+                <p class="tl-event-summary">Microsoft-owned GitHub said Monday it is restricting how much customers can use its Copilot AI coding tool and pausing new sign-ups for individual acc</p>
+                
+            </div>
+        </article>
+</div>
+</body>
+</html>
