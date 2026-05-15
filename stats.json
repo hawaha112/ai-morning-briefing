@@ -1,45 +1,37 @@
 {
-  "article_count": 17,
+  "article_count": 18,
   "output_file": "output/index.html",
-  "file_size_kb": 79.4,
-  "generated_at": "2026-05-14T23:00:45.828661+00:00",
+  "file_size_kb": 79.9,
+  "generated_at": "2026-05-15T11:09:35.935857+00:00",
   "event_db_stats": {
-    "total_articles": 3873,
+    "total_articles": 3910,
     "collected": 0,
-    "analyzed": 3873,
-    "total_events": 2080,
-    "total_evidence": 2189,
+    "analyzed": 3910,
+    "total_events": 2101,
+    "total_evidence": 2211,
     "event_status": {
-      "official": 268,
-      "reported": 1812
+      "official": 269,
+      "reported": 1832
     },
-    "tier_0": 286,
-    "tier_1": 910,
-    "tier_2": 2677
+    "tier_0": 287,
+    "tier_1": 925,
+    "tier_2": 2698
   },
   "event_status_distribution": {
-    "reported": 17
+    "reported": 18
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 17,
-  "multi_source_count": 2,
-  "important_count": 1,
-  "important_events": [
-    {
-      "title": "微软计划撤销大部分Claude Code许可证，转向GitHub Copilot CLI",
-      "event_id": "evt_368faf38eab3813c0820010e",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-15-am.html"
-    }
-  ],
+  "llm_count": 18,
+  "multi_source_count": 1,
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 17,
+  "depth_count": 18,
   "entity_count": 0,
-  "llm_call_count": 70,
-  "llm_prompt_tokens": 87873,
-  "llm_completion_tokens": 28772,
-  "llm_total_tokens": 116676,
+  "llm_call_count": 36,
+  "llm_prompt_tokens": 50676,
+  "llm_completion_tokens": 15030,
+  "llm_total_tokens": 65714,
   "llm_parse_fallback": 0
 }
