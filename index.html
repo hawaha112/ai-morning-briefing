@@ -7,16 +7,16 @@
      打开页面时浏览器自带的 referer 会被拒 (403)，导致卡片图加载失败
      留下大块空白。 -->
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="今日共收录 1 条 AI 资讯（来源含 Techmeme 等）。">
+<meta name="description" content="编程智能体三强混战，中美 AI 生态结构性分轨  🛠️ **Codex 与 Grok Build 同周上线，编程智能体决胜点已移至 CI/CD 管道卡位** 本周三条战线同步推进：OpenAI 把 Codex 推到 iOS/Android 并发布 CI/CD Hooks，xAI 上线 Grok Build 命令行…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 晚报 · 2026年05月15日">
-<meta property="og:description" content="今日共收录 1 条 AI 资讯（来源含 Techmeme 等）。">
+<meta property="og:description" content="编程智能体三强混战，中美 AI 生态结构性分轨  🛠️ **Codex 与 Grok Build 同周上线，编程智能体决胜点已移至 CI/CD 管道卡位** 本周三条战线同步推进：OpenAI 把 Codex 推到 iOS/Android 并发布 CI/CD Hooks，xAI 上线 Grok Build 命令行…">
 <meta property="og:site_name" content="AI 晚报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 晚报 · 2026年05月15日">
-<meta name="twitter:description" content="今日共收录 1 条 AI 资讯（来源含 Techmeme 等）。">
+<meta name="twitter:description" content="编程智能体三强混战，中美 AI 生态结构性分轨  🛠️ **Codex 与 Grok Build 同周上线，编程智能体决胜点已移至 CI/CD 管道卡位** 本周三条战线同步推进：OpenAI 把 Codex 推到 iOS/Android 并发布 CI/CD Hooks，xAI 上线 Grok Build 命令行…">
 <title>AI 晚报 · 2026年05月15日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -188,6 +188,79 @@ body {
     .briefing .br-headline { font-size: 15px; }
     .jc-title { font-size: 14px; }
     .jc-body { font-size: 12.5px; }
+}
+
+/* ═════ 外部热度信号标签 (P2) ═════ */
+.hot-pills {
+    display: flex; flex-wrap: wrap; gap: 5px;
+    margin: 6px 0 4px;
+}
+.hot-pill {
+    display: inline-flex; align-items: center;
+    padding: 2px 7px; border-radius: 10px;
+    font-size: 10px; font-weight: 600;
+    text-decoration: none;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.10);
+    color: var(--text-70, #b6bdcb);
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+.hot-pill:hover {
+    transform: translateY(-1px);
+    background: rgba(255,255,255,0.08);
+}
+.hp-hn { color: #ff7a00; border-color: rgba(255,122,0,0.25); }
+.hp-hn:hover { background: rgba(255,122,0,0.10); border-color: rgba(255,122,0,0.45); }
+.hp-reddit { color: #ff4500; border-color: rgba(255,69,0,0.25); }
+.hp-reddit:hover { background: rgba(255,69,0,0.10); border-color: rgba(255,69,0,0.45); }
+.hp-hf { color: #ffd21e; border-color: rgba(255,210,30,0.25); }
+.hp-hf:hover { background: rgba(255,210,30,0.10); border-color: rgba(255,210,30,0.45); }
+.hp-gh { color: #aaa; border-color: rgba(255,255,255,0.12); }
+.hp-gh:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.28); }
+
+/* ═════ 实体追踪入口 (P1) ═════ */
+.entity-tracker {
+    max-width: 1120px; margin: 24px auto 0; padding: 0 20px;
+}
+.entity-tracker .et-title {
+    font-family: var(--serif); font-size: 14px; font-weight: 700;
+    color: var(--text-50); letter-spacing: 1px; text-transform: uppercase;
+    margin: 0 0 4px;
+}
+.entity-tracker .et-hint {
+    font-size: 11.5px; color: var(--text-50); margin: 0 0 12px;
+}
+.et-chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+}
+.et-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 6px 12px; border-radius: 20px;
+    background: var(--bg-card, rgba(255,255,255,0.04));
+    border: 1px solid var(--border, rgba(255,255,255,0.10));
+    text-decoration: none; font-size: 12px;
+    color: var(--text-70, #b6bdcb);
+    transition: transform 0.12s, border-color 0.15s, background 0.15s;
+}
+.et-chip:hover {
+    transform: translateY(-1px);
+    border-color: var(--accent);
+    background: rgba(102,192,255,0.06);
+    color: var(--text-100);
+}
+.et-icon { font-size: 13px; line-height: 1; }
+.et-name { font-weight: 600; }
+.et-count {
+    display: inline-block;
+    margin-left: 4px; padding: 1px 7px;
+    border-radius: 10px;
+    background: rgba(102,192,255,0.16);
+    color: var(--accent);
+    font-family: monospace; font-size: 10.5px; font-weight: 700;
+}
+@media (max-width: 640px) {
+    .entity-tracker { padding: 0 14px; }
+    .et-chip { padding: 5px 10px; font-size: 11.5px; }
 }
 
 /* ═════ Featured Section (Importance >= 4) ═════ */
@@ -1083,13 +1156,13 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">🌆 AI 晚报</div>
-    <div class="h-date">2026年05月15日 周五 · 22:35</div>
+    <div class="h-date">2026年05月15日 周五 · 22:55</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>1</b> 篇</span>
-        <span><b>1</b> 源</span>
+        <span><b>51</b> 篇</span>
+        <span><b>21</b> 源</span>
         <a href="archive/dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
@@ -1101,11 +1174,197 @@ body.show-read .is-read:hover {
 <!-- Briefing -->
 
     <section class="briefing">
-        <h2 class="br-title">今日速览</h2>
-        <p class="br-editorial">今日共收录 1 条 AI 资讯（来源含 Techmeme 等）。</p>
+        <h2 class="br-title">📌 今日 3 个判断</h2>
+        <p class="br-headline">编程智能体三强混战，中美 AI 生态结构性分轨</p>
+        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-emoji">🛠️</div><h3 class="jc-title">Codex 与 Grok Build 同周上线，编程智能体决胜点已移至 CI/CD 管道卡位</h3><p class="jc-body">本周三条战线同步推进：OpenAI 把 Codex 推到 iOS/Android 并发布 CI/CD Hooks，xAI 上线 Grok Build 命令行工具对标 Claude Code，GitHub 以智能体为中心重构 App 界面。Claude Code 已有用户实测 40 万美元商业回报，企业付费意愿已验证。Hooks 是核心变量——谁先在开发者的 CI/CD 管道植根，谁就把竞争对手挡在工作流上游。30 天内企业集成生态将成为真正的决胜战场。</p></article><article class="judgment-card"><div class="jc-emoji">🤝</div><h3 class="jc-title">Anthropic 盖茨基金会 + 政策白皮书双拳出击，用「制度合法性」构筑不可复制的护城河</h3><p class="jc-body">编程产品混战中 Anthropic 开辟第二战场：2 亿美元承诺盖茨基金会（全球健康/教育/农业），同日发政策白皮书呼吁美国执行对华出口管制、维持 2028 年前 AI 领先。底层逻辑是「制度合法性」——让政府与国际机构把 Anthropic 视为不可缺席的战略伙伴而非可替代商品。对手复制这条路需要数年政府公关积累，短期内护城河高度不对称。</p></article><article class="judgment-card"><div class="jc-emoji">⚡</div><h3 class="jc-title">英伟达出局、短剧日产 470 部、算力 IPO 两年涨 16 倍：中美 AI 已进入不可逆的结构性分轨</h3><p class="jc-body">特朗普证实中国主动放弃英伟达转向华为；同期中国 AI 短剧单月日均 470 部大规模出海（成本降 90%），国内独立算力集群第一股两年营收涨 16 倍冲刺 IPO，腾讯 Hunyuan 登顶 OpenRouter 全球周榜。这已不是追赶而是分轨：算力、模型、应用三层正在形成「东西双版本」。夹在中间的跨国企业将在 90 天内感受到选边站的现实压力。</p></article></div>
+        <p class="br-outro">编程智能体是近战，制度合法性是护城河，中美分轨是结构变量——三条线互不干扰，同步加速。</p>
     </section>
 
+<!-- Entity Tracker (P1) — 30 天动态时间线入口 -->
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">365</span></a><a class="et-chip" href="entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">271</span></a><a class="et-chip" href="entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">85</span></a><a class="et-chip" href="entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">75</span></a><a class="et-chip" href="entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">51</span></a><a class="et-chip" href="entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">43</span></a><a class="et-chip" href="entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">24</span></a><a class="et-chip" href="entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">20</span></a><a class="et-chip" href="entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">16</span></a><a class="et-chip" href="entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">10</span></a><a class="et-chip" href="entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">7</span></a><a class="et-chip" href="entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">5</span></a></div></section>
+
 <!-- Featured Articles (Importance >= 4) —— 重大事件 -->
+<div class="featured-section">
+<h2 class="featured-title">今日必读</h2>
+<div class="featured-grid">
+    <div class="featured-card" data-cat="芯片与算力|AI政策监管" data-aud="investor|pm" data-idx="24" data-iid="f3c183710a8400fd42879bbaf175190b" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">特朗普峰会后英伟达中国业务前景依然不明朗</div>
+            <div class="featured-why">特朗普表示中国主动选择不购买英伟达芯片，转而扶持华为等本土芯片厂商，英伟达在华前景持续不确定。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 05-15 20:30</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI编程|产品与应用" data-aud="developer|pm|investor" data-idx="0" data-iid="326607290d218cfb7f34a127a18f8920" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">Sea Limited全面部署OpenAI Codex加速亚洲AI原生软件开发</div>
+            <div class="featured-why">Sea Limited首席产品官阐述公司在工程团队全面推广Codex，以加速AI原生软件开发的战略布局。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🤖 OpenAI Blog · 05-15 19:06</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI编程|产品与应用" data-aud="developer|pm" data-idx="10" data-iid="3903e746aef05dd51ab9ccadd430d024" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://substackcdn.com/image/fetch/$s_!-UVS!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc44b00aa-b057-4698-a9c6-f8e73c7aaaf7_2289x1342.jpeg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">GitHub发布新App，AI编程智能体工作流形态趋于统一</div>
+            <div class="featured-why">GitHub发布新版App，采用以智能体为中心的界面设计，与Conductor等产品形态趋于一致，YC CEO Garry Tan公开力挺Conductor。</div>
+            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 🎙️ Latent Space · 05-15 19:06</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="行业观点|产品与应用" data-aud="investor|pm|general" data-idx="25" data-iid="dada8b8df07ab76356ef88d949eb28cc" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://media.wired.com/photos/6a04e8e8e20de45ef884b2b7/master/pass/Mira-Murati-Wants-to-Keep-Human-Intelligence-in-Loop-As-Long-asPossible-Business-2266727283.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">Mira Murati创立Thinking Machines Lab：让AI与人类协作而非取代</div>
+            <div class="featured-why">前OpenAI首席技术官Mira Murati创立Thinking Machines Lab，主张构建与人类协作、保持人类参与的AI系统，而非自动化取代人类岗位。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 📡 Wired AI · 05-15 17:00</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI医疗|机器人技术" data-aud="general" data-idx="26" data-iid="528b0571af32bf7456d3de60a08cb853" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iG6ybP1RGuUU/v3/1200x-1.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">BD首席执行官：AI与机器人技术将在未来十年深度变革医疗健康行业</div>
+            <div class="featured-why">医疗科技公司BD的CEO Tom Polen表示，未来十年AI和机器人技术将成为医疗行业转型的核心驱动力。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 💰 Bloomberg Technology · 05-15 22:53</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI编程|产品与应用" data-aud="developer|researcher" data-idx="27" data-iid="ad663beee6e7152e49fd1d99ca2d49b5" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHIWR4LgbEAAoAML.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">xAI推出DAD：Grok Build多智能体tmux监督框架</div>
+            <div class="featured-why">xAI推出DAD轻量级自主监督器，可并行调度40个Grok Build智能体执行C代码任务，支持2分钟快循环与12分钟深循环双层管控。</div>
+            <div class="featured-source"><span class="tier-badge tier-社区" title="社区源">💬 社区</span> 🐦 X-Elon Musk (xAI) · 05-15 22:02</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="芯片与算力|产品与应用" data-aud="developer|pm|investor" data-idx="28" data-iid="84d919ea524f1240b810d051ee37b1c4" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">联发科天玑芯片全面赋能手机智能体AI能力跃升</div>
+            <div class="featured-why">联发科正通过天玑芯片平台成为移动端智能体AI体验的全栈赋能者，推动手机AI从功能演示走向实际落地。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚛️ 量子位 · 05-15 15:36</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="产品与应用|AI编程" data-aud="developer|pm" data-idx="1" data-iid="18f13afbd6901fb3b6c8fb8c5d86216a" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI Codex登陆ChatGPT移动端：随时随地管理编程任务</div>
+            <div class="featured-why">OpenAI将Codex智能体集成到ChatGPT移动应用，用户可在任意设备上实时监控、引导和审批编程任务。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🤖 OpenAI Blog · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI编程|产品与应用" data-aud="developer|pm" data-idx="2" data-iid="1e5f316a2f07b59636e0e9764c1db600" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHITjWnUbwAAtIOq.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI Codex登陆ChatGPT移动端：随时随地管理AI编程任务</div>
+            <div class="featured-why">OpenAI宣布Codex智能体进入ChatGPT移动应用预览版，用户可在手机端发起任务、查看输出、指导执行并审批后续步骤。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI编程|产品与应用" data-aud="developer|pm" data-idx="3" data-iid="7dc88b6727cd5c3271a1c66ef540f256" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/card_img%2F2055057038728704000%2F891IcHOc%3Fformat%3Djpg%26name%3D800x419')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI Codex移动端上线：iOS和Android全球同步预览</div>
+            <div class="featured-why">OpenAI将Codex编程智能体扩展至iOS和Android移动端，在所有支持地区同步开启预览，Windows连接手机功能即将推出。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI编程|产品与应用" data-aud="developer|pm" data-idx="4" data-iid="5771d721e6572f13b908fba4825e9c9b" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/media%2FHIUAFGhboAAsor1.png')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI Codex新增Hooks与程序化访问令牌功能</div>
+            <div class="featured-why">OpenAI为Codex推出Hooks自定义机制和程序化访问令牌，增强CI/CD与企业自动化集成能力。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-Sam Altman · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="5" data-iid="2b523f890918156249df7c8dfed26b5c" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">Google DeepMind推出5天AI智能体集训课程Kaggriculture挑战赛</div>
+            <div class="featured-why">Google DeepMind联合Google推出免费5天AI智能体强化编程课程，6月15-19日举办，含农业模拟挑战赛Kaggriculture。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-GoogleDeepMind · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="6" data-iid="0aab55e6245ede930ca301f9888a7d96" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/card_img%2F2054941902127153152%2FkKB7B72f%3Fformat%3Djpg%26name%3D800x419')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">Anthropic携手盖茨基金会：承诺2亿美元推动全球健康与教育</div>
+            <div class="featured-why">Anthropic与盖茨基金会达成合作，承诺提供2亿美元资助，涵盖拨款、Claude积分及技术支持，聚焦全球健康、生命科学、教育、农业与经济流动性领域。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-AnthropicAI · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="7" data-iid="5b803de60d1cffeaea9286bc13b49a3d" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/card_img%2F2054987115738578944%2FDfu3Civf%3Fformat%3Djpg%26name%3D800x419')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">Anthropic发布报告：解析美中AI竞争格局与保持领先的关键</div>
+            <div class="featured-why">Anthropic发布政策研究报告，分析美国及民主盟友在前沿AI领域的现有领先优势，并提出维持该领先地位的战略建议。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-AnthropicAI · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="8" data-iid="a1312e54bd28a28cba89641a0832efcc" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">ChatGPT更新安全机制：增强敏感对话上下文识别能力</div>
+            <div class="featured-why">OpenAI为ChatGPT推出安全更新，提升对敏感对话的上下文感知能力，可随时间动态检测风险并给出更安全的回应。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🤖 OpenAI Blog · 05-15 06:55</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="产品与应用|融资与商业" data-aud="investor|pm" data-idx="11" data-iid="3bfb00e9b3cb718b401431300704eaa9" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://substackcdn.com/image/fetch/$s_!MX36!,w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F967bcd77-27ed-4487-bcc1-28c3d66d057c_2018x1576.png')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">Abridge医疗AI实现1亿次诊疗访问，每位医生节省10-20小时</div>
+            <div class="featured-why">医疗AI公司Abridge分享其临床文档自动化平台规模化进展，已处理1亿次医患对话，显著减轻医生文书负担并加速事前授权流程。</div>
+            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 🎙️ Latent Space · 05-15 06:55</div>
+            
+        </div>
+    </div>
+</div>
+</div>
 
 
 <!-- Regular Articles (importance < 3) —— 普通资讯网格 -->
@@ -1117,8 +1376,218 @@ body.show-read .is-read:hover {
 <!-- id="grid" 是 script.js bindCardClick(getElementById('grid')) 必须的，少了它点击 modal 会失效 -->
 <div id="grid" class="grid" aria-label="资讯列表">
 
-        <div class="card" data-cat="其他" data-aud="general" data-idx="0" data-iid="83516b28bd4f8ffae3554de3db7bc579"
-             style="animation-delay:0ms">
+        <div class="card" data-cat="学术研究|AI工具" data-aud="researcher" data-idx="9" data-iid="fdc033de12e5f207456dc220a1aa75ca"
+             style="animation-delay:225ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">学术研究 · AI工具</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">无监督混合潜空间模型分离脑结构连接组采集变异性</div>
+                <div class="z3"><div class="z3-why">新型无监督混合潜空间框架可自动分离dMRI结构连接组中采集差异与生物变异，无需手动调参。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|融资与商业" data-aud="investor|developer" data-idx="12" data-iid="17d1dbb6ad116e435eeffe3053801ca5"
+             style="animation-delay:300ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">产品与应用 · 融资与商业</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">llmda.ai CEO专访：半导体老将Nagesh Gupta押注LLM部署优化</div>
+                <div class="z3"><div class="z3-why">SemiWiki对llmda.ai创始人Nagesh Gupta进行专访，其拥有惠普、Cadence、Xilinx等半导体巨头从业背景，现专注LLM部署优化方向创业。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🔧 SemiWiki · 05-15 18:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="13" data-iid="2ade4ea9d2b52ceb190beb6d9144dca0"
+             style="animation-delay:325ms">
+            <div class="card-img" style="background-image:url('https://wp.technologyreview.com/wp-content/uploads/2026/05/Liz_Isles_Photography_Sandra-3.webp?w=2667')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">中国AI短剧工厂：每天470部AI生成短剧重塑内容产业</div>
+                <div class="z3"><div class="z3-why">中国短剧行业借助AI实现全流程生产，1月份日均发布470部AI生成短剧，制作成本降低90%，正向海外扩张。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🎓 MIT Tech Review · 05-15 20:10</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="14" data-iid="e96559102b992261200b14598bf59de7"
+             style="animation-delay:350ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">EMA系统：为学习型系统提供高效模型自适应能力</div>
+                <div class="z3"><div class="z3-why">arXiv论文提出EMA系统，首个专为学习型系统设计的模型自适应框架，解决动态环境下模型退化问题。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="15" data-iid="068f1588cd714675a8d33744d8090fec"
+             style="animation-delay:375ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">EvolveMem：LLM智能体自进化长期记忆架构</div>
+                <div class="z3"><div class="z3-why">EvolveMem提出将检索配置本身作为可优化动作空间，让LLM智能体的记忆机制随使用经验自动进化。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="16" data-iid="2dd2db18c863cacb1df01abfe48b1fd0"
+             style="animation-delay:400ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">联邦微调跨域基准：私有数据训练LLM的下一个前沿</div>
+                <div class="z3"><div class="z3-why">新论文提出跨域联邦微调基准，旨在解锁医疗、金融等受监管行业的私有数据用于LLM训练。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="17" data-iid="493cd8278d3aa299398a430af2675cc0"
+             style="animation-delay:425ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">TraFL框架解决扩散语言模型强化后训练轨迹锁定问题</div>
+                <div class="z3"><div class="z3-why">研究者提出TraFL方法，通过轨迹平衡目标解决扩散语言模型后训练中的轨迹锁定失效问题，提升多样性覆盖。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="18" data-iid="90822349dc73f0168d6299be4b6e793b"
+             style="animation-delay:450ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">SCOPE-BENCH：重新审视分子OOD泛化的目标感知源选择</div>
+                <div class="z3"><div class="z3-why">研究提出SCOPE-BENCH基准，通过物理化学描述符空间的聚类分区解决分子性质预测的OOD泛化难题。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="19" data-iid="ffd007915559a628818574e017b9d206"
+             style="animation-delay:475ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">稀疏自编码器解析EEG基础模型内部机制研究</div>
+                <div class="z3"><div class="z3-why">研究者将TopK稀疏自编码器应用于三种EEG Transformer模型，提取可解释特征字典，推动临床AI可信度提升。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="20" data-iid="25243cbc386f2aaae2de8bb82584a4a0"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">视觉运行时监控新框架：语义潜在表示支持多规格认证</div>
+                <div class="z3"><div class="z3-why">论文提出基于视觉观察的运行时安全监控框架，利用语义基向量实现单次校准即可认证任意时序逻辑公式，无需针对每条规则重新训练。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 05-15 12:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="21" data-iid="c31ddd60635f2bfa3fa4375a37357a12"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">AI生成短剧崛起：中国竖屏剧成AI内容生产机器</div>
+                <div class="z3"><div class="z3-why">中国短剧应用正大规模采用AI生成技术制作竖屏剧集，无需演员和摄像机即可产出影视内容。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🎓 MIT Tech Review · 05-15 17:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="22" data-iid="86a2f22779894765b49d19a4486851a6"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">HuggingFace博客：连续批处理异步化解锁推理吞吐上限</div>
+                <div class="z3"><div class="z3-why">HuggingFace发布技术博客，介绍在连续批处理（continuous batching）推理架构中引入异步机制以突破GPU利用率瓶颈的工程方案。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🤗 Hugging Face Blog · 05-15 06:55</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="23" data-iid="071ef486161ea85226d79e006e047487"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">IBM发布Granite多语言嵌入R2：Apache 2.0开源、32K上下文，百M参数以下检索质量最优</div>
+                <div class="z3"><div class="z3-why">IBM在Hugging Face发布Granite Embedding Multilingual R2，采用Apache 2.0协议开源，支持32K上下文，声称在参数量百M以下的多语言嵌入模型中检索质量最优。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🤗 Hugging Face Blog · 05-15 06:55</div>
+            </div>
+        </div>
+        <div class="card" data-cat="产品与应用|AI工具" data-aud="pm|investor" data-idx="29" data-iid="1e821ee18f6def14ff478b8ba6c18b13"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">产品与应用 · AI工具</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">容联云发布数字员工级AI Agent平台重塑联络中心</div>
+                <div class="z3"><div class="z3-why">容联云推出以AI Agent为核心的「数字员工」平台，面向大模型时代重构企业联络中心业务形态。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚛️ 量子位 · 05-15 16:18</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="30" data-iid="83516b28bd4f8ffae3554de3db7bc579"
+             style="animation-delay:500ms">
             
             <div class="card-body">
                 
@@ -1128,7 +1597,308 @@ body.show-read .is-read:hover {
         </div>
                 <div class="card-title">电网AI创企Gridcare完成6400万美元A轮融资</div>
                 <div class="z3"><div class="z3-why">Gridcare利用AI检测电网闲置容量，完成6400万美元超额认购A轮融资，助力数据中心更快接入电网。</div></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 22:25 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 22:25</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="31" data-iid="ad4a8118bfab4c6e422733ce7d22cf43"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i3dUNIUiLIgo/v3/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">SambaNova CEO：AI下一战是推理成本而非训练模型</div>
+                <div class="z3"><div class="z3-why">SambaNova CEO Rodrigo Liang直接对标Cerebras IPO，主张AI基础设施竞争核心将转向推理成本与企业规模化</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-15 22:02</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="32" data-iid="330802cba85049807abd0c39821db235"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Runway押注视频生成通向世界模型，剑指谷歌AI</div>
+                <div class="z3"><div class="z3-why">AI视频生成创业公司Runway宣称视频生成是通向世界模型的路径，并认为作为AI圈外者是竞争优势。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-15 22:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="33" data-iid="561b9afbc2b10263bf285c12361b9f3a"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Hermes团队预训练新方法：不改架构算力成本降六成</div>
+                <div class="z3"><div class="z3-why">Hermes团队发布预训练效率论文，在不修改模型架构的前提下将算力成本降低约60%，论文阅读量突破41万。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🔎 36氪 AI搜索 · 05-15 21:35</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="34" data-iid="00ef008c972004c309476f5e0e82cb0e"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/inMaBziYY2rM/v3/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">华尔街AI热潮与普通人经济困境的深层断裂</div>
+                <div class="z3"><div class="z3-why">Bloomberg播客探讨霍尔木兹海峡关闭、通胀高企背景下，AI与股市逆势繁荣与普通民众经济痛苦之间的结构性背离。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-15 21:35</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="35" data-iid="0368966c0ca5e1e42d71e7570f01b750"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">xAI发布Grok Build：面向编程与工作流自动化的智能体CLI工具</div>
+                <div class="z3"><div class="z3-why">xAI推出首款AI编程智能体Grok Build，以命令行工具形式面向SuperGrok Heavy订阅用户开放测试，对标Anthropic的Claude Code。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 19:10</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="36" data-iid="af93f718525d22bea971811b82f614df"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">英国税务局签10年£1.75亿合同，用Quantexa AI打击税务欺诈</div>
+                <div class="z3"><div class="z3-why">英国HMRC与AI公司Quantexa签署10年、1.75亿英镑合同，利用其AI技术识别欺诈行为并修正纳税申报错误。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 19:20</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="37" data-iid="cac67703bfebce5ecf33281d86b43fb1"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Osaurus：Mac端本地与云端AI模型融合应用上线</div>
+                <div class="z3"><div class="z3-why">Osaurus发布Mac应用，将本地与云端AI模型整合，用户数据、文件和工具保留在本地硬件上。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-15 20:19</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="38" data-iid="ef61161138cfc2c5b3f1fcd6620db94a"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">用Claude Code创收40万美元：AI编程工具商业价值实证</div>
+                <div class="z3"><div class="z3-why">知名AI博主Matthew Berman分享了通过Claude Code获得40万美元收益的案例，展示了Anthropic AI编程助手的实际商业价值。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🎬 Matthew Berman · 05-15 21:00</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="39" data-iid="27fe8f73d8e5426d67cf543c1c8dc12e"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">麦康纳商标策略：用版权保护对抗AI未经授权使用肖像</div>
+                <div class="z3"><div class="z3-why">马修·麦康纳通过为自己的视频和音频片段注册商标，以期阻止AI未经授权使用其肖像和声音。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 21:05</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="40" data-iid="757cd0c50ac3a8a8c6d0ae84a6b82450"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">极客部落首场OPC路演：AI创业从卷模型转向卷闭环</div>
+                <div class="z3"><div class="z3-why">极客部落举办首场一人公司路演，16个OPC项目亮相，揭示AI创业趋势已从模型能力竞争转向完整商业闭环竞争</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🚀 AI前线 · 05-15 19:06</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="41" data-iid="1ac936aa749c422becd654480c97efea"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://media.wired.com/photos/6a063a9b1d5880149b6572f1/master/pass/Model-Behavior-We-Are-All-Losers-in-Musk-v-Altman-Business.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">马斯克诉OpenAI庭审落幕：各方形象受损</div>
+                <div class="z3"><div class="z3-why">联邦陪审团正就马斯克起诉OpenAI及Sam Altman案作出裁决，庭审过程令各方形象均受损。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 Wired AI · 05-15 08:49</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="42" data-iid="2fa8b8feb77d97a1d447e14001d0399c"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Anthropic发布政策白皮书：敦促美国强化出口管制以领先中国</div>
+                <div class="z3"><div class="z3-why">Anthropic发布政策白皮书，呼吁美国及盟友执行出口管制、遏制蒸馏攻击、向盟国出口美国AI，目标是在2028年前保持对华优势。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 10:10</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="43" data-iid="abfb8ec66501b388f5d0dc5046a8d257"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">英国教育科技独角兽Multiverse融资7000万美元押注AI培训</div>
+                <div class="z3"><div class="z3-why">伦敦教育科技创业公司Multiverse完成7000万美元融资，估值21亿美元，并于今年1月收购StackFuel以深化AI培训布局。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 12:55</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="44" data-iid="a2c1159a261639162a735bd0bb8834ff"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">亚马逊CEO安迪·贾西裁员砍项目押注AI转型全貌</div>
+                <div class="z3"><div class="z3-why">Bloomberg深度报道亚马逊CEO贾西如何通过裁员、终止项目取悦华尔街，并将公司战略重心转向AI。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 14:35</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="45" data-iid="507f492a8afbed6c3e253b7b8b211a45"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Akamai以2.05亿美元收购以色列AI安全浏览器初创LayerX</div>
+                <div class="z3"><div class="z3-why">Akamai以约2.05亿美元现金收购以色列网络安全初创公司LayerX Security，后者专注浏览器端AI工具使用安全防护。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-15 18:35</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="46" data-iid="9f218adaa55941c7f5afc19484c4a60c"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">国内最大独立AI算力公司冲刺IPO，两年收入翻16倍</div>
+                <div class="z3"><div class="z3-why">国内独立AI算力集群第一股冲刺IPO，专注AI集群建设，两年内营收增长16倍。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🔎 36氪 AI搜索 · 05-15 06:55</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="47" data-iid="a0c1a6978f909ad0da9e55defe6fac80"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://img.huxiucdn.com/article/cover/202401/24/214301882653.jpg?imageView2/1/w/1440/h/810/|imageMogr2/strip/interlace/1/quality/85/format/jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">马化腾承认腾讯AI早期落后，Hunyuan模型登顶OpenRouter榜单</div>
+                <div class="z3"><div class="z3-why">腾讯2026Q1财报营收增长9.1%，马化腾在股东大会承认AI早期基础能力不突出，但Hunyuan模型Hy3 Preview登顶OpenRouter全球周榜，AI产品密集落地。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🐯 虎嗅科技 · 05-15 06:55</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="48" data-iid="9d55d54cd383db905058d4176f6a2ea3"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://nitter.net/pic/media%2FHITLxwubYAASkW_.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">xAI发布Grok Build早期测试版：面向SuperGrok Heavy用户的智能体CLI工具</div>
+                <div class="z3"><div class="z3-why">xAI发布Grok Build早期测试版，这是一款面向SuperGrok Heavy订阅用户的智能体命令行工具，支持编程、应用构建和工作流自动化。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🐦 X-Elon Musk (xAI) · 05-15 06:55</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="49" data-iid="17c3e605c337fa86a30269c266fcd8d2"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihC.bp8wESb4/v0/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">马斯克与Altman就OpenAI控制权争议向陪审团作最终陈述</div>
+                <div class="z3"><div class="z3-why">马斯克与Sam Altman就OpenAI归属和使命展开法庭决战，陪审团即将投票，法官将作出最终裁决。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-15 06:55</div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="50" data-iid="4d0eaaed3e7ea7528ea588118e35c06c"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">马斯克诉Altman案结案陈词：OpenAI律师占据压倒性优势</div>
+                <div class="z3"><div class="z3-why">马斯克诉Altman案结案陈词结束，OpenAI律师Sarah Eddy以大量证据占据明显优势，马斯克律师表现失误频出。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 05-15 06:21</div>
             </div>
         </div>
 </div>
@@ -1148,7 +1918,7 @@ body.show-read .is-read:hover {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 晚报 · <b>1</b> 个信息源 · <b>1</b> 篇资讯 · 2026年05月15日
+    AI 晚报 · <b>21</b> 个信息源 · <b>51</b> 篇资讯 · 2026年05月15日
     · <a href="archive/dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 

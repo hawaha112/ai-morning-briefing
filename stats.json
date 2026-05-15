@@ -1,37 +1,45 @@
 {
-  "article_count": 1,
+  "article_count": 51,
   "output_file": "output/index.html",
-  "file_size_kb": 63.1,
-  "generated_at": "2026-05-15T14:35:32.428382+00:00",
+  "file_size_kb": 114.8,
+  "generated_at": "2026-05-15T14:55:30.203624+00:00",
   "event_db_stats": {
-    "total_articles": 3951,
+    "total_articles": 3952,
     "collected": 0,
-    "analyzed": 3951,
-    "total_events": 2111,
-    "total_evidence": 2224,
+    "analyzed": 3952,
+    "total_events": 2112,
+    "total_evidence": 2225,
     "event_status": {
       "official": 269,
-      "reported": 1842
+      "reported": 1843
     },
     "tier_0": 287,
     "tier_1": 926,
-    "tier_2": 2738
+    "tier_2": 2739
   },
   "event_status_distribution": {
-    "reported": 1
+    "unknown": 51
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 1,
+  "llm_count": 51,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 1,
+  "important_events": [
+    {
+      "title": "特朗普峰会后英伟达中国业务前景依然不明朗",
+      "event_id": "https://www.techmeme.com/260515/p12#a260515p12",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-15-pm.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 1,
+  "depth_count": 48,
   "entity_count": 0,
-  "llm_call_count": 2,
-  "llm_prompt_tokens": 2259,
-  "llm_completion_tokens": 693,
-  "llm_total_tokens": 2953,
+  "llm_call_count": 3,
+  "llm_prompt_tokens": 3949,
+  "llm_completion_tokens": 1065,
+  "llm_total_tokens": 5015,
   "llm_parse_fallback": 0
 }
