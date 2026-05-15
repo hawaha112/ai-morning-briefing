@@ -14,6 +14,7 @@ on:
       - 'index.html'
       - 'modal_data.js'
       - 'archive/**'
+      - 'entities/**'
       - '.github/workflows/deploy.yml'
   workflow_dispatch: {}
 
@@ -44,6 +45,8 @@ jobs:
             [ -f "$f" ] && cp "$f" _site/
           done
           [ -d archive ] && cp -r archive _site/
+          # P1: entity timeline 页 (entities/{id}-30d.html)
+          [ -d entities ] && cp -r entities _site/
           ls -la _site/
 
       - uses: actions/configure-pages@v5
