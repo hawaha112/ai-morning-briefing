@@ -1,8 +1,8 @@
 {
-  "article_count": 6,
+  "article_count": 24,
   "output_file": "output/index.html",
-  "file_size_kb": 77.3,
-  "generated_at": "2026-05-16T04:50:13.161658+00:00",
+  "file_size_kb": 92.8,
+  "generated_at": "2026-05-16T04:58:17.741752+00:00",
   "event_db_stats": {
     "total_articles": 4041,
     "collected": 0,
@@ -18,20 +18,35 @@
     "tier_2": 2805
   },
   "event_status_distribution": {
-    "reported": 6
+    "unknown": 24
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 6,
+  "llm_count": 24,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 2,
+  "important_events": [
+    {
+      "title": "ChatGPT推出个人财务管理功能：美国Pro用户可连接金融账户",
+      "event_id": "https://openai.com/index/personal-finance-chatgpt",
+      "importance": 4,
+      "source_name": "OpenAI Blog",
+      "archive_url": "archive/2026-05-16-pm.html"
+    },
+    {
+      "title": "Cerebras完成IPO市值达600亿美元，AI推理芯片迎来资本里程碑",
+      "event_id": "https://www.latent.space/p/ainews-cerebras-60b-ipo-slowly-then",
+      "importance": 4,
+      "source_name": "Latent Space",
+      "archive_url": "archive/2026-05-16-pm.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 6,
+  "depth_count": 24,
   "entity_count": 0,
-  "llm_call_count": 18,
-  "llm_prompt_tokens": 26278,
-  "llm_completion_tokens": 7819,
-  "llm_total_tokens": 34106,
+  "llm_call_count": 3,
+  "llm_prompt_tokens": 3330,
+  "llm_completion_tokens": 1038,
+  "llm_total_tokens": 4369,
   "llm_parse_fallback": 0
 }
