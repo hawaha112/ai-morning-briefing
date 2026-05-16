@@ -1,52 +1,45 @@
 {
-  "article_count": 24,
+  "article_count": 1,
   "output_file": "output/index.html",
-  "file_size_kb": 92.8,
-  "generated_at": "2026-05-16T04:58:17.741752+00:00",
+  "file_size_kb": 69.1,
+  "generated_at": "2026-05-16T10:08:53.425962+00:00",
   "event_db_stats": {
-    "total_articles": 4041,
+    "total_articles": 4057,
     "collected": 0,
-    "analyzed": 4041,
-    "total_events": 2151,
-    "total_evidence": 2270,
+    "analyzed": 4057,
+    "total_events": 2156,
+    "total_evidence": 2275,
     "event_status": {
-      "official": 271,
-      "reported": 1880
+      "official": 272,
+      "reported": 1884
     },
-    "tier_0": 289,
+    "tier_0": 290,
     "tier_1": 947,
-    "tier_2": 2805
+    "tier_2": 2820
   },
   "event_status_distribution": {
-    "unknown": 24
+    "reported": 1
   },
-  "use_canonical_events": false,
+  "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 24,
+  "llm_count": 1,
   "multi_source_count": 0,
-  "important_count": 2,
+  "important_count": 1,
   "important_events": [
     {
-      "title": "ChatGPT推出个人财务管理功能：美国Pro用户可连接金融账户",
-      "event_id": "https://openai.com/index/personal-finance-chatgpt",
+      "title": "美国劳工统计局：AI高暴露职业就业率连续两年下滑",
+      "event_id": "evt_d6d8369d1d3f648a0e5796a0",
       "importance": 4,
-      "source_name": "OpenAI Blog",
-      "archive_url": "archive/2026-05-16-pm.html"
-    },
-    {
-      "title": "Cerebras完成IPO市值达600亿美元，AI推理芯片迎来资本里程碑",
-      "event_id": "https://www.latent.space/p/ainews-cerebras-60b-ipo-slowly-then",
-      "importance": 4,
-      "source_name": "Latent Space",
+      "source_name": "Techmeme",
       "archive_url": "archive/2026-05-16-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 24,
+  "depth_count": 1,
   "entity_count": 0,
-  "llm_call_count": 3,
-  "llm_prompt_tokens": 3330,
-  "llm_completion_tokens": 1038,
-  "llm_total_tokens": 4369,
+  "llm_call_count": 8,
+  "llm_prompt_tokens": 10835,
+  "llm_completion_tokens": 3448,
+  "llm_total_tokens": 14285,
   "llm_parse_fallback": 0
 }
