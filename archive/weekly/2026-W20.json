@@ -1,0 +1,12 @@
+{
+  "week_label": "2026-W20",
+  "date_range": "2026-05-10 ~ 2026-05-17",
+  "n_events": 10,
+  "judgement_titles": [
+    "AI替代就业从预言进入可计量阶段",
+    "AI企业市场：OpenAI主动整合，Anthropic两线防守",
+    "AI算力金融化加速，资本压缩AGI时间表"
+  ],
+  "next_week_focus": "追踪三条线：①白宫对英伟达H20出口许可的最新表态——「特朗普峰会后英伟达中国业务不明朗」压力已积累，30天内或有政策落地；②Anthropic与Stainless谈判是否达成排他协议，将直接决定OpenAI的SDK工具链缺口有多大；③CME GPU期货首周流动性建立速度，决定CoreWeave等独立算力商能否借此优化融资结构。",
+  "generated_at": "2026-05-17T18:05:04.827615+08:00"
+}
