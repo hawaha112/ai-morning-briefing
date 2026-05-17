@@ -1,37 +1,52 @@
 {
-  "article_count": 8,
+  "article_count": 7,
   "output_file": "output/index.html",
-  "file_size_kb": 78.4,
-  "generated_at": "2026-05-17T10:17:21.151660+00:00",
+  "file_size_kb": 77.7,
+  "generated_at": "2026-05-17T22:19:11.545811+00:00",
   "event_db_stats": {
-    "total_articles": 3961,
+    "total_articles": 3889,
     "collected": 0,
-    "analyzed": 3961,
-    "total_events": 2181,
-    "total_evidence": 2301,
+    "analyzed": 3889,
+    "total_events": 2194,
+    "total_evidence": 2315,
     "event_status": {
       "official": 274,
-      "reported": 1907
+      "reported": 1920
     },
-    "tier_0": 269,
-    "tier_1": 913,
-    "tier_2": 2779
+    "tier_0": 267,
+    "tier_1": 888,
+    "tier_2": 2734
   },
   "event_status_distribution": {
-    "reported": 8
+    "reported": 7
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 8,
+  "llm_count": 7,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 2,
+  "important_events": [
+    {
+      "title": "马斯克诉OpenAI案庭审：Sam Altman可信度成核心焦点",
+      "event_id": "evt_bfa74b2b7d7a0e7065a99582",
+      "importance": 4,
+      "source_name": "TechCrunch AI",
+      "archive_url": "archive/2026-05-18-am.html"
+    },
+    {
+      "title": "中国AI视频生成超越美国：字节跳动与快手领跑赛道",
+      "event_id": "evt_2fc7ce177a70bdd91cf6ca48",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-18-am.html"
+    }
+  ],
   "official_count": 0,
   "depth_count": 7,
   "entity_count": 0,
-  "llm_call_count": 19,
-  "llm_prompt_tokens": 25185,
-  "llm_completion_tokens": 7771,
-  "llm_total_tokens": 32965,
+  "llm_call_count": 27,
+  "llm_prompt_tokens": 38378,
+  "llm_completion_tokens": 10265,
+  "llm_total_tokens": 48651,
   "llm_parse_fallback": 0
 }
