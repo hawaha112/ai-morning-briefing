@@ -1,53 +1,52 @@
 {
-  "article_count": 19,
+  "article_count": 22,
   "output_file": "output/index.html",
-  "file_size_kb": 89.4,
-  "generated_at": "2026-05-19T22:17:59.837928+00:00",
+  "file_size_kb": 92.3,
+  "generated_at": "2026-05-20T10:17:08.545331+00:00",
   "event_db_stats": {
-    "total_articles": 3913,
+    "total_articles": 3969,
     "collected": 0,
-    "analyzed": 3913,
-    "total_events": 2097,
-    "total_evidence": 2244,
+    "analyzed": 3969,
+    "total_events": 2127,
+    "total_evidence": 2284,
     "event_status": {
-      "official": 263,
-      "reported": 1834
+      "official": 269,
+      "reported": 1858
     },
-    "tier_0": 288,
-    "tier_1": 928,
-    "tier_2": 2697
+    "tier_0": 294,
+    "tier_1": 953,
+    "tier_2": 2722
   },
   "event_status_distribution": {
-    "reported": 17,
-    "official": 2
+    "reported": 22
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 19,
-  "multi_source_count": 2,
+  "llm_count": 22,
+  "multi_source_count": 1,
   "important_count": 2,
   "important_events": [
     {
-      "title": "谷歌搜索全面智能体化：AI重塑搜索引擎未来形态",
-      "event_id": "evt_8fac541be95763a96e0df5fb",
+      "title": "中国封禁英伟达RTX 5090D V2芯片，黄仁勋访华期间出台",
+      "event_id": "evt_a7d2f23ba28bbc0eef065023",
       "importance": 4,
-      "source_name": "Wired AI",
-      "archive_url": "archive/2026-05-20-am.html"
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-20-pm.html"
     },
     {
-      "title": "谷歌推出AI信息代理功能，可持续监控话题并超越传统搜索边界",
-      "event_id": "evt_4fef3fa14da07396a376c4e8",
+      "title": "英伟达业务拓展部门主导900亿美元投资布局145家企业",
+      "event_id": "evt_cfc9e584e1ed982708f9783b",
       "importance": 4,
-      "source_name": "TechCrunch AI",
-      "archive_url": "archive/2026-05-20-am.html"
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-20-pm.html"
     }
   ],
-  "official_count": 2,
-  "depth_count": 18,
+  "official_count": 0,
+  "depth_count": 21,
   "entity_count": 0,
-  "llm_call_count": 105,
-  "llm_prompt_tokens": 143351,
-  "llm_completion_tokens": 44289,
-  "llm_total_tokens": 187675,
+  "llm_call_count": 75,
+  "llm_prompt_tokens": 103312,
+  "llm_completion_tokens": 31185,
+  "llm_total_tokens": 134522,
   "llm_parse_fallback": 0
 }
