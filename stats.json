@@ -1,52 +1,53 @@
 {
-  "article_count": 21,
+  "article_count": 32,
   "output_file": "output/index.html",
-  "file_size_kb": 91.8,
-  "generated_at": "2026-05-21T10:16:02.430252+00:00",
+  "file_size_kb": 102.7,
+  "generated_at": "2026-05-21T22:19:47.734057+00:00",
   "event_db_stats": {
-    "total_articles": 4008,
+    "total_articles": 3999,
     "collected": 0,
-    "analyzed": 4008,
-    "total_events": 2163,
-    "total_evidence": 2330,
+    "analyzed": 3999,
+    "total_events": 2148,
+    "total_evidence": 2319,
     "event_status": {
-      "official": 277,
-      "reported": 1886
+      "official": 275,
+      "reported": 1873
     },
-    "tier_0": 306,
-    "tier_1": 972,
-    "tier_2": 2730
+    "tier_0": 304,
+    "tier_1": 973,
+    "tier_2": 2722
   },
   "event_status_distribution": {
-    "reported": 21
+    "reported": 31,
+    "official": 1
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 21,
-  "multi_source_count": 0,
+  "llm_count": 32,
+  "multi_source_count": 2,
   "important_count": 2,
   "important_events": [
     {
-      "title": "Anthropic与SpaceX签约：每月12.5亿美元租用Colossus算力",
-      "event_id": "evt_0b46655978f49815d727359c",
-      "importance": 5,
-      "source_name": "Simon Willison",
-      "archive_url": "archive/2026-05-21-pm.html"
-    },
-    {
-      "title": "英伟达再创季度营收纪录，持有430亿美元初创企业股份",
-      "event_id": "evt_760186f46e611a588cec256a",
+      "title": "Spotify与环球音乐达成协议：允许粉丝用AI制作翻唱和混音",
+      "event_id": "evt_b742891f3fd70fb9bee53b80",
       "importance": 4,
       "source_name": "TechCrunch AI",
-      "archive_url": "archive/2026-05-21-pm.html"
+      "archive_url": "archive/2026-05-22-am.html"
+    },
+    {
+      "title": "Hark完成7亿美元A轮融资，秘密研发「通用」AI多模态界面",
+      "event_id": "evt_262a4f1931eb469408171d3c",
+      "importance": 4,
+      "source_name": "TechCrunch AI",
+      "archive_url": "archive/2026-05-22-am.html"
     }
   ],
-  "official_count": 0,
-  "depth_count": 21,
+  "official_count": 1,
+  "depth_count": 31,
   "entity_count": 0,
-  "llm_call_count": 49,
-  "llm_prompt_tokens": 72193,
-  "llm_completion_tokens": 20107,
-  "llm_total_tokens": 92321,
-  "llm_parse_fallback": 1
+  "llm_call_count": 80,
+  "llm_prompt_tokens": 107175,
+  "llm_completion_tokens": 32328,
+  "llm_total_tokens": 139532,
+  "llm_parse_fallback": 0
 }
