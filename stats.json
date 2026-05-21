@@ -1,53 +1,52 @@
 {
-  "article_count": 32,
+  "article_count": 21,
   "output_file": "output/index.html",
-  "file_size_kb": 103.1,
-  "generated_at": "2026-05-20T22:15:39.445700+00:00",
+  "file_size_kb": 91.8,
+  "generated_at": "2026-05-21T10:16:02.430252+00:00",
   "event_db_stats": {
-    "total_articles": 3958,
+    "total_articles": 4008,
     "collected": 0,
-    "analyzed": 3958,
-    "total_events": 2133,
-    "total_evidence": 2299,
+    "analyzed": 4008,
+    "total_events": 2163,
+    "total_evidence": 2330,
     "event_status": {
-      "official": 276,
-      "reported": 1857
+      "official": 277,
+      "reported": 1886
     },
-    "tier_0": 304,
-    "tier_1": 955,
-    "tier_2": 2699
+    "tier_0": 306,
+    "tier_1": 972,
+    "tier_2": 2730
   },
   "event_status_distribution": {
-    "reported": 31,
-    "official": 1
+    "reported": 21
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 32,
-  "multi_source_count": 2,
+  "llm_count": 21,
+  "multi_source_count": 0,
   "important_count": 2,
   "important_events": [
     {
-      "title": "Anthropic每月付SpaceX 12.5亿美元算力费用并扩展至Colossus 2",
-      "event_id": "evt_2d5b377da4958fc5357e6be8",
+      "title": "Anthropic与SpaceX签约：每月12.5亿美元租用Colossus算力",
+      "event_id": "evt_0b46655978f49815d727359c",
       "importance": 5,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-21-am.html"
+      "source_name": "Simon Willison",
+      "archive_url": "archive/2026-05-21-pm.html"
     },
     {
-      "title": "OpenAI IPO提速：马斯克败诉后拟9月上市",
-      "event_id": "evt_f859ab82c68db0471330abf5",
+      "title": "英伟达再创季度营收纪录，持有430亿美元初创企业股份",
+      "event_id": "evt_760186f46e611a588cec256a",
       "importance": 4,
       "source_name": "TechCrunch AI",
-      "archive_url": "archive/2026-05-21-am.html"
+      "archive_url": "archive/2026-05-21-pm.html"
     }
   ],
-  "official_count": 1,
-  "depth_count": 30,
+  "official_count": 0,
+  "depth_count": 21,
   "entity_count": 0,
-  "llm_call_count": 92,
-  "llm_prompt_tokens": 119775,
-  "llm_completion_tokens": 39055,
-  "llm_total_tokens": 158862,
-  "llm_parse_fallback": 0
+  "llm_call_count": 49,
+  "llm_prompt_tokens": 72193,
+  "llm_completion_tokens": 20107,
+  "llm_total_tokens": 92321,
+  "llm_parse_fallback": 1
 }
