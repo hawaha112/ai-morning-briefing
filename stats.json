@@ -1,38 +1,45 @@
 {
-  "article_count": 19,
+  "article_count": 21,
   "output_file": "output/index.html",
-  "file_size_kb": 89.7,
-  "generated_at": "2026-05-22T22:15:30.814267+00:00",
+  "file_size_kb": 91.8,
+  "generated_at": "2026-05-23T10:12:29.685554+00:00",
   "event_db_stats": {
-    "total_articles": 3925,
+    "total_articles": 3882,
     "collected": 0,
-    "analyzed": 3925,
-    "total_events": 2107,
-    "total_evidence": 2281,
+    "analyzed": 3882,
+    "total_events": 2085,
+    "total_evidence": 2257,
     "event_status": {
-      "official": 264,
-      "reported": 1843
+      "official": 253,
+      "reported": 1832
     },
-    "tier_0": 291,
-    "tier_1": 951,
-    "tier_2": 2683
+    "tier_0": 279,
+    "tier_1": 955,
+    "tier_2": 2648
   },
   "event_status_distribution": {
-    "official": 1,
-    "reported": 18
+    "reported": 21
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 19,
-  "multi_source_count": 1,
-  "important_count": 0,
-  "important_events": [],
-  "official_count": 1,
-  "depth_count": 19,
+  "llm_count": 21,
+  "multi_source_count": 0,
+  "important_count": 1,
+  "important_events": [
+    {
+      "title": "Anthropic披露Claude Mythos Preview发现逾万个高危漏洞",
+      "event_id": "evt_b0f63fe5783dae144e4fd2bd",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-23-pm.html"
+    }
+  ],
+  "official_count": 0,
+  "depth_count": 21,
   "entity_count": 0,
-  "llm_call_count": 64,
-  "llm_prompt_tokens": 86276,
-  "llm_completion_tokens": 26580,
-  "llm_total_tokens": 112879,
+  "llm_call_count": 60,
+  "llm_prompt_tokens": 79075,
+  "llm_completion_tokens": 25752,
+  "llm_total_tokens": 104852,
   "llm_parse_fallback": 0
 }
