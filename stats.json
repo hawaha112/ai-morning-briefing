@@ -1,21 +1,21 @@
 {
   "article_count": 5,
   "output_file": "output/index.html",
-  "file_size_kb": 76.9,
-  "generated_at": "2026-05-23T22:07:42.597631+00:00",
+  "file_size_kb": 76.2,
+  "generated_at": "2026-05-24T10:11:07.789817+00:00",
   "event_db_stats": {
-    "total_articles": 3904,
+    "total_articles": 3921,
     "collected": 0,
-    "analyzed": 3904,
-    "total_events": 2093,
-    "total_evidence": 2267,
+    "analyzed": 3921,
+    "total_events": 2099,
+    "total_evidence": 2273,
     "event_status": {
       "official": 253,
-      "reported": 1840
+      "reported": 1846
     },
     "tier_0": 279,
     "tier_1": 956,
-    "tier_2": 2669
+    "tier_2": 2686
   },
   "event_status_distribution": {
     "reported": 5
@@ -29,9 +29,9 @@
   "official_count": 0,
   "depth_count": 5,
   "entity_count": 0,
-  "llm_call_count": 18,
-  "llm_prompt_tokens": 25411,
-  "llm_completion_tokens": 6443,
-  "llm_total_tokens": 31864,
+  "llm_call_count": 13,
+  "llm_prompt_tokens": 15086,
+  "llm_completion_tokens": 5327,
+  "llm_total_tokens": 20419,
   "llm_parse_fallback": 0
 }
