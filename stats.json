@@ -1,45 +1,37 @@
 {
-  "article_count": 28,
+  "article_count": 7,
   "output_file": "output/index.html",
-  "file_size_kb": 96.9,
-  "generated_at": "2026-05-25T10:19:58.175406+00:00",
+  "file_size_kb": 78.1,
+  "generated_at": "2026-05-25T22:11:09.124503+00:00",
   "event_db_stats": {
-    "total_articles": 3877,
+    "total_articles": 3900,
     "collected": 0,
-    "analyzed": 3877,
-    "total_events": 2064,
-    "total_evidence": 2238,
+    "analyzed": 3900,
+    "total_events": 2078,
+    "total_evidence": 2252,
     "event_status": {
-      "official": 234,
-      "reported": 1830
+      "official": 237,
+      "reported": 1841
     },
-    "tier_0": 260,
-    "tier_1": 952,
-    "tier_2": 2665
+    "tier_0": 263,
+    "tier_1": 959,
+    "tier_2": 2678
   },
   "event_status_distribution": {
-    "reported": 28
+    "reported": 7
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 28,
+  "llm_count": 7,
   "multi_source_count": 0,
-  "important_count": 1,
-  "important_events": [
-    {
-      "title": "小米押注AI：未来三年投入约880亿元保障硬件与电动车生态",
-      "event_id": "evt_30c4d87451db46c7f0aa48d8",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-25-pm.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 28,
+  "depth_count": 7,
   "entity_count": 0,
-  "llm_call_count": 57,
-  "llm_prompt_tokens": 81023,
-  "llm_completion_tokens": 24311,
-  "llm_total_tokens": 105349,
+  "llm_call_count": 27,
+  "llm_prompt_tokens": 35093,
+  "llm_completion_tokens": 10888,
+  "llm_total_tokens": 45992,
   "llm_parse_fallback": 0
 }
