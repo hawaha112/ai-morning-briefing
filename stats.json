@@ -1,37 +1,52 @@
 {
-  "article_count": 7,
+  "article_count": 22,
   "output_file": "output/index.html",
-  "file_size_kb": 78.1,
-  "generated_at": "2026-05-25T22:11:09.124503+00:00",
+  "file_size_kb": 92.4,
+  "generated_at": "2026-05-26T22:14:55.669708+00:00",
   "event_db_stats": {
-    "total_articles": 3900,
+    "total_articles": 3933,
     "collected": 0,
-    "analyzed": 3900,
-    "total_events": 2078,
-    "total_evidence": 2252,
+    "analyzed": 3933,
+    "total_events": 2106,
+    "total_evidence": 2283,
     "event_status": {
-      "official": 237,
-      "reported": 1841
+      "official": 235,
+      "reported": 1871
     },
-    "tier_0": 263,
-    "tier_1": 959,
-    "tier_2": 2678
+    "tier_0": 261,
+    "tier_1": 991,
+    "tier_2": 2681
   },
   "event_status_distribution": {
-    "reported": 7
+    "reported": 22
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 7,
-  "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "llm_count": 22,
+  "multi_source_count": 1,
+  "important_count": 2,
+  "important_events": [
+    {
+      "title": "皮查伊深度对话：AI重塑搜索与Web信息生态",
+      "event_id": "evt_48441ec0f8c77a1319ddc39c",
+      "importance": 4,
+      "source_name": "The Verge AI",
+      "archive_url": "archive/2026-05-27-am.html"
+    },
+    {
+      "title": "美光科技市值首破万亿美元，AI存储芯片需求爆发",
+      "event_id": "evt_804bf1f06db21982cedb3f69",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-27-am.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 7,
+  "depth_count": 21,
   "entity_count": 0,
-  "llm_call_count": 27,
-  "llm_prompt_tokens": 35093,
-  "llm_completion_tokens": 10888,
-  "llm_total_tokens": 45992,
-  "llm_parse_fallback": 0
+  "llm_call_count": 116,
+  "llm_prompt_tokens": 160105,
+  "llm_completion_tokens": 49515,
+  "llm_total_tokens": 209661,
+  "llm_parse_fallback": 1
 }
