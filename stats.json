@@ -1,45 +1,66 @@
 {
-  "article_count": 16,
+  "article_count": 27,
   "output_file": "output/index.html",
-  "file_size_kb": 86.2,
-  "generated_at": "2026-05-27T22:13:26.455906+00:00",
+  "file_size_kb": 95.5,
+  "generated_at": "2026-05-28T10:12:09.912766+00:00",
   "event_db_stats": {
-    "total_articles": 3793,
+    "total_articles": 3709,
     "collected": 0,
-    "analyzed": 3793,
-    "total_events": 2044,
-    "total_evidence": 2216,
+    "analyzed": 3709,
+    "total_events": 2009,
+    "total_evidence": 2178,
     "event_status": {
-      "official": 233,
-      "reported": 1811
+      "official": 231,
+      "reported": 1778
     },
-    "tier_0": 259,
-    "tier_1": 978,
-    "tier_2": 2556
+    "tier_0": 257,
+    "tier_1": 981,
+    "tier_2": 2471
   },
   "event_status_distribution": {
-    "reported": 16
+    "reported": 27
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 16,
+  "llm_count": 27,
   "multi_source_count": 0,
-  "important_count": 1,
+  "important_count": 4,
   "important_events": [
     {
-      "title": "Meta全球推出Plus订阅计划，测试Meta AI付费版",
-      "event_id": "evt_36f222c9728eaad841e5bc9c",
+      "title": "7B小模型超越o3与GPT-5，医学AI智能体学会「看哪里怎么看」",
+      "event_id": "evt_a30c2039409a61e0f2aae85d",
+      "importance": 4,
+      "source_name": "量子位",
+      "archive_url": "archive/2026-05-28-pm.html"
+    },
+    {
+      "title": "AI需求激增引发全球光学供应链全线短缺与涨价",
+      "event_id": "evt_6dfbde3f7802d3eecef37542",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-28-am.html"
+      "archive_url": "archive/2026-05-28-pm.html"
+    },
+    {
+      "title": "字节跳动自研CPU：应对AI算力扩张中的芯片短缺与涨价压力",
+      "event_id": "evt_192621d892a0178a178efcf8",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-05-28-pm.html"
+    },
+    {
+      "title": "伊利诺伊州通过全美最严AI安全法案，强制第三方审计",
+      "event_id": "evt_98437e939ee9daf63bfbc592",
+      "importance": 4,
+      "source_name": "Wired AI",
+      "archive_url": "archive/2026-05-28-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 15,
+  "depth_count": 26,
   "entity_count": 0,
-  "llm_call_count": 53,
-  "llm_prompt_tokens": 77377,
-  "llm_completion_tokens": 21412,
-  "llm_total_tokens": 98807,
+  "llm_call_count": 59,
+  "llm_prompt_tokens": 85854,
+  "llm_completion_tokens": 24669,
+  "llm_total_tokens": 110546,
   "llm_parse_fallback": 0
 }

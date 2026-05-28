@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>NVIDIA</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>65</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>67</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (10)</h2>
     
@@ -111,7 +111,7 @@ h2.tl-section {
                     ⭐⭐⭐⭐
                     <a href="https://www.techmeme.com/260527/p11#a260527p11" target="_blank" rel="noopener">台湾逮捕三人涉嫌绕道日本走私英伟达AI芯片至中国</a>
                 </h3>
-                <div class="tl-event-meta">Techmeme </div>
+                <div class="tl-event-meta">Techmeme <span class="tl-multi">📡 2 源</span></div>
                 <p class="tl-event-summary">台湾检察官怀疑三名人士成功将至少一批英伟达AI芯片经日本中转走私至中国，相关人员已于上周被拘留。</p>
                 <p class="tl-event-deep">这是过去12个月内第N起通过第三国中转走私英伟达芯片被查案例（此前已有新加坡、马来西亚案例），但日本作为中转地属首次曝光，说明走私路径正在向美国盟友网络渗透。对出口管制政策的直接冲击是：美国可能在未来30-60天内向日本施压，要求加强再出口管控审查；英伟达则面临更严格的最终用户验证要求，可能影响对日本客户的正常销售流程。长远来看，若走私无法被有效遏制，美国对华芯片管制的核心逻辑（通过算力限制减缓中国AI发展）将被证伪，届时政策可能转向更激进的全球性管控措施，覆盖所有友好国家的</p>
             </div>
@@ -252,8 +252,38 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (55)</h2>
+    <h2 class="tl-section">📰 一般动态 (57)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-28 07:09</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/nvidia-dynamo-snapshot-fast-startup-for-inference-workloads-on-kubernetes/" target="_blank" rel="noopener">英伟达推出Dynamo Snapshot解决Kubernetes推理冷启动难题</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">英伟达发布Dynamo Snapshot技术，大幅压缩Kubernetes上推理工作负载的冷启动时间，解决流量峰值期GPU空转浪费问题。</p>
+                <p class="tl-event-deep">英伟达此举的竞争意图指向明确：强化Dynamo作为Kubernetes原生推理框架的生产可用性，直接对抗vLLM Production Stack、Ray Serve以及各云厂商自有推理服务（AWS SageMaker、Google Vertex AI）。冷启动优化是企业客户选型时的高权重指标，Snapshot若能兑现承诺，将给使用英伟达GPU的客户提供一个留在英伟达生态（而非迁移到托管服务）的理由。接下来60天内可观察的信号：开源仓库是否发布可复现的benchmark数据，</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-28 05:20</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/vllm-project/vllm/releases/tag/v0.22.0rc2" target="_blank" rel="noopener">vLLM v0.22.0rc2发布：修复CUDA早期初始化问题</a>
+                </h3>
+                <div class="tl-event-meta">vLLM Releases </div>
+                <p class="tl-event-summary">vLLM发布v0.22.0rc2候选版本，修复CUDA早期初始化bug，提升GPU推理稳定性。</p>
+                <p class="tl-event-deep">这是一个发布前的稳定性修复，影响范围集中在使用 GPU 多进程部署的用户群体。CUDA early init 问题若未修复进入正式版，会导致部分多卡或张量并行部署场景出现隐性崩溃，定位困难。cherry-pick 修复策略说明 vLLM 维护团队对 RC 阶段的质量管控较为严格。预计 v0.22.0 正式版将在数日内发布，建议在多GPU生产环境使用 vLLM 的团队关注此版本并优先升级。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-27 05:39</span>
