@@ -1,66 +1,38 @@
 {
-  "article_count": 27,
+  "article_count": 20,
   "output_file": "output/index.html",
-  "file_size_kb": 95.5,
-  "generated_at": "2026-05-28T10:12:09.912766+00:00",
+  "file_size_kb": 90.4,
+  "generated_at": "2026-05-28T22:16:34.534086+00:00",
   "event_db_stats": {
-    "total_articles": 3709,
+    "total_articles": 3588,
     "collected": 0,
-    "analyzed": 3709,
-    "total_events": 2009,
-    "total_evidence": 2178,
+    "analyzed": 3588,
+    "total_events": 1957,
+    "total_evidence": 2133,
     "event_status": {
-      "official": 231,
-      "reported": 1778
+      "official": 229,
+      "reported": 1728
     },
     "tier_0": 257,
-    "tier_1": 981,
-    "tier_2": 2471
+    "tier_1": 976,
+    "tier_2": 2355
   },
   "event_status_distribution": {
-    "reported": 27
+    "official": 1,
+    "reported": 19
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 27,
+  "llm_count": 20,
   "multi_source_count": 0,
-  "important_count": 4,
-  "important_events": [
-    {
-      "title": "7B小模型超越o3与GPT-5，医学AI智能体学会「看哪里怎么看」",
-      "event_id": "evt_a30c2039409a61e0f2aae85d",
-      "importance": 4,
-      "source_name": "量子位",
-      "archive_url": "archive/2026-05-28-pm.html"
-    },
-    {
-      "title": "AI需求激增引发全球光学供应链全线短缺与涨价",
-      "event_id": "evt_6dfbde3f7802d3eecef37542",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-28-pm.html"
-    },
-    {
-      "title": "字节跳动自研CPU：应对AI算力扩张中的芯片短缺与涨价压力",
-      "event_id": "evt_192621d892a0178a178efcf8",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-28-pm.html"
-    },
-    {
-      "title": "伊利诺伊州通过全美最严AI安全法案，强制第三方审计",
-      "event_id": "evt_98437e939ee9daf63bfbc592",
-      "importance": 4,
-      "source_name": "Wired AI",
-      "archive_url": "archive/2026-05-28-pm.html"
-    }
-  ],
-  "official_count": 0,
-  "depth_count": 26,
+  "important_count": 0,
+  "important_events": [],
+  "official_count": 1,
+  "depth_count": 20,
   "entity_count": 0,
-  "llm_call_count": 59,
-  "llm_prompt_tokens": 85854,
-  "llm_completion_tokens": 24669,
-  "llm_total_tokens": 110546,
+  "llm_call_count": 70,
+  "llm_prompt_tokens": 94320,
+  "llm_completion_tokens": 28012,
+  "llm_total_tokens": 122355,
   "llm_parse_fallback": 0
 }
