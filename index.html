@@ -7,16 +7,16 @@
      打开页面时浏览器自带的 referer 会被拒 (403)，导致卡片图加载失败
      留下大块空白。 -->
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="硬件乱战、Agent撞墙、梵蒂冈逼宫——AI三线账单同日到期  ⚡ **比亚迪4nm芯片秒杀特斯拉FSD + Groq放弃卖铁 = 推理基建竞赛进入乱战期** 比亚迪自研4nm制程芯片算力超越特斯拉FSD，特斯拉「软硬垂直整合」估值逻辑第一次被实物拆穿；同周Groq宣布融资6.5亿美元并放弃卖芯片转攻推理服务——…">
+<meta name="description" content="今天是「模型军备」与「资本位移」和「治理呼声」三条线同步引爆的一天，行业的宽度和烈度都在加速扩张。  **🧠 模型与研究**：Google I/O 推出 Gemini Omni 和 Gemini 3.5，Anthropic 的 Claude Opus 4.8 几乎同时登场，DHH 盛赞、Redis 之父质疑跑分，…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 早报 · 2026年05月30日">
-<meta property="og:description" content="硬件乱战、Agent撞墙、梵蒂冈逼宫——AI三线账单同日到期  ⚡ **比亚迪4nm芯片秒杀特斯拉FSD + Groq放弃卖铁 = 推理基建竞赛进入乱战期** 比亚迪自研4nm制程芯片算力超越特斯拉FSD，特斯拉「软硬垂直整合」估值逻辑第一次被实物拆穿；同周Groq宣布融资6.5亿美元并放弃卖芯片转攻推理服务——…">
+<meta property="og:description" content="今天是「模型军备」与「资本位移」和「治理呼声」三条线同步引爆的一天，行业的宽度和烈度都在加速扩张。  **🧠 模型与研究**：Google I/O 推出 Gemini Omni 和 Gemini 3.5，Anthropic 的 Claude Opus 4.8 几乎同时登场，DHH 盛赞、Redis 之父质疑跑分，…">
 <meta property="og:site_name" content="AI 早报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 早报 · 2026年05月30日">
-<meta name="twitter:description" content="硬件乱战、Agent撞墙、梵蒂冈逼宫——AI三线账单同日到期  ⚡ **比亚迪4nm芯片秒杀特斯拉FSD + Groq放弃卖铁 = 推理基建竞赛进入乱战期** 比亚迪自研4nm制程芯片算力超越特斯拉FSD，特斯拉「软硬垂直整合」估值逻辑第一次被实物拆穿；同周Groq宣布融资6.5亿美元并放弃卖芯片转攻推理服务——…">
+<meta name="twitter:description" content="今天是「模型军备」与「资本位移」和「治理呼声」三条线同步引爆的一天，行业的宽度和烈度都在加速扩张。  **🧠 模型与研究**：Google I/O 推出 Gemini Omni 和 Gemini 3.5，Anthropic 的 Claude Opus 4.8 几乎同时登场，DHH 盛赞、Redis 之父质疑跑分，…">
 <title>AI 早报 · 2026年05月30日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -122,178 +122,6 @@ body {
 .br-editorial:last-child { margin-bottom: 14px; }
 .br-editorial .br-bold {
     color: var(--text-100); font-weight: 600;
-}
-
-/* ═════ 今日 N 个判断 (v2 — 产品定位升级:从罗列到判断) ═════ */
-.briefing .br-headline {
-    max-width: 1120px;
-    font-family: var(--serif);
-    font-size: 17px; font-weight: 600; line-height: 1.55;
-    color: var(--text-100);
-    margin: 4px 0 18px;
-    letter-spacing: 0.2px;
-}
-.judgments-grid {
-    max-width: 1120px;
-    display: grid; gap: 14px;
-    margin: 0 0 14px;
-}
-.judgments-grid.jcg-1 { grid-template-columns: minmax(0, 1fr); }
-.judgments-grid.jcg-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.judgments-grid.jcg-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.judgment-card {
-    background: var(--bg-card, rgba(255,255,255,0.04));
-    border: 1px solid var(--border, rgba(255,255,255,0.10));
-    border-left: 3px solid var(--accent);
-    border-radius: 8px;
-    padding: 16px 18px;
-    display: flex; flex-direction: column;
-    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
-}
-.judgment-card:hover {
-    border-color: var(--accent);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-}
-.jc-header {
-    display: flex; align-items: center; gap: 8px;
-    margin-bottom: 8px; flex-wrap: wrap;
-}
-.jc-emoji {
-    font-size: 22px; line-height: 1;
-}
-/* 三道工序徽章 */
-.jc-badge {
-    display: inline-flex; align-items: center;
-    padding: 2px 8px; border-radius: 10px;
-    font-size: 10px; font-weight: 600;
-    letter-spacing: 0.2px;
-    border: 1px solid;
-    cursor: help;
-}
-.jc-badge-verified {
-    color: #34d399;
-    border-color: rgba(52, 211, 153, 0.30);
-    background: rgba(52, 211, 153, 0.08);
-}
-.jc-badge-medium {
-    color: #a0aab8;
-    border-color: rgba(160, 170, 184, 0.25);
-    background: rgba(160, 170, 184, 0.06);
-}
-.jc-badge-warn {
-    color: #fbbf24;
-    border-color: rgba(251, 191, 36, 0.30);
-    background: rgba(251, 191, 36, 0.10);
-}
-.jc-badge-edited {
-    color: #66c0ff;
-    border-color: rgba(102, 192, 255, 0.30);
-    background: rgba(102, 192, 255, 0.08);
-}
-.jc-title {
-    font-family: var(--serif);
-    font-size: 15px; font-weight: 700; line-height: 1.4;
-    color: var(--text-100);
-    margin: 0 0 10px;
-    letter-spacing: 0.1px;
-}
-.jc-body {
-    font-size: 13px; line-height: 1.65;
-    color: var(--text-70);
-    margin: 0;
-}
-.jc-body .jc-bold {
-    color: var(--text-100); font-weight: 600;
-}
-.briefing .br-outro {
-    max-width: 1120px;
-    font-style: italic;
-    font-size: 13px; line-height: 1.6;
-    color: var(--text-50);
-    margin: 6px 0 14px;
-    padding-left: 14px;
-    border-left: 2px dashed var(--border);
-}
-@media (max-width: 860px) {
-    .judgments-grid.jcg-2,
-    .judgments-grid.jcg-3 { grid-template-columns: minmax(0, 1fr); }
-    .briefing .br-headline { font-size: 15px; }
-    .jc-title { font-size: 14px; }
-    .jc-body { font-size: 12.5px; }
-}
-
-/* ═════ 外部热度信号标签 (P2) ═════ */
-.hot-pills {
-    display: flex; flex-wrap: wrap; gap: 5px;
-    margin: 6px 0 4px;
-}
-.hot-pill {
-    display: inline-flex; align-items: center;
-    padding: 2px 7px; border-radius: 10px;
-    font-size: 10px; font-weight: 600;
-    text-decoration: none;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.10);
-    color: var(--text-70, #b6bdcb);
-    transition: background 0.15s, border-color 0.15s, transform 0.1s;
-}
-.hot-pill:hover {
-    transform: translateY(-1px);
-    background: rgba(255,255,255,0.08);
-}
-.hp-hn { color: #ff7a00; border-color: rgba(255,122,0,0.25); }
-.hp-hn:hover { background: rgba(255,122,0,0.10); border-color: rgba(255,122,0,0.45); }
-.hp-reddit { color: #ff4500; border-color: rgba(255,69,0,0.25); }
-.hp-reddit:hover { background: rgba(255,69,0,0.10); border-color: rgba(255,69,0,0.45); }
-.hp-hf { color: #ffd21e; border-color: rgba(255,210,30,0.25); }
-.hp-hf:hover { background: rgba(255,210,30,0.10); border-color: rgba(255,210,30,0.45); }
-.hp-gh { color: #aaa; border-color: rgba(255,255,255,0.12); }
-.hp-gh:hover { background: rgba(255,255,255,0.10); border-color: rgba(255,255,255,0.28); }
-
-/* ═════ 实体追踪入口 (P1) ═════ */
-.entity-tracker {
-    max-width: 1120px; margin: 24px auto 0; padding: 0 20px;
-}
-.entity-tracker .et-title {
-    font-family: var(--serif); font-size: 14px; font-weight: 700;
-    color: var(--text-50); letter-spacing: 1px; text-transform: uppercase;
-    margin: 0 0 4px;
-}
-.entity-tracker .et-hint {
-    font-size: 11.5px; color: var(--text-50); margin: 0 0 12px;
-}
-.et-chips {
-    display: flex; flex-wrap: wrap; gap: 8px;
-}
-.et-chip {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 6px 12px; border-radius: 20px;
-    background: var(--bg-card, rgba(255,255,255,0.04));
-    border: 1px solid var(--border, rgba(255,255,255,0.10));
-    text-decoration: none; font-size: 12px;
-    color: var(--text-70, #b6bdcb);
-    transition: transform 0.12s, border-color 0.15s, background 0.15s;
-}
-.et-chip:hover {
-    transform: translateY(-1px);
-    border-color: var(--accent);
-    background: rgba(102,192,255,0.06);
-    color: var(--text-100);
-}
-.et-icon { font-size: 13px; line-height: 1; }
-.et-name { font-weight: 600; }
-.et-count {
-    display: inline-block;
-    margin-left: 4px; padding: 1px 7px;
-    border-radius: 10px;
-    background: rgba(102,192,255,0.16);
-    color: var(--accent);
-    font-family: monospace; font-size: 10.5px; font-weight: 700;
-}
-@media (max-width: 640px) {
-    .entity-tracker { padding: 0 14px; }
-    .et-chip { padding: 5px 10px; font-size: 11.5px; }
 }
 
 /* ═════ Featured Section (Importance >= 4) ═════ */
@@ -1189,13 +1017,13 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年05月30日 周六 · 06:11</div>
+    <div class="h-date">2026年05月30日 周六 · 11:27</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>19</b> 篇</span>
-        <span><b>10</b> 源</span>
+        <span><b>28</b> 篇</span>
+        <span><b>14</b> 源</span>
         <a href="archive/dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
@@ -1207,114 +1035,164 @@ body.show-read .is-read:hover {
 <!-- Briefing -->
 
     <section class="briefing">
-        <h2 class="br-title">📌 今日 3 个判断</h2>
-        <p class="br-headline">硬件乱战、Agent撞墙、梵蒂冈逼宫——AI三线账单同日到期</p>
-        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">⚡</span><span class="jc-badge jc-badge-verified" title="">✓ 4 处事实已核对</span></div><h3 class="jc-title">比亚迪4nm芯片秒杀特斯拉FSD + Groq放弃卖铁 = 推理基建竞赛进入乱战期</h3><p class="jc-body">比亚迪自研4nm制程芯片算力超越特斯拉FSD，特斯拉「软硬垂直整合」估值逻辑第一次被实物拆穿；同周Groq宣布融资6.5亿美元并放弃卖芯片转攻推理服务——连芯片厂自己都认为纯硬件不是终局。NVIDIA Computex传闻推N1X笔记本SoC，三路玩家同周出手，算力竞争从「谁芯片最快」变成「谁推理最便宜」，特斯拉30天内需要拿出比算力更有说服力的新护城河叙事。</p></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🛠️</span><span class="jc-badge jc-badge-verified" title="">✓ 4 处事实已核对</span></div><h3 class="jc-title">微软Copilot碎成4块、Gemini Spark认不出男友 = AI Agent第一代产品集体撞墙</h3><p class="jc-body">微软被迫把GitHub Copilot、Copilot聊天、Cowork、Autopilot四产品强行合并，是对过去18个月打散用户心智的公开认错；Gemini Spark测试版把同居男友归类为「密友」，社会图谱理解接近零。Cognition同周改口说Devin「只是辅助工具」，Box CEO警告CEO们严重高估AI替代能力——2024年Agent泡沫叙事账单集中到期，下一张门票是「能真正落地」而非「能demo」。</p></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">📜</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span><span class="jc-badge jc-badge-medium" title="「全行业唯一」及「OpenAI和谷歌没有这张牌」无法从当日事件佐证：事件[8]仅确认梵蒂冈联系了Anthropic，未提及是否同时联系其他AI公司，排他性声明缺乏支撑">✓ 3 处已核 / 1 处未核</span></div><h3 class="jc-title">教皇专线只联系Anthropic，欧盟AI监管桌上道德背书从此非对称</h3><p class="jc-body">教皇利奥十四世通过梵蒂冈内部渠道独家联系Anthropic，全行业唯一——欧盟AI法案谈判中「道德合规」已是与技术同等的硬筹码，OpenAI和谷歌没有这张牌。同周Amazon授权BuzzFeed角色AI化，原创者Loryn Brantz从未同意；AI伪造学术引用同时曝光。创作者权益两线失守反而会加速欧盟把「同意权」写进法案，Anthropic的道德背书窗口不超过18个月。</p></article></div>
-        <p class="br-outro">三条战线的共同信号：AI「叙事红利期」已结束，没有真实落地的产品和公司，账单正在逐一到期。</p>
+        <h2 class="br-title">今日速览</h2>
+        <p class="br-editorial">今天是「模型军备」与「资本位移」和「治理呼声」三条线同步引爆的一天，行业的宽度和烈度都在加速扩张。</p><p class="br-editorial"><strong class="br-bold">🧠 模型与研究</strong>：Google I/O 推出 Gemini Omni 和 Gemini 3.5，Anthropic 的 Claude Opus 4.8 几乎同时登场，DHH 盛赞、Redis 之父质疑跑分，编码能力王座争夺在两强对擂中白热化；陶哲轩与 OpenAI 的对话则把讨论拉向更深处——AI 不只是写代码，而是在降低数学研究的认知摩擦，扩展整个科学探索的边界。</p><p class="br-editorial"><strong class="br-bold">💰 资本动向</strong>：Anthropic 估值升至 9650 亿美元，首次在纸面上超越 OpenAI，格局生变；Groq 融资 6.5 亿美元并将战略重心从芯片转向推理服务；OpenAI 同步推进 IPO 承销团组建——三家公司以不同方式向资本市场靠拢，「AI 基础设施」的定价权之争悄然展开。</p><p class="br-editorial"><strong class="br-bold">🛠️ 工具与产品</strong>：落地加速明显——OpenAI Rosalind 平台专注生物防御，Codex 扩展至 Windows 并支持移动端远控，波士顿儿童医院借助 GPT 协助诊断超 40 例罕见病；北大联合发布的 3B 参数 RoboAgent 在具身任务上以小模型超越 GPT-4o，垂直场景的效率叙事持续验证；比亚迪 4nm AI 智驾芯片亮相，硬件竞争从芯片厂延伸至整车企业。</p><p class="br-editorial"><strong class="br-bold">📜 政策与伦理</strong>：教皇利奥十四世发布首部 AI 通谕，梵蒂冈同步与 Anthropic 建立渠道；英格兰银行行长公开讨论前沿模型风险；亚马逊未告知原创作者便授权其 IP 用于 AI 动画，再度暴露创作权的结构性空白——监管话语权争夺已从硅谷蔓延至罗马与伦敦。</p><p class="br-editorial">当模型能力与资本热度同步刷新高点，真正值得警惕的是：问责机制的建立速度，远慢于能力扩张的速度。</p>
     </section>
-
-<!-- Entity Tracker (P1) — 30 天动态时间线入口 -->
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">202</span></a><a class="et-chip" href="entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">190</span></a><a class="et-chip" href="entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">62</span></a><a class="et-chip" href="entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">60</span></a><a class="et-chip" href="entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">38</span></a><a class="et-chip" href="entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">27</span></a><a class="et-chip" href="entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">13</span></a><a class="et-chip" href="entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">12</span></a><a class="et-chip" href="entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">12</span></a><a class="et-chip" href="entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">10</span></a><a class="et-chip" href="entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">4</span></a><a class="et-chip" href="entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">4</span></a></div></section>
 
 <!-- Featured Articles (Importance >= 4) —— 重大事件 -->
 <div class="featured-section">
 <h2 class="featured-title">今日必读</h2>
 <div class="featured-grid">
-    <div class="featured-card" data-cat="芯片与算力|AI工具" data-aud="developer|investor|pm" data-idx="4" data-iid="889db3f653126aefe75843f9fa3dee54" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="大模型发布|行业观点" data-aud="researcher|developer|pm" data-idx="8" data-iid="21c9ea10a76ddb20f9ea681cfa2f9551" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">Computex 2026前瞻：英伟达N1X笔记本SoC与AI芯片大战</div>
-            <div class="featured-why">Computex 2026以「AI Together」为主题，英伟达传闻将推N1X笔记本SoC芯片，AI芯片与平价PC竞争成焦点。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 05-30 02:40</div>
+            <div class="featured-title-text">Claude Opus 4.8发布：15个你可能错过的重要更新</div>
+            <div class="featured-why">AI Explained频道解读Claude Opus 4.8发布，梳理15个值得关注的新特性与改进。</div>
+            <div class="featured-source"><span class="tier-badge tier-视频" title="视频源">🎥 视频</span> 🎬 AI Explained · 05-29 23:07</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="芯片与算力|自动驾驶" data-aud="investor|developer|pm" data-idx="5" data-iid="4129d278ca2bbfda13b73ec19118b057" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="芯片与算力|自动驾驶" data-aud="investor|developer|pm" data-idx="12" data-iid="4129d278ca2bbfda13b73ec19118b057" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">比亚迪发布4nm自研AI驾驶芯片，算力宣称超越特斯拉</div>
-            <div class="featured-why">比亚迪推出4nm制程自研AI驾驶芯片，制程与英伟达车载旗舰同级，算力指标超越特斯拉FSD方案，实现智驾核心硬件垂直整合。</div>
+            <div class="featured-title-text">比亚迪自研4nm AI芯片发布，算力超越特斯拉</div>
+            <div class="featured-why">比亚迪推出自研4nm制程AI智驾芯片，制程对齐英伟达，官称算力超越特斯拉同类产品。</div>
             <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚛️ 量子位 · 05-29 22:30</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|AI工具" data-aud="developer|general" data-idx="0" data-iid="aa745decade4a5cabd5ce2f0dd574016" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="0" data-iid="b16d1353b1921b3aaff38ad5da40ce3d" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/card_img%2F2060450419881705472%2F9-U4GsaX%3Fformat%3Djpg%26name%3D800x419')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">陶哲轩与OpenAI对谈：AI如何重塑数学发现的未来</div>
+            <div class="featured-why">菲尔兹奖得主陶哲轩与OpenAI的Mark Chen对谈，探讨AI如何降低数学研究的认知摩擦并扩展科学探索边界。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-30 04:02</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="1" data-iid="b44d58c4a2003c86c83012087adcb9d4" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2060450146928988160%2Fimg%2FGjaEs5ob-9C30uPo.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">陶哲轩：AI让研究者敢于追求更疯狂的想法</div>
+            <div class="featured-why">数学家陶哲轩表示，AI为研究者提供了更大自由度，可探索更大胆的思路和意外路径。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-30 04:02</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="2" data-iid="f8ed39046ed25e2dfea8fc92e4d0aaf7" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/amplify_video_thumb%2F2060428466064080896%2Fimg%2FLd2nzKppIv-rLIvU.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI Codex现已支持Windows电脑操作与移动端远程控制</div>
+            <div class="featured-why">OpenAI Codex电脑使用功能正式支持Windows系统，并可通过ChatGPT移动端远程发起和监控任务。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-30 02:30</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="3" data-iid="6874e6a9bd6256dd22f87811d028d534" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Omni_and_Gemini_3.5_hero.max-600x600.format-webp.webp')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">谷歌I/O 2026：Gemini Omni与Gemini 3.5九大能力演示</div>
+            <div class="featured-why">谷歌在Google I/O 2026发布Gemini Omni和Gemini 3.5，并通过9个演示视频展示其核心能力。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🔷 Google AI Blog · 05-30 01:30</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="4" data-iid="09dc0c03c37cc346e735c84aaba0d5f7" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://nitter.net/pic/card_img%2F2060312253979914240%2FPEv7vz8N%3Fformat%3Djpg%26name%3D800x419')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">OpenAI推出Rosalind生物防御平台，加速AI防御生物威胁</div>
+            <div class="featured-why">OpenAI发布Rosalind Biodefense平台，面向美国政府及盟友合作伙伴开放GPT-Rosalind访问权限，专注生物防御与大流行病准备。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🐦 X-OpenAI · 05-29 23:03</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="产品与应用|AI工具" data-aud="developer|general" data-idx="5" data-iid="aa745decade4a5cabd5ce2f0dd574016" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/FutureLabs_social.max-600x600.format-webp.webp')"></div>
         <div class="featured-body">
             
             
-            <div class="featured-title-text">谷歌Futures Lab：学生用AI开发手语教学等创新原型</div>
-            <div class="featured-why">滑铁卢大学学生在谷歌Futures Lab开发AI原型，包括手语教学工具，探索AI重塑教育与工作的可能性。</div>
+            <div class="featured-title-text">谷歌未来实验室：滑铁卢大学生开发AI手语教学原型</div>
+            <div class="featured-why">谷歌Futures Lab展示滑铁卢大学生开发的AI原型，包括手语辅导工具，探索AI重塑教育与工作的可能性。</div>
             <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🔷 Google AI Blog · 05-29 20:00</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="AI政策监管|行业观点" data-aud="general|pm|investor" data-idx="1" data-iid="f0a7b84308bcb00e05271cb94f82a422" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="6" data-iid="e62972f402e43362a6607a001700502b" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">教皇新通谕《宏大人性》呼吁以人文精神驾驭AI时代</div>
-            <div class="featured-why">教皇利奥十四世发布首份AI专题通谕，宣称「技术从不中立」，呼吁以团结与勇气回应AI变革。</div>
-            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 🎓 MIT Tech Review · 05-29 18:00</div>
+            <div class="featured-title-text">波士顿儿童医院借助OpenAI技术诊断逾40例罕见病</div>
+            <div class="featured-why">波士顿儿童医院利用OpenAI技术改善患者护理，成功协助诊断超过40例罕见病病例并减轻运营负担。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🤖 OpenAI Blog · 05-29 20:00</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|AI政策监管" data-aud="general|investor|pm" data-idx="6" data-iid="ecfa5a5ed66e07abd0e1ddb138c45c60" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://media.wired.com/photos/6a18c5e0148c56039b79b0d5/master/pass/Amazon-Turns-Buzzfeed-Good-Advice-Cupcake-Into-AI-Series-Culture-1164238077.jpg')"></div>
-        <div class="featured-body">
-            
-            
-            <div class="featured-title-text">亚马逊用AI制作动画节目，原创者未授权愤而抗议</div>
-            <div class="featured-why">亚马逊授权BuzzFeed角色「Good Advice Cupcake」制作AI动画剧集，但原创者Loryn Brantz表示从未同意，对此强烈抗议。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 📡 Wired AI · 05-30 04:56</div>
-            
-        </div>
-    </div>
-    <div class="featured-card" data-cat="AI产品|个人助手" data-aud="general" data-idx="7" data-iid="e27ee5f20ed58e20abb86c03ee36461d" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="其他" data-aud="general" data-idx="7" data-iid="880638aa77e3a8eefa341b023e332dd0" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">Gemini Spark测试版向AI Ultra订阅者推出：能规划生日派对但误判亲密关系</div>
-            <div class="featured-why">谷歌Gemini Spark测试版开始向AI Ultra订阅者推送，可从邮件和日历自动规划生日派对，但在关系理解上出现将同居男友识别为「密友」的错误。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 05-30 03:50</div>
+            <div class="featured-title-text">Braintrust借助Codex与GPT-5.5加速工程实验与编码效率</div>
+            <div class="featured-why">Braintrust工程师借助OpenAI Codex和GPT-5.5将客户需求直接转化为代码，显著提升实验迭代与开发速度。</div>
+            <div class="featured-source"><span class="tier-badge tier-官方" title="官方源">🏢 官方</span> 🤖 OpenAI Blog · 05-29 20:00</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="AI政策监管|安全与对齐" data-aud="investor|general" data-idx="8" data-iid="f8b491600b3a6f70a38f8f25857d8eda" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://media.wired.com/photos/6a1898e5148c56039b79abe1/master/pass/Backchannel-Pope-Leo-AI-Business-2214167500.jpg')"></div>
+    <div class="featured-card" data-cat="AI政策监管|产品与应用" data-aud="investor|pm|general" data-idx="13" data-iid="37b8c50b2fae1f2bd833f430c6c0d177" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/irDY3__LwDNk/v3/1200x-1.jpg')"></div>
         <div class="featured-body">
             
             
-            <div class="featured-title-text">梵蒂冈内部人士与Anthropic的AI伦理对话引关注</div>
-            <div class="featured-why">教皇利奥十四世通过梵蒂冈内部联系人与Anthropic建立沟通渠道，推动AI伦理议题进入行业视野。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 📡 Wired AI · 05-29 23:00</div>
+            <div class="featured-title-text">英格兰银行行长警示前沿AI模型的新兴风险</div>
+            <div class="featured-why">英格兰银行行长贝利在冰岛央行会议上讨论前沿AI模型的新兴风险及稳定币监管提案。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 💰 Bloomberg Technology · 05-30 01:54</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="具身智能|产品与应用" data-aud="researcher|investor" data-idx="9" data-iid="55b0c0308dd40dbd12d971c1adc919d4" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="AI编程|行业观点" data-aud="developer|pm|general" data-idx="14" data-iid="23afd2d1621a2fb41b40790b9497222e" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">AI创企Shift免费提供清洁服务换取机器人训练数据</div>
-            <div class="featured-why">AI训练初创公司Shift提供免费家政清洁服务，用录像换取机器人训练数据。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚡ The Verge AI · 05-29 19:58</div>
+            <div class="featured-title-text">Cognition创始人吴志成：AI编程智能体不应取代人类程序员</div>
+            <div class="featured-why">Devin创始人Scott Wu表示，AI编程智能体Devin的设计初衷是辅助而非替代人类程序员。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 💡 TechCrunch AI · 05-30 00:13</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="AI治理|企业管理" data-aud="general" data-idx="10" data-iid="b171e4e893c713233cb8b4bb27f3bd2f" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="AI政策监管|产品与应用" data-aud="investor|pm" data-idx="15" data-iid="121b145a672a3299a486e4c66b9e3aa1" style="border-left-color: #e8913a">
+        <div class="featured-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i89G70GdlUrE/v3/1200x-1.jpg')"></div>
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">英国央行行长：英国银行仍无法访问Anthropic旗下Mythos模型</div>
+            <div class="featured-why">英国央行行长贝利证实，英国银行业目前仍被排除在Anthropic新款强大AI工具Mythos之外，同时透露银行正使用其他模型测试网络防御能力。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 💰 Bloomberg Technology · 05-30 02:13</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI治理|企业管理" data-aud="general" data-idx="16" data-iid="b171e4e893c713233cb8b4bb27f3bd2f" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">Box CEO Aaron Levie：大多数企业领导者患有「AI心理症」，高估AI替代人力的能力</div>
-            <div class="featured-why">Box CEO Aaron Levie指出，许多CEO对AI能力存在严重误判，认为AI可以大规模替代员工，而这些决策者自己却最不了解实际工作的复杂性。</div>
+            <div class="featured-title-text">Box CEO Aaron Levie：大多数企业高管都患有AI幻觉症，高估AI替代人工的能力</div>
+            <div class="featured-why">Box CEO Aaron Levie指出，最热衷于用AI替代员工的高管，恰恰是最不了解AI实际局限性的人，这种认知偏差正在企业界蔓延。</div>
             <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 💡 TechCrunch AI · 05-29 22:00</div>
             
         </div>
@@ -1332,8 +1210,8 @@ body.show-read .is-read:hover {
 <!-- id="grid" 是 script.js bindCardClick(getElementById('grid')) 必须的，少了它点击 modal 会失效 -->
 <div id="grid" class="grid" aria-label="资讯列表">
 
-        <div class="card" data-cat="其他" data-aud="general" data-idx="2" data-iid="e0d46eee40f3ae2c022ab4c7731b277d"
-             style="animation-delay:50ms">
+        <div class="card" data-cat="其他" data-aud="general" data-idx="9" data-iid="e0d46eee40f3ae2c022ab4c7731b277d"
+             style="animation-delay:225ms">
             
             <div class="card-body">
                 
@@ -1341,14 +1219,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">英伟达MCG工具包：自动化AI模型文档生成应对合规挑战</div>
-                <div class="z3"><div class="z3-why">英伟达发布MCG工具包，帮助软件团队自动生成合规的AI模型卡片文档，应对EU AI法案等监管要求。</div></div>
-                
+                <div class="card-title">NVIDIA发布MCG工具包：自动化AI模型文档生成与合规审计</div>
+                <div class="z3"><div class="z3-why">NVIDIA推出MCG工具包，帮助软件团队在加州AB-2013和欧盟AI法案监管压力下自动生成模型卡片等合规文档。</div></div>
                 <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> ⚙️ NVIDIA Developer Blog · 05-30 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="3" data-iid="d16c871e8672b77e49300a9f2e942bd6"
-             style="animation-delay:75ms">
+        <div class="card" data-cat="其他" data-aud="general" data-idx="10" data-iid="d16c871e8672b77e49300a9f2e942bd6"
+             style="animation-delay:250ms">
             
             <div class="card-body">
                 
@@ -1356,119 +1233,97 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">通用LLM不适合关键工程文档的深层原因分析</div>
-                <div class="z3"><div class="z3-why">SemiWiki分析指出，通用LLM在生成工程文档时存在根本局限，无法满足精密工程领域的严格要求。</div></div>
-                
+                <div class="card-title">通用大模型为何难胜任关键工程文档任务</div>
+                <div class="z3"><div class="z3-why">SemiWiki分析指出，通用LLM在生成关键工程文档时存在结构化精度、领域知识深度等方面的根本性局限。</div></div>
                 <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🔧 SemiWiki · 05-29 23:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="AI工具|开源生态" data-aud="developer|researcher" data-idx="11" data-iid="8fc846704960d21f99edf4d60782e5ee"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="11" data-iid="f0a7b84308bcb00e05271cb94f82a422"
              style="animation-delay:275ms">
             
             <div class="card-body">
                 
                 <div class="z1">
-            <span class="z1-left">AI工具 · 开源生态</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Tiny-vLLM：C++与CUDA实现的高性能LLM推理引擎</div>
-                <div class="z3"><div class="z3-why">开发者发布Tiny-vLLM，一款基于C++和CUDA的高性能大语言模型推理引擎，主打轻量高效。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-社区" title="社区源">💬</span> 🔥 Hacker News AI · 05-30 03:38 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="AI编程|行业观点" data-aud="developer|pm" data-idx="12" data-iid="23afd2d1621a2fb41b40790b9497222e"
-             style="animation-delay:300ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">AI编程 · 行业观点</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Cognition创始人：AI编程智能体不应取代人类程序员</div>
-                <div class="z3"><div class="z3-why">Cognition创始人Scott Wu表示，旗下AI编程智能体Devin的设计初衷是辅助而非取代人类程序员。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-30 00:13 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="13" data-iid="6407fe84b00a93504ccbc56ab8fe8882"
-             style="animation-delay:325ms">
-            <div class="card-img" style="background-image:url('https://media.wired.com/photos/6a19d3576c603cc05220330d/master/pass/Gear_HandsOnWithGeminiSparkGoogle%E2%80%99sAIAgentThatLivesinYourPhone_v1.jpg')"></div>
-            <div class="card-body">
-                
-                <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">谷歌Gemini Spark实测：AI智能体深入私人生活的体验报告</div>
-                <div class="z3"><div class="z3-why">Wired记者实测谷歌新AI智能体Gemini Spark，授权其访问邮件、文档和日历，用于规划生日派对，但AI未能识别其男友的重要性。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 Wired AI · 05-30 03:07 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">教皇新通谕《辉煌人性》：AI时代人类应如何自处</div>
+                <div class="z3"><div class="z3-why">教皇利奥十四世发布首部AI通谕《辉煌人性》，呼吁人类以勇气和团结应对AI带来的文明挑战。</div></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🎓 MIT Tech Review · 05-29 18:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="14" data-iid="7717164fd5ff5f1b813bd787cedc39b6"
-             style="animation-delay:350ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">TechCrunch发布AI术语词汇表：帮你读懂行业黑话</div>
-                <div class="z3"><div class="z3-why">TechCrunch发布AI常用术语词汇表，解释行业最重要的词汇与缩写，帮助读者真正理解AI领域核心概念。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-30 02:49 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="15" data-iid="b6e267dff5dc4acb70c00dcd4e705b12"
-             style="animation-delay:375ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">微软整合Copilot生态，推出Autopilot智能体工作流工具</div>
-                <div class="z3"><div class="z3-why">微软正开发统一应用，整合GitHub Copilot、Copilot聊天、Copilot Cowork及全新智能体工作流工具Autopilot，解决产品碎片化问题。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-30 01:55 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="16" data-iid="820e17bd437a4c07e39f8de530757013"
-             style="animation-delay:400ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">AI芯片创企Groq传融资6.5亿美元，转型聚焦AI推理服务</div>
-                <div class="z3"><div class="z3-why">Groq计划融资6.5亿美元，战略重心从芯片硬件转向AI推理服务业务。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/LocalLLaMA/comments/1tracb5/nvidia_teases_new_pc_laptop_chip_to_be_announced/" title="r/LocalLLaMA hot">💬 r/LocalLLaMA</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-30 01:27 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="17" data-iid="28b4642c9f11178f4f8657c9d0ed8ffc"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="17" data-iid="e27ee5f20ed58e20abb86c03ee36461d"
              style="animation-delay:425ms">
             
             <div class="card-body">
+                <span class="src-pill" title="共 2 个来源报道同一事件">📡 2 源</span>
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">谷歌Gemini Spark测试版亮相：能规划生日派对却认不出男友</div>
+                <div class="z3"><div class="z3-why">谷歌Gemini Spark Beta向AI Ultra订阅用户开放，可读取邮件和日历协助规划生日派对，但对用户重要关系人判断失准。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-30 03:50 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="18" data-iid="ecfa5a5ed66e07abd0e1ddb138c45c60"
+             style="animation-delay:450ms">
+            <div class="card-img" style="background-image:url('https://media.wired.com/photos/6a18c5e0148c56039b79b0d5/master/pass/Amazon-Turns-Buzzfeed-Good-Advice-Cupcake-Into-AI-Series-Culture-1164238077.jpg')"></div>
+            <div class="card-body">
                 
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Minute Media裁员12%并取消2亿美元AI体育剪辑平台收购</div>
-                <div class="z3"><div class="z3-why">《体育画报》版权持有者Minute Media裁员12%，并放弃约2亿美元收购AI体育剪辑平台VideoVerse的交易。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 05-30 00:45 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">亚马逊未经原作者同意用AI制作纸杯蛋糕角色动画节目</div>
+                <div class="z3"><div class="z3-why">亚马逊将BuzzFeed旗下IP《Good Advice Cupcake》授权用于AI动画剧集制作，但原创作者Loryn Brantz对此毫不知情且强烈反对。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 Wired AI · 05-30 04:56 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="18" data-iid="d08c2fee3e7b988bb8806131d56e0b34"
-             style="animation-delay:450ms">
+        <div class="card" data-cat="其他" data-aud="general" data-idx="19" data-iid="5597bed814bfb9c36071693674903fed"
+             style="animation-delay:475ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ifX255_T6mxo/v0/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">OpenAI洽谈花旗、摩根大通加入IPO承销行列</div>
+                <div class="z3"><div class="z3-why">OpenAI正与花旗集团和摩根大通商谈，将其纳入即将到来的IPO承销银行团队。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-30 03:28 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="20" data-iid="1614596ca4e66431f30e4801c31961a3"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iSWlvAFk9fm0/v3/1200x-1.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Anthropic完成融资估值达9650亿美元，首次超越OpenAI</div>
+                <div class="z3"><div class="z3-why">Anthropic完成新一轮融资，估值达9650亿美元，首次在估值上超越OpenAI，成为AI领域最高估值公司。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💰 Bloomberg Technology · 05-30 01:29 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="21" data-iid="820e17bd437a4c07e39f8de530757013"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">AI芯片初创公司Groq寻求融资6.5亿美元，转型专注AI推理</div>
+                <div class="z3"><div class="z3-why">Groq计划融资6.5亿美元，战略重心从芯片硬件转向AI推理服务，此前英伟达刚完成200亿美元准收购交易。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 05-30 01:27 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="22" data-iid="d08c2fee3e7b988bb8806131d56e0b34"
+             style="animation-delay:500ms">
             <div class="card-img" style="background-image:url('https://media.wired.com/photos/6a173332faa2148b4ab454b6/master/pass/Business_AIBookAuthorUsedAItoWriteHisBook_v1.jpg')"></div>
             <div class="card-body">
                 
@@ -1476,10 +1331,79 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">AI生成引用丑闻：《真相的未来》作者陷入诚信危机</div>
-                <div class="z3"><div class="z3-why">一本讨论AI如何影响现实认知的书籍，因使用AI生成虚假引用而被曝光，引发学术诚信争议。</div></div>
-                
+                <div class="card-title">AI生成引语丑闻：《真相的未来》作者被质疑学术诚信</div>
+                <div class="z3"><div class="z3-why">一本探讨AI如何影响现实认知的书籍，因使用AI生成引语而遭到批评，暴露出AI辅助写作的诚信问题。</div></div>
                 <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 Wired AI · 05-30 00:30 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="23" data-iid="f8b491600b3a6f70a38f8f25857d8eda"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://media.wired.com/photos/6a1898e5148c56039b79abe1/master/pass/Backchannel-Pope-Leo-AI-Business-2214167500.jpg')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">梵蒂冈与Anthropic的对话：教皇能影响AI发展方向吗</div>
+                <div class="z3"><div class="z3-why">梵蒂冈通过内部人士与Anthropic建立联系，教皇利奥十四世试图在AI行业推动伦理监督。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 Wired AI · 05-29 23:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="24" data-iid="da91caf39aa87d9042d12e9515c33b2b"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">星源智联合北大推出RoboAgent：3B视觉语言模型未知场景成功率达94%</div>
+                <div class="z3"><div class="z3-why">星源智联合北京大学发布RoboAgent，3B参数视觉语言模型在未知场景下具身任务成功率达94%，超越GPT-4o。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🚀 AI前线 · 05-29 19:18 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="25" data-iid="423cc77650908bb5504bf06e92190417"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">GPT-5.5编码能力引争议，Opus 4.8跑分遭Redis之父质疑</div>
+                <div class="z3"><div class="z3-why">Anthropic发布Claude Opus 4.8后，DHH盛赞GPT-5.5编码能力，Redis之父质疑跑分可信度，编码领域AI王座之争持续升温。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🚀 AI前线 · 05-29 18:55 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="26" data-iid="cc92f35f91ab875337f4ef5c0c8bf623"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Adobe Firefly AI助手评测：功能平庸的设计实习生</div>
+                <div class="z3"><div class="z3-why">Adobe Firefly AI助手测评显示其能操控设计应用但效果平庸，虽保留创作控制权却难令专业用户满意。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 05-29 18:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="27" data-iid="55b0c0308dd40dbd12d971c1adc919d4"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">机器人训练创企Shift：免费清洁换取居家数据</div>
+                <div class="z3"><div class="z3-why">AI初创公司Shift推出免费家政服务，以录制清洁过程的视频数据训练未来家用机器人。</div></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 05-29 19:58 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
 </div>
@@ -1499,7 +1423,7 @@ body.show-read .is-read:hover {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>10</b> 个信息源 · <b>19</b> 篇资讯 · 2026年05月30日
+    AI 早报 · <b>14</b> 个信息源 · <b>28</b> 篇资讯 · 2026年05月30日
     · <a href="archive/dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 

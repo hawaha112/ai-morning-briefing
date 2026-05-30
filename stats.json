@@ -1,53 +1,53 @@
 {
-  "article_count": 19,
+  "article_count": 28,
   "output_file": "output/index.html",
-  "file_size_kb": 88.9,
-  "generated_at": "2026-05-29T22:11:23.398712+00:00",
+  "file_size_kb": 88.0,
+  "generated_at": "2026-05-30T03:27:52.870689+00:00",
   "event_db_stats": {
-    "total_articles": 3459,
+    "total_articles": 1281,
     "collected": 0,
-    "analyzed": 3459,
-    "total_events": 1920,
-    "total_evidence": 2104,
+    "analyzed": 1281,
+    "total_events": 805,
+    "total_evidence": 852,
     "event_status": {
-      "official": 232,
-      "reported": 1688
+      "official": 128,
+      "reported": 677
     },
-    "tier_0": 263,
-    "tier_1": 983,
-    "tier_2": 2213
+    "tier_0": 124,
+    "tier_1": 317,
+    "tier_2": 840
   },
   "event_status_distribution": {
-    "official": 1,
-    "reported": 18
+    "official": 8,
+    "reported": 20
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 19,
-  "multi_source_count": 1,
+  "llm_count": 28,
+  "multi_source_count": 2,
   "important_count": 2,
   "important_events": [
     {
-      "title": "Computex 2026前瞻：英伟达N1X笔记本SoC与AI芯片大战",
-      "event_id": "evt_889db3f653126aefe75843f9",
+      "title": "Claude Opus 4.8发布：15个你可能错过的重要更新",
+      "event_id": "evt_21c9ea10a76ddb20f9ea681c",
       "importance": 4,
-      "source_name": "Techmeme",
+      "source_name": "AI Explained",
       "archive_url": "archive/2026-05-30-am.html"
     },
     {
-      "title": "比亚迪发布4nm自研AI驾驶芯片，算力宣称超越特斯拉",
+      "title": "比亚迪自研4nm AI芯片发布，算力超越特斯拉",
       "event_id": "evt_4129d278ca2bbfda13b73ec1",
       "importance": 4,
       "source_name": "量子位",
       "archive_url": "archive/2026-05-30-am.html"
     }
   ],
-  "official_count": 1,
-  "depth_count": 18,
+  "official_count": 8,
+  "depth_count": 27,
   "entity_count": 0,
-  "llm_call_count": 55,
-  "llm_prompt_tokens": 77169,
-  "llm_completion_tokens": 21518,
-  "llm_total_tokens": 98711,
-  "llm_parse_fallback": 1
+  "llm_call_count": 154,
+  "llm_prompt_tokens": 161391,
+  "llm_completion_tokens": 57798,
+  "llm_total_tokens": 219253,
+  "llm_parse_fallback": 2
 }
