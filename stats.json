@@ -1,12 +1,12 @@
 {
-  "article_count": 14,
+  "article_count": 8,
   "output_file": "output/index.html",
-  "file_size_kb": 83.9,
-  "generated_at": "2026-05-31T03:13:01.264923+00:00",
+  "file_size_kb": 78.9,
+  "generated_at": "2026-05-31T03:34:12.673458+00:00",
   "event_db_stats": {
-    "total_articles": 3414,
+    "total_articles": 3418,
     "collected": 0,
-    "analyzed": 3414,
+    "analyzed": 3418,
     "total_events": 1886,
     "total_evidence": 2069,
     "event_status": {
@@ -15,31 +15,31 @@
     },
     "tier_0": 250,
     "tier_1": 976,
-    "tier_2": 2188
+    "tier_2": 2192
   },
   "event_status_distribution": {
-    "reported": 14
+    "unknown": 8
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 14,
+  "llm_count": 8,
   "multi_source_count": 0,
   "important_count": 1,
   "important_events": [
     {
       "title": "全球机器人与物理AI风投规模2025年飙升至260亿美元",
-      "event_id": "evt_c71ffccdefdda7c455029cd9",
+      "event_id": "https://www.techmeme.com/260530/p14#a260530p14",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-05-31-am.html"
+      "archive_url": "archive/2026-05-31-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 14,
+  "depth_count": 7,
   "entity_count": 0,
-  "llm_call_count": 39,
-  "llm_prompt_tokens": 54431,
-  "llm_completion_tokens": 15615,
-  "llm_total_tokens": 70054,
+  "llm_call_count": 3,
+  "llm_prompt_tokens": 2337,
+  "llm_completion_tokens": 859,
+  "llm_total_tokens": 3196,
   "llm_parse_fallback": 0
 }
