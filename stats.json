@@ -1,45 +1,45 @@
 {
-  "article_count": 8,
+  "article_count": 3,
   "output_file": "output/index.html",
-  "file_size_kb": 78.9,
-  "generated_at": "2026-05-31T03:34:12.673458+00:00",
+  "file_size_kb": 74.7,
+  "generated_at": "2026-05-31T10:08:46.028364+00:00",
   "event_db_stats": {
-    "total_articles": 3418,
+    "total_articles": 3428,
     "collected": 0,
-    "analyzed": 3418,
-    "total_events": 1886,
-    "total_evidence": 2069,
+    "analyzed": 3428,
+    "total_events": 1890,
+    "total_evidence": 2073,
     "event_status": {
       "official": 219,
-      "reported": 1667
+      "reported": 1671
     },
     "tier_0": 250,
     "tier_1": 976,
-    "tier_2": 2192
+    "tier_2": 2202
   },
   "event_status_distribution": {
-    "unknown": 8
+    "reported": 3
   },
-  "use_canonical_events": false,
+  "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 8,
+  "llm_count": 3,
   "multi_source_count": 0,
   "important_count": 1,
   "important_events": [
     {
-      "title": "全球机器人与物理AI风投规模2025年飙升至260亿美元",
-      "event_id": "https://www.techmeme.com/260530/p14#a260530p14",
+      "title": "微软与NVIDIA将在Computex发布首批NVIDIA SoC驱动Windows PC",
+      "event_id": "evt_2a6c2bf61efe2a04214bb076",
       "importance": 4,
       "source_name": "Techmeme",
       "archive_url": "archive/2026-05-31-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 7,
+  "depth_count": 2,
   "entity_count": 0,
-  "llm_call_count": 3,
-  "llm_prompt_tokens": 2337,
-  "llm_completion_tokens": 859,
-  "llm_total_tokens": 3196,
+  "llm_call_count": 11,
+  "llm_prompt_tokens": 13109,
+  "llm_completion_tokens": 4311,
+  "llm_total_tokens": 17426,
   "llm_parse_fallback": 0
 }
