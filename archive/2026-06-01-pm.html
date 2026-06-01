@@ -7,16 +7,16 @@
      打开页面时浏览器自带的 referer 会被拒 (403)，导致卡片图加载失败
      留下大块空白。 -->
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="AI自主攻克数学难题，中国双轨突围，监管成新商业战场  🧠 **OpenAI内部AI独立推翻Erdős猜想，数学研究「辅助工具」叙事宣告破产** 厄尔多斯单位距离猜想存在近80年，OpenAI AI自主推翻——关键词是「自主」：过去所有AI数学突破都需要人类拆题引导，这次是系统独立完成。这条分界线越过去，数学博士…">
+<meta name="description" content="AI 寄生经济学正在遭遇反弹：平台收费、芯片管制、GDP 失真同时压来  🛠️ **Anthropic 垫百万 token 换 Palo Alto 预算增加 = 用「免费首秀」锁企业安全市场的经典开局** Palo Alto Networks 用 Claude Mythos 扫出 24+ 高危漏洞，Anthrop…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 晚报 · 2026年06月01日">
-<meta property="og:description" content="AI自主攻克数学难题，中国双轨突围，监管成新商业战场  🧠 **OpenAI内部AI独立推翻Erdős猜想，数学研究「辅助工具」叙事宣告破产** 厄尔多斯单位距离猜想存在近80年，OpenAI AI自主推翻——关键词是「自主」：过去所有AI数学突破都需要人类拆题引导，这次是系统独立完成。这条分界线越过去，数学博士…">
+<meta property="og:description" content="AI 寄生经济学正在遭遇反弹：平台收费、芯片管制、GDP 失真同时压来  🛠️ **Anthropic 垫百万 token 换 Palo Alto 预算增加 = 用「免费首秀」锁企业安全市场的经典开局** Palo Alto Networks 用 Claude Mythos 扫出 24+ 高危漏洞，Anthrop…">
 <meta property="og:site_name" content="AI 晚报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 晚报 · 2026年06月01日">
-<meta name="twitter:description" content="AI自主攻克数学难题，中国双轨突围，监管成新商业战场  🧠 **OpenAI内部AI独立推翻Erdős猜想，数学研究「辅助工具」叙事宣告破产** 厄尔多斯单位距离猜想存在近80年，OpenAI AI自主推翻——关键词是「自主」：过去所有AI数学突破都需要人类拆题引导，这次是系统独立完成。这条分界线越过去，数学博士…">
+<meta name="twitter:description" content="AI 寄生经济学正在遭遇反弹：平台收费、芯片管制、GDP 失真同时压来  🛠️ **Anthropic 垫百万 token 换 Palo Alto 预算增加 = 用「免费首秀」锁企业安全市场的经典开局** Palo Alto Networks 用 Claude Mythos 扫出 24+ 高危漏洞，Anthrop…">
 <title>AI 晚报 · 2026年06月01日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -205,6 +205,46 @@ body {
 }
 .jc-body .jc-bold {
     color: var(--text-100); font-weight: 600;
+}
+/* 判断卡底部"来源"链接 — 取代抽象的"已核/未核"徽章, 让读者直接点原文核对 */
+.jc-sources {
+    margin: 12px 0 0;
+    padding-top: 9px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.10);
+    font-size: 11px; line-height: 1.8;
+    color: var(--text-50, #8a93a6);
+}
+.jc-src {
+    color: var(--accent, #66c0ff);
+    text-decoration: none;
+}
+.jc-src:hover { text-decoration: underline; }
+/* 今日口播稿区块 (C) — 60-90 秒口语稿, 供音频/视频取用 */
+.broadcast {
+    max-width: 1120px; margin: 28px auto 0; padding: 18px 20px;
+    background: var(--bg-card, rgba(255,255,255,0.04));
+    border: 1px solid var(--border, rgba(255,255,255,0.10));
+    border-radius: 10px;
+}
+.bc-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.bc-title { font-family: var(--serif); font-size: 17px; font-weight: 700; margin: 0; color: var(--text-100, #ecf0f5); }
+.bc-copy {
+    font-size: 12px; padding: 5px 12px; border-radius: 8px; cursor: pointer; white-space: nowrap;
+    color: var(--accent, #66c0ff); background: rgba(102, 192, 255, 0.08);
+    border: 1px solid rgba(102, 192, 255, 0.30);
+}
+.bc-copy:hover { background: rgba(102, 192, 255, 0.16); }
+.bc-hint { font-size: 11px; color: var(--text-50, #8a93a6); margin: 4px 0 10px; }
+.bc-text {
+    white-space: pre-wrap; word-break: break-word;
+    font-family: var(--serif, 'Noto Serif SC', serif);
+    font-size: 14.5px; line-height: 1.9;
+    color: var(--text-70, #b6bdcb);
+    margin: 0; background: transparent; border: none; padding: 0;
+}
+@media (max-width: 640px) {
+    .broadcast { margin: 20px 12px 0; padding: 14px; }
+    .bc-text { font-size: 14px; }
 }
 .briefing .br-outro {
     max-width: 1120px;
@@ -1189,12 +1229,12 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">🌆 AI 晚报</div>
-    <div class="h-date">2026年06月01日 周一 · 21:20</div>
+    <div class="h-date">2026年06月01日 周一 · 22:31</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>6</b> 篇</span>
+        <span><b>4</b> 篇</span>
         <span><b>3</b> 源</span>
         <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
@@ -1208,9 +1248,9 @@ body.show-read .is-read:hover {
 
     <section class="briefing">
         <h2 class="br-title">📌 今日 3 个判断</h2>
-        <p class="br-headline">AI自主攻克数学难题，中国双轨突围，监管成新商业战场</p>
-        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🧠</span><span class="jc-badge jc-badge-medium" title="">✓ 2 处已核 / 1 处未核</span></div><h3 class="jc-title">OpenAI内部AI独立推翻Erdős猜想，数学研究「辅助工具」叙事宣告破产</h3><p class="jc-body">厄尔多斯单位距离猜想存在近80年，OpenAI AI自主推翻——关键词是「自主」：过去所有AI数学突破都需要人类拆题引导，这次是系统独立完成。这条分界线越过去，数学博士培养逻辑、顶级期刊审稿机制、DeepMind AlphaProof的竞争压力全部重新定价。接下来30天内，至少3个数学机构会发声讨论AI署名权——这不是学术探讨，是职业边界实测告警。</p></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">📜</span><span class="jc-badge jc-badge-verified" title="">✓ 3 处事实已核对</span></div><h3 class="jc-title">Anthropic让ENISA进Glasswing，用监管准入建起MiniMax价格战打不穿的欧洲护城河</h3><p class="jc-body">必须对读的两条新闻：Anthropic把欧盟网络安全局ENISA变成首个接触Glasswing和Mythos的欧盟机构；MiniMax M3声称性能媲美Claude Opus 4.7，定价$0.12/百万token，比Opus 4.7的$5便宜97.6%。正面价格战Anthropic必败——但若欧洲企业客户因合规要求必须选「ENISA认可模型」，MiniMax低价就失去切入口。监管准入是这场价格战里唯一不能被97.6%折扣复制的资产。</p></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🧠</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span><span class="jc-badge jc-badge-medium" title="">✓ 2 处已核 / 1 处未核</span></div><h3 class="jc-title">NEO首个侵入式BCI临床批件，Neuralink的竞争时间窗正在关闭</h3><p class="jc-body">董辉历11个月实测后重拾书写，NEO递出的是Neuralink在美国无法复制的临床数据，FDA听证桌上筹码差距已打开。但解放军500次试购英伟达A100的记录标出天花板——BCI转向端侧AI推理那天，NEO的神经医疗领先将撞上同一道算力墙。</p></article></div>
-        <p class="br-outro">今日最大信号：AI独立做数学——不是辅助，很多职业护城河要重新丈量。</p>
+        <p class="br-headline">AI 寄生经济学正在遭遇反弹：平台收费、芯片管制、GDP 失真同时压来</p>
+        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🛠️</span></div><h3 class="jc-title">Anthropic 垫百万 token 换 Palo Alto 预算增加 = 用「免费首秀」锁企业安全市场的经典开局</h3><p class="jc-body">Palo Alto Networks 用 Claude Mythos 扫出 24+ 高危漏洞，Anthropic 垫付了这笔百万 token 账单——标准 land-and-expand 开局：免费首秀换「多家企业宣布增加 Mythos 预算」。安全扫描一旦进了 CISO 采购合同极难替换，Anthropic 正从「模型商」升格为「安全合规供应商」。OpenAI 在企业安全市场近乎缺席，30 天内是否有第二家头部安全厂商跟进签约是检验指标。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260601/p36#a260601p36" target="_blank" rel="noopener">🗞️ Techmeme</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">💰</span></div><h3 class="jc-title">AI 经济 2000% 增速靠把成本外部化给平台，Strava +448% 付费墙是平台反击第一枪</h3><p class="jc-body">弗吉尼亚大学论文揭示美国 AI 经济年增 2000% 在 GDP 里几乎不可见，Strava 案例解释了为何如此：AI no-code 工具把开发者申请量炸到 +448%，爬虫滥用成本全甩给平台，AI 公司账面不体现增量。Strava 付费墙是「平台向 AI 收账」的起点；6 个月内 Reddit、GitHub、LinkedIn API 面临同一选择——立收费壁垒，还是继续被薅。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://jack-clark.net/2026/06/01/import-ai-459-ai-oversight-is-difficult-scaling-laws-for-protein-folding-models-and-pricing-the-extinction-risk-of-ai-systems/" target="_blank" rel="noopener">📬 Import AI</a> · <a class="jc-src" href="https://www.theverge.com/gadgets/940854/strava-restricts-api-access-ai-apps" target="_blank" rel="noopener">⚡ The Verge AI</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🛡️</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span></div><h3 class="jc-title">BIS管制首次有名有姓阻断一个落地的政治AI监控工具——Geedge案例是窗口，不是终局</h3><p class="jc-body">Geedge专做政治风险人物预测AI，因拿不到美国芯片进展严重受阻，是出口管制首次同时完成「减速对手」与「阻止高危监控扩散」双目标的有据可查案例。但华为昇腾910C已量产，国产算力替代窗口预计18-24个月；BIS若不跟进软件栈和标准管控，此次阻断效果到期即止，Geedge只是被推迟，不是被消灭。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260601/p37#a260601p37" target="_blank" rel="noopener">🗞️ Techmeme</a></div></article></div>
+        <p class="br-outro">今天三条线收束成一个问题：AI 经济的「外部化」玩法（成本甩平台、绕 GDP、抢算力）开始遭遇反制——账单迟早要有人付。</p>
     </section>
 
 <!-- Featured Articles (Importance >= 4) —— 重大事件 -->
@@ -1225,22 +1265,22 @@ body.show-read .is-read:hover {
 <!-- id="grid" 是 script.js bindCardClick(getElementById('grid')) 必须的，少了它点击 modal 会失效 -->
 <div id="grid" class="grid" aria-label="资讯列表">
 
-        <div class="card" data-cat="其他" data-aud="general" data-idx="0" data-iid="f211efe7d00e5a25830c77bbc2aa3a6d"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="0" data-iid="8593becf837891d7794d50794dcde74b"
              style="animation-delay:0ms">
-            <div class="card-img" style="background-image:url('https://wp.technologyreview.com/wp-content/uploads/2022/10/wcu_forensic0092.jpeg?w=3000')"></div>
+            <div class="card-img" style="background-image:url('https://i0.wp.com/jack-clark.net/wp-content/uploads/2026/06/https3A2F2Fsubstack-post-media.s3.amazonaws.com2Fpublic2Fimages2Fd6d17996-2bef-40a4-abe3-be72a0e8a227_258x258-14YrP0.jpg?resize=150%2C150&amp;ssl=1')"></div>
             <div class="card-body">
                 
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">中国脑机接口NEO获批：全球首款侵入式BCI商业化</div>
-                <div class="z3"><div class="z3-why">中国脑机接口设备NEO成为全球首款通过临床试验审批的侵入式脑机接口，瘫痪患者已实现书写功能恢复。</div></div>
+                <div class="card-title">美国AI经济年增2000%但GDP统计几乎隐形</div>
+                <div class="z3"><div class="z3-why">弗吉尼亚大学、Anthropic及加拿大银行经济学家联合论文指出，美国AI经济以2000%年增速扩张，但在传统GDP统计中几乎不可见。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🎓 MIT Tech Review · 06-01 20:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📬 Import AI · 06-01 21:31 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="1" data-iid="4a1392ba5f812b0134f40c4b4dd3eed6"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="1" data-iid="64de68ca27e3b8fe955dbed4b072765f"
              style="animation-delay:25ms">
             
             <div class="card-body">
@@ -1249,13 +1289,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">中国批准全球首款侵入式脑机接口芯片临床应用</div>
-                <div class="z3"><div class="z3-why">中国监管机构批准全球首款侵入式脑机接口芯片，脊髓损伤患者董辉经11个月康复后成功重新书写文字。</div></div>
+                <div class="card-title">Strava收紧API访问权限，矛头直指AI零代码工具滥用</div>
+                <div class="z3"><div class="z3-why">Strava宣布开发者必须付费订阅才能使用API，原因是AI零代码工具导致开发者申请量暴增448%，API滥用和爬虫严重拖慢平台性能。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🎓 MIT Tech Review · 06-01 17:09 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 06-01 22:06 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="2" data-iid="10c35259e8a447b600f26d413b275ece"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="2" data-iid="936a2b0fab68511c882bd79d33511855"
              style="animation-delay:50ms">
             
             <div class="card-body">
@@ -1264,13 +1304,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">解密：解放军六年采购记录显示500+次试图获取英伟达芯片</div>
-                <div class="z3"><div class="z3-why">Wirescreen分析3800份中国军事采购记录，发现2019年以来解放军超500次尝试采购英伟达A100、A800等受限芯片。</div></div>
+                <div class="card-title">中国公司Geedge研发AI政治风险预测工具，美芯片管制阻碍进展</div>
+                <div class="z3"><div class="z3-why">中国公司Geedge正开发用于预测政治风险人物的AI监控工具，但美国芯片出口管制严重制约其技术研发进展。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-01 19:20 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-01 22:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="3" data-iid="0819c1e16e263b0333289dfbd032bdf9"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="3" data-iid="02e841c8a33ea636ca034a8a8bf54e0b"
              style="animation-delay:75ms">
             
             <div class="card-body">
@@ -1279,40 +1319,10 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Anthropic向欧盟网络安全机构ENISA开放Mythos安全评估框架</div>
-                <div class="z3"><div class="z3-why">Anthropic计划让欧盟网络安全局ENISA加入Project Glasswing并访问Mythos，成为首个获得此权限的欧盟机构。</div></div>
+                <div class="card-title">Anthropic Claude Mythos助力Palo Alto发现24+高危漏洞，耗资百万token</div>
+                <div class="z3"><div class="z3-why">Palo Alto Networks用Anthropic的Claude Mythos扫描源代码，发现超过24个高危漏洞，消耗逾百万token，费用由Anthropic补贴，多家企业计划增加Mythos预算。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-01 19:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="4" data-iid="fbeec282d68aa47ccff2e1006ef1dea2"
-             style="animation-delay:100ms">
-            <div class="card-img" style="background-image:url('https://cdn.arstechnica.net/wp-content/uploads/2026/05/getty-string-pins-1152x648.jpg')"></div>
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">OpenAI模型破解困扰数学界80年的厄尔多斯猜想</div>
-                <div class="z3"><div class="z3-why">OpenAI内部AI模型推翻了离散几何领域著名的厄尔多斯单位距离猜想，这是AI首次自主解决顶级数学难题。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📰 Ars Technica AI · 06-01 19:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="5" data-iid="919143526d048ec6cbc91c516da1e483"
-             style="animation-delay:125ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">MiniMax发布M3编程模型：价格仅为Opus 4.7的2.4%</div>
-                <div class="z3"><div class="z3-why">中国AI公司MiniMax发布编程模型M3，声称性能媲美Claude Opus 4.7，但每百万输入token仅需$0.12，比Opus 4.7的$5便宜97.6%。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/LocalLLaMA/comments/1ttdiq0/minimax_m3_coding_agentic_frontier_1m_context/" title="r/LocalLLaMA hot">💬 r/LocalLLaMA</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-01 18:55 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-01 21:25 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
 </div>
@@ -1321,7 +1331,18 @@ body.show-read .is-read:hover {
 
 
 <!-- Entity Tracker (P1) — 30 天动态时间线入口；移到新闻下方(二级导航, 不挤占头部内容) -->
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">179</span></a><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">179</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">63</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">52</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">33</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">25</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">14</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">12</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">10</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">10</span></a><a class="et-chip" href="../entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">4</span></a><a class="et-chip" href="../entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a></div></section>
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">181</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">178</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">63</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">52</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">33</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">25</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">14</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">12</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">10</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">10</span></a><a class="et-chip" href="../entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">4</span></a><a class="et-chip" href="../entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a></div></section>
+
+<!-- 今日口播稿 (C) — 60-90 秒口语稿, 供音频/短视频取用; 仅 meta.broadcast_script 有值时渲染 -->
+<section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制全文</button></div><p class="bc-hint">~60–90 秒口语稿 · 可直接念或喂 TTS</p><pre class="bc-text" id="bcText">今天有三件事，拼在一起看，你会发现 AI 这场生意正在被人开始算账了。
+
+先说 Anthropic。他们最近白送给 Palo Alto Networks 一大批算力，帮对方扫出了二十几个高危漏洞。这个&quot;免费体验&quot;听着好像慈善，其实是教科书级的企业销售套路——先让你用，让你的 CISO 写进采购合同，一旦进了安全体系就很难换掉。Anthropic 在下一盘大棋：从卖模型，变成卖安全合规服务。
+
+然后是平台们开始反击了。弗吉尼亚大学有篇论文揭了个秘密：美国 AI 经济账面增速高达两千倍，但 GDP 里几乎看不见。为什么？因为 AI 公司把成本甩给了别人。Strava 就是典型——AI 开发者用无代码工具把 API 申请量炸了四倍多，爬虫的带宽成本全让平台扛着。Strava 现在直接立了付费墙。Reddit、GitHub 下一个怎么办，半年内见分晓。
+
+最后说一个更冷的案例。有家叫 Geedge 的公司，专门做政治风险人物预测 AI，因为买不到美国芯片，项目已经严重受阻。这是出口管制第一次有据可查地同时做到两件事：拖慢对手，还顺手挡住了一个高危监控工具的扩散。但华为的昇腾芯片已经在量产了，这个窗口顶多还有一两年。
+
+三件事的共同底色：AI 的寄生模式正在遭遇各方反弹，只是每个方向的反弹速度不一样。</pre></section>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalContent" onclick="if(event.target===this)closeModal()">
@@ -1335,7 +1356,7 @@ body.show-read .is-read:hover {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 晚报 · <b>3</b> 个信息源 · <b>6</b> 篇资讯 · 2026年06月01日
+    AI 晚报 · <b>3</b> 个信息源 · <b>4</b> 篇资讯 · 2026年06月01日
     · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
