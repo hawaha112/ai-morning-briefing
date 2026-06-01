@@ -1,37 +1,53 @@
 {
-  "article_count": 4,
+  "article_count": 12,
   "output_file": "output/index.html",
-  "file_size_kb": 79.4,
-  "generated_at": "2026-06-01T14:31:02.564727+00:00",
+  "file_size_kb": 87.2,
+  "generated_at": "2026-06-01T22:11:53.660471+00:00",
   "event_db_stats": {
-    "total_articles": 3296,
+    "total_articles": 3334,
     "collected": 0,
-    "analyzed": 3296,
-    "total_events": 1800,
-    "total_evidence": 1979,
+    "analyzed": 3334,
+    "total_events": 1821,
+    "total_evidence": 2009,
     "event_status": {
-      "official": 186,
-      "reported": 1614
+      "official": 191,
+      "reported": 1630
     },
-    "tier_0": 215,
-    "tier_1": 948,
-    "tier_2": 2133
+    "tier_0": 219,
+    "tier_1": 956,
+    "tier_2": 2159
   },
   "event_status_distribution": {
-    "reported": 4
+    "official": 1,
+    "reported": 11
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 4,
-  "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
-  "official_count": 0,
-  "depth_count": 4,
+  "llm_count": 12,
+  "multi_source_count": 2,
+  "important_count": 2,
+  "important_events": [
+    {
+      "title": "Anthropic秘密提交IPO申请，最快今秋上市",
+      "event_id": "evt_77b7523ba27297231637fba1",
+      "importance": 5,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-02-am.html"
+    },
+    {
+      "title": "Meta AI聊天机器人被利用劫持Instagram账户漏洞已修复",
+      "event_id": "evt_24835f1eb7df9c6b23ccf54b",
+      "importance": 4,
+      "source_name": "The Verge AI",
+      "archive_url": "archive/2026-06-02-am.html"
+    }
+  ],
+  "official_count": 1,
+  "depth_count": 12,
   "entity_count": 0,
-  "llm_call_count": 13,
-  "llm_prompt_tokens": 13823,
-  "llm_completion_tokens": 4746,
-  "llm_total_tokens": 18571,
+  "llm_call_count": 52,
+  "llm_prompt_tokens": 72521,
+  "llm_completion_tokens": 21026,
+  "llm_total_tokens": 93567,
   "llm_parse_fallback": 0
 }
