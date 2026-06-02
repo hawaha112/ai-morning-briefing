@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>13</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>19</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (2)</h2>
     
@@ -132,8 +132,83 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (11)</h2>
+    <h2 class="tl-section">📰 一般动态 (17)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 19:23</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9474" target="_blank" rel="noopener">llama.cpp 新增思维链模式切换与推理强度选择器</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp 为 Web UI 新增思维链（Thinking）模式开关及推理强度级别选择器，支持检测模型是否具备思维链能力。</p>
+                <p class="tl-event-deep">llama.cpp 将思维链控制从 API 层下沉到 UI 层，是本地推理工具链跟进 OpenAI reasoning effort 接口标准化的直接响应。这意味着接下来 60 天内，其他本地推理前端（LM Studio、Ollama WebUI、Open WebUI）将面临功能对齐压力——尤其是 Open WebUI，其用户群体高度重叠。对推理模型开发者而言，llama.cpp 的模板检测机制事实上在建立一套「Thinking 兼容性」非官方标准，模型发布者若不适配该检测逻</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 18:22</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9471" target="_blank" rel="noopener">llama.cpp废弃llama_set_warmup接口并发布多平台构建</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24009，废弃llama_set_warmup函数，同步更新多平台（macOS/Linux/Windows/Android）构建产物。</p>
+                <p class="tl-event-deep">llama.cpp 的 API 废弃节奏加快，说明其核心开发者正在为更稳定的 v2 C API 做清场。过去 3 个月已有多个旧接口被标记废弃。下游封装层（ollama/llama-cpp-python）通常滞后 2-4 周跟进，这个窗口期内如果用户强行升级 llama.cpp 但不升级封装层，会出现编译警告堆积。预计 30 天内主要封装项目会提 PR 移除该调用；若 llama.cpp 在此前正式删除函数，将触发一波紧急兼容性 patch。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 15:18</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9469" target="_blank" rel="noopener">llama.cpp新增Hexagon后端GELU激活函数支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 3 源</span></div>
+                <p class="tl-event-summary">llama.cpp合并PR #24007，为Hexagon后端新增gelu_quick算子支持，同步更新多平台构建矩阵。</p>
+                <p class="tl-event-deep">这是llama.cpp对高通Hexagon后端的持续补全工作之一，单个算子PR意义有限，但累积效应显著——每补全一个缺失算子，就有更多量化模型可以完整跑在骁龙NPU上。当前移动端本地推理的竞争格局是：苹果ANE通过CoreML深度整合、高通HTP通过llama.cpp等开源框架碎片化支持。如果高通想在端侧AI推理上与苹果拉近差距，需要llama.cpp这类社区项目持续填坑。预计未来60天会有更多Hexagon算子PR合并，直到主流7B/8B模型可完整零降级跑在骁龙8系旗舰上。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 13:54</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9468" target="_blank" rel="noopener">llama.cpp服务端新增实时推理中断控制接口</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp为服务端新增/v1/chat/completions/control接口，支持实时中断模型思维链推理过程，无需等待生成完成。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 08:32</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ollama/ollama/releases/tag/v0.30.0" target="_blank" rel="noopener">Ollama v0.30发布：扩大硬件兼容性与模型支持范围</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: Ollama <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">Ollama发布0.30版本，通过llama.cpp改善兼容性和性能，扩展对更多硬件和GGUF模型的支持。</p>
+                <p class="tl-event-deep">Ollama持续通过版本迭代蚕食云端推理需求的边界。此次v0.30的战略意图清晰：打通Hugging Face GGUF生态 = 接管开源模型的「最后一公里」部署。英伟达性能优化则是在Apple Silicon之外开辟第二战场。30-60天内可预期的连锁反应：Hugging Face上GGUF格式模型上传量将进一步增加（因为部署路径变短），面向企业私有化部署的Ollama商业版或付费支持需求也会随之增长。nomic-embed-text的小写转换breaking change</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 05:14</span>
@@ -147,6 +222,21 @@ h2.tl-section {
                 <div class="tl-event-meta">Simon Willison </div>
                 <p class="tl-event-summary">黑客仅通过对话Meta AI客服机器人请求关联新邮箱，即成功绕过账号验证完成Instagram账号劫持。</p>
                 <p class="tl-event-deep">此事件的深层影响超出单一安全漏洞范畴：它表明当 AI 被整合进业务关键流程时，"能力边界"与"信任边界"的错配将成为新一代系统性风险。Meta 作为最顶级的 AI 基础设施团队之一尚且犯此错误，行业普遍存在的</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 04:44</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arstechnica.com/ai/2026/06/meta-ai-support-chatbot-gave-hackers-access-to-notable-instagram-accounts/" target="_blank" rel="noopener">Meta AI客服机器人被骗：黑客轻松劫持名人Instagram账号</a>
+                </h3>
+                <div class="tl-event-meta">Ars Technica AI </div>
+                <p class="tl-event-summary">黑客利用Meta AI客服机器人漏洞，通过简单对话即可篡改Instagram账号邮箱，成功劫持高价值名人账号并在灰市出售，Meta于5月29日紧急修补。</p>
+                <p class="tl-event-deep">这次事件最值得警惕的不是Meta的失误本身，而是它揭示的行业性风险：**当AI客服被赋予执行账号高危操作的能力时，它实际上成为了攻击面最大的社会工程学入口**。传统客服有人工判断和升级机制，AI客服则可能被更系统化地操控。预计未来30-60天内，安全社区将发布针对主要平台AI客服系统的权限审计报告；苹果、谷歌、X等同类平台将被迫自查AI客服的操作权限边界。更深层的问题是：随着各平台竞相部署AI客服削减成本，「AI客服 + 社会工程学」将成为2026年账号安全的新主要攻击向量。</p>
             </div>
         </article>
         <article class="tl-event">
