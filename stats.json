@@ -1,45 +1,59 @@
 {
-  "article_count": 18,
+  "article_count": 20,
   "output_file": "output/index.html",
-  "file_size_kb": 93.0,
-  "generated_at": "2026-06-02T15:03:54.923404+00:00",
+  "file_size_kb": 98.3,
+  "generated_at": "2026-06-02T22:14:52.230777+00:00",
   "event_db_stats": {
-    "total_articles": 3414,
+    "total_articles": 3495,
     "collected": 0,
-    "analyzed": 3414,
-    "total_events": 1868,
-    "total_evidence": 2091,
+    "analyzed": 3495,
+    "total_events": 1910,
+    "total_evidence": 2150,
     "event_status": {
-      "official": 210,
-      "reported": 1658
+      "official": 225,
+      "reported": 1685
     },
-    "tier_0": 250,
-    "tier_1": 1004,
-    "tier_2": 2160
+    "tier_0": 270,
+    "tier_1": 1026,
+    "tier_2": 2199
   },
   "event_status_distribution": {
-    "reported": 18
+    "reported": 20
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 18,
+  "llm_count": 20,
   "multi_source_count": 3,
-  "important_count": 1,
+  "important_count": 3,
   "important_events": [
     {
-      "title": "谷歌Gemini Spark震撼亮相：最具冲击力的AI智能体体验",
-      "event_id": "evt_64b061a4d9848b637bc378ee",
+      "title": "微软Build 2026：七大重磅发布涵盖AI助手与新Surface硬件",
+      "event_id": "evt_7515110d3761d312b37837e4",
       "importance": 4,
       "source_name": "The Verge AI",
-      "archive_url": "archive/2026-06-02-pm.html"
+      "archive_url": "archive/2026-06-03-am.html"
+    },
+    {
+      "title": "特朗普签署行政令：AI模型发布前须接受联邦政府审查",
+      "event_id": "evt_78ac8c1e151037d66df04760",
+      "importance": 4,
+      "source_name": "The Verge AI",
+      "archive_url": "archive/2026-06-03-am.html"
+    },
+    {
+      "title": "黄仁勋称Marvell为「下一个万亿美元公司」股价单日暴涨33%",
+      "event_id": "evt_e3964e47c57d7d01be77a60b",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-03-am.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 17,
+  "depth_count": 20,
   "entity_count": 0,
-  "llm_call_count": 119,
-  "llm_prompt_tokens": 177859,
-  "llm_completion_tokens": 48723,
-  "llm_total_tokens": 226626,
+  "llm_call_count": 100,
+  "llm_prompt_tokens": 141325,
+  "llm_completion_tokens": 39440,
+  "llm_total_tokens": 180800,
   "llm_parse_fallback": 1
 }
