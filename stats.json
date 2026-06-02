@@ -1,53 +1,45 @@
 {
-  "article_count": 12,
+  "article_count": 32,
   "output_file": "output/index.html",
-  "file_size_kb": 87.2,
-  "generated_at": "2026-06-01T22:11:53.660471+00:00",
+  "file_size_kb": 106.3,
+  "generated_at": "2026-06-02T10:13:02.620669+00:00",
   "event_db_stats": {
-    "total_articles": 3334,
+    "total_articles": 3350,
     "collected": 0,
-    "analyzed": 3334,
-    "total_events": 1821,
-    "total_evidence": 2009,
+    "analyzed": 3350,
+    "total_events": 1835,
+    "total_evidence": 2027,
     "event_status": {
       "official": 191,
-      "reported": 1630
+      "reported": 1644
     },
-    "tier_0": 219,
-    "tier_1": 956,
-    "tier_2": 2159
+    "tier_0": 220,
+    "tier_1": 970,
+    "tier_2": 2160
   },
   "event_status_distribution": {
-    "official": 1,
-    "reported": 11
+    "reported": 32
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 12,
+  "llm_count": 32,
   "multi_source_count": 2,
-  "important_count": 2,
+  "important_count": 1,
   "important_events": [
     {
-      "title": "Anthropic秘密提交IPO申请，最快今秋上市",
-      "event_id": "evt_77b7523ba27297231637fba1",
-      "importance": 5,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-02-am.html"
-    },
-    {
-      "title": "Meta AI聊天机器人被利用劫持Instagram账户漏洞已修复",
-      "event_id": "evt_24835f1eb7df9c6b23ccf54b",
+      "title": "SK海力士计划五年内存储芯片产能翻倍应对供应短缺",
+      "event_id": "evt_c84dd1da45259ca16bcaf880",
       "importance": 4,
-      "source_name": "The Verge AI",
-      "archive_url": "archive/2026-06-02-am.html"
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-02-pm.html"
     }
   ],
-  "official_count": 1,
-  "depth_count": 12,
+  "official_count": 0,
+  "depth_count": 29,
   "entity_count": 0,
-  "llm_call_count": 52,
-  "llm_prompt_tokens": 72521,
-  "llm_completion_tokens": 21026,
-  "llm_total_tokens": 93567,
+  "llm_call_count": 72,
+  "llm_prompt_tokens": 99196,
+  "llm_completion_tokens": 30008,
+  "llm_total_tokens": 129223,
   "llm_parse_fallback": 0
 }
