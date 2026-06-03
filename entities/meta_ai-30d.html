@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>22</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>23</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (2)</h2>
     
@@ -132,8 +132,23 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (20)</h2>
+    <h2 class="tl-section">📰 一般动态 (21)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-03 15:49</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9488" target="_blank" rel="noopener">llama.cpp新增Qwen3 SSM架构支持及多平台构建</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24031，新增对Qwen3 SSM（状态空间模型）架构的测试支持，并添加循环层注意力机制键值对，覆盖macOS、Linux、Windows、Android等多平台构建。</p>
+                
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 06:40</span>
@@ -219,7 +234,7 @@ h2.tl-section {
                     
                     <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9469" target="_blank" rel="noopener">llama.cpp新增Hexagon后端GELU激活函数支持</a>
                 </h3>
-                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 3 源</span></div>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 4 源</span></div>
                 <p class="tl-event-summary">llama.cpp合并PR #24007，为Hexagon后端新增gelu_quick算子支持，同步更新多平台构建矩阵。</p>
                 <p class="tl-event-deep">这是llama.cpp对高通Hexagon后端的持续补全工作之一，单个算子PR意义有限，但累积效应显著——每补全一个缺失算子，就有更多量化模型可以完整跑在骁龙NPU上。当前移动端本地推理的竞争格局是：苹果ANE通过CoreML深度整合、高通HTP通过llama.cpp等开源框架碎片化支持。如果高通想在端侧AI推理上与苹果拉近差距，需要llama.cpp这类社区项目持续填坑。预计未来60天会有更多Hexagon算子PR合并，直到主流7B/8B模型可完整零降级跑在骁龙8系旗舰上。</p>
             </div>

@@ -1,59 +1,59 @@
 {
-  "article_count": 26,
+  "article_count": 13,
   "output_file": "output/index.html",
-  "file_size_kb": 106.0,
-  "generated_at": "2026-06-03T04:59:30.095247+00:00",
+  "file_size_kb": 92.8,
+  "generated_at": "2026-06-03T10:14:26.172368+00:00",
   "event_db_stats": {
-    "total_articles": 3515,
+    "total_articles": 3556,
     "collected": 0,
-    "analyzed": 3515,
-    "total_events": 1945,
-    "total_evidence": 2190,
+    "analyzed": 3556,
+    "total_events": 1944,
+    "total_evidence": 2194,
     "event_status": {
-      "official": 228,
-      "reported": 1717
+      "official": 229,
+      "reported": 1715
     },
-    "tier_0": 273,
-    "tier_1": 1043,
-    "tier_2": 2199
+    "tier_0": 274,
+    "tier_1": 1050,
+    "tier_2": 2232
   },
   "event_status_distribution": {
-    "reported": 26
+    "reported": 13
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 26,
-  "multi_source_count": 1,
+  "llm_count": 13,
+  "multi_source_count": 2,
   "important_count": 3,
   "important_events": [
     {
-      "title": "微软Build 2026：七大重磅发布涵盖AI助手与新Surface硬件",
-      "event_id": "evt_7515110d3761d312b37837e4",
-      "importance": 4,
-      "source_name": "The Verge AI",
-      "archive_url": "archive/2026-06-03-am.html"
-    },
-    {
-      "title": "ChatGPT月活突破10亿，成史上最快达标应用",
-      "event_id": "evt_5b98b4e406398a729e7cda41",
+      "title": "英国CMA要求Google允许出版商退出AI搜索结果",
+      "event_id": "evt_ac7537a45d3dfe84a46a17e3",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-03-am.html"
+      "archive_url": "archive/2026-06-03-pm.html"
     },
     {
-      "title": "Apollo与黑石360亿美元债务融资为Anthropic购买TPU",
-      "event_id": "evt_b146ac29c66592bb6e959bcc",
+      "title": "HR软件独角兽Factorial完成1.5亿美元D轮融资，估值25亿美元",
+      "event_id": "evt_88b98f2cc83bfa4b732b70f6",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-03-am.html"
+      "archive_url": "archive/2026-06-03-pm.html"
+    },
+    {
+      "title": "苏度科技具身智能机器人ICRA 2026全球首次公开亮相",
+      "event_id": "evt_4d72dd18906cd75920614aeb",
+      "importance": 4,
+      "source_name": "雷峰网",
+      "archive_url": "archive/2026-06-03-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 25,
+  "depth_count": 13,
   "entity_count": 0,
-  "llm_call_count": 70,
-  "llm_prompt_tokens": 103126,
-  "llm_completion_tokens": 28117,
-  "llm_total_tokens": 131272,
+  "llm_call_count": 49,
+  "llm_prompt_tokens": 70555,
+  "llm_completion_tokens": 18149,
+  "llm_total_tokens": 88720,
   "llm_parse_fallback": 0
 }
