@@ -7,16 +7,16 @@
      打开页面时浏览器自带的 referer 会被拒 (403)，导致卡片图加载失败
      留下大块空白。 -->
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="微软 Build 2026 五层全栈亮剑，自研模型宣告对 OpenAI 战略独立  🏢 **微软一场发布会祭出自研模型+医疗数据+新硬件 = OpenAI 最大金主变最直接竞争对手** Build 2026 单日塞进 5 个战略动作：MAI-Thinking-1（宣称零蒸馏从头训练、软件工程基准追平前沿）、May…">
+<meta name="description" content="算力债券化、微软自研出击、月活冲十亿——AI 三条战线同日升温  💰 **黑石 360 亿买 TPU + 巴菲特接 Google 100 亿——华尔街把算力变成了可证券化资产** 同一天：Apollo/黑石牵头 360 亿美元债务融资为 Anthropic 购 TPU（优质部分 5.75%、风险部分 8-9%），…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 早报 · 2026年06月03日">
-<meta property="og:description" content="微软 Build 2026 五层全栈亮剑，自研模型宣告对 OpenAI 战略独立  🏢 **微软一场发布会祭出自研模型+医疗数据+新硬件 = OpenAI 最大金主变最直接竞争对手** Build 2026 单日塞进 5 个战略动作：MAI-Thinking-1（宣称零蒸馏从头训练、软件工程基准追平前沿）、May…">
+<meta property="og:description" content="算力债券化、微软自研出击、月活冲十亿——AI 三条战线同日升温  💰 **黑石 360 亿买 TPU + 巴菲特接 Google 100 亿——华尔街把算力变成了可证券化资产** 同一天：Apollo/黑石牵头 360 亿美元债务融资为 Anthropic 购 TPU（优质部分 5.75%、风险部分 8-9%），…">
 <meta property="og:site_name" content="AI 早报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 早报 · 2026年06月03日">
-<meta name="twitter:description" content="微软 Build 2026 五层全栈亮剑，自研模型宣告对 OpenAI 战略独立  🏢 **微软一场发布会祭出自研模型+医疗数据+新硬件 = OpenAI 最大金主变最直接竞争对手** Build 2026 单日塞进 5 个战略动作：MAI-Thinking-1（宣称零蒸馏从头训练、软件工程基准追平前沿）、May…">
+<meta name="twitter:description" content="算力债券化、微软自研出击、月活冲十亿——AI 三条战线同日升温  💰 **黑石 360 亿买 TPU + 巴菲特接 Google 100 亿——华尔街把算力变成了可证券化资产** 同一天：Apollo/黑石牵头 360 亿美元债务融资为 Anthropic 购 TPU（优质部分 5.75%、风险部分 8-9%），…">
 <title>AI 早报 · 2026年06月03日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -261,6 +261,26 @@ body {
     background: rgba(255, 255, 255, 0.06);
     border-radius: 9px; padding: 0 7px;
 }
+/* 突发 banner —— 早报顶部, 前端从 archive/breaking.json 拉取渲染(有近24h突发才显示) */
+.breaking-banner {
+    max-width: 1120px; margin: 0 auto 18px; padding: 14px 16px;
+    background: rgba(255, 107, 107, 0.06);
+    border: 1px solid rgba(255, 107, 107, 0.30);
+    border-radius: 10px;
+}
+.bkb-head { font-size: 14px; font-weight: 700; color: #ff9b9b; margin-bottom: 10px; }
+.bkb-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.bkb-card {
+    display: block; text-decoration: none;
+    background: var(--bg-card, rgba(255, 255, 255, 0.04));
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.10));
+    border-left: 3px solid #ff6b6b; border-radius: 8px; padding: 10px 12px;
+    transition: border-color 0.15s, transform 0.15s;
+}
+.bkb-card:hover { border-color: #ff6b6b; transform: translateY(-1px); }
+.bkb-title { font-size: 14px; font-weight: 600; color: var(--text-100, #ecf0f5); line-height: 1.5; }
+.bkb-en { font-size: 11px; color: var(--text-50, #8a93a6); margin-top: 3px; font-style: italic; }
+.bkb-sig { font-size: 11px; color: var(--text-50, #8a93a6); margin-top: 5px; }
 .briefing .br-outro {
     max-width: 1120px;
     font-style: italic;
@@ -1244,13 +1264,13 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年06月03日 周三 · 06:14</div>
+    <div class="h-date">2026年06月03日 周三 · 12:59</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>20</b> 篇</span>
-        <span><b>8</b> 源</span>
+        <span><b>26</b> 篇</span>
+        <span><b>9</b> 源</span>
         <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
@@ -1259,20 +1279,23 @@ body.show-read .is-read:hover {
 <!-- LLM coverage banner (rendered only when coverage < 50%) -->
 
 
+<!-- 突发 banner：前端从 archive/breaking.json 实时拉取，有近 24h 突发则显示在最顶（见 script.js） -->
+<section id="breaking-banner" class="breaking-banner" hidden></section>
+
 <!-- Briefing -->
 
     <section class="briefing">
         <h2 class="br-title">📌 今日 3 个判断</h2>
-        <p class="br-headline">微软 Build 2026 五层全栈亮剑，自研模型宣告对 OpenAI 战略独立</p>
-        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🏢</span></div><h3 class="jc-title">微软一场发布会祭出自研模型+医疗数据+新硬件 = OpenAI 最大金主变最直接竞争对手</h3><p class="jc-body">Build 2026 单日塞进 5 个战略动作：MAI-Thinking-1（宣称零蒸馏从头训练、软件工程基准追平前沿）、Mayo Clinic 医疗数据协议、Surface RTX Spark Dev Box、NVIDIA 本地 Agent 联动、Suleiman 当众拒绝第三方蒸馏路线。这不是功能叠加，是微软在宣告「Azure 不再需要向 OpenAI 采购核心模型能力」。OpenAI 的企业端定价体系 60 天内必须重新解释自身溢价——否则 Azure 客户没理由再多付一层 API 费。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.theverge.com/tech/941738/microsoft-build-2026-biggest-announcements" target="_blank" rel="noopener">⚡ The Verge AI</a> · <a class="jc-src" href="https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia/" target="_blank" rel="noopener">⚙️ NVIDIA Developer Blog</a> · <a class="jc-src" href="https://www.techmeme.com/260602/p54#a260602p54" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.techmeme.com/260602/p53#a260602p53" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.theverge.com/tech/941664/microsoft-ai-model-reasoning-mai-thinking-1-build-2026" target="_blank" rel="noopener">⚡ The Verge AI</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">⚡</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span></div><h3 class="jc-title">黄仁勋点名 Marvell 当日暴涨 32%, 正式宣告定制 ASIC 终结 NVIDIA 推理算力垄断</h3><p class="jc-body">黄仁勋在 Computex 称 Marvell 为「下一个万亿美元公司」，当日股价收涨 32.52%。这不是溢美之词，是 NVIDIA CEO 公开承认推理基建市场已大到 GPU 一家吃不完——Google TPU、Amazon Trainium、微软 Maia 三条定制硅路线由此获得最重量级背书。继续大规模锁定 H100 采购合同的云厂商，18 个月内将遭遇定制 ASIC 在每瓦算力成本上的直接倒逼。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260602/p57#a260602p57" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://semiwiki.com/ip/369596-why-europe-needs-its-own-ai-supercomputing-platform/" target="_blank" rel="noopener">🔧 SemiWiki</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">💰</span></div><h3 class="jc-title">Uber 4 个月烧超 AI 预算被迫限速 + 16 数学家联署警告 = 企业 AI 的后悔账单开始批量到期</h3><p class="jc-body">Uber 鼓励全员用 AI → 4 个月内超出预算被迫踩刹车，这是「先放开后管理」策略第一个大公司翻车案例。同周 16 位数学家签署《莱顿宣言》，点名 AI 威胁数学学科可靠性根基；特朗普同期签令要求前沿模型向联邦政府自愿共享安全评估。三条线索指向同一结论：AI 治理补课期已经开始。未来 18 个月的核心竞争力不再是「部署速度」，而是「谁先把护栏建好再烧钱」——没护栏先烧钱的公司正在排队交学费。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://techcrunch.com/2026/06/02/uber-caps-employee-ai-spending-after-blowing-through-budget-in-four-months/" target="_blank" rel="noopener">💡 TechCrunch AI</a> · <a class="jc-src" href="https://www.techmeme.com/260602/p22#a260602p22" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.theverge.com/policy/941775/trump-ai-executive-order" target="_blank" rel="noopener">⚡ The Verge AI</a></div></article></div>
-        <p class="br-outro">今天的关键词是「账单」：技术账单（自研模型）、硬件账单（算力站队）、治理账单（烧钱与监管）。三张同时到期。</p>
+        <p class="br-headline">算力债券化、微软自研出击、月活冲十亿——AI 三条战线同日升温</p>
+        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">💰</span></div><h3 class="jc-title">黑石 360 亿买 TPU + 巴菲特接 Google 100 亿——华尔街把算力变成了可证券化资产</h3><p class="jc-body">同一天：Apollo/黑石牵头 360 亿美元债务融资为 Anthropic 购 TPU（优质部分 5.75%、风险部分 8-9%），谷歌向伯克希尔哈撒韦出售 100 亿美元股权。Ben Thompson 的「现金即算力」判断被实证：传统金融巨头第一次以 AI 算力资产做结构化债务。接下来 60 天，微软/亚马逊必须推出同款算力融资结构，否则 Anthropic 独享最低资本成本——这比模型好坏更难逆转。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260602/p62#a260602p62" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.techmeme.com/260602/p65#a260602p65" target="_blank" rel="noopener">🗞️ Techmeme</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🏢</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span></div><h3 class="jc-title">微软 MAI 盲测胜过 Claude Sonnet 4.6，对 OpenAI 的 130 亿美元正式从合作变成对赌</h3><p class="jc-body">MAI-Thinking-1（1T 参数、35B 激活）在微软自建 ASSERT 框架下盲测声称胜过 Claude Sonnet 4.6，MAI-Code-1-Flash（5B 激活）同场压价代码推理市场。这是微软第一次把 130 亿美元 OpenAI 投资换来的技术拆成竞争武器、对着 OpenAI 正面打。最直接受害者是 GitHub Copilot：三十天内必须向企业买家解释，为什么不切到微软自家 MAI API——同门出品、更低溢价、省去给竞争对手输血的成本。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.theverge.com/tech/941738/microsoft-build-2026-biggest-announcements" target="_blank" rel="noopener">⚡ The Verge AI</a> · <a class="jc-src" href="https://simonwillison.net/2026/Jun/2/microsofts-new-models/#atom-everything" target="_blank" rel="noopener">🧪 Simon Willison</a> · <a class="jc-src" href="https://techcrunch.com/2026/06/02/new-microsoft-tool-lets-devs-spin-up-ai-behavior-tests-using-text-descriptions/" target="_blank" rel="noopener">💡 TechCrunch AI</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">📊</span></div><h3 class="jc-title">ChatGPT 月活 10 亿碾压 Claude 5600 万，但 Claude 640% 增速是前者 10 倍——An</h3><p class="jc-body">Sensor Tower 实测：ChatGPT 月活 10 亿（史上最快），Claude 月活 5600 万，差距 18 倍；但 Claude Q2 同比 640%、ChatGPT 仅 62%。更关键的是 Anthropic 同日锁定 360 亿美元算力融资——不是烧用户增长，是押注算力壁垒比今天的月活数更耐久。Google Gemini 连 Sensor Tower 前两名都未入榜，意味着 Google 在 C 端消费者 AI 实际已出局，伯克希尔那 100 亿正好说明它在往 B 端/基建路线转型自救。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260602/p68#a260602p68" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.techmeme.com/260602/p62#a260602p62" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.techmeme.com/260602/p65#a260602p65" target="_blank" rel="noopener">🗞️ Techmeme</a></div></article></div>
+        <p class="br-outro">今天不是三条孤立新闻——算力债券化 + 微软自研 + 月活分化同日发生，AI 竞争正在从「谁的模型强」切换到「谁的钱最便宜、谁的渠道最宽」。</p>
     </section>
 
 <!-- Featured Articles (Importance >= 4) —— 重大事件 -->
 <div class="featured-section">
 <h2 class="featured-title">今日必读</h2>
 <div class="featured-grid">
-    <div class="featured-card" data-cat="产品与应用|AI工具" data-aud="developer|pm|investor" data-idx="0" data-iid="af72e1d6dc9eccba8ceadc6a3b3f9dac" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|AI工具" data-aud="developer|pm|investor" data-idx="5" data-iid="af72e1d6dc9eccba8ceadc6a3b3f9dac" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
@@ -1280,72 +1303,83 @@ body.show-read .is-read:hover {
             <div class="featured-title-text">微软Build 2026：七大重磅发布涵盖AI助手与新Surface硬件</div>
             <div class="featured-why">微软Build 2026大会发布多项重磅更新，包括面向AI开发的Surface RTX Spark Dev Box、常驻个人助手及自研AI模型升级。</div>
             <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚡ The Verge AI · 06-03 03:23</div>
-            <div class="featured-other-sources"><div class="fos-label">📡 另有 2 源报道</div><div class="fos-item">· Ars Technica AI · 06-02 22:04</div><div class="fos-item">· Wired AI · 06-02 22:04</div></div>
+            <div class="featured-other-sources"><div class="fos-label">📡 另有 3 源报道</div><div class="fos-item">· Ars Technica AI · 06-02 22:04</div><div class="fos-item">· Wired AI · 06-02 22:04</div><div class="fos-item">· 虎嗅科技 · 06-03 04:49</div></div>
         </div>
     </div>
-    <div class="featured-card" data-cat="AI政策监管|大模型发布" data-aud="investor|pm|general" data-idx="2" data-iid="78ac8c1e151037d66df047601ab508c5" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="产品与应用|融资与商业" data-aud="investor|pm|general" data-idx="19" data-iid="5b98b4e406398a729e7cda419129dc5f" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">特朗普签署行政令：AI模型发布前须接受联邦政府审查</div>
-            <div class="featured-why">特朗普签署行政令，要求AI公司在发布前沿模型前自愿向联邦政府共享，以评估其网络安全风险。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚡ The Verge AI · 06-03 02:33</div>
-            <div class="featured-other-sources"><div class="fos-label">📡 另有 1 源报道</div><div class="fos-item">· TechCrunch AI · 06-02 22:04</div></div>
+            <div class="featured-title-text">ChatGPT月活突破10亿，成史上最快达标应用</div>
+            <div class="featured-why">Sensor Tower数据显示ChatGPT全球月活跃用户突破10亿，成为史上最快达成此里程碑的应用，Q2同比增长62%；Claude月活5600万，同比暴增640%。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-03 11:25</div>
+            
         </div>
     </div>
-    <div class="featured-card" data-cat="芯片与算力|融资与商业" data-aud="investor|pm" data-idx="8" data-iid="e3964e47c57d7d01be77a60bf95333d2" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="融资与商业|芯片与算力" data-aud="investor|pm" data-idx="20" data-iid="b146ac29c66592bb6e959bcc344b1aa5" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">黄仁勋称Marvell为「下一个万亿美元公司」股价单日暴涨33%</div>
-            <div class="featured-why">英伟达CEO黄仁勋在Computex大会上盛赞Marvell Technology为下一个万亿美元公司，当日股价收涨32.52%。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-03 04:49</div>
+            <div class="featured-title-text">Apollo与黑石360亿美元债务融资为Anthropic购买TPU</div>
+            <div class="featured-why">Apollo和黑石牵头360亿美元债务融资，由Broadcom背书，用于购买TPU并租赁给Anthropic，优质部分收益率约5.75%，风险部分8%-9%。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-03 06:45</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="学术研究|AI政策监管" data-aud="researcher|general" data-idx="9" data-iid="39a5f0839465e5e4bb0fcaedd87aa8ec" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="学术研究|大模型发布" data-aud="researcher|developer" data-idx="0" data-iid="fd1ef2a8a716cf0c89b459fd02ba0b83" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">16位数学家发布莱顿宣言：警告AI威胁数学学科准确性</div>
-            <div class="featured-why">16位数学家联署《莱顿宣言》，就AI在数学领域的准确性与可靠性问题发出警告，认为AI威胁数学作为学科的根基。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-02 22:01</div>
-            <div class="featured-other-sources"><div class="fos-label">📡 另有 1 源报道</div><div class="fos-item">· Ars Technica AI · 06-02 22:04</div></div>
+            <div class="featured-title-text">视觉图脚手架增强LLM结构化推理能力研究</div>
+            <div class="featured-why">论文提出用图结构思维导图作为LLM内部推理辅助，在多跳问答任务上验证其超越文本链式推理的效果。</div>
+            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 📄 ArXiv AI · 06-03 12:00</div>
+            
         </div>
     </div>
-    <div class="featured-card" data-cat="AI工具|安全与对齐" data-aud="developer|pm" data-idx="10" data-iid="39721577fe782841d1abc41d3e2278af" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="学术研究|大模型发布" data-aud="researcher|developer" data-idx="1" data-iid="cefad7f782c322f761150bd62556b281" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">微软开源ASSERT框架：自然语言驱动AI行为测试</div>
-            <div class="featured-why">微软发布开源框架ASSERT，允许开发者用自然语言描述生成并运行AI行为测试，简化AI系统评估流程。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-03 04:00</div>
+            <div class="featured-title-text">大推理模型「过度思考」研究：正确后继续推理反而出错</div>
+            <div class="featured-why">研究提出前缀级轨迹评估协议，揭示大推理模型在已得出正确答案后继续推理可能产生有害偏离。</div>
+            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 📄 ArXiv AI · 06-03 12:00</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="产品与应用|融资与商业" data-aud="investor|pm" data-idx="11" data-iid="bad1d13f5e7c2be2b7226a5c87fef07d" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://media.wired.com/photos/6a1db2153696beebf95db3a0/master/pass/Opal_Tadpole_01.jpg')"></div>
+    <div class="featured-card" data-cat="学术研究|安全与对齐" data-aud="researcher" data-idx="2" data-iid="454917170abf59a8c64b94d841d73c99" style="border-left-color: #e8913a">
+        
         <div class="featured-body">
             
             
-            <div class="featured-title-text">获OpenAI与三星投资，Opal转型推出AI音频硬件</div>
-            <div class="featured-why">摄像头公司Opal获OpenAI和三星大额投资后转型，正在开发首款AI驱动音频设备。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 📡 Wired AI · 06-02 23:30</div>
+            <div class="featured-title-text">轻量级CNN架构提升脑机接口对抗攻击鲁棒性</div>
+            <div class="featured-why">研究者提出轻量级CNN架构，评估基于EEG的脑机接口在对抗攻击下的鲁棒性，填补BCI安全研究空白。</div>
+            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 📄 ArXiv ML · 06-03 12:00</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="具身智能|学术研究" data-aud="researcher|investor" data-idx="12" data-iid="52e41d73b33b7023d56bcfcc711d36f8" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://static.leiphone.com/uploads/new/images/20260602/6a1ee10527981.png?imageView2/2/w/740')"></div>
+    <div class="featured-card" data-cat="学术研究|产品与应用" data-aud="researcher" data-idx="3" data-iid="7d2c82f194276f9e9648fb9a7c6f4d83" style="border-left-color: #e8913a">
+        
         <div class="featured-body">
             
             
-            <div class="featured-title-text">橡木果机器人发布「本能驱动」具身智能技术路线</div>
-            <div class="featured-why">橡木果机器人提出「本能驱动」技术路线，通过赋予机器人类人操作本能替代数据驱动的端到端模仿学习。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 📡 雷峰网 · 06-02 22:02</div>
+            <div class="featured-title-text">Graph Mamba拓扑感知排序用于病理切片生存分析</div>
+            <div class="featured-why">提出基于拓扑感知排序的Graph Mamba模型，解决全切片图像生存分析中Transformer计算瓶颈问题。</div>
+            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 📄 ArXiv ML · 06-03 12:00</div>
+            
+        </div>
+    </div>
+    <div class="featured-card" data-cat="AI编程|融资与商业" data-aud="developer|investor|pm" data-idx="21" data-iid="4024de7226ac0ed47f01d816cbad9a15" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-title-text">谷歌秘密计划付费购买安卓开发者代码用于AI训练</div>
+            <div class="featured-why">谷歌向部分Google Play应用开发者发出邀请，以付费方式获取其代码库，用于训练AI开发工具，该计划被标注为「机密」。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-03 10:15</div>
             
         </div>
     </div>
@@ -1362,97 +1396,127 @@ body.show-read .is-read:hover {
 <!-- id="grid" 是 script.js bindCardClick(getElementById('grid')) 必须的，少了它点击 modal 会失效 -->
 <div id="grid" class="grid" aria-label="资讯列表">
 <h3 class="grid-cat-head" data-gcat="开源生态">🔓 开源生态<span class="gc-n">1</span></h3>
-        <div class="card" data-cat="开源生态|AI工具" data-aud="developer|researcher" data-idx="1" data-iid="be09258a376402f8afb5e4ad6c286ca1"
-             style="animation-delay:25ms">
-            <div class="card-img" style="background-image:url('https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4')"></div>
+        <div class="card" data-cat="开源生态|AI工具" data-aud="developer" data-idx="6" data-iid="fd9b4cda7c361d6b0d9918328320d645"
+             style="animation-delay:150ms">
+            <div class="card-img" style="background-image:url('https://avatars.githubusercontent.com/u/4033016?s=60&amp;v=4')"></div>
             <div class="card-body">
                 
                 <div class="z1">
             <span class="z1-left">开源生态 · AI工具</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">llama.cpp新增IBM Granite多语言嵌入模型R2支持</div>
-                <div class="z3"><div class="z3-why">llama.cpp合并PR #22716，新增对IBM Granite多语言嵌入模型R2（97M和311M参数版本）的支持，包含SwiGLU FFN和新GGUF键值。</div></div>
+                <div class="card-title">Ollama v0.30.1修复llama.cpp SSE心跳帧解析崩溃</div>
+                <div class="z3"><div class="z3-why">Ollama修复了因llama.cpp b9478引入默认30秒SSE心跳注释帧导致流式请求JSON解析出错的问题</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-社区" title="社区源">💬</span> 🐙 GitHub: llama.cpp · 06-03 00:58 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-社区" title="社区源">💬</span> 🐙 GitHub: Ollama · 06-03 06:40 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
-        </div><h3 class="grid-cat-head" data-gcat="其他">📰 其他<span class="gc-n">12</span></h3>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="3" data-iid="6c1843b0c650dfcc0a7f37d95699f154"
-             style="animation-delay:75ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">微软与NVIDIA联手推动Windows本地AI智能体开发</div>
-                <div class="z3"><div class="z3-why">NVIDIA与微软合作，为Windows平台提供新工具，让开发者更轻松地在本地设备上构建AI智能体。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/singularity/comments/1tv10ix/building_a_hillclimbing_machine_launching_seven/" title="r/singularity hot">💬 r/singularity</a></div>
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> ⚙️ NVIDIA Developer Blog · 06-03 03:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="4" data-iid="cc34662ddea10a1bd61097e2a8a5051c"
+        </div><h3 class="grid-cat-head" data-gcat="学术研究">🔬 学术研究<span class="gc-n">1</span></h3>
+        <div class="card" data-cat="学术研究|AI工具" data-aud="researcher" data-idx="4" data-iid="197a0ff7cdf3635e7df4e4e724437239"
              style="animation-delay:100ms">
             
             <div class="card-body">
                 
                 <div class="z1">
-            <span class="z1-left">其他</span>
+            <span class="z1-left">学术研究 · AI工具</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">欧洲主权AI超算平台：Semidynamics与SiPearl战略合作</div>
-                <div class="z3"><div class="z3-why">Semidynamics与SiPearl宣布合作，共同开发欧洲自主机架级AI算力平台，推动欧洲摆脱对美国AI基础设施的依赖。</div></div>
+                <div class="card-title">脑区级EEG认知负荷预测贡献度评估框架</div>
+                <div class="z3"><div class="z3-why">论文提出脑区级EEG认知负荷预测评估框架，跨4个公开数据集分析不同脑区对预测的贡献一致性。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🔧 SemiWiki · 06-03 01:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="5" data-iid="98568a1b3ee8a3557b14068888f276a9"
-             style="animation-delay:125ms">
-            <div class="card-img" style="background-image:url('https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4')"></div>
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">llama.cpp新增StepFun 3.5 MTP模型支持并发布多平台构建</div>
-                <div class="z3"><div class="z3-why">llama.cpp通过PR #23274合并StepFun 3.5 MTP模型支持，简化为单层架构，发布覆盖macOS/Linux/Windows/Android的全平台二进制包。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🐙 GitHub: llama.cpp · 06-03 00:25 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="6" data-iid="539aa8127db1330eea393e6fda9fb109"
-             style="animation-delay:150ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">NVIDIA发布NemoClaw与Hermes Agent构建自进化安全研究智能体</div>
-                <div class="z3"><div class="z3-why">NVIDIA开源Hermes Agent与NemoClaw组合方案，支持跨Outlook、Slack、GitHub的安全企业级AI研究智能体部署。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> ⚙️ NVIDIA Developer Blog · 06-03 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="7" data-iid="3206f2ef8de4c5d5911faf9461fa8ac7"
+        </div><h3 class="grid-cat-head" data-gcat="AI工具">🛠️ AI工具<span class="gc-n">1</span></h3>
+        <div class="card" data-cat="AI工具|安全与对齐" data-aud="developer" data-idx="7" data-iid="7ce3a6ad2cf1486ebe3be7388073931f"
              style="animation-delay:175ms">
             
             <div class="card-body">
                 
                 <div class="z1">
+            <span class="z1-left">AI工具 · 安全与对齐</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Datasette Agent发布MicroPython沙箱插件0.1a0版本</div>
+                <div class="z3"><div class="z3-why">Simon Willison发布datasette-agent-micropython 0.1a0，用WebAssembly运行MicroPython实现安全代码执行沙箱，GPT-5.5测试未能突破。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-社区" title="社区源">💬</span> 🧪 Simon Willison · 06-03 03:28 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div><h3 class="grid-cat-head" data-gcat="其他">📰 其他<span class="gc-n">15</span></h3>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="8" data-iid="23147a7e773c7b5af18e26d0800528d7"
+             style="animation-delay:200ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">llmda用智能体AI自动生成硬件文档并保持一致性</div>
-                <div class="z3"><div class="z3-why">llmda推出基于智能体AI的工具，可自动生成嵌入式系统硬件文档并确保跨文档一致性。</div></div>
+                <div class="card-title">AURA-Mem：机器人策略的动作门控常量显存记忆架构</div>
+                <div class="z3"><div class="z3-why">论文提出AURA-Mem，用恒定显存的循环记忆替代KV缓存，专为边缘机器人硬件优化，仅在观测影响下一动作时写入记忆。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🔧 SemiWiki · 06-02 23:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="13" data-iid="d3475fb53c2172060c8ae2ee42cb6ede"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="9" data-iid="efe90435c6cc7ba473908dfa4823cb1a"
+             style="animation-delay:225ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">BehaviorBench：基于真实行为轨迹建模用户决策的新基准</div>
+                <div class="z3"><div class="z3-why">研究者发布BehaviorBench基准，利用真实预测市场与链上数据评估个性化用户决策建模能力。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="10" data-iid="58e5222937bce82022fedec6de23f672"
+             style="animation-delay:250ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">ChatHealthAI：融合电子健康记录与LLM的临床推理框架</div>
+                <div class="z3"><div class="z3-why">研究者提出ChatHealthAI多模态框架，通过任务感知重采样器将结构化EHR表征与LLM语义空间对齐，实现有依据的临床自然语言推理。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="11" data-iid="dd9784d5f155d041a998fa5815b574bc"
+             style="animation-delay:275ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">Traj-Evolve：自进化多智能体系统助力肺癌早期检测</div>
+                <div class="z3"><div class="z3-why">研究团队提出Traj-Evolve，一种自进化多智能体系统，通过经验池和多智能体强化学习优化肺癌患者轨迹建模。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="12" data-iid="988bfb3c9101d0e841b3828de534b353"
+             style="animation-delay:300ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">人机协同上下文赌博机框架解决短租动态定价问题</div>
+                <div class="z3"><div class="z3-why">研究者提出HITL-GB框架，将人工审批嵌入上下文赌博机算法，证明历史定价数据与在线预热数据在结构上等价，解决短租平台定价的冷启动问题。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="13" data-iid="b338baeb58a8ebd65f255bdf4ef7f920"
              style="animation-delay:325ms">
             
             <div class="card-body">
@@ -1461,13 +1525,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Meta员工追踪工具引反弹，公司被迫缩减AI训练数据收集范围</div>
-                <div class="z3"><div class="z3-why">Meta因员工反对，缩减4月上线的员工追踪工具功能，该工具原用于收集数据训练AI模型。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/OpenAI/comments/1tuwous/amazon_shuts_down_internal_ai_leaderboard_after/" title="r/OpenAI hot">💬 r/OpenAI</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-03 03:45 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">神经网络损失曲面曲率指数的谱分解精确理论</div>
+                <div class="z3"><div class="z3-why">研究证明了谱对齐分解定理，揭示Hessian特征值曲率指数在不同层类型间系统性变化的几何根源。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="14" data-iid="8b7040fe49d372310bdf1afb9a1f6f56"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="14" data-iid="0a90732f47e14379208e43241f85187c"
              style="animation-delay:350ms">
             
             <div class="card-body">
@@ -1476,13 +1540,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">微软与梅奥诊所合作，基于医疗数据训练专属AI模型</div>
-                <div class="z3"><div class="z3-why">微软与梅奥诊所达成合作，利用梅奥医疗数据训练AI模型，计划推出面向患者的AI健康助手及临床工具。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/singularity/comments/1tv10ix/building_a_hillclimbing_machine_launching_seven/" title="r/singularity hot">💬 r/singularity</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-03 03:25 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">异常检测基准测试存在评分方向不稳定性缺陷</div>
+                <div class="z3"><div class="z3-why">研究揭示类别分割异常检测协议在表示空间重叠时会导致评分崩溃或反转，提出邻域类泄漏诊断方法。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="15" data-iid="1a77d0a4009da6c32da53c7633d6f50e"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="15" data-iid="01ae7c322006904cbd9c72ea677f4732"
              style="animation-delay:375ms">
             
             <div class="card-body">
@@ -1491,13 +1555,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">微软AI CEO Mustafa Suleyman谈自研模型追赶与拒绝蒸馏策略</div>
-                <div class="z3"><div class="z3-why">微软AI CEO Mustafa Suleyman接受Semafor专访，谈及微软自研模型追赶前沿进展、拒绝通过蒸馏方式训练模型等战略立场。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/singularity/comments/1tv10ix/building_a_hillclimbing_machine_launching_seven/" title="r/singularity hot">💬 r/singularity</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-03 03:20 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">可审计气候风险智能框架：ESG碎片数据确定性编排与范围1-3验证</div>
+                <div class="z3"><div class="z3-why">论文提出确定性气候风险智能框架，整合单一事实源编排、时序异常检测与不平衡感知集成学习，用于可审计的ESG Scope 1-3验证，并发布合成基准数据集。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="16" data-iid="dd8e92b86607464e169e7df0a6940fd1"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="16" data-iid="8010b91d3c6c8faf487ccd017794655a"
              style="animation-delay:400ms">
             
             <div class="card-body">
@@ -1506,28 +1570,28 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">Uber四个月烧光AI预算后开始限制员工AI使用开支</div>
-                <div class="z3"><div class="z3-why">Uber在鼓励员工大量使用AI工具后，因四个月内超出预算，被迫开始限制员工的AI使用支出。</div></div>
+                <div class="card-title">跨模态对比学习：用ECG预测冠状动脉严重狭窄</div>
+                <div class="z3"><div class="z3-why">研究提出跨模态对比学习方法，通过ECG与冠状动脉造影联合训练，实现无创早期检测严重冠脉狭窄。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 06-03 03:11 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="17" data-iid="94b87b655b56665bc8c0210dcb796880"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="17" data-iid="b7012bd426f731bb1c5f97f8b6bcaeab"
              style="animation-delay:425ms">
-            
+            <div class="card-img" style="background-image:url('https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202606/MIT-ChartNet-01-press.jpg?itok=kMa7-Wv7')"></div>
             <div class="card-body">
                 
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">微软发布首个高级推理AI模型MAI-Thinking-1</div>
-                <div class="z3"><div class="z3-why">微软在Build 2026大会发布旗舰推理模型MAI-Thinking-1，声称从零训练、无第三方蒸馏，在软件工程基准上媲美领先模型。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/singularity/comments/1tv10ix/building_a_hillclimbing_machine_launching_seven/" title="r/singularity hot">💬 r/singularity</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 06-03 02:12 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">MIT研究团队开发VLM图表理解专项训练资源</div>
+                <div class="z3"><div class="z3-why">MIT与MIT-IBM联合实验室开发新型数据生成方法，专门训练视觉语言模型准确解读金融图表</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🎓 MIT News AI · 06-03 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="18" data-iid="27016ff69b1a951a7c2a7a8babbb2643"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="18" data-iid="7549301955a2f11e72728dbd276c09f7"
              style="animation-delay:450ms">
             
             <div class="card-body">
@@ -1536,14 +1600,14 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">微软推出智能体行为控制规范，开发者可定义便携策略文件</div>
-                <div class="z3"><div class="z3-why">微软发布新规范，允许开发者、合规和安全团队通过便携策略文件定义AI智能体的行为准则。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-hn" target="_blank" rel="noopener" href="https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md" title="HN 488 分">🔥 HN 488</a><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/singularity/comments/1tv10ix/building_a_hillclimbing_machine_launching_seven/" title="r/singularity hot">💬 r/singularity</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 06-03 02:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">微软发布MAI双模型：1T参数推理模型挑战Claude</div>
+                <div class="z3"><div class="z3-why">微软发布MAI-Thinking-1（1T参数/35B激活）和MAI-Code-1-Flash（137B/5B激活），前者声称盲测胜过Claude Sonnet 4.6。</div></div>
+                <div class="hot-pills"><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/singularity/comments/1tv10ix/building_a_hillclimbing_machine_launching_seven/" title="r/singularity hot">💬 r/singularity</a></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 🧪 Simon Willison · 06-03 06:21 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="19" data-iid="c2c3c96c5c10dbadf120762d769668cc"
-             style="animation-delay:475ms">
+        <div class="card" data-cat="其他" data-aud="general" data-idx="22" data-iid="76d562bfbc3d904f3a25f6045c49e1e0"
+             style="animation-delay:500ms">
             
             <div class="card-body">
                 
@@ -1551,30 +1615,75 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">OpenAI为Codex推出六款职能专属AI插件</div>
-                <div class="z3"><div class="z3-why">OpenAI为Codex应用发布6款职能专属插件，覆盖数据分析、创意制作、销售、产品设计、股权投资和投资银行等岗位。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-hn" target="_blank" rel="noopener" href="https://openai.com/index/openai-frontier-models-and-codex-are-now-available-on-aws/" title="HN 356 分">🔥 HN 356</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 06-03 00:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="card-title">多伦多大学研究团队开发AI蠕虫病毒，可针对每台电脑定制攻击</div>
+                <div class="z3"><div class="z3-why">多伦多大学研究人员展示了一种由开源AI驱动的蠕虫病毒，能利用已知漏洞并为每台目标计算机量身定制攻击方案。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-03 11:35 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="23" data-iid="c1079d99c50be520b9f6cd83ca9d4056"
+             style="animation-delay:500ms">
+            <div class="card-img" style="background-image:url('https://static.leiphone.com/uploads/new/images/20260603//6a1f8a2dcb184.jpg?imageMogr2/quality/90')"></div>
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">ICRA 2026维也纳开幕：物理智能与VLA成核心叙事</div>
+                <div class="z3"><div class="z3-why">ICRA 2026于维也纳开幕，8000名学者聚焦具身智能与VLA模型，标志机器人学界从语义理解向物理执行的范式转移。</div></div>
+                
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 雷峰网 · 06-03 10:01 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="24" data-iid="cbb7427a971170764d0750b6388efa3a"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">谷歌向巴菲特出售100亿美元股权：AI算力军备赛的资本信号</div>
+                <div class="z3"><div class="z3-why">谷歌向伯克希尔哈撒韦出售100亿美元股权，分析师Ben Thompson解读此举为AI需求强劲、现金即算力时代的战略融资信号。</div></div>
+                <div class="hot-pills"><a class="hot-pill hp-hn" target="_blank" rel="noopener" href="https://abc.xyz/investor/news/news-details/2026/Alphabet-Announces-Proposed-80-Billion-Equity-Capital-Raise-to-Expand-AI-Infrastructure-and-Compute-2026-b0myAMewCa/default.aspx" title="HN 248 分">🔥 HN 248</a></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-03 09:20 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
+        </div>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="25" data-iid="0a68cd45552f1f9a4dcb163120644fe2"
+             style="animation-delay:500ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left">其他</span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">微软开源AI评测框架ASSERT：用自然语言描述生成测试用例</div>
+                <div class="z3"><div class="z3-why">微软发布开源框架ASSERT，允许开发者用文本描述自动生成AI行为评测与回归测试，降低AI评估门槛。</div></div>
+                <div class="hot-pills"><a class="hot-pill hp-hn" target="_blank" rel="noopener" href="https://www.computerworld.com/article/4180103/microsoft-unveils-scout-an-autonomous-ai-agent-built-on-openclaw.html" title="HN 89 分">🔥 HN 89</a><a class="hot-pill hp-reddit" target="_blank" rel="noopener" href="https://www.reddit.com/r/singularity/comments/1tv16pm/microsoft_reveals_new_quantum_chip_made_with_ai/" title="r/singularity hot">💬 r/singularity</a></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 06-03 03:02 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
 </div>
 
 <!-- 大V 动态：X-* / YouTube 等社交媒体条目（importance<4 但仍值得展示） -->
-
+<section class="vip-section" aria-label="大V 动态"><h2 class="vip-heading">🎙️ 大V 动态</h2><div class="vip-list"><div class="vip-item" data-idx="7" data-iid="7ce3a6ad2cf1486ebe3be7388073931f"><div class="vip-meta">🧪 Simon Willison</div><div class="vip-title-txt">Datasette Agent发布MicroPython沙箱插件0.1a0版本</div><div class="vip-why">LLM智能体执行任意代码是重大安全风险，此方案若成熟将让开发者无需云端隔离环境即可在Datasette中安全运行LLM生成代码。</div></div></div></section>
 
 <!-- Entity Tracker (P1) — 30 天动态时间线入口；移到新闻下方(二级导航, 不挤占头部内容) -->
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">185</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">180</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">65</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">56</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">34</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">22</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">21</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">16</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">13</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">10</span></a><a class="et-chip" href="../entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">4</span></a><a class="et-chip" href="../entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a></div></section>
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">185</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">180</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">64</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">56</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">34</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">22</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">22</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">16</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">14</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">10</span></a><a class="et-chip" href="../entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">4</span></a><a class="et-chip" href="../entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a></div></section>
 
 <!-- 今日口播稿 (C) — 60-90 秒口语稿, 供音频/短视频取用; 仅 meta.broadcast_script 有值时渲染 -->
-<section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制全文</button></div><p class="bc-hint">~60–90 秒口语稿 · 可直接念或喂 TTS</p><pre class="bc-text" id="bcText">今天科技圈有三件事，每一件都在动真格的。
+<section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制全文</button></div><p class="bc-hint">~60–90 秒口语稿 · 可直接念或喂 TTS</p><pre class="bc-text" id="bcText">今天 AI 圈发生了一件很有意思的事——华尔街的钱，开始把算力当债券来买卖了。
 
-先说微软。他们在 Build 大会上亮出了一个自研 AI 模型，叫 MAI-Thinking-1，官方说是从零训练的，没借 OpenAI 任何东西。你想想，微软一直是 OpenAI 最大的金主，现在自己下场做模型——意思就很明白了：以后用 Azure 的企业客户，可能根本不需要再多付一层 OpenAI 的 API 费。OpenAI 接下来 60 天，必须解释清楚自己凭什么还能贵。
+先说第一条。黑石和 Apollo 牵头，拿了 360 亿美元去给 Anthropic 买 TPU 芯片，同一天谷歌把 100 亿股权卖给了巴菲特的伯克希尔。这两笔交易放在一起意味着什么？传统金融巨头第一次把 AI 算力做成了结构化债务资产，就像买房可以贷款一样，现在买算力也可以。接下来两个月，微软和亚马逊如果拿不出同款融资结构，Anthropic 就锁定了最低的资本成本，这比模型谁更聪明，其实更难追上。
 
-第二件事，黄仁勋在台湾 Computex 上当场点名夸了芯片公司 Marvell，说它是&quot;下一个万亿美元公司&quot;，Marvell 当天股价涨了 32%。但最关键的不是股价，而是这话是 NVIDIA 老大说的——他等于亲口承认，AI 推理这块蛋糕已经大到一家 GPU 厂吃不完了。定制芯片要来抢地盘，连 NVIDIA 自己都给背书了。
+再说微软。他们发布了自研模型 MAI，号称盲测打赢了 Claude Sonnet 4.6。这是微软第一次把对 OpenAI 的 130 亿美元投资换来的技术，转头拿来跟 OpenAI 正面竞争。最直接受影响的是 GitHub Copilot 的企业客户——现在他们得想清楚，为什么不直接用微软自家的 API，还要给 OpenAI 多付一道溢价。
 
-最后一件，Uber 鼓励全员用 AI，四个月就把预算烧超了，被迫踩刹车。同一周，还有十六位数学家联名发警告，说 AI 正在动摇数学的可靠性根基。两件事合在一起，信号很清楚：AI 的&quot;先冲再说&quot;时代结束了，下一阶段，谁先把护栏建好谁才能赢，没护栏就烧钱的，都在排队交学费。
+最后一条。ChatGPT 月活 10 亿，Claude 才 5600 万，差了 18 倍。但 Claude 的增速是 640%，ChatGPT 只有 62%。Anthropic 押的不是今天的用户数，是算力壁垒能不能比月活更耐久。至于谷歌 Gemini，连前两名都没进榜，C 端消费者市场基本上可以说是出局了，那 100 亿卖给巴菲特，更像是在往基础设施路线转型自救。
 
-今天就这三条，风平浪静的日子，还没到。</pre></section>
+算力债券化、自研对赌、增速换规模——AI 战争今天同时在三条战线升温。</pre></section>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalContent" onclick="if(event.target===this)closeModal()">
@@ -1588,7 +1697,7 @@ body.show-read .is-read:hover {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>8</b> 个信息源 · <b>20</b> 篇资讯 · 2026年06月03日
+    AI 早报 · <b>9</b> 个信息源 · <b>26</b> 篇资讯 · 2026年06月03日
     · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
@@ -2134,6 +2243,32 @@ document.getElementById('searchBox').addEventListener('input', _debounce(functio
     _activeQuery = this.value.toLowerCase();
     _applyFilters();
 }, 150));
+
+// ═══ 突发 banner ═══
+// 打开早报时实时拉取 archive/breaking.json, 有近 24h 突发就渲染在页面最顶。
+// 始终拉最新 → 早班/晚班之间有突发, 随时打开早报都能看到, 不必等下一班出报。
+(function() {
+    var el = document.getElementById('breaking-banner');
+    if (!el) return;
+    fetch('archive/breaking.json?_=' + Date.now())
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(d) {
+            if (!d || !d.events || !d.events.length) return;
+            var cards = d.events.map(function(e) {
+                var zh = escHtml(e.zh || e.en || '(无标题)');
+                var en = (e.en && e.zh) ? '<div class="bkb-en">' + escHtml(e.en) + '</div>' : '';
+                var sig = escHtml(e.signal || '');
+                var url = e.url || '#';
+                return '<a class="bkb-card" href="' + url + '" target="_blank" rel="noopener">'
+                    + '<div class="bkb-title">🚨 ' + zh + '</div>' + en
+                    + (sig ? '<div class="bkb-sig">' + sig + '</div>' : '') + '</a>';
+            }).join('');
+            el.innerHTML = '<div class="bkb-head">🚨 突发 · 近 24h 共 ' + d.events.length + ' 条</div>'
+                + '<div class="bkb-cards">' + cards + '</div>';
+            el.hidden = false;
+        })
+        .catch(function() { /* 无 breaking.json / 网络失败 → 不显示, 不影响早报 */ });
+})();
 
 // ═══ Keyboard ═══
 document.addEventListener('keydown', function(e) {

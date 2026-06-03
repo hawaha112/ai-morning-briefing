@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>21</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>22</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (2)</h2>
     
@@ -132,8 +132,23 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (19)</h2>
+    <h2 class="tl-section">📰 一般动态 (20)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-03 06:40</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ollama/ollama/releases/tag/v0.30.1" target="_blank" rel="noopener">Ollama v0.30.1修复llama.cpp SSE心跳帧解析崩溃</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: Ollama </div>
+                <p class="tl-event-summary">Ollama修复了因llama.cpp b9478引入默认30秒SSE心跳注释帧导致流式请求JSON解析出错的问题</p>
+                <p class="tl-event-deep">这是一个典型的底层后端协议变更导致上层兼容性断裂的案例。llama.cpp迭代频繁，Ollama作为封装层需持续跟进协议细节，否则每次llama.cpp小版本更新都可能引发用户侧静默故障。此修复本身简单，但暴露出Ollama的SSE解析层对RFC标准的覆盖不完整——健壮的SSE客户端本应在设计时就忽略注释帧。预计30-60天内llama.cpp还会引入更多协议层改动（如ping间隔可配置化），Ollama需要建立更系统的SSE兼容测试，否则将持续被动修补。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 00:58</span>
