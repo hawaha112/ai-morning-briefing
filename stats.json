@@ -1,59 +1,54 @@
 {
-  "article_count": 13,
+  "article_count": 23,
   "output_file": "output/index.html",
-  "file_size_kb": 92.8,
-  "generated_at": "2026-06-03T10:14:26.172368+00:00",
+  "file_size_kb": 102.9,
+  "generated_at": "2026-06-03T22:17:49.981124+00:00",
   "event_db_stats": {
-    "total_articles": 3556,
+    "total_articles": 3599,
     "collected": 0,
-    "analyzed": 3556,
-    "total_events": 1944,
-    "total_evidence": 2194,
+    "analyzed": 3599,
+    "total_events": 1977,
+    "total_evidence": 2239,
     "event_status": {
-      "official": 229,
-      "reported": 1715
+      "confirmed": 1,
+      "official": 247,
+      "reported": 1729
     },
-    "tier_0": 274,
-    "tier_1": 1050,
-    "tier_2": 2232
+    "tier_0": 293,
+    "tier_1": 1069,
+    "tier_2": 2237
   },
   "event_status_distribution": {
-    "reported": 13
+    "official": 1,
+    "reported": 22
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 13,
-  "multi_source_count": 2,
-  "important_count": 3,
+  "llm_count": 23,
+  "multi_source_count": 1,
+  "important_count": 2,
   "important_events": [
     {
-      "title": "英国CMA要求Google允许出版商退出AI搜索结果",
-      "event_id": "evt_ac7537a45d3dfe84a46a17e3",
+      "title": "OpenAI Codex助力发现HTTP/2炸弹远程DoS漏洞",
+      "event_id": "evt_4b0a28611dcd7114c4fbede2",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-03-pm.html"
+      "archive_url": "archive/2026-06-04-am.html"
     },
     {
-      "title": "HR软件独角兽Factorial完成1.5亿美元D轮融资，估值25亿美元",
-      "event_id": "evt_88b98f2cc83bfa4b732b70f6",
+      "title": "Meta WhatsApp商业AI智能体正式向全球开放",
+      "event_id": "evt_5328afe218fa57ab74c4c3f0",
       "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-03-pm.html"
-    },
-    {
-      "title": "苏度科技具身智能机器人ICRA 2026全球首次公开亮相",
-      "event_id": "evt_4d72dd18906cd75920614aeb",
-      "importance": 4,
-      "source_name": "雷峰网",
-      "archive_url": "archive/2026-06-03-pm.html"
+      "source_name": "TechCrunch AI",
+      "archive_url": "archive/2026-06-04-am.html"
     }
   ],
-  "official_count": 0,
-  "depth_count": 13,
+  "official_count": 1,
+  "depth_count": 23,
   "entity_count": 0,
-  "llm_call_count": 49,
-  "llm_prompt_tokens": 70555,
-  "llm_completion_tokens": 18149,
-  "llm_total_tokens": 88720,
-  "llm_parse_fallback": 0
+  "llm_call_count": 124,
+  "llm_prompt_tokens": 173224,
+  "llm_completion_tokens": 50022,
+  "llm_total_tokens": 223299,
+  "llm_parse_fallback": 1
 }
