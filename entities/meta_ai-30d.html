@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>28</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>30</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (2)</h2>
     
@@ -132,8 +132,38 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (26)</h2>
+    <h2 class="tl-section">📰 一般动态 (28)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-04 14:09</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9499" target="_blank" rel="noopener">llama.cpp WebGPU后端FlashAttention重构并标准化量化支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp的ggml-webgpu后端完成FlashAttention重构，统一k/v量化逻辑，提升跨平台推理效率。</p>
+                <p class="tl-event-deep">这次重构是llama.cpp WebGPU后端走向生产可用的关键基础设施动作。FlashAttention量化支持的标准化打通了「浏览器本地推理」的最后一块短板——此前WebGPU后端在量化模型上的性能与原生后端差距明显。接下来60天内，预计会有更多量化格式（如Q4_K_M、IQ系列）被快速移植到WebGPU路径。对竞品如Web LLM/MLC-LLM形成压力：llama.cpp的生态体量（模型兼容性、社区规模）一旦WebGPU性能持平，Web端本地推理的格局将向llama.</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-04 13:43</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9498" target="_blank" rel="noopener">llama.cpp扩展RISC-V向量化量化支持更高VLEN</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp新增RISC-V RVV 512b/1024b向量长度下多种量化格式的点积实现，显著提升RISC-V硬件上的推理性能。</p>
+                <p class="tl-event-deep">这是llama.cpp生态向RISC-V平台深度适配的系统性动作，背后有两个信号值得关注：第一，10xEngineers这类专注底层优化的工程公司开始把RISC-V当成真实目标平台而非实验性支持，说明有客户在真实部署需求驱动；第二，覆盖如此多的i-quant/K-quant格式（尤其2bit极低比特量化）表明目标场景是资源受限的边缘设备而非数据中心。30-60天内可能看到国内RISC-V芯片厂商（如平头哥玄铁系列）基于此做基准测试并对外宣传，进而推动更多llama.cpp贡献</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 05:41</span>
@@ -159,7 +189,7 @@ h2.tl-section {
                     
                     <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9496" target="_blank" rel="noopener">llama.cpp修复Gemma 4统一浮点误差并发布多平台构建</a>
                 </h3>
-                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 2 源</span></div>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 3 源</span></div>
                 <p class="tl-event-summary">llama.cpp发布b9496版本，修复Gemma 4模型的多模态统一浮点误差（FPE），支持macOS/Linux/Windows/Android等全平台构建。</p>
                 <p class="tl-event-deep">此修复是llama.cpp快速跟进Google Gemma 4发布的常规工程动作，本身技术权重有限，但具有生态信号意义：llama.cpp社区在Google发布新模型后数周内完成多模态支持并修复关键bug，说明开源推理框架对头部新模型的适配周期已压缩至「周」级。接下来30-60天内，随着Gemma 4在llama.cpp中稳定运行，预计会出现针对移动端/边缘端的Gemma 4微调版本和应用集成（特别是Android arm64路径打通后）。KleidiAI后端暂禁用是值得关注</p>
             </div>

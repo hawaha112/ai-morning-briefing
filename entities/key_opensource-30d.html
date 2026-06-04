@@ -97,13 +97,28 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>主要开源项目</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>15</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>16</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (0)</h2>
     <div class="tl-empty">本月暂无重要事件 (importance ≥ 4)</div>
 
-    <h2 class="tl-section">📰 一般动态 (15)</h2>
+    <h2 class="tl-section">📰 一般动态 (16)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-04 08:11</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/vllm-project/vllm/releases/tag/v0.22.1rc2" target="_blank" rel="noopener">vLLM发布v0.22.1rc2修复DeepSeek-V4初始化兼容问题</a>
+                </h3>
+                <div class="tl-event-meta">vLLM Releases </div>
+                <p class="tl-event-summary">vLLM发布候选版本v0.22.1rc2，修复CUTLASS库fmin函数与DeepSeek-V4初始化时的兼容性问题。</p>
+                <p class="tl-event-deep">此类底层CUDA库兼容性热修复反映了vLLM快速跟进新模型支持的策略——DeepSeek-V4发布后社区迅速反馈问题并推动修复。预计rc2通过验证后数天内正式发布v0.22.1稳定版。对于依赖vLLM部署DeepSeek系列模型的团队，建议锁定此版本以规避初始化风险。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 22:37</span>
