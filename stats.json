@@ -1,53 +1,37 @@
 {
-  "article_count": 13,
+  "article_count": 14,
   "output_file": "output/index.html",
-  "file_size_kb": 95.5,
-  "generated_at": "2026-06-04T14:40:17.154863+00:00",
+  "file_size_kb": 96.8,
+  "generated_at": "2026-06-04T22:16:16.786234+00:00",
   "event_db_stats": {
-    "total_articles": 3582,
+    "total_articles": 3560,
     "collected": 0,
-    "analyzed": 3582,
-    "total_events": 1957,
-    "total_evidence": 2219,
+    "analyzed": 3560,
+    "total_events": 1963,
+    "total_evidence": 2234,
     "event_status": {
-      "confirmed": 1,
-      "official": 248,
-      "reported": 1708
+      "official": 258,
+      "reported": 1705
     },
     "tier_0": 294,
-    "tier_1": 1068,
-    "tier_2": 2220
+    "tier_1": 1075,
+    "tier_2": 2191
   },
   "event_status_distribution": {
-    "reported": 13
+    "reported": 14
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 13,
+  "llm_count": 14,
   "multi_source_count": 1,
-  "important_count": 2,
-  "important_events": [
-    {
-      "title": "AI领袖联名呼吁立法防范AI辅助生物武器威胁",
-      "event_id": "evt_d521073a51a272911246e2b9",
-      "importance": 4,
-      "source_name": "The Verge AI",
-      "archive_url": "archive/2026-06-04-pm.html"
-    },
-    {
-      "title": "仿脑AI初创Flourish融资5亿美元，贝索斯领投1亿",
-      "event_id": "evt_12396b4ee30235221c5e8b92",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-04-pm.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
   "depth_count": 13,
   "entity_count": 0,
-  "llm_call_count": 43,
-  "llm_prompt_tokens": 59416,
-  "llm_completion_tokens": 16778,
-  "llm_total_tokens": 76213,
-  "llm_parse_fallback": 0
+  "llm_call_count": 89,
+  "llm_prompt_tokens": 127496,
+  "llm_completion_tokens": 33037,
+  "llm_total_tokens": 160564,
+  "llm_parse_fallback": 1
 }
