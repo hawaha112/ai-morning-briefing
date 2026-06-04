@@ -136,6 +136,21 @@ h2.tl-section {
     
         <article class="tl-event">
             <div class="tl-event-time">
+                <span class="tl-date">06-04 18:15</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9503" target="_blank" rel="noopener">llama.cpp修复Gemma 4音频投影器嵌入维度适配问题</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp发布b9503版本，修复多模态框架中Gemma 4音频投影器的嵌入维度处理bug，移除冗余的projection_dim参数。</p>
+                <p class="tl-event-deep">这是一个典型的模型适配补丁：新模型架构（Gemma 4）的音频投影器设计与llama.cpp原有假设不符，导致维度推断路径走错。修复本身技术量小，但信号意义在于Hugging Face工程师直接参与llama.cpp的模型适配，说明头部开源社区已将llama.cpp视为模型发布的标准兼容目标之一。预计未来30天内Gemma 4的本地多模态使用量会因此修复显著上升，相关微调和量化工作也将解锁音频模态。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
                 <span class="tl-date">06-04 14:09</span>
                 <span class="tl-rel">今天</span>
             </div>
@@ -541,21 +556,6 @@ h2.tl-section {
                 <div class="tl-event-meta">ArXiv ML </div>
                 <p class="tl-event-summary">研究发现LlamaGuard等三款安全分类器在良性数据微调后会完全失去安全对齐能力，拒绝率从85%降至0%。</p>
                 <p class="tl-event-deep">此研究的深远影响在于：它将「微调破坏对齐」从经验观察提升为可测量的几何机制，使安全审计具备了理论抓手。短期看，使用 LlamaGuard 等守卫模型的商业 Agentic 产品需要重新审视其微调策略；长期看，这将推动「对齐不变性微调（alignment-preserving fine-tuning）」成为新的研究方向，以及催生守卫模型的安全认证标准——即在发布前证明其几何结构在常见微调场景下的鲁棒性。</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-06 00:52</span>
-                <span class="tl-rel">29 天前</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://www.theverge.com/tech/924230/meta-publishers-lawsuit-ai-copyright" target="_blank" rel="noopener">五大出版商起诉Meta：Llama训练涉嫌史上最大规模版权侵权</a>
-                </h3>
-                <div class="tl-event-meta">The Verge AI </div>
-                <p class="tl-event-summary">麦克米伦等五大出版商及作家斯科特·图罗对Meta提起集体诉讼，指控其从LibGen等盗版网站抓取书籍训练Llama模型，构成史上最大规模版权侵权。</p>
-                <p class="tl-event-deep">本案的深层影响在于：若</p>
             </div>
         </article>
 </div>

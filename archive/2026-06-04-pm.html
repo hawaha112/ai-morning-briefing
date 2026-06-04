@@ -7,16 +7,16 @@
      打开页面时浏览器自带的 referer 会被拒 (403)，导致卡片图加载失败
      留下大块空白。 -->
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="Anthropic 安全叙事快撑不住商业账本，阿里场景密度护城河 OpenAI 追不上  🏢 **Anthropic 备战 IPO 同期抢法律市场 + 发约束文档，安全叙事 30 天内必然对不上商业账本** 《金融时报》披露 Anthropic 密集备战 IPO，同批次 Harvey/Legora/Anthrop…">
+<meta name="description" content="监管被用来筑护城河，算力供给触顶，代理软件开始逐品类清零  🧬 **三巨头游说DNA筛查入法 = 用零合规成本把开源AI踢出生科市场** Anthropic、OpenAI、微软3家联名，要求立法强制DNA供应商筛查所有购买序列。头部实验室内置合规团队、达标成本接近零；Meta Llama权重无法内嵌序列审查接口—…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 晚报 · 2026年06月04日">
-<meta property="og:description" content="Anthropic 安全叙事快撑不住商业账本，阿里场景密度护城河 OpenAI 追不上  🏢 **Anthropic 备战 IPO 同期抢法律市场 + 发约束文档，安全叙事 30 天内必然对不上商业账本** 《金融时报》披露 Anthropic 密集备战 IPO，同批次 Harvey/Legora/Anthrop…">
+<meta property="og:description" content="监管被用来筑护城河，算力供给触顶，代理软件开始逐品类清零  🧬 **三巨头游说DNA筛查入法 = 用零合规成本把开源AI踢出生科市场** Anthropic、OpenAI、微软3家联名，要求立法强制DNA供应商筛查所有购买序列。头部实验室内置合规团队、达标成本接近零；Meta Llama权重无法内嵌序列审查接口—…">
 <meta property="og:site_name" content="AI 晚报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 晚报 · 2026年06月04日">
-<meta name="twitter:description" content="Anthropic 安全叙事快撑不住商业账本，阿里场景密度护城河 OpenAI 追不上  🏢 **Anthropic 备战 IPO 同期抢法律市场 + 发约束文档，安全叙事 30 天内必然对不上商业账本** 《金融时报》披露 Anthropic 密集备战 IPO，同批次 Harvey/Legora/Anthrop…">
+<meta name="twitter:description" content="监管被用来筑护城河，算力供给触顶，代理软件开始逐品类清零  🧬 **三巨头游说DNA筛查入法 = 用零合规成本把开源AI踢出生科市场** Anthropic、OpenAI、微软3家联名，要求立法强制DNA供应商筛查所有购买序列。头部实验室内置合规团队、达标成本接近零；Meta Llama权重无法内嵌序列审查接口—…">
 <title>AI 晚报 · 2026年06月04日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -261,6 +261,33 @@ body {
     background: rgba(255, 255, 255, 0.06);
     border-radius: 9px; padding: 0 7px;
 }
+/* 今日导览 —— 版块地图 + 跳转 chip（给页面一个一眼可记的层次） */
+.today-nav {
+    max-width: 1120px; margin: 4px auto 18px; padding: 0 16px;
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+}
+.today-nav .tn-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 13px; font-weight: 600; text-decoration: none;
+    color: var(--text-70, #b6bdcb);
+    background: var(--bg-card, rgba(255,255,255,0.04));
+    border: 1px solid var(--border, rgba(255,255,255,0.10));
+    border-radius: 999px; padding: 6px 13px;
+    transition: border-color .15s, color .15s, background .15s;
+}
+.today-nav .tn-link:hover {
+    color: var(--text, #ecf0f5); border-color: var(--accent);
+    background: var(--bg-card-hover, rgba(255,255,255,0.055));
+}
+.today-nav .tn-breaking {
+    color: #ff8a8a; border-color: rgba(255,107,107,0.35);
+    background: rgba(255,107,107,0.07);
+}
+.today-nav .tn-breaking:hover { border-color: #ff6b6b; color: #ffb0b0; }
+/* 版块锚点：跳转时留出 sticky header 的高度，标题不被遮挡 */
+.page-sec { scroll-margin-top: 84px; }
+/* 空版块（如无突发时的 #sec-breaking）不占额外纵向空间 */
+.page-sec:empty { display: none; }
 /* 突发 banner —— 早报顶部, 前端从 archive/breaking.json 拉取渲染(有近24h突发才显示) */
 .breaking-banner {
     max-width: 1120px; margin: 0 auto 18px; padding: 14px 16px;
@@ -1264,13 +1291,13 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">🌆 AI 晚报</div>
-    <div class="h-date">2026年06月04日 周四 · 18:14</div>
+    <div class="h-date">2026年06月04日 周四 · 22:40</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>30</b> 篇</span>
-        <span><b>10</b> 源</span>
+        <span><b>13</b> 篇</span>
+        <span><b>6</b> 源</span>
         <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
@@ -1279,89 +1306,83 @@ body.show-read .is-read:hover {
 <!-- LLM coverage banner (rendered only when coverage < 50%) -->
 
 
-<!-- 突发 banner：前端从 archive/breaking.json 实时拉取，有近 24h 突发则显示在最顶（见 script.js） -->
-<section id="breaking-banner" class="breaking-banner" hidden></section>
+<!-- 今日导览：一眼可记的版块地图 + 跳转。判断→突发→必读→更多→大V→实体→口播 -->
+<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-judgment">🎯 判断</a><a class="tn-link tn-breaking" href="#sec-breaking" hidden>🚨 突发</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link" href="#sec-broadcast">🎙 口播</a></nav>
 
-<!-- Briefing -->
+<!-- ① 今日判断（结论先行，全天头条） -->
+<section id="sec-judgment" class="page-sec">
 
     <section class="briefing">
         <h2 class="br-title">📌 今日 3 个判断</h2>
-        <p class="br-headline">Anthropic 安全叙事快撑不住商业账本，阿里场景密度护城河 OpenAI 追不上</p>
-        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🏢</span></div><h3 class="jc-title">Anthropic 备战 IPO 同期抢法律市场 + 发约束文档，安全叙事 30 天内必然对不上商业账本</h3><p class="jc-body">《金融时报》披露 Anthropic 密集备战 IPO，同批次 Harvey/Legora/Anthropic 三方合围 Thomson Reuters 和 LexisNexis（法律科技合计年营收超 80 亿美元）；同日 Anthropic 发文讲「如何约束 Claude 行为」做安全背书。IPO 估值要增长率，进法律市场是 ARR 增量，但这正是批评者所说的「商业化侵蚀安全原则」。下个月法律市场数据公开后，安全叙事的折扣立现——LexisNexis 不会坐以待毙，6 个月内必加速产品迭代。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260604/p9#a260604p9" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.techmeme.com/260604/p6#a260604p6" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.anthropic.com/engineering/how-we-contain-claude" target="_blank" rel="noopener">🔥 Hacker News AI</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🤝</span></div><h3 class="jc-title">阿里 Qwen 日均 1 亿次场景互动，中国 AI 建的护城河靠分发密度、不靠 benchmark，OpenAI 无路可</h3><p class="jc-body">阿里开放 Qwen 给肯德基、蜜雪冰城等接入，日均生活服务互动超 1 亿次——这不是基准测试，这是分发密度。同期戴盟机器人融资亿元并引入阿里通义核心研究员，LeCun 路线的隐空间世界模型获国内十亿级押注。护城河已从「模型分数」切向「高频场景锁定」。OpenAI 在中国无渠道，谷歌同款出局，1 亿次/日的场景互动是任何参数量追不来的壁垒——未押注这条路的模型厂，未来 18 个月将系统性失去分发入口。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260604/p11#a260604p11" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.qbitai.com/2026/06/428790.html" target="_blank" rel="noopener">⚛️ 量子位</a> · <a class="jc-src" href="https://www.qbitai.com/2026/06/428778.html" target="_blank" rel="noopener">⚛️ 量子位</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">⚡</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span></div><h3 class="jc-title">llama.cpp 同日打通 WebGPU 与 RISC-V，推理脱离 CUDA 已从可能变为现实，NVIDIA 软件溢</h3><p class="jc-body">llama.cpp 单日完成 WebGPU FlashAttention 重构与 RISC-V 512b 向量化适配——浏览器原生推理和低功耗端侧推理同时可行，不再绑定 NVIDIA 硬件栈。同日 IEEE P3109 浮点国际草案推进异构互操作信号。CUDA 的护城河本质是生态惰性锁定；三路并进从软件层、端侧、标准层同时绕开，英特尔与国产 AI 芯片 12 个月内进入实质可比区间——NVIDIA 溢价已无单一防线可守。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://arxiv.org/abs/2606.04028" target="_blank" rel="noopener">📄 ArXiv ML</a> · <a class="jc-src" href="https://github.com/vllm-project/vllm/releases/tag/v0.22.1rc2" target="_blank" rel="noopener">⚡ vLLM Releases</a> · <a class="jc-src" href="https://github.com/ggml-org/llama.cpp/releases/tag/b9499" target="_blank" rel="noopener">🐙 GitHub: llama.cpp</a> · <a class="jc-src" href="https://github.com/ggml-org/llama.cpp/releases/tag/b9498" target="_blank" rel="noopener">🐙 GitHub: llama.cpp</a></div></article></div>
-        <p class="br-outro">今天无大爆炸，但三条暗线都在收紧：Anthropic 的安全账本快对不上商业增长，阿里的场景密度比 GPT-5 更难复制，推理层商品化让 NVIDIA 护城河加速起裂。</p>
+        <p class="br-headline">监管被用来筑护城河，算力供给触顶，代理软件开始逐品类清零</p>
+        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🧬</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span></div><h3 class="jc-title">三巨头游说DNA筛查入法 = 用零合规成本把开源AI踢出生科市场</h3><p class="jc-body">Anthropic、OpenAI、微软3家联名，要求立法强制DNA供应商筛查所有购买序列。头部实验室内置合规团队、达标成本接近零；Meta Llama权重无法内嵌序列审查接口——立法落地即让开源模型在生科领域集体违法。30天内国会听证，已有议员起草反垄断质询函，直问「合规成本由谁承担、由谁来审核审核者」。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.theverge.com/ai-artificial-intelligence/942956/ai-biological-weapons-open-letter-congress" target="_blank" rel="noopener">⚡ The Verge AI</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">⚡</span></div><h3 class="jc-title">台积电供给见顶 + 贝索斯押 1 亿神经形态 = 推理基建赌局正式开辟第二战场</h3><p class="jc-body">台积电 CEO 魏哲家公开承认 AI 芯片需求已超公司最大供给能力，同日 Flourish 完成 5 亿美元融资、贝索斯个人押注 1 亿、估值 25 亿，押的是仿神经元低功耗架构。GPU+TSMC 供应链见顶已成共识，聪明钱的操作永远是在量产前入场。若 Cortex AI 实现每瓦算力 5 倍于 GPU，数据中心电费账单将逼采购商换路线，NVIDIA 独占推理市场的格局三年内出现第一个真正威胁。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260604/p22#a260604p22" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.theverge.com/tech/943066/tsmc-ai-demand-struggles" target="_blank" rel="noopener">⚡ The Verge AI</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🛠️</span></div><h3 class="jc-title">法律/销售/智驾三条赛道同步切换 = AI 代理的目标从来不是插件，是清零旧品类</h3><p class="jc-body">Airspeed 拿 2000 万 A 轮，直说「替代 CRM 销售软件」而非增强；美国联邦法院 AI 辅助自我代理诉讼 3 年内从 11% 升至 16.8%；元戎启行 CEO 宣布智驾年底前从小模型切换至基座模型范式。三条看似无关的赛道指向同一个结构：Salesforce 的 CRM 业务、LegalZoom 的商业模式、Mobileye 的感知方案，面对的不是功能竞争，是品类消亡。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://www.techmeme.com/260604/p26#a260604p26" target="_blank" rel="noopener">🗞️ Techmeme</a> · <a class="jc-src" href="https://www.technologyreview.com/2026/06/04/1138391/courts-coping-ai-lawsuits/" target="_blank" rel="noopener">🎓 MIT Tech Review</a> · <a class="jc-src" href="https://www.leiphone.com/category/transportation/cj8k172esGa3neuj.html" target="_blank" rel="noopener">📡 雷峰网</a></div></article></div>
+        <p class="br-outro">今天的关键词是「替代」不是「增强」——从代理软件到专业服务到芯片架构，旧范式正被逐条划掉。</p>
     </section>
+</section>
 
-<!-- Featured Articles (Importance >= 4) —— 重大事件 -->
+<!-- ② 突发动态（近 24h，时效提醒）：前端从 archive/breaking.json 实时拉取，
+     有突发才显示；放在判断之后，不抢头条（见 script.js） -->
+<section id="sec-breaking" class="page-sec">
+<div id="breaking-banner" class="breaking-banner" hidden></div>
+</section>
+
+<!-- ③ 今日必读（importance≥3，按主题分组） -->
+<section id="sec-featured" class="page-sec">
 <div class="featured-section">
-<h2 class="featured-title">今日必读</h2>
+<h2 class="featured-title">⭐ 今日必读</h2>
+<h3 class="grid-cat-head" data-gcat="融资与商业">💰 融资与商业<span class="gc-n">2</span></h3>
 <div class="featured-grid">
-    <div class="featured-card" data-cat="融资与商业|安全与对齐" data-aud="investor|researcher|pm" data-idx="18" data-iid="827f24dac00f0eb329e6fcf823269b9b" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="融资与商业|芯片与算力" data-aud="investor|researcher" data-idx="4" data-iid="12396b4ee30235221c5e8b92b8d60717" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">Anthropic备战IPO：商业压力下AI安全标准遭质疑</div>
-            <div class="featured-why">《金融时报》深度报道Anthropic IPO准备情况，及其开放Mythos工具同时面临商业化侵蚀安全原则的批评。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-04 14:40</div>
+            <div class="featured-title-text">仿脑AI初创Flourish融资5亿美元，贝索斯领投1亿</div>
+            <div class="featured-why">Flourish公司开发低功耗仿神经元AI系统Cortex AI，完成5亿美元融资，估值25亿美元，贝索斯个人投资1亿美元。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-04 19:35</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="AI政策监管|安全与对齐" data-aud="investor|pm|researcher" data-idx="19" data-iid="e8a58b3959a530de0fbbc0f7a611c350" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://media.wired.com/photos/6a1f6447234d4b89dad80277/master/pass/science_anthropic_final.jpg')"></div>
-        <div class="featured-body">
-            
-            
-            <div class="featured-title-text">OpenAI与Anthropic联署公开信：呼吁立法管控AI生物武器风险</div>
-            <div class="featured-why">OpenAI、Anthropic等顶级AI实验室联署致国会公开信，要求加强对可用于生物武器的合成DNA序列的追踪与监管。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 📡 Wired AI · 06-04 09:01</div>
-            
-        </div>
-    </div>
-    <div class="featured-card" data-cat="芯片与算力|学术研究" data-aud="researcher|developer" data-idx="0" data-iid="848b70611094a6fda56fb2098e416e3e" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="融资与商业|产品与应用" data-aud="investor|pm" data-idx="5" data-iid="ac8c418621f807001cd7f606df426529" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">IEEE P3109草案：为机器学习定制浮点算术新标准</div>
-            <div class="featured-why">IEEE P3109草案定义了面向机器学习的参数化二进制浮点格式族，支持宽度、精度、符号性与无穷大等多维配置。</div>
-            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 📄 ArXiv ML · 06-04 12:00</div>
+            <div class="featured-title-text">AI销售智能体创企Airspeed完成2000万美元A轮融资</div>
+            <div class="featured-why">伦敦/纽约AI智能体创企Airspeed（前身Glyphic）完成2000万美元A轮融资，由DN Capital领投，旨在用AI智能体替代传统CRM销售软件。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 🗞️ Techmeme · 06-04 20:30</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="学术研究|AI工具" data-aud="researcher|developer" data-idx="1" data-iid="1b141510a2a2ef3a7d23b741ce75a93a" style="border-left-color: #e8913a">
+</div>
+<h3 class="grid-cat-head" data-gcat="AI政策监管">📜 AI政策监管<span class="gc-n">2</span></h3>
+<div class="featured-grid">
+    <div class="featured-card" data-cat="AI政策监管|安全与对齐" data-aud="investor|pm|general" data-idx="3" data-iid="d521073a51a272911246e2b9322dc442" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">论文立场：部署后强化学习应当是持续学习</div>
-            <div class="featured-why">ArXiv立场论文主张，已部署的RL智能体本质上面临持续学习问题，应永不停止适应而非固定模型等待性能衰退后重训。</div>
-            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 📄 ArXiv ML · 06-04 12:00</div>
+            <div class="featured-title-text">AI领袖联名呼吁立法防范AI辅助生物武器威胁</div>
+            <div class="featured-why">Anthropic、OpenAI、微软等AI巨头领袖联名致信美国国会，呼吁立法要求合成DNA/RNA供应商筛查购买序列，防止AI被用于开发生物武器。</div>
+            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚡ The Verge AI · 06-04 20:12</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="机器学习理论|表示学习" data-aud="general" data-idx="2" data-iid="4a425f444360bb49bcc1284f74a0217d" style="border-left-color: #e8913a">
+    <div class="featured-card" data-cat="AI政策监管|产品与应用" data-aud="general|pm|investor" data-idx="0" data-iid="4f368dfa65f86acecb3db11ad9d7846e" style="border-left-color: #e8913a">
         
         <div class="featured-body">
             
             
-            <div class="featured-title-text">监督学习中的贝叶斯充分表示理论研究</div>
-            <div class="featured-why">arXiv新论文提出监督学习中贝叶斯充分表示的理论框架，探讨什么样的特征表示能保留预测所需的全部统计信息。</div>
-            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 📄 ArXiv ML · 06-04 12:00</div>
+            <div class="featured-title-text">AI生成诉状泛滥：美国法院如何应对诉讼洪流</div>
+            <div class="featured-why">研究显示2022-2025年美国联邦民事案件中自我代理诉讼占比从11%升至16.8%，法官将激增归因于AI工具普及。</div>
+            <div class="featured-source"><span class="tier-badge tier-学术" title="学术源">🎓 学术</span> 🎓 MIT Tech Review · 06-04 18:50</div>
             
         </div>
     </div>
-    <div class="featured-card" data-cat="开源生态|AI工具" data-aud="developer|researcher" data-idx="4" data-iid="fd9ae33f480f1bebeb7537b762ce4ea3" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4')"></div>
-        <div class="featured-body">
-            
-            
-            <div class="featured-title-text">llama.cpp WebGPU后端FlashAttention重构并标准化量化支持</div>
-            <div class="featured-why">llama.cpp的ggml-webgpu后端完成FlashAttention重构，统一k/v量化逻辑，提升跨平台推理效率。</div>
-            <div class="featured-source"><span class="tier-badge tier-社区" title="社区源">💬 社区</span> 🐙 GitHub: llama.cpp · 06-04 14:09</div>
-            
-        </div>
-    </div>
-    <div class="featured-card" data-cat="自动驾驶|学术研究" data-aud="researcher|developer" data-idx="20" data-iid="bebecca5b652f5327806c52779a4c866" style="border-left-color: #e8913a">
+</div>
+<h3 class="grid-cat-head" data-gcat="自动驾驶">🚗 自动驾驶<span class="gc-n">1</span></h3>
+<div class="featured-grid">
+    <div class="featured-card" data-cat="自动驾驶|学术研究" data-aud="researcher|developer" data-idx="6" data-iid="bebecca5b652f5327806c52779a4c866" style="border-left-color: #e8913a">
         <div class="featured-img" style="background-image:url('https://static.leiphone.com/uploads/new/images/20260604/6a212481a3ae3.jpg?imageMogr2/quality/90')"></div>
         <div class="featured-body">
             
@@ -1372,77 +1393,37 @@ body.show-read .is-read:hover {
             
         </div>
     </div>
-    <div class="featured-card" data-cat="具身智能|机器人学习" data-aud="general" data-idx="21" data-iid="b81e178076b71262d1c757a24b4ebe84" style="border-left-color: #e8913a">
-        <div class="featured-img" style="background-image:url('https://static.leiphone.com/uploads/new/images/20260604//6a2123af1e126.jpg?imageMogr2/quality/90')"></div>
-        <div class="featured-body">
-            
-            
-            <div class="featured-title-text">UT Austin朱玉可ICRA 2026演讲：用「数据海绵」破解人形机器人数据困局</div>
-            <div class="featured-why">德克萨斯大学奥斯汀分校副教授朱玉可在ICRA 2026提出「数据海绵」方法论，系统性解决人形机器人训练数据稀缺与多样性不足的核心难题。</div>
-            <div class="featured-source"><span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> 📡 雷峰网 · 06-04 15:08</div>
-            
-        </div>
-    </div>
 </div>
 </div>
 
+</section>
 
-<!-- Regular Articles (importance < 3) —— 普通资讯网格 -->
-<!-- 在 grid 上方加一个 section 标题,跟"今日必读"对应,视觉分界 -->
+<!-- ④ 更多资讯（importance<3，按主题分组的网格） -->
+<section id="sec-more" class="page-sec">
 <div class="grid-section-header">
-    <h2 class="grid-section-title">📰 其他资讯</h2>
-    <div class="grid-section-meta">按发布时间倒序 · 点击卡片展开详情</div>
+    <h2 class="grid-section-title">📚 更多资讯</h2>
+    <div class="grid-section-meta">按主题分类 · 点击卡片展开详情</div>
 </div>
 <!-- id="grid" 是 script.js bindCardClick(getElementById('grid')) 必须的，少了它点击 modal 会失效 -->
 <div id="grid" class="grid" aria-label="资讯列表">
-<h3 class="grid-cat-head" data-gcat="开源生态">🔓 开源生态<span class="gc-n">2</span></h3>
-        <div class="card" data-cat="开源生态|AI工具" data-aud="developer" data-idx="3" data-iid="6a195bcb8e2d18483a6bcf71c11b1db7"
-             style="animation-delay:75ms">
-            <div class="card-img" style="background-image:url('https://avatars.githubusercontent.com/u/51931015?s=60&amp;v=4')"></div>
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">开源生态 · AI工具</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">vLLM发布v0.22.1rc2修复DeepSeek-V4初始化兼容问题</div>
-                <div class="z3"><div class="z3-why">vLLM发布候选版本v0.22.1rc2，修复CUTLASS库fmin函数与DeepSeek-V4初始化时的兼容性问题。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-官方" title="官方源">🏢</span> ⚡ vLLM Releases · 06-04 08:11 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="开源生态|AI工具" data-aud="developer|researcher" data-idx="5" data-iid="5628665661d60abda05e697226a14658"
-             style="animation-delay:125ms">
+<h3 class="grid-cat-head" data-gcat="开源生态">🔓 开源生态<span class="gc-n">1</span></h3>
+        <div class="card" data-cat="开源生态|大模型发布" data-aud="developer" data-idx="1" data-iid="03cd22ea89a68c004429ee4e40de7148"
+             style="animation-delay:25ms">
             <div class="card-img" style="background-image:url('https://avatars.githubusercontent.com/in/15368?s=60&amp;v=4')"></div>
             <div class="card-body">
                 
                 <div class="z1">
-            <span class="z1-left">开源生态 · AI工具</span>
+            <span class="z1-left">开源生态 · 大模型发布</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">llama.cpp扩展RISC-V向量化量化支持更高VLEN</div>
-                <div class="z3"><div class="z3-why">llama.cpp新增RISC-V RVV 512b/1024b向量长度下多种量化格式的点积实现，显著提升RISC-V硬件上的推理性能。</div></div>
+                <div class="card-title">llama.cpp修复Gemma 4音频投影器嵌入维度适配问题</div>
+                <div class="z3"><div class="z3-why">llama.cpp发布b9503版本，修复多模态框架中Gemma 4音频投影器的嵌入维度处理bug，移除冗余的projection_dim参数。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-社区" title="社区源">💬</span> 🐙 GitHub: llama.cpp · 06-04 13:43 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-社区" title="社区源">💬</span> 🐙 GitHub: llama.cpp · 06-04 18:15 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
-        </div><h3 class="grid-cat-head" data-gcat="芯片与算力">⚡ 芯片与算力<span class="gc-n">1</span></h3>
-        <div class="card" data-cat="芯片与算力|产品与应用" data-aud="pm|investor" data-idx="22" data-iid="4fa435f67fde9844ceb497161b2c2b0b"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">芯片与算力 · 产品与应用</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">英博数科亮相CCIG 2026，发布EBFlex高校算力管理平台</div>
-                <div class="z3"><div class="z3-why">英博数科在CCIG 2026展会首次公开EBFlex私有化算力管理平台，专注高校科研算力调度与管理。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚛️ 量子位 · 06-04 15:25 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div><h3 class="grid-cat-head" data-gcat="其他">📰 其他<span class="gc-n">19</span></h3>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="6" data-iid="4e390b6c9422a7035a79f860401d02e1"
-             style="animation-delay:150ms">
+        </div><h3 class="grid-cat-head" data-gcat="其他">📰 其他<span class="gc-n">7</span></h3>
+        <div class="card" data-cat="其他" data-aud="general" data-idx="2" data-iid="c410780e594d5e48f79b5c873fd52ad8"
+             style="animation-delay:50ms">
             
             <div class="card-body">
                 
@@ -1450,13 +1431,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">企业AI智能体部署前认证框架：本体驱动仿真与信任证书</div>
-                <div class="z3"><div class="z3-why">研究人员提出基于本体论的企业AI智能体预部署验证框架，包含操作包络定义、场景自动生成和可机读信任证书三大组件。</div></div>
+                <div class="card-title">NVIDIA发布Nemotron 3 Ultra：专为长周期多智能体推理加速优化</div>
+                <div class="z3"><div class="z3-why">NVIDIA发布Nemotron 3 Ultra模型，专为多智能体长周期工作流设计，解决token快速膨胀导致的推理效率瓶颈。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> ⚙️ NVIDIA Developer Blog · 06-04 21:02 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="7" data-iid="af02f934b7e8df8ce5d68f06fc75c66d"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="7" data-iid="9d6cf6af8afdc8fba8c3e06958b5a4d7"
              style="animation-delay:175ms">
             
             <div class="card-body">
@@ -1465,13 +1446,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">研究揭示：日常AI任务交互中情感依赖悄然形成</div>
-                <div class="z3"><div class="z3-why">arXiv论文指出AI情感支持并非源于刻意求助，而是在普通任务交互中偶然产生，并通过路径依赖机制重塑用户的情感连接选择。</div></div>
+                <div class="card-title">台积电坦言产能触顶：AI需求远超供给能力</div>
+                <div class="z3"><div class="z3-why">台积电CEO魏哲家公开承认AI芯片需求已超过公司最大供给能力，美国建厂扩产仍难解燃眉之急。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 06-04 22:15 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="8" data-iid="d0c466be2e52d9ed34e91d2064de612f"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="8" data-iid="0a8b1f5afb46d1bbaaeedaf63df694c5"
              style="animation-delay:200ms">
             
             <div class="card-body">
@@ -1480,13 +1461,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">PEEL框架：用符号学为AI辅助研究建立认识论问责机制</div>
-                <div class="z3"><div class="z3-why">研究者提出PEEL框架，结合确定性文本分析工具与LLM，通过皮尔斯符号学揭示AI生成摘要中的系统性失真。</div></div>
+                <div class="card-title">用户呼吁社交平台开放AI生成内容过滤功能</div>
+                <div class="z3"><div class="z3-why">The Verge评论指出YouTube、Instagram等平台已添加AI内容标签，但缺乏用户主动过滤选项，呼吁平台赋予用户过滤AI垃圾内容的权利。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 06-04 20:30 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="9" data-iid="4575bd7ee162a3f388c6f8fe28913a0e"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="9" data-iid="f9bfa8a00ee5851b94c3fbc8cd06ae3d"
              style="animation-delay:225ms">
             
             <div class="card-body">
@@ -1495,13 +1476,13 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">SMAC-Talk：面向LLM多智能体协作的星际争霸自然语言评测框架</div>
-                <div class="z3"><div class="z3-why">研究者发布SMAC-Talk，在星际争霸多智能体挑战赛中引入自然语言通信频道，专门评测LLM在协作环境中的协调与信任能力。</div></div>
+                <div class="card-title">纳德拉深度访谈：微软AI竞争地位与MAI模型战略</div>
+                <div class="z3"><div class="z3-why">微软CEO纳德拉接受Ben Thompson专访，深谈微软AI竞争定位、MAI自研模型、与OpenAI关系及GitHub Copilot战略。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-04 20:15 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="10" data-iid="b3242c0066280c7282bcd955b8f38105"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="10" data-iid="1aa25de471f74f5d0dc4c7b57497fae0"
              style="animation-delay:250ms">
             
             <div class="card-body">
@@ -1510,240 +1491,67 @@ body.show-read .is-read:hover {
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">多智能体系统中推理轨迹分歧作为知识表示信号的新框架</div>
-                <div class="z3"><div class="z3-why">论文提出将多智能体系统中的推理轨迹分歧抽象为符号化知识表示层，区分四种分歧状态，反对单纯追求共识的设计范式。</div></div>
+                <div class="card-title">Altman宣布不介入2026中期选举，与Brockman支持的PAC划清界限</div>
+                <div class="z3"><div class="z3-why">Sam Altman表示无意为2026年美国中期选举提供资金，OpenAI也试图与Greg Brockman支持的Leading the Future PAC保持距离。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-04 20:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="11" data-iid="bea67826faf81e10ea7cf70e7373f0be"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="11" data-iid="e0d677a5a03c1825b6fcaff62e08940d"
              style="animation-delay:275ms">
-            
+            <div class="card-img" style="background-image:url('https://static.leiphone.com/uploads/new/images/20260604/6a215f0956ed6.png?imageMogr2/quality/90')"></div>
             <div class="card-body">
                 
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">VAMPS基准测试：评估多模态LLM图形辅助数学推理能力</div>
-                <div class="z3"><div class="z3-why">研究者发布VAMPS基准，含1168道双语多选题，专门测试多模态LLM在使用可视化工具辅助求解数学题时的推理能力短板。</div></div>
+                <div class="card-title">元戎启行：智驾大模型取代小模型，年底迎来范式转换</div>
+                <div class="z3"><div class="z3-why">元戎启行CEO周光在未来汽车大会指出，智驾行业即将从小模型转向大模型/基座模型范式，预计年底到明年初完成技术切换。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 雷峰网 · 06-04 19:25 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="12" data-iid="397a91a9d0269eea4e8b53530273dd24"
+        <div class="card" data-cat="其他" data-aud="general" data-idx="12" data-iid="54f5e57fb19df4cc541730745a14d6d8"
              style="animation-delay:300ms">
-            
+            <div class="card-img" style="background-image:url('https://static.leiphone.com/uploads/new/images/20260604/6a213468ca0ce.png?imageView2/2/w/740')"></div>
             <div class="card-body">
                 
                 <div class="z1">
             <span class="z1-left">其他</span>
             <span class="z1-meta">1 min</span>
         </div>
-                <div class="card-title">StepPRM-RTL：逐步过程奖励引导LLM提升RTL硬件代码生成</div>
-                <div class="z3"><div class="z3-why">研究团队提出StepPRM-RTL框架，结合逐步轨迹建模、过程奖励模型和检索增强微调，显著提升LLM在Verilog/VHDL等RTL代码生成的正确率。</div></div>
+                <div class="card-title">蓝信发布2026全栈AI新品，定义政企智能办公新范式</div>
+                <div class="z3"><div class="z3-why">蓝信在北京发布听蓝AI录音卡、蓝域智能体平台、知行AI超级助理三款产品，主打100%国产化政企AI办公。</div></div>
                 
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="13" data-iid="73a0e84993daa3ca097b13afdf881082"
-             style="animation-delay:325ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Curation-Bench：通用智能体能否自动化AI训练数据筛选</div>
-                <div class="z3"><div class="z3-why">研究者提出Curation-Bench基准测试，评估通用编程智能体自动化数据整理循环的能力，发现智能体10轮内可达已发表数据选择基线，但存在系统性探索缺陷。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv AI · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="14" data-iid="ed7e2b9c8219c587e11ddd31905b7c7c"
-             style="animation-delay:350ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">可解释机器学习用于阿尔茨海默症早期三分类检测研究</div>
-                <div class="z3"><div class="z3-why">研究者基于ADNI数据集，用XGBoost结合SHAP开发了NC/MCI/AD三类别临床生物标志物分类模型。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="15" data-iid="065560b3b810f5d9a3dbc334ca9ed574"
-             style="animation-delay:375ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">耦合梯度下降瞬态放大的伪谱界理论研究</div>
-                <div class="z3"><div class="z3-why">研究团队为块三角雅可比矩阵的耦合梯度下降建立了精确伪谱理论，给出Kreiss常数上界并证明匹配的极小极大下界。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="16" data-iid="65dba9eb134c436922383be89dbf65e2"
-             style="animation-delay:400ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">QKV三投影必要性研究：系统评估Transformer注意力变体</div>
-                <div class="z3"><div class="z3-why">研究系统评估Transformer中Q、K、V三种投影的共享约束变体，探索简化注意力机制的可行性</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="17" data-iid="a111d4b00bff785982162b9fd9fa75d6"
-             style="animation-delay:425ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">SDPG框架：自蒸馏策略梯度提升稀疏奖励强化学习</div>
-                <div class="z3"><div class="z3-why">研究者提出SDPG框架，将自蒸馏与策略梯度结合，通过反向KL散度损失改善语言模型稀疏奖励强化学习的稳定性和性能。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-学术" title="学术源">🎓</span> 📄 ArXiv ML · 06-04 12:00 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="23" data-iid="fcc03398a9d4e109fa7394960cc86e55"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">SpaceX在德克萨斯获550亿Terafab芯片厂税收豁免，遭居民法律威胁</div>
-                <div class="z3"><div class="z3-why">SpaceX计划中的550亿美元Terafab芯片厂在德克萨斯获得房产税豁免，尽管当地居民以法律行动抗议并反对AI基础设施扩张。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-04 17:50 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="24" data-iid="0e5366dc26864430a957cf7856e4e0a1"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">亚马逊发布新版Proteus仓库机器人：工人可用自然语言下指令</div>
-                <div class="z3"><div class="z3-why">亚马逊发布升级版Proteus仓库自主机器人，员工可用自然语言直接分配任务，无需专业软件操作。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚡ The Verge AI · 06-04 17:31 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="25" data-iid="7d6837217c2e8bbe6c92fcc94ae11a06"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">阿里巴巴开放Qwen接入第三方智能体，日均服务超1亿次</div>
-                <div class="z3"><div class="z3-why">阿里巴巴宣布开放Qwen AI助手给第三方智能体接入，首批合作方包括肯德基、蜜雪冰城等品牌，日均生活服务互动量超1亿次。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-04 17:30 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="26" data-iid="c3f71c91281a70a7dc58b4d350e58800"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Harvey、Legora与Anthropic正冲击法律科技巨头Thomson Reuters和LexisNexis</div>
-                <div class="z3"><div class="z3-why">Harvey、Legora等AI法律工具及Anthropic正挑战Thomson Reuters和LexisNexis等法律科技巨头，后者被迫加速升级产品以维持权威内容优势。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🗞️ Techmeme · 06-04 14:10 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="27" data-iid="46bb65ec8586a9e00d0cdc21679e50a5"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">LeCun押注隐空间世界模型，视觉大模型团队率先布局</div>
-                <div class="z3"><div class="z3-why">LeCun力推的隐空间世界模型路线获10亿级押注，国内顶尖视觉大模型团队已提前布局该方向。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚛️ 量子位 · 06-04 11:43 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="28" data-iid="5aaa4f14a3ba4237ff8747591d9f1809"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">戴盟机器人完成亿元融资，阿里通义大牛加盟攻关物理世界模型</div>
-                <div class="z3"><div class="z3-why">具身智能创企戴盟机器人完成亿元人民币融资，并引入阿里通义多模态团队核心研究员，聚焦物理世界模型研发。</div></div>
-                
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> ⚛️ 量子位 · 06-04 11:06 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
-            </div>
-        </div>
-        <div class="card" data-cat="其他" data-aud="general" data-idx="29" data-iid="64af1d1a2fd48283363f2a5857bf76ca"
-             style="animation-delay:500ms">
-            
-            <div class="card-body">
-                
-                <div class="z1">
-            <span class="z1-left">其他</span>
-            <span class="z1-meta">1 min</span>
-        </div>
-                <div class="card-title">Anthropic详解Claude跨产品行为约束机制</div>
-                <div class="z3"><div class="z3-why">Anthropic发布文章，阐述如何通过系统提示、护栏和部署层级在不同产品中约束Claude的行为边界。</div></div>
-                <div class="hot-pills"><a class="hot-pill hp-hn" target="_blank" rel="noopener" href="https://www.anthropic.com/engineering/how-we-contain-claude" title="HN 127 分">🔥 HN 127</a></div>
-                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 🔥 Hacker News AI · 06-04 08:27 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+                <div class="z5"><span class="tier-badge tier-媒体" title="媒体源">📰</span> 📡 雷峰网 · 06-04 16:17 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
         </div>
 </div>
+</section>
 
-<!-- 大V 动态：X-* / YouTube 等社交媒体条目（importance<4 但仍值得展示） -->
+<!-- ⑤ 大V 动态：X-* / YouTube 等社交媒体条目（importance<4 但仍值得展示） -->
+<section id="sec-vip" class="page-sec">
 
+</section>
 
-<!-- Entity Tracker (P1) — 30 天动态时间线入口；移到新闻下方(二级导航, 不挤占头部内容) -->
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">189</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">171</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">64</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">59</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">31</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">30</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">22</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">16</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">16</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">12</span></a><a class="et-chip" href="../entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">4</span></a><a class="et-chip" href="../entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a></div></section>
+<!-- ⑥ 实体追踪 (P1) — 30 天动态时间线入口 -->
+<section id="sec-entity" class="page-sec">
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">188</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">170</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">63</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">59</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">30</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">30</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">22</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">16</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">16</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">12</span></a><a class="et-chip" href="../entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">4</span></a><a class="et-chip" href="../entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a></div></section>
+</section>
 
-<!-- 今日口播稿 (C) — 60-90 秒口语稿, 供音频/短视频取用; 仅 meta.broadcast_script 有值时渲染 -->
-<section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制全文</button></div><p class="bc-hint">~60–90 秒口语稿 · 可直接念或喂 TTS</p><pre class="bc-text" id="bcText">今天有三件事，拼在一起看，感觉整个 AI 行业正在换一套规则。
+<!-- ⑦ 今日口播稿 (C) — 60-90 秒口语稿, 供音频/短视频取用; 仅 meta.broadcast_script 有值时渲染 -->
+<section id="sec-broadcast" class="page-sec">
+<section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制全文</button></div><p class="bc-hint">~60–90 秒口语稿 · 可直接念或喂 TTS</p><pre class="bc-text" id="bcText">今天聊一件让我有点脊背发凉的事。
 
-先说 Anthropic。这家公司一直打&quot;安全第一&quot;的牌，但《金融时报》说他们正在密集备战 IPO，同时跟两家公司合围法律科技市场，那是个八十亿美元的蛋糕。IPO 要增长数字，进法律市场要跟传统巨头抢客户，这跟安全叙事之间的裂缝，一个月内就会被财务数字放大。
+Anthropic、OpenAI、微软，三家联名去游说国会，要求所有DNA供应商必须审查购买序列。听起来是安全措施？但仔细想——这三家都有合规团队，达标成本几乎是零。Meta的开源Llama没有办法内嵌这种审查接口，立法一过，开源AI在生科领域直接违法。这不是安全，这叫用监管来筑护城河。三十天后国会就开听证，已经有议员在起草质询函，直接问：合规成本由谁来承担？
 
-阿里那边，Qwen 已经接入了肯德基、蜜雪冰城这些地方，每天互动超过一亿次。这不是什么跑分比赛，是真实用户每天在真实场景里离不开它。护城河靠的不是模型参数，是你一天被用了多少次。OpenAI 在中国没有渠道，谷歌同样进不来，这道门槛未来十八个月只会越垒越高。
+然后是算力那边。台积电CEO公开说了：AI芯片的需求，已经超过我们能造的极限。就在同一天，一家神经形态芯片公司拿了五亿美元，贝索斯个人押了一亿进去，赌的是仿神经元低功耗架构。聪明钱的逻辑永远是在量产前入场。如果这东西每瓦算力真的是GPU五倍，数据中心的电费账单会逼着采购商换路线。NVIDIA独占推理市场这件事，三年内可能出现第一个真正的挑战者。
 
-最后一件，llama.cpp 同一天做了两件事：把推理跑进了浏览器，同时支持低功耗的 RISC-V 芯片。意思就是跑 AI 不再必须用英伟达的卡了。软件层、端侧、国际标准三路同时绕开 CUDA，英伟达的溢价开始失去防线。
+最后说一个更大的结构变化。一家AI销售软件拿了两千万A轮，他们对外说的不是&quot;增强CRM&quot;，是直接&quot;替代&quot;。美国法院里自己用AI打官司的比例，三年内从11%涨到了17%。中国的无人驾驶公司宣布年底前把小模型全换成基座模型。三个看起来完全不相关的行业，同一个故事：Salesforce、LegalZoom、Mobileye面对的，不是功能竞争，是品类消亡。
 
-三件事合一句话：旧的壁垒都在松动，新的护城河叫每天被用多少次。</pre></section>
+今天的AI，已经不是在帮你做事了——是在替你做你原本付钱让别人做的事。</pre></section>
+</section>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalContent" onclick="if(event.target===this)closeModal()">
@@ -1757,7 +1565,7 @@ body.show-read .is-read:hover {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 晚报 · <b>10</b> 个信息源 · <b>30</b> 篇资讯 · 2026年06月04日
+    AI 晚报 · <b>6</b> 个信息源 · <b>13</b> 篇资讯 · 2026年06月04日
     · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
@@ -2334,6 +2142,9 @@ document.getElementById('searchBox').addEventListener('input', _debounce(functio
             el.innerHTML = '<div class="bkb-head">🚨 突发 · 近 24h 共 ' + evs.length + ' 条</div>'
                 + '<div class="bkb-cards">' + cards + '</div>';
             el.hidden = false;
+            // 确有突发 → 同时点亮"今日导览"里的突发 chip（默认 hidden）
+            var navChip = document.querySelector('.today-nav .tn-breaking');
+            if (navChip) navChip.hidden = false;
         })
         .catch(function() { /* 无 breaking.json / 网络失败 → 不显示, 不影响早报 */ });
 })();

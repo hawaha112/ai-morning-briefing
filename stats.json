@@ -1,53 +1,53 @@
 {
-  "article_count": 30,
+  "article_count": 13,
   "output_file": "output/index.html",
-  "file_size_kb": 109.1,
-  "generated_at": "2026-06-04T10:14:46.696396+00:00",
+  "file_size_kb": 95.5,
+  "generated_at": "2026-06-04T14:40:17.154863+00:00",
   "event_db_stats": {
-    "total_articles": 3613,
+    "total_articles": 3582,
     "collected": 0,
-    "analyzed": 3613,
-    "total_events": 2018,
-    "total_evidence": 2285,
+    "analyzed": 3582,
+    "total_events": 1957,
+    "total_evidence": 2219,
     "event_status": {
       "confirmed": 1,
-      "official": 252,
-      "reported": 1765
+      "official": 248,
+      "reported": 1708
     },
     "tier_0": 294,
-    "tier_1": 1075,
-    "tier_2": 2244
+    "tier_1": 1068,
+    "tier_2": 2220
   },
   "event_status_distribution": {
-    "reported": 30
+    "reported": 13
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 30,
-  "multi_source_count": 0,
+  "llm_count": 13,
+  "multi_source_count": 1,
   "important_count": 2,
   "important_events": [
     {
-      "title": "Anthropic备战IPO：商业压力下AI安全标准遭质疑",
-      "event_id": "evt_827f24dac00f0eb329e6fcf8",
+      "title": "AI领袖联名呼吁立法防范AI辅助生物武器威胁",
+      "event_id": "evt_d521073a51a272911246e2b9",
       "importance": 4,
-      "source_name": "Techmeme",
+      "source_name": "The Verge AI",
       "archive_url": "archive/2026-06-04-pm.html"
     },
     {
-      "title": "OpenAI与Anthropic联署公开信：呼吁立法管控AI生物武器风险",
-      "event_id": "evt_e8a58b3959a530de0fbbc0f7",
+      "title": "仿脑AI初创Flourish融资5亿美元，贝索斯领投1亿",
+      "event_id": "evt_12396b4ee30235221c5e8b92",
       "importance": 4,
-      "source_name": "Wired AI",
+      "source_name": "Techmeme",
       "archive_url": "archive/2026-06-04-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 29,
+  "depth_count": 13,
   "entity_count": 0,
-  "llm_call_count": 84,
-  "llm_prompt_tokens": 116313,
-  "llm_completion_tokens": 33255,
-  "llm_total_tokens": 149602,
-  "llm_parse_fallback": 1
+  "llm_call_count": 43,
+  "llm_prompt_tokens": 59416,
+  "llm_completion_tokens": 16778,
+  "llm_total_tokens": 76213,
+  "llm_parse_fallback": 0
 }
