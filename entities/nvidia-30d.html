@@ -97,9 +97,9 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>NVIDIA</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>60</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>61</b> 个事件</p>
 
-    <h2 class="tl-section">⭐ 重要事件 (13)</h2>
+    <h2 class="tl-section">⭐ 重要事件 (12)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
@@ -281,24 +281,39 @@ h2.tl-section {
                 <p class="tl-event-deep">英伟达此举的深层逻辑是**垂直整合数据中心供应链**。掌握光学互联产能，意味着英伟达能在AI算力军备竞赛中保障自身GPU集群的完整交付能力，而不受光纤短缺掣肘。32亿美元以股权形式投入，而非纯采购合同，说明英伟达希望与康宁形成长期利益绑定。潜在风险在于：制造业投资回报周期长，英伟达若主业增速放缓，这类重资产布局将承压。但整体来看，此举强化了英伟达作为AI基础设施平台公司的战略定位。</p>
             </div>
         </article>
+
+    <h2 class="tl-section">📰 一般动态 (49)</h2>
+    
         <article class="tl-event">
             <div class="tl-event-time">
-                <span class="tl-date">05-06 20:45</span>
-                <span class="tl-rel">2026-05</span>
+                <span class="tl-date">06-05 14:56</span>
+                <span class="tl-rel">今天</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
-                    ⭐⭐⭐⭐
-                    <a href="https://www.techmeme.com/260506/p25#a260506p25" target="_blank" rel="noopener">英伟达5亿美元投资康宁，美国光纤产能扩张十倍</a>
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9521" target="_blank" rel="noopener">llama.cpp优化CUDA MoE矩阵运算提升MTP推理性能</a>
                 </h3>
-                <div class="tl-event-meta">Techmeme </div>
-                <p class="tl-event-summary">英伟达向康宁投资5亿美元，推动其美国光连接制造产能扩大10倍、光纤生产产能提升50%以上，康宁股价单日涨逾15%。</p>
-                <p class="tl-event-deep">此次投资揭示了AI基础设施竞赛的新逻辑：GPU本身已不再是唯一瓶颈，连接GPU的光纤网络正成为制约超大规模集群性能的关键变量。英伟达通过战略投资而非收购的方式绑定康宁，既保留灵活性又锁定优先供应权，是教科书式的供应链战略投资。潜在风险在于：若AI数据中心建设热潮降温，康宁的激进扩产可能造成产能过剩；但中短期内，市场对光互联的渴求仍将持续支撑这一逻辑。</p>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp将mul_mat_vec_q_moe纳入PDL（Persistent Download Layer）调度，在Blackwell架构GPU上显著提升多标记预测（MTP）吞吐量。</p>
+                <p class="tl-event-deep">此优化标志着 llama.cpp 社区对 Blackwell 架构的系统性适配进入深水区：从算法层（量化/MoE）下探至 GPU 调度层（PDL），对生态中大量部署 MoE 量化模型（Deepseek-R2/V3、Qwen3-MoE 等）的用户，MTP 推理效率将有实质提升。短期看是 B 系 GPU 用户的红利；中期看，这类 kernel 级调度优化将成为端侧/私有化部署竞争力的新维度。</p>
             </div>
         </article>
-
-    <h2 class="tl-section">📰 一般动态 (47)</h2>
-    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 13:46</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9519" target="_blank" rel="noopener">llama.cpp SYCL后端移植多列MMVQ优化提升推理性能</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp将CUDA后端的多列MMVQ优化移植到SYCL，权重每次dispatch仅读取一次，覆盖主流量化类型，同时修复推测解码多列矩阵向量路径未触发重排内核的问题。</p>
+                <p class="tl-event-deep">这个PR揭示了一个典型的后端移植债务问题：CUDA后端积累的性能优化长期未同步到SYCL，导致Intel GPU用户实际体验的性能远低于理论上限。更值得注意的是推测解码路径的bug——这意味着在此修复之前，所有在Intel GPU上使用推测解码的用户都在以次优性能运行，且不会收到任何错误提示。随着Intel Arc GPU在性价比市场的渗透加深，这类后端对齐工作的优先级会持续提升。预计未来60天内会有更多CUDA→SYCL的算子级移植PR，IQ类型的vec_dot签名兼容性问</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 23:20</span>

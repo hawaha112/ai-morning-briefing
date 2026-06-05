@@ -1,37 +1,59 @@
 {
-  "article_count": 14,
+  "article_count": 27,
   "output_file": "output/index.html",
-  "file_size_kb": 96.8,
-  "generated_at": "2026-06-04T22:16:16.786234+00:00",
+  "file_size_kb": 110.7,
+  "generated_at": "2026-06-05T10:15:49.138819+00:00",
   "event_db_stats": {
-    "total_articles": 3560,
+    "total_articles": 3567,
     "collected": 0,
-    "analyzed": 3560,
-    "total_events": 1963,
-    "total_evidence": 2234,
+    "analyzed": 3567,
+    "total_events": 1969,
+    "total_evidence": 2241,
     "event_status": {
-      "official": 258,
-      "reported": 1705
+      "official": 250,
+      "reported": 1719
     },
-    "tier_0": 294,
-    "tier_1": 1075,
-    "tier_2": 2191
+    "tier_0": 296,
+    "tier_1": 1089,
+    "tier_2": 2182
   },
   "event_status_distribution": {
-    "reported": 14
+    "reported": 27
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 14,
-  "multi_source_count": 1,
-  "important_count": 0,
-  "important_events": [],
+  "llm_count": 27,
+  "multi_source_count": 2,
+  "important_count": 3,
+  "important_events": [
+    {
+      "title": "Meta AI客服智能体被黑客利用盗取Instagram账号",
+      "event_id": "evt_f4c35827e5758b6567868a09",
+      "importance": 4,
+      "source_name": "MIT Tech Review",
+      "archive_url": "archive/2026-06-05-pm.html"
+    },
+    {
+      "title": "全球首个机器人训练楼盘开盘，30万套住宅供具身智能实训",
+      "event_id": "evt_1d44b194b4e257054b6f5e26",
+      "importance": 4,
+      "source_name": "量子位",
+      "archive_url": "archive/2026-06-05-pm.html"
+    },
+    {
+      "title": "Meta悄然为AI眼镜添加未发布「NameTag」人脸识别系统代码",
+      "event_id": "evt_68c1ed2b908fb0e19156a1dd",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-05-pm.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 13,
+  "depth_count": 25,
   "entity_count": 0,
-  "llm_call_count": 89,
-  "llm_prompt_tokens": 127496,
-  "llm_completion_tokens": 33037,
-  "llm_total_tokens": 160564,
-  "llm_parse_fallback": 1
+  "llm_call_count": 72,
+  "llm_prompt_tokens": 98936,
+  "llm_completion_tokens": 29911,
+  "llm_total_tokens": 128868,
+  "llm_parse_fallback": 0
 }

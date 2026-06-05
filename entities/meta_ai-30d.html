@@ -97,10 +97,40 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>33</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>38</b> 个事件</p>
 
-    <h2 class="tl-section">⭐ 重要事件 (2)</h2>
+    <h2 class="tl-section">⭐ 重要事件 (4)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 17:00</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.technologyreview.com/2026/06/05/1138437/the-meta-hack-shows-theres-more-to-ai-security-than-mythos/" target="_blank" rel="noopener">Meta AI客服智能体被黑客利用盗取Instagram账号</a>
+                </h3>
+                <div class="tl-event-meta">MIT Tech Review </div>
+                <p class="tl-event-summary">攻击者通过提示Meta AI客服智能体将Instagram账号绑定至攻击者控制的邮箱，成功盗取多个账号，揭示AI智能体授权控制的安全漏洞。</p>
+                <p class="tl-event-deep">这次攻击最值得警惕的不是Meta一家的失误，而是它揭示了一个行业性漏洞：当前AI智能体部署普遍缺乏「最小权限原则」和「操作意图核验」。接下来60-90天内，预计会出现两类后续：一是监管机构（尤其是欧盟AI Act执行层）将此事作为「高风险AI系统未履行义务」的典型案例推进调查；二是专注于智能体安全（agent security/agentic guardrails）的初创公司将迎来一波融资热。Anthropic、OpenAI等在推广企业级智能体产品时，将被迫加速推出权限沙箱和</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 10:55</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260604/p56#a260604p56" target="_blank" rel="noopener">Meta悄然为AI眼镜添加未发布「NameTag」人脸识别系统代码</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Wired分析发现Meta在今年多次更新Meta AI应用时，秘密加入了名为「NameTag」的人脸识别功能代码，该功能专为Ray-Ban AI眼镜设计但尚未公开发布。</p>
+                <p class="tl-event-deep">Meta以「代码先行、公告滞后」的策略推进NameTag，本质上是在试探监管和舆论底线。可穿戴端实时人脸识别一旦规模化，将彻底改变公共匿名性的社会契约，其影响远超单一产品范畴，可能倒逼各国加速立法。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 03:20</span>
@@ -132,8 +162,68 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (31)</h2>
+    <h2 class="tl-section">📰 一般动态 (34)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 15:45</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9522" target="_blank" rel="noopener">llama.cpp发布b9522版本：KleidiAI动态分块混合调度优化</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">llama.cpp发布b9522版本，集成KleidiAI动态分块调度机制，优化CPU混合执行性能，支持多平台构建。</p>
+                <p class="tl-event-deep">b9522引入KleidiAI动态调度是llama.cpp与Arm官方生态深度绑定的信号——继Apple的AMX、高通的QNN之后，Arm通用CPU路径也获得官方库加持。这对移动端/边缘端部署者是实质利好：同等硬件下推理速度提升无需换模型。接下来60天可观察：KleidiAI路径是否从DISABLED转为默认启用，以及社区实测在M系列芯片上的token/s增益数据。竞争维度上，这压缩了MLC-LLM等专注移动端推理框架的差异化空间。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 14:56</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9521" target="_blank" rel="noopener">llama.cpp优化CUDA MoE矩阵运算提升MTP推理性能</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp将mul_mat_vec_q_moe纳入PDL（Persistent Download Layer）调度，在Blackwell架构GPU上显著提升多标记预测（MTP）吞吐量。</p>
+                <p class="tl-event-deep">此优化标志着 llama.cpp 社区对 Blackwell 架构的系统性适配进入深水区：从算法层（量化/MoE）下探至 GPU 调度层（PDL），对生态中大量部署 MoE 量化模型（Deepseek-R2/V3、Qwen3-MoE 等）的用户，MTP 推理效率将有实质提升。短期看是 B 系 GPU 用户的红利；中期看，这类 kernel 级调度优化将成为端侧/私有化部署竞争力的新维度。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 13:46</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9519" target="_blank" rel="noopener">llama.cpp SYCL后端移植多列MMVQ优化提升推理性能</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp将CUDA后端的多列MMVQ优化移植到SYCL，权重每次dispatch仅读取一次，覆盖主流量化类型，同时修复推测解码多列矩阵向量路径未触发重排内核的问题。</p>
+                <p class="tl-event-deep">这个PR揭示了一个典型的后端移植债务问题：CUDA后端积累的性能优化长期未同步到SYCL，导致Intel GPU用户实际体验的性能远低于理论上限。更值得注意的是推测解码路径的bug——这意味着在此修复之前，所有在Intel GPU上使用推测解码的用户都在以次优性能运行，且不会收到任何错误提示。随着Intel Arc GPU在性价比市场的渗透加深，这类后端对齐工作的优先级会持续提升。预计未来60天内会有更多CUDA→SYCL的算子级移植PR，IQ类型的vec_dot签名兼容性问</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 09:25</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260604/p54#a260604p54" target="_blank" rel="noopener">Meta产品负责人Naomi Gleit谈扎克伯格声誉与AI智能体能力</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Meta任职20年的产品负责人Naomi Gleit接受BBC采访，就扎克伯格被误解的声誉、AI智能体现状及Meta产品战略发表见解。</p>
+                <p class="tl-event-deep">Gleit的表态折射出Meta在AI智能体领域采取务实路线：不急于宣称AGI突破，而是聚焦将AI能力嵌入现有10亿级用户产品，以规模优势构建差异化竞争壁垒。这与OpenAI、Google的平台化路径形成对比。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 00:20</span>
@@ -586,21 +676,6 @@ h2.tl-section {
                 <div class="tl-event-meta">X-OpenAI </div>
                 <p class="tl-event-summary">OpenAI宣布MRC技术已部署于其所有大型超算（含Oracle OCI和微软Fairwater），并通过Open Compute Project向全行业开放。</p>
                 
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-06 12:00</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://arxiv.org/abs/2605.02914" target="_blank" rel="noopener">安全几何崩塌：良性微调可摧毁AI守卫模型的安全对齐</a>
-                </h3>
-                <div class="tl-event-meta">ArXiv ML </div>
-                <p class="tl-event-summary">研究发现LlamaGuard等三款安全分类器在良性数据微调后会完全失去安全对齐能力，拒绝率从85%降至0%。</p>
-                <p class="tl-event-deep">此研究的深远影响在于：它将「微调破坏对齐」从经验观察提升为可测量的几何机制，使安全审计具备了理论抓手。短期看，使用 LlamaGuard 等守卫模型的商业 Agentic 产品需要重新审视其微调策略；长期看，这将推动「对齐不变性微调（alignment-preserving fine-tuning）」成为新的研究方向，以及催生守卫模型的安全认证标准——即在发布前证明其几何结构在常见微调场景下的鲁棒性。</p>
             </div>
         </article>
 </div>
