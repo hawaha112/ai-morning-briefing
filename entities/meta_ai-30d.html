@@ -104,7 +104,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 17:00</span>
-                <span class="tl-rel">今天</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -119,7 +119,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 10:55</span>
-                <span class="tl-rel">今天</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -134,7 +134,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 03:20</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -149,7 +149,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-28 02:30</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -166,15 +166,60 @@ h2.tl-section {
     
         <article class="tl-event">
             <div class="tl-event-time">
-                <span class="tl-date">06-05 15:45</span>
+                <span class="tl-date">06-06 05:10</span>
                 <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9536" target="_blank" rel="noopener">llama.cpp优化OpenCL后端：提升矩阵运算与内存操作性能</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24160，优化OpenCL后端的get_rows、cpy、concat及q6_K平坦GEMV算子，提升大行矩阵并行度与推理效率。</p>
+                <p class="tl-event-deep">llama.cpp的OpenCL后端优化频率加快，说明非NVIDIA本地推理需求正在形成足够大的贡献者基数。短期看，AMD GPU和Intel Arc用户的实际可用性会有可感知提升；更值得关注的是q6_K GEMV的专项调优——这类量化格式正是消费级显存（8-16GB）跑13B-34B模型的主力方案。若OpenCL性能持续追近CUDA，将削弱NVIDIA在本地推理市场的硬件锁定效应，对AMD/Intel GPU销售产生间接利好。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-06 02:17</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9534" target="_blank" rel="noopener">llama.cpp新增Vulkan FWHT支持并修复Intel/AMD驱动兼容问题</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp b9534版本新增Intel平台Vulkan FWHT支持，采用共享内存归约优化，同时修复MoltenVK AMD子组shuffle问题及Intel Windows驱动bug。</p>
+                <p class="tl-event-deep">此PR反映llama.cpp Vulkan后端正系统性地补齐Intel GPU支持短板。Intel Windows驱动bug被显式标记禁用而非静默失败，说明项目的平台测试覆盖已趋于完善。对于正在用Intel Arc/Iris GPU跑本地推理的Linux用户，这是实质性的算子覆盖扩展。30-60天内预计Intel Windows驱动修复后该限制会解除；MoltenVK AMD的subgroup禁用则可能是长期保守策略。整体看这是基础设施层的常规推进，不改变竞争格局。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 20:10</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.technologyreview.com/2026/06/05/1138452/the-download-ai-hacking-mythos-chatbots-brain-impacts/" target="_blank" rel="noopener">Meta AI客服被利用盗号，简单攻击揭示AI安全盲区</a>
+                </h3>
+                <div class="tl-event-meta">MIT Tech Review </div>
+                <p class="tl-event-summary">攻击者利用Meta AI客服智能体，通过简单指令将Instagram账户绑定至攻击者邮箱，暴露AI部署中的提示注入与越权风险。</p>
+                <p class="tl-event-deep">此事件的深层意义在于：AI安全的核心战场不是「防止模型变坏」，而是「防止好心模型被人用坏」。随着智能体自主性增强、操作权限扩大，传统「输入过滤」思路失效——攻击者只需说正常的话、提异常的要求。这将倒逼行业在架构层重新设计「人机信任边界」：哪些操作必须有人类确认节点，哪些权限不能委托给语言模型，需要成为行业硬标准而非最佳实践建议。监管层面，此类事件将加速欧盟AI法案、美国NIST AI RMF对智能体授权范围的具体约束条款落地。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 15:45</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
                     
                     <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9522" target="_blank" rel="noopener">llama.cpp发布b9522版本：KleidiAI动态分块混合调度优化</a>
                 </h3>
-                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 2 源</span></div>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 6 源</span></div>
                 <p class="tl-event-summary">llama.cpp发布b9522版本，集成KleidiAI动态分块调度机制，优化CPU混合执行性能，支持多平台构建。</p>
                 <p class="tl-event-deep">b9522引入KleidiAI动态调度是llama.cpp与Arm官方生态深度绑定的信号——继Apple的AMX、高通的QNN之后，Arm通用CPU路径也获得官方库加持。这对移动端/边缘端部署者是实质利好：同等硬件下推理速度提升无需换模型。接下来60天可观察：KleidiAI路径是否从DISABLED转为默认启用，以及社区实测在M系列芯片上的token/s增益数据。竞争维度上，这压缩了MLC-LLM等专注移动端推理框架的差异化空间。</p>
             </div>
@@ -182,7 +227,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 14:56</span>
-                <span class="tl-rel">今天</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -197,7 +242,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 13:46</span>
-                <span class="tl-rel">今天</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -212,7 +257,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 09:25</span>
-                <span class="tl-rel">今天</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -227,7 +272,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 00:20</span>
-                <span class="tl-rel">今天</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -242,7 +287,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 23:20</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -257,7 +302,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 22:46</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -272,7 +317,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 18:15</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -287,7 +332,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 14:09</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -302,7 +347,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 13:43</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -317,7 +362,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 05:41</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -332,7 +377,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 04:25</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -347,7 +392,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 02:14</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -362,7 +407,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 22:17</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -377,7 +422,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 00:45</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -392,7 +437,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 15:49</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -407,7 +452,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 06:40</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -422,7 +467,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 00:58</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -437,7 +482,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 00:25</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -452,7 +497,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 19:23</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -467,7 +512,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 18:22</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -482,7 +527,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 15:18</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -497,7 +542,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 13:54</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -512,7 +557,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 08:32</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -527,7 +572,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 05:14</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -542,7 +587,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 04:44</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -557,7 +602,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 01:35</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -572,7 +617,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-18 12:00</span>
-                <span class="tl-rel">18 天前</span>
+                <span class="tl-rel">19 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -591,7 +636,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-13 22:00</span>
-                <span class="tl-rel">23 天前</span>
+                <span class="tl-rel">24 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -606,7 +651,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-13 12:00</span>
-                <span class="tl-rel">23 天前</span>
+                <span class="tl-rel">24 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -621,7 +666,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-07 12:00</span>
-                <span class="tl-rel">29 天前</span>
+                <span class="tl-rel">2026-05</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -631,51 +676,6 @@ h2.tl-section {
                 <div class="tl-event-meta">ArXiv ML </div>
                 <p class="tl-event-summary">研究发现探针准确率无法预测因果重要性，单位置激活干预在Llama-3.2-3B所有28层均实现0%任务迁移，多位置干预可达96%迁移率。</p>
                 <p class="tl-event-deep">这项研究的真正影响是双重的：一方面动摇了基于探针的可解释性研究的结论可靠性，要求整个领域重新审视既有发现；另一方面，分布式任务编码的证实意味着模型对抗单点干预的鲁棒性可能远超预期，这对 AI 对齐和模型行为控制提出了更高挑战——简单的激活操控不足以可靠地引导或纠正模型行为。</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-07 02:03</span>
-                <span class="tl-rel">29 天前</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://x.com/ClementDelangue/status/2052086833090003096" target="_blank" rel="noopener">AI大神LeCun批评科技CEO公开表态不可轻信</a>
-                </h3>
-                <div class="tl-event-meta">X-Yann LeCun </div>
-                <p class="tl-event-summary">图灵奖得主Yann LeCun转推并评论称，本周事件表明多数科技CEO的公开言论不值得认真对待。</p>
-                <p class="tl-event-deep">此事件深层揭示：AI 行业已进入</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-06 22:15</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://x.com/hubertjbanville/status/2052029372282888234" target="_blank" rel="noopener">Meta FAIR发布NeuralBench：神经AI模型统一评测框架</a>
-                </h3>
-                <div class="tl-event-meta">X-Yann LeCun <span class="tl-multi">📡 2 源</span></div>
-                <p class="tl-event-summary">Meta FAIR发布开源框架NeuralBench，覆盖36个EEG任务、94个数据集，支持基础模型与专用模型评测，MIT协议开放。</p>
-                <p class="tl-event-deep">NeuralBench的战略价值在于标准化——这是一个领域走向成熟的必要条件。94个数据集和36个EEG任务的覆盖规模对于v1.0来说相当可观，表明Meta在系统性整合现有数据资源方面做了大量工作。更值得关注的是其对基础模型的评测支持：随着神经AI基础模型（类似EEG-GPT路线）逐渐涌现，统一评测框架将直接影响该赛道的研究方向和竞争格局。潜在风险是框架能否获得社区持续贡献，避免成为Meta单方面维护的孤岛。</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-06 21:59</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://x.com/OpenAI/status/2052025533937103102" target="_blank" rel="noopener">OpenAI将MRC超算互联技术开源，面向全行业开放</a>
-                </h3>
-                <div class="tl-event-meta">X-OpenAI </div>
-                <p class="tl-event-summary">OpenAI宣布MRC技术已部署于其所有大型超算（含Oracle OCI和微软Fairwater），并通过Open Compute Project向全行业开放。</p>
-                
             </div>
         </article>
 </div>
