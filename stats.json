@@ -1,8 +1,8 @@
 {
-  "article_count": 1,
+  "article_count": 77,
   "output_file": "output/index.html",
-  "file_size_kb": 78.6,
-  "generated_at": "2026-06-06T06:45:38.334799+00:00",
+  "file_size_kb": 163.7,
+  "generated_at": "2026-06-06T07:07:36.389613+00:00",
   "event_db_stats": {
     "total_articles": 3526,
     "collected": 0,
@@ -18,20 +18,91 @@
     "tier_2": 2126
   },
   "event_status_distribution": {
-    "reported": 1
+    "unknown": 77
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 1,
+  "llm_count": 77,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 10,
+  "important_events": [
+    {
+      "title": "Anthropic内部数据：Claude正在加速AI开发，递归自我改进或已初现",
+      "event_id": "https://x.com/AnthropicAI/status/2062568862479208923",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "Anthropic研究：Claude Opus 4.7在NMR波谱分析中媲美专业软件",
+      "event_id": "https://x.com/AnthropicAI/status/2062979607448682731",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "谷歌AI周报：Gemma 4离线运行、Co-Scientist科研多智能体同批发布",
+      "event_id": "https://x.com/GoogleAI/status/2062942864288387430",
+      "importance": 4,
+      "source_name": "X-Google AI",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "Google发布Gemma 4量化感知训练版本，内存需求降低三倍",
+      "event_id": "https://x.com/UnslothAI/status/2062931482746994755",
+      "importance": 4,
+      "source_name": "X-HuggingFace",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "NitroGen荣获CVPR最佳论文荣誉提名，推动具身智能体研究",
+      "event_id": "https://x.com/DrJimFan/status/2062942941363286048",
+      "importance": 4,
+      "source_name": "X-Jim Fan",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "Apollo与Blackstone为Anthropic敲定350亿美元AI芯片债务融资",
+      "event_id": "https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic",
+      "importance": 5,
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "OpenAI与白宫洽谈政府入股，拟设立「公共财富基金」支持AI发展",
+      "event_id": "https://www.techmeme.com/260605/p32#a260605p32",
+      "importance": 5,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "Uber承诺投资近5亿美元支持自动驾驶初创公司Nuro",
+      "event_id": "https://www.techmeme.com/260606/p3#a260606p3",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "特朗普签署国家安全备忘录，加速AI在情报与作战领域的应用",
+      "event_id": "https://www.techmeme.com/260605/p30#a260605p30",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "WWDC26前瞻：苹果押注Gemini重塑Siri，AI转型关键一战",
+      "event_id": "https://sspai.com/post/110669",
+      "importance": 4,
+      "source_name": "少数派",
+      "archive_url": "archive/2026-06-06-am.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 1,
+  "depth_count": 77,
   "entity_count": 0,
-  "llm_call_count": 3,
-  "llm_prompt_tokens": 4483,
-  "llm_completion_tokens": 1207,
-  "llm_total_tokens": 5691,
+  "llm_call_count": 4,
+  "llm_prompt_tokens": 8545,
+  "llm_completion_tokens": 1012,
+  "llm_total_tokens": 9559,
   "llm_parse_fallback": 0
 }
