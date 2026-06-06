@@ -1,110 +1,37 @@
 {
-  "article_count": 70,
+  "article_count": 1,
   "output_file": "output/index.html",
-  "file_size_kb": 159.7,
-  "generated_at": "2026-06-06T14:03:47.616503+00:00",
+  "file_size_kb": 77.3,
+  "generated_at": "2026-06-06T14:08:18.826370+00:00",
   "event_db_stats": {
-    "total_articles": 3562,
+    "total_articles": 3564,
     "collected": 0,
-    "analyzed": 3562,
-    "total_events": 1916,
-    "total_evidence": 2200,
+    "analyzed": 3564,
+    "total_events": 1918,
+    "total_evidence": 2202,
     "event_status": {
       "official": 258,
-      "reported": 1658
+      "reported": 1660
     },
     "tier_0": 308,
     "tier_1": 1100,
-    "tier_2": 2154
+    "tier_2": 2156
   },
   "event_status_distribution": {
-    "unknown": 70
+    "reported": 1
   },
-  "use_canonical_events": false,
+  "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 70,
+  "llm_count": 1,
   "multi_source_count": 0,
-  "important_count": 9,
-  "important_events": [
-    {
-      "title": "Anthropic内部数据：Claude正在加速AI开发，递归自我改进或已初现",
-      "summary": "Anthropic公布内部数据，显示Claude正实质性加速AI开发进程，指出这可能是递归自我改进的早期信号，比预期更快出现。",
-      "event_id": "https://x.com/AnthropicAI/status/2062568862479208923",
-      "importance": 4,
-      "source_name": "X-AnthropicAI",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "Anthropic研究：Claude Opus 4.7在NMR波谱分析中媲美专业软件",
-      "summary": "Anthropic发布科学博客，Claude Opus 4.7在核磁共振波谱分析任务中达到并部分超越专用NMR软件水平。",
-      "event_id": "https://x.com/AnthropicAI/status/2062979607448682731",
-      "importance": 4,
-      "source_name": "X-AnthropicAI",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "谷歌AI周报：Gemma 4离线运行、Co-Scientist科研多智能体同批发布",
-      "summary": "谷歌AI本周集中发布五项更新：Gemma 4 12B支持笔记本离线多模态推理、Co-Scientist多智能体系统面向复杂科研假设生成、Nano Banana 2系列正式GA。",
-      "event_id": "https://x.com/GoogleAI/status/2062942864288387430",
-      "importance": 4,
-      "source_name": "X-Google AI",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "Google发布Gemma 4量化感知训练版本，内存需求降低三倍",
-      "summary": "Google发布Gemma 4 QAT检查点，通过量化感知训练使内存需求降低3倍，26B-A4B模型可在16GB RAM上运行。",
-      "event_id": "https://x.com/UnslothAI/status/2062931482746994755",
-      "importance": 4,
-      "source_name": "X-HuggingFace",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "NitroGen荣获CVPR最佳论文荣誉提名，推动具身智能体研究",
-      "summary": "Jim Fan团队的NitroGen项目获得CVPR 2026最佳论文荣誉提名，致力于跨模拟宇宙的通用具身智能体研究。",
-      "event_id": "https://x.com/DrJimFan/status/2062942941363286048",
-      "importance": 4,
-      "source_name": "X-Jim Fan",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "Apollo与Blackstone为Anthropic敲定350亿美元AI芯片债务融资",
-      "summary": "Apollo Global Management与Blackstone联合为Anthropic完成350亿美元债务融资，专项用于扩张AI算力基础设施、购买AI芯片。",
-      "event_id": "https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic",
-      "importance": 5,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "OpenAI与白宫洽谈政府入股，拟设立「公共财富基金」支持AI发展",
-      "summary": "OpenAI正与白宫讨论由政府持股方案，资金将注入类似OpenAI此前提出的「公共财富基金」框架，标志AI治理与国家资本深度结合。",
-      "event_id": "https://www.techmeme.com/260605/p32#a260605p32",
-      "importance": 5,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "Uber承诺投资近5亿美元支持自动驾驶初创公司Nuro",
-      "summary": "Uber向自动驾驶初创公司Nuro承诺投资近5亿美元，为其商业化规模验证提供关键资金支持。",
-      "event_id": "https://www.techmeme.com/260606/p3#a260606p3",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-06-am.html"
-    },
-    {
-      "title": "特朗普签署国家安全备忘录，加速AI在情报与作战领域的应用",
-      "summary": "特朗普签署国家安全备忘录，要求在符合美国价值观的前提下加速AI在情报和军事作战领域的应用部署。",
-      "event_id": "https://www.techmeme.com/260605/p30#a260605p30",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-06-am.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 70,
+  "depth_count": 1,
   "entity_count": 0,
-  "llm_call_count": 4,
-  "llm_prompt_tokens": 7951,
-  "llm_completion_tokens": 1136,
-  "llm_total_tokens": 9089,
+  "llm_call_count": 3,
+  "llm_prompt_tokens": 4500,
+  "llm_completion_tokens": 1164,
+  "llm_total_tokens": 5664,
   "llm_parse_fallback": 0
 }
