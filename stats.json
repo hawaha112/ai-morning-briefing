@@ -1,37 +1,94 @@
 {
-  "article_count": 4,
+  "article_count": 69,
   "output_file": "output/index.html",
-  "file_size_kb": 87.2,
-  "generated_at": "2026-06-06T02:04:40.697485+00:00",
+  "file_size_kb": 148.6,
+  "generated_at": "2026-06-06T02:22:00.905250+00:00",
   "event_db_stats": {
-    "total_articles": 3499,
+    "total_articles": 3506,
     "collected": 0,
-    "analyzed": 3499,
-    "total_events": 1937,
-    "total_evidence": 2221,
+    "analyzed": 3506,
+    "total_events": 1941,
+    "total_evidence": 2226,
     "event_status": {
-      "official": 258,
-      "reported": 1679
+      "official": 260,
+      "reported": 1681
     },
-    "tier_0": 300,
-    "tier_1": 1088,
-    "tier_2": 2111
+    "tier_0": 303,
+    "tier_1": 1089,
+    "tier_2": 2114
   },
   "event_status_distribution": {
-    "reported": 4
+    "unknown": 69
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 4,
+  "llm_count": 69,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 8,
+  "important_events": [
+    {
+      "title": "Anthropic内部数据：Claude正在加速AI开发，递归自我改进或已初现",
+      "event_id": "https://x.com/AnthropicAI/status/2062568862479208923",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "Anthropic研究：Claude Opus 4.7在NMR波谱分析中媲美专业软件",
+      "event_id": "https://x.com/AnthropicAI/status/2062979607448682731",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "谷歌AI周报：Gemma 4离线运行、Co-Scientist科研多智能体同批发布",
+      "event_id": "https://x.com/GoogleAI/status/2062942864288387430",
+      "importance": 4,
+      "source_name": "X-Google AI",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "NitroGen荣获CVPR最佳论文荣誉提名，推动具身智能体研究",
+      "event_id": "https://x.com/DrJimFan/status/2062942941363286048",
+      "importance": 4,
+      "source_name": "X-Jim Fan",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "Apollo与Blackstone为Anthropic敲定350亿美元AI芯片债务融资",
+      "event_id": "https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic",
+      "importance": 5,
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "OpenAI与白宫洽谈政府入股，拟设立「公共财富基金」支持AI发展",
+      "event_id": "https://www.techmeme.com/260605/p32#a260605p32",
+      "importance": 5,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "特朗普签署国家安全备忘录，加速AI在情报与作战领域的应用",
+      "event_id": "https://www.techmeme.com/260605/p30#a260605p30",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-06-am.html"
+    },
+    {
+      "title": "WWDC26前瞻：苹果押注Gemini重塑Siri，AI转型关键一战",
+      "event_id": "https://sspai.com/post/110669",
+      "importance": 4,
+      "source_name": "少数派",
+      "archive_url": "archive/2026-06-06-am.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 4,
+  "depth_count": 69,
   "entity_count": 0,
-  "llm_call_count": 27,
-  "llm_prompt_tokens": 35879,
-  "llm_completion_tokens": 11062,
-  "llm_total_tokens": 46951,
+  "llm_call_count": 12,
+  "llm_prompt_tokens": 21159,
+  "llm_completion_tokens": 3662,
+  "llm_total_tokens": 24824,
   "llm_parse_fallback": 0
 }
