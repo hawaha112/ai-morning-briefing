@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>36</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>38</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (4)</h2>
     
@@ -162,8 +162,38 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (32)</h2>
+    <h2 class="tl-section">📰 一般动态 (34)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-07 05:21</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9544" target="_blank" rel="noopener">llama.cpp修复LFM2/LFM2.5推理轮次内存泄漏问题</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp开源项目修复了LFM2和LFM2.5模型在推理轮次处理中的逻辑错误及内存泄漏，改进按推理格式和模板支持情况进行门控。</p>
+                <p class="tl-event-deep">此类bug修复属于llama.cpp的日常维护事项，重要性有限，但反映出LFM2系列模型在社区中的活跃使用程度——专门为某模型系列修复round-trip和泄漏，说明已有足够多用户反馈。未来30天内，随着Liquid AI持续更新LFM2.5，llama.cpp对其的适配完整度将影响该模型在本地推理市场的渗透率；若适配质量不稳定，用户可能转向ollama等封装更完善的替代方案。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-07 03:50</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9543" target="_blank" rel="noopener">llama.cpp新增Qwen-VL视频帧合并支持，多模态视频理解能力获升级</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp通过PR #21858为基于Qwen-VL的模型添加视频帧合并（frame merge）功能，增强视频多模态处理能力。</p>
+                <p class="tl-event-deep">frame merge是视频多模态模型推理效率的核心优化点。不同于图像处理，视频输入帧数可达数十至数百帧，若逐帧编码将导致token数爆炸。帧合并在视觉编码器后、LLM输入前压缩特征，是平衡精度与效率的工程权衡，也是Qwen-VL等模型视频能力的实现基础。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-06 05:10</span>
