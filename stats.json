@@ -1,45 +1,37 @@
 {
-  "article_count": 3,
+  "article_count": 1,
   "output_file": "output/index.html",
-  "file_size_kb": 86.9,
-  "generated_at": "2026-06-06T06:43:13.793266+00:00",
+  "file_size_kb": 78.6,
+  "generated_at": "2026-06-06T06:45:38.334799+00:00",
   "event_db_stats": {
-    "total_articles": 3522,
+    "total_articles": 3526,
     "collected": 0,
-    "analyzed": 3522,
-    "total_events": 1947,
-    "total_evidence": 2234,
+    "analyzed": 3526,
+    "total_events": 1949,
+    "total_evidence": 2236,
     "event_status": {
       "official": 262,
-      "reported": 1685
+      "reported": 1687
     },
     "tier_0": 306,
     "tier_1": 1094,
-    "tier_2": 2122
+    "tier_2": 2126
   },
   "event_status_distribution": {
-    "reported": 3
+    "reported": 1
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 3,
+  "llm_count": 1,
   "multi_source_count": 0,
-  "important_count": 1,
-  "important_events": [
-    {
-      "title": "Uber承诺投资近5亿美元支持自动驾驶初创公司Nuro",
-      "event_id": "evt_f7f86fcb520d968b0f23544b",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-06-am.html"
-    }
-  ],
+  "important_count": 0,
+  "important_events": [],
   "official_count": 0,
-  "depth_count": 3,
+  "depth_count": 1,
   "entity_count": 0,
-  "llm_call_count": 17,
-  "llm_prompt_tokens": 23931,
-  "llm_completion_tokens": 6519,
-  "llm_total_tokens": 30454,
+  "llm_call_count": 3,
+  "llm_prompt_tokens": 4483,
+  "llm_completion_tokens": 1207,
+  "llm_total_tokens": 5691,
   "llm_parse_fallback": 0
 }
