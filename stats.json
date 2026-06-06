@@ -1,12 +1,12 @@
 {
-  "article_count": 1,
+  "article_count": 46,
   "output_file": "output/index.html",
-  "file_size_kb": 78.5,
-  "generated_at": "2026-06-06T09:53:05.292989+00:00",
+  "file_size_kb": 130.5,
+  "generated_at": "2026-06-06T10:15:32.091055+00:00",
   "event_db_stats": {
-    "total_articles": 3538,
+    "total_articles": 3540,
     "collected": 0,
-    "analyzed": 3538,
+    "analyzed": 3540,
     "total_events": 1954,
     "total_evidence": 2241,
     "event_status": {
@@ -14,24 +14,74 @@
       "reported": 1690
     },
     "tier_0": 308,
-    "tier_1": 1095,
-    "tier_2": 2135
+    "tier_1": 1096,
+    "tier_2": 2136
   },
   "event_status_distribution": {
-    "reported": 1
+    "unknown": 46
   },
-  "use_canonical_events": true,
+  "use_canonical_events": false,
   "llm_coverage": 1.0,
-  "llm_count": 1,
+  "llm_count": 46,
   "multi_source_count": 0,
-  "important_count": 0,
-  "important_events": [],
+  "important_count": 7,
+  "important_events": [
+    {
+      "title": "Anthropic内部数据：Claude正在加速AI开发，递归自我改进或已初现",
+      "event_id": "https://x.com/AnthropicAI/status/2062568862479208923",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-06-06-pm.html"
+    },
+    {
+      "title": "Anthropic研究：Claude Opus 4.7在NMR波谱分析中媲美专业软件",
+      "event_id": "https://x.com/AnthropicAI/status/2062979607448682731",
+      "importance": 4,
+      "source_name": "X-AnthropicAI",
+      "archive_url": "archive/2026-06-06-pm.html"
+    },
+    {
+      "title": "谷歌AI周报：Gemma 4离线运行、Co-Scientist科研多智能体同批发布",
+      "event_id": "https://x.com/GoogleAI/status/2062942864288387430",
+      "importance": 4,
+      "source_name": "X-Google AI",
+      "archive_url": "archive/2026-06-06-pm.html"
+    },
+    {
+      "title": "Google发布Gemma 4量化感知训练版本，内存需求降低三倍",
+      "event_id": "https://x.com/UnslothAI/status/2062931482746994755",
+      "importance": 4,
+      "source_name": "X-HuggingFace",
+      "archive_url": "archive/2026-06-06-pm.html"
+    },
+    {
+      "title": "NitroGen荣获CVPR最佳论文荣誉提名，推动具身智能体研究",
+      "event_id": "https://x.com/DrJimFan/status/2062942941363286048",
+      "importance": 4,
+      "source_name": "X-Jim Fan",
+      "archive_url": "archive/2026-06-06-pm.html"
+    },
+    {
+      "title": "Apollo与Blackstone为Anthropic敲定350亿美元AI芯片债务融资",
+      "event_id": "https://www.bloomberg.com/news/articles/2026-06-05/apollo-wraps-up-35-billion-debt-to-buy-ai-chips-for-anthropic",
+      "importance": 5,
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-06-06-pm.html"
+    },
+    {
+      "title": "Uber承诺投资近5亿美元支持自动驾驶初创公司Nuro",
+      "event_id": "https://www.techmeme.com/260606/p3#a260606p3",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-06-pm.html"
+    }
+  ],
   "official_count": 0,
-  "depth_count": 1,
+  "depth_count": 46,
   "entity_count": 0,
-  "llm_call_count": 10,
-  "llm_prompt_tokens": 11958,
-  "llm_completion_tokens": 4260,
-  "llm_total_tokens": 16224,
+  "llm_call_count": 5,
+  "llm_prompt_tokens": 8197,
+  "llm_completion_tokens": 918,
+  "llm_total_tokens": 9118,
   "llm_parse_fallback": 0
 }
