@@ -7,16 +7,16 @@
      打开页面时浏览器自带的 referer 会被拒 (403)，导致卡片图加载失败
      留下大块空白。 -->
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="大厂堵安全漏洞选择降级，开源补工程漏洞顺手扩能  🔒 **AI智能体高风险部署的两道门槛同周失守：主动被注入、自输出出错** OpenAI推Lockdown Mode，本质是公开承认：提示注入可以让智能体主动泄露敏感数据，攻击面真实存在、不是边缘案例。同周英国多个警察部门因AI庭审陈述不准确被强制叫停，是另一类失…">
+<meta name="description" content="债务杠杆撑起算力天花板，AI前端交付失信与国家机器介入正在同步瓦解「安全」叙事  💰 **单月1550亿无担保债券超额4倍认购：债市把算力定价为公用事业级确定性，但变现锚正在松动** 机构资金接受无担保AI基建债且超额认购4倍，说明债市把算力需求视为类水电的确定性资产——这逻辑的终端锚在前端变现。Apple Si…">
 <meta name="robots" content="index,follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="AI 早报 · 2026年06月07日">
-<meta property="og:description" content="大厂堵安全漏洞选择降级，开源补工程漏洞顺手扩能  🔒 **AI智能体高风险部署的两道门槛同周失守：主动被注入、自输出出错** OpenAI推Lockdown Mode，本质是公开承认：提示注入可以让智能体主动泄露敏感数据，攻击面真实存在、不是边缘案例。同周英国多个警察部门因AI庭审陈述不准确被强制叫停，是另一类失…">
+<meta property="og:description" content="债务杠杆撑起算力天花板，AI前端交付失信与国家机器介入正在同步瓦解「安全」叙事  💰 **单月1550亿无担保债券超额4倍认购：债市把算力定价为公用事业级确定性，但变现锚正在松动** 机构资金接受无担保AI基建债且超额认购4倍，说明债市把算力需求视为类水电的确定性资产——这逻辑的终端锚在前端变现。Apple Si…">
 <meta property="og:site_name" content="AI 早报">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI 早报 · 2026年06月07日">
-<meta name="twitter:description" content="大厂堵安全漏洞选择降级，开源补工程漏洞顺手扩能  🔒 **AI智能体高风险部署的两道门槛同周失守：主动被注入、自输出出错** OpenAI推Lockdown Mode，本质是公开承认：提示注入可以让智能体主动泄露敏感数据，攻击面真实存在、不是边缘案例。同周英国多个警察部门因AI庭审陈述不准确被强制叫停，是另一类失…">
+<meta name="twitter:description" content="债务杠杆撑起算力天花板，AI前端交付失信与国家机器介入正在同步瓦解「安全」叙事  💰 **单月1550亿无担保债券超额4倍认购：债市把算力定价为公用事业级确定性，但变现锚正在松动** 机构资金接受无担保AI基建债且超额认购4倍，说明债市把算力需求视为类水电的确定性资产——这逻辑的终端锚在前端变现。Apple Si…">
 <title>AI 早报 · 2026年06月07日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -368,11 +368,15 @@ body {
 .grid-cat-head[data-flayer]:hover { color: var(--accent); }
 .dim-topic { color: var(--text-50, #8a93a6); background: rgba(255,255,255,0.05); }
 /* 层面五色: 模型/应用/算力/研究/政策商业 */
+/* 6 域配色 (与分组/筛选一致): 模型/算力/应用/研究/治理/商业 */
 .dim-model    { color: #a5b4fc; background: rgba(129,140,248,0.16); }
+.dim-infra    { color: #fbbf77; background: rgba(245,158,66,0.15); }
 .dim-app      { color: #6ee7b7; background: rgba(52,211,153,0.14); }
-.dim-compute  { color: #fbbf77; background: rgba(245,158,66,0.15); }
 .dim-research { color: #7dd3fc; background: rgba(56,189,248,0.14); }
+.dim-gov      { color: #fca5a5; background: rgba(248,113,113,0.14); }
 .dim-biz      { color: #f0abfc; background: rgba(232,121,249,0.14); }
+/* 判断卡顶部「综合了哪几个域」的小标签行 */
+.jc-doms { display: inline-flex; gap: 4px; flex-wrap: wrap; }
 .featured-dims { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
 /* (突发 banner 样式已移除: 突发并入早晚报正文, 不再做独立 banner) */
 .briefing .br-outro {
@@ -1360,13 +1364,13 @@ body.show-read .is-read:hover {
 <header class="header">
 <div class="header-inner">
     <div class="h-title">📡 AI 早报</div>
-    <div class="h-date">2026年06月07日 周日 · 06:11</div>
+    <div class="h-date">2026年06月07日 周日 · 10:28</div>
     <div class="search-wrap">
         <input type="text" class="search-box" id="searchBox" placeholder="搜索…" aria-label="搜索">
     </div>
     <div class="h-stats">
-        <span><b>4</b> 篇</span>
-        <span><b>3</b> 源</span>
+        <span><b>9</b> 篇</span>
+        <span><b>5</b> 源</span>
         <a href="archive/dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
@@ -1376,24 +1380,24 @@ body.show-read .is-read:hover {
 
 
 <!-- 今日导览：一眼可记的版块地图 + 跳转(sticky, 滚动高亮当前板块) -->
-<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-judgment">🎯 判断</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link tn-history" href="archive/dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
+<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-glance">⚡ 速览</a><a class="tn-link" href="#sec-judgment">🎯 判断</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link tn-history" href="archive/dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
 
 <!-- 标签筛选状态条：点卡片上的层面/主题标签即筛选，仅在筛选时显示，点此清除 -->
 <div id="filter-active" class="filter-active" hidden></div>
 
 <!-- ⚡ 今日速览：一行一条 TL;DR，30 秒扫完全天；点任一条开对应事件 -->
 <section id="sec-glance" class="page-sec">
-
+<h2 class="glance-title">⚡ 今日速览<span class="gl-n">2</span></h2><div class="glance-groups"><div class="glance-group"><div class="gl-grp-head">🛠️ 应用与产品<span class="gl-grp-n">1</span></div><ul class="glance-list"><li class="glance-item" data-idx="3"><span class="gl-title">苹果WWDC将再次发布新Siri，AI Intelligence承诺两年仍未兑现</span></li></ul></div><div class="glance-group"><div class="gl-grp-head">📜 治理与安全<span class="gl-grp-n">1</span></div><ul class="glance-list"><li class="glance-item" data-idx="2"><span class="gl-title">Meta推出AI生成点击诱饵新闻信息流功能</span></li></ul></div></div>
 </section>
 
 <!-- ① 今日判断（结论先行，全天头条） -->
 <section id="sec-judgment" class="page-sec">
 
     <section class="briefing">
-        <h2 class="br-title">📌 今日 2 个判断</h2>
-        <p class="br-headline">大厂堵安全漏洞选择降级，开源补工程漏洞顺手扩能</p>
-        <div class="judgments-grid jcg-2"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🔒</span></div><h3 class="jc-title">AI智能体高风险部署的两道门槛同周失守：主动被注入、自输出出错</h3><p class="jc-body">OpenAI推Lockdown Mode，本质是公开承认：提示注入可以让智能体主动泄露敏感数据，攻击面真实存在、不是边缘案例。同周英国多个警察部门因AI庭审陈述不准确被强制叫停，是另一类失败：没人攻击，自己就出错。两者指向同一困境：高风险场景要求既抗主动攻击、又保输出可靠，当前AI两条都没过关。OpenAI的解法是降能力换安全——锁定模式限制智能体行为，而非提升可靠性本身——这条路越走越窄：越锁越难创造价值，高价值场景越不敢用，进退两难。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://techcrunch.com/2026/06/06/openai-unveils-lockdown-mode-to-protect-sensitive-data-from-prompt-injection-attacks/" target="_blank" rel="noopener">💡 TechCrunch AI</a> · <a class="jc-src" href="https://www.techmeme.com/260606/p10#a260606p10" target="_blank" rel="noopener">🗞️ Techmeme</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🎬</span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span></div><h3 class="jc-title">llama.cpp为Qwen-VL加入视频帧合并，本地跑视频理解不再依赖闭源API</h3><p class="jc-body">llama.cpp PR #21858为Qwen-VL系模型加入视频帧合并——机制是：视频→切帧→合并后直接送本地VL模型推理，这一前置步骤此前几乎只有云端API（OpenAI、Gemini）开箱支持，本地路径要自己拼。现在llama.cpp原生处理，调用链缩短为「下权重+本地跑」。同周修复LFM2/LFM2.5内存泄漏，生产稳定性有实质改善。二阶影响：隐私敏感场景（医疗录像、企业会议记录）获得不上云的可行路径；闭源视频API的壁垒从「功能有无」收缩到「模型质量」，议价空间受压。当前卡点是本地硬件和权重大小，但功能入场门槛已不是瓶颈。</p><div class="jc-sources">📎 来源：<a class="jc-src" href="https://github.com/ggml-org/llama.cpp/releases/tag/b9544" target="_blank" rel="noopener">🐙 GitHub: llama.cpp</a> · <a class="jc-src" href="https://github.com/ggml-org/llama.cpp/releases/tag/b9543" target="_blank" rel="noopener">🐙 GitHub: llama.cpp</a></div></article></div>
-        <p class="br-outro">今天是大厂和开源路径分叉的小缩影：一边在做防守，一边在做进攻。</p>
+        <h2 class="br-title">📌 今日 3 个判断</h2>
+        <p class="br-headline">债务杠杆撑起算力天花板，AI前端交付失信与国家机器介入正在同步瓦解「安全」叙事</p>
+        <div class="judgments-grid jcg-3"><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">💰</span><span class="jc-doms"><span class="dim dim-other" data-flayer="other" role="button" title="只看其他">📰 其他</span><span class="dim dim-app" data-flayer="app" role="button" title="只看应用与产品">🛠️ 应用与产品</span></span></div><h3 class="jc-title">单月1550亿无担保债券超额4倍认购：债市把算力定价为公用事业级确定性，但变现锚正在松动</h3><p class="jc-body">机构资金接受无担保AI基建债且超额认购4倍，说明债市把算力需求视为类水电的确定性资产——这逻辑的终端锚在前端变现。Apple Siri两年未落地遭集体诉讼、英国司法叫停AI法庭陈述，前端消化速度远滞后于基建扩张。若企业AI利用率持续不及预期，债市评级下调触发再融资压力，1550亿债务的连锁效应将远超单纯技术泡沫的烈度。</p><div class="jc-sources">📎 来源(点击看页内卡片)：<a class="jc-src" href="#evt-evt_1390d6e8c9f4f93d0c4da8de">🗞️ Techmeme</a> · <a class="jc-src" href="#evt-evt_3687d5152fa699e5a1815d7d">⚡ The Verge AI</a> · <a class="jc-src" href="#evt-evt_28654c9ff76a7a753625badb">🗞️ Techmeme</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">📜</span><span class="jc-doms"><span class="dim dim-other" data-flayer="other" role="button" title="只看其他">📰 其他</span></span><span class="jc-badge jc-badge-edited" title="编辑改写过, 提升立场">✎ 编辑改写</span></div><h3 class="jc-title">Anthropic为NSA进攻性黑客服务：「安全优先」定位在政府合同收益面前有明码标价</h3><p class="jc-body">为NSA提供进攻性黑客协助，是Anthropic的主动商业选择：政府合同利润高，NSA背书等于监管合规保护，净收益为正。关键机制是：Anthropic「负责任AI」承诺的受众是普通企业和消费者，政府客户享有独立谈判权，品牌承诺对其天然不适用——「安全边界」从设计上就留了豁免口。这是AI行业首个有据可查的公开案例，说明当政府是付费客户，「不为有害用途服务」的底线是可谈判的。其他AI公司面对同等收益结构时会遵循这个先例；整个行业的安全叙事随之系统性稀释，不靠监管松绑，而是靠商业逻辑从内部解构。</p><div class="jc-sources">📎 来源(点击看页内卡片)：<a class="jc-src" href="#evt-evt_8442a68f602431a0bf77e978">📡 Wired AI</a></div></article><article class="judgment-card"><div class="jc-header"><span class="jc-emoji">🏢</span><span class="jc-doms"><span class="dim dim-gov" data-flayer="gov" role="button" title="只看治理与安全">📜 治理与安全</span><span class="dim dim-app" data-flayer="app" role="button" title="只看应用与产品">🛠️ 应用与产品</span><span class="dim dim-other" data-flayer="other" role="button" title="只看其他">📰 其他</span></span></div><h3 class="jc-title">Apple被诉+英国禁AI法庭+Meta刷clickbait：「过度承诺→法律落地」三案同步，AI销售话术必须换挡</h3><p class="jc-body">三案共享同一机制：AI被部署进高信任场景（个人助手/司法/新闻），可靠性未达宣传预期，法律后果随之落地。Apple 2024年的功能承诺构成集体诉讼事实基础；英国禁令给B端采购方留下「AI输出错误=连带责任」的法律先例；Meta「For You」板块印证低质AI推送同样反噬平台信任。三案同步意味着AI销售逻辑从「路线图+demo」切换到「SLA+赔付条款」的压力，已是现实诉讼而非监管预期。</p><div class="jc-sources">📎 来源(点击看页内卡片)：<a class="jc-src" href="#evt-evt_7704f67e310788ff4b3bb3dc">⚡ The Verge AI</a> · <a class="jc-src" href="#evt-evt_3687d5152fa699e5a1815d7d">⚡ The Verge AI</a> · <a class="jc-src" href="#evt-evt_28654c9ff76a7a753625badb">🗞️ Techmeme</a></div></article></div>
+        <p class="br-outro">算力债务在涌入、政治资本在入场——AI行业正在用负债和国家背书换增长，代价是独立性和用户信任。</p>
     </section>
 </section>
 
@@ -1401,6 +1405,39 @@ body.show-read .is-read:hover {
 
 <!-- ② 今日必读（importance≥3，按主题分组） -->
 <section id="sec-featured" class="page-sec">
+<div class="featured-section">
+<h2 class="featured-title">⭐ 今日必读</h2>
+<h3 class="grid-cat-head" data-flayer="app" role="button" title="只看应用与产品">🛠️ 应用与产品<span class="gc-n">1</span></h3>
+<div class="featured-grid">
+    <div class="featured-card" data-cat="产品与应用" data-layer="app" data-aud="pm|general" data-idx="3" data-iid="evt_3687d5152fa699e5a1815d7d" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-dims"><span class="dim dim-topic" data-fcat="产品与应用" role="button" tabindex="0" title="只看产品与应用">产品与应用</span></div>
+            <div class="featured-title-text">苹果WWDC将再次发布新Siri，AI Intelligence承诺两年仍未兑现</div>
+            <div class="featured-why">苹果将在WWDC上重新介绍升级版Siri，但自2024年发布Apple Intelligence以来核心功能迟迟未能落地，公司甚至因误导性宣传面临集体诉讼。</div>
+            <div class="featured-source"><span class="trust-badge trust-weak">◦ 单源</span> <span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚡ The Verge AI · 06-06 20:00</div>
+            
+        </div>
+    </div>
+</div>
+<h3 class="grid-cat-head" data-flayer="gov" role="button" title="只看治理与安全">📜 治理与安全<span class="gc-n">1</span></h3>
+<div class="featured-grid">
+    <div class="featured-card" data-cat="产品与应用" data-layer="gov" data-aud="pm|investor|general" data-idx="2" data-iid="evt_7704f67e310788ff4b3bb3dc" style="border-left-color: #e8913a">
+        
+        <div class="featured-body">
+            
+            
+            <div class="featured-dims"><span class="dim dim-topic" data-fcat="产品与应用" role="button" tabindex="0" title="只看产品与应用">产品与应用</span></div>
+            <div class="featured-title-text">Meta推出AI生成点击诱饵新闻信息流功能</div>
+            <div class="featured-why">Meta AI独立应用上线「For You」板块，以AI生成主题、图片和文字形式推送点击诱饵式新闻内容。</div>
+            <div class="featured-source"><span class="trust-badge trust-weak">◦ 单源</span> <span class="tier-badge tier-媒体" title="媒体源">📰 媒体</span> ⚡ The Verge AI · 06-06 22:00</div>
+            
+        </div>
+    </div>
+</div>
+</div>
 
 </section>
 
@@ -1442,6 +1479,21 @@ body.show-read .is-read:hover {
                 
                 <div class="z5"><span class="trust-badge trust-weak">◦ 单源</span> <span class="tier-badge tier-社区" title="社区源">💬</span> 🐙 GitHub: llama.cpp · 06-07 05:21 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
             </div>
+        </div><h3 class="grid-cat-head" data-flayer="biz" role="button" title="只看商业与产业">💼 商业与产业<span class="gc-n">1</span></h3>
+        <div class="card" data-cat="" data-layer="biz" data-aud="general" data-idx="7" data-iid="evt_54c0ef536eb7f13bc047e004"
+             style="animation-delay:175ms">
+            
+            <div class="card-body">
+                
+                <div class="z1">
+            <span class="z1-left"></span>
+            <span class="z1-meta">1 min</span>
+        </div>
+                <div class="card-title">特朗普政府或对OpenAI持股，美国政府介入AI商业版图</div>
+                <div class="z3"><div class="z3-why">特朗普表示正在讨论让美国政府从OpenAI等AI公司获益的股权合作方案。</div></div>
+                
+                <div class="z5"><span class="trust-badge trust-weak">◦ 单源</span> <span class="tier-badge tier-媒体" title="媒体源">📰</span> 💡 TechCrunch AI · 06-07 00:17 <span style="color:#3b82f6;font-size:9px;font-weight:600">📰 已报道</span></div>
+            </div>
         </div>
 </div>
 </section>
@@ -1453,18 +1505,20 @@ body.show-read .is-read:hover {
 
 <!-- ⑥ 实体追踪 (P1) — 30 天动态时间线入口 -->
 <section id="sec-entity" class="page-sec">
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">124</span></a><a class="et-chip" href="entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">104</span></a><a class="et-chip" href="entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">47</span></a><a class="et-chip" href="entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">41</span></a><a class="et-chip" href="entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">38</span></a><a class="et-chip" href="entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">17</span></a><a class="et-chip" href="entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">16</span></a><a class="et-chip" href="entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">12</span></a><a class="et-chip" href="entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">11</span></a><a class="et-chip" href="entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">6</span></a><a class="et-chip" href="entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a><a class="et-chip" href="entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">3</span></a></div></section>
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">124</span></a><a class="et-chip" href="entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">101</span></a><a class="et-chip" href="entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">47</span></a><a class="et-chip" href="entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">41</span></a><a class="et-chip" href="entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">38</span></a><a class="et-chip" href="entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">18</span></a><a class="et-chip" href="entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">17</span></a><a class="et-chip" href="entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">12</span></a><a class="et-chip" href="entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">11</span></a><a class="et-chip" href="entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">6</span></a><a class="et-chip" href="entities/mistral-30d.html"><span class="et-icon">🏢</span><span class="et-name">Mistral AI</span><span class="et-count">3</span></a><a class="et-chip" href="entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">3</span></a></div></section>
 </section>
 
 <!-- ⑦ 今日口播稿 (C) — 60-90 秒口语稿, 供音频/短视频取用; 仅 meta.broadcast_script 有值时渲染 -->
 <section id="sec-broadcast" class="page-sec">
-<section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制全文</button></div><p class="bc-hint">~60–90 秒口语稿 · 可直接念或喂 TTS</p><pre class="bc-text" id="bcText">今天想跟你聊一件有点扎心的事——AI智能体这周在安全上连续翻车，而且是两种完全不同的翻法。
+<section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制全文</button></div><p class="bc-hint">~60–90 秒口语稿 · 可直接念或喂 TTS</p><pre class="bc-text" id="bcText">今天有个信号你可能没注意到——全球最聪明的钱，正在同时押注和质疑AI。
 
-先说第一件。OpenAI刚推出一个叫&quot;锁定模式&quot;的功能，听起来很厉害，其实是在变相承认一个问题：现在的AI智能体，可以被外部攻击者&quot;注入&quot;恶意指令，然后主动把你的敏感数据泄露出去。这不是理论上的风险，是真实攻击面。与此同时，英国有好几个警察部门，因为AI在法庭上输出了不准确的陈述，被强制叫停了。注意，这次没人攻击，它自己就出错了。两件事加在一起说明一件事：要在高风险场景用AI，你既要防它被人操控，又要防它自己犯错，现在这两关它都还没过。更麻烦的是，OpenAI的解法是&quot;降功能换安全&quot;——锁得越死，智能体能做的事越少，越没有价值，这条路越走越窄。
+先说一件让我惊讶的事。有家AI基建公司这个月发了一批债券，无担保的，折合人民币大概1550亿。结果被抢认购了四倍。债市的意思很直白：算力就像水电，用量是确定的，钱放进去稳。但这个逻辑有个前提——企业得真的在大规模用AI。现在看呢？Apple的Siri升级版，承诺了整整两年，功能一个没到位，刚被集体起诉了。英国法院也刚裁定，AI出的法庭陈述无效、不予采信。前端没人在真正用，后端那1550亿的债，压力就会一层层往回传。
 
-再说第二件，轻松一点。llama.cpp这周悄悄加了一个功能——支持Qwen视觉模型直接处理视频帧。以前你想让本地模型看视频，前处理那步得自己拼，基本上只有OpenAI、Gemini这些云端API才开箱支持。现在本地也能做了，下个权重就能跑。对医疗录像、企业会议这类不想上云的场景来说，这是真实可行的路径，不是ppt上的功能。
+然后是这个行业最让人坐不住的消息。Anthropic，就是那家天天挂着&quot;安全第一&quot;招牌的公司，被曝出跟美国国安局合作，做的是进攻性黑客业务。这不是失误，是主动的商业选择——政府合同利润高，NSA背书还能换监管保护。问题在于，Anthropic对外承诺的&quot;不做有害的事&quot;，从来只对普通企业和消费者有效，政府客户单独谈判，那套承诺天然不适用。这是行业里第一个摆上台面的案例，告诉所有人：只要政府出钱，底线是可以谈的。其他公司面对同样的钱，大概率会跟。
 
-两件事一起看：大厂在堵安全漏洞、但选择了降级这条路；开源在补工程短板、顺手扩了能力边界。方向不同，速度不慢。我们下期见。</pre></section>
+债券、诉讼、NSA合同，今天这三件事加在一起说明一件事：AI行业的&quot;信任&quot;，正在从内部被商业逻辑慢慢拆掉。
+
+以后签AI合同，记得问一句：出了事，SLA在哪，谁来赔。</pre></section>
 </section>
 
 <!-- Modal -->
@@ -1479,7 +1533,7 @@ body.show-read .is-read:hover {
 
 <!-- Footer -->
 <footer class="footer">
-    AI 早报 · <b>3</b> 个信息源 · <b>4</b> 篇资讯 · 2026年06月07日
+    AI 早报 · <b>5</b> 个信息源 · <b>9</b> 篇资讯 · 2026年06月07日
     · <a href="archive/dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
