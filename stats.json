@@ -1,46 +1,62 @@
 {
-  "article_count": 40,
+  "article_count": 22,
   "output_file": "output/index.html",
-  "file_size_kb": 128.2,
-  "generated_at": "2026-06-08T12:40:52.271436+00:00",
+  "file_size_kb": 117.1,
+  "generated_at": "2026-06-08T22:19:43.133051+00:00",
   "event_db_stats": {
-    "total_articles": 3317,
+    "total_articles": 3369,
     "collected": 0,
-    "analyzed": 3317,
-    "total_events": 1774,
-    "total_evidence": 2055,
+    "analyzed": 3369,
+    "total_events": 1809,
+    "total_evidence": 2107,
     "event_status": {
-      "official": 219,
-      "reported": 1555
+      "official": 231,
+      "reported": 1578
     },
-    "tier_0": 265,
-    "tier_1": 1067,
-    "tier_2": 1985
+    "tier_0": 278,
+    "tier_1": 1090,
+    "tier_2": 2001
   },
   "event_status_distribution": {
-    "reported": 40
+    "reported": 22
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 40,
-  "multi_source_count": 0,
-  "important_count": 1,
+  "llm_count": 22,
+  "multi_source_count": 2,
+  "important_count": 3,
   "important_events": [
     {
-      "title": "CVPR 2026落幕：DeepMind D4RT摘最佳论文，视觉AI进入4D时代",
-      "summary": "CVPR 2026闭幕，Google DeepMind的D4RT获最佳论文奖，Oxford VGG两连冠，PhysInOne数据集震撼发布，VLA论文数量5倍增长。",
-      "event_id": "evt_242e7ed437592126a5fc8469",
+      "title": "谷歌升级NotebookLM：接入Gemini 3.5与智能体能力",
+      "summary": "谷歌宣布NotebookLM重大升级，默认模型切换至Gemini 3.5，并引入Antigravity推理引擎，为AI Ultra用户带来智能体功能与更强推理能力。",
+      "event_id": "evt_bf71dcaf8820cd7e32462b20",
       "importance": 4,
-      "source_name": "雷峰网",
-      "archive_url": "archive/2026-06-08-pm.html"
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-09-am.html"
+    },
+    {
+      "title": "SpaceX预期收购AI编程工具Cursor，年化营收突破40亿美元",
+      "summary": "AI编程工具Cursor年化营收在过去一周突破40亿美元，较4月的30亿和2月的20亿持续飙升，SpaceX预计在其IPO后完成收购。",
+      "event_id": "evt_234f0a0bdd40aabad4accdb1",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-09-am.html"
+    },
+    {
+      "title": "OpenAI筹备ChatGPT史上最大改版，宣告对话框时代终结",
+      "summary": "OpenAI正准备对ChatGPT进行自2022年发布以来最大规模的产品改版，预示着以单一聊天框为核心的交互范式将被彻底重构。",
+      "event_id": "evt_a8e47ffa7cfec50aa9c2134c",
+      "importance": 4,
+      "source_name": "Ars Technica AI",
+      "archive_url": "archive/2026-06-09-am.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 39,
+  "depth_count": 22,
   "entity_count": 0,
-  "llm_call_count": 26,
-  "llm_prompt_tokens": 38692,
-  "llm_completion_tokens": 9695,
-  "llm_total_tokens": 48396,
-  "llm_parse_fallback": 0
+  "llm_call_count": 98,
+  "llm_prompt_tokens": 153506,
+  "llm_completion_tokens": 39816,
+  "llm_total_tokens": 193357,
+  "llm_parse_fallback": 1
 }
