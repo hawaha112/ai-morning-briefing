@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>44</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>45</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (4)</h2>
     
@@ -162,8 +162,23 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (40)</h2>
+    <h2 class="tl-section">📰 一般动态 (41)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-08 19:10</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9555" target="_blank" rel="noopener">llama.cpp修复Metal音频模型im2col一维计算缺陷</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp发布修复版本，解决Metal后端im2col一维卷积在音频模型上的计算错误。</p>
+                <p class="tl-event-deep">此类底层算子修复属于llama.cpp的常态维护，但对苹果平台音频AI应用有实际价值：本地运行Whisper是macOS用户最常见的llama.cpp音频使用场景，此前Metal路径的静默错误会让用户得到错误转录结果而不自知。短期内预计whisper.cpp和依赖llama.cpp Metal后端的iOS应用会跟进更新。整体看这是框架成熟度提升的信号，而非战略性事件。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-08 17:45</span>
