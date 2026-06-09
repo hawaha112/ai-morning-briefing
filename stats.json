@@ -1,32 +1,56 @@
 {
-  "article_count": 31,
+  "article_count": 59,
   "output_file": "output/index.html",
-  "file_size_kb": 121.8,
-  "generated_at": "2026-06-09T10:19:46.755548+00:00",
+  "file_size_kb": 151.6,
+  "generated_at": "2026-06-09T12:43:43.689885+00:00",
   "event_db_stats": {
-    "total_articles": 3402,
+    "total_articles": 3403,
     "collected": 0,
-    "analyzed": 3402,
-    "total_events": 1842,
-    "total_evidence": 2151,
+    "analyzed": 3403,
+    "total_events": 1846,
+    "total_evidence": 2156,
     "event_status": {
       "confirmed": 1,
       "official": 234,
-      "reported": 1607
+      "reported": 1611
     },
     "tier_0": 285,
-    "tier_1": 1119,
-    "tier_2": 1998
+    "tier_1": 1125,
+    "tier_2": 1993
   },
   "event_status_distribution": {
-    "reported": 31
+    "reported": 59
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 31,
-  "multi_source_count": 0,
-  "important_count": 1,
+  "llm_count": 59,
+  "multi_source_count": 4,
+  "important_count": 6,
   "important_events": [
+    {
+      "title": "谷歌升级NotebookLM：接入Gemini 3.5与智能体能力",
+      "summary": "谷歌宣布NotebookLM重大升级，默认模型切换至Gemini 3.5，并引入Antigravity推理引擎，为AI Ultra用户带来智能体功能与更强推理能力。",
+      "event_id": "evt_bf71dcaf8820cd7e32462b20",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-09-pm.html"
+    },
+    {
+      "title": "小米MiMo-V2.5-Pro发布UltraSpeed模式：万亿参数模型突破1000tokens/s",
+      "summary": "小米MiMo与TileRT联合发布MiMo-V2.5-Pro UltraSpeed模式，在通用GPU上实现万亿参数模型首次突破1000 tokens/s生成速度。",
+      "event_id": "evt_8646b0ac57d69b7ce73402bd",
+      "importance": 4,
+      "source_name": "知乎热榜",
+      "archive_url": "archive/2026-06-09-pm.html"
+    },
+    {
+      "title": "苹果因拒绝互操作义务豁免申请放弃在欧盟推出新版Siri",
+      "summary": "苹果向欧盟申请新版Siri AI免于互操作义务遭拒后，决定不在欧盟地区推出该功能。",
+      "event_id": "evt_be6957b20a5cba928183b044",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-09-pm.html"
+    },
     {
       "title": "国产4B端侧「认知模型」声称效果比肩GPT-5.4",
       "summary": "国内团队发布仅4B参数可端侧部署的「认知模型」，声称效果比肩GPT-5.4，契合Karpathy对小型高效推理模型的预判方向。",
@@ -34,14 +58,30 @@
       "importance": 4,
       "source_name": "量子位",
       "archive_url": "archive/2026-06-09-pm.html"
+    },
+    {
+      "title": "SpaceX预期收购AI编程工具Cursor，年化营收突破40亿美元",
+      "summary": "AI编程工具Cursor年化营收在过去一周突破40亿美元，较4月的30亿和2月的20亿持续飙升，SpaceX预计在其IPO后完成收购。",
+      "event_id": "evt_234f0a0bdd40aabad4accdb1",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-09-pm.html"
+    },
+    {
+      "title": "OpenAI筹备ChatGPT史上最大改版，宣告对话框时代终结",
+      "summary": "OpenAI正准备对ChatGPT进行自2022年发布以来最大规模的产品改版，预示着以单一聊天框为核心的交互范式将被彻底重构。",
+      "event_id": "evt_a8e47ffa7cfec50aa9c2134c",
+      "importance": 4,
+      "source_name": "Ars Technica AI",
+      "archive_url": "archive/2026-06-09-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 30,
+  "depth_count": 56,
   "entity_count": 0,
-  "llm_call_count": 88,
-  "llm_prompt_tokens": 140286,
-  "llm_completion_tokens": 37053,
-  "llm_total_tokens": 177379,
+  "llm_call_count": 23,
+  "llm_prompt_tokens": 37489,
+  "llm_completion_tokens": 9280,
+  "llm_total_tokens": 46775,
   "llm_parse_fallback": 0
 }

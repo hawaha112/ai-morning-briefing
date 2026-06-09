@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>51</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>52</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (4)</h2>
     
@@ -162,8 +162,23 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (47)</h2>
+    <h2 class="tl-section">📰 一般动态 (48)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-09 20:11</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9577" target="_blank" rel="noopener">llama.cpp服务器新增提示词目录日志记录功能</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp server新增--log-prompts-dir参数，可将每条提示词写入指定目录的独立文本文件，便于调试与审计。</p>
+                <p class="tl-event-deep">这是一个实用性驱动的工具链改进，而非算法突破。llama.cpp server作为本地LLM事实标准接口，此功能填补了生产调试中的关键缺口——此前开发者只能在应用层自行拦截日志，现在推理层原生支持。预计30天内会有RAG框架（如LlamaIndex、Ollama生态工具）在文档中推荐此参数用于调试模式；对于需要SOC2合规的企业内网部署场景，这也是一个低成本满足审计要求的方案。影响范围有限但精准，目标用户（本地部署开发者）获益明确。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 17:11</span>
