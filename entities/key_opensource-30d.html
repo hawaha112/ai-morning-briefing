@@ -97,12 +97,12 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>主要开源项目</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>18</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>17</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (0)</h2>
     <div class="tl-empty">本月暂无重要事件 (importance ≥ 4)</div>
 
-    <h2 class="tl-section">📰 一般动态 (18)</h2>
+    <h2 class="tl-section">📰 一般动态 (17)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
@@ -114,7 +114,7 @@ h2.tl-section {
                     
                     <a href="https://developer.nvidia.com/blog/train-models-faster-with-jax-and-maxtext-using-nvfp4-on-nvidia-blackwell/" target="_blank" rel="noopener">英伟达Blackwell支持NVFP4精度，JAX/MaxText训练提速</a>
                 </h3>
-                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <div class="tl-event-meta">NVIDIA Developer Blog <span class="tl-multi">📡 2 源</span></div>
                 <p class="tl-event-summary">英伟达发布NVFP4混合精度方案，结合JAX和MaxText框架在Blackwell架构上大幅提升LLM预训练吞吐量。</p>
                 
             </div>
@@ -357,21 +357,6 @@ h2.tl-section {
                 <div class="tl-event-meta">vLLM Releases </div>
                 <p class="tl-event-summary">vLLM发布v0.21.0rc3候选版本，新增TOKENSPEED_MLA注意力后端，专为DeepSeek R1和Kimi K25模型优化推理性能。</p>
                 <p class="tl-event-deep">TOKENSPEED_MLA的出现意味着开源推理生态正在快速跟进中国头部模型（DeepSeek、Kimi）的架构创新——这通常需要数月的工程投入。对竞争格局的判断：vLLM官方支持DSR1和Kimi K25的专用后端，将进一步巩固其作为多模型统一部署平台的地位，对TensorRT-LLM、SGLang等竞品形成压力；同时也表明DeepSeek R1在企业部署中的需求量已足以驱动vLLM核心团队专项优化。预计正式版v0.21.0发布后30天内，主流云厂商托管推理服务将跟进支持该</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-10 15:39</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://github.com/vllm-project/vllm/releases/tag/v0.20.2" target="_blank" rel="noopener">vLLM v0.20.2发布：修复DeepSeek V4和Qwen3-VL关键缺陷</a>
-                </h3>
-                <div class="tl-event-meta">vLLM Releases </div>
-                <p class="tl-event-summary">vLLM发布v0.20.2补丁版本，修复DeepSeek V4稀疏注意力挂起、KV缓存分配失败及Qwen3-VL重载崩溃等问题。</p>
-                <p class="tl-event-deep">v0.20.2 的修复模式揭示出一个结构性张力：模型架构创新速度已超过推理引擎稳定化速度。三条修复线索分别对应 MoE 调度、内存管理、多模态边界三个独立子系统，意味着技术债在多个维度同步累积。短期看，高频补丁是负责任工程文化的体现；长期看，若模型多样性继续爆炸式增长，vLLM 需要更强的抽象层来隔离架构变化，否则维护成本将成为社区可持续性的瓶颈。</p>
             </div>
         </article>
 </div>

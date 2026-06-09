@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>48</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>51</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (4)</h2>
     
@@ -162,8 +162,53 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (44)</h2>
+    <h2 class="tl-section">📰 一般动态 (47)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-09 17:11</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9574" target="_blank" rel="noopener">llama.cpp修复统一KV缓存下槽位清理导致的推理效率问题</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24190，修复统一KV缓存模式下错误清理槽位导致VRAM数据未写入RAM、引发冗余预处理的bug。</p>
+                <p class="tl-event-deep">这是一个典型的并发状态管理bug，影响面集中在多槽位并发推理场景（API server模式）。对于单用户本地运行影响有限，但对于部署llama.cpp作为多用户推理后端的场景（如LocalAI、Ollama等基于llama.cpp的服务），修复后并发吞吐量应有可感知的改善。统一KV缓存是llama.cpp近期的重要架构演进方向，此类边界case修复是该功能走向生产稳定的必经过程，预计未来30天内还会有类似的槽位管理细节修复合入。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-09 16:08</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9572" target="_blank" rel="noopener">llama.cpp修复rms_norm_back原地别名下错误输出</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp修复了ggml-cpu中rms_norm_back在原地内存别名情况下产生错误输出的bug。</p>
+                <p class="tl-event-deep">这类静默数值错误（silent numerical bug）危害极高——推理不报错、训练loss看似收敛，但梯度实际已损坏，用户极难自行发现。随着llama.cpp在本地微调场景（QLoRA/full fine-tune）的渗透率提升，该bug的实际影响范围可能远超预期。预计未来30天内使用llama.cpp做微调的开发者（如axolotl/llama-factory等上层框架用户）应尽快更新版本；依赖旧版ggml的下游fork（如ollama内嵌版本）是否同步修复值得关注。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-09 12:18</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9570" target="_blank" rel="noopener">llama.cpp新增WebGPU代码格式化CI流水线</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp项目新增ggml-webgpu模块的clang-format代码格式化CI任务，扩展多平台构建矩阵。</p>
+                <p class="tl-event-deep">此PR属于工程基础设施改进，信号意义在于：WebGPU后端已从实验性代码演进到需要正式CI规范管控的阶段，说明该后端的活跃度和贡献者数量达到了需要强制格式化的临界点。对竞争格局影响有限，但WebGPU推理路线若成熟，将直接威胁需要服务端部署的推理云厂商——用户可在浏览器本地跑7B以下模型，绕过API调用。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 05:12</span>
@@ -219,7 +264,7 @@ h2.tl-section {
                     
                     <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9555" target="_blank" rel="noopener">llama.cpp修复Metal音频模型im2col一维计算缺陷</a>
                 </h3>
-                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 4 源</span></div>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 6 源</span></div>
                 <p class="tl-event-summary">llama.cpp发布修复版本，解决Metal后端im2col一维卷积在音频模型上的计算错误。</p>
                 <p class="tl-event-deep">此类底层算子修复属于llama.cpp的常态维护，但对苹果平台音频AI应用有实际价值：本地运行Whisper是macOS用户最常见的llama.cpp音频使用场景，此前Metal路径的静默错误会让用户得到错误转录结果而不自知。短期内预计whisper.cpp和依赖llama.cpp Metal后端的iOS应用会跟进更新。整体看这是框架成熟度提升的信号，而非战略性事件。</p>
             </div>
