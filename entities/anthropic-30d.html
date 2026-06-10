@@ -97,10 +97,25 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Anthropic</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>119</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>121</b> 个事件</p>
 
-    <h2 class="tl-section">⭐ 重要事件 (14)</h2>
+    <h2 class="tl-section">⭐ 重要事件 (15)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 16:21</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://news.ycombinator.com/item?id=48473166" target="_blank" rel="noopener">AWS Bedrock拟要求用户向Anthropic共享数据以使用Mythos等新模型</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">AWS Bedrock平台计划强制要求企业用户在使用Anthropic旗下Mythos及未来新模型时，向Anthropic共享用户数据。</p>
+                <p class="tl-event-deep">这一政策的真正风险在于它破坏了"AWS作为中立托管层"的信任模型。企业选择Bedrock而非直接调用Anthropic API，部分动机正是希望数据留在自己控制的AWS账号内。若新模型强制数据共享，等于宣告这一区隔消失。接下来60天最可能发生的是：1）金融/医疗大客户向AWS施压要求opt-out条款；2）竞争对手（Google Vertex AI、Azure AI）借机强调各自的数据隔离承诺抢占合规敏感客户；3）Anthropic需公开说明所收数据类型与用途，否则企业合规部</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-10 04:37</span>
@@ -312,8 +327,38 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (105)</h2>
+    <h2 class="tl-section">📰 一般动态 (106)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 07:17</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://techcrunch.com/2026/06/09/how-justin-ernest-invested-nearly-500m-into-hot-startups-without-a-traditional-vc-fund/" target="_blank" rel="noopener">Sabertooth VC创始人：如何用5亿美元投资Anthropic等热门初创公司</a>
+                </h3>
+                <div class="tl-event-meta">TechCrunch AI </div>
+                <p class="tl-event-summary">Sabertooth VC创始人Justin Ernest通过自建LP网络而非传统基金，向Anthropic、Anduril、SpaceX等公司投入近5亿美元。</p>
+                <p class="tl-event-deep">Sabertooth模式的崛起折射出一个深层趋势：在AI超级周期中，**稀缺的不是资本，而是「进入权」**。真正的护城河从「管理几亿美元的基金」转移到「谁能稳定获得下一轮Anthropic的分配额度」。这对传统中型VC构成结构性威胁——他们既无法与a16z/红杉的品牌竞争，又在速度和灵活性上输给Sabertooth这类轻资产中介。未来五年，类似模式预计会大量涌现，同时监管压力也将随之加大。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 06:27</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://simonwillison.net/2026/Jun/9/llm/#atom-everything" target="_blank" rel="noopener">LLM工具0.32a3发布：几乎由Claude Fable 5全程编写</a>
+                </h3>
+                <div class="tl-event-meta">Simon Willison </div>
+                <p class="tl-event-summary">Simon Willison发布LLM命令行工具0.32a3版本，该版本代码几乎完全由Claude Fable 5生成。</p>
+                <p class="tl-event-deep">这是Claude Fable 5发布后首批来自可信开源社区的真实编码验证案例之一。Simon Willison的影响力意味着这篇写作将在开发者圈广泛传播，效果等同于高价值背书。接下来30天内，预计会有更多知名开发者跟进公开"AI写了我X%的代码"类记录，形成Fable 5实战口碑积累。对Cursor/GitHub Copilot等AI编程工具的竞争格局也有压力——当底层模型能力跃升到独立完成版本发布，wrapper工具的差异化空间被压缩。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-10 05:35</span>
@@ -1872,21 +1917,6 @@ h2.tl-section {
                 <div class="tl-event-meta">Techmeme </div>
                 <p class="tl-event-summary">一位Anthropic工程师撰文指出，HTML在信息密度、分享便利性和双向交互方面优于Markdown，更适合作为AI智能体的输出格式。</p>
                 <p class="tl-event-deep">此论点标志着 AI 输出范式的结构性转变：从</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-11 19:10</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://www.techmeme.com/260511/p15#a260511p15" target="_blank" rel="noopener">欧盟委员会与OpenAI和Anthropic洽谈获取最新AI模型</a>
-                </h3>
-                <div class="tl-event-meta">Techmeme </div>
-                <p class="tl-event-summary">欧盟委员会正与OpenAI和Anthropic就访问其最新AI模型展开持续谈判，OpenAI已主动提出提供访问权限。</p>
-                <p class="tl-event-deep">这一事件标志着欧盟AI战略从"纯监管"向"监管+使用"双轨转型。短期看，OpenAI通过主动姿态获得监管对话的先发优势，有望在《AI法案》细则制定中争取更有利的解释空间；长期看，若欧盟机构深度依赖美国模型，将削弱其推动</p>
             </div>
         </article>
 </div>
