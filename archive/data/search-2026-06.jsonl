@@ -347,3 +347,17 @@
 {"i": "evt_adec189f6355755ee881e2aa", "d": "2026-06-10-pm", "t": "塔塔主席预测AI智能体将削减TCS一半就业岗位", "k": "app", "m": 1}
 {"i": "evt_4b243617a8b6ef50ac55806b", "d": "2026-06-10-pm", "t": "SK海力士计划最快8月赴美上市，借AI芯片需求热潮融资扩产", "k": "biz", "m": 1}
 {"i": "evt_f56ba0063b6c13fddf15a872", "d": "2026-06-10-pm", "t": "谷歌Gemini亮相世界杯：阿根廷队成AI技术试验场", "k": "app", "m": 3}
+{"i": "evt_0ea53fe6f369dedc66f5575a", "d": "2026-06-10-pm", "t": "Anthropic披露Fable 5内置隐形安全护栏：限制前沿模型开发能力", "k": "research", "m": 4}
+{"i": "evt_9de0ffc694aba03041525092", "d": "2026-06-10-pm", "t": "爱尔兰车队AI安全平台CameraMatics完成4900万欧元融资", "k": "biz", "m": 3}
+{"i": "evt_90b841c847d90f9632eaa2c3", "d": "2026-06-10-pm", "t": "AI安全初创Pi融资3500万美元，xAI为首批客户", "k": "biz", "m": 3}
+{"i": "evt_280372f5153982b466bf815b", "d": "2026-06-10-pm", "t": "llama.cpp修复LFM2模型忽略JSON Schema响应格式的缺陷", "k": "infra", "m": 2}
+{"i": "evt_83fde475d6bf7789efe7f23b", "d": "2026-06-10-pm", "t": "llama.cpp修复CUDA SSM扫描数据竞争缺陷", "k": "infra", "m": 2}
+{"i": "evt_889ded80bbc65d0997ee5532", "d": "2026-06-10-pm", "t": "Jeremy Howard批评Anthropic：递归AI自我改进应民主化", "k": "other", "m": 1}
+{"i": "evt_46fa625351eb31636f40bf65", "d": "2026-06-10-pm", "t": "英伟达发布AI工厂电池储能系统生产级设计指南", "k": "other", "m": 1}
+{"i": "evt_8c0dcc1c7295cef15fd45e99", "d": "2026-06-10-pm", "t": "分解AI算力架构：突破Token生成速率瓶颈", "k": "infra", "m": 1}
+{"i": "evt_418fe3976fb80ef1eda5b561", "d": "2026-06-10-pm", "t": "德国人形机器人独角兽Neura Robotics完成14亿美元融资，估值约70亿", "k": "biz", "m": 1}
+{"i": "evt_e497f2833be7b51fcc7dfe82", "d": "2026-06-10-pm", "t": "华纳音乐集团收购AI归因初创公司Sureel以追踪训练数据使用", "k": "biz", "m": 1}
+{"i": "evt_450b28c2a09b54309474579b", "d": "2026-06-10-pm", "t": "Dario Amodei只有一个直属下属，Anthropic日常运营由Daniela主导", "k": "other", "m": 1}
+{"i": "evt_24e613cdd77dbefae60ae1c0", "d": "2026-06-10-pm", "t": "0.01欧元转账可劫持银行AI智能体的安全漏洞披露", "k": "app", "m": 1}
+{"i": "evt_9a39e8084a7a9f3af9cf4ad5", "d": "2026-06-10-pm", "t": "HiDream-O1-Image-1.5登顶文生图榜单，中国第一全球第二超越谷歌英伟达", "k": "other", "m": 1}
+{"i": "evt_ddd37575ab373cf18b1b5527", "d": "2026-06-10-pm", "t": "火山引擎联手周星驰比高集团，推出AI视频IP版权合作平台", "k": "gov", "m": 1}

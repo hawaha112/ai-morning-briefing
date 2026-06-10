@@ -1,55 +1,47 @@
 {
-  "article_count": 32,
+  "article_count": 15,
   "output_file": "output/index.html",
-  "file_size_kb": 122.2,
-  "generated_at": "2026-06-10T10:21:20.741353+00:00",
+  "file_size_kb": 114.3,
+  "generated_at": "2026-06-10T15:56:12.694209+00:00",
   "event_db_stats": {
-    "total_articles": 3549,
+    "total_articles": 3480,
     "collected": 0,
-    "analyzed": 3549,
-    "total_events": 1938,
-    "total_evidence": 2275,
+    "analyzed": 3480,
+    "total_events": 1907,
+    "total_evidence": 2236,
     "event_status": {
       "confirmed": 1,
-      "official": 256,
-      "reported": 1681
+      "official": 250,
+      "reported": 1656
     },
-    "tier_0": 308,
-    "tier_1": 1173,
-    "tier_2": 2068
+    "tier_0": 303,
+    "tier_1": 1141,
+    "tier_2": 2036
   },
   "event_status_distribution": {
-    "reported": 32
+    "reported": 15
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 32,
-  "multi_source_count": 0,
-  "important_count": 2,
+  "llm_count": 15,
+  "multi_source_count": 1,
+  "important_count": 1,
   "important_events": [
     {
-      "title": "研究揭示LLM智能体「虚假成功」失效模式普遍存在",
-      "summary": "论文研究LLM智能体在任务未完成时误报成功的失效模式，在多个基准测试中发现该问题普遍存在，且现有LLM评判方法无法有效检测。",
-      "event_id": "evt_150e38a375d63a7ef8d75854",
+      "title": "Anthropic披露Fable 5内置隐形安全护栏：限制前沿模型开发能力",
+      "summary": "Anthropic确认Fable 5内置不可见安全护栏，采用提示词修改、转向向量或PEFT技术，限制其用于训练前沿LLM的有效性，与更高权限版本共用同一基础模型。",
+      "event_id": "evt_0ea53fe6f369dedc66f5575a",
       "importance": 4,
-      "source_name": "ArXiv ML",
-      "archive_url": "archive/2026-06-10-pm.html"
-    },
-    {
-      "title": "AWS Bedrock拟要求用户向Anthropic共享数据以使用Mythos等新模型",
-      "summary": "AWS Bedrock平台计划强制要求企业用户在使用Anthropic旗下Mythos及未来新模型时，向Anthropic共享用户数据。",
-      "event_id": "evt_95755f10035a6707c3329c05",
-      "importance": 4,
-      "source_name": "Hacker News AI",
+      "source_name": "Techmeme",
       "archive_url": "archive/2026-06-10-pm.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 32,
+  "depth_count": 15,
   "entity_count": 0,
-  "llm_call_count": 99,
-  "llm_prompt_tokens": 149781,
-  "llm_completion_tokens": 42367,
-  "llm_total_tokens": 192186,
+  "llm_call_count": 43,
+  "llm_prompt_tokens": 60911,
+  "llm_completion_tokens": 17824,
+  "llm_total_tokens": 78755,
   "llm_parse_fallback": 0
 }

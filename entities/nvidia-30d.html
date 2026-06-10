@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>NVIDIA</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>47</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>49</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (10)</h2>
     
@@ -252,8 +252,38 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (37)</h2>
+    <h2 class="tl-section">📰 一般动态 (39)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 22:14</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9589" target="_blank" rel="noopener">llama.cpp修复CUDA SSM扫描数据竞争缺陷</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp修复ssm_scan_f32内核中因缺少__syncthreads导致的CUDA数据竞争问题，保障共享内存读写安全。</p>
+                <p class="tl-event-deep">这类底层同步bug的危险性在于其**间歇性**——在特定GPU型号/线程调度下可能长期不触发，导致SSM模型推理结果存在隐性误差而用户毫无察觉。随着Mamba等SSM架构在llama.cpp中使用增多，此类内核级修复的价值被放大。预计30天内类似的SSM相关CUDA内核审查还会有后续PR，因为SSM的循环状态更新模式天然比Transformer attention更容易踩共享内存复用的坑。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 23:00</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260610/p38#a260610p38" target="_blank" rel="noopener">德国人形机器人独角兽Neura Robotics完成14亿美元融资，估值约70亿</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">德国人形机器人公司Neura Robotics完成14亿美元融资，投资方包括Tether、Qualcomm、亚马逊、NVIDIA等，估值约70亿美元。</p>
+                <p class="tl-event-deep">本轮融资的核心信号不是估值，而是 NVIDIA+Amazon+Qualcomm 同时入场的战略卡位逻辑：三者都在为</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-10 03:00</span>

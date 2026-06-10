@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>56</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>58</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (5)</h2>
     
@@ -177,8 +177,38 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (51)</h2>
+    <h2 class="tl-section">📰 一般动态 (53)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 22:50</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9590" target="_blank" rel="noopener">llama.cpp修复LFM2模型忽略JSON Schema响应格式的缺陷</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp修复了LFM2/LFM2.5专用模板处理器只构建工具调用语法、静默忽略response_format中json_schema参数的bug。</p>
+                <p class="tl-event-deep">这是一个典型的「新模型专用路径遗漏通用feature」bug：llama.cpp在为LFM2添加specialized handler时，工程师只移植了tool-calling路径，遗漏了json_schema路径，属于代码审查覆盖不足。此类bug在llama.cpp这类快速迭代、支持大量异构模型的框架中较常见。影响判断：LFM2用户群体相对小众（Liquid AI模型社区影响力远不及Llama/Mistral），但结构化输出是企业部署的硬需求；此修复不改变竞争格局，属于维护</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 22:14</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9589" target="_blank" rel="noopener">llama.cpp修复CUDA SSM扫描数据竞争缺陷</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp修复ssm_scan_f32内核中因缺少__syncthreads导致的CUDA数据竞争问题，保障共享内存读写安全。</p>
+                <p class="tl-event-deep">这类底层同步bug的危险性在于其**间歇性**——在特定GPU型号/线程调度下可能长期不触发，导致SSM模型推理结果存在隐性误差而用户毫无察觉。随着Mamba等SSM架构在llama.cpp中使用增多，此类内核级修复的价值被放大。预计30天内类似的SSM相关CUDA内核审查还会有后续PR，因为SSM的循环状态更新模式天然比Transformer attention更容易踩共享内存复用的坑。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-10 02:16</span>
