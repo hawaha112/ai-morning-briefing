@@ -1,0 +1,121 @@
+{
+ "total_scored": 12,
+ "counts": {
+  "correct": 2,
+  "partially": 8,
+  "wrong": 0,
+  "unverifiable": 2
+ },
+ "accuracy_pct": 60,
+ "updated_at": "2026-06-10T15:26:51.878749+00:00",
+ "recent": [
+  {
+   "date": "2026-05-17",
+   "shift": "pm",
+   "emoji": "🧠",
+   "title": "OpenAI研究员月耗940万token仍依赖Claude = 竞品自己人量化了能力差距",
+   "verdict": "unverifiable",
+   "reason": "发表后无事件可观测OpenAI内部研究员是否切换至GPT-5，30天测试的核心条件属私有内部行为，不可从公开事件验证",
+   "evidence": ""
+  },
+  {
+   "date": "2026-05-17",
+   "shift": "pm",
+   "emoji": "💰",
+   "title": "同周AI应用双融资共5500万美元 = VC宣告基础模型军备结束，最后一英里开始计时",
+   "verdict": "partially",
+   "reason": "Factorial/Hark等后续大额应用层融资持续印证「最后一英里」热度，虚报ARR报道印证泡沫警示，但Webidoo/Nectar Social具体留存或GMV数据无公开证据",
+   "evidence": "HR软件独角兽Factorial完成1.5亿美元D轮融资，估值25亿美元；AI创业公司虚报ARR：投资人与创始人共谋的估值游戏"
+  },
+  {
+   "date": "2026-05-17",
+   "shift": "pm",
+   "emoji": "🏢",
+   "title": "SAS私有50年Goodnight身家133亿 = 伦敦AI三巨头齐聚让这笔账面财富失去了退出机会",
+   "verdict": "unverifiable",
+   "reason": "发表后无SAS相关后续事件，AI巨头伦敦聚集是否实际冲击其估值或倒逼转型无证据可循",
+   "evidence": ""
+  },
+  {
+   "date": "2026-05-17",
+   "shift": "am",
+   "emoji": "💰",
+   "title": "AI 繁荣本质是一场 1 万人的闭门分红，剩下的工程师站在出局边缘",
+   "verdict": "partially",
+   "reason": "Claude Code创始人「软件工程师头衔消失」和编程智能体成高薪人群工具印证分化方向，但90天就业数据层面的印证尚未出现",
+   "evidence": "Claude Code创始人Boris Cherny：软件工程师头衔正在消失；编程智能体找到产品契合点，成高薪人群日常工具"
+  },
+  {
+   "date": "2026-05-17",
+   "shift": "am",
+   "emoji": "🏢",
+   "title": "Brockman 回归 + ChatGPT/Codex 合并 = OpenAI 给 Cursor 的 60 天倒计时",
+   "verdict": "partially",
+   "reason": "并购路径在60天内应验，但Cursor以40亿美元年化营收强势被收购，系价值认可而非竞争压垮，与「护城河折半/等死」框架明显偏差",
+   "evidence": "SpaceX预期收购AI编程工具Cursor，年化营收突破40亿美元"
+  },
+  {
+   "date": "2026-05-17",
+   "shift": "am",
+   "emoji": "🧠",
+   "title": "Claude因过度对齐在电台实验里煽动革命，Anthropic的宪法路线是护城河，也是最大的定时炸弹",
+   "verdict": "partially",
+   "reason": "五角大楼军事红线争论与IPO期间安全标准遭质疑印证宪法路线张力持续，但AI人格失控引爆公关危机的核心预测未发生",
+   "evidence": "五角大楼拥抱自主武器与Anthropic就AI军事「红线」展开争论；Anthropic备战IPO：商业压力下AI安全标准遭质疑"
+  },
+  {
+   "date": "2026-05-16",
+   "shift": "am",
+   "emoji": "",
+   "title": "OpenAI 用产品整合+金融数据+监管信用三步同步构建最难复制的护城河",
+   "verdict": "partially",
+   "reason": "ChatGPT月活破10亿印证用户留存护城河，但金融数据整合领先竞争对手的具体证据缺失，监管利好同时施压全行业",
+   "evidence": "ChatGPT月活突破10亿，成史上最快达标应用；特朗普签署行政令：AI模型发布前须接受联邦政府审查"
+  },
+  {
+   "date": "2026-05-16",
+   "shift": "am",
+   "emoji": "",
+   "title": "Kraken 裁员 150 人成功、AI 电台全军覆没——「AI 当工具」与「AI 当主体」是两个完全不同的命题",
+   "verdict": "correct",
+   "reason": "SaaS-Bench全通过率不足4%与「虚假成功失效模式」研究双重验证工具与自主经营体之间的鸿沟依然存在",
+   "evidence": "SaaS-Bench评测揭示：Claude完全通过率不足4%，AI全自动办公仍是幻想；研究揭示LLM智能体「虚假成功」失效模式普遍存在"
+  },
+  {
+   "date": "2026-05-16",
+   "shift": "am",
+   "emoji": "",
+   "title": "AI 算力扩张同时撞上能源瓶颈与芯片地缘政治，开源成企业夺回算力主权的核心对冲工具",
+   "verdict": "partially",
+   "reason": "全球光学/芯片供应链短缺与自研芯片潮印证能源地缘瓶颈，但开源融资节奏加速作为「核心对冲」证据未见，闭源大额算力交易反而更突出",
+   "evidence": "AI需求激增引发全球光学供应链全线短缺与涨价；Apollo与黑石360亿美元债务融资为Anthropic购买TPU"
+  },
+  {
+   "date": "2026-05-15",
+   "shift": "pm",
+   "emoji": "",
+   "title": "编程智能体战场从桌面打到口袋，Claude Code已成竞争对手必须正面突破的基准",
+   "verdict": "partially",
+   "reason": "赛道竞争持续激烈，Cursor被SpaceX高价收购印证编程智能体价值，但xAI后续明确以Claude Code为对标的直接证据不足",
+   "evidence": "SpaceX预期收购AI编程工具Cursor，年化营收突破40亿美元"
+  },
+  {
+   "date": "2026-05-15",
+   "shift": "pm",
+   "emoji": "",
+   "title": "Anthropic用政策博弈和慈善合法性对冲产品速度劣势，提前绑定政府利益",
+   "verdict": "partially",
+   "reason": "政策参与持续（生物武器联署/梵蒂冈），但IPO申请和「商业压力下安全标准遭质疑」暴露护城河与商业压力的张力，出口管制受益无法短期验证",
+   "evidence": "Anthropic秘密提交IPO申请，最快今秋上市；Anthropic备战IPO：商业压力下AI安全标准遭质疑"
+  },
+  {
+   "date": "2026-05-15",
+   "shift": "pm",
+   "emoji": "",
+   "title": "中国AI在消费内容与算力自主两端构建闭环，英伟达失去中国市场的速度快于预期",
+   "verdict": "correct",
+   "reason": "中国封禁英伟达新款芯片、字节自研CPU、比亚迪4nm AI芯片齐发，消费内容与算力自主两端闭环全面印证判断",
+   "evidence": "中国封禁英伟达RTX 5090D V2芯片，黄仁勋访华期间出台；字节跳动自研CPU；比亚迪发布4nm自研AI驾驶芯片，算力宣称超越特斯拉"
+  }
+ ]
+}
