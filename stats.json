@@ -1,47 +1,63 @@
 {
-  "article_count": 15,
+  "article_count": 30,
   "output_file": "output/index.html",
-  "file_size_kb": 114.3,
-  "generated_at": "2026-06-10T15:56:12.694209+00:00",
+  "file_size_kb": 130.4,
+  "generated_at": "2026-06-10T22:17:09.119254+00:00",
   "event_db_stats": {
-    "total_articles": 3480,
+    "total_articles": 3546,
     "collected": 0,
-    "analyzed": 3480,
-    "total_events": 1907,
-    "total_evidence": 2236,
+    "analyzed": 3546,
+    "total_events": 1949,
+    "total_evidence": 2286,
     "event_status": {
       "confirmed": 1,
-      "official": 250,
-      "reported": 1656
+      "official": 265,
+      "reported": 1683
     },
-    "tier_0": 303,
-    "tier_1": 1141,
-    "tier_2": 2036
+    "tier_0": 321,
+    "tier_1": 1159,
+    "tier_2": 2066
   },
   "event_status_distribution": {
-    "reported": 15
+    "reported": 30
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 15,
+  "llm_count": 30,
   "multi_source_count": 1,
-  "important_count": 1,
+  "important_count": 3,
   "important_events": [
     {
-      "title": "Anthropic披露Fable 5内置隐形安全护栏：限制前沿模型开发能力",
-      "summary": "Anthropic确认Fable 5内置不可见安全护栏，采用提示词修改、转向向量或PEFT技术，限制其用于训练前沿LLM的有效性，与更高权限版本共用同一基础模型。",
-      "event_id": "evt_0ea53fe6f369dedc66f5575a",
+      "title": "谷歌开源扩散式大模型DiffusionGemma 26B，推理速度突破500 token/秒",
+      "summary": "谷歌将去年实验性Gemini Diffusion研究成果转化为Apache 2.0开源模型DiffusionGemma-26B，英伟达NIM云API免费托管，实测推理速度超500 token/秒。",
+      "event_id": "evt_fb8abc369eae095919550e2f",
       "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-10-pm.html"
+      "source_name": "Simon Willison",
+      "archive_url": "archive/2026-06-11-am.html"
+    },
+    {
+      "title": "Claude Fable 5拒答基础生物问题：Anthropic主动限制最强模型",
+      "summary": "Anthropic发布的Claude Fable 5因安全限制拒答基础生物学问题，转而调用旧旗舰模型Claude Opus 4.8作答。",
+      "event_id": "evt_554ef6c84799aa2aab8f6a66",
+      "importance": 4,
+      "source_name": "The Verge AI",
+      "archive_url": "archive/2026-06-11-am.html"
+    },
+    {
+      "title": "谷歌被诉用YouTube音乐训练Lyria AI却拒绝承认",
+      "summary": "独立音乐人起诉谷歌未经授权使用其YouTube上传作品训练Lyria 3音乐AI模型，谷歌申请驳回诉讼并拒绝明确承认训练数据来源。",
+      "event_id": "evt_fc75be23ee69a835ae062722",
+      "importance": 4,
+      "source_name": "The Verge AI",
+      "archive_url": "archive/2026-06-11-am.html"
     }
   ],
   "official_count": 0,
-  "depth_count": 15,
+  "depth_count": 30,
   "entity_count": 0,
-  "llm_call_count": 43,
-  "llm_prompt_tokens": 60911,
-  "llm_completion_tokens": 17824,
-  "llm_total_tokens": 78755,
+  "llm_call_count": 81,
+  "llm_prompt_tokens": 128758,
+  "llm_completion_tokens": 33927,
+  "llm_total_tokens": 162716,
   "llm_parse_fallback": 0
 }

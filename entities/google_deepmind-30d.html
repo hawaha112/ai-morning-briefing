@@ -97,14 +97,29 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Google DeepMind</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>49</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>52</b> 个事件</p>
 
-    <h2 class="tl-section">⭐ 重要事件 (4)</h2>
+    <h2 class="tl-section">⭐ 重要事件 (5)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
+                <span class="tl-date">06-11 04:00</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://simonwillison.net/2026/Jun/10/diffusiongemma/#atom-everything" target="_blank" rel="noopener">谷歌开源扩散式大模型DiffusionGemma 26B，推理速度突破500 token/秒</a>
+                </h3>
+                <div class="tl-event-meta">Simon Willison </div>
+                <p class="tl-event-summary">谷歌将去年实验性Gemini Diffusion研究成果转化为Apache 2.0开源模型DiffusionGemma-26B，英伟达NIM云API免费托管，实测推理速度超500 token/秒。</p>
+                <p class="tl-event-deep">这是扩散式语言模型路线从论文走向可用开源模型的关键节点——过去 18 个月该路线的论文数量快速增长，但始终缺乏一个「够大、够快、可商用」的参考实现。DiffusionGemma 填补了这个空白。接下来 60 天最可能发生：社区开始用它做微调基准测试，与同参数 Llama/Gemma 自回归版本做质量对比；若质量接近而速度优势保持，将有更多团队押注扩散路线。英伟达免费托管是战略绑定——把扩散式推理的参考硬件锁定在自家 GPU 生态，AMD/Intel 若不跟进优化将在这个新细分</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
                 <span class="tl-date">06-09 04:35</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -119,7 +134,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-08 16:11</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -134,7 +149,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 14:55</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -149,7 +164,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 20:38</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -162,12 +177,42 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (45)</h2>
+    <h2 class="tl-section">📰 一般动态 (47)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
-                <span class="tl-date">06-10 18:00</span>
+                <span class="tl-date">06-11 00:32</span>
                 <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/huggingface/transformers/releases/tag/v5.11.0" target="_blank" rel="noopener">Transformers v5.11.0发布：新增DiffusionGemma与DeepSeek-V3.2支持</a>
+                </h3>
+                <div class="tl-event-meta">Transformers Releases </div>
+                <p class="tl-event-summary">Hugging Face Transformers v5.11.0发布，新增DiffusionGemma（扩散式文本生成）和DeepSeek-V3.2实验性稀疏注意力模型支持。</p>
+                <p class="tl-event-deep">DiffusionGemma 与 DSA 的同时落地，揭示了一个趋势：自回归范式的垄断地位正被多路技术并行挑战。前者试图从生成机制根本上提速，后者从注意力效率切入降低长上下文成本。短期内两者均处于实验阶段，不会动摇 GPT/LLaMA 系主流地位；但若任一方向在质量-速度帕累托前沿取得突破，将直接影响推理成本结构，对依赖 token 计费的云 AI 厂商构成压力，并重新定义端侧部署的可行边界。值得持续追踪 DeepSeek DSA 的正式版发布节点。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-11 00:16</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://developer.nvidia.com/blog/run-diffusiongemma-on-nvidia-for-developer-ready-high-throughput-text-generation/" target="_blank" rel="noopener">DiffusionGemma登陆NVIDIA平台：扩散式文本生成提速</a>
+                </h3>
+                <div class="tl-event-meta">NVIDIA Developer Blog </div>
+                <p class="tl-event-summary">Google DeepMind开发的DiffusionGemma扩散语言模型在NVIDIA平台完成优化，以并行生成取代逐词自回归，提升实时AI应用吞吐量。</p>
+                <p class="tl-event-deep">DiffusionGemma的NVIDIA适配是扩散文本生成从实验室走向工程可用的关键节点。过去6个月内，Google DeepMind、苹果等多个团队在扩散LM方向密集发表，这是第三个以工程落地为目标的头部动作。若质量对齐问题在未来60-90天内有突破性进展，TensorRT-LLM等自回归推理优化工具链的市场地位将受到实质挑战；反之若质量差距持续，该路线将继续停留在利基场景（固定格式输出/批量生成），不会撼动主流部署格局。NVIDIA两边押注（自回归+扩散均深度适配）的策</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 18:00</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -182,7 +227,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 23:16</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -197,7 +242,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 22:10</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -212,7 +257,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 22:02</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -227,7 +272,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 05:12</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -242,7 +287,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 03:14</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -257,7 +302,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 02:17</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -272,7 +317,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-09 04:45</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -287,7 +332,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-06 09:15</span>
-                <span class="tl-rel">4 天前</span>
+                <span class="tl-rel">5 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -302,7 +347,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-05 19:26</span>
-                <span class="tl-rel">5 天前</span>
+                <span class="tl-rel">6 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -317,7 +362,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 23:20</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -332,7 +377,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 18:15</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -347,7 +392,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 05:41</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -362,7 +407,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 04:25</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -377,7 +422,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 23:37</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -392,7 +437,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 01:45</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -407,7 +452,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 04:00</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -422,7 +467,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-02 00:00</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -437,7 +482,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-01 04:10</span>
-                <span class="tl-rel">9 天前</span>
+                <span class="tl-rel">10 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -452,7 +497,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-30 23:30</span>
-                <span class="tl-rel">11 天前</span>
+                <span class="tl-rel">12 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -467,7 +512,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-30 14:43</span>
-                <span class="tl-rel">11 天前</span>
+                <span class="tl-rel">12 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -482,7 +527,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-30 03:07</span>
-                <span class="tl-rel">11 天前</span>
+                <span class="tl-rel">12 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -497,7 +542,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-30 03:50</span>
-                <span class="tl-rel">11 天前</span>
+                <span class="tl-rel">12 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -512,7 +557,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-28 23:00</span>
-                <span class="tl-rel">13 天前</span>
+                <span class="tl-rel">14 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -527,7 +572,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-22 23:00</span>
-                <span class="tl-rel">19 天前</span>
+                <span class="tl-rel">20 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -542,7 +587,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-22 03:46</span>
-                <span class="tl-rel">19 天前</span>
+                <span class="tl-rel">20 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -557,7 +602,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-21 23:48</span>
-                <span class="tl-rel">20 天前</span>
+                <span class="tl-rel">21 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -572,7 +617,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-21 00:41</span>
-                <span class="tl-rel">20 天前</span>
+                <span class="tl-rel">21 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -587,7 +632,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-21 00:00</span>
-                <span class="tl-rel">20 天前</span>
+                <span class="tl-rel">21 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -602,7 +647,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-20 12:00</span>
-                <span class="tl-rel">21 天前</span>
+                <span class="tl-rel">22 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -617,7 +662,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-20 04:36</span>
-                <span class="tl-rel">21 天前</span>
+                <span class="tl-rel">22 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -632,7 +677,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-20 01:45</span>
-                <span class="tl-rel">21 天前</span>
+                <span class="tl-rel">22 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -647,7 +692,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-20 01:45</span>
-                <span class="tl-rel">21 天前</span>
+                <span class="tl-rel">22 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -662,7 +707,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-20 04:05</span>
-                <span class="tl-rel">21 天前</span>
+                <span class="tl-rel">22 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -677,7 +722,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-20 02:00</span>
-                <span class="tl-rel">21 天前</span>
+                <span class="tl-rel">22 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -692,7 +737,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-20 01:45</span>
-                <span class="tl-rel">21 天前</span>
+                <span class="tl-rel">22 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -707,7 +752,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-19 13:25</span>
-                <span class="tl-rel">22 天前</span>
+                <span class="tl-rel">23 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -722,7 +767,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-19 02:21</span>
-                <span class="tl-rel">22 天前</span>
+                <span class="tl-rel">23 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -737,7 +782,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-18 03:53</span>
-                <span class="tl-rel">23 天前</span>
+                <span class="tl-rel">24 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -752,7 +797,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-16 22:30</span>
-                <span class="tl-rel">25 天前</span>
+                <span class="tl-rel">26 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -767,7 +812,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-14 02:09</span>
-                <span class="tl-rel">27 天前</span>
+                <span class="tl-rel">28 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -782,7 +827,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-13 16:29</span>
-                <span class="tl-rel">28 天前</span>
+                <span class="tl-rel">29 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -797,7 +842,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-13 02:03</span>
-                <span class="tl-rel">28 天前</span>
+                <span class="tl-rel">29 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -812,7 +857,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-13 01:01</span>
-                <span class="tl-rel">28 天前</span>
+                <span class="tl-rel">29 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -827,7 +872,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-13 01:00</span>
-                <span class="tl-rel">28 天前</span>
+                <span class="tl-rel">29 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
