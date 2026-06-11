@@ -1,0 +1,106 @@
+name: HQ Audio Remaster (Qwen3)
+# 两段式口播的第二步(本仓=公开仓, Actions 分钟不限量):
+# 主仓每班部署 archive/data/hq_job.json(+broadcast-{shift}.txt) 触发本工作流,
+# 用 Qwen3-TTS-0.6B(用户盲听最佳"E", 纯 C 引擎, CPU 慢 ~75-90 分钟)重制口播音频,
+# 覆盖 archive/audio/ 同名 mp3(页面 <audio> 自动升级), 写 hq_done.json。
+# 失败/超预算 → 不覆盖, 保留快引擎(Kokoro)版本, 零影响。
+
+on:
+  workflow_dispatch: {}
+  push:
+    paths:
+      - 'archive/data/hq_job.json'
+
+concurrency:
+  group: hq-audio
+  cancel-in-progress: true   # 新班次任务到达时, 还在磨上一班的旧任务直接让位
+
+permissions:
+  contents: write
+
+jobs:
+  remaster:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    env:
+      TZ: Asia/Shanghai
+      BROADCAST_ENGINE: qwen3
+      BROADCAST_VOICE: vivian
+      BROADCAST_NO_FALLBACK: 'true'
+      QWEN3_TTS_BIN: /tmp/qwen3-tts-engine/qwen_tts
+      QWEN3_TTS_MODEL: ${{ github.workspace }}/tools/models/qwen3-tts-0.6b
+      QWEN3_BUDGET_SEC: '7200'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read job + dedup check
+        id: job
+        run: |
+          [ -f archive/data/hq_job.json ] || { echo "skip=true" >> "$GITHUB_OUTPUT"; echo "无 hq_job"; exit 0; }
+          DATE=$(python3 -c "import json;print(json.load(open('archive/data/hq_job.json'))['date'])")
+          SHIFT=$(python3 -c "import json;print(json.load(open('archive/data/hq_job.json'))['shift'])")
+          SHA=$(python3 -c "import json;print(json.load(open('archive/data/hq_job.json'))['sha'])")
+          DONE_SHA=$(python3 -c "import json;print(json.load(open('archive/data/hq_done.json')).get('sha',''))" 2>/dev/null || echo "")
+          if [ "$SHA" = "$DONE_SHA" ]; then echo "skip=true" >> "$GITHUB_OUTPUT"; echo "该任务已完成过($SHA), 跳过"; exit 0; fi
+          [ -f "archive/data/broadcast-${SHIFT}.txt" ] || { echo "skip=true" >> "$GITHUB_OUTPUT"; echo "无口播文本"; exit 0; }
+          { echo "skip=false"; echo "date=$DATE"; echo "shift=$SHIFT"; echo "sha=$SHA"; } >> "$GITHUB_OUTPUT"
+          echo "任务: $DATE $SHIFT ($SHA)"
+
+      - uses: actions/setup-python@v5
+        if: steps.job.outputs.skip != 'true'
+        with:
+          python-version: '3.12'
+
+      - name: Deps
+        if: steps.job.outputs.skip != 'true'
+        run: |
+          pip install -q mutagen
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libopenblas-dev
+
+      - name: Cache Qwen3 model
+        if: steps.job.outputs.skip != 'true'
+        uses: actions/cache@v4
+        with:
+          path: tools/models/qwen3-tts-0.6b
+          key: qwen3-tts-0.6b-customvoice
+
+      - name: Build engine + fetch model
+        if: steps.job.outputs.skip != 'true'
+        run: |
+          set -e
+          git clone -q --depth 1 https://github.com/gabriele-mastrapasqua/qwen3-tts /tmp/q3src
+          make -C /tmp/q3src blas -j4 > /dev/null
+          mkdir -p /tmp/qwen3-tts-engine && cp /tmp/q3src/qwen_tts /tmp/qwen3-tts-engine/
+          if [ ! -f "$QWEN3_TTS_MODEL/model.safetensors" ]; then
+            echo "模型未命中缓存, 下载 ~1.8GB..."
+            cd /tmp/q3src && ./download_model.sh --model small --dir "$QWEN3_TTS_MODEL"
+          fi
+
+      - name: Remaster
+        if: steps.job.outputs.skip != 'true'
+        working-directory: tools
+        env:
+          BRIEFING_SHIFT: ${{ steps.job.outputs.shift }}
+        run: |
+          mkdir -p output
+          cp "../archive/data/broadcast-${{ steps.job.outputs.shift }}.txt" output/broadcast.txt
+          time python3 tts_broadcast.py "archive/audio/hq.mp3"
+          ls -la output/archive/audio/hq.mp3 || { echo "::warning::E 引擎未产出(超预算/失败), 保留快引擎版本"; exit 0; }
+
+      - name: Publish (覆盖同名 mp3 + 完成标记)
+        if: steps.job.outputs.skip != 'true'
+        run: |
+          SRC=tools/output/archive/audio/hq.mp3
+          [ -f "$SRC" ] || { echo "无产出, 跳过发布"; exit 0; }
+          DEST="archive/audio/${{ steps.job.outputs.date }}-${{ steps.job.outputs.shift }}.mp3"
+          cp "$SRC" "$DEST"
+          printf '{"date":"%s","shift":"%s","sha":"%s","audio":"%s"}\n' \
+            "${{ steps.job.outputs.date }}" "${{ steps.job.outputs.shift }}" \
+            "${{ steps.job.outputs.sha }}" "$DEST" > archive/data/hq_done.json
+          git config user.email "action@github.com"
+          git config user.name "hq-audio"
+          git add "$DEST" archive/data/hq_done.json
+          git commit -m "hq-audio: ${{ steps.job.outputs.date }}-${{ steps.job.outputs.shift }} 升级为 Qwen3(E) 版"
+          git push origin main || { git pull --rebase origin main && git push origin main; }
+          echo "✅ 已发布 E 版: $DEST"
