@@ -1,48 +1,39 @@
 {
-  "article_count": 33,
+  "article_count": 38,
   "output_file": "output/index.html",
-  "file_size_kb": 131.6,
-  "generated_at": "2026-06-11T10:28:19.578694+00:00",
+  "file_size_kb": 133.9,
+  "generated_at": "2026-06-11T22:16:49.784941+00:00",
   "event_db_stats": {
-    "total_articles": 3591,
+    "total_articles": 3627,
     "collected": 0,
-    "analyzed": 3591,
-    "total_events": 1972,
-    "total_evidence": 2308,
+    "analyzed": 3627,
+    "total_events": 1997,
+    "total_evidence": 2341,
     "event_status": {
       "confirmed": 1,
-      "official": 273,
-      "reported": 1698
+      "official": 296,
+      "reported": 1700
     },
-    "tier_0": 327,
-    "tier_1": 1170,
-    "tier_2": 2094
+    "tier_0": 356,
+    "tier_1": 1173,
+    "tier_2": 2098
   },
   "event_status_distribution": {
-    "official": 3,
-    "reported": 30
+    "official": 13,
+    "reported": 25
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 33,
-  "multi_source_count": 0,
-  "important_count": 1,
-  "important_events": [
-    {
-      "title": "Fable 5内置反蒸馏机制：检测即降智，误触率高引发用户忧虑",
-      "summary": "Anthropic新旗舰模型Fable 5被曝内置反蒸馏保护机制，检测到疑似蒸馏行为即静默降低输出质量，但误触率极高，大量普通用户受波及。",
-      "event_id": "evt_c4f4a620b9989cb207461e2e",
-      "importance": 4,
-      "source_name": "量子位",
-      "archive_url": "archive/2026-06-11-pm.html"
-    }
-  ],
-  "official_count": 3,
-  "depth_count": 31,
+  "llm_count": 38,
+  "multi_source_count": 3,
+  "important_count": 0,
+  "important_events": [],
+  "official_count": 13,
+  "depth_count": 38,
   "entity_count": 0,
-  "llm_call_count": 95,
-  "llm_prompt_tokens": 145680,
-  "llm_completion_tokens": 38941,
-  "llm_total_tokens": 184666,
-  "llm_parse_fallback": 0
+  "llm_call_count": 112,
+  "llm_prompt_tokens": 163608,
+  "llm_completion_tokens": 43350,
+  "llm_total_tokens": 207004,
+  "llm_parse_fallback": 1
 }
