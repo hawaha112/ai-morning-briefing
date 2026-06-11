@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>59</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>60</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (5)</h2>
     
@@ -177,8 +177,23 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (54)</h2>
+    <h2 class="tl-section">📰 一般动态 (55)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-11 16:28</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9594" target="_blank" rel="noopener">llama.cpp重构词汇规范化器标志并新增strip_accents选项</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24371，将词汇规范化器标志重构为选项结构体，并新增strip_accents功能。</p>
+                <p class="tl-event-deep">这是llama.cpp日常工程维护类PR，技术影响局限于词汇处理层。strip_accents的加入表明llama.cpp正在对齐更多BERT/XLM系列模型的tokenizer行为——这类模型在多语言任务上仍有大量部署存量。格局层面无实质影响，但持续的模块化重构（flags→options struct）反映llama.cpp在代码库规模扩大后的工程债清偿节奏，有助于后续支持更复杂的tokenizer变体（如SentencePiece的多选项组合）。30天内不会产生用户可感</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 04:56</span>

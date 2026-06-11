@@ -1424,7 +1424,7 @@ body.show-read .is-read:hover {
     <div class="h-stats">
         <span><b>33</b> 篇</span>
         <span><b>15</b> 源</span>
-        <a href="archive/dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
+        <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
 </header>
@@ -1433,10 +1433,10 @@ body.show-read .is-read:hover {
 
 
 <!-- 今日导览：一眼可记的版块地图 + 跳转(sticky, 滚动高亮当前板块) -->
-<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-glance">⚡ 速览</a><a class="tn-link" href="#sec-judgment">🎯 判断</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link tn-history" href="archive/dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
+<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-glance">⚡ 速览</a><a class="tn-link" href="#sec-judgment">🎯 判断</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link tn-history" href="dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
 
 <!-- 🎧 今日音频版：嵌入早报顶部，打开即听（约 5-6 分钟）；缺失时 onerror 自动隐藏 -->
-<div class="bc-audio-wrap audio-top"><audio class="bc-player" controls preload="metadata" src="archive/audio/2026-06-11-pm.mp3" onerror="var w=this.closest('.bc-audio-wrap');if(w)w.hidden=true"></audio><p class="bc-hint">🎧 今日音频版 · 约 5-6 分钟听完全天 · 文字稿在页底 🎙</p></div>
+<div class="bc-audio-wrap audio-top"><audio class="bc-player" controls preload="metadata" src="audio/2026-06-11-pm.mp3" onerror="var w=this.closest('.bc-audio-wrap');if(w)w.hidden=true"></audio><p class="bc-hint">🎧 今日音频版 · 约 5-6 分钟听完全天 · 文字稿在页底 🎙</p></div>
 
 <!-- 标签筛选状态条：点卡片上的层面/主题标签即筛选，仅在筛选时显示，点此清除 -->
 <div id="filter-active" class="filter-active" hidden></div>
@@ -1837,7 +1837,7 @@ body.show-read .is-read:hover {
 
 <!-- ⑥ 实体追踪 (P1) — 30 天动态时间线入口 -->
 <section id="sec-entity" class="page-sec">
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">130</span></a><a class="et-chip" href="entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">101</span></a><a class="et-chip" href="entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">60</span></a><a class="et-chip" href="entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">54</span></a><a class="et-chip" href="entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">49</span></a><a class="et-chip" href="entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">19</span></a><a class="et-chip" href="entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">16</span></a><a class="et-chip" href="entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">13</span></a><a class="et-chip" href="entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">12</span></a><a class="et-chip" href="entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">8</span></a><a class="et-chip" href="entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">3</span></a></div></section>
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">130</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">101</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">60</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">54</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">49</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">19</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">16</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">13</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">12</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">8</span></a><a class="et-chip" href="../entities/key_researchers-30d.html"><span class="et-icon">🏢</span><span class="et-name">核心研究者</span><span class="et-count">3</span></a></div></section>
 </section>
 
 <!-- ⑦ 今日口播稿 (C) — 60-90 秒口语稿, 供音频/短视频取用; 仅 meta.broadcast_script 有值时渲染 -->
@@ -1896,7 +1896,7 @@ body.show-read .is-read:hover {
 <!-- Footer -->
 <footer class="footer">
     AI 晚报 · <b>15</b> 个信息源 · <b>33</b> 篇资讯 · 2026年06月11日
-    · <a href="archive/dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
+    · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
 <!-- modal_data.js 不在首屏加载；在 openModal() 首次被调用时由 script.js 动态注入 -->
@@ -2014,7 +2014,7 @@ function ensureModalData(cb) {
     }
     __dataLoading = true;
     var s = document.createElement('script');
-    s.src = 'modal_data.js';
+    s.src = '2026-06-11-pm_modal.js';
     s.onload = function() { cb(); };
     s.onerror = function() { console.error('failed to load modal_data.js'); };
     document.head.appendChild(s);

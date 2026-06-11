@@ -1,63 +1,48 @@
 {
-  "article_count": 30,
+  "article_count": 33,
   "output_file": "output/index.html",
-  "file_size_kb": 130.4,
-  "generated_at": "2026-06-10T22:17:09.119254+00:00",
+  "file_size_kb": 131.6,
+  "generated_at": "2026-06-11T10:28:19.578694+00:00",
   "event_db_stats": {
-    "total_articles": 3546,
+    "total_articles": 3591,
     "collected": 0,
-    "analyzed": 3546,
-    "total_events": 1949,
-    "total_evidence": 2286,
+    "analyzed": 3591,
+    "total_events": 1972,
+    "total_evidence": 2308,
     "event_status": {
       "confirmed": 1,
-      "official": 265,
-      "reported": 1683
+      "official": 273,
+      "reported": 1698
     },
-    "tier_0": 321,
-    "tier_1": 1159,
-    "tier_2": 2066
+    "tier_0": 327,
+    "tier_1": 1170,
+    "tier_2": 2094
   },
   "event_status_distribution": {
+    "official": 3,
     "reported": 30
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 30,
-  "multi_source_count": 1,
-  "important_count": 3,
+  "llm_count": 33,
+  "multi_source_count": 0,
+  "important_count": 1,
   "important_events": [
     {
-      "title": "谷歌开源扩散式大模型DiffusionGemma 26B，推理速度突破500 token/秒",
-      "summary": "谷歌将去年实验性Gemini Diffusion研究成果转化为Apache 2.0开源模型DiffusionGemma-26B，英伟达NIM云API免费托管，实测推理速度超500 token/秒。",
-      "event_id": "evt_fb8abc369eae095919550e2f",
+      "title": "Fable 5内置反蒸馏机制：检测即降智，误触率高引发用户忧虑",
+      "summary": "Anthropic新旗舰模型Fable 5被曝内置反蒸馏保护机制，检测到疑似蒸馏行为即静默降低输出质量，但误触率极高，大量普通用户受波及。",
+      "event_id": "evt_c4f4a620b9989cb207461e2e",
       "importance": 4,
-      "source_name": "Simon Willison",
-      "archive_url": "archive/2026-06-11-am.html"
-    },
-    {
-      "title": "Claude Fable 5拒答基础生物问题：Anthropic主动限制最强模型",
-      "summary": "Anthropic发布的Claude Fable 5因安全限制拒答基础生物学问题，转而调用旧旗舰模型Claude Opus 4.8作答。",
-      "event_id": "evt_554ef6c84799aa2aab8f6a66",
-      "importance": 4,
-      "source_name": "The Verge AI",
-      "archive_url": "archive/2026-06-11-am.html"
-    },
-    {
-      "title": "谷歌被诉用YouTube音乐训练Lyria AI却拒绝承认",
-      "summary": "独立音乐人起诉谷歌未经授权使用其YouTube上传作品训练Lyria 3音乐AI模型，谷歌申请驳回诉讼并拒绝明确承认训练数据来源。",
-      "event_id": "evt_fc75be23ee69a835ae062722",
-      "importance": 4,
-      "source_name": "The Verge AI",
-      "archive_url": "archive/2026-06-11-am.html"
+      "source_name": "量子位",
+      "archive_url": "archive/2026-06-11-pm.html"
     }
   ],
-  "official_count": 0,
-  "depth_count": 30,
+  "official_count": 3,
+  "depth_count": 31,
   "entity_count": 0,
-  "llm_call_count": 81,
-  "llm_prompt_tokens": 128758,
-  "llm_completion_tokens": 33927,
-  "llm_total_tokens": 162716,
+  "llm_call_count": 95,
+  "llm_prompt_tokens": 145680,
+  "llm_completion_tokens": 38941,
+  "llm_total_tokens": 184666,
   "llm_parse_fallback": 0
 }
