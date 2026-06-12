@@ -491,3 +491,39 @@
 {"i": "evt_eb987f2fa721f4fc76edd7c8", "d": "2026-06-12-pm", "t": "Avataar AI推出面向印度市场的低价视频生成模型", "k": "biz", "m": 1}
 {"i": "evt_6eceecaca683cd1fe41ca60a", "d": "2026-06-12-pm", "t": "Theker完成8500万美元融资，打造通用可重构工厂机器人", "k": "biz", "m": 1}
 {"i": "evt_2e019462d483b9ad086c07ca", "d": "2026-06-12-pm", "t": "苹果iOS 27相机主管谈AI生成像素：超能力还是噱头", "k": "other", "m": 1}
+{"i": "evt_1f122debc2beeaed5376026b", "d": "2026-06-13-am", "t": "SpaceX将Colossus 1数据中心租给Anthropic，因内部延迟问题放弃自用", "k": "biz", "m": 4}
+{"i": "evt_0ed9061f6dbfa39836bdb042", "d": "2026-06-13-am", "t": "Anthropic与OpenAI同期IPO：AI独角兽集体冲击公开市场", "k": "biz", "m": 4}
+{"i": "evt_bd3991a2734bd849609f2dd4", "d": "2026-06-13-am", "t": "欧盟技术主权计划落地：中国云与芯片企业面临新壁垒", "k": "gov", "m": 4}
+{"i": "evt_cf363367ab45b4d9738ebc8e", "d": "2026-06-13-am", "t": "Google DeepMind启动机器人加速器，欧洲15家初创入选", "k": "app", "m": 3}
+{"i": "evt_2d2946ef2e7dcbfa36bf4f3e", "d": "2026-06-13-am", "t": "OpenAI开发者文档新增智能体问答导航功能", "k": "app", "m": 3}
+{"i": "evt_ccd56fef5d2e852746a80193", "d": "2026-06-13-am", "t": "Hugging Face演示Reachy Mini机器人结合Gemini Live与Gemma 4本地运行", "k": "app", "m": 3}
+{"i": "evt_7baf1923b0ea074f54ca8ce3", "d": "2026-06-13-am", "t": "OpenAI Codex助企业并行更新网站，工期从一周压缩至三天", "k": "app", "m": 3}
+{"i": "evt_84b79f7bca9656429d3fc061", "d": "2026-06-13-am", "t": "OpenAI Codex推出智能体自定义指南生成功能", "k": "app", "m": 3}
+{"i": "evt_256a4e0c3f89e0717a7d5144", "d": "2026-06-13-am", "t": "MiniMax在Hugging Face发布自研算子库MSA", "k": "other", "m": 3}
+{"i": "evt_c0a783370fcd7d9fb08d3bd0", "d": "2026-06-13-am", "t": "MiniMax M3开源发布：428B参数专为智能体时代构建", "k": "app", "m": 3}
+{"i": "evt_7a020841fccf2da3f1e1d7e7", "d": "2026-06-13-am", "t": "Hugging Face发布RF-DETR视觉微调教程：卫星图像与移动UI检测", "k": "model", "m": 3}
+{"i": "evt_29219d76270f641ab56fa567", "d": "2026-06-13-am", "t": "月之暗面发布Kimi-K2.7-Code代码专项模型", "k": "model", "m": 3}
+{"i": "evt_dd73139d2e3dcd4c1e4b506e", "d": "2026-06-13-am", "t": "OpenAI Academy推出三门AI职场技能新课程", "k": "other", "m": 3}
+{"i": "evt_eb0eab8421341aeb0de65210", "d": "2026-06-13-am", "t": "Unsloth优化DiffusionGemma本地推理速度提升1.8倍", "k": "infra", "m": 3}
+{"i": "evt_8c8d224598842461ccbe96e7", "d": "2026-06-13-am", "t": "xAI与NVIDIA深化合作，算力伙伴关系再升级", "k": "biz", "m": 3}
+{"i": "evt_19f91cb095086a8a12a8fb85", "d": "2026-06-13-am", "t": "Meta新AI部门内部混乱：高管员工均陷战略迷失", "k": "biz", "m": 3}
+{"i": "evt_2c92b60027b3258617a2d3fd", "d": "2026-06-13-am", "t": "前DeepMind员工Sottiaux主导OpenAI超级应用战略整合", "k": "biz", "m": 3}
+{"i": "evt_1db84201bc6ec5ab4acbc995", "d": "2026-06-13-am", "t": "Niantic将宝可梦GO玩家扫描数据用于军用无人机导航研发", "k": "gov", "m": 3}
+{"i": "evt_bd9e1066b73dcdc140fb0fc5", "d": "2026-06-13-am", "t": "llmda.ai吸引芯片业老将Kurt Shuler重返职场", "k": "biz", "m": 2}
+{"i": "evt_6a2f248f39db413eca1dc0cb", "d": "2026-06-13-am", "t": "NVIDIA在首个智能体AI基准测试中夺得编程性能第一", "k": "research", "m": 1}
+{"i": "evt_1cc3771811eb7ecd19d361de", "d": "2026-06-13-am", "t": "讽刺短文揭露AI投资数字游戏与泡沫逻辑", "k": "biz", "m": 1}
+{"i": "evt_68352a2da575528301974c14", "d": "2026-06-13-am", "t": "谷歌研究：用AI帮助用户识别与理解皮肤问题", "k": "research", "m": 1}
+{"i": "evt_d4c3827dd3c84a8139b81599", "d": "2026-06-13-am", "t": "前DOGE工程师创业获a16z等融资1.3亿美元，以AI保障政府系统安全", "k": "biz", "m": 1}
+{"i": "evt_44c4c537c770ce61f4401d83", "d": "2026-06-13-am", "t": "KPMG撤回AI报告：案例研究疑基于幻觉数据", "k": "research", "m": 1}
+{"i": "evt_6e8f2b8c2b20c85116f27978", "d": "2026-06-13-am", "t": "开发者用Fable 5 Vibe编程打造MMORPG游戏ClaudeCraft", "k": "app", "m": 1}
+{"i": "evt_01d05d70faa45d1526b5fe3f", "d": "2026-06-13-am", "t": "Meta限制员工AI用量并推广内部工具MetaCode", "k": "app", "m": 1}
+{"i": "evt_b41e30ec7c39c013979cf660", "d": "2026-06-13-am", "t": "贝佐斯新创公司Prometheus浮出水面：揭示其核心业务方向", "k": "other", "m": 1}
+{"i": "evt_bd52ba7a421d25b75127cb28", "d": "2026-06-13-am", "t": "乌克兰两年前战场测试中全自主无人机已实战击毙俄军士兵", "k": "other", "m": 1}
+{"i": "evt_e6c439ebfbc0372ab095be50", "d": "2026-06-13-am", "t": "Mistral传闻融资30亿欧元，估值翻倍达200亿欧元", "k": "biz", "m": 1}
+{"i": "evt_965e0cc99498606863ca5aff", "d": "2026-06-13-am", "t": "美国反数据中心运动：共和党将其归咎于中国干预遭专家质疑", "k": "infra", "m": 1}
+{"i": "evt_05fe6bc780a22e3340b150d1", "d": "2026-06-13-am", "t": "亚马逊报告：AI数据中心用水量仅占全球总量极小比例", "k": "infra", "m": 1}
+{"i": "evt_02b5d6129846941db3e7230a", "d": "2026-06-13-am", "t": "谷歌起诉中国网络犯罪团伙滥用Gemini自动化诈骗", "k": "gov", "m": 1}
+{"i": "evt_1c3e66acb6180d37f9a41960", "d": "2026-06-13-am", "t": "SpaceX上市首日开盘150美元，马斯克成全球首位万亿富翁", "k": "biz", "m": 1}
+{"i": "evt_919fd6157ff029634f45854c", "d": "2026-06-13-am", "t": "SK海力士评估引入ChatGPT等外部AI服务优化工作流程", "k": "other", "m": 1}
+{"i": "evt_9008fe9798da0cd7b1680400", "d": "2026-06-13-am", "t": "智源大会圆桌：具身智能或成中国AI的AlphaGo时刻", "k": "app", "m": 1}
+{"i": "evt_fedb30db2cdafe07ede9c286", "d": "2026-06-13-am", "t": "Snowflake发布CoCo与CoWork定义Agentic AI未来", "k": "app", "m": 1}
