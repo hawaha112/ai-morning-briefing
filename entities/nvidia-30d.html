@@ -97,10 +97,25 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>NVIDIA</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>51</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>52</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (10)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 16:30</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260612/p5#a260612p5" target="_blank" rel="noopener">NVIDIA Vera CPU将于8月向中国客户开放订购</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">NVIDIA告知中国客户，其新款Vera CPU最早8月可供货，现可开始下单。</p>
+                <p class="tl-event-deep">NVIDIA此举本质是在GPU出口管制的夹缝中开辟第二条进入中国AI基础设施市场的通道。CPU不受管制，但其战略意义不止于CPU本身——维持与中国大型数据中心客户的采购关系，有助于在政策松动时快速恢复GPU销售。更值得关注的是：若Vera CPU在中国大规模铺货，英特尔和AMD将在其最重要的增量市场之一失去份额；30-90天内可观察到中国主要云厂商是否公开宣布Vera采购计划，这将是判断实际需求规模的关键信号。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 04:49</span>
@@ -236,24 +251,24 @@ h2.tl-section {
                 <p class="tl-event-deep">特朗普将中国"主动放弃"英伟达定性为战略选择，实际上为美方减轻了出口管制的外交压力，同时为英伟达争取对华松绑制造了更大阻力——因为若中国"自愿"不买，松绑的理由就更难成立。短期（30-60天）看，英伟达H20出口许可前景更加悲观，股价将持续承压；华为昇腾受益于政策真空期，在中国大客户中的渗透率会进一步提升。若此格局持续至年底，中国AI算力供应链的"去英伟达化"将从临时应急变为结构性战略，届时即使美方松绑，重建市场份额的成本也将大幅上升。</p>
             </div>
         </article>
+
+    <h2 class="tl-section">📰 一般动态 (42)</h2>
+    
         <article class="tl-event">
             <div class="tl-event-time">
-                <span class="tl-date">05-13 17:15</span>
-                <span class="tl-rel">2026-05</span>
+                <span class="tl-date">06-12 16:13</span>
+                <span class="tl-rel">今天</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
-                    ⭐⭐⭐⭐
-                    <a href="https://www.techmeme.com/260513/p12#a260513p12" target="_blank" rel="noopener">Recursive Superintelligence完成6.5亿美元融资，估值40亿美元追求递归自我改进</a>
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9605" target="_blank" rel="noopener">llama.cpp为CUDA后端新增标量类型concat运算支持</a>
                 </h3>
-                <div class="tl-event-meta">Techmeme </div>
-                <p class="tl-event-summary">Richard Socher创立的Recursive Superintelligence获GV、英伟达、AMD等投资，融资逾6.5亿美元，估值达40亿美元，专注递归自我改进路线。</p>
-                <p class="tl-event-deep">这是过去12个月内第3家以「超级智能」为核心叙事、估值超30亿美元的AGI初创公司完成大额融资（SSI、xAI扩张、Recursive SI），表明资本市场正在将AGI从「10年后的事」重新定价为「3-5年内的赌注」。英伟达和AMD同时入场尤为关键：这意味着算力层玩家开始主动布局「后Transformer」算力需求，而非被动等待。接下来60-90天最可能的结果是：其他大型语言模型公司（尤其是Anthropic和OpenAI）将被迫在公开场合更明确表态其「自我改进」路线图，以防</p>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24011，在CUDA后端新增对标量类型的concat张量运算支持，同步更新Metal后端CI配置。</p>
+                <p class="tl-event-deep">这是llama.cpp典型的算子补全式维护提交，单独看影响有限，但代表了该项目「系统性填平CUDA后端算子空白」的持续策略。短期30天内，依赖此算子的小众模型架构（如状态空间模型SSM类）在NVIDIA GPU上的推理体验会有可见改善。更值得关注的是llama.cpp正在同步覆盖CUDA 13.3和ROCm 7.2两条路线——这暗示项目在押注AMD GPU生态的同时跟进NVIDIA最新工具链，竞争格局上对ollama等封装层形成底层能力压制。</p>
             </div>
         </article>
-
-    <h2 class="tl-section">📰 一般动态 (41)</h2>
-    
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 03:52</span>

@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>64</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>68</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (5)</h2>
     
@@ -177,8 +177,68 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (59)</h2>
+    <h2 class="tl-section">📰 一般动态 (63)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 16:47</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9606" target="_blank" rel="noopener">llama.cpp新增EAGLE3推测解码支持提升推理速度</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并EAGLE3推测解码功能，支持Gemma4等架构，显著提升LLM推理吞吐量。</p>
+                <p class="tl-event-deep">llama.cpp集成EAGLE3的时机值得注意：RedHatAI已提前准备好Gemma4的EAGLE3权重并参与本次PR，说明企业级用户在推动本地推理性能的军备竞赛。接下来60天内，预计Llama-3、Qwen3系列的EAGLE3权重会陆续出现在HuggingFace，llama.cpp的推理速度将进一步拉开与ollama等封装层的差距——后者需要时间跟进底层API变更。对vLLM等云端推理框架构成间接压力：本地方案性能持续逼近，企业自部署的ROI在改善。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 16:13</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9605" target="_blank" rel="noopener">llama.cpp为CUDA后端新增标量类型concat运算支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24011，在CUDA后端新增对标量类型的concat张量运算支持，同步更新Metal后端CI配置。</p>
+                <p class="tl-event-deep">这是llama.cpp典型的算子补全式维护提交，单独看影响有限，但代表了该项目「系统性填平CUDA后端算子空白」的持续策略。短期30天内，依赖此算子的小众模型架构（如状态空间模型SSM类）在NVIDIA GPU上的推理体验会有可见改善。更值得关注的是llama.cpp正在同步覆盖CUDA 13.3和ROCm 7.2两条路线——这暗示项目在押注AMD GPU生态的同时跟进NVIDIA最新工具链，竞争格局上对ollama等封装层形成底层能力压制。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 15:28</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9604" target="_blank" rel="noopener">llama.cpp修复SYCL后端CI构建与发布流程</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp项目修复SYCL后端的持续集成构建和发布流程，恢复多平台编译支持。</p>
+                <p class="tl-event-deep">这是基础设施层面的维护性修复，不涉及模型能力变化。SYCL后端的持续可用性对英特尔GPU用户群体有实际意义——英特尔Arc GPU在中低端消费市场有一定保有量，若CI长期断供预编译包，这部分用户流失风险较高。短期内此修复不会改变竞争格局，但持续维护多后端是llama.cpp保持生态广度优势的关键动作之一。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 13:17</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9603" target="_blank" rel="noopener">llama.cpp为高通Adreno GPU新增Q5量化OpenCL内核支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp项目新增q5_0和q5_1量化格式在高通Adreno GPU上的OpenCL GEMM/GEMV内核，扩展移动端推理能力。</p>
+                
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 05:29</span>
@@ -234,7 +294,7 @@ h2.tl-section {
                     
                     <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9596" target="_blank" rel="noopener">llama.cpp发布新版本：服务器路由模式日志优化</a>
                 </h3>
-                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 2 源</span></div>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 3 源</span></div>
                 <p class="tl-event-summary">llama.cpp发布b9596版本，主要优化服务器路由模式下的冗余日志输出，同时提供覆盖主流平台的预编译二进制包。</p>
                 <p class="tl-event-deep">b9596 的意义不在于单次补丁，而在于它所代表的趋势：llama.cpp 正从</p>
             </div>
