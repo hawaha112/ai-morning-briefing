@@ -1,72 +1,56 @@
 {
-  "article_count": 26,
+  "article_count": 8,
   "output_file": "output/index.html",
-  "file_size_kb": 125.8,
-  "generated_at": "2026-06-13T15:29:24.614990+00:00",
+  "file_size_kb": 114.6,
+  "generated_at": "2026-06-13T22:21:08.881881+00:00",
   "event_db_stats": {
-    "total_articles": 3651,
+    "total_articles": 3680,
     "collected": 0,
-    "analyzed": 3651,
-    "total_events": 1989,
-    "total_evidence": 2350,
+    "analyzed": 3680,
+    "total_events": 2005,
+    "total_evidence": 2371,
     "event_status": {
       "confirmed": 1,
-      "official": 303,
-      "reported": 1685
+      "official": 304,
+      "reported": 1700
     },
-    "tier_0": 366,
-    "tier_1": 1160,
-    "tier_2": 2125
+    "tier_0": 367,
+    "tier_1": 1168,
+    "tier_2": 2145
   },
   "event_status_distribution": {
     "official": 1,
-    "reported": 25
+    "reported": 7
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 26,
-  "multi_source_count": 1,
-  "important_count": 4,
+  "llm_count": 8,
+  "multi_source_count": 3,
+  "important_count": 2,
   "important_events": [
     {
-      "title": "美国政府援引国安权力对Anthropic最新模型实施出口管制",
-      "summary": "特朗普政府正式援引国家安全权力，对Anthropic的Fable 5和Mythos 5实施出口管制，禁止美国境外及境内外国人访问。",
-      "event_id": "evt_40b38c5daa71c1fb92338a8f",
+      "title": "美国封禁Claude Fable 5，Anthropic向全球用户开启退款",
+      "summary": "美国发布禁令封禁Claude Fable 5，Anthropic随即下线该模型并面向全球用户开启退款，截止日期6月20日。",
+      "event_id": "evt_c8120a3f312c3589fa0674fa",
       "importance": 5,
-      "source_name": "机器之心",
-      "archive_url": "archive/2026-06-13-pm.html"
+      "source_name": "新智元",
+      "archive_url": "archive/2026-06-14-am.html"
     },
     {
-      "title": "Fable 5因拒答AI研发问题登顶ProgramBench，安全降智风波持续发酵",
-      "summary": "Fable 5在ProgramBench基准测试中因拒绝回答200道AI研发相关题目而意外登顶，暴露其对前沿AI研发查询的系统性降智机制引发社区强烈反弹。",
-      "event_id": "evt_4094bc5cba3319fd0b0c358c",
-      "importance": 4,
-      "source_name": "机器之心",
-      "archive_url": "archive/2026-06-13-pm.html"
-    },
-    {
-      "title": "多州检察长联合调查OpenAI，索取大范围信息",
-      "summary": "美国多州检察长组成联盟，正式对OpenAI展开调查，要求其提交涵盖多个议题的大量信息。",
-      "event_id": "evt_71a3d0a6b6c6cdd3c7597af3",
-      "importance": 4,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-06-13-pm.html"
-    },
-    {
-      "title": "微软卖给客户却禁止员工用Claude Fable 5：法务卡在30天数据留存",
-      "summary": "Anthropic发布Claude Fable 5后，微软立即向客户开放，但因法务评估30天数据留存条款，微软员工内部版本无法使用该模型。",
-      "event_id": "evt_a822acfc4f9f81a0d7b31d6a",
+      "title": "GLM-5.2全量开放MIT开源，1M上下文对标Opus 4.8",
+      "summary": "智谱GLM-5.2全量开放，MIT协议开源，1M上下文真实可用，开发者实测性能对标Claude Opus 4.8，国产编程模型再提档。",
+      "event_id": "evt_0615439b1668c79f466b3c68",
       "importance": 4,
       "source_name": "新智元",
-      "archive_url": "archive/2026-06-13-pm.html"
+      "archive_url": "archive/2026-06-14-am.html"
     }
   ],
   "official_count": 1,
-  "depth_count": 25,
+  "depth_count": 8,
   "entity_count": 0,
-  "llm_call_count": 23,
-  "llm_prompt_tokens": 39348,
-  "llm_completion_tokens": 8488,
-  "llm_total_tokens": 47844,
+  "llm_call_count": 35,
+  "llm_prompt_tokens": 54833,
+  "llm_completion_tokens": 13962,
+  "llm_total_tokens": 68810,
   "llm_parse_fallback": 0
 }

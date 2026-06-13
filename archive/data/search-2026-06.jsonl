@@ -555,3 +555,10 @@
 {"i": "evt_1e4e0c4700a9bdc848aff88e", "d": "2026-06-13-pm", "t": "Anthropic秘密申请IPO、估值近万亿，全球资本全押AI未来", "k": "biz", "m": 1}
 {"i": "evt_085215e7ff6e42d3bffc7655", "d": "2026-06-13-pm", "t": "讯飞医疗星火V3.5发布：医生采纳率91%，碾压GPT-5.5", "k": "app", "m": 1}
 {"i": "evt_eea252d9e163cf44e1f4161f", "d": "2026-06-13-pm", "t": "Anthropic调查5.2万美国人：71%支持AI监管但不信任AI公司自律", "k": "gov", "m": 1}
+{"i": "evt_c8120a3f312c3589fa0674fa", "d": "2026-06-14-am", "t": "美国封禁Claude Fable 5，Anthropic向全球用户开启退款", "k": "gov", "m": 5}
+{"i": "evt_0615439b1668c79f466b3c68", "d": "2026-06-14-am", "t": "GLM-5.2全量开放MIT开源，1M上下文对标Opus 4.8", "k": "model", "m": 4}
+{"i": "evt_fe9d1e10175b395936948855", "d": "2026-06-14-am", "t": "OpenAI Codex全球社区活动浪潮：10天15城同步开启", "k": "app", "m": 3}
+{"i": "evt_a4f500a3ebe054e985d8769b", "d": "2026-06-14-am", "t": "KPMG因AI幻觉问题撤回AI使用情况报告", "k": "gov", "m": 3}
+{"i": "evt_7bcec838341b26573374ed17", "d": "2026-06-14-am", "t": "OpenAI投放新户外广告牌引发社交媒体关注", "k": "biz", "m": 1}
+{"i": "evt_ca98f6b9884eb10a26318c1b", "d": "2026-06-14-am", "t": "llama.cpp修复Jinja模板split和replace空参数Bug", "k": "infra", "m": 1}
+{"i": "evt_9d206b830dc7ce2de4c0f46a", "d": "2026-06-14-am", "t": "多州检察长对OpenAI展开联合调查", "k": "app", "m": 1}
