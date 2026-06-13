@@ -1,64 +1,64 @@
 {
-  "article_count": 36,
+  "article_count": 18,
   "output_file": "output/index.html",
-  "file_size_kb": 127.0,
-  "generated_at": "2026-06-12T22:21:19.800267+00:00",
+  "file_size_kb": 121.9,
+  "generated_at": "2026-06-13T10:22:03.895967+00:00",
   "event_db_stats": {
-    "total_articles": 3681,
+    "total_articles": 3684,
     "collected": 0,
-    "analyzed": 3681,
+    "analyzed": 3684,
     "total_events": 2012,
-    "total_evidence": 2367,
+    "total_evidence": 2371,
     "event_status": {
       "confirmed": 1,
-      "official": 304,
-      "reported": 1707
+      "official": 302,
+      "reported": 1709
     },
-    "tier_0": 366,
-    "tier_1": 1187,
-    "tier_2": 2128
+    "tier_0": 365,
+    "tier_1": 1184,
+    "tier_2": 2135
   },
   "event_status_distribution": {
-    "official": 10,
-    "reported": 26
+    "official": 1,
+    "reported": 17
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 36,
-  "multi_source_count": 5,
+  "llm_count": 18,
+  "multi_source_count": 0,
   "important_count": 3,
   "important_events": [
     {
-      "title": "SpaceX将Colossus 1数据中心租给Anthropic，因内部延迟问题放弃自用",
-      "summary": "SpaceX因内部团队在Grok开发中遭遇延迟问题，决定将Colossus 1数据中心租赁给Anthropic使用。",
-      "event_id": "evt_1f122debc2beeaed5376026b",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-13-am.html"
+      "title": "美政府发现越狱漏洞 Anthropic被令强制下线Claude Fable 5",
+      "summary": "Anthropic宣布遵从美国政府命令下线Claude Fable 5，原因是政府声称发现了绕过该模型安全护栏的越狱方法",
+      "event_id": "evt_9af7640c9771065463f7f39b",
+      "importance": 5,
+      "source_name": "Wired AI",
+      "archive_url": "archive/2026-06-13-pm.html"
     },
     {
-      "title": "欧盟技术主权计划落地：中国云与芯片企业面临新壁垒",
-      "summary": "欧盟发布《云与AI发展法案》和《芯片法案2.0》，构建四层云主权体系，阿里云、腾讯云、华为云进入敏感市场受阻。",
-      "event_id": "evt_bd3991a2734bd849609f2dd4",
+      "title": "Fable 5因拒答AI研发问题登顶ProgramBench，安全降智风波持续发酵",
+      "summary": "Fable 5在ProgramBench基准测试中因拒绝回答200道AI研发相关题目而意外登顶，暴露其对前沿AI研发查询的系统性降智机制引发社区强烈反弹。",
+      "event_id": "evt_4094bc5cba3319fd0b0c358c",
       "importance": 4,
-      "source_name": "虎嗅科技",
-      "archive_url": "archive/2026-06-13-am.html"
+      "source_name": "机器之心",
+      "archive_url": "archive/2026-06-13-pm.html"
     },
     {
-      "title": "Anthropic与OpenAI同期IPO：AI独角兽集体冲击公开市场",
-      "summary": "SpaceX、Anthropic、OpenAI等多家科技巨头计划在同一窗口期上市，形成史上罕见的AI IPO潮。",
-      "event_id": "evt_0ed9061f6dbfa39836bdb042",
+      "title": "多州检察长联合调查OpenAI，索取大范围信息",
+      "summary": "美国多州检察长组成联盟，正式对OpenAI展开调查，要求其提交涵盖多个议题的大量信息。",
+      "event_id": "evt_71a3d0a6b6c6cdd3c7597af3",
       "importance": 4,
-      "source_name": "TechCrunch AI",
-      "archive_url": "archive/2026-06-13-am.html"
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-06-13-pm.html"
     }
   ],
-  "official_count": 10,
-  "depth_count": 34,
+  "official_count": 1,
+  "depth_count": 18,
   "entity_count": 0,
-  "llm_call_count": 93,
-  "llm_prompt_tokens": 138301,
-  "llm_completion_tokens": 36592,
-  "llm_total_tokens": 174927,
+  "llm_call_count": 62,
+  "llm_prompt_tokens": 95414,
+  "llm_completion_tokens": 24957,
+  "llm_total_tokens": 120394,
   "llm_parse_fallback": 0
 }

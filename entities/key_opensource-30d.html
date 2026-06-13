@@ -106,6 +106,21 @@ h2.tl-section {
     
         <article class="tl-event">
             <div class="tl-event-time">
+                <span class="tl-date">06-13 13:46</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.3.2" target="_blank" rel="noopener">LangChain OpenAI 集成库发布 1.3.2 小版本更新</a>
+                </h3>
+                <div class="tl-event-meta">LangChain Releases </div>
+                <p class="tl-event-summary">langchain-openai 发布 1.3.2 版本，包含自 1.3.1 以来的 openai 相关修复（PR #38130）。</p>
+                <p class="tl-event-deep">langchain-openai 的补丁节奏（1.3.1→1.3.2）反映 OpenAI SDK 本身频繁迭代带来的上游适配压力。对于重度依赖 LangChain+OpenAI 技术栈的团队，保持小版本同步是降低 API 兼容性风险的低成本策略；但对框架整体竞争格局无实质影响。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
                 <span class="tl-date">06-12 05:29</span>
                 <span class="tl-rel">1 天前</span>
             </div>
@@ -402,21 +417,6 @@ h2.tl-section {
                 <div class="tl-event-meta">vLLM Releases </div>
                 <p class="tl-event-summary">vLLM发布v0.21.0版本，带来KV混合内存分配器、推测解码支持思维预算、正式弃用transformers v4等重要变更。</p>
                 <p class="tl-event-deep">推测解码支持思维预算是本版本最具战略价值的修复：随着 DeepSeek-R1、QwQ、Claude 3.7 Sonnet 等推理模型成为生产主力，spec decode 无法正确处理 thinking budget 一直是部署层的隐患。修复后，头部推理服务商（Together.ai、Fireworks、Anyscale）可立即在推理模型上叠加 spec decode 收益，预计 30-60 天内会有多家平台发布对应的性能 benchmark。HMA 集成则指向另一趋势：超长上</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-14 15:59</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://github.com/vllm-project/vllm/releases/tag/v0.21.0rc3" target="_blank" rel="noopener">vLLM v0.21.0rc3发布：新增TOKENSPEED_MLA后端支持DSR1和Kimi K25</a>
-                </h3>
-                <div class="tl-event-meta">vLLM Releases </div>
-                <p class="tl-event-summary">vLLM发布v0.21.0rc3候选版本，新增TOKENSPEED_MLA注意力后端，专为DeepSeek R1和Kimi K25模型优化推理性能。</p>
-                <p class="tl-event-deep">TOKENSPEED_MLA的出现意味着开源推理生态正在快速跟进中国头部模型（DeepSeek、Kimi）的架构创新——这通常需要数月的工程投入。对竞争格局的判断：vLLM官方支持DSR1和Kimi K25的专用后端，将进一步巩固其作为多模型统一部署平台的地位，对TensorRT-LLM、SGLang等竞品形成压力；同时也表明DeepSeek R1在企业部署中的需求量已足以驱动vLLM核心团队专项优化。预计正式版v0.21.0发布后30天内，主流云厂商托管推理服务将跟进支持该</p>
             </div>
         </article>
 </div>

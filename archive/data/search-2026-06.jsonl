@@ -527,3 +527,21 @@
 {"i": "evt_919fd6157ff029634f45854c", "d": "2026-06-13-am", "t": "SK海力士评估引入ChatGPT等外部AI服务优化工作流程", "k": "other", "m": 1}
 {"i": "evt_9008fe9798da0cd7b1680400", "d": "2026-06-13-am", "t": "智源大会圆桌：具身智能或成中国AI的AlphaGo时刻", "k": "app", "m": 1}
 {"i": "evt_fedb30db2cdafe07ede9c286", "d": "2026-06-13-am", "t": "Snowflake发布CoCo与CoWork定义Agentic AI未来", "k": "app", "m": 1}
+{"i": "evt_9af7640c9771065463f7f39b", "d": "2026-06-13-pm", "t": "美政府发现越狱漏洞 Anthropic被令强制下线Claude Fable 5", "k": "gov", "m": 5}
+{"i": "evt_4094bc5cba3319fd0b0c358c", "d": "2026-06-13-pm", "t": "Fable 5因拒答AI研发问题登顶ProgramBench，安全降智风波持续发酵", "k": "gov", "m": 4}
+{"i": "evt_71a3d0a6b6c6cdd3c7597af3", "d": "2026-06-13-pm", "t": "多州检察长联合调查OpenAI，索取大范围信息", "k": "gov", "m": 4}
+{"i": "evt_dd5222c64241ed0b188e7e34", "d": "2026-06-13-pm", "t": "Cohere呼吁企业掌控AI主权：自建硬件或开源部署", "k": "infra", "m": 3}
+{"i": "evt_9f2ea9b590e9d90dd57e5bcc", "d": "2026-06-13-pm", "t": "余承东宣布盘古大模型剑指全球第一，Kimi K2.7 Code开源", "k": "model", "m": 3}
+{"i": "evt_9d76a1bc4b7aeb24a485ff52", "d": "2026-06-13-pm", "t": "36氪研究院发布AI时代留学就业白皮书：人才价值重塑", "k": "gov", "m": 2}
+{"i": "evt_b2fb8ba992c0879ba2574054", "d": "2026-06-13-pm", "t": "面壁智能开源负责人将赴AICon上海分享端侧大模型趋势", "k": "biz", "m": 2}
+{"i": "evt_cbe1aff8b4c5b84e77a5f6e1", "d": "2026-06-13-pm", "t": "赛豆科技发布AIVA品牌：从AI出发重新定义汽车", "k": "app", "m": 2}
+{"i": "evt_1935061e153b1a195e5766d1", "d": "2026-06-13-pm", "t": "OpenAI WebRTC实时音频工具升级：支持文档上下文对话", "k": "app", "m": 1}
+{"i": "evt_ed301b51acc22b13fdaca496", "d": "2026-06-13-pm", "t": "llama.cpp 发布新版本修复 CI 构建流程", "k": "other", "m": 1}
+{"i": "evt_fb789230dedad7ddcbed12ed", "d": "2026-06-13-pm", "t": "LangChain OpenAI 集成库发布 1.3.2 小版本更新", "k": "app", "m": 1}
+{"i": "evt_41e1a827ad432703451c6709", "d": "2026-06-13-pm", "t": "德国法院裁定谷歌须为AI摘要虚假陈述承担法律责任", "k": "other", "m": 1}
+{"i": "evt_d84b8ae5760a29e5b147d006", "d": "2026-06-13-pm", "t": "OpenAI Codex用户破500万，两成为非开发者专业人士", "k": "app", "m": 1}
+{"i": "evt_2a1d6c01d9911e80ee4afd7b", "d": "2026-06-13-pm", "t": "Corning CEO谈与英伟达Meta亚马逊光纤大单的风险共担条款", "k": "other", "m": 1}
+{"i": "evt_babecb9b83093b55c93cb433", "d": "2026-06-13-pm", "t": "华为发布HarmonyOS 7：智能体友好架构接入2000+AI智能体", "k": "app", "m": 1}
+{"i": "evt_9773c392aa88067b164abfc5", "d": "2026-06-13-pm", "t": "港科大复旦提出语义缓存键碰撞攻击，成功率达86%", "k": "other", "m": 1}
+{"i": "evt_4c2065d1aaa21b2ca440ca48", "d": "2026-06-13-pm", "t": "月之暗面发布Kimi K2.7-Code：推理token用量降低30%", "k": "infra", "m": 1}
+{"i": "evt_43adccbe50d4f0d85b9926bf", "d": "2026-06-13-pm", "t": "谷歌将AI深度整合搜索引擎，二十年来最大变革", "k": "other", "m": 1}
