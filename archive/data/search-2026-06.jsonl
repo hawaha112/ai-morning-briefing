@@ -562,3 +562,14 @@
 {"i": "evt_7bcec838341b26573374ed17", "d": "2026-06-14-am", "t": "OpenAI投放新户外广告牌引发社交媒体关注", "k": "biz", "m": 1}
 {"i": "evt_ca98f6b9884eb10a26318c1b", "d": "2026-06-14-am", "t": "llama.cpp修复Jinja模板split和replace空参数Bug", "k": "infra", "m": 1}
 {"i": "evt_9d206b830dc7ce2de4c0f46a", "d": "2026-06-14-am", "t": "多州检察长对OpenAI展开联合调查", "k": "app", "m": 1}
+{"i": "evt_05fd78790b214a90d40cbf08", "d": "2026-06-14-pm", "t": "蚂蚁集团重构支付宝：引入AI智能体界面迎战微信", "k": "app", "m": 4}
+{"i": "evt_dbf70b688c83ec75ab26a6f0", "d": "2026-06-14-pm", "t": "美国出口管制暂停Anthropic服务，印度AI主权之争再燃", "k": "gov", "m": 4}
+{"i": "evt_afaec63550cbd4160ca599a8", "d": "2026-06-14-pm", "t": "谷歌DeepMind发布57页路线图：从AGI到ASI的推演", "k": "research", "m": 4}
+{"i": "evt_125e35933245c4af41fc8a33", "d": "2026-06-14-pm", "t": "里约热内卢发布开源大模型Rio 3.5，城市AI自主权新范式", "k": "model", "m": 3}
+{"i": "evt_a5950823182ddaf1cd6c82e4", "d": "2026-06-14-pm", "t": "布鲁金斯研究员：AI正颠覆知识型工作的「混乱中间地带」", "k": "gov", "m": 3}
+{"i": "evt_b67abf9b35173ac1aa876b83", "d": "2026-06-14-pm", "t": "AI热潮驱动SK海力士去年扩招逾2000人", "k": "infra", "m": 3}
+{"i": "evt_fc114d510b3553e5694230de", "d": "2026-06-14-pm", "t": "OpenAI GPT-5.5与Codex正式登陆Amazon Bedrock", "k": "app", "m": 1}
+{"i": "evt_9bd49d817e1ea0a646ded69a", "d": "2026-06-14-pm", "t": "智谱GLM-5.2 MIT开源：借Anthropic停服危机卡位IPO窗口", "k": "biz", "m": 1}
+{"i": "evt_10f4a4dbc09a68e2d8fea58c", "d": "2026-06-14-pm", "t": "美国2026年前五月AI裁员达8.8万，5月占比近40%创历史新高", "k": "biz", "m": 1}
+{"i": "evt_05f8b22a768c82add0559e2c", "d": "2026-06-14-pm", "t": "CVPR 2026论文GaussianDWM：3D高斯表示统一自动驾驶场景理解与生成", "k": "research", "m": 1}
+{"i": "evt_456788bbdcc37c52df184970", "d": "2026-06-14-pm", "t": "蚂蚁集团ACL2026新作FuseSearch：4B模型代码定位超越商用大模型", "k": "model", "m": 1}

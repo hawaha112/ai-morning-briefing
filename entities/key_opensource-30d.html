@@ -97,12 +97,12 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>主要开源项目</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>21</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>20</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (0)</h2>
     <div class="tl-empty">本月暂无重要事件 (importance ≥ 4)</div>
 
-    <h2 class="tl-section">📰 一般动态 (21)</h2>
+    <h2 class="tl-section">📰 一般动态 (20)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
@@ -402,21 +402,6 @@ h2.tl-section {
                 <div class="tl-event-meta">LangChain Releases </div>
                 <p class="tl-event-summary">langchain-tests 1.1.8 发布，修复核心版本边界约束，升级 langsmith 至 0.8.0，并刷新 OpenAI 模型引用。</p>
                 <p class="tl-event-deep">这是一次常规维护更新，本身不改变竞争格局。但 langsmith 0.8.0 的引入值得关注：若该版本带来 breaking changes，依赖 LangSmith 可观测性的生产环境用户可能在 30 天内遭遇静默兼容性问题。更深层的信号是 LangChain 仍在积极维护测试基础设施——在 LlamaIndex、Haystack 等竞争框架持续发力的背景下，标准化测试套件是生态护城河的一部分，有助于维系第三方集成开发者的留存。</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-15 16:54</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://github.com/vllm-project/vllm/releases/tag/v0.21.0" target="_blank" rel="noopener">vLLM v0.21.0发布：KV卸载与推测解码重大升级</a>
-                </h3>
-                <div class="tl-event-meta">vLLM Releases </div>
-                <p class="tl-event-summary">vLLM发布v0.21.0版本，带来KV混合内存分配器、推测解码支持思维预算、正式弃用transformers v4等重要变更。</p>
-                <p class="tl-event-deep">推测解码支持思维预算是本版本最具战略价值的修复：随着 DeepSeek-R1、QwQ、Claude 3.7 Sonnet 等推理模型成为生产主力，spec decode 无法正确处理 thinking budget 一直是部署层的隐患。修复后，头部推理服务商（Together.ai、Fireworks、Anyscale）可立即在推理模型上叠加 spec decode 收益，预计 30-60 天内会有多家平台发布对应的性能 benchmark。HMA 集成则指向另一趋势：超长上</p>
             </div>
         </article>
 </div>
