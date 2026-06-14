@@ -1,64 +1,72 @@
 {
   "article_count": 11,
   "output_file": "output/index.html",
-  "file_size_kb": 120.8,
-  "generated_at": "2026-06-14T10:24:02.029210+00:00",
+  "file_size_kb": 120.4,
+  "generated_at": "2026-06-14T22:24:03.246725+00:00",
   "event_db_stats": {
-    "total_articles": 3662,
+    "total_articles": 3585,
     "collected": 0,
-    "analyzed": 3662,
-    "total_events": 1990,
-    "total_evidence": 2345,
+    "analyzed": 3585,
+    "total_events": 1975,
+    "total_evidence": 2332,
     "event_status": {
       "confirmed": 1,
-      "official": 301,
-      "reported": 1688
+      "official": 302,
+      "reported": 1672
     },
-    "tier_0": 361,
-    "tier_1": 1161,
-    "tier_2": 2140
+    "tier_0": 362,
+    "tier_1": 1145,
+    "tier_2": 2078
   },
   "event_status_distribution": {
-    "official": 1,
-    "reported": 10
+    "official": 2,
+    "reported": 9
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
   "llm_count": 11,
-  "multi_source_count": 0,
-  "important_count": 3,
+  "multi_source_count": 2,
+  "important_count": 4,
   "important_events": [
     {
-      "title": "蚂蚁集团重构支付宝：引入AI智能体界面迎战微信",
-      "summary": "蚂蚁集团正测试支付宝超级应用大改版，将引入AI智能体交互界面，直接对标微信争夺十亿级用户。",
-      "event_id": "evt_05fd78790b214a90d40cbf08",
-      "importance": 4,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-06-14-pm.html"
-    },
-    {
-      "title": "美国出口管制暂停Anthropic服务，印度AI主权之争再燃",
-      "summary": "Anthropic因美国政府指令暂停向印度提供最新AI模型访问，引发印度各界对本国AI战略严重依赖美国管控技术的强烈争议。",
-      "event_id": "evt_dbf70b688c83ec75ab26a6f0",
+      "title": "加拿大总理卡尼：Anthropic禁令揭示AI单一依赖风险堪比2008金融危机",
+      "summary": "加拿大总理卡尼就美国封禁外国访问Anthropic最新AI一事发出警告，称过度依赖单一AI模型的系统性风险与2008年金融危机如出一辙。",
+      "event_id": "evt_ec6b9a50b15f9c89d592b7a1",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-14-pm.html"
+      "archive_url": "archive/2026-06-15-am.html"
     },
     {
-      "title": "谷歌DeepMind发布57页路线图：从AGI到ASI的推演",
-      "summary": "谷歌DeepMind发布《从AGI到ASI》报告，由Shane Legg领衔推演AGI实现后超级智能的演化路径与六大障碍。",
-      "event_id": "evt_afaec63550cbd4160ca599a8",
+      "title": "苹果新Siri AI达标缓解危机，iOS 27内测已支持多家第三方大模型",
+      "summary": "据Mark Gurman报道，苹果新Siri AI表现已足以缓解其AI危机，iOS 27内部测试版已支持接入OpenAI以外的第三方AI模型。",
+      "event_id": "evt_7a05729152eb277443e0c685",
       "importance": 4,
-      "source_name": "新智元",
-      "archive_url": "archive/2026-06-14-pm.html"
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-15-am.html"
+    },
+    {
+      "title": "谷歌二十年最大变革：AI全面重构搜索核心体验",
+      "summary": "谷歌将AI生成答案、对话搜索和推理工具直接整合进搜索产品核心，这是其二十余年来最大规模的业务变革，同时引发内容创作者和出版商的流量忧虑。",
+      "event_id": "evt_9db1ed816a1cfb117cab36df",
+      "importance": 4,
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-06-15-am.html"
+    },
+    {
+      "title": "HDC 2026：华为小艺升级为系统级智能体，鸿蒙全面拥抱Agent架构",
+      "summary": "华为HDC 2026发布鸿蒙智能体框架2.0，小艺深度融合系统成为跨应用调度的系统级智能体。",
+      "event_id": "evt_0506afa81e4df415ec807670",
+      "importance": 4,
+      "source_name": "爱范儿",
+      "archive_url": "archive/2026-06-15-am.html"
     }
   ],
-  "official_count": 1,
+  "official_count": 2,
   "depth_count": 11,
   "entity_count": 0,
-  "llm_call_count": 38,
-  "llm_prompt_tokens": 59495,
-  "llm_completion_tokens": 15513,
-  "llm_total_tokens": 75018,
+  "llm_call_count": 35,
+  "llm_prompt_tokens": 61837,
+  "llm_completion_tokens": 14292,
+  "llm_total_tokens": 76140,
   "llm_parse_fallback": 1
 }
