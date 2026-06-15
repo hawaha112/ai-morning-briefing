@@ -97,12 +97,27 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Hugging Face</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>30</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>32</b> 个事件</p>
 
-    <h2 class="tl-section">⭐ 重要事件 (0)</h2>
-    <div class="tl-empty">本月暂无重要事件 (importance ≥ 4)</div>
+    <h2 class="tl-section">⭐ 重要事件 (1)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 23:45</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://x.com/AndreasPSteiner/status/2065460572414488842" target="_blank" rel="noopener">Gemma 4 12B发布一周下载量破400万，成最热门无编码器VLM</a>
+                </h3>
+                <div class="tl-event-meta">X-HuggingFace </div>
+                <p class="tl-event-summary">谷歌Gemma 4 12B在HuggingFace发布一周内下载量超400万，成为最受欢迎的无编码器VLM，同时是首个支持无编码器音频输入的通用LLM。</p>
+                <p class="tl-event-deep">Gemma 4 12B的400万下载不是偶然——谷歌在过去6个月已完成从「开源追随者」到「开源引领者」的转变（Gemma 2、Gemma 3、Gemma 4连续三代提速）。无编码器音频是真实的架构创新，而非参数堆砌，这让Llama系列在本地多模态场景面临首次真正意义上的功能劣势。接下来60天最可能的演变：社区将涌现大量音频+视觉的本地智能体demo，倒逼Meta加速Llama 4多模态版本的开源节奏；同时将验证无编码器音频在实际任务（会议记录、视频理解）中的上限，若表现达标将</p>
+            </div>
+        </article>
 
-    <h2 class="tl-section">📰 一般动态 (30)</h2>
+    <h2 class="tl-section">📰 一般动态 (31)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
@@ -192,6 +207,23 @@ h2.tl-section {
                 <div class="tl-event-meta">X-HuggingFace </div>
                 <p class="tl-event-summary">MiniMax在Hugging Face Kernels平台发布了自研计算内核MSA，引发社区关注。</p>
                 <p class="tl-event-deep">MiniMax 发布 MSA 内核是一个战略动作，而非单纯的开源善意。其核心逻辑：若 Lightning Attention 的底层实现成为 HF 生态标准算子，MiniMax 即在基础设施层完成隐性锁定——其他团队采用 MSA 越广泛，MiniMax 的技术路线就越难被绕过。这与 Nvidia 通过 cuDNN 掌控 AI 算力生态的逻辑类似，只是规模和层级不同。短期看是社区贡献，长期看是生态卡位的第一步。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-13 00:14</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/juanjucm/status/2065467870696378558" target="_blank" rel="noopener">llama.cpp与OpenCode结合：Mac本地运行编程智能体每秒50 token</a>
+                </h3>
+                <div class="tl-event-meta">X-HuggingFace </div>
+                <p class="tl-event-summary">Hugging Face展示用llama.cpp+OpenCode在MacBook本地运行UnslothAI的North-Mini-Code-1.0-GGUF模型，速度约50 tokens/s，无需云端API。</p>
+                <p class="tl-event-deep">这条推文的信号价值在于**Hugging Face官方账号的背书时机**——选在云端AI编程工具集中出现故障/用户投诉高峰期推广本地方案，是一次有意识的市场定位动作。Hugging Face本身是模型分发平台，推本地推理=推自己的模型下载量，与云端API厂商形成结构性竞争。
+
+接下来60天可观察：若Cursor/Claude Code再出1-2次大范围故障，本地编程智能体（Aider/OpenCode/Continue.dev）的GitHub star增速会出现明显跳升——这</p>
             </div>
         </article>
         <article class="tl-event">

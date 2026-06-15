@@ -1,72 +1,63 @@
 {
-  "article_count": 11,
+  "article_count": 40,
   "output_file": "output/index.html",
-  "file_size_kb": 120.4,
-  "generated_at": "2026-06-14T22:24:03.246725+00:00",
+  "file_size_kb": 132.7,
+  "generated_at": "2026-06-15T10:24:54.570654+00:00",
   "event_db_stats": {
-    "total_articles": 3585,
+    "total_articles": 3602,
     "collected": 0,
-    "analyzed": 3585,
-    "total_events": 1975,
-    "total_evidence": 2332,
+    "analyzed": 3602,
+    "total_events": 1983,
+    "total_evidence": 2340,
     "event_status": {
       "confirmed": 1,
-      "official": 302,
-      "reported": 1672
+      "official": 303,
+      "reported": 1679
     },
-    "tier_0": 362,
-    "tier_1": 1145,
+    "tier_0": 363,
+    "tier_1": 1161,
     "tier_2": 2078
   },
   "event_status_distribution": {
-    "official": 2,
-    "reported": 9
+    "reported": 40
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 11,
-  "multi_source_count": 2,
-  "important_count": 4,
+  "llm_count": 40,
+  "multi_source_count": 1,
+  "important_count": 3,
   "important_events": [
     {
-      "title": "加拿大总理卡尼：Anthropic禁令揭示AI单一依赖风险堪比2008金融危机",
-      "summary": "加拿大总理卡尼就美国封禁外国访问Anthropic最新AI一事发出警告，称过度依赖单一AI模型的系统性风险与2008年金融危机如出一辙。",
-      "event_id": "evt_ec6b9a50b15f9c89d592b7a1",
+      "title": "WorkBench基准测评：两年后智能体安全与能力双双飞跃",
+      "summary": "WorkBench基准重测显示，Claude Opus 4.8将任务完成率从43%提升至89%，有害误操作从26%降至2.5%，能力与安全性协同提升。",
+      "event_id": "evt_3904e9ee19593993705e73c7",
       "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-15-am.html"
+      "source_name": "ArXiv AI",
+      "archive_url": "archive/2026-06-15-pm.html"
     },
     {
-      "title": "苹果新Siri AI达标缓解危机，iOS 27内测已支持多家第三方大模型",
-      "summary": "据Mark Gurman报道，苹果新Siri AI表现已足以缓解其AI危机，iOS 27内部测试版已支持接入OpenAI以外的第三方AI模型。",
-      "event_id": "evt_7a05729152eb277443e0c685",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-15-am.html"
+      "title": "美出口管制首次直指AI模型，Anthropic被迫下线Fable 5和Mythos 5",
+      "summary": "美国商务部发布出口管制禁令，Anthropic宣布下线旗舰模型Fable 5和Mythos 5，这是美国出口管制历史上首次直接针对AI模型本身而非芯片。",
+      "event_id": "evt_d70f93da6886126e08726b5c",
+      "importance": 5,
+      "source_name": "少数派",
+      "archive_url": "archive/2026-06-15-pm.html"
     },
     {
-      "title": "谷歌二十年最大变革：AI全面重构搜索核心体验",
-      "summary": "谷歌将AI生成答案、对话搜索和推理工具直接整合进搜索产品核心，这是其二十余年来最大规模的业务变革，同时引发内容创作者和出版商的流量忧虑。",
-      "event_id": "evt_9db1ed816a1cfb117cab36df",
+      "title": "大晓机器人半年融资数亿美元，开悟世界模型刷新四大具身智能榜单",
+      "summary": "大晓机器人完成天使+轮融资，2026年上半年累计融资数亿美元，成为具身智能领域最快达独角兽估值的公司，其Kairos世界模型登顶四大权威基准测试。",
+      "event_id": "evt_1c44006200bd1a6db62fa65e",
       "importance": 4,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-06-15-am.html"
-    },
-    {
-      "title": "HDC 2026：华为小艺升级为系统级智能体，鸿蒙全面拥抱Agent架构",
-      "summary": "华为HDC 2026发布鸿蒙智能体框架2.0，小艺深度融合系统成为跨应用调度的系统级智能体。",
-      "event_id": "evt_0506afa81e4df415ec807670",
-      "importance": 4,
-      "source_name": "爱范儿",
-      "archive_url": "archive/2026-06-15-am.html"
+      "source_name": "新智元",
+      "archive_url": "archive/2026-06-15-pm.html"
     }
   ],
-  "official_count": 2,
-  "depth_count": 11,
+  "official_count": 0,
+  "depth_count": 38,
   "entity_count": 0,
-  "llm_call_count": 35,
-  "llm_prompt_tokens": 61837,
-  "llm_completion_tokens": 14292,
-  "llm_total_tokens": 76140,
-  "llm_parse_fallback": 1
+  "llm_call_count": 93,
+  "llm_prompt_tokens": 150990,
+  "llm_completion_tokens": 37852,
+  "llm_total_tokens": 188886,
+  "llm_parse_fallback": 2
 }

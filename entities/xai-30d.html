@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>xAI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>13</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>14</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (1)</h2>
     
@@ -117,8 +117,23 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (12)</h2>
+    <h2 class="tl-section">📰 一般动态 (13)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-15 12:00</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arxiv.org/abs/2606.13753" target="_blank" rel="noopener">神经网络权重范数决定Grokking延迟时间尺度的因果律</a>
+                </h3>
+                <div class="tl-event-meta">ArXiv ML </div>
+                <p class="tl-event-summary">研究通过干预训练中的权重范数，证明其因果性地决定神经网络Grokking（延迟泛化）的发生时间，并建立指数延迟定律。</p>
+                <p class="tl-event-deep">这是Grokking研究从「描述现象」转向「因果控制」的关键一步。指数延迟律T∝exp(αρ)意味着权重范数是一个极为敏感的调控旋钮——微小的范数超调会导致泛化延迟急剧拉长，这可能解释了为何实践中Grokking时间跨度差异如此巨大（从数百步到数十万步）。对于大模型训练，这一结论暗示：L2正则化强度（权重衰减系数）的选择不仅影响最终泛化性能，还决定「何时」出现泛化——这对理解大模型训练后期的能力涌现可能有直接参考价值。预计60天内会有团队将此框架拓展到Transformer的</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-15 03:29</span>
