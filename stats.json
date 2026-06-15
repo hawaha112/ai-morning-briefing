@@ -1,32 +1,41 @@
 {
-  "article_count": 40,
+  "article_count": 54,
   "output_file": "output/index.html",
-  "file_size_kb": 132.7,
-  "generated_at": "2026-06-15T10:24:54.570654+00:00",
+  "file_size_kb": 133.5,
+  "generated_at": "2026-06-15T13:09:39.102267+00:00",
   "event_db_stats": {
-    "total_articles": 3602,
+    "total_articles": 3627,
     "collected": 0,
-    "analyzed": 3602,
-    "total_events": 1983,
-    "total_evidence": 2340,
+    "analyzed": 3627,
+    "total_events": 1997,
+    "total_evidence": 2356,
     "event_status": {
       "confirmed": 1,
       "official": 303,
-      "reported": 1679
+      "reported": 1693
     },
     "tier_0": 363,
-    "tier_1": 1161,
-    "tier_2": 2078
+    "tier_1": 1164,
+    "tier_2": 2100
   },
   "event_status_distribution": {
-    "reported": 40
+    "official": 1,
+    "reported": 53
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 40,
-  "multi_source_count": 1,
-  "important_count": 3,
+  "llm_count": 54,
+  "multi_source_count": 2,
+  "important_count": 4,
   "important_events": [
+    {
+      "title": "OpenAI推出合作伙伴网络并投资1.5亿美元加速企业AI落地",
+      "summary": "OpenAI宣布成立Partner Network，投入1.5亿美元助力全球合作伙伴加速企业级AI部署与转型。",
+      "event_id": "evt_4a1a2edfc53fbcf838cd3e67",
+      "importance": 4,
+      "source_name": "OpenAI Blog",
+      "archive_url": "archive/2026-06-15-pm.html"
+    },
     {
       "title": "WorkBench基准测评：两年后智能体安全与能力双双飞跃",
       "summary": "WorkBench基准重测显示，Claude Opus 4.8将任务完成率从43%提升至89%，有害误操作从26%降至2.5%，能力与安全性协同提升。",
@@ -52,12 +61,12 @@
       "archive_url": "archive/2026-06-15-pm.html"
     }
   ],
-  "official_count": 0,
-  "depth_count": 38,
+  "official_count": 1,
+  "depth_count": 51,
   "entity_count": 0,
-  "llm_call_count": 93,
-  "llm_prompt_tokens": 150990,
-  "llm_completion_tokens": 37852,
-  "llm_total_tokens": 188886,
-  "llm_parse_fallback": 2
+  "llm_call_count": 30,
+  "llm_prompt_tokens": 46974,
+  "llm_completion_tokens": 12383,
+  "llm_total_tokens": 59368,
+  "llm_parse_fallback": 0
 }

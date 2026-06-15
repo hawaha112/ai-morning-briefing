@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿里 / 通义千问 Qwen · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>阿里 / 通义千问 Qwen</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>21</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (1)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-28 04:00</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://huggingface.co/papers/2605.30280" target="_blank" rel="noopener">Qwen-VLA：统一多任务多机器人的视觉-语言-动作基础模型</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Daily Papers </div>
+                <p class="tl-event-summary">阿里巴巴发布Qwen-VLA，通过DiT架构将感知、理解、推理与连续动作生成统一在单一模型中，支持跨任务、跨环境、跨机器人形态的具身智能。</p>
+                <p class="tl-event-deep">Qwen-VLA的战略意义在于：这是**国内头部实验室首次系统性押注跨形态具身基础模型**，而非跟随谷歌/Meta路径做单一场景优化。接下来60-90天的关键验证点是其在真实机器人硬件上的基准测试数据——如果在LIBERO、RLBench、Open X-Embodiment等标准评测上显著优于现有VLA基线，将吸引国内机器人厂商（宇树、智元等）优先接入Qwen生态而非谷歌方案，形成具身智能领域的「模型层国产替代」格局。反向风险：若仅在仿真环境有效、真实硬件部署存在sim-to</p>
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (20)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-15 17:35</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.leiphone.com/category/industrynews/cjoeciL965DpPQsY.html" target="_blank" rel="noopener">巴西里约官方开源大模型被揭穿：套壳阿里千问权重混合版</a>
+                </h3>
+                <div class="tl-event-meta">雷峰网 </div>
+                <p class="tl-event-summary">巴西里约市政府IT公司IplanRIO发布的开源模型Rio-3.5-Open-397B被证实是阿里千问Qwen3.5-397B与Nex N2 Pro的权重混合体，并非自研。</p>
+                <p class="tl-event-deep">此事件的核心伤害不是技术欺诈，而是**叙事欺诈**：用国家机构公信力为「合并模型」背书，透支开源社区对政府AI项目的信任度。深层影响有二：其一，可能倒逼HuggingFace等平台建立模型溯源强制披露机制；其二，对真正投入研发的发展中国家AI团队造成「劣币驱逐良币」的公关压力——未来任何拉美新模型都将面临「先证明不是套壳」的舆论预设。阿里Qwen全球影响力的另一面：成为被套壳的「香饽饽」，也说明其技术竞争力已获国际认可。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-15 20:02</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.huxiu.com/article/4867441.html" target="_blank" rel="noopener">阿里巴巴CEO吴泳铭力挺QoderWork：日活周活Token用量均居集团AI工具第一</a>
+                </h3>
+                <div class="tl-event-meta">虎嗅科技 </div>
+                <p class="tl-event-summary">阿里CEO吴泳铭现身QoderWork团队会，披露该AI编程工具日活、周活、Token用量均为集团第一，暗示其将成为阿里Agent战略核心旗舰产品。</p>
+                <p class="tl-event-deep">CEO亲自背书的核心逻辑：通过内部数据公开化制造舆论势能，一方面为QoderWork吸引外部企业客户，另一方面向内部其他AI产品线传递资源集中信号。Token用量第一比DAU更具说服力，是验证AI工具真实价值的硬指标。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-15 17:03</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.huxiu.com/article/4867424.html" target="_blank" rel="noopener">世界杯AI预测大比拼：千问命中2:0红牌判断率先出圈</a>
+                </h3>
+                <div class="tl-event-meta">虎嗅科技 </div>
+                <p class="tl-event-summary">2026世界杯开赛后，千问、ChatGPT、Gemini、Claude、DeepSeek等大模型的赛前预测接受实战检验，千问准确预测墨西哥2:0南非及红牌风险，率先出圈。</p>
+                <p class="tl-event-deep">此事件的深层意义不在于</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-14 04:30</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/SemiAnalysis_/status/2065894494935933191" target="_blank" rel="noopener">里约热内卢市发布SwiReasoning混合推理开源大模型Rio 3.5</a>
+                </h3>
+                <div class="tl-event-meta">X-HuggingFace </div>
+                <p class="tl-event-summary">里约热内卢市基于Qwen发布397B参数开源模型Rio 3.5，引入SwiReasoning框架，通过熵信号动态切换链式推理与隐空间推理以提升token效率。</p>
+                <p class="tl-event-deep">核心影响在两个维度：其一，**推理效率路线验证**——若 SwiReasoning 的熵门控在公开 benchmark 上达到 CoT 同等准确率但 token 消耗下降 30%+，将为所有推理模型提供可移植的工程范式；其二，**政府 AI 自主化趋势加速**——里约此举若获正面评价，会刺激更多公共机构绕开商业 LLM 依赖，对 OpenAI/Google 的政府合同业务构成长期压力。短期看，此模型更大的价值是「存在本身」——证明了城市级算力+开源基座+定制 post-tra</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-13 21:58</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/ZenMagnets/status/2065796012820848699" target="_blank" rel="noopener">里约市政IT公司发布397B开源大模型Rio 3.5，Qwen3.7地位动摇</a>
+                </h3>
+                <div class="tl-event-meta">X-HuggingFace </div>
+                <p class="tl-event-summary">里约热内卢市政IT公司发布397B参数开源大模型Rio 3.5，与Minimax M3一同填补Qwen3.7因闭源策略退出前沿竞争留下的空白。</p>
+                <p class="tl-event-deep">Qwen3.7 的案例揭示了开源生态的</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-11 17:42</span>
+                <span class="tl-rel">4 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.leiphone.com/category/industrynews/rlbyFXSP1xl2Mrvo.html" target="_blank" rel="noopener">通义千问上线世界杯足球预测AI助手，融合天气海拔大数据</a>
+                </h3>
+                <div class="tl-event-meta">雷峰网 </div>
+                <p class="tl-event-summary">通义千问推出足球预测AI助手，融合历史数据、球员状态、天气及地貌等多维数据，面向2026美加墨世界杯全程开放竞猜。</p>
+                <p class="tl-event-deep">千问此举的核心价值不在于预测准确率，而在于用世界杯流量窗口完成一次</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-11 14:20</span>
+                <span class="tl-rel">4 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260611/p5#a260611p5" target="_blank" rel="noopener">阿里巴巴更换钉钉CEO，AI战略内部争议引发人事变动</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">阿里巴巴因内部对钉钉在AI战略中定位存在争议，将钉钉CEO陈航替换为陈宇森。</p>
+                <p class="tl-event-deep">此次换帅的深层逻辑是阿里将钉钉从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-10 15:35</span>
+                <span class="tl-rel">5 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.leiphone.com/category/industrynews/YRFMCuwNPJyySGY4.html" target="_blank" rel="noopener">千问发布高考志愿填报Agent，免费服务全国考生</a>
+                </h3>
+                <div class="tl-event-meta">雷峰网 </div>
+                <p class="tl-event-summary">阿里千问上线国内首个全周期高考志愿填报Agent，基于夸克8年数据，免费提供定制化志愿方案，替代市场5000元+收费服务。</p>
+                <p class="tl-event-deep">千问此举本质是「用规模化 AI 产能清空高利润人工服务市场」的范本。更深层信号：当 AI Agent 的准确率足以承担高风险决策（滑档代价极高），「免费替代付费专家」将在法律、医疗、财务等垂直场景依次复现。谁先建立数据 + 模型 + 信任三位一体的壁垒，谁就锁定下一个十年的垂直入口。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-08 17:57</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.leiphone.com/category/industrynews/dwh5Z104IRXqJPY8.html" target="_blank" rel="noopener">阿里巴巴成立Token Foundry事业部整合AI业务</a>
+                </h3>
+                <div class="tl-event-meta">雷峰网 </div>
+                <p class="tl-event-summary">阿里巴巴合并通义大模型事业部与未来生活实验室，成立Token Foundry事业部，由集团CEO吴泳铭直接负责，周靖人出任首席科学家。</p>
+                <p class="tl-event-deep">此次重组的核心逻辑是</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-07 03:50</span>
+                <span class="tl-rel">8 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9543" target="_blank" rel="noopener">llama.cpp新增Qwen-VL视频帧合并支持，多模态视频理解能力获升级</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp通过PR #21858为基于Qwen-VL的模型添加视频帧合并（frame merge）功能，增强视频多模态处理能力。</p>
+                <p class="tl-event-deep">frame merge是视频多模态模型推理效率的核心优化点。不同于图像处理，视频输入帧数可达数十至数百帧，若逐帧编码将导致token数爆炸。帧合并在视觉编码器后、LLM输入前压缩特征，是平衡精度与效率的工程权衡，也是Qwen-VL等模型视频能力的实现基础。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-04 17:30</span>
+                <span class="tl-rel">11 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260604/p11#a260604p11" target="_blank" rel="noopener">阿里巴巴开放Qwen接入第三方智能体，日均服务超1亿次</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">阿里巴巴宣布开放Qwen AI助手给第三方智能体接入，首批合作方包括肯德基、蜜雪冰城等品牌，日均生活服务互动量超1亿次。</p>
+                <p class="tl-event-deep">此举本质是阿里以Qwen为轴心重构移动互联网入口逻辑——从</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-04 11:06</span>
+                <span class="tl-rel">11 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/06/428778.html" target="_blank" rel="noopener">戴盟机器人完成亿元融资，阿里通义大牛加盟攻关物理世界模型</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">具身智能创企戴盟机器人完成亿元人民币融资，并引入阿里通义多模态团队核心研究员，聚焦物理世界模型研发。</p>
+                <p class="tl-event-deep">戴盟此举的战略价值在于时机：物理世界模型的工程化窗口正在打开，但尚未形成垄断格局。引入通义多模态人才，意味着将大模型预训练范式（大规模视频/物理数据预训练）嫁接到机器人控制，路线与Google DeepMind、OpenAI对齐。若物理世界模型取得突破，将直接拉开与</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-04 02:14</span>
+                <span class="tl-rel">11 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9495" target="_blank" rel="noopener">llama.cpp修复Qwen3.5 MTP后归一化隐状态处理</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR#24025，修复Qwen3.5模型的MTP（多token预测）中后归一化隐状态使用问题，同步更新多平台构建支持。</p>
+                <p class="tl-event-deep">此修复属于模型架构对齐类bug，影响面集中在启用MTP的Qwen3.5用户。从更大视角看，随着Qwen3.5、Llama-4等新模型引入MTP/草稿头等非标准解码机制，llama.cpp的维护复杂度持续上升——每个新架构都可能带入此类细节错误。预计未来30天内，随着Qwen3.5用户增多，类似MTP相关修复PR还会出现。对竞品（llamafile、ollama等基于llama.cpp封装的工具）而言，跟进合并此类上游修复的速度决定了其Qwen3.5体验质量。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-03 14:43</span>
+                <span class="tl-rel">12 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.leiphone.com/category/industrynews/wsfm6yIgeRQ9ij1X.html" target="_blank" rel="noopener">通义千问向第三方Agent全面开放，肯德基瑞幸等首批接入</a>
+                </h3>
+                <div class="tl-event-meta">雷峰网 </div>
+                <p class="tl-event-summary">阿里通义千问APP宣布向第三方Agent和Skill全面开放，肯德基、瑞幸、蜜雪冰城、东方航空等品牌首批进行Agent服务测试。</p>
+                <p class="tl-event-deep">此举将重塑企业与用户的交互范式：品牌不再只争夺APP开屏位，而是争夺AI助手的「意图感知优先级」。短期受益的是有高频复购场景的消费品牌；中期看，能深度利用「记忆+规划」能力的垂直行业（医疗、教育、金融）才是真正的价值洼地。长期风险在于，千问若成为强势平台，品牌Agent的流量定价权将向阿里集中，类似App Store抽佣模式的博弈必然到来。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-03 15:49</span>
+                <span class="tl-rel">12 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9488" target="_blank" rel="noopener">llama.cpp新增Qwen3 SSM架构支持及多平台构建</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24031，新增对Qwen3 SSM（状态空间模型）架构的测试支持，并添加循环层注意力机制键值对，覆盖macOS、Linux、Windows、Android等多平台构建。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-03 17:56</span>
+                <span class="tl-rel">12 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260603/p14#a260603p14" target="_blank" rel="noopener">阿里巴巴发布Qwen3.7-Plus：百万上下文多模态模型定价低60%</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">阿里巴巴发布Qwen3.7-Plus多模态专有模型，支持100万token上下文，定价$2/百万token，较仅文本的Qwen3.7-Max低60%。</p>
+                <p class="tl-event-deep">核心影响在于**价格锚点重设**：$2/百万 token 的多模态定价将倒逼 OpenAI 和 Google 在中低端多模态 API 上降价或推出更小模型。对企业买家而言，亚太区客户有了强理由将部分多模态工作负载迁至阿里云，尤其是数据合规要求不出境的场景。风险在于闭源生态无法形成开发者飞轮，长期护城河弱于 OpenAI；且实际能力需基准验证才能确认定价性价比成立。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 11:15</span>
+                <span class="tl-rel">13 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/06/427730.html" target="_blank" rel="noopener">阿里云上线Qwen3.7-Plus：多模态智能体新基座</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">阿里云百炼平台上线Qwen3.7-Plus，定位多模态智能体基座模型，支持一键复刻桌面端专业软件。</p>
+                <p class="tl-event-deep">Qwen3.7-Plus是阿里在GUI Agent赛道的明确押注——过去3个月内，OpenAI Operator、Anthropic Computer Use、微软OmniParser均在争夺「AI操控电脑」这一入口。阿里此时发布专项基座，是在跟进还是有差异化尚不明朗（正文信息有限）。关键观察点在于：若该模型对中文桌面软件（如WPS、企业ERP）有针对性优化，则可在国内市场建立外资模型难以复制的本土壁垒；若只是通用GUI能力的包装，60天内将面临来也科技等专业RPA厂商的反驳</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 04:00</span>
+                <span class="tl-rel">13 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://huggingface.co/papers/2606.03746" target="_blank" rel="noopener">Qwen-Image-Flash：视觉生成少步蒸馏训练方案系统研究</a>
+                </h3>
+                <div class="tl-event-meta">Hugging Face Daily Papers </div>
+                <p class="tl-event-summary">阿里发布Qwen-Image-Flash论文，以Qwen-Image-2.0为基础，系统实证研究少步蒸馏训练方案中数据组成、教师引导、任务混合三大关键因素</p>
+                <p class="tl-event-deep">少步蒸馏领域近 18 个月经历了目标函数军备竞赛（一致性蒸馏 → 分布匹配 → 流匹配），Qwen 团队换角度切入训练方案，是相对空白但工程价值高的方向。若实验结论扎实，30-90 天内预计会被开源社区（SDXL/FLUX 路线）快速复用；对 Midjourney、Adobe Firefly 等商业团队同样有参考价值。潜在局限：摘要截断，无法验证具体量化增益；若最终数据与 SOTA 差距有限，影响力将主要集中在学术层面而非产品层面。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-31 22:25</span>
+                <span class="tl-rel">15 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/05/427005.html" target="_blank" rel="noopener">复旦×通义提出CUA训练范式：解决Agent工具选择困境</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">复旦大学与通义团队联合提出全新CUA（Computer-Use Agent）训练范式，针对智能体在大量工具中无法有效选择的核心痛点。</p>
+                <p class="tl-event-deep">此研究的深层意义在于将 Agent 能力瓶颈从「推理」重新定位到「感知-检索-决策」的完整链路。若训练范式得到验证，将推动 Agent 评测体系升级——工具选择准确率将成为与任务完成率并列的核心指标。通义作为工业界参与方，暗示该方法已具备规模化训练条件，可能加速 Qwen 系列模型在 CUA 基准上的突破，进而影响国内 AI 助手产品的能力天花板。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-26 13:32</span>
+                <span class="tl-rel">20 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/05/425150.html" target="_blank" rel="noopener">编程模型全球排行：千问3.7位列第二，仅次于Claude</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">阿里千问3.7在全球编程模型权威榜单中排名第二，仅次于Claude，跻身第一梯队。</p>
+                
+            </div>
+        </article>
+</div>
+</body>
+</html>

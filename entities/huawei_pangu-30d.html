@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>华为 / 盘古 · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>华为 / 盘古</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>11</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (2)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-14 20:00</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.ifanr.com/1668931?utm_source=rss&utm_medium=rss&utm_campaign=" target="_blank" rel="noopener">HDC 2026：华为小艺升级为系统级智能体，鸿蒙全面拥抱Agent架构</a>
+                </h3>
+                <div class="tl-event-meta">爱范儿 </div>
+                <p class="tl-event-summary">华为HDC 2026发布鸿蒙智能体框架2.0，小艺深度融合系统成为跨应用调度的系统级智能体。</p>
+                <p class="tl-event-deep">这是华为用OS层Agent能力围堵安卓生态的关键动作。核心逻辑：谁控制了意图调度层，谁就控制了下一代移动流量入口——应用的曝光权从App Store搜索排名转移到Agent的Skill推荐权重。对华为而言，这也是鸿蒙独立于安卓生态的差异化护城河：安卓上的Google Assistant受制于应用沙盒限制，跨应用调度能力天然受限；而鸿蒙自研OS可在底层打通所有Skill接口。预测：未来60天内，小米澎湃OS和OPPO ColorOS将被迫加速发布类似的系统级Agent框架，以防</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 17:45</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.zhihu.com/question/2048823351049707836" target="_blank" rel="noopener">华为HDC 2026发布开源盘古openPangu 2.0大模型</a>
+                </h3>
+                <div class="tl-event-meta">知乎热榜 </div>
+                <p class="tl-event-summary">华为在HDC 2026开发者大会上由余承东正式发布openPangu 2.0，计划6月30日起开源7大组件，含预训练代码、后训练代码及训练算子。</p>
+                <p class="tl-event-deep">openPangu 2.0最值得盯的不是模型能力本身（目前无benchmark数据），而是**预训练代码开源能否在昇腾上跑通并被第三方复现**。若30天内有高校团队成功在昇腾上跑起训练流程并发布复现报告，华为将在国内AI基础设施自主化叙事中拿到强有力的技术背书；若代码质量差、昇腾依赖过重导致无人跟进，这次开源将沦为公关动作。接下来60天的信号：GitHub star增速、高校/科研机构的issue活跃度、是否有NVIDIA适配的社区PR——这三项数据比任何官方宣传更能说明op</p>
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (9)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-13 13:35</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260613/p1#a260613p1" target="_blank" rel="noopener">华为发布HarmonyOS 7：智能体友好架构接入2000+AI智能体</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">华为发布HarmonyOS 7，推出智能体友好架构，支持对接2000余个专属AI智能体，同时升级语音助手，剑指苹果在中国市场的AI功能空白。</p>
+                <p class="tl-event-deep">HarmonyOS 7的Agent架构标志着操作系统竞争正式进入</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-13 09:16</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.ifanr.com/1668871?utm_source=rss&utm_medium=rss&utm_campaign=" target="_blank" rel="noopener">余承东宣布盘古大模型剑指全球第一，Kimi K2.7 Code开源</a>
+                </h3>
+                <div class="tl-event-meta">爱范儿 </div>
+                <p class="tl-event-summary">华为余承东宣称要带盘古大模型从中国第一走向世界第一；Kimi K2.7 Code同日开源，长程编程任务token消耗减少30%。</p>
+                <p class="tl-event-deep">余承东「世界第一」的宣示更像战略定向而非近期可兑现目标——盘古在通用能力上与GPT-4o/Claude Opus仍有差距，真正的胜负手在华为能否把盘古与昇腾算力捆绑成「不可分割的企业套餐」出售给东南亚/中东客户。Kimi K2.7 Code开源的信号量更实质：30%的token降幅若经第三方基准验证，将直接冲击Copilot的性价比叙事，并吸引国内开发者基于K2.7构建工具链，形成生态锁定。预计60天内会有多个国内IDE插件基于K2.7 Code发布，成为衡量开源策略成败的早</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-12 17:31</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.ifanr.com/1668543?utm_source=rss&utm_medium=rss&utm_campaign=" target="_blank" rel="noopener">华为AI眼镜体验评测：可穿戴AI硬件新形态</a>
+                </h3>
+                <div class="tl-event-meta">爱范儿 </div>
+                <p class="tl-event-summary">爱范儿对华为AI眼镜进行体验评测，聚焦佩戴舒适度与AI功能实用性。</p>
+                <p class="tl-event-deep">华为 AI 眼镜的核心赌注不在当下功能，而在「占据用户面部入口」的长期战略价值。舒适度过关意味着日留存可期，而日留存是训练个人化 AI 的数据飞轮启动条件。在美国制裁限制芯片迭代的背景下，华为正以穿戴硬件+鸿蒙生态构建差异化壁垒，AI 眼镜是这一路径中离身体最近、替换成本最高的一环，战略意义远超当前功能本身。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-09 18:35</span>
+                <span class="tl-rel">6 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260609/p13#a260609p13" target="_blank" rel="noopener">台湾考虑对所有中国客户限制AI芯片出口以对齐美国管制</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">台湾当局考虑对所有中国客户实施AI芯片出口管制，而非仅针对华为等黑名单实体，以进一步对齐美国出口限制措施。</p>
+                <p class="tl-event-deep">这一政策转向有两重深意：其一，</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-09 17:55</span>
+                <span class="tl-rel">6 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260609/p7#a260609p7" target="_blank" rel="noopener">中国拟五年投2950亿美元建AI数据中心，八成采购华为等本土供应商</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">中国计划五年内投入约2万亿元人民币（2950亿美元）建设全国AI数据中心，要求80%以上技术采购自华为等本土供应商。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 18:58</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.leiphone.com/category/CorporateServices/93NsFoqxglrbXa26.html" target="_blank" rel="noopener">华为云INSPIRE大会：AI时代重新定位自身战略方向</a>
+                </h3>
+                <div class="tl-event-meta">雷峰网 </div>
+                <p class="tl-event-summary">华为云在INSPIRE创想者大会上试图明确其AI时代战略定位，区别于阿里云、火山引擎等竞争对手的MaaS收入叙事路线。</p>
+                <p class="tl-event-deep">华为云此次战略表述的核心逻辑是**以供给侧稀缺性对抗需求侧价格战**：用自主可控的算力基础设施锁定强监管行业，用深度行业解决方案替代MaaS调用量叙事。这一路径短期内难被互联网系云厂商复制，但也意味着增长节奏更慢、销售周期更长。判断：若具身智能和制造业AI在2026-2027年进入规模落地期，华为云的</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-05 15:11</span>
+                <span class="tl-rel">10 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.leiphone.com/category/citydigital/I7sO2yPT7tpnmnZk.html" target="_blank" rel="noopener">华为云发布Agentic AI系列新品，提出Agentic Infra新范式</a>
+                </h3>
+                <div class="tl-event-meta">雷峰网 <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">华为云在上海INSPIRE大会发布Agentic Infra新范式及四大新品，涵盖智算集群、记忆存储、调度引擎和安全运行环境。</p>
+                <p class="tl-event-deep">华为云此次发布的核心价值不在单项技术指标，而在于将</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-28 02:00</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.wired.com/story/huawei-chip-queen-moores-law-tau/" target="_blank" rel="noopener">华为「芯片女王」挑战后摩尔定律，威胁美国芯片霸权</a>
+                </h3>
+                <div class="tl-event-meta">Wired AI </div>
+                <p class="tl-event-summary">华为正适应摩尔定律走向终结，探索新型芯片生产路径，有望动摇美国在全球芯片领域的主导地位</p>
+                <p class="tl-event-deep">这是中美芯片战的关键战略转折信号：华为正从「被动应对制裁」转向「主动颠覆游戏规则」。若后摩尔定律路线能绕过EUV光刻机依赖，美国BIS当前管制体系的核心杠杆将失效——这对英伟达、台积电、应用材料构成长期结构性威胁。预计接下来60-90天内，美国可能加速推进更前置的管制措施（针对封装设备、先进EDA工具），同时国内AI算力采购方将更积极验证华为昇腾系列作为英伟达替代方案的可行性。失败情景：若华为后摩尔定律路线量产良率不达标，中国AI企业将继续面临算力瓶颈，英伟达护城河短期内依然</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">05-25 10:28</span>
+                <span class="tl-rel">21 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/05/423455.html" target="_blank" rel="noopener">华为具身大脑前负责人创业，融合认知科学打造世界模型</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">华为具身智能核心负责人离职创业，以认知科学为方法论构建具身智能世界模型，已完成亿元级融资。</p>
+                <p class="tl-event-deep">华为顶尖具身智能人才携认知科学路线出走，标志着具身智能竞争从</p>
+            </div>
+        </article>
+</div>
+</body>
+</html>
