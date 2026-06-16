@@ -716,3 +716,46 @@
 {"i": "evt_20f0dddcbd579ebe8dee1a55", "d": "2026-06-16-pm", "t": "谷歌Android 17搭载Gemini全面武装手机系统体验", "k": "app", "m": 1}
 {"i": "evt_e6e258fc2378d2b57b4e863b", "d": "2026-06-16-pm", "t": "AnySearch上线首月吸引10万开发者，专为Agent设计AI搜索层", "k": "app", "m": 1}
 {"i": "evt_ba7a902b91d0bfa68a5a2b78", "d": "2026-06-16-pm", "t": "前OpenAI高管清华演讲：AI时代最大危机是人类自我认知迷失", "k": "app", "m": 1}
+{"i": "evt_82943ee2992925fadeddc0b1", "d": "2026-06-17-am", "t": "NVIDIA EMPIRE：编程智能体无人介入自主完成机器人技能全循环学习", "k": "app", "m": 4}
+{"i": "evt_f4788ba3cb5bf982fd71c4bd", "d": "2026-06-17-am", "t": "英伟达Blackwell横扫MLPerf训练v6.0全项基准测试", "k": "infra", "m": 4}
+{"i": "evt_9b34307e3574b9e52c108ab6", "d": "2026-06-17-am", "t": "支付宝推出AI原生版「阿宝」，中国三大支付巨头竞速AI自主支付时代", "k": "biz", "m": 4}
+{"i": "evt_be1cc3a1b0e23fe0b99bd496", "d": "2026-06-17-am", "t": "微软M365 Copilot高危漏洞可窃取用户双因素验证码", "k": "gov", "m": 4}
+{"i": "evt_6f648528d1171dacb20ceb68", "d": "2026-06-17-am", "t": "OpenAI Codex扩展欧洲版图：Computer Use等功能上线", "k": "app", "m": 3}
+{"i": "evt_050351e5b5406083f0a37691", "d": "2026-06-17-am", "t": "OpenAI Codex遭遇大规模容量限制故障，用户报告高错误率", "k": "app", "m": 3}
+{"i": "evt_212a353b8729f56376b36bed", "d": "2026-06-17-am", "t": "英国政府携手Google DeepMind用AI加速住房规划审批", "k": "app", "m": 3}
+{"i": "evt_9aeb25ac9b2a38e2409a71e8", "d": "2026-06-17-am", "t": "OpenAI评估团队负责人谈基准饱和与下一代模型评测方向", "k": "research", "m": 3}
+{"i": "evt_899b31ac32af124739f9087d", "d": "2026-06-17-am", "t": "OpenAI发布部署模拟评估方法：生产数据是关键", "k": "research", "m": 3}
+{"i": "evt_380067664a377cf49363afd9", "d": "2026-06-17-am", "t": "OpenAI披露ChatGPT用户数据研究匿名化处理细节", "k": "research", "m": 3}
+{"i": "evt_d65402362b94bd61aad138b3", "d": "2026-06-17-am", "t": "Anthropic发布Claude Code研究：追踪AI对劳动力市场的影响", "k": "biz", "m": 3}
+{"i": "evt_00287eb4bc5276a2a7e63016", "d": "2026-06-17-am", "t": "Cohere发布North Mini Code小模型架构与训练详解", "k": "model", "m": 3}
+{"i": "evt_98560a6717497629ddfe17d7", "d": "2026-06-17-am", "t": "AI健康追踪工具开放公测：心率睡眠恢复数据可审计", "k": "app", "m": 3}
+{"i": "evt_bfec359d2adcfdf3ea29bf3d", "d": "2026-06-17-am", "t": "塔式异构封装架构：AI时代芯片集成新方向", "k": "infra", "m": 3}
+{"i": "evt_0e091a0c33b54500c3a6dda8", "d": "2026-06-17-am", "t": "MIT科技评论：首位脑机接口深度用户与韩国AI热潮今日聚焦", "k": "biz", "m": 3}
+{"i": "evt_a10ea9b202afcec4a1ec8aa2", "d": "2026-06-17-am", "t": "星上AI边缘计算颠覆卫星定价逻辑，多数在轨卫星仍依赖地面处理", "k": "app", "m": 3}
+{"i": "evt_de812e0d288c90416e302472", "d": "2026-06-17-am", "t": "荷兰推出GPT-NL：首个本土主权大语言模型", "k": "model", "m": 3}
+{"i": "evt_d1075d45ab586dc6488b1bf5", "d": "2026-06-17-am", "t": "苹果2027年传闻：搭载摄像头的AirPods将为Siri提供视觉感知", "k": "app", "m": 3}
+{"i": "evt_7509b1dd658a90004178d3ac", "d": "2026-06-17-am", "t": "高通发布Snapdragon Reality Elite芯片，赋能下一代AI智能眼镜", "k": "infra", "m": 3}
+{"i": "evt_245ac94e22c34e512c6b300b", "d": "2026-06-17-am", "t": "调查：六成美国消费者对品牌营销中的「AI」字眼反感", "k": "biz", "m": 3}
+{"i": "evt_37e82a4176a3fb6b98e1ce87", "d": "2026-06-17-am", "t": "Plaud AI笔记仪出货逾200万台，ARR突破1亿美元", "k": "biz", "m": 3}
+{"i": "evt_6e39f9b0c255615acf73a6de", "d": "2026-06-17-am", "t": "Robinhood裁员10%：CEO拒绝将锅甩给AI，与硅谷同行态度截然不同", "k": "biz", "m": 3}
+{"i": "evt_0d5c6560db878cb3d09cdc0d", "d": "2026-06-17-am", "t": "llama.cpp修复NVFP4量化边界问题并限制支持组合", "k": "research", "m": 2}
+{"i": "evt_64432f3b14ebcb829889ef38", "d": "2026-06-17-am", "t": "llama.cpp Vulkan后端优化：UMA设备优先使用主机可见内存", "k": "infra", "m": 2}
+{"i": "evt_ff1b84a9ef0704d114cd3cae", "d": "2026-06-17-am", "t": "llama.cpp基准测试新增离线模式支持多平台构建", "k": "app", "m": 2}
+{"i": "evt_092d2649f244b3abcdb3f854", "d": "2026-06-17-am", "t": "SpaceX以600亿美元股票收购AI编程工具Cursor", "k": "biz", "m": 1}
+{"i": "evt_7d8b56dabdf2b240bcb42eca", "d": "2026-06-17-am", "t": "MIT科技评论揭秘：AI如何成为军队新一代决策顾问", "k": "biz", "m": 1}
+{"i": "evt_7e9ab8fcb0f57131d7cd493b", "d": "2026-06-17-am", "t": "Gemini 3.5 Flash多模态能力超越Gemini 3.1 Pro：速度3倍、成本减半", "k": "model", "m": 1}
+{"i": "evt_573319f957a833125a0a353c", "d": "2026-06-17-am", "t": "TDV范式：仅凭因果性假设实现视觉表征学习突破", "k": "model", "m": 1}
+{"i": "evt_03d96294e226baaabeb7faa5", "d": "2026-06-17-am", "t": "Qwen3-27B本地模型实测：ggml作者日常编程利器", "k": "app", "m": 1}
+{"i": "evt_0ec217bf840886f083014c7c", "d": "2026-06-17-am", "t": "NVIDIA开发者博客：低精度训练优化Transformer模型指南", "k": "model", "m": 1}
+{"i": "evt_c0cb041abfe89ceea46adc01", "d": "2026-06-17-am", "t": "百余智能体协作一周将Gemma 4推理速度提升5倍", "k": "app", "m": 1}
+{"i": "evt_13182bf58716ad78d4551116", "d": "2026-06-17-am", "t": "Neuro-JEPA：多模态神经影像稀疏潜在预测基础模型", "k": "model", "m": 1}
+{"i": "evt_08181be084a75ca380fd54b6", "d": "2026-06-17-am", "t": "Yann LeCun将亮相法国电视台黄金时段，谈VivaTech与AI未来", "k": "app", "m": 1}
+{"i": "evt_e537075f3fff2740dd8a642a", "d": "2026-06-17-am", "t": "Anthropic紧急叫停Claude Agent SDK独立计费方案", "k": "app", "m": 1}
+{"i": "evt_652f2bcac590a66d300f436a", "d": "2026-06-17-am", "t": "澳洲健康科技初创Everlab完成6500万澳元A轮融资", "k": "biz", "m": 1}
+{"i": "evt_7ce624df518a44f2d67728f7", "d": "2026-06-17-am", "t": "Sensor Tower：ChatGPT市场份额跌至46.4%，Gemini升至27.7%", "k": "biz", "m": 1}
+{"i": "evt_e9f0968bfac4ba566fc28f13", "d": "2026-06-17-am", "t": "AI工具泛滥时代，独立开发者如何找到真实用户", "k": "app", "m": 1}
+{"i": "evt_55f2a540251148db0100a899", "d": "2026-06-17-am", "t": "五角大楼用AI撰写国会报告，生成式AI全面渗透军方", "k": "gov", "m": 1}
+{"i": "evt_3145ce694e0a4c65ec9bedc3", "d": "2026-06-17-am", "t": "微软Copilot Cowork转按量计费并考虑引入DeepSeek廉价版", "k": "app", "m": 1}
+{"i": "evt_9868db45791bc58d6097c52b", "d": "2026-06-17-am", "t": "泄露财务文件显示OpenAI年亏损数十亿美元", "k": "app", "m": 1}
+{"i": "evt_230f17fde951494ae67b0e25", "d": "2026-06-17-am", "t": "鸿蒙小艺亮相脱口秀舞台，华为AI助手展示推理调度与自进化能力", "k": "app", "m": 1}
+{"i": "evt_dc9722a8803cd0cd58f6bc47", "d": "2026-06-17-am", "t": "TRAE AI创造力大赛启动，百万现金激励全民造物", "k": "app", "m": 1}

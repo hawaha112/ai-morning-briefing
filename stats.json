@@ -1,55 +1,72 @@
 {
-  "article_count": 50,
+  "article_count": 43,
   "output_file": "output/index.html",
-  "file_size_kb": 134.1,
-  "generated_at": "2026-06-16T10:43:51.559949+00:00",
+  "file_size_kb": 136.6,
+  "generated_at": "2026-06-16T22:27:47.552309+00:00",
   "event_db_stats": {
-    "total_articles": 3745,
+    "total_articles": 3855,
     "collected": 0,
-    "analyzed": 3745,
-    "total_events": 2075,
-    "total_evidence": 2444,
+    "analyzed": 3855,
+    "total_events": 2134,
+    "total_evidence": 2521,
     "event_status": {
       "confirmed": 1,
-      "official": 309,
-      "reported": 1765
+      "official": 328,
+      "reported": 1805
     },
-    "tier_0": 370,
-    "tier_1": 1207,
-    "tier_2": 2168
+    "tier_0": 394,
+    "tier_1": 1246,
+    "tier_2": 2215
   },
   "event_status_distribution": {
-    "reported": 50
+    "official": 9,
+    "reported": 34
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 50,
-  "multi_source_count": 1,
-  "important_count": 2,
+  "llm_count": 43,
+  "multi_source_count": 4,
+  "important_count": 4,
   "important_events": [
     {
-      "title": "谈判破裂：Anthropic赴华盛顿斡旋失败，Fable 5出口管制维持封锁",
-      "summary": "Anthropic高管赴华盛顿与特朗普政府谈判，未能解除对Fable 5和Mythos 5的出口管制，两款顶级模型继续被全球封锁。",
-      "event_id": "evt_5bbf79af8a1ffc5a285df524",
-      "importance": 5,
-      "source_name": "新智元",
-      "archive_url": "archive/2026-06-16-pm.html"
+      "title": "英伟达Blackwell横扫MLPerf训练v6.0全项基准测试",
+      "summary": "英伟达Blackwell平台在MLPerf Training v6.0中包揽全部基准测试冠军，成为唯一参与所有测试项目的平台。",
+      "event_id": "evt_f4788ba3cb5bf982fd71c4bd",
+      "importance": 4,
+      "source_name": "NVIDIA Developer Blog",
+      "archive_url": "archive/2026-06-17-am.html"
     },
     {
-      "title": "大晓机器人完成天使+轮融资，累计融资达数亿美元",
-      "summary": "具身智能公司大晓机器人宣布完成天使+轮融资，2026年累计融资达数亿美元，已成为具身领域最快独角兽之一。",
-      "event_id": "evt_3691f04732c2e15c37242454",
+      "title": "NVIDIA EMPIRE：编程智能体无人介入自主完成机器人技能全循环学习",
+      "summary": "NVIDIA GEAR实验室推出EMPIRE系统，让前沿编程智能体在真实机器人上自主完成从文献检索、代码实现、训练部署到自我验证的完整研究闭环，无需人类介入即达到灵巧操作任务99%成功率。",
+      "event_id": "evt_82943ee2992925fadeddc0b1",
       "importance": 4,
-      "source_name": "36氪",
-      "archive_url": "archive/2026-06-16-pm.html"
+      "source_name": "X-Jim Fan",
+      "archive_url": "archive/2026-06-17-am.html"
+    },
+    {
+      "title": "支付宝推出AI原生版「阿宝」，中国三大支付巨头竞速AI自主支付时代",
+      "summary": "2026年6月16日支付宝发布AI原生版「阿宝」，标志着中国支付平台从工具向AI代理转型，用户可通过对话界面管理资产并授权AI代为支付。",
+      "event_id": "evt_9b34307e3574b9e52c108ab6",
+      "importance": 4,
+      "source_name": "虎嗅科技",
+      "archive_url": "archive/2026-06-17-am.html"
+    },
+    {
+      "title": "微软M365 Copilot高危漏洞可窃取用户双因素验证码",
+      "summary": "微软修复M365 Copilot最高危漏洞，研究人员证明攻击者可通过提示注入窃取用户邮件中的2FA验证码等敏感数据。",
+      "event_id": "evt_be1cc3a1b0e23fe0b99bd496",
+      "importance": 4,
+      "source_name": "Ars Technica AI",
+      "archive_url": "archive/2026-06-17-am.html"
     }
   ],
-  "official_count": 0,
-  "depth_count": 49,
+  "official_count": 9,
+  "depth_count": 41,
   "entity_count": 0,
-  "llm_call_count": 107,
-  "llm_prompt_tokens": 184095,
-  "llm_completion_tokens": 44886,
-  "llm_total_tokens": 229029,
+  "llm_call_count": 133,
+  "llm_prompt_tokens": 215610,
+  "llm_completion_tokens": 53931,
+  "llm_total_tokens": 269596,
   "llm_parse_fallback": 0
 }
