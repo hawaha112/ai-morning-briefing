@@ -1,64 +1,55 @@
 {
-  "article_count": 28,
+  "article_count": 50,
   "output_file": "output/index.html",
-  "file_size_kb": 133.8,
-  "generated_at": "2026-06-15T22:47:50.195618+00:00",
+  "file_size_kb": 134.1,
+  "generated_at": "2026-06-16T10:43:51.559949+00:00",
   "event_db_stats": {
-    "total_articles": 3670,
+    "total_articles": 3745,
     "collected": 0,
-    "analyzed": 3670,
-    "total_events": 2023,
-    "total_evidence": 2389,
+    "analyzed": 3745,
+    "total_events": 2075,
+    "total_evidence": 2444,
     "event_status": {
       "confirmed": 1,
-      "official": 308,
-      "reported": 1714
+      "official": 309,
+      "reported": 1765
     },
-    "tier_0": 369,
-    "tier_1": 1174,
-    "tier_2": 2127
+    "tier_0": 370,
+    "tier_1": 1207,
+    "tier_2": 2168
   },
   "event_status_distribution": {
-    "official": 5,
-    "reported": 23
+    "reported": 50
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 28,
+  "llm_count": 50,
   "multi_source_count": 1,
-  "important_count": 3,
+  "important_count": 2,
   "important_events": [
     {
-      "title": "Anthropic与美国政府出口管制摩擦：内部人士揭秘幕后冲突",
-      "summary": "Axios报道美国政府出口管制决策导致Anthropic模型下线，多名Anthropic高管赴华盛顿与商务部会面交涉",
-      "event_id": "evt_597f04b39ae9db18a9dccee9",
-      "importance": 4,
-      "source_name": "Simon Willison",
-      "archive_url": "archive/2026-06-16-am.html"
+      "title": "谈判破裂：Anthropic赴华盛顿斡旋失败，Fable 5出口管制维持封锁",
+      "summary": "Anthropic高管赴华盛顿与特朗普政府谈判，未能解除对Fable 5和Mythos 5的出口管制，两款顶级模型继续被全球封锁。",
+      "event_id": "evt_5bbf79af8a1ffc5a285df524",
+      "importance": 5,
+      "source_name": "新智元",
+      "archive_url": "archive/2026-06-16-pm.html"
     },
     {
-      "title": "Meta推出AI搜索模式：抓取Facebook公开帖子生成答案",
-      "summary": "Meta发布多项AI新功能，含「AI Mode」搜索模式，调用Meta AI从Facebook公开帖子中提取答案，加速追赶AI竞争。",
-      "event_id": "evt_2f7d14c498f246729ba964ca",
+      "title": "大晓机器人完成天使+轮融资，累计融资达数亿美元",
+      "summary": "具身智能公司大晓机器人宣布完成天使+轮融资，2026年累计融资达数亿美元，已成为具身领域最快独角兽之一。",
+      "event_id": "evt_3691f04732c2e15c37242454",
       "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-16-am.html"
-    },
-    {
-      "title": "微软Discovery上线Azure，以智能体AI加速Majorana 2量子芯片研发",
-      "summary": "微软将Microsoft Discovery平台正式部署至Azure，为Majorana 2量子芯片研发提供智能体AI支持，加速量子计算材料科学探索。",
-      "event_id": "evt_33985f48f2bcde37ede32afd",
-      "importance": 4,
-      "source_name": "AI前线",
-      "archive_url": "archive/2026-06-16-am.html"
+      "source_name": "36氪",
+      "archive_url": "archive/2026-06-16-pm.html"
     }
   ],
-  "official_count": 5,
-  "depth_count": 28,
+  "official_count": 0,
+  "depth_count": 49,
   "entity_count": 0,
-  "llm_call_count": 76,
-  "llm_prompt_tokens": 128546,
-  "llm_completion_tokens": 30748,
-  "llm_total_tokens": 159321,
+  "llm_call_count": 107,
+  "llm_prompt_tokens": 184095,
+  "llm_completion_tokens": 44886,
+  "llm_total_tokens": 229029,
   "llm_parse_fallback": 0
 }

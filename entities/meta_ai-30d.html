@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>81</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>85</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (6)</h2>
     
@@ -192,8 +192,68 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (75)</h2>
+    <h2 class="tl-section">📰 一般动态 (79)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-16 16:11</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9664" target="_blank" rel="noopener">llama.cpp SYCL后端扩展MoE量化矩阵运算支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp为SYCL后端新增Q4_K/Q5_K/Q6_K量化格式的MoE专家张量MUL_MAT_ID操作支持，提升Intel GPU上混合专家模型的推理性能。</p>
+                <p class="tl-event-deep">此类底层算子补全工作通常不引人注目，但对SYCL后端的实用性至关重要。当前DeepSeek-V3/R1等高影响力开源MoE模型在llama.cpp社区中使用量极高，而Intel GPU用户长期处于CUDA/ROCm的二等公民状态。此PR将SYCL推理能力与CUDA后端拉平了关键量化格式的MoE支持，预计30-60天内会有更多Intel Arc用户报告MoE模型可用性显著改善。从趋势看，这是llama.cpp SYCL后端近半年持续补齐算子覆盖的系列工作之一，Intel作为替代</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-16 14:14</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9663" target="_blank" rel="noopener">llama.cpp SYCL后端新增EXPM1算子支持及多平台CI覆盖</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp的SYCL后端新增EXPM1算子支持，并完善FLOOR、TRUNC、ROUND等算子的单元测试覆盖，扩展多平台构建矩阵。</p>
+                <p class="tl-event-deep">这是llama.cpp SYCL后端的常规算子补全PR，属于持续集成维护性工作而非战略性突破。从竞争格局看，SYCL后端完整性直接影响Intel GPU对CUDA生态的替代能力——每个缺失算子都是用户被迫回退CPU或放弃Intel平台的理由。当前llama.cpp的SYCL后端仍落后于CUDA/Metal后端的算子覆盖率，Intel需要持续投入PR合并速度才能缩小差距。90天内最可能的动向：随着Intel Battlemage（Arc B系列）桌面GPU出货量增加，社区对SY</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-16 13:08</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9661" target="_blank" rel="noopener">llama.cpp 为 Vulkan 后端新增 col2im_1d 算子支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp 项目在 Vulkan 后端新增 GGML_OP_COL2IM_1D 算子，跟进 CPU 端实现，优化为有界聚集循环替代全K扫描取模运算。</p>
+                <p class="tl-event-deep">此类算子补全 PR 是 llama.cpp Vulkan 后端从「能跑」到「全速跑」的必经之路。当前 Vulkan 后端与 CUDA 的算子覆盖差距仍在缩小中，每个新算子意味着更多模型架构（尤其是含卷积层的音频/视觉模型）无需 CPU 回退。预计 30-60 天内 Whisper 类模型在非CUDA GPU 上的端到端速度会有可感知提升，这对 AMD 和移动端用户是实质性利好。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-16 06:06</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9660" target="_blank" rel="noopener">llama.cpp修复LFM2工具调用解析双重转义漏洞</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp项目发布PR修复LFM2模型工具调用解析中的双重转义bug，并新增转义测试用例。</p>
+                <p class="tl-event-deep">这是一个局限于LFM2模型解析路径的小范围bugfix，不改变整体竞争格局。但值得注意的是：llama.cpp对LFM2的支持本身说明Liquid AI的架构（SSM/混合序列模型）正在被主流推理生态纳入，工具调用支持是其进入智能体应用场景的门票。修复此类解析bug是生态成熟度信号——意味着有足够多开发者实际在用LFM2跑工具调用，踩到了这个边界case并上报。30天内预计不会有更大动作，但若LFM2在本地智能体场景持续获得采用，llama.cpp侧的支持完善度将成为其vs其</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-16 04:29</span>
