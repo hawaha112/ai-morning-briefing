@@ -1,72 +1,72 @@
 {
-  "article_count": 43,
+  "article_count": 49,
   "output_file": "output/index.html",
-  "file_size_kb": 136.6,
-  "generated_at": "2026-06-16T22:27:47.552309+00:00",
+  "file_size_kb": 134.9,
+  "generated_at": "2026-06-17T10:37:03.249637+00:00",
   "event_db_stats": {
-    "total_articles": 3855,
+    "total_articles": 3869,
     "collected": 0,
-    "analyzed": 3855,
-    "total_events": 2134,
-    "total_evidence": 2521,
+    "analyzed": 3869,
+    "total_events": 2149,
+    "total_evidence": 2535,
     "event_status": {
       "confirmed": 1,
-      "official": 328,
-      "reported": 1805
+      "official": 332,
+      "reported": 1816
     },
-    "tier_0": 394,
-    "tier_1": 1246,
-    "tier_2": 2215
+    "tier_0": 397,
+    "tier_1": 1254,
+    "tier_2": 2218
   },
   "event_status_distribution": {
-    "official": 9,
-    "reported": 34
+    "official": 1,
+    "reported": 48
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 43,
-  "multi_source_count": 4,
+  "llm_count": 49,
+  "multi_source_count": 1,
   "important_count": 4,
   "important_events": [
     {
-      "title": "英伟达Blackwell横扫MLPerf训练v6.0全项基准测试",
-      "summary": "英伟达Blackwell平台在MLPerf Training v6.0中包揽全部基准测试冠军，成为唯一参与所有测试项目的平台。",
-      "event_id": "evt_f4788ba3cb5bf982fd71c4bd",
+      "title": "智谱GLM-5.2发布：全球前端编程能力直逼Claude Opus",
+      "summary": "智谱发布GLM-5.2，第三方评测显示其编程能力仅次于Claude Opus 4.8，744B参数模型跻身全球顶级编程模型行列。",
+      "event_id": "evt_ffc4c951795ec8c088f9b694",
       "importance": 4,
-      "source_name": "NVIDIA Developer Blog",
-      "archive_url": "archive/2026-06-17-am.html"
+      "source_name": "Latent Space",
+      "archive_url": "archive/2026-06-17-pm.html"
     },
     {
-      "title": "NVIDIA EMPIRE：编程智能体无人介入自主完成机器人技能全循环学习",
-      "summary": "NVIDIA GEAR实验室推出EMPIRE系统，让前沿编程智能体在真实机器人上自主完成从文献检索、代码实现、训练部署到自我验证的完整研究闭环，无需人类介入即达到灵巧操作任务99%成功率。",
-      "event_id": "evt_82943ee2992925fadeddc0b1",
+      "title": "大晓机器人开源ACE-Ego：人类视频训练具身模型刷新SOTA",
+      "summary": "大晓机器人联合香港中文大学发布并开源ACE-Ego，以第一视角人类视频训练VLA模型，在RoboCasa和RoboTwin 2.0两大基准上刷新最高纪录。",
+      "event_id": "evt_fc78e5dfa5feb9f091c48529",
       "importance": 4,
-      "source_name": "X-Jim Fan",
-      "archive_url": "archive/2026-06-17-am.html"
+      "source_name": "雷峰网",
+      "archive_url": "archive/2026-06-17-pm.html"
     },
     {
-      "title": "支付宝推出AI原生版「阿宝」，中国三大支付巨头竞速AI自主支付时代",
-      "summary": "2026年6月16日支付宝发布AI原生版「阿宝」，标志着中国支付平台从工具向AI代理转型，用户可通过对话界面管理资产并授权AI代为支付。",
-      "event_id": "evt_9b34307e3574b9e52c108ab6",
+      "title": "中国草根团队Mogo发布Magpie 1.0：全球首个高动态物理世界模型",
+      "summary": "腾讯米哈游老兵组成的Mogo团队发布Magpie 1.0，实现超10分钟物理一致性实时输出，单卡24FPS推理。",
+      "event_id": "evt_e3d4b35a6d645cc30b4f95a9",
       "importance": 4,
-      "source_name": "虎嗅科技",
-      "archive_url": "archive/2026-06-17-am.html"
+      "source_name": "新智元",
+      "archive_url": "archive/2026-06-17-pm.html"
     },
     {
-      "title": "微软M365 Copilot高危漏洞可窃取用户双因素验证码",
-      "summary": "微软修复M365 Copilot最高危漏洞，研究人员证明攻击者可通过提示注入窃取用户邮件中的2FA验证码等敏感数据。",
-      "event_id": "evt_be1cc3a1b0e23fe0b99bd496",
+      "title": "逆矩阵科技完成超亿美元融资，发布通用世界基座模型",
+      "summary": "世界模型公司逆矩阵科技（Physis）完成超亿美元种子++轮融资，发布通用世界基座模型Physis-v0.1，经纬创投、五源资本及蚂蚁集团战略投资参与。",
+      "event_id": "evt_aa0b92606d047584c4aca30c",
       "importance": 4,
-      "source_name": "Ars Technica AI",
-      "archive_url": "archive/2026-06-17-am.html"
+      "source_name": "36氪",
+      "archive_url": "archive/2026-06-17-pm.html"
     }
   ],
-  "official_count": 9,
-  "depth_count": 41,
+  "official_count": 1,
+  "depth_count": 47,
   "entity_count": 0,
-  "llm_call_count": 133,
-  "llm_prompt_tokens": 215610,
-  "llm_completion_tokens": 53931,
-  "llm_total_tokens": 269596,
+  "llm_call_count": 104,
+  "llm_prompt_tokens": 171400,
+  "llm_completion_tokens": 41712,
+  "llm_total_tokens": 213146,
   "llm_parse_fallback": 0
 }

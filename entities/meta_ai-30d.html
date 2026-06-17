@@ -196,6 +196,21 @@ h2.tl-section {
     
         <article class="tl-event">
             <div class="tl-event-time">
+                <span class="tl-date">06-17 15:34</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9673" target="_blank" rel="noopener">llama.cpp为SYCL后端新增USM系统内存分配支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp新增可选USM系统内存分配功能，允许大型GPU缓冲区(≥1GB)利用系统内存管理，实现VRAM超量分配。</p>
+                <p class="tl-event-deep">这一改动短期看是技术补丁，长期看是 Intel GPU 争夺本地 AI 推理市场的关键卡位动作。消费级 GPU 的 VRAM 瓶颈是阻止普通用户跑大模型的最大门槛，USM 透明超量分配将 B580 的有效模型容量从 12GB 扩展到接近主机内存上限，极大降低入门门槛。若性能损耗在可接受范围（轻度超量 20~30% 时延迟约增加 30~50%），将成为 Intel Arc 系列 GPU 对 NVIDIA 的差异化卖点，加速本地推理平民化。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
                 <span class="tl-date">06-17 03:20</span>
                 <span class="tl-rel">今天</span>
             </div>
@@ -1439,25 +1454,6 @@ h2.tl-section {
                 <div class="tl-event-meta">Techmeme </div>
                 <p class="tl-event-summary">黑客利用Meta AI客服机器人漏洞篡改Instagram账号绑定邮箱，导致大规模账号劫持，Meta已修复该漏洞。</p>
                 <p class="tl-event-deep">此漏洞揭示出 AI 落地客服场景的系统性安全盲区：企业在追求自动化效率时，往往将 AI 的</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-18 12:00</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://arxiv.org/abs/2605.15217" target="_blank" rel="noopener">表面公平实则有偏：LLM高风险决策中潜在偏见的因果效力研究</a>
-                </h3>
-                <div class="tl-event-meta">ArXiv AI </div>
-                <p class="tl-event-summary">研究发现LLM在房贷审核中输出层面无偏差，但内部表征保留并放大了人口统计偏见，且这些被压制的信息在激活干预后仍能影响决策输出。</p>
-                <p class="tl-event-deep">这项研究对AI合规产业的冲击比表面看起来更大。**目前市面上的AI公平性审计工具（如IBM AI Fairness 360、Microsoft Fairlearn）几乎全部基于输出层统计，本文等于宣告这些工具存在系统性盲区。**
-
-接下来60-90天最可能发生的是：欧盟AI法案技术标准委员会（CEN/CENELEC）和美国NIST AI RMF的更新草案可能开始引用此类「内部表征审计」需求，倒逼审计工具商扩展检测维度。
-
-受损方：当前只提供输出层公平性合规服务的审计公司；受益</p>
             </div>
         </article>
 </div>
