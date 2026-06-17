@@ -1,72 +1,80 @@
 {
-  "article_count": 49,
+  "article_count": 46,
   "output_file": "output/index.html",
-  "file_size_kb": 134.9,
-  "generated_at": "2026-06-17T10:37:03.249637+00:00",
+  "file_size_kb": 137.9,
+  "generated_at": "2026-06-17T22:27:46.711910+00:00",
   "event_db_stats": {
-    "total_articles": 3869,
+    "total_articles": 3932,
     "collected": 0,
-    "analyzed": 3869,
-    "total_events": 2149,
-    "total_evidence": 2535,
+    "analyzed": 3932,
+    "total_events": 2216,
+    "total_evidence": 2618,
     "event_status": {
-      "confirmed": 1,
-      "official": 332,
-      "reported": 1816
+      "confirmed": 2,
+      "official": 355,
+      "reported": 1859
     },
-    "tier_0": 397,
-    "tier_1": 1254,
-    "tier_2": 2218
+    "tier_0": 420,
+    "tier_1": 1268,
+    "tier_2": 2244
   },
   "event_status_distribution": {
-    "official": 1,
-    "reported": 48
+    "official": 12,
+    "reported": 34
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 49,
-  "multi_source_count": 1,
-  "important_count": 4,
+  "llm_count": 46,
+  "multi_source_count": 6,
+  "important_count": 5,
   "important_events": [
     {
-      "title": "智谱GLM-5.2发布：全球前端编程能力直逼Claude Opus",
-      "summary": "智谱发布GLM-5.2，第三方评测显示其编程能力仅次于Claude Opus 4.8，744B参数模型跻身全球顶级编程模型行列。",
-      "event_id": "evt_ffc4c951795ec8c088f9b694",
+      "title": "GPT-5.4驱动近自主AI化学家改进药物合成关键反应",
+      "summary": "OpenAI与Molecule.one合作，展示基于GPT-5.4的近自主AI化学家如何改进了药物化学中的关键合成反应。",
+      "event_id": "evt_5ff2f715f1e6274165f0a220",
       "importance": 4,
-      "source_name": "Latent Space",
-      "archive_url": "archive/2026-06-17-pm.html"
+      "source_name": "OpenAI Blog",
+      "archive_url": "archive/2026-06-18-am.html"
     },
     {
-      "title": "大晓机器人开源ACE-Ego：人类视频训练具身模型刷新SOTA",
-      "summary": "大晓机器人联合香港中文大学发布并开源ACE-Ego，以第一视角人类视频训练VLA模型，在RoboCasa和RoboTwin 2.0两大基准上刷新最高纪录。",
-      "event_id": "evt_fc78e5dfa5feb9f091c48529",
+      "title": "Fable 5自主编写WebGPU内核将Gemma 4推至255 tok/s，HuggingFace开源成果",
+      "summary": "Anthropic Fable 5在被关停前自主编写WebGPU内核，使Gemma 4推理速度从84提升至255 tok/s，HuggingFace现将该演示与内核代码公开发布。",
+      "event_id": "evt_91d6968cb0a494e64dbe19ed",
       "importance": 4,
-      "source_name": "雷峰网",
-      "archive_url": "archive/2026-06-17-pm.html"
+      "source_name": "X-HuggingFace",
+      "archive_url": "archive/2026-06-18-am.html"
     },
     {
-      "title": "中国草根团队Mogo发布Magpie 1.0：全球首个高动态物理世界模型",
-      "summary": "腾讯米哈游老兵组成的Mogo团队发布Magpie 1.0，实现超10分钟物理一致性实时输出，单卡24FPS推理。",
-      "event_id": "evt_e3d4b35a6d645cc30b4f95a9",
+      "title": "阿里巴巴发布HappyOyster 1.0世界模型：一句话生成可实时交互的开放数字世界",
+      "summary": "阿里巴巴正式发布HappyOyster 1.0世界模型，用户输入一句话即可生成可实时探索、物理交互的开放式数字世界，主打主动式实时响应。",
+      "event_id": "evt_fbaf649676c01bdb22e586ad",
       "importance": 4,
       "source_name": "新智元",
-      "archive_url": "archive/2026-06-17-pm.html"
+      "archive_url": "archive/2026-06-18-am.html"
     },
     {
-      "title": "逆矩阵科技完成超亿美元融资，发布通用世界基座模型",
-      "summary": "世界模型公司逆矩阵科技（Physis）完成超亿美元种子++轮融资，发布通用世界基座模型Physis-v0.1，经纬创投、五源资本及蚂蚁集团战略投资参与。",
-      "event_id": "evt_aa0b92606d047584c4aca30c",
+      "title": "美商务部警告Anthropic：向外国人开放顶级AI模型须获政府批准",
+      "summary": "美国商务部长警告Anthropic，向外国公民授予其最先进AI模型访问权限须事先获得政府批准。",
+      "event_id": "evt_11b94b484cb103462226f41b",
       "importance": 4,
-      "source_name": "36氪",
-      "archive_url": "archive/2026-06-17-pm.html"
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-06-18-am.html"
+    },
+    {
+      "title": "G7峰会三大AI掌门联手力推美国主导全球AI规则",
+      "summary": "Anthropic的Amodei、OpenAI的Altman与DeepMind的Hassabis在G7峰会联合呼吁美国主导国际AI规则合作，马克龙和莫迪就美国否决Mythos框架表达不满。",
+      "event_id": "evt_cec55ccf279d1c42741aebe9",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-18-am.html"
     }
   ],
-  "official_count": 1,
-  "depth_count": 47,
+  "official_count": 12,
+  "depth_count": 45,
   "entity_count": 0,
-  "llm_call_count": 104,
-  "llm_prompt_tokens": 171400,
-  "llm_completion_tokens": 41712,
-  "llm_total_tokens": 213146,
-  "llm_parse_fallback": 0
+  "llm_call_count": 130,
+  "llm_prompt_tokens": 221104,
+  "llm_completion_tokens": 53893,
+  "llm_total_tokens": 275056,
+  "llm_parse_fallback": 1
 }
