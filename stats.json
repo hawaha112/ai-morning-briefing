@@ -1,80 +1,48 @@
 {
-  "article_count": 46,
+  "article_count": 45,
   "output_file": "output/index.html",
-  "file_size_kb": 137.9,
-  "generated_at": "2026-06-17T22:27:46.711910+00:00",
+  "file_size_kb": 136.6,
+  "generated_at": "2026-06-18T22:33:41.013791+00:00",
   "event_db_stats": {
-    "total_articles": 3932,
+    "total_articles": 3981,
     "collected": 0,
-    "analyzed": 3932,
-    "total_events": 2216,
-    "total_evidence": 2618,
+    "analyzed": 3981,
+    "total_events": 2226,
+    "total_evidence": 2610,
     "event_status": {
       "confirmed": 2,
-      "official": 355,
-      "reported": 1859
+      "official": 369,
+      "reported": 1855
     },
-    "tier_0": 420,
-    "tier_1": 1268,
-    "tier_2": 2244
+    "tier_0": 439,
+    "tier_1": 1292,
+    "tier_2": 2250
   },
   "event_status_distribution": {
-    "official": 12,
-    "reported": 34
+    "official": 17,
+    "reported": 28
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 46,
-  "multi_source_count": 6,
-  "important_count": 5,
+  "llm_count": 45,
+  "multi_source_count": 4,
+  "important_count": 1,
   "important_events": [
     {
-      "title": "GPT-5.4驱动近自主AI化学家改进药物合成关键反应",
-      "summary": "OpenAI与Molecule.one合作，展示基于GPT-5.4的近自主AI化学家如何改进了药物化学中的关键合成反应。",
-      "event_id": "evt_5ff2f715f1e6274165f0a220",
+      "title": "OpenAI上市前同周延揽Transformer发明人与前白宫AI政策官员",
+      "summary": "OpenAI在IPO前同一周招募Transformer共同发明人Noam Shazeer（来自Google DeepMind）和前特朗普政府AI政策官员Dean Ball，技术与政策双线补强。",
+      "event_id": "evt_b7261de908ee91f39daa1fae",
       "importance": 4,
-      "source_name": "OpenAI Blog",
-      "archive_url": "archive/2026-06-18-am.html"
-    },
-    {
-      "title": "Fable 5自主编写WebGPU内核将Gemma 4推至255 tok/s，HuggingFace开源成果",
-      "summary": "Anthropic Fable 5在被关停前自主编写WebGPU内核，使Gemma 4推理速度从84提升至255 tok/s，HuggingFace现将该演示与内核代码公开发布。",
-      "event_id": "evt_91d6968cb0a494e64dbe19ed",
-      "importance": 4,
-      "source_name": "X-HuggingFace",
-      "archive_url": "archive/2026-06-18-am.html"
-    },
-    {
-      "title": "阿里巴巴发布HappyOyster 1.0世界模型：一句话生成可实时交互的开放数字世界",
-      "summary": "阿里巴巴正式发布HappyOyster 1.0世界模型，用户输入一句话即可生成可实时探索、物理交互的开放式数字世界，主打主动式实时响应。",
-      "event_id": "evt_fbaf649676c01bdb22e586ad",
-      "importance": 4,
-      "source_name": "新智元",
-      "archive_url": "archive/2026-06-18-am.html"
-    },
-    {
-      "title": "美商务部警告Anthropic：向外国人开放顶级AI模型须获政府批准",
-      "summary": "美国商务部长警告Anthropic，向外国公民授予其最先进AI模型访问权限须事先获得政府批准。",
-      "event_id": "evt_11b94b484cb103462226f41b",
-      "importance": 4,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-06-18-am.html"
-    },
-    {
-      "title": "G7峰会三大AI掌门联手力推美国主导全球AI规则",
-      "summary": "Anthropic的Amodei、OpenAI的Altman与DeepMind的Hassabis在G7峰会联合呼吁美国主导国际AI规则合作，马克龙和莫迪就美国否决Mythos框架表达不满。",
-      "event_id": "evt_cec55ccf279d1c42741aebe9",
-      "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-18-am.html"
+      "source_name": "TechCrunch AI",
+      "archive_url": "archive/2026-06-19-am.html"
     }
   ],
-  "official_count": 12,
-  "depth_count": 45,
+  "official_count": 17,
+  "depth_count": 42,
   "entity_count": 0,
-  "llm_call_count": 130,
-  "llm_prompt_tokens": 221104,
-  "llm_completion_tokens": 53893,
-  "llm_total_tokens": 275056,
+  "llm_call_count": 203,
+  "llm_prompt_tokens": 336912,
+  "llm_completion_tokens": 82024,
+  "llm_total_tokens": 419018,
   "llm_parse_fallback": 1
 }

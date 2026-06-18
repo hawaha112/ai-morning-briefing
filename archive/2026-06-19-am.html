@@ -1472,7 +1472,7 @@ body.show-read .is-read:hover {
     <div class="h-stats">
         <span><b>45</b> 篇</span>
         <span><b>24</b> 源</span>
-        <a href="archive/dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
+        <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
 </header>
@@ -1481,12 +1481,12 @@ body.show-read .is-read:hover {
 
 
 <!-- 今日导览：一眼可记的版块地图 + 跳转(sticky, 滚动高亮当前板块) -->
-<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link" href="#sec-glance">⚡ 速览</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-vip">👤 大V</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link" href="#sec-judgment">🎯 判断</a><a class="tn-link tn-history" href="archive/dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
+<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link" href="#sec-glance">⚡ 速览</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-vip">👤 大V</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link" href="#sec-judgment">🎯 判断</a><a class="tn-link tn-history" href="dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
 
 <!-- 🎙 今日口播(主锚, 2026-06-14 提到最前): 播放器 + 默认展开的文字稿。
      读/听这一篇 ≈ 掌握全天 80%; 想要细节再往下翻各版块。缺音频时 onerror 自动隐藏播放器 -->
 <section id="sec-broadcast" class="page-sec">
-<div class="bc-audio-wrap audio-top"><audio class="bc-player" controls preload="metadata" src="archive/audio/2026-06-19-am.mp3" onerror="var w=this.closest('.bc-audio-wrap');if(w)w.hidden=true"></audio><p class="bc-hint">🎧 今日音频版 · 约 5-6 分钟听完全天 · 文字稿就在下方 🎙</p></div>
+<div class="bc-audio-wrap audio-top"><audio class="bc-player" controls preload="metadata" src="audio/2026-06-19-am.mp3" onerror="var w=this.closest('.bc-audio-wrap');if(w)w.hidden=true"></audio><p class="bc-hint">🎧 今日音频版 · 约 5-6 分钟听完全天 · 文字稿就在下方 🎙</p></div>
 <section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播 · 读这一篇≈掌握全天 80%</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制文稿</button></div><details class="bc-details" open><summary>展开 / 收起文字稿</summary><pre class="bc-text" id="bcText">同一周，Transformer架构的发明人，和白宫前AI政策官员，双双入职了同一家公司。这不叫招人，这叫在IPO敲钟前把每个风险口堵死。
 
 早上好，今天是六月十九号，星期五，我是AI早报。今天说三件事。第一，OpenAI上市前同周双聘，技术叙事和政策护城河同时锁死。第二，GPT-5.5 Instant把医疗问答打到旗舰级还免费开放，医疗赛道的打法变了。快讯里还有xAI在企业和语音端的新动作。三件事背后是同一条主线，谁先把故事讲进华盛顿的耳朵，谁就先锁住定价权。先看第一件。
@@ -1833,7 +1833,7 @@ OpenAI这几步棋，Shazeer锁技术叙事，Ball铺政策关系，免费医疗
 
 <!-- ⑥ 实体追踪 (P1) — 30 天动态时间线入口(全球, 含中国厂商) -->
 <section id="sec-entity" class="page-sec">
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">206</span></a><a class="et-chip" href="entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">163</span></a><a class="et-chip" href="entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">103</span></a><a class="et-chip" href="entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">88</span></a><a class="et-chip" href="entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">59</span></a><a class="et-chip" href="entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">46</span></a><a class="et-chip" href="entities/alibaba_qwen-30d.html"><span class="et-icon">🏢</span><span class="et-name">阿里 / 通义千问 Qwen</span><span class="et-count">27</span></a><a class="et-chip" href="entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">25</span></a><a class="et-chip" href="entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">22</span></a><a class="et-chip" href="entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">20</span></a><a class="et-chip" href="entities/huawei_pangu-30d.html"><span class="et-icon">🏢</span><span class="et-name">华为 / 盘古</span><span class="et-count">13</span></a><a class="et-chip" href="entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">13</span></a></div></section>
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">206</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">163</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">103</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">88</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">59</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">46</span></a><a class="et-chip" href="../entities/alibaba_qwen-30d.html"><span class="et-icon">🏢</span><span class="et-name">阿里 / 通义千问 Qwen</span><span class="et-count">27</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">25</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">22</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">20</span></a><a class="et-chip" href="../entities/huawei_pangu-30d.html"><span class="et-icon">🏢</span><span class="et-name">华为 / 盘古</span><span class="et-count">13</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">13</span></a></div></section>
 </section>
 
 <!-- 突发已并入早晚报正文(12h 报道一次足够实时), 不再做独立版块/实时 banner -->
@@ -1863,7 +1863,7 @@ OpenAI这几步棋，Shazeer锁技术叙事，Ball铺政策关系，免费医疗
 <!-- Footer -->
 <footer class="footer">
     AI 早报 · <b>24</b> 个信息源 · <b>45</b> 篇资讯 · 2026年06月19日
-    · <a href="archive/dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
+    · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
 <!-- modal_data.js 不在首屏加载；在 openModal() 首次被调用时由 script.js 动态注入 -->
@@ -1981,7 +1981,7 @@ function ensureModalData(cb) {
     }
     __dataLoading = true;
     var s = document.createElement('script');
-    s.src = 'modal_data.js';
+    s.src = '2026-06-19-am_modal.js';
     s.onload = function() { cb(); };
     s.onerror = function() { console.error('failed to load modal_data.js'); };
     document.head.appendChild(s);

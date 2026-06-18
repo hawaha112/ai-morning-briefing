@@ -854,3 +854,48 @@
 {"i": "evt_17c5f9879ff2348c028c3073", "d": "2026-06-18-am", "t": "OpenAI o1测试中自主越狱沙箱，模型还能识别自己正被考试", "k": "model", "m": 1}
 {"i": "evt_7c95999b6775125bdc6030c3", "d": "2026-06-18-am", "t": "算苗科技3D TokenPU正式流片，国产云端AI算力芯片升级", "k": "infra", "m": 1}
 {"i": "evt_277bb2e1257de72349b55586", "d": "2026-06-18-am", "t": "Anthropic工程团队1680人画像曝光：谷歌系主导、12年经验、本硕为主", "k": "app", "m": 1}
+{"i": "evt_b7261de908ee91f39daa1fae", "d": "2026-06-19-am", "t": "OpenAI上市前同周延揽Transformer发明人与前白宫AI政策官员", "k": "biz", "m": 4}
+{"i": "evt_ddefe2ea2135b7ad9c9df6de", "d": "2026-06-19-am", "t": "GPT-5.5 Instant医疗问答能力比肩旗舰思考模型", "k": "app", "m": 3}
+{"i": "evt_c8502e0a670c6624856dbc07", "d": "2026-06-19-am", "t": "Anthropic红队测试Opus 4.7给机器狗编程：速度超人类团队20倍但捡球仍失败", "k": "app", "m": 3}
+{"i": "evt_8076d548928da657a760fd85", "d": "2026-06-19-am", "t": "Snap拆分AI视频团队成立独立公司Dotmo", "k": "biz", "m": 3}
+{"i": "evt_a4a8c8d1862f3afc958cd80c", "d": "2026-06-19-am", "t": "Grok模型登陆Databricks Agent Bricks，赋能企业级AI智能体", "k": "biz", "m": 3}
+{"i": "evt_ac4643f11b250dff1c55068b", "d": "2026-06-19-am", "t": "OpenAI宣布训练模型将有益特质迁移至新场景", "k": "app", "m": 3}
+{"i": "evt_f2aba61e969f68cc7af04f01", "d": "2026-06-19-am", "t": "xAI推出Grok Word插件：可起草文档并生成图表", "k": "app", "m": 3}
+{"i": "evt_ca602542280c46613967298b", "d": "2026-06-19-am", "t": "Hugging Face CEO赴华盛顿游说开源AI政策", "k": "gov", "m": 3}
+{"i": "evt_ab8b635d02b685ee8b718d04", "d": "2026-06-19-am", "t": "OpenAI Codex推出「录制与回放」功能，逐步向用户开放", "k": "app", "m": 3}
+{"i": "evt_61c28216dead32b0db3b93ba", "d": "2026-06-19-am", "t": "OpenAI宣布提升ChatGPT健康智能功能以改善人类健康", "k": "app", "m": 3}
+{"i": "evt_768e8d22502b9671f91def4b", "d": "2026-06-19-am", "t": "Cohere发布North Mini Code三项更新提升可访问性", "k": "app", "m": 3}
+{"i": "evt_99bfd46fec87a2ed729d4772", "d": "2026-06-19-am", "t": "xAI Grok TTS语音合成人类相似度评分高达96分", "k": "model", "m": 3}
+{"i": "evt_f509532641d234536c76a4a2", "d": "2026-06-19-am", "t": "Perplexity推出Brain：Computer平台持续学习记忆系统", "k": "app", "m": 3}
+{"i": "evt_3afd5c2f682f871c28dd0cba", "d": "2026-06-19-am", "t": "Hugging Face推出GLM-5.2免费体验：开源追平闭源时代来临", "k": "model", "m": 3}
+{"i": "evt_68a8383a34523e99a6031504", "d": "2026-06-19-am", "t": "OpenAI发布AI辅助罕见儿童疾病诊断研究成果", "k": "research", "m": 3}
+{"i": "evt_bbc2ad64d31dc330eb5c1de7", "d": "2026-06-19-am", "t": "Laguna M.1开源发布：256K上下文长度旗舰模型", "k": "model", "m": 3}
+{"i": "evt_82480f6a4baa7624ad2dbf26", "d": "2026-06-19-am", "t": "Hugging Face CLI工具hf upload完成全面重写，1.20.0版本支持断点续传与多提交", "k": "app", "m": 3}
+{"i": "evt_21e26bf84f466f54eea2c278", "d": "2026-06-19-am", "t": "Liquid AI发布LFM2.5双语言检索模型：11语种延迟低至1.5ms", "k": "model", "m": 3}
+{"i": "evt_5ea34b13770ead7b4a5e8a14", "d": "2026-06-19-am", "t": "Google DeepMind呼吁多智能体安全协议成全球协作优先项", "k": "app", "m": 3}
+{"i": "evt_195c9a2bb6f80e790dcd8215", "d": "2026-06-19-am", "t": "OpenAI o1推理范式助力医学研究突破进展", "k": "biz", "m": 3}
+{"i": "evt_a548e4ebb8c22dfb1090d818", "d": "2026-06-19-am", "t": "美国政府加速数据安全合规应对AI国家安全风险", "k": "gov", "m": 3}
+{"i": "evt_8d47f9f5ba92c96d6727dfaa", "d": "2026-06-19-am", "t": "JetBrains开源Mellum2代码补全模型，主打本地IDE深度集成", "k": "app", "m": 3}
+{"i": "evt_2c48c4d2b3b240a066d19c5b", "d": "2026-06-19-am", "t": "滴滴自动驾驶亮相伦敦，菜鸟攀爬机器人加速全球扩张", "k": "app", "m": 3}
+{"i": "evt_2e0444ee8bc5afa5c605154a", "d": "2026-06-19-am", "t": "LangChain 1.3.10发布：修复GPT-5快照检测与安全依赖升级", "k": "app", "m": 2}
+{"i": "evt_6f39ded7e0391aa6e22c3de6", "d": "2026-06-19-am", "t": "llama.cpp服务端修复：语法解析失败返回HTTP 400错误码", "k": "app", "m": 2}
+{"i": "evt_c46bc56c5b291c1b986e6b61", "d": "2026-06-19-am", "t": "llama.cpp服务端重构HuggingFace预设仓库支持", "k": "app", "m": 2}
+{"i": "evt_1823cbc2964692fe9e9c9af2", "d": "2026-06-19-am", "t": "真人秀明星Karamo Brown推出AI数字分身健康应用Kē", "k": "app", "m": 2}
+{"i": "evt_da7dc9340ba94d84997f8ff3", "d": "2026-06-19-am", "t": "Google DeepMind 首次招聘前沿部署工程师FDE", "k": "biz", "m": 1}
+{"i": "evt_9f91978957cdccc84de00892", "d": "2026-06-19-am", "t": "AI训练效率之战：MFU利用率揭示算力浪费真相", "k": "infra", "m": 1}
+{"i": "evt_a6dfd5fcbb580cc996ccf6f5", "d": "2026-06-19-am", "t": "DeepLearning.AI推出语音智能体课程：10行代码赋予Agent语音能力", "k": "app", "m": 1}
+{"i": "evt_f1a67057c56bc985f5d9b66e", "d": "2026-06-19-am", "t": "谷歌发布Gemini Live API实时翻译应用教程与示例代码", "k": "app", "m": 1}
+{"i": "evt_cc703c1c846069f7d7b3d924", "d": "2026-06-19-am", "t": "llama.cpp重构多模态预处理器并新增图像预处理输出接口", "k": "model", "m": 1}
+{"i": "evt_eaff5558fe39bba15e4bb597", "d": "2026-06-19-am", "t": "llama.cpp SYCL后端重命名Level Zero API环境变量", "k": "infra", "m": 1}
+{"i": "evt_7a5c5ae80e3260272f1af017", "d": "2026-06-19-am", "t": "前Lululemon首席信息官谈AI对高管职位与就业的冲击", "k": "app", "m": 1}
+{"i": "evt_005c4c5e65aa51ca486e58e8", "d": "2026-06-19-am", "t": "白宫与Anthropic联手制定AI安全漏洞严重性评估框架", "k": "gov", "m": 1}
+{"i": "evt_feccf4955f1fa5bfb822bb1b", "d": "2026-06-19-am", "t": "Meta新成立AI部门内部动荡，员工士气跌入谷底", "k": "app", "m": 1}
+{"i": "evt_c7eefe20133a1f8fe0320cf2", "d": "2026-06-19-am", "t": "Match调查：近半数美国单身人士对约会App中的AI持负面态度", "k": "app", "m": 1}
+{"i": "evt_28f505894998024be4476a3b", "d": "2026-06-19-am", "t": "高乐股份子公司成立两月签35亿算力合同，对手方仅3人社保", "k": "biz", "m": 1}
+{"i": "evt_7ec11594bac00d42dcd35048", "d": "2026-06-19-am", "t": "亚马逊AWS对外销售Trainium芯片挑战英伟达", "k": "infra", "m": 1}
+{"i": "evt_14f636e3842baa4407f7aa5f", "d": "2026-06-19-am", "t": "谷歌为Android开发者开放多模型选择，GPT-5.5暂居性能首位", "k": "model", "m": 1}
+{"i": "evt_7bee1d9d56d0c523003bd0a4", "d": "2026-06-19-am", "t": "前特朗普AI顾问Dean Ball加入OpenAI领导战略未来团队", "k": "biz", "m": 1}
+{"i": "evt_b66385808543a5143f9ce411", "d": "2026-06-19-am", "t": "Adobe全线创意应用上线AI助手，Photoshop领衔公测", "k": "app", "m": 1}
+{"i": "evt_65404d74e46baa0481d80745", "d": "2026-06-19-am", "t": "蔚来推送跨平台世界模型，智驾部署时间压缩至2小时", "k": "research", "m": 1}
+{"i": "evt_b2af3b905610af3e5935cdff", "d": "2026-06-19-am", "t": "魔法原子联合安行能源憬驰智能推进机器人社区落地", "k": "infra", "m": 1}
+{"i": "evt_fdf65cc6e9022667258d1a5d", "d": "2026-06-19-am", "t": "Momenta港股IPO证监会备案通过，将成物理AI第一股", "k": "biz", "m": 1}
