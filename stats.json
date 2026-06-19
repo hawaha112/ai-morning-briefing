@@ -1,71 +1,65 @@
 {
-  "article_count": 35,
+  "article_count": 21,
   "output_file": "output/index.html",
-  "file_size_kb": 131.5,
-  "generated_at": "2026-06-19T10:24:41.147972+00:00",
+  "file_size_kb": 133.1,
+  "generated_at": "2026-06-19T22:23:54.446318+00:00",
   "event_db_stats": {
-    "total_articles": 3991,
+    "total_articles": 3977,
     "collected": 0,
-    "analyzed": 3991,
-    "total_events": 2267,
-    "total_evidence": 2656,
+    "analyzed": 3977,
+    "total_events": 2266,
+    "total_evidence": 2653,
     "event_status": {
-      "confirmed": 2,
-      "official": 371,
+      "confirmed": 3,
+      "official": 369,
       "reported": 1894
     },
-    "tier_0": 435,
-    "tier_1": 1297,
-    "tier_2": 2259
+    "tier_0": 429,
+    "tier_1": 1291,
+    "tier_2": 2257
   },
   "event_status_distribution": {
-    "reported": 35
+    "official": 1,
+    "reported": 19,
+    "confirmed": 1
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 35,
-  "multi_source_count": 1,
-  "important_count": 4,
+  "llm_count": 21,
+  "multi_source_count": 2,
+  "important_count": 3,
   "important_events": [
     {
-      "title": "中国自动驾驶独角兽Momenta估值90亿美元，筹备香港IPO募资10亿",
-      "summary": "中国自动驾驶公司Momenta估值达约90亿美元，计划赴港IPO募资约10亿美元，获丰田和上汽集团背书。",
-      "event_id": "evt_7064ca5b49fd80eab289028f",
+      "title": "OpenAI Q1财报：营收57亿美元，净亏损37亿美元",
+      "summary": "OpenAI 2026年Q1营收57亿美元，但烧钱37亿，季末持有现金及有价证券超730亿美元。",
+      "event_id": "evt_d26a778557fca27fbf56733b",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-19-pm.html"
+      "archive_url": "archive/2026-06-20-am.html"
     },
     {
-      "title": "Manus早期投资者抱团回购，拟以20亿美元从Meta赎回股份",
-      "summary": "Manus早期投资者计划以Meta收购价20亿美元回购股份，因国家发改委要求撤销交易及公司ARR从1亿增长至4-5亿美元。",
-      "event_id": "evt_2fae8af6ac687dfe371440a5",
-      "importance": 4,
-      "source_name": "虎嗅科技",
-      "archive_url": "archive/2026-06-19-pm.html"
-    },
-    {
-      "title": "谷歌仿英伟达模式构建AI芯片业务，斥资32亿美元在纽约建数据中心向Anthropic出租TPU",
-      "summary": "谷歌正复制英伟达芯片出租商业模式，投资32亿美元在纽约建设数据中心，并将TPU算力租给Anthropic等AI公司使用。",
-      "event_id": "evt_af8738f6508daca4c72744ab",
+      "title": "特朗普称曾视Anthropic为国安威胁，G7峰会后因Amodei表现关系已改善",
+      "summary": "特朗普披露上周曾将Anthropic列为国家安全威胁，但在G7峰会与CEO Dario Amodei会面后因其「友善聪明」而态度转变，双方关系趋于缓和。",
+      "event_id": "evt_d0ce3cfa83787b1774136058",
       "importance": 4,
       "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-19-pm.html"
+      "archive_url": "archive/2026-06-20-am.html"
     },
     {
-      "title": "智谱GLM-5.2全球免费6小时：马斯克点赞，HuggingFace出资赞助",
-      "summary": "智谱AI发布GLM-5.2并联合HuggingFace发起全球免费6小时活动，获马斯克公开点赞，中国大模型跻身全球第一梯队。",
-      "event_id": "evt_284cdda6adf5f0a19d59d226",
+      "title": "特朗普政府动用出口管制法对Anthropic实施前所未有限制",
+      "summary": "美国商务部发布命令，援引出口管制法对Anthropic AI模型访问权限进行管控，引发法律争议。",
+      "event_id": "evt_7f98dace5c8d7e794fa28159",
       "importance": 4,
-      "source_name": "机器之心",
-      "archive_url": "archive/2026-06-19-pm.html"
+      "source_name": "Bloomberg Technology",
+      "archive_url": "archive/2026-06-20-am.html"
     }
   ],
-  "official_count": 0,
-  "depth_count": 34,
+  "official_count": 1,
+  "depth_count": 21,
   "entity_count": 0,
-  "llm_call_count": 81,
-  "llm_prompt_tokens": 137006,
-  "llm_completion_tokens": 32974,
-  "llm_total_tokens": 170012,
-  "llm_parse_fallback": 1
+  "llm_call_count": 75,
+  "llm_prompt_tokens": 124461,
+  "llm_completion_tokens": 31888,
+  "llm_total_tokens": 156382,
+  "llm_parse_fallback": 0
 }

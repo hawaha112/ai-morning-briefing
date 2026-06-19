@@ -1501,7 +1501,7 @@ body.show-read .is-read:hover {
     <div class="h-stats">
         <span><b>21</b> 篇</span>
         <span><b>15</b> 源</span>
-        <a href="archive/dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
+        <a href="dashboard.html" class="h-dashboard-link" title="查看跑步仪表盘 — 历史趋势 / 信息源健康 / 重要事件清单">📊 仪表盘</a>
     </div>
 </div>
 </header>
@@ -1510,12 +1510,12 @@ body.show-read .is-read:hover {
 
 
 <!-- 今日导览：一眼可记的版块地图 + 跳转(sticky, 滚动高亮当前板块) -->
-<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link" href="#sec-agenda">📅 议程</a><a class="tn-link" href="#sec-glance">⚡ 速览</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link tn-history" href="archive/dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
+<nav class="today-nav" aria-label="今日导览"><a class="tn-link" href="#sec-broadcast">🎙 口播</a><a class="tn-link" href="#sec-agenda">📅 议程</a><a class="tn-link" href="#sec-glance">⚡ 速览</a><a class="tn-link" href="#sec-featured">⭐ 必读</a><a class="tn-link" href="#sec-more">📚 更多</a><a class="tn-link" href="#sec-entity">🔗 实体</a><a class="tn-link tn-history" href="dashboard.html" title="浏览往期早报 / 晚报归档">📅 往期</a></nav>
 
 <!-- 🎙 今日口播(主锚, 2026-06-14 提到最前): 播放器 + 默认展开的文字稿。
      读/听这一篇 ≈ 掌握全天 80%; 想要细节再往下翻各版块。缺音频时 onerror 自动隐藏播放器 -->
 <section id="sec-broadcast" class="page-sec">
-<div class="bc-audio-wrap audio-top"><audio class="bc-player" controls preload="metadata" src="archive/audio/2026-06-20-am.mp3" onerror="var w=this.closest('.bc-audio-wrap');if(w)w.hidden=true"></audio><p class="bc-hint">🎧 今日音频版 · 约 5-6 分钟听完全天 · 文字稿就在下方 🎙</p></div>
+<div class="bc-audio-wrap audio-top"><audio class="bc-player" controls preload="metadata" src="audio/2026-06-20-am.mp3" onerror="var w=this.closest('.bc-audio-wrap');if(w)w.hidden=true"></audio><p class="bc-hint">🎧 今日音频版 · 约 5-6 分钟听完全天 · 文字稿就在下方 🎙</p></div>
 <section class="broadcast"><div class="bc-head"><h2 class="bc-title">🎙 今日口播文稿</h2><button class="bc-copy" type="button" onclick="navigator.clipboard.writeText(document.getElementById('bcText').innerText).then(()=>{this.textContent='已复制 ✓'})">复制文稿</button></div><details class="bc-details"><summary>展开 / 收起文字稿</summary><pre class="bc-text" id="bcText">今天，有人说它是威胁，有人用脚投票说它是未来。
 
 早上好，我是AI早报，今天是6月20日，星期六。说的是Anthropic。今天三件事，OpenAI季报出炉，730亿美元现金压场，Anthropic同天遭遇总统定性国安威胁加联邦出口管制，AlphaFold核心作者、诺贝尔奖得主John Jumper从Google DeepMind出走，选了Anthropic。三件事串起来，说的是这场AI消耗战里，谁是真长跑选手，谁会先服软。先看第一件。
@@ -1900,7 +1900,7 @@ Anthropic今天的三重压力说明，这场仗里，融资规模、政治关�
 
 <!-- ⑥ 实体追踪 (P1) — 30 天动态时间线入口(全球, 含中国厂商) -->
 <section id="sec-entity" class="page-sec">
-<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">215</span></a><a class="et-chip" href="entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">170</span></a><a class="et-chip" href="entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">108</span></a><a class="et-chip" href="entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">90</span></a><a class="et-chip" href="entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">57</span></a><a class="et-chip" href="entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">50</span></a><a class="et-chip" href="entities/alibaba_qwen-30d.html"><span class="et-icon">🏢</span><span class="et-name">阿里 / 通义千问 Qwen</span><span class="et-count">27</span></a><a class="et-chip" href="entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">25</span></a><a class="et-chip" href="entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">22</span></a><a class="et-chip" href="entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">19</span></a><a class="et-chip" href="entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">14</span></a><a class="et-chip" href="entities/huawei_pangu-30d.html"><span class="et-icon">🏢</span><span class="et-name">华为 / 盘古</span><span class="et-count">13</span></a></div></section>
+<section class="entity-tracker"><h2 class="et-title">📍 实体追踪 · 过去 30 天动态</h2><p class="et-hint">点击进入该公司/人物的 30 天演进时间线</p><div class="et-chips"><a class="et-chip" href="../entities/anthropic-30d.html"><span class="et-icon">🏢</span><span class="et-name">Anthropic</span><span class="et-count">215</span></a><a class="et-chip" href="../entities/openai-30d.html"><span class="et-icon">🏢</span><span class="et-name">OpenAI</span><span class="et-count">170</span></a><a class="et-chip" href="../entities/meta_ai-30d.html"><span class="et-icon">🏢</span><span class="et-name">Meta AI</span><span class="et-count">108</span></a><a class="et-chip" href="../entities/google_deepmind-30d.html"><span class="et-icon">🏢</span><span class="et-name">Google DeepMind</span><span class="et-count">90</span></a><a class="et-chip" href="../entities/nvidia-30d.html"><span class="et-icon">🏢</span><span class="et-name">NVIDIA</span><span class="et-count">57</span></a><a class="et-chip" href="../entities/huggingface-30d.html"><span class="et-icon">🏢</span><span class="et-name">Hugging Face</span><span class="et-count">50</span></a><a class="et-chip" href="../entities/alibaba_qwen-30d.html"><span class="et-icon">🏢</span><span class="et-name">阿里 / 通义千问 Qwen</span><span class="et-count">27</span></a><a class="et-chip" href="../entities/xai-30d.html"><span class="et-icon">🏢</span><span class="et-name">xAI</span><span class="et-count">25</span></a><a class="et-chip" href="../entities/key_opensource-30d.html"><span class="et-icon">🏢</span><span class="et-name">主要开源项目</span><span class="et-count">22</span></a><a class="et-chip" href="../entities/deepseek-30d.html"><span class="et-icon">🏢</span><span class="et-name">DeepSeek</span><span class="et-count">19</span></a><a class="et-chip" href="../entities/microsoft-30d.html"><span class="et-icon">🏢</span><span class="et-name">Microsoft AI</span><span class="et-count">14</span></a><a class="et-chip" href="../entities/huawei_pangu-30d.html"><span class="et-icon">🏢</span><span class="et-name">华为 / 盘古</span><span class="et-count">13</span></a></div></section>
 </section>
 
 <!-- 突发已并入早晚报正文(12h 报道一次足够实时), 不再做独立版块/实时 banner -->
@@ -1929,7 +1929,7 @@ Anthropic今天的三重压力说明，这场仗里，融资规模、政治关�
 <!-- Footer -->
 <footer class="footer">
     AI 早报 · <b>15</b> 个信息源 · <b>21</b> 篇资讯 · 2026年06月20日
-    · <a href="archive/dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
+    · <a href="dashboard.html" class="footer-link">📊 跑步仪表盘 →</a>
 </footer>
 
 <!-- modal_data.js 不在首屏加载；在 openModal() 首次被调用时由 script.js 动态注入 -->
@@ -2047,7 +2047,7 @@ function ensureModalData(cb) {
     }
     __dataLoading = true;
     var s = document.createElement('script');
-    s.src = 'modal_data.js';
+    s.src = '2026-06-20-am_modal.js';
     s.onload = function() { cb(); };
     s.onerror = function() { console.error('failed to load modal_data.js'); };
     document.head.appendChild(s);

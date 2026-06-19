@@ -97,14 +97,14 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Hugging Face</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>48</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>50</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (3)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-19 12:45</span>
-                <span class="tl-rel">今天</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -119,7 +119,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 00:54</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -134,7 +134,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 23:45</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -147,12 +147,57 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (45)</h2>
+    <h2 class="tl-section">📰 一般动态 (47)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
-                <span class="tl-date">06-19 03:23</span>
+                <span class="tl-date">06-20 02:34</span>
                 <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/AndrewYNg/status/2068039709126017356" target="_blank" rel="noopener">吴恩达：Anthropic限制与美国出口管制引爆全球AI主权危机</a>
+                </h3>
+                <div class="tl-event-meta">X-Andrew Ng </div>
+                <p class="tl-event-summary">吴恩达撰文批评Anthropic限制开发者用Fable 5构建竞品及美国政府对前沿AI实施出口管制，警告全球AI主权争夺正加速。</p>
+                <p class="tl-event-deep">此事件的深层影响有三：其一，「安全」话语正在成为科技竞争的合法包装，将损耗 AI 安全议题的真实公信力，未来真正的安全争论会更难与商业利益脱钩；其二，美国出口管制将加速全球 AI 版图碎片化，欧盟、海湾国家、东南亚将加大对本土及开源模型的投入，全球 AI 格局从「美国主导」走向「多极并立」；其三，对开发者而言，构建在单一专有 LLM 上的风险被重新定价，多模型架构、开源优先、API 抽象层将成为企业技术选型的新标配。吴恩达的文章是一次行业警示，也是对开放研究生态的公开呼吁。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 22:29</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/SergioPaniego/status/2067977955171614932" target="_blank" rel="noopener">TRL框架GRPO训练新增连续批处理：64样本更快更省显存</a>
+                </h3>
+                <div class="tl-event-meta">X-HuggingFace </div>
+                <p class="tl-event-summary">TRL框架为GRPO强化学习训练引入连续批处理支持，64次生成时速度更快、显存占用更低，无需依赖vLLM。</p>
+                <p class="tl-event-deep">这是Hugging Face在「让强化学习微调更易用」方向上的持续推进——过去6个月TRL已先后支持GRPO算法本身、多GPU分布式训练，此次连续批处理是补上了「推理效率」最后一块短板。对竞品格局的影响：Axolotl、LLaMA-Factory等竞品仍依赖外挂vLLM做GRPO生成，TRL此次在无额外依赖的前提下追平了推理效率，30天内预计会看到其他框架跟进实现或集成同类特性。对vLLM本身影响有限，后者的优势在生产推理而非训练环路。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 21:25</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/huggingface/transformers/releases/tag/v5.10.3" target="_blank" rel="noopener">Hugging Face Transformers v5.10.4补丁版本修复多项回归问题</a>
+                </h3>
+                <div class="tl-event-meta">Transformers Releases </div>
+                <p class="tl-event-summary">Transformers库发布v5.10.4补丁版本，修复vLLM同步、InternVL模型及多模态处理器等多项回归问题。</p>
+                <p class="tl-event-deep">此补丁的核心信号不在于bug本身，而在于vLLM与Transformers的深度耦合已成为生产部署的关键依赖链——任何一侧的回归都会立即阻断另一侧用户的升级路径。InternVL和mistral同时出现修复，说明v5.10多模态Processor重构的影响面比预期更广。对使用vLLM做企业推理的团队，建议锁定此版本而非等待下一minor版本；peft下界修复则提示：依赖矩阵管理将是Transformers未来版本的持续痛点。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 03:23</span>
+                <span class="tl-rel">1 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -167,7 +212,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 23:23</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -182,7 +227,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 23:15</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -197,7 +242,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 22:59</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -212,7 +257,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 22:28</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -227,7 +272,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 22:07</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -242,7 +287,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 21:14</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -257,7 +302,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 02:49</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -272,7 +317,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-18 01:14</span>
-                <span class="tl-rel">1 天前</span>
+                <span class="tl-rel">2 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -287,7 +332,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-17 23:59</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -302,7 +347,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-17 23:58</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -317,7 +362,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-17 23:01</span>
-                <span class="tl-rel">2 天前</span>
+                <span class="tl-rel">3 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -332,7 +377,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-16 20:05</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -347,7 +392,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-15 21:48</span>
-                <span class="tl-rel">4 天前</span>
+                <span class="tl-rel">5 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -362,7 +407,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-16 01:29</span>
-                <span class="tl-rel">3 天前</span>
+                <span class="tl-rel">4 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -377,7 +422,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-15 20:28</span>
-                <span class="tl-rel">4 天前</span>
+                <span class="tl-rel">5 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -392,7 +437,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-14 09:00</span>
-                <span class="tl-rel">5 天前</span>
+                <span class="tl-rel">6 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -407,7 +452,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-14 04:30</span>
-                <span class="tl-rel">5 天前</span>
+                <span class="tl-rel">6 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -422,7 +467,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-13 21:58</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -437,7 +482,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-13 20:40</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -452,7 +497,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-13 01:11</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -467,7 +512,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-13 00:53</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -482,7 +527,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-13 00:14</span>
-                <span class="tl-rel">6 天前</span>
+                <span class="tl-rel">7 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -499,7 +544,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 23:34</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -514,7 +559,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 22:48</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -529,7 +574,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 22:32</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -544,7 +589,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 20:06</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -559,7 +604,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 14:55</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -574,7 +619,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 05:29</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -589,7 +634,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 05:29</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -604,7 +649,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 05:29</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -619,7 +664,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 02:35</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -634,7 +679,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-12 01:20</span>
-                <span class="tl-rel">7 天前</span>
+                <span class="tl-rel">8 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -649,7 +694,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 22:39</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -664,7 +709,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 10:19</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -679,7 +724,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 05:31</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -694,7 +739,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 04:23</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -709,7 +754,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 02:11</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -724,7 +769,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 01:30</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -739,7 +784,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-11 00:32</span>
-                <span class="tl-rel">8 天前</span>
+                <span class="tl-rel">9 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -754,7 +799,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-08 12:00</span>
-                <span class="tl-rel">11 天前</span>
+                <span class="tl-rel">12 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -769,7 +814,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-04 12:00</span>
-                <span class="tl-rel">15 天前</span>
+                <span class="tl-rel">16 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -784,7 +829,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-03 23:37</span>
-                <span class="tl-rel">16 天前</span>
+                <span class="tl-rel">17 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -799,7 +844,7 @@ h2.tl-section {
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">05-26 12:00</span>
-                <span class="tl-rel">24 天前</span>
+                <span class="tl-rel">25 天前</span>
             </div>
             <div class="tl-event-body">
                 <h3 class="tl-event-title">
@@ -809,21 +854,6 @@ h2.tl-section {
                 <div class="tl-event-meta">ArXiv ML </div>
                 <p class="tl-event-summary">研究提出用形式化电路解释使Transformer模型行为可被求解器独立验证，推进机械可解释性的可信度。</p>
                 <p class="tl-event-deep">该工作将形式化方法引入机械可解释性，是连接AI可解释性与形式化验证两个领域的桥梁性研究。若能规模化，将从根本上改变AI审计的方式——从「看起来合理」到「可证明正确」，对高风险AI系统部署具有深远意义。</p>
-            </div>
-        </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-20 22:12</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    
-                    <a href="https://github.com/huggingface/transformers/releases/tag/v5.9.0" target="_blank" rel="noopener">Hugging Face Transformers v5.9.0发布：新增MoE模型与层级推理架构</a>
-                </h3>
-                <div class="tl-event-meta">Transformers Releases </div>
-                <p class="tl-event-summary">Transformers库发布v5.9.0，新增Cohere2Moe混合专家模型、Parakeet TDT语音模型及HRM-Text层级推理语言模型等多个架构支持。</p>
-                
             </div>
         </article>
 </div>
