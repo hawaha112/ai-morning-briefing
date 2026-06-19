@@ -899,3 +899,38 @@
 {"i": "evt_65404d74e46baa0481d80745", "d": "2026-06-19-am", "t": "蔚来推送跨平台世界模型，智驾部署时间压缩至2小时", "k": "research", "m": 1}
 {"i": "evt_b2af3b905610af3e5935cdff", "d": "2026-06-19-am", "t": "魔法原子联合安行能源憬驰智能推进机器人社区落地", "k": "infra", "m": 1}
 {"i": "evt_fdf65cc6e9022667258d1a5d", "d": "2026-06-19-am", "t": "Momenta港股IPO证监会备案通过，将成物理AI第一股", "k": "biz", "m": 1}
+{"i": "evt_7064ca5b49fd80eab289028f", "d": "2026-06-19-pm", "t": "中国自动驾驶独角兽Momenta估值90亿美元，筹备香港IPO募资10亿", "k": "biz", "m": 4}
+{"i": "evt_2fae8af6ac687dfe371440a5", "d": "2026-06-19-pm", "t": "Manus早期投资者抱团回购，拟以20亿美元从Meta赎回股份", "k": "biz", "m": 4}
+{"i": "evt_af8738f6508daca4c72744ab", "d": "2026-06-19-pm", "t": "谷歌仿英伟达模式构建AI芯片业务，斥资32亿美元在纽约建数据中心向Anthropic出租TPU", "k": "biz", "m": 4}
+{"i": "evt_284cdda6adf5f0a19d59d226", "d": "2026-06-19-pm", "t": "智谱GLM-5.2全球免费6小时：马斯克点赞，HuggingFace出资赞助", "k": "model", "m": 4}
+{"i": "evt_cb0ebdcb54ca14cf3737d3bc", "d": "2026-06-19-pm", "t": "OpenAI企业AI负责人Barret Zoph再度离职，任职仅五个月", "k": "biz", "m": 3}
+{"i": "evt_2fee3d084618ca8ab24d1e8a", "d": "2026-06-19-pm", "t": "论文提出Deontic策略框架解决LLM智能体运行时治理难题", "k": "research", "m": 3}
+{"i": "evt_e9e36d2627e9279103a3dffa", "d": "2026-06-19-pm", "t": "DeXposure-Claw：面向DeFi风险监管的智能体系统", "k": "research", "m": 3}
+{"i": "evt_759c231ff057f3da40d60eb4", "d": "2026-06-19-pm", "t": "OpenAI Codex桌面应用实测：300个子智能体流畅并行运行超一天", "k": "app", "m": 3}
+{"i": "evt_72634b6c53bf15f0d34e20db", "d": "2026-06-19-pm", "t": "UIUC团队发布ProtocolBench：多智能体通信协议评测基准", "k": "research", "m": 3}
+{"i": "evt_10c3095ed79183444d3d6930", "d": "2026-06-19-pm", "t": "SPSD框架：边缘端提示词压缩降低云端LLM推理能耗", "k": "research", "m": 2}
+{"i": "evt_7f6c7919c2ce1d07297352ee", "d": "2026-06-19-pm", "t": "Med-DDPM跨GPU架构性能分析：3D医学影像扩散模型优化研究", "k": "research", "m": 2}
+{"i": "evt_f530f1b9bbd1cab37a3654f0", "d": "2026-06-19-pm", "t": "信息格学习与概率图模型结构学习的等价性研究", "k": "research", "m": 2}
+{"i": "evt_deb585129dd4cd37f34ffebc", "d": "2026-06-19-pm", "t": "REVEAL++：可微分表型分组提升视网膜影像阿尔茨海默症风险预测", "k": "research", "m": 2}
+{"i": "evt_de6b4e142c9af12f17099cc7", "d": "2026-06-19-pm", "t": "llama.cpp修复服务器上下文移位中的n_discard未绑定值问题", "k": "infra", "m": 2}
+{"i": "evt_c5bdb9bab5546767d074df0b", "d": "2026-06-19-pm", "t": "llama.cpp新增CUDA版COL2IM_1D算子加速本地推理", "k": "infra", "m": 2}
+{"i": "evt_1de44339a27af9e4c3faa80b", "d": "2026-06-19-pm", "t": "llama.cpp服务端重构：槽位选择逻辑统一至单函数", "k": "app", "m": 1}
+{"i": "evt_fca065140f57707158e8b26a", "d": "2026-06-19-pm", "t": "计算可识别性：从数据中唯一确定模型参数的理论条件研究", "k": "research", "m": 1}
+{"i": "evt_b2bf8889d443beea288ccc2c", "d": "2026-06-19-pm", "t": "Guard框架：多基础模型知识蒸馏实现轻量级科学时序预测", "k": "research", "m": 1}
+{"i": "evt_bfc1bc28745af21c6a4e57f6", "d": "2026-06-19-pm", "t": "AdamW训练动态下Weibull权重尺度参数演化机制研究", "k": "research", "m": 1}
+{"i": "evt_3db4b770f74718c29aa98390", "d": "2026-06-19-pm", "t": "零膨胀高斯分布推动分布估计算法支持稀疏参数空间", "k": "model", "m": 1}
+{"i": "evt_527ef23d7a7ee485cca60060", "d": "2026-06-19-pm", "t": "自博弈强化学习结合少量人类数据涌现出类人自主行为能力", "k": "app", "m": 1}
+{"i": "evt_ebb4056f52510cc7aeed0a2a", "d": "2026-06-19-pm", "t": "扩散语言模型系统性实验分析：八大模型对比评测", "k": "research", "m": 1}
+{"i": "evt_0d33fa55dddfc97cfb9fe784", "d": "2026-06-19-pm", "t": "多智能体LLM协商中的隐性锚定效应研究揭示群体决策偏差", "k": "research", "m": 1}
+{"i": "evt_fc39f7c038b332859eacbbf9", "d": "2026-06-19-pm", "t": "LLM不知道自己不懂什么：跨模型归因分歧揭示认知盲区", "k": "model", "m": 1}
+{"i": "evt_3ee7b9ab2c933b830d266da9", "d": "2026-06-19-pm", "t": "LLM自我对齐新方法：用DPO赋予模型「良知」自检能力", "k": "research", "m": 1}
+{"i": "evt_bb1abf70842e6054e69a958f", "d": "2026-06-19-pm", "t": "研究者发现大模型对当前用户信息知之甚少", "k": "research", "m": 1}
+{"i": "evt_7460f502a03baf8b9577e6ec", "d": "2026-06-19-pm", "t": "AI陪伴机器人品牌ZuzuZoos完成数千万Pre-A轮融资", "k": "biz", "m": 1}
+{"i": "evt_1a29245154dc3d7f2eecf45a", "d": "2026-06-19-pm", "t": "Anthropic联合创始人Jack Clark谈AI安全、经济风险与递归自我改进", "k": "biz", "m": 1}
+{"i": "evt_e8d565a234e873ae291e54d1", "d": "2026-06-19-pm", "t": "谷歌开源DiffusionGemma：速度快4倍但官方自认质量不如旧款", "k": "model", "m": 1}
+{"i": "evt_4ab5695ce67937776156da1a", "d": "2026-06-19-pm", "t": "清华唐杰回怼马斯克：中国AI今年即达Fable级别", "k": "app", "m": 1}
+{"i": "evt_84877a400782d5aef8f3b9c9", "d": "2026-06-19-pm", "t": "PewDiePie开源本地AI工作空间Odysseus，3天获3万星", "k": "model", "m": 1}
+{"i": "evt_0d64ed62e63c303a1be1a0ed", "d": "2026-06-19-pm", "t": "Claude Code重磅更新：终端对话实时转化为可分享网页看板", "k": "app", "m": 1}
+{"i": "evt_ba23a51972351c25fc749950", "d": "2026-06-19-pm", "t": "xAI Grok Build发布大更新：进化为终端原生智能体工作台", "k": "app", "m": 1}
+{"i": "evt_908028bd783c13de30d08ca1", "d": "2026-06-19-pm", "t": "Anthropic新模型Mythos遭政府令关停，早期测试方保留访问", "k": "model", "m": 1}
+{"i": "evt_83f65174f58899f4b9dee3fa", "d": "2026-06-19-pm", "t": "奥特曼发布OpenAI第三阶段路线图：2028年实现AI自动化研究", "k": "research", "m": 1}

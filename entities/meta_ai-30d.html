@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>103</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>106</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (6)</h2>
     
@@ -192,8 +192,53 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (97)</h2>
+    <h2 class="tl-section">📰 一般动态 (100)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 17:27</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9722" target="_blank" rel="noopener">llama.cpp修复服务器上下文移位中的n_discard未绑定值问题</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp发布修复补丁，解决server中ctx shifting时n_discard值未正确绑定的bug，由Georgi Gerganov联合署名。</p>
+                <p class="tl-event-deep">此修复属于基础设施层关键bugfix而非功能扩展。llama.cpp server模式是众多本地AI应用（Open WebUI、LM Studio后端等）的底层依赖，ctx shifting bug在长会话场景（agent loop、代码助手）中复现概率较高。Georgi Gerganov亲自署名表明该fix经过核心团队审查，可信度高。预计30天内下游封装工具链（Ollama、LM Studio）会跟进集成此版本。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 15:34</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9718" target="_blank" rel="noopener">llama.cpp服务端重构：槽位选择逻辑统一至单函数</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp将服务端槽位选择逻辑合并为单一函数get_available_slot，保留LCP相似度检查以支持提示词缓存更新。</p>
+                <p class="tl-event-deep">这是一次典型的内部清理PR，信息量有限但有一个值得注意的细节：PR描述中出现了`Assisted-by: pi:llama.cpp/Qwen3.6-27B`，表明llama.cpp项目本身正在用本地运行的Qwen3模型辅助代码重构工作——即「用llama.cpp跑模型来改llama.cpp」的自举式开发模式。这个趋势若持续扩大，意味着开源推理框架的维护成本将进一步降低，小型团队也能高效维护复杂底层代码。槽位逻辑合并本身对用户无感知影响。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 11:27</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9715" target="_blank" rel="noopener">llama.cpp新增CUDA版COL2IM_1D算子加速本地推理</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp合并PR #24417，为GGML引擎新增CUDA加速的COL2IM_1D算子，并采用fast_div_modulo优化索引分解性能。</p>
+                <p class="tl-event-deep">这是llama.cpp算子覆盖度补全工作的一部分，反映出社区正在系统性地将CPU-only算子迁移到GPU后端。短期内直接受益的是本地运行音频/语音相关模型的开发者；更深层的信号是：随着多模态和音频模型（如Whisper、音频LLM）在本地推理框架中的需求增长，llama.cpp的算子库正被倒逼扩充。若这一趋势持续，30-60天内预计会看到更多非文本模态算子的GPU实现PR合并。对竞品框架（如llama-cpp-python的替代方案MLC-LLM）构成一定压力。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-19 05:34</span>
@@ -279,7 +324,7 @@ h2.tl-section {
                     
                     <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9699" target="_blank" rel="noopener">llama.cpp发布b9699：SYCL后端新增Q1_0量化矩阵运算支持</a>
                 </h3>
-                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 2 源</span></div>
+                <div class="tl-event-meta">GitHub: llama.cpp <span class="tl-multi">📡 5 源</span></div>
                 <p class="tl-event-summary">llama.cpp发布b9699版本，为SYCL后端新增MUL_MAT和OUT_PROD操作对Q1_0量化格式的支持，扩展Intel GPU加速覆盖范围。</p>
                 <p class="tl-event-deep">此类算子级SYCL补全是llama.cpp长期维护工作的缩影——每隔数个版本就有特定量化格式在非主流GPU路径上补齐缺失算子。Q1_0因精度损失大，实际部署优先级低于Q4_K_M等中间量化，此PR影响面有限，主要受益群体是Intel GPU边缘设备开发者。SYCL后端整体成熟度仍落后于CUDA约6-12个月，但随着Intel Arc GPU出货量提升，补齐类PR频率在过去两个季度明显加快，预计未来90天内INT4/INT8混合量化在SYCL路径的覆盖将进一步完善。</p>
             </div>
