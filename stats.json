@@ -1,65 +1,55 @@
 {
-  "article_count": 21,
+  "article_count": 13,
   "output_file": "output/index.html",
-  "file_size_kb": 133.1,
-  "generated_at": "2026-06-19T22:23:54.446318+00:00",
+  "file_size_kb": 123.5,
+  "generated_at": "2026-06-20T10:25:04.871861+00:00",
   "event_db_stats": {
-    "total_articles": 3977,
+    "total_articles": 4013,
     "collected": 0,
-    "analyzed": 3977,
-    "total_events": 2266,
-    "total_evidence": 2653,
+    "analyzed": 4013,
+    "total_events": 2237,
+    "total_evidence": 2624,
     "event_status": {
       "confirmed": 3,
-      "official": 369,
-      "reported": 1894
+      "official": 362,
+      "reported": 1872
     },
     "tier_0": 429,
-    "tier_1": 1291,
-    "tier_2": 2257
+    "tier_1": 1296,
+    "tier_2": 2288
   },
   "event_status_distribution": {
-    "official": 1,
-    "reported": 19,
-    "confirmed": 1
+    "reported": 13
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 21,
+  "llm_count": 13,
   "multi_source_count": 2,
-  "important_count": 3,
+  "important_count": 2,
   "important_events": [
     {
-      "title": "OpenAI Q1财报：营收57亿美元，净亏损37亿美元",
-      "summary": "OpenAI 2026年Q1营收57亿美元，但烧钱37亿，季末持有现金及有价证券超730亿美元。",
-      "event_id": "evt_d26a778557fca27fbf56733b",
+      "title": "Anthropic曝光六大产品线：Conway永久在线智能体领衔",
+      "summary": "有人从Claude代码和隐藏界面字符串中挖出Anthropic六条产品线，Conway为始终在线的常驻智能体，标志Anthropic从对话框走向智能体生态。",
+      "event_id": "evt_012d1695baeb87dda5b3d553",
       "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-20-am.html"
+      "source_name": "新智元",
+      "archive_url": "archive/2026-06-20-pm.html"
     },
     {
-      "title": "特朗普称曾视Anthropic为国安威胁，G7峰会后因Amodei表现关系已改善",
-      "summary": "特朗普披露上周曾将Anthropic列为国家安全威胁，但在G7峰会与CEO Dario Amodei会面后因其「友善聪明」而态度转变，双方关系趋于缓和。",
-      "event_id": "evt_d0ce3cfa83787b1774136058",
+      "title": "OpenAI论文：5%有益特质数据让AI实现跨域对齐并提升能力",
+      "summary": "OpenAI发布论文，仅用5%健康领域有益特质训练数据，模型在编程、数学、科学等跨域任务中同步实现对齐改善与能力提升。",
+      "event_id": "evt_b09c3b4f7dd0f691ea799c31",
       "importance": 4,
-      "source_name": "Techmeme",
-      "archive_url": "archive/2026-06-20-am.html"
-    },
-    {
-      "title": "特朗普政府动用出口管制法对Anthropic实施前所未有限制",
-      "summary": "美国商务部发布命令，援引出口管制法对Anthropic AI模型访问权限进行管控，引发法律争议。",
-      "event_id": "evt_7f98dace5c8d7e794fa28159",
-      "importance": 4,
-      "source_name": "Bloomberg Technology",
-      "archive_url": "archive/2026-06-20-am.html"
+      "source_name": "新智元",
+      "archive_url": "archive/2026-06-20-pm.html"
     }
   ],
-  "official_count": 1,
-  "depth_count": 21,
+  "official_count": 0,
+  "depth_count": 11,
   "entity_count": 0,
-  "llm_call_count": 75,
-  "llm_prompt_tokens": 124461,
-  "llm_completion_tokens": 31888,
-  "llm_total_tokens": 156382,
+  "llm_call_count": 31,
+  "llm_prompt_tokens": 52057,
+  "llm_completion_tokens": 13314,
+  "llm_total_tokens": 65386,
   "llm_parse_fallback": 0
 }

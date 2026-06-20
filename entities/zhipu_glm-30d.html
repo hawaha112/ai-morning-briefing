@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>智谱 / GLM · 30 天动态 · AI 早报</title>
+<style>
+:root {
+    --bg: #0c1220;
+    --bg-card: rgba(255,255,255,0.04);
+    --border: rgba(255,255,255,0.10);
+    --accent: #66c0ff;
+    --accent-hi: #5eead4;
+    --text-100: #ecf0f5;
+    --text-70: #b6bdcb;
+    --text-50: #8a93a6;
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+}
+* { box-sizing: border-box; }
+body {
+    margin: 0; padding: 32px 16px;
+    background: var(--bg); color: var(--text-100);
+    font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+}
+.wrap { max-width: 880px; margin: 0 auto; }
+.tl-back {
+    color: var(--text-50); font-size: 12px; text-decoration: none;
+    display: inline-block; margin-bottom: 18px;
+}
+.tl-back:hover { color: var(--accent-hi); }
+h1.tl-title {
+    font-family: var(--serif); font-size: 28px; font-weight: 800;
+    margin: 0 0 4px; letter-spacing: 0.3px;
+}
+.tl-icon { font-size: 30px; margin-right: 8px; }
+.tl-subtitle {
+    color: var(--text-50); font-size: 13px;
+    margin: 0 0 28px;
+}
+h2.tl-section {
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    color: var(--text-50); text-transform: uppercase;
+    margin: 28px 0 12px; padding-left: 10px;
+    border-left: 3px solid var(--accent);
+}
+.tl-event {
+    display: grid; grid-template-columns: 110px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+.tl-event:last-child { border-bottom: none; }
+.tl-event-time {
+    display: flex; flex-direction: column; align-items: flex-start;
+    font-family: monospace; line-height: 1.4; padding-top: 2px;
+}
+.tl-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+.tl-rel { font-size: 10px; color: var(--text-50); margin-top: 2px; }
+.tl-event-body { min-width: 0; }
+.tl-event-title {
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    line-height: 1.5; margin: 0 0 6px;
+}
+.tl-event-title a { color: var(--text-100); text-decoration: none; }
+.tl-event-title a:hover { color: var(--accent-hi); }
+.tl-event-meta {
+    font-size: 11px; color: var(--text-50); margin-bottom: 6px;
+}
+.tl-multi {
+    display: inline-block; margin-left: 8px;
+    padding: 1px 6px; border-radius: 4px;
+    background: rgba(102,192,255,0.08);
+    color: var(--accent); font-weight: 500;
+}
+.tl-event-summary {
+    font-size: 13px; color: var(--text-70); margin: 0 0 6px;
+    line-height: 1.6;
+}
+.tl-event-deep {
+    font-size: 12.5px; color: var(--text-70); margin: 6px 0 0;
+    padding: 8px 12px; border-left: 2px solid var(--accent-hi);
+    background: rgba(94,234,212,0.04); border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+.tl-empty {
+    color: var(--text-50); font-size: 13px; padding: 14px 0;
+}
+@media (max-width: 640px) {
+    body { padding: 20px 12px; }
+    .tl-event { grid-template-columns: 1fr; gap: 6px; }
+    .tl-event-time { flex-direction: row; gap: 8px; align-items: baseline; }
+    h1.tl-title { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
+    <h1 class="tl-title"><span class="tl-icon">🏢</span>智谱 / GLM</h1>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>13</b> 个事件</p>
+
+    <h2 class="tl-section">⭐ 重要事件 (5)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 12:45</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2651040113&idx=2&sn=ab7df9774cba0f0bbebd41cc7feaeddb" target="_blank" rel="noopener">智谱GLM-5.2全球免费6小时：马斯克点赞，HuggingFace出资赞助</a>
+                </h3>
+                <div class="tl-event-meta">机器之心 </div>
+                <p class="tl-event-summary">智谱AI发布GLM-5.2并联合HuggingFace发起全球免费6小时活动，获马斯克公开点赞，中国大模型跻身全球第一梯队。</p>
+                <p class="tl-event-deep">马斯克点赞+HuggingFace出资的组合效应超过模型本身性能意义：前者提供顶流流量与西方受众背书，后者提供社区合法性。中国模型此前在国际社区面临的最大障碍是「可信度」而非技术，此次双重背书可能是GLM国际化的关键转折点。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-18 07:58</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything" target="_blank" rel="noopener">智谱AI发布GLM-5.2：开源文本模型新标杆</a>
+                </h3>
+                <div class="tl-event-meta">Simon Willison </div>
+                <p class="tl-event-summary">Z.ai以MIT许可证发布753B参数GLM-5.2开源大模型，在Artificial Analysis权威基准中登顶开源模型榜首，上下文窗口扩至100万token。</p>
+                <p class="tl-event-deep">GLM-5.2 是过去 6 个月内第 3 个在独立基准上登顶开源榜的中国 AI 实验室作品（DeepSeek-V3→Qwen3→GLM-5.2），说明中国开源模型已进入「轮番领跑」节奏，而非 Meta 单极主导。对 Meta 的压力最直接：Llama 4 Scout/Maverick 发布后仅数周即被超越，Llama 5 的发布时间表大概率被迫提前。对 Anthropic/OpenAI 的间接影响：MIT 开源头部模型的存在，持续压低企业客户对闭源 API 的价格容忍度，AP</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-17 13:37</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding" target="_blank" rel="noopener">智谱GLM-5.2发布：全球前端编程能力直逼Claude Opus</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">智谱发布GLM-5.2，第三方评测显示其编程能力仅次于Claude Opus 4.8，744B参数模型跻身全球顶级编程模型行列。</p>
+                <p class="tl-event-deep">这是过去6个月内第2个中国开源模型（DeepSeek V3之后）在主流编程基准上追平顶级闭源模型的案例，预示着「开源=能力妥协」的叙事正在瓦解。接下来60天最可能发生的是：1）Anthropic被迫加速Opus系列的代码能力更新以守住护城河；2）独立开发者和中小团队在编程助手选型上开始分流，Cursor/GitHub Copilot等wrapper产品面临用户质疑「为什么不直接用GLM」。反向风险：若GLM-5.2的评测数据无法在真实生产场景（非benchmark）中复现，这</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-17 02:45</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="https://www.techmeme.com/260616/p37#a260616p37" target="_blank" rel="noopener">智谱Z.ai发布GLM-5.2：百万上下文窗口+MIT开源</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">Z.ai发布GLM-5.2旗舰模型，在编程、智能体及长程任务上大幅提升，配备100万token上下文窗口并以MIT协议开源。</p>
+                <p class="tl-event-deep">GLM-5.2 是过去 60 天内第 3 个宣称「100万上下文+开源」的非美系模型（前有 Qwen2.5 和 Kimi 的长上下文版），这组合拳已成中国 AI 实验室的标准出牌：用上下文规模对标 Gemini，用 MIT 协议截胡 Llama 的开发者生态。真正值得关注的是编程+智能体的组合定位——若 GLM-5.2 在 Aider/SWE-bench 类基准上可与 Claude Sonnet 同台，接下来 30-60 天内 Cursor 的模型路由策略（当前主要调 Ant</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-13 22:24</span>
+                <span class="tl-rel">7 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="http://weixin.sogou.com/weixin?type=2&query=%E6%96%B0%E6%99%BA%E5%85%83+Fable%205%E7%AA%81%E9%81%AD%E4%B8%8B%E6%9E%B6%EF%BC%8CGLM-5.2%E5%85%A8%E9%87%8F%E5%BC%80%E6%94%BE%EF%BC%81" target="_blank" rel="noopener">GLM-5.2全量开放MIT开源，1M上下文对标Opus 4.8</a>
+                </h3>
+                <div class="tl-event-meta">新智元 <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">智谱GLM-5.2全量开放，MIT协议开源，1M上下文真实可用，开发者实测性能对标Claude Opus 4.8，国产编程模型再提档。</p>
+                <p class="tl-event-deep">时机判断是这次发布最值得注意的点。Claude Fable 5在72小时内被美国政府叫停，制造了旗舰编程模型的突发空缺——全球有大量依赖Claude Coding能力的开发者被迫寻找替代品，且心理上对「美国管制风险」形成新认知。GLM-5.2以MIT开源+对标Opus 4.8的时机入场，接住的不只是技术好奇心，而是真实的迁移需求。接下来60天的关键指标是：下周API上线后的日调用量增长，以及海外SaaS工具（Cursor竞品/IDE插件生态）是否开始集成GLM-5.2权重。若</p>
+            </div>
+        </article>
+
+    <h2 class="tl-section">📰 一般动态 (8)</h2>
+    
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-20 00:11</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arrowtsx.dev/bigger-models/" target="_blank" rel="noopener">评测：GPT-5.5幻觉率是MIT开源GLM-5.2的三倍</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">评测数据显示GPT-5.5的幻觉率是MIT协议开源模型GLM-5.2的三倍，开源模型在可靠性关键指标上超越闭源旗舰。</p>
+                <p class="tl-event-deep">这条评测的杀伤力在于**MIT协议+性能的组合打击**：GLM-5.2不只是「更准」，而是「MIT授权可商业私有部署的更准」，直接击穿OpenAI「付费换可信度」的企业叙事。过去6个月内DeepSeek R1、Llama 4等已多次出现「开源追平闭源旗舰」声明，这是该趋势在幻觉率维度的延续。预测：30天内将有2-3个独立团队发布复现或反驳评测；若多数结论支持，Anthropic和OpenAI的企业合规客户留存率将在Q3出现可测量压力——尤其是欧洲数据合规市场，本地部署的GLM</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 13:53</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.latent.space/p/ainews-glm-gpt-glm-52-passes-vibe" target="_blank" rel="noopener">GLM-5.2超越GPT？智谱开源模型通过真实体验测试</a>
+                </h3>
+                <div class="tl-event-meta">Latent Space </div>
+                <p class="tl-event-summary">Latent Space报道GLM-5.2在实际使用中表现优异，Z.ai预测开源Fable模型将于12月发布，开源模型评测可信度再受关注。</p>
+                <p class="tl-event-deep">这是过去3个月内第二次有权威西方AI媒体为中国开源模型背书（上次是DeepSeek R1）。更关键的是，Latent Space的信号是「体验质量」而非「基准分数」——这个维度的认可更难造假、更有持续性。若Z.ai的Fable如期开源，2026年Q4将形成Llama 4 / Qwen / GLM / Fable四强并立的开源格局，闭源API的性价比护城河将进一步收窄。OpenAI在开发者市场的份额在接下来60-90天面临真实压力测试。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-19 11:37</span>
+                <span class="tl-rel">1 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.zhihu.com/question/2051267421386937558" target="_blank" rel="noopener">中国大模型追平Fable要多久？马斯克与智谱CEO预测相差半年</a>
+                </h3>
+                <div class="tl-event-meta">知乎热榜 </div>
+                <p class="tl-event-summary">知乎热讨中国大模型追平Claude Fable时间线：马斯克预测2027年Q1，智谱AI CEO唐杰认为2026年11-12月即可实现。</p>
+                <p class="tl-event-deep">这场预测争议本质上是资本市场定价的前哨战：若唐杰正确（2026年底追平），中美闭源模型的能力差距将比「市场共识6-12个月」短得多，对冲基金关于Anthropic/OpenAI护城河的假设需要修正，同时利好中国AI基础设施投资者。但唐杰的推算存在一个结构性盲点：Mythos→Fable的跨越不仅是参数迭代，还包含Anthropic内部的对齐工程、安全审查和部署基础设施——这些维度对外不透明，以「功能水平」作单一锚点可能低估差距。30-90天内最可能出现的验证信号：智谱是否在9</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-18 23:23</span>
+                <span class="tl-rel">2 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/victormustar/status/2067629343182918060" target="_blank" rel="noopener">Hugging Face推出GLM-5.2免费体验：开源追平闭源时代来临</a>
+                </h3>
+                <div class="tl-event-meta">X-HuggingFace </div>
+                <p class="tl-event-summary">Hugging Face宣布GLM-5.2通过其推理提供商免费使用6小时，覆盖Zai、Together AI等五大平台，力证开源模型已追上闭源水平。</p>
+                <p class="tl-event-deep">这次活动的真正信号不是GLM-5.2的能力，而是Hugging Face的平台策略：通过补贴免费试用，把多家推理商的竞争转化为对自身生态的集体背书。接下来30-90天，若GLM-5.2编程体验口碑扩散，最直接的受损方是Claude Code和Codex——两者都在争夺同一批工程师的默认工具心智。更大的趋势是：开源阵营正从「能力追赶」转向「心智争夺」，而Hugging Face正在把自己从托管平台升级为开源生态的营销主引擎。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-17 10:42</span>
+                <span class="tl-rel">3 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.qbitai.com/2026/06/436085.html" target="_blank" rel="noopener">智谱开源GLM-5.2：1M上下文，AI编程评测全球第二</a>
+                </h3>
+                <div class="tl-event-meta">量子位 </div>
+                <p class="tl-event-summary">智谱AI开源发布GLM-5.2，支持1M超长上下文，在AI编程基准测试中仅次于Claude Fable-5，夺开源模型第一。</p>
+                
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-15 21:48</span>
+                <span class="tl-rel">5 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://x.com/mervenoyann/status/2066940184977920183" target="_blank" rel="noopener">智谱GLM-5.2发布：媲美Claude Opus 4.8，支持百万上下文</a>
+                </h3>
+                <div class="tl-event-meta">X-HuggingFace <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">智谱推出最新旗舰模型GLM-5.2；支付宝政务AI助手「晓政」累计服务突破1亿次，覆盖70余家政务机构。</p>
+                <p class="tl-event-deep">GLM-5.2 的战略意义不在于「又一个对标 Opus 的模型」，而在于它将三个趋势集中兑现：**长上下文实用化**（IS Attention 控制 FLOPs 爆炸）、**推理提速标配化**（MTP Spec Decoding）、**思维链商品化**（可调推理深度）。MIT 开源 + Day-0 生态支持，意味着具备 1M 上下文的前沿推理模型首次进入</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-14 15:57</span>
+                <span class="tl-rel">6 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.huxiu.com/article/4867170.html" target="_blank" rel="noopener">智谱GLM-5.2 MIT开源：借Anthropic停服危机卡位IPO窗口</a>
+                </h3>
+                <div class="tl-event-meta">虎嗅科技 </div>
+                <p class="tl-event-summary">智谱在Anthropic旗舰模型停服当日宣布GLM-5.2全面开放，支持百万级上下文，并将于下周MIT协议开源，借行业恐慌抢占开发者生态，时间节点与A股IPO股东会高度重合。</p>
+                <p class="tl-event-deep">智谱此举本质是用技术确定性对冲资本不确定性：开源MIT权重拉低迁移摩擦，百万上下文补齐规格短板，IPO窗口前制造舆论势能。核心风险在于</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-02 15:55</span>
+                <span class="tl-rel">18 天前</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://www.techmeme.com/260602/p9#a260602p9" target="_blank" rel="noopener">智谱AI计划申请上海A股上市，港股市值已达830亿美元</a>
+                </h3>
+                <div class="tl-event-meta">Techmeme </div>
+                <p class="tl-event-summary">智谱AI宣布计划申请在上海A股上市，其港股自1月IPO以来涨幅超10倍，当前市值达830亿美元。</p>
+                <p class="tl-event-deep">智谱此举的核心逻辑是</p>
+            </div>
+        </article>
+</div>
+</body>
+</html>

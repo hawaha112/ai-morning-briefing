@@ -97,10 +97,25 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>OpenAI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>170</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>171</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (25)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-20 13:00</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    ⭐⭐⭐⭐
+                    <a href="http://weixin.sogou.com/weixin?type=2&query=%E6%96%B0%E6%99%BA%E5%85%83+OpenAI%E5%8F%91%E5%B8%83%E6%9C%80%E6%96%B0%E9%87%8C%E7%A8%8B%E7%A2%91%EF%BC%9A%E5%AF%B9%E9%BD%90%E7%9A%84%E6%9C%AC%E8%B4%A8%E6%98%AF%E3%80%8C%E4%BA%BA%E6%A0%BC%E3%80%8D" target="_blank" rel="noopener">OpenAI论文：5%有益特质数据让AI实现跨域对齐并提升能力</a>
+                </h3>
+                <div class="tl-event-meta">新智元 <span class="tl-multi">📡 2 源</span></div>
+                <p class="tl-event-summary">OpenAI发布论文，仅用5%健康领域有益特质训练数据，模型在编程、数学、科学等跨域任务中同步实现对齐改善与能力提升。</p>
+                <p class="tl-event-deep">这篇论文最重要的意义不是5%数据的效率，而是它提供了一个**可证伪的对齐假说**：如果「人格泛化」成立，那么超级智能对齐的问题规模从「穷举所有危险场景」压缩到「在少量高质量场景中塑造核心特质」。这是理论上可解的问题。接下来60天的关键验证点：其他lab（尤其Anthropic）会否快速复现并发布对比实验——如果Constitutional AI也能做到类似泛化，则方法论竞争烈度上升；如果无法复现，OpenAI的Beneficial RL路线将成为对齐研究的新基准。能力和对齐同</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-19 17:52</span>
@@ -461,23 +476,8 @@ h2.tl-section {
                 <p class="tl-event-deep">此研究的深层意义在于重新定义医疗AI的竞争维度——从参数规模竞赛转向感知策略设计。「看哪里、怎么看」本质上是对人类医生诊断认知过程的显式建模，这种结构化先验比暴力扩参数更符合医学任务的稀疏信号特性。</p>
             </div>
         </article>
-        <article class="tl-event">
-            <div class="tl-event-time">
-                <span class="tl-date">05-21 10:20</span>
-                <span class="tl-rel">2026-05</span>
-            </div>
-            <div class="tl-event-body">
-                <h3 class="tl-event-title">
-                    ⭐⭐⭐⭐⭐
-                    <a href="https://www.zhihu.com/question/2040738759281473391" target="_blank" rel="noopener">OpenAI推理模型破解79年平面单位距离猜想</a>
-                </h3>
-                <div class="tl-event-meta">知乎热榜 </div>
-                <p class="tl-event-summary">OpenAI内部通用推理模型自主推翻了Erdős平面单位距离猜想，菲尔兹奖得主Gowers称之为「AI数学里程碑」。</p>
-                <p class="tl-event-deep">这是过去18个月AI数学能力叙事的决定性转折点。AlphaProof攻克IMO证明了AI能解「有答案的竞赛题」，而Erdős猜想属于「无人知道答案、甚至不知道是否可解」的开放问题——两者的认知门槛相差一个数量级。若Gowers的认可经同行评审支撑，接下来60天最可能发生：Google DeepMind被迫加速其数学推理项目（AlphaProof 2.0或类似），同时OpenAI将把此案例作为o系列或下代模型的核心营销锚点。受损方是「AI只能做工具、不能做原创研究」这一学界共识</p>
-            </div>
-        </article>
 
-    <h2 class="tl-section">📰 一般动态 (145)</h2>
+    <h2 class="tl-section">📰 一般动态 (146)</h2>
     
         <article class="tl-event">
             <div class="tl-event-time">
@@ -492,6 +492,21 @@ h2.tl-section {
                 <div class="tl-event-meta">X-Andrew Ng </div>
                 <p class="tl-event-summary">吴恩达撰文批评Anthropic限制开发者用Fable 5构建竞品及美国政府对前沿AI实施出口管制，警告全球AI主权争夺正加速。</p>
                 <p class="tl-event-deep">此事件的深层影响有三：其一，「安全」话语正在成为科技竞争的合法包装，将损耗 AI 安全议题的真实公信力，未来真正的安全争论会更难与商业利益脱钩；其二，美国出口管制将加速全球 AI 版图碎片化，欧盟、海湾国家、东南亚将加大对本土及开源模型的投入，全球 AI 格局从「美国主导」走向「多极并立」；其三，对开发者而言，构建在单一专有 LLM 上的风险被重新定价，多模型架构、开源优先、API 抽象层将成为企业技术选型的新标配。吴恩达的文章是一次行业警示，也是对开放研究生态的公开呼吁。</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-20 00:11</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://arrowtsx.dev/bigger-models/" target="_blank" rel="noopener">评测：GPT-5.5幻觉率是MIT开源GLM-5.2的三倍</a>
+                </h3>
+                <div class="tl-event-meta">Hacker News AI </div>
+                <p class="tl-event-summary">评测数据显示GPT-5.5的幻觉率是MIT协议开源模型GLM-5.2的三倍，开源模型在可靠性关键指标上超越闭源旗舰。</p>
+                <p class="tl-event-deep">这条评测的杀伤力在于**MIT协议+性能的组合打击**：GLM-5.2不只是「更准」，而是「MIT授权可商业私有部署的更准」，直接击穿OpenAI「付费换可信度」的企业叙事。过去6个月内DeepSeek R1、Llama 4等已多次出现「开源追平闭源旗舰」声明，这是该趋势在幻觉率维度的延续。预测：30天内将有2-3个独立团队发布复现或反驳评测；若多数结论支持，Anthropic和OpenAI的企业合规客户留存率将在Q3出现可测量压力——尤其是欧洲数据合规市场，本地部署的GLM</p>
             </div>
         </article>
         <article class="tl-event">

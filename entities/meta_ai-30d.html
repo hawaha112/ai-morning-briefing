@@ -97,7 +97,7 @@ h2.tl-section {
 <div class="wrap">
     <a href="../index.html" class="tl-back" onclick="if(document.referrer&&history.length>1){history.back();return false;}">← 返回早报</a>
     <h1 class="tl-title"><span class="tl-icon">🏢</span>Meta AI</h1>
-    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>108</b> 个事件</p>
+    <p class="tl-subtitle">过去 30 天动态时间线 · 共 <b>110</b> 个事件</p>
 
     <h2 class="tl-section">⭐ 重要事件 (6)</h2>
     
@@ -192,8 +192,38 @@ h2.tl-section {
             </div>
         </article>
 
-    <h2 class="tl-section">📰 一般动态 (102)</h2>
+    <h2 class="tl-section">📰 一般动态 (104)</h2>
     
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-20 08:17</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9733" target="_blank" rel="noopener">llama.cpp发布b9733版本：WebGPU新增Vulkan F16适配器切换支持</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp发布b9733版本，主要更新为ggml-webgpu模块新增Vulkan后端的F16精度适配器切换功能，同时提供覆盖多平台的预编译二进制包。</p>
+                <p class="tl-event-deep">llama.cpp的高频迭代节奏（本版本为b9733，意味着已有9000+构建）使其成为开源推理生态的事实标准之一。Vulkan F16的适配器切换是一个典型的'长尾兼容性'修复——目标用户群体（非CUDA GPU用户）数量庞大但需求分散，此类改进持续降低本地推理对NVIDIA专有生态的依赖。ROCm升至7.2配合SYCL FP16新增，表明项目在有意识地拓宽非NVIDIA加速路径。预计60天内Vulkan F16路径将成为社区测试的热点，相关性能基准对比（vs CUDA路径</p>
+            </div>
+        </article>
+        <article class="tl-event">
+            <div class="tl-event-time">
+                <span class="tl-date">06-20 07:45</span>
+                <span class="tl-rel">今天</span>
+            </div>
+            <div class="tl-event-body">
+                <h3 class="tl-event-title">
+                    
+                    <a href="https://github.com/ggml-org/llama.cpp/releases/tag/b9732" target="_blank" rel="noopener">llama.cpp服务器重构子进程与路由器通信机制</a>
+                </h3>
+                <div class="tl-event-meta">GitHub: llama.cpp </div>
+                <p class="tl-event-summary">llama.cpp项目对服务器内部子进程与路由器的通信架构进行重构，修复唤醒逻辑并完善文档。</p>
+                <p class="tl-event-deep">这是llama.cpp的常规架构维护性PR，不属于功能突破或性能里程碑。其意义在于：llama.cpp服务器模式已成为本地LLM部署事实标准（Ollama/LM Studio等均基于或对标其接口），内部通信稳定性直接影响上层生态工具的可靠性。ROCm 7.2和openEuler 910b的出现表明AMD GPU和华为昇腾硬件的适配正在持续推进，这对国内企业本地部署有实际价值。30天内预计无重大影响，但此类重构积累是后续高并发多请求特性的基础。</p>
+            </div>
+        </article>
         <article class="tl-event">
             <div class="tl-event-time">
                 <span class="tl-date">06-20 05:56</span>
