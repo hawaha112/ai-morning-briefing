@@ -1,55 +1,104 @@
 {
-  "article_count": 13,
+  "article_count": 59,
   "output_file": "output/index.html",
-  "file_size_kb": 123.5,
-  "generated_at": "2026-06-20T10:25:04.871861+00:00",
+  "file_size_kb": 135.3,
+  "generated_at": "2026-06-25T15:48:19.299735+00:00",
   "event_db_stats": {
-    "total_articles": 4013,
+    "total_articles": 3771,
     "collected": 0,
-    "analyzed": 4013,
-    "total_events": 2237,
-    "total_evidence": 2624,
+    "analyzed": 3771,
+    "total_events": 2115,
+    "total_evidence": 2508,
     "event_status": {
       "confirmed": 3,
-      "official": 362,
-      "reported": 1872
+      "official": 364,
+      "reported": 1748
     },
-    "tier_0": 429,
-    "tier_1": 1296,
-    "tier_2": 2288
+    "tier_0": 435,
+    "tier_1": 1223,
+    "tier_2": 2113
   },
   "event_status_distribution": {
-    "reported": 13
+    "official": 3,
+    "reported": 56
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 13,
-  "multi_source_count": 2,
-  "important_count": 2,
+  "llm_count": 59,
+  "multi_source_count": 4,
+  "important_count": 8,
   "important_events": [
     {
-      "title": "Anthropic曝光六大产品线：Conway永久在线智能体领衔",
-      "summary": "有人从Claude代码和隐藏界面字符串中挖出Anthropic六条产品线，Conway为始终在线的常驻智能体，标志Anthropic从对话框走向智能体生态。",
-      "event_id": "evt_012d1695baeb87dda5b3d553",
+      "title": "Hugging Face年收入突破亿美元，97%用户仍享免费开源服务",
+      "summary": "Hugging Face宣布年营收突破1亿美元里程碑，同时坚持为97%用户免费提供数百PB模型与数据集存储服务。",
+      "event_id": "evt_662a4572947ffd07e6ee5f1a",
       "importance": 4,
-      "source_name": "新智元",
-      "archive_url": "archive/2026-06-20-pm.html"
+      "source_name": "X-HuggingFace",
+      "archive_url": "archive/2026-06-25-pm.html"
     },
     {
-      "title": "OpenAI论文：5%有益特质数据让AI实现跨域对齐并提升能力",
-      "summary": "OpenAI发布论文，仅用5%健康领域有益特质训练数据，模型在编程、数学、科学等跨域任务中同步实现对齐改善与能力提升。",
-      "event_id": "evt_b09c3b4f7dd0f691ea799c31",
+      "title": "Momenta递交IPO招股书：中国城市NOA龙头冲击千亿估值",
+      "summary": "自动驾驶公司Momenta披露IPO招股书，凭借R7世界模型与数据飞轮战略，预期估值超1000亿元人民币。",
+      "event_id": "evt_3a921a1c759bc7af10479c21",
+      "importance": 4,
+      "source_name": "虎嗅科技",
+      "archive_url": "archive/2026-06-25-pm.html"
+    },
+    {
+      "title": "谷歌扩大AI编程突击队职权至「中训练」阶段，意在追赶Anthropic",
+      "summary": "谷歌将数月前组建的AI编程突击队职权扩展至模型中训练阶段，此举发生在多名高管离职后，目的是在AI编程能力上追赶Anthropic。",
+      "event_id": "evt_79fe5a24680cc029bf35a59f",
+      "importance": 4,
+      "source_name": "Techmeme",
+      "archive_url": "archive/2026-06-25-pm.html"
+    },
+    {
+      "title": "亚马逊追加130亿美元在印度建设AI基础设施",
+      "summary": "亚马逊宣布在印度新增130亿美元AI基础设施投资，加码印度市场布局。",
+      "event_id": "evt_040ce39423847ff47a1b1bd6",
+      "importance": 4,
+      "source_name": "TechCrunch AI",
+      "archive_url": "archive/2026-06-25-pm.html"
+    },
+    {
+      "title": "Nature新研究：深度情感依赖Claude或导致用户认知退化",
+      "summary": "《自然》期刊发表研究显示，将Claude作为情感伴侣长期深度交流的用户可能出现认知能力下降，量子位以「电子老公」现象切入报道。",
+      "event_id": "evt_8f6f88371955b4e9294b22c5",
+      "importance": 4,
+      "source_name": "量子位",
+      "archive_url": "archive/2026-06-25-pm.html"
+    },
+    {
+      "title": "影眸科技Hyper3D获数亿融资，发布千万面级3D大模型",
+      "summary": "影眸科技完成新一轮数亿元融资，同步发布全球首个千万面级3D生成大模型Rodin Gen-2.5，引入类LLM「先思考再生成」逻辑。",
+      "event_id": "evt_00ad3ce35d9d8080d0bfaa01",
+      "importance": 4,
+      "source_name": "爱范儿",
+      "archive_url": "archive/2026-06-25-pm.html"
+    },
+    {
+      "title": "中国防爆加油机器人「若愚揽月01」实现24小时无人值守作业",
+      "summary": "全球首个搭载AI大脑的防爆机器人「若愚揽月01」自2026年4月起在国内加油站实现24小时无人自主加油，全流程无需人工干预。",
+      "event_id": "evt_e6341835033e03cc80374486",
       "importance": 4,
       "source_name": "新智元",
-      "archive_url": "archive/2026-06-20-pm.html"
+      "archive_url": "archive/2026-06-25-pm.html"
+    },
+    {
+      "title": "谷歌Gemini核心团队一周五人出走，股价单日蒸发逾2000亿美元",
+      "summary": "谷歌Gemini团队六天内五位顶级研究员相继离职，四人加入Anthropic、一人加入OpenAI，叠加Gemini 3.5 Pro延期，Alphabet单日市值蒸发逾2000亿美元。",
+      "event_id": "evt_34b3108fe68b20279f15de19",
+      "importance": 4,
+      "source_name": "新智元",
+      "archive_url": "archive/2026-06-25-pm.html"
     }
   ],
-  "official_count": 0,
-  "depth_count": 11,
+  "official_count": 3,
+  "depth_count": 57,
   "entity_count": 0,
-  "llm_call_count": 31,
-  "llm_prompt_tokens": 52057,
-  "llm_completion_tokens": 13314,
-  "llm_total_tokens": 65386,
+  "llm_call_count": 226,
+  "llm_prompt_tokens": 365516,
+  "llm_completion_tokens": 96784,
+  "llm_total_tokens": 462390,
   "llm_parse_fallback": 0
 }
