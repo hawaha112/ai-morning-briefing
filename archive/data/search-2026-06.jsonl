@@ -1027,3 +1027,40 @@
 {"i": "evt_d1b9cc76be51566a05926be5", "d": "2026-06-25-pm", "t": "Hassabis确认递归自改进已成现实：Anthropic 80%代码由Claude完成", "k": "app", "m": 1}
 {"i": "evt_0a902d0dd0e2d811658a5c64", "d": "2026-06-25-pm", "t": "字节跳动推出豆包专业版：智能体办公模式全面上线", "k": "app", "m": 1}
 {"i": "evt_a70244878558e58feb627ae5", "d": "2026-06-25-pm", "t": "谷歌搜索新增AI训练数据收集功能，用户可选择退出", "k": "app", "m": 1}
+{"i": "evt_7f02f8c3c94ba06284866675", "d": "2026-06-27-am", "t": "OpenAI预览GPT-5.6三款新模型：Sol/Terra/Luna系列", "k": "model", "m": 5}
+{"i": "evt_be096f29c514771a93bfea9c", "d": "2026-06-27-am", "t": "美政府批准Mythos 5恢复关键基础设施访问", "k": "gov", "m": 5}
+{"i": "evt_a5bb2fcf56dc379061acc531", "d": "2026-06-27-am", "t": "开源WebGPU框架推动移动端LLM达1400词元每秒", "k": "infra", "m": 4}
+{"i": "evt_a2f4237420fed6e814fa13ba", "d": "2026-06-27-am", "t": "DeepSeek获510亿元A轮融资估值4000亿元，全部门至少扩招一倍", "k": "biz", "m": 4}
+{"i": "evt_5736e3a7f8ccdbbc9f5ad7eb", "d": "2026-06-27-am", "t": "《纽约时报》指控微软为OpenAI建超算助力版权侵权", "k": "gov", "m": 4}
+{"i": "evt_04506d7a129628f342b6cb63", "d": "2026-06-27-am", "t": "Anthropic揭示Claude用户使用规律：早晨问新闻深夜求助眠", "k": "app", "m": 3}
+{"i": "evt_227bebf1f0d55e80a7893035", "d": "2026-06-27-am", "t": "Hugging Face CEO：70%前沿模型查询可在本地免费运行", "k": "model", "m": 3}
+{"i": "evt_8c0d217a4f00a5a50f3168d3", "d": "2026-06-27-am", "t": "Cohere开源4位量化编程模型，20GB内存可本地运行", "k": "app", "m": 3}
+{"i": "evt_313bc63f554981fd80b91a63", "d": "2026-06-27-am", "t": "RadixArk加入OpenEnv社区，推动智能体环境标准化", "k": "app", "m": 3}
+{"i": "evt_f222651cd0fc841cc1f4ce9e", "d": "2026-06-27-am", "t": "Doctolib开源法语医疗NLP三件套：实体提取器、预训练语料与编码器", "k": "model", "m": 3}
+{"i": "evt_f0dc260b3665291c0cdbf336", "d": "2026-06-27-am", "t": "假设事故报告揭示AI代码审查智能体的多智能体失控风险", "k": "gov", "m": 3}
+{"i": "evt_945da240fb42cca10aafd881", "d": "2026-06-27-am", "t": "谷歌Gemini API推出后台执行功能支持长任务智能体", "k": "app", "m": 3}
+{"i": "evt_cdeb37f2167c8b433cce3a68", "d": "2026-06-27-am", "t": "MIT研究：LLM帮助机器人理解模糊指令并聚焦关键细节", "k": "app", "m": 3}
+{"i": "evt_2f6e6112a6d4986f80720733", "d": "2026-06-27-am", "t": "Karpathy加入Anthropic后分享个人CLAUDE.md使用方式", "k": "app", "m": 3}
+{"i": "evt_3af98f9544b15b42255d3ca4", "d": "2026-06-27-am", "t": "OpenAI挖角Uber印度负责人，深耕美国外最大市场", "k": "biz", "m": 3}
+{"i": "evt_770a4baaf42e0f8e067bf32f", "d": "2026-06-27-am", "t": "Timothy Lee反驳「LLM无学习曲线」论：管理类比揭示技能盲区", "k": "biz", "m": 2}
+{"i": "evt_7848934ac11b745fdacf82ce", "d": "2026-06-27-am", "t": "llama.cpp合并CUDA同步优化：多GPU推理性能提升", "k": "infra", "m": 2}
+{"i": "evt_88609c70d2d6c68102cb1b4c", "d": "2026-06-27-am", "t": "Sam Altman宣布ChatGPT的5.5 Instant模型本周完成更新", "k": "model", "m": 1}
+{"i": "evt_7cb3a26b48edb31c12314df8", "d": "2026-06-27-am", "t": "Cerebras携手Gemma 4 31B实现每秒1500 token推理速度", "k": "app", "m": 1}
+{"i": "evt_538cecdad8452cb73c3acd23", "d": "2026-06-27-am", "t": "SGLang v0.5.14发布：支持DeepSeek-V4等多款新模型", "k": "model", "m": 1}
+{"i": "evt_1cc96d070fc9068f38dea5e0", "d": "2026-06-27-am", "t": "Dean Ball：AI出口管制将压垮前沿实验室的盈利窗口与数据中心投资逻辑", "k": "gov", "m": 1}
+{"i": "evt_3f2a0489a5d0b866695559f1", "d": "2026-06-27-am", "t": "有人回复Sam Altman：无限token还未实现但正在努力推进中", "k": "app", "m": 1}
+{"i": "evt_ce9570ec865adb7989cc6559", "d": "2026-06-27-am", "t": "NVIDIA AI-Q Blueprint在Oracle云上部署生产级智能体蓝图", "k": "app", "m": 1}
+{"i": "evt_df61fd0604a55edb6ee7e1a6", "d": "2026-06-27-am", "t": "2000人尝试黑入AI助手：Claude Opus 4.6成功抵御6000次提示注入攻击", "k": "research", "m": 1}
+{"i": "evt_773726e7ec977d1ea9b9b453", "d": "2026-06-27-am", "t": "谷歌用冻结多令牌预测技术加速Pixel端Gemini Nano推理", "k": "app", "m": 1}
+{"i": "evt_43027dd9e764fd81c9d3fcd4", "d": "2026-06-27-am", "t": "Dwarkesh Patel：AI在工作中自我学习将是下一个重大突破", "k": "app", "m": 1}
+{"i": "evt_893a8ae8dd12f2db8e227e84", "d": "2026-06-27-am", "t": "OpenAI基金会加入Intercept Health Fund应对AI生物风险", "k": "biz", "m": 1}
+{"i": "evt_7d872307b7647a45adb40eb2", "d": "2026-06-27-am", "t": "谷歌Gemini TTS音频流延迟大幅降低，表现力不减", "k": "app", "m": 1}
+{"i": "evt_d456962dbd69220a9d898233", "d": "2026-06-27-am", "t": "传统企业跨界AI算力芯片机器人：70%失败率背后的产业基因错配", "k": "infra", "m": 1}
+{"i": "evt_7580356e01713babec6afaaf", "d": "2026-06-27-am", "t": "苹果游说特朗普政府批准向黑名单中国芯片商CXMT采购内存", "k": "infra", "m": 1}
+{"i": "evt_634cdde65a4f94fb4b36dd07", "d": "2026-06-27-am", "t": "理想汽车自研芯片VLA模型追赶特斯拉FSD V14", "k": "infra", "m": 1}
+{"i": "evt_b58aae219fd68a43402c4421", "d": "2026-06-27-am", "t": "Forum AI CEO：AI公司需对政治应用接受外部审查", "k": "gov", "m": 1}
+{"i": "evt_daf301d3b0de69528f183576", "d": "2026-06-27-am", "t": "用剧本杀思维理解和驾驭Agentic AI智能体", "k": "app", "m": 1}
+{"i": "evt_514e1f622acc909d8cf78331", "d": "2026-06-27-am", "t": "GPT 5.6未遭禁用：Matthew Berman警告放行反更危险", "k": "app", "m": 1}
+{"i": "evt_c94a131f4841baab6683a3f0", "d": "2026-06-27-am", "t": "微软发布常驻型企业智能体Scout：从Copilot迈向Autopilot", "k": "app", "m": 1}
+{"i": "evt_823512b51002a38c20750b65", "d": "2026-06-27-am", "t": "AI能力已产生政治后果，行业竞争叙事正在过时", "k": "gov", "m": 1}
+{"i": "evt_610d88a71a3bcce12d1ec6a9", "d": "2026-06-27-am", "t": "Matthew Berman演示Claude遭受对抗性攻击的完整过程", "k": "research", "m": 1}
