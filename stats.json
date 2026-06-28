@@ -1,48 +1,38 @@
 {
-  "article_count": 14,
+  "article_count": 17,
   "output_file": "output/index.html",
-  "file_size_kb": 123.0,
-  "generated_at": "2026-06-27T23:44:17.657036+00:00",
+  "file_size_kb": 122.7,
+  "generated_at": "2026-06-28T12:04:19.625618+00:00",
   "event_db_stats": {
-    "total_articles": 3690,
+    "total_articles": 3673,
     "collected": 0,
-    "analyzed": 3690,
-    "total_events": 2038,
-    "total_evidence": 2445,
+    "analyzed": 3673,
+    "total_events": 2026,
+    "total_evidence": 2434,
     "event_status": {
       "confirmed": 3,
-      "official": 375,
-      "reported": 1660
+      "official": 373,
+      "reported": 1650
     },
-    "tier_0": 454,
-    "tier_1": 1169,
-    "tier_2": 2067
+    "tier_0": 452,
+    "tier_1": 1150,
+    "tier_2": 2071
   },
   "event_status_distribution": {
-    "official": 2,
-    "reported": 12
+    "reported": 17
   },
   "use_canonical_events": true,
   "llm_coverage": 1.0,
-  "llm_count": 14,
-  "multi_source_count": 0,
-  "important_count": 1,
-  "important_events": [
-    {
-      "title": "亚洲AI初创企业借出口禁令空窗期推出对标Mythos级别模型",
-      "summary": "在Anthropic出口禁令持续期间，亚洲多家AI初创企业相继推出声称具备Mythos同等能力的模型，试图填补美国实验室留下的市场真空。",
-      "event_id": "evt_58f92c70f5898f43ce65e830",
-      "importance": 4,
-      "source_name": "TechCrunch AI",
-      "archive_url": "archive/2026-06-28-am.html"
-    }
-  ],
-  "official_count": 2,
-  "depth_count": 14,
+  "llm_count": 17,
+  "multi_source_count": 2,
+  "important_count": 0,
+  "important_events": [],
+  "official_count": 0,
+  "depth_count": 17,
   "entity_count": 0,
-  "llm_call_count": 64,
-  "llm_prompt_tokens": 99649,
-  "llm_completion_tokens": 23470,
-  "llm_total_tokens": 123142,
-  "llm_parse_fallback": 0
+  "llm_call_count": 46,
+  "llm_prompt_tokens": 69239,
+  "llm_completion_tokens": 18797,
+  "llm_total_tokens": 88054,
+  "llm_parse_fallback": 1
 }
