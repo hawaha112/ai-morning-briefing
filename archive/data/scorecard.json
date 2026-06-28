@@ -1,14 +1,122 @@
 {
- "total_scored": 24,
+ "total_scored": 36,
  "counts": {
-  "correct": 3,
-  "partially": 11,
+  "correct": 7,
+  "partially": 16,
   "wrong": 0,
-  "unverifiable": 10
+  "unverifiable": 13
  },
- "accuracy_pct": 61,
- "updated_at": "2026-06-14T10:07:28.869275+00:00",
+ "accuracy_pct": 65,
+ "updated_at": "2026-06-28T11:56:07.248553+00:00",
  "recent": [
+  {
+   "date": "2026-05-21",
+   "shift": "pm",
+   "emoji": "💰",
+   "title": "Anthropic月付SpaceX 12.5亿买算力却同步宣布Q2盈利——5年锁仓豪赌开始回血",
+   "verdict": "partially",
+   "reason": "Anthropic获TPU融资印证算力锁仓逻辑，但美国出口管制重创其业务使「顺利盈利」叙事大幅复杂化",
+   "evidence": "Apollo与黑石360亿美元债务融资为Anthropic购买TPU；美国政府援引国安权力对Anthropic最新模型实施出口管制"
+  },
+  {
+   "date": "2026-05-21",
+   "shift": "pm",
+   "emoji": "💹",
+   "title": "英伟达增速放缓但持430亿股权：AMD抢份额越猛只是替英伟达股权打工",
+   "verdict": "correct",
+   "reason": "Blackwell横扫MLPerf确认主导地位，AMD无实质替代进展；「Marvell万亿」叙事印证生态绑定策略持续",
+   "evidence": "英伟达Blackwell横扫MLPerf训练v6.0全项基准测试；黄仁勋称Marvell为「下一个万亿美元公司」股价单日暴涨33%"
+  },
+  {
+   "date": "2026-05-21",
+   "shift": "pm",
+   "emoji": "⚡",
+   "title": "SpaceX 28亿建发电站、Meta裁数千人补AI账单：大公司支出结构已被AI永久重写",
+   "verdict": "correct",
+   "reason": "亚马逊130亿、谷歌32亿数据中心、Apollo/黑石360亿购TPU等多项巨额长期投资印证永久性支出结构重组",
+   "evidence": "亚马逊追加130亿美元在印度建设AI基础设施；谷歌仿英伟达模式构建AI芯片业务，斥资32亿美元在纽约建数据中心向Anthropic出租TPU"
+  },
+  {
+   "date": "2026-05-21",
+   "shift": "am",
+   "emoji": "💰",
+   "title": "Anthropic把年化150亿美元算力合同签给了竞争对手xAI——战略上这是一张空头支票",
+   "verdict": "correct",
+   "reason": "Apollo/黑石6月3日完成360亿融资为Anthropic购TPU，精确在30天预测窗口内兑现第三方算力替代",
+   "evidence": "Apollo与黑石360亿美元债务融资为Anthropic购买TPU"
+  },
+  {
+   "date": "2026-05-21",
+   "shift": "am",
+   "emoji": "⚡",
+   "title": "英伟达Q1数据中心营收752亿同比+92%——AI军备赛只有一个稳赚不赔的玩家，且已经确定",
+   "verdict": "correct",
+   "reason": "英伟达Blackwell横扫MLPerf v6.0全项基准，DSX OS扩张平台，竞争对手仍是注脚",
+   "evidence": "英伟达Blackwell横扫MLPerf训练v6.0全项基准测试"
+  },
+  {
+   "date": "2026-05-21",
+   "shift": "am",
+   "emoji": "📈",
+   "title": "马斯克诉讼败诉后48小时OpenAI宣布最早9月上市——AI推翻80年猜想是路演素材，不是意外",
+   "verdict": "partially",
+   "reason": "OpenAI IPO进程确认、延揽Transformer发明人印证赛前PR管理，但「招股书前必出第二个AI推翻经典定理」可证伪预测无据",
+   "evidence": "Anthropic与OpenAI同期IPO：AI独角兽集体冲击公开市场；OpenAI上市前同周延揽Transformer发明人与前白宫AI政策官员"
+  },
+  {
+   "date": "2026-05-20",
+   "shift": "pm",
+   "emoji": "💰",
+   "title": "英伟达 16 个月砸 900 亿投资 145 家企业：这不是 VC，是用钱把自己变成不可切换的基础设施",
+   "verdict": "partially",
+   "reason": "Blackwell横扫MLPerf印证主导与锁定逻辑，但Vera CPU向中国开放订购压缩了「华为本土窗口」预测",
+   "evidence": "英伟达Blackwell横扫MLPerf训练v6.0全项基准测试；NVIDIA Vera CPU将于8月向中国客户开放订购"
+  },
+  {
+   "date": "2026-05-20",
+   "shift": "pm",
+   "emoji": "📜",
+   "title": "封禁 RTX 5090D + 法院认定 AI 裁员合法：中国这两招合起来是一套完整的 AI 工业化剧本",
+   "verdict": "unverifiable",
+   "reason": "华为Ascend夺30%国内份额的18个月预测时间窗口未到，走私事件仅反映国内替代尚不充分",
+   "evidence": "台湾逮捕三人涉嫌绕道日本走私英伟达AI芯片至中国"
+  },
+  {
+   "date": "2026-05-20",
+   "shift": "pm",
+   "emoji": "🏢",
+   "title": "OpenAI 3700亿慈善承诺，创始人财富自由后将成一纸空文",
+   "verdict": "partially",
+   "reason": "Anthropic已秘密提交IPO申请(条件成立)，商业压力冲击安全标准已显现，但「控制权名存实亡」2年内尚无法验证",
+   "evidence": "Anthropic秘密提交IPO申请，最快今秋上市；Anthropic备战IPO：商业压力下AI安全标准遭质疑"
+  },
+  {
+   "date": "2026-05-20",
+   "shift": "am",
+   "emoji": "🏢",
+   "title": "谷歌I/O一天出七手，Perplexity和Anthropic同日遭到正面猛攻",
+   "verdict": "partially",
+   "reason": "谷歌Gemini Spark后续亮相印证竞争压力持续，但Perplexity 30天内融资叙事压力无直接证据",
+   "evidence": "谷歌Gemini Spark震撼亮相：最具冲击力的AI智能体体验"
+  },
+  {
+   "date": "2026-05-20",
+   "shift": "am",
+   "emoji": "💰",
+   "title": "Meta裁8000人转岗7000人至AI，「用AI换人头」从战略PPT落地为财务动作",
+   "verdict": "unverifiable",
+   "reason": "证据列表中无Amazon或微软60天内跟进「裁员+AI转岗」的事件，预测既未印证也未证伪",
+   "evidence": ""
+  },
+  {
+   "date": "2026-05-20",
+   "shift": "am",
+   "emoji": "📜",
+   "title": "xAI安全警告直插SpaceX IPO，AI问责首次成为上市估值的法律风险因子",
+   "verdict": "unverifiable",
+   "reason": "无xAI独立安全审计或SpaceX IPO条款受AI风险影响的记录，核心预测无法验证",
+   "evidence": ""
+  },
   {
    "date": "2026-05-19",
    "shift": "pm",
@@ -26,114 +134,6 @@
    "verdict": "unverifiable",
    "reason": "列表内无Mistral后续并购公告，60天预测窗口内无事件可供验证",
    "evidence": ""
-  },
-  {
-   "date": "2026-05-19",
-   "shift": "pm",
-   "emoji": "⚖️",
-   "title": "马斯克18个月诉讼撤诉为OpenAI IPO扫清最后障碍，Anthropic将迎战更轻装的对手",
-   "verdict": "partially",
-   "reason": "OpenAI加速IPO方向正确，但Anthropic提交IPO申请并获Apollo/黑石360亿融资，竞争格局更对称而非「单方面不利」",
-   "evidence": "Anthropic秘密提交IPO申请最快今秋上市；Apollo与黑石360亿美元债务融资为Anthropic购买TPU；Anthropic与OpenAI同期IPO：AI独角兽集体冲"
-  },
-  {
-   "date": "2026-05-19",
-   "shift": "am",
-   "emoji": "📜",
-   "title": "马斯克败诉2小时终局，OpenAI营利化转型再无任何法律障碍",
-   "verdict": "correct",
-   "reason": "判断发表次日即有OpenAI宣布提速IPO至9月，30天内加速锁定公司结构的预测准确落地",
-   "evidence": "OpenAI IPO提速：马斯克败诉后拟9月上市"
-  },
-  {
-   "date": "2026-05-19",
-   "shift": "am",
-   "emoji": "🏢",
-   "title": "Anthropic吃掉OpenAI和谷歌的SDK供应商，开发工具战在Google I/O前已分胜负",
-   "verdict": "unverifiable",
-   "reason": "谷歌I/O发布大量AI功能，但Q3开发者工具竞争是否形成不可逆领先目前无证据判断",
-   "evidence": ""
-  },
-  {
-   "date": "2026-05-19",
-   "shift": "am",
-   "emoji": "💰",
-   "title": "Tenstorrent超50亿被英特尔高通同时盯上，AI芯片并购战正式打响",
-   "verdict": "unverifiable",
-   "reason": "90天窗口截至8月17日未结束，列表内无AI芯片创业公司被大厂收编的事件",
-   "evidence": ""
-  },
-  {
-   "date": "2026-05-18",
-   "shift": "pm",
-   "emoji": "🏢",
-   "title": "亚马逊$2000亿入局让AWS从AI陪跑者变成三强里最危险的那个",
-   "verdict": "unverifiable",
-   "reason": "无Fortune 500借AWS新报价压Azure续约的具体证据，90天预测窗口至8月17日尚未关闭",
-   "evidence": ""
-  },
-  {
-   "date": "2026-05-18",
-   "shift": "pm",
-   "emoji": "🛠️",
-   "title": "AI垃圾漏洞正淹没Linux安全列表，漏洞平台以AI治AI是在转嫁代价",
-   "verdict": "unverifiable",
-   "reason": "60天窗口截至7月18日尚未结束，列表内无Linux社区强制人工签名的相关报道",
-   "evidence": ""
-  },
-  {
-   "date": "2026-05-18",
-   "shift": "pm",
-   "emoji": "🧠",
-   "title": "三篇论文同天证明LLM对齐是表演：量化一压就破，内部偏见从未消失",
-   "verdict": "partially",
-   "reason": "美政府发现Fable 5越狱漏洞并令强制下线，印证对齐可被攻破；但判断所述量化/微调具体破坏路径未被新事件直接证实",
-   "evidence": "美政府发现越狱漏洞 Anthropic被令强制下线Claude Fable 5；美国封禁Claude Fable 5，Anthropic向全球用户开启退款"
-  },
-  {
-   "date": "2026-05-18",
-   "shift": "am",
-   "emoji": "💰",
-   "title": "OpenAI+Anthropic独吞89%：AI大模型市场已结局，剩余32家必须转型或卖身",
-   "verdict": "unverifiable",
-   "reason": "60天内二线模型公司密集寻找并购买家的预测，列表内无任何相关并购事件，窗口期尚未结束",
-   "evidence": ""
-  },
-  {
-   "date": "2026-05-18",
-   "shift": "am",
-   "emoji": "🏢",
-   "title": "字节快手AI视频已越位Runway：15亿用户的数据护城河，钱买不来",
-   "verdict": "unverifiable",
-   "reason": "无TikTok禁令新进展或Runway估值遭投资人质疑的后续报道，核心论断无法验证",
-   "evidence": ""
-  },
-  {
-   "date": "2026-05-18",
-   "shift": "am",
-   "emoji": "📜",
-   "title": "Altman诚信受审+Schmidt被嘘 = AI的社会许可正在被上下两端同时撕裂",
-   "verdict": "partially",
-   "reason": "监管立法确实提速，但驱动力为安全合规与国家安全而非社会许可侵蚀，因果链与判断描述的不同",
-   "evidence": "特朗普签署行政令：AI模型发布前须接受联邦政府审查；伊利诺伊州通过全美最严AI安全法案强制第三方审计；多州检察长联合调查OpenAI"
-  },
-  {
-   "date": "2026-05-17",
-   "shift": "pm",
-   "emoji": "🧠",
-   "title": "OpenAI研究员月耗940万token仍依赖Claude = 竞品自己人量化了能力差距",
-   "verdict": "unverifiable",
-   "reason": "发表后无事件可观测OpenAI内部研究员是否切换至GPT-5，30天测试的核心条件属私有内部行为，不可从公开事件验证",
-   "evidence": ""
-  },
-  {
-   "date": "2026-05-17",
-   "shift": "pm",
-   "emoji": "💰",
-   "title": "同周AI应用双融资共5500万美元 = VC宣告基础模型军备结束，最后一英里开始计时",
-   "verdict": "partially",
-   "reason": "Factorial/Hark等后续大额应用层融资持续印证「最后一英里」热度，虚报ARR报道印证泡沫警示，但Webidoo/Nectar Social具体留存或GMV数据无公开证据",
-   "evidence": "HR软件独角兽Factorial完成1.5亿美元D轮融资，估值25亿美元；AI创业公司虚报ARR：投资人与创始人共谋的估值游戏"
   }
  ]
 }
